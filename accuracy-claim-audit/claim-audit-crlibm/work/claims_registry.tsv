@@ -1,0 +1,48 @@
+tier	where	function	domain_as_stated	bound_as_stated	class	note
+A	0_getting-started.tex:137	exp	complete (whole fp input range)	correctly rounded	ROW	bound is the term defined at 0_intro.tex:74; "complete" defined at 0_getting-started.tex:171
+A	0_getting-started.tex:138	expm1	complete	correctly rounded	ROW
+A	0_getting-started.tex:139	log	complete	correctly rounded	ROW
+A	0_getting-started.tex:140	log1p	complete	correctly rounded	ROW
+A	0_getting-started.tex:141	log2	complete	correctly rounded	ROW
+A	0_getting-started.tex:142	log10	complete	correctly rounded	ROW
+A	0_getting-started.tex:143	sin	[-pi, pi]	correctly rounded	ROW
+A	0_getting-started.tex:144	cos	[-pi/2, pi/2]	correctly rounded	ROW
+A	0_getting-started.tex:145	tan	[-pi/2, pi/2]	correctly rounded	ROW
+A	0_getting-started.tex:146	asin	complete	correctly rounded	ROW
+A	0_getting-started.tex:147	acos	complete	correctly rounded	ROW
+A	0_getting-started.tex:148	atan	complete	correctly rounded	ROW
+A	0_getting-started.tex:149	sinh	complete	correctly rounded	ROW	MEASURED FALSE, see report
+A	0_getting-started.tex:150	cosh	complete	correctly rounded	ROW
+A	0_getting-started.tex:151	sinpi	complete	correctly rounded	ROW
+A	0_getting-started.tex:152	cospi	complete	correctly rounded	ROW
+A	0_getting-started.tex:153	tanpi	[2^-25, 2^-5]	correctly rounded	ROW
+A	0_getting-started.tex:156	atanpi	[tan(2^-25 pi), tan(2^-5 pi)]	correctly rounded	ROW	restated at trigpi.tex:260
+A	0_getting-started.tex:157	pow	see chapter	see chapter	NOTROW	chapter says worst cases unknown; may not round correctly above 2^-120
+B	trigo.tex:1692	sin	|x| < 2^-17	2^-126	INTERP	worst-case accuracy = required intermediate accuracy
+B	trigo.tex:1693	sin	2^-17 <= |x| <= 2+4675/8192	2^-119	INTERP	ratio read as exact rational
+B	trigo.tex:1695	cos	2^-25 <= |x| <= 2^-22	2^-142	INTERP
+B	trigo.tex:1696	cos	2^-22 <= |x| <= 2^-18	2^-136	INTERP
+B	trigo.tex:1697	cos	2^-18 <= |x| <= 2^-17	2^-114	INTERP
+B	trigo.tex:1698	cos	2^-17 <= |x| <= 12867/8192	2^-112	INTERP	ratio read as exact rational
+B	trigo.tex:1700	tan	2^-25 <= |x| <= 2^-18	2^-132	INTERP
+B	trigo.tex:1701	tan	2^-18 <= |x| <= arctan(2)	2^-111	INTERP
+B	trigpi.tex:104	cospi	[2^-24, 1]	2^-110	INTERP
+B	trigpi.tex:130	sinpi	[2^-57, 1]	2^-111	INTERP
+B	trigpi.tex:231	tanpi	[2^-25, 2^-5]	2^-111	INTERP
+B	trigpi.tex:250	tanpi	"small arguments" (unquantified)	2^-60	NOTROW	domain not quantified
+B	csh.tex:67	cosh	whole range (search complete)	2^-142	INTERP	relative accuracy required for correct rounding
+B	csh.tex:67	sinh	whole range (search complete)	2^-126	INTERP
+B	csh.tex:67	sinh+cosh	x > 2^-12	2^-111	INTERP
+B	exp.tex:1007	exp	|x| >= 2^-30	113 bits	INTERP
+B	exp.tex:1007	exp	2^-54 <= |x| < 2^-30	158 bits	INTERP
+B	asin.tex:21	asin	|x| <= 2^-18	126 bits	INTERP
+B	asin.tex:21	asin	rest of the definition domain	118 bits	INTERP
+B	log.tex:144	log	whole domain	118 bits (critical accuracy)	INTERP	cited from Lefevre's work
+B	1_common.tex:1606	all functions	all of crlibm	never more than 158 bits	INTERP
+B	0_intro.tex:127	exp	all of its domain	157 bits	INTERP	cited from Lefevre and Muller
+B	pow.tex:15	pow	integer n in [-180, 1338]	2^-118 intermediate precision	INTERP
+B	log10.tex:78	log10	whole domain	"known by Lefevre's works"	NOTROW	no numeric bound stated
+C	1_common.tex, tripledoubleprocedures.tex, log.tex, log10.tex, sqrt.tex, exp.tex, trigo.tex, trigpi.tex, asin.tex, atan.tex, csh.tex	internal operators and proof stages	code-path hypotheses	44 sentences with a numeric bound	INTERP	internal/toolkit, not user-facing function claims
+EXCLUDED	0_getting-started.tex:154-155	asinpi, acospi	commented out of Table 1	-	EXCLUDED	not documented as claims
+EXCLUDED	0_intro.tex:26,421	other libraries	-	-	EXCLUDED	about Boost/MathLib/MPFR, not crlibm
+EXCLUDED	0_intro.tex:242	all functions	outside the proven domain	"astronomical confidence"	EXCLUDED	explicitly not a guarantee
