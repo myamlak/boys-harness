@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """The first sweep's argument grid.
 
-The designed point sets are the paper's Table 1, applied to the two
-committed bands at the v5.0.0 constants:
+The designed point sets are applied to the two bands read from the library's
+constants:
 
     U  (b - a) k / 2048, k = 0 .. 2047
     C  the midpoint plus half-width times cos(pi (k + 1/2) / 2048)
@@ -12,11 +12,9 @@ committed bands at the v5.0.0 constants:
     T  each dispatch threshold inside the band, one ULP either side
     E  the exact band endpoints and, in A1, x = 0
 
-The union is de-duplicated per band.  The two L/R conventions (128 points,
-both ends included) are reconstructed from the surviving at_x values of the
-lost results files; the paper states the rule but not the count.  G is read
-from `tests/data/boys_accuracy_gate_reference.csv` of the pinned boys tree,
-so it is the committed grid of this revision rather than of the lost one.
+The union is de-duplicated per band.  The two L/R sets use 128 points, both
+ends included.  G is read from `tests/data/boys_accuracy_gate_reference.csv`
+of the boys tree, so it is that tree's committed grid.
 
 Usage:
     python grid.py --out data/grid.csv

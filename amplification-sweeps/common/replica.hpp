@@ -1,18 +1,17 @@
 #pragma once
 
-/// The evaluation policy Paper A names, the recurrence replica both sweeps
+/// The evaluation policy the sweeps name, the recurrence replica both sweeps
 /// admit against the shipped entry, and the seed-fit summation the second
 /// sweep varies.
 ///
-/// The policy is pinned to the evaluation the paper describes: the Chebyshev
-/// fits on the coarsest partition, degree 20 in A1 and 18 in A2, summed by
-/// the split Clenshaw recurrence, in the double lane, with the
-/// refined-reciprocal division and the fast region-B exponential.  It is not
-/// the v5.0.0 build default: an unnamed host fp64 all-orders call resolves to
-/// its class row, the uniform partition summed by Horner over the orders
-/// axis, and the seam fallback is the narrow partition summed by Horner.  The
-/// paper's harness subsection says so and names the cells for exactly that
-/// reason.
+/// The policy is pinned to the stated evaluation: the Chebyshev fits on the
+/// coarsest partition, degree 20 in A1 and 18 in A2, summed by the split
+/// Clenshaw recurrence, in the double lane, with the refined-reciprocal
+/// division and the fast region-B exponential.  It is not the v5.0.0 build
+/// default: an unnamed host fp64 all-orders call resolves to its class row,
+/// the uniform partition summed by Horner over the orders axis, and the seam
+/// fallback is the narrow partition summed by Horner.  The sweeps name the
+/// cells for exactly that reason.
 ///
 /// The replica repeats the step arithmetic of `boys/boys_fit_core.hpp` in
 /// this translation unit, so that "the recurrence the harness runs" is a
@@ -27,9 +26,9 @@
 #include <cmath>
 #include <cstdint>
 
-namespace paper_a {
+namespace sweep_replica {
 
-using PaperPolicy = boys::StatedEvalPolicy<
+using ReplicaPolicy = boys::StatedEvalPolicy<
     boys::FitRoute::kChebyshev,
     boys::EvalScheme::kSplitClenshaw,
     boys::BoysBudget::kFloat,
@@ -38,7 +37,7 @@ using PaperPolicy = boys::StatedEvalPolicy<
     boys::DivisionForm::kRefinedReciprocal,
     boys::RegionBExp::kFast>;
 
-static_assert(boys::EvalPolicyLike<PaperPolicy>);
+static_assert(boys::EvalPolicyLike<ReplicaPolicy>);
 
 inline constexpr int kNmax = boys::kMaxBoysOrder;
 
@@ -79,7 +78,7 @@ inline double DownwardStep(int l, double f, double x, double half_exp) noexcept 
 /// recursed cell with the library's value, bit for bit.  x == 0 is the exact
 /// closed form and is checked separately.
 inline Admission AdmitReplica(double x, const double* shipped) noexcept {
-    using Fit = typename PaperPolicy::Fit;
+    using Fit = typename ReplicaPolicy::Fit;
 
     if (x == 0.0) {
         int matched = 0;
@@ -98,7 +97,7 @@ inline Admission AdmitReplica(double x, const double* shipped) noexcept {
             ++served;
         }
 
-        typename Fit::template BandSource<PaperPolicy::kDivision> source(x);
+        typename Fit::template BandSource<ReplicaPolicy::kDivision> source(x);
         double f = source.Next(0, x);
         int checked = 1;
         int matched = SameBits(f, shipped[0]) ? 1 : 0;
@@ -114,7 +113,7 @@ inline Admission AdmitReplica(double x, const double* shipped) noexcept {
         return {"upward", checked, matched};
     }
 
-    double f = boys::detail::PolicyRegionAValue<PaperPolicy>(kNmax, x);
+    double f = boys::detail::PolicyRegionAValue<ReplicaPolicy>(kNmax, x);
     int checked = 1;
     int matched = SameBits(f, shipped[kNmax]) ? 1 : 0;
     const double half_exp = 0.5 * std::exp(-x);
@@ -144,4 +143,4 @@ inline double SeedFit(const double* coefficients, int degree, double x, double l
     return t * b1 - b2 + coefficients[0];
 }
 
-} // namespace paper_a
+} // namespace sweep_replica

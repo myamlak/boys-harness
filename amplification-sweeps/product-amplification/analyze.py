@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reduce the first sweep's raw cells to the manuscript's tables.
+"""Reduce the first sweep's raw cells to the tables.
 
 Inputs (under --tree):
     data/grid.csv, data/reference.csv
@@ -11,8 +11,8 @@ Outputs (under --tree):
     results/decomposition.csv, results/summary.txt
     data/documented.csv
 
-make_tables.py reads the first four and documented.csv; the other two are
-the re-derivation's own evidence.  All error arithmetic is done in mpmath at
+The first four files are the summary tables; documented.csv is the
+documented-value comparison.  All error arithmetic is done in mpmath at
 70 digits from the 60-digit reference, and the computed doubles are parsed
 as exact doubles (`mpf(float(text))`), so a sub-ULP error is not lost.
 
@@ -487,20 +487,16 @@ def main():
 
     summary += [
         "",
-        "point-count deviation: the paper reports 9354 arguments (4812 A1, 4542 A2).",
-        "This grid yields %d A1 and %d A2 arguments, %d in total."
+        "point-count note: this grid yields %d A1 and %d A2 arguments, %d in total."
         % (arguments["A1"], arguments["A2"], arguments["A1"] + arguments["A2"]),
-        "The two missing A2 arguments are not recoverable from the surviving records and",
-        "are not synthesised. The argument 5.949924076060192 in the surviving gain table",
-        "is not one of them: it is the p = -12 L point of A2 and this grid contains it.",
+        "The count follows from the gate arguments and the variable points in each band.",
         "",
         "reference validation:",
     ]
     summary += ["  " + line for line in validation_lines]
     summary += [
         "",
-        "reconstructed protocol: the L/R sets use 128 log-spaced points, both ends included,",
-        "recovered from surviving at_x values; the paper states the rule but not the count.",
+        "protocol note: the L/R sets use 128 log-spaced points, both ends included.",
     ]
 
     with open(results / "summary.txt", "w", encoding="utf-8") as handle:

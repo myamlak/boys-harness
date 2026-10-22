@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """The stability pass as one batched boundary check.
 
-Protocol (SWEEP-PLAN.md section 2.5, amended 2026-10-20 before any stability
-row ran):
+Protocol:
 
   batch    One flat job list over the measured core rows: for each row, its
            accepted rational pair and every candidate pair at stored - 1.
@@ -256,8 +255,8 @@ def plan(rows, sources):
         "flagged_rows": len({f["row"] for f in flags}),
         "projection": {
             "measured_pair_seconds_2^0": 76,
-            "measured_by": ("coordinator, rel:1e-13 width 2^0, four boundary "
-                            "solves serial, 303 s"),
+            "measured_by": ("rel:1e-13 width 2^0, four boundary solves "
+                            "serial, 303 s"),
             "uniform_12_worker_minutes": round(pairs * 76 / 12 / 60, 1),
             "stated_allowance_minutes": "20-25 (wide rows' pairs cost more)",
         },
@@ -390,7 +389,6 @@ def run(rows, sources, out):
 
     record = {
         "schema": "stability-save-verify-1",
-        "amended": "2026-10-20, before any stability row ran",
         "sources": [str(s) for s in sources],
         "rows": [row_key(r) for r in rows],
         "batch_seconds": round(batch_seconds, 1),

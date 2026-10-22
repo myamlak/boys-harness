@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 if(NOT DEFINED BOYS_SOURCE_DIR)
-    message(FATAL_ERROR "pass -DBOYS_SOURCE_DIR=<path to the boys v5.0.0 source>")
+    message(FATAL_ERROR "pass -DBOYS_SOURCE_DIR=<path to the boys source>")
 endif()
 
 if(NOT EXISTS "${BOYS_SOURCE_DIR}/CMakeLists.txt")

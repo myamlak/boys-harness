@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""High-precision reference values for the Paper A sweeps.
+"""High-precision reference values for the amplification sweeps.
 
 The reference is the boys v5.0.0 tree's own generator, imported rather than
 copied: `tools/gen_boys_accuracy_gate_reference.py` computes F_n(x) from the
@@ -46,7 +46,7 @@ except ImportError:  # pragma: no cover
     sys.exit(2)
 
 DEFAULT_TREE = os.environ.get(
-    "BOYS_SOURCE", str(Path(__file__).resolve().parents[2] / "boys"))
+    "BOYS_SOURCE", str(Path(__file__).resolve().parents[3] / "boys"))
 
 NMAX = 32
 

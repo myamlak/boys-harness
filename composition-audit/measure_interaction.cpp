@@ -792,9 +792,8 @@ void WriteEnvironment(const char* path, int canary_samples, std::uint64_t canary
     std::fprintf(f, "run_started_utc=%s\n", stamp);
     if (!smoke)
     {
-        std::fprintf(f, "machine_rule=quiet machine, alone; no build, lane, generator or other "
-                        "timing run concurrently; canary is a hint under "
-                        "AMENDMENT-2026-10-20\n");
+        std::fprintf(f, "machine_rule=quiet machine, alone; no build, other measurement or "
+                        "heavy process; a wide canary labels the rows timing-provisional\n");
         std::fprintf(f, "canary_samples=%d\n", canary_samples);
         std::fprintf(f, "canary_iterations=%llu\n",
                      static_cast<unsigned long long>(canary_iterations));
@@ -1193,9 +1192,9 @@ int main(int argc, char** argv)
         return 2;
     }
 
-    // Owner ruling 2026-10-20: the canary is a HINT.  With this variable set,
-    // a wide reading is printed and recorded but does not stop the probe; the
-    // rows keep the canary beside them.  Without it the strict default stands.
+    // The canary is a hint when this variable is set: a wide reading is
+    // printed and recorded but does not stop the probe; the rows keep the
+    // canary beside them.  Without it the strict default stands.
     const char* hint_env = std::getenv("BOYS_CANARY_HINT_ONLY");
     const bool canary_hint_only = (hint_env != nullptr && hint_env[0] == '1');
 
@@ -1206,7 +1205,7 @@ int main(int argc, char** argv)
         PrintCanary("gate", c, wide);
         if (wide && canary_hint_only)
         {
-            std::printf("canary gate: WIDE — recorded as a hint only (owner ruling 2026-10-20); "
+            std::printf("canary gate: WIDE — recorded as a hint only; "
                         "proceeding\n");
             return 0;
         }
@@ -1222,8 +1221,8 @@ int main(int argc, char** argv)
         return 2;
     }
 
-    // Machine rule: the coordinator classifies the probe as timing-sensitive.
-    // Read the canary first; a wide pre-canary means the machine is not quiet
+    // The probe is timing-sensitive. Read the canary first; a wide pre-canary
+    // means the machine is not quiet
     // and no cell is measured. The smoke path is not the probe: it reads no
     // canary, measures a fixed handful of cells and says so on every line that
     // names it.
@@ -1242,7 +1241,7 @@ int main(int argc, char** argv)
         }
         if (pre_wide)
         {
-            std::printf("canary gate: WIDE — recorded as a hint only (owner ruling 2026-10-20); "
+            std::printf("canary gate: WIDE — recorded as a hint only; "
                         "measuring\n");
         }
     } else
@@ -1352,8 +1351,8 @@ int main(int argc, char** argv)
     {
         if (canary_hint_only)
         {
-            std::printf("canary: WIDE after measurement — recorded as a hint only "
-                        "(owner ruling 2026-10-20); the rows are timing-provisional\n");
+            std::printf("canary: WIDE after measurement — recorded as a hint only; "
+                        "the rows are timing-provisional\n");
         }
         else
         {

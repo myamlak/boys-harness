@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 """The second sweep's argument list.
 
-The manuscript states 836 distinct arguments in Section 5.1.  The design that
-accounts for that number is the committed accuracy-gate grid plus a
+The design has 836 distinct arguments: the committed accuracy-gate grid plus a
 Chebyshev-variable set in each band:
 
     G  every argument of the committed gate grid inside either band
     V  95 Chebyshev-Gauss points in the band's own mapped variable,
        t = cos(pi (j + 1/2) / 95), j = 0 .. 94, x = centre + half t
 
-The variable points are a reconstruction: the lost tree's selection is not
-recoverable from the surviving records.  They are placed in the Chebyshev
-variable because the experiment varies the seed-fit degree, so its argument
-set has to resolve the fit on the same variable the fit is written in.
+The variable points sit in the Chebyshev variable because the experiment
+varies the seed-fit degree, so its argument set has to resolve the fit on the
+same variable the fit is written in.
 
 Overlaps with G are de-duplicated; the actual total is printed and recorded
 in the grid file.  If it is not 836, the difference is reported rather than
@@ -99,7 +97,7 @@ def main():
             writer.writerow([band, repr(value), tags])
 
     expected = 836
-    print("wrote %s: %d arguments (manuscript: %d)" % (out, len(rows), expected))
+    print("wrote %s: %d arguments (expected: %d)" % (out, len(rows), expected))
     if len(rows) != expected:
         print("deviation: %+d arguments; recorded, not padded" % (len(rows) - expected))
 

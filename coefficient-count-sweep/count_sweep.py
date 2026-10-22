@@ -32,7 +32,7 @@ The fitting and evaluation code is the library's:
 
 The wrapper here supplies the width, the target, the grid and the scan. It does
 not reimplement any fit or evaluation that places a count. The single exception
-is the paper cell's cross-check, added for Q-258: a rational interpolant at
+is the paper cell's cross-check: a rational interpolant at
 Chebyshev-Gauss nodes, written here and sharing no code with either of the
 library's solvers. It asks only whether a stored count can reach the target;
 its answers appear in paper_cell.json and in no sweep row.
@@ -56,7 +56,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DEFAULT_BOYS = Path(os.environ.get(
-    "BOYS_SOURCE", Path(__file__).resolve().parent.parent / "boys"))
+    "BOYS_SOURCE", Path(__file__).resolve().parents[2] / "boys"))
 HEADER_REL = Path("include/boys/boys_coefficients.hpp")
 GENERATOR_REL = Path("tools/gen_boys_coefficients.py")
 LANE_CONTRACT_REL = Path("docs/lane-contract.md")
@@ -94,27 +94,13 @@ ROW_SCHEMA = 2
 SETTING_KEYS = ("nodes", "coarse_stride", "scan_outer", "refine_outer",
                 "remez_iters")
 
-# The only runtime datum that exists. The 2026-10-19 probe ran one width
-# (ship, 19.100151847891516) at rel:1e-13 on a loaded machine, printed its
-# progress, and was stopped at 600 s without completing. That is a lower bound
-# for that one row and nothing else: no per-width cost and no total wall time
-# are claimed until the quiet probe measures one width. The quiet windows own
-# that measurement; this record is what the harness prints in --plan.
-PROBE_LOADED_2026_10_19 = {
-    "date": "2026-10-19",
-    "machine": "loaded; not a run-alone machine",
-    "width_name": "ship",
-    "width": 19.100151847891516,
-    "target": "rel:1e-13",
-    "completed": False,
-    "stopped_at_seconds": 600,
-    "reading": (
-        "the widest width at one target exceeded 600 s on a loaded machine; "
-        "this is a lower bound for that row, not an estimate of the sweep"
-    ),
+# No runtime figure is claimed: the cost depends on the width, the target and
+# the machine. Measure one width with --probe first; every sweep invocation is
+# capped by --max-seconds and resumes from its written rows.
+PROBE_NOTE = {
+    "reading": "no runtime figure is claimed; the cost depends on width, target and machine",
     "implication": (
-        "treat the 15-width x 2-target grid as a multi-hour job until the "
-        "quiet probe replaces this bound; every invocation is capped by "
+        "measure one width with --probe; every invocation is capped by "
         "--max-seconds and resumes from its written rows"
     ),
 }
@@ -1659,7 +1645,7 @@ def plan_mode(args) -> dict:
             "remez_iters": args.remez_iters,
             "workers": g.worker_count(),
         },
-        "runtime": PROBE_LOADED_2026_10_19,
+        "runtime": PROBE_NOTE,
         "commands": {
             "probe": f'"{py}" "{script}" --probe {boys_arg} '
                      f'--width-name ship --targets rel:1e-13 '

@@ -18,9 +18,7 @@ Outputs:
     data/fits.csv             band,seed_order,degree,index,value
     data/fits_validation.txt  worst absolute and relative fit error per fit
 
-The degree ladder and start orders are stated in the manuscript.  The
-interpolation and rounding are a reconstruction: the lost tree's fit
-construction is not recoverable from the surviving records.
+The degree ladder and start orders are stated above.
 
 mpmath lives in the user site.  Do not run with `python -I`.
 

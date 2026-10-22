@@ -1,0 +1,69 @@
+name: harness
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install mpmath
+      - name: Check out the library beside the harness
+        run: git clone --depth 1 --branch v5.0.0 https://github.com/myamlak/boys.git ../boys
+      - name: Compile every Python script
+        run: |
+          python -m py_compile coefficient-count-sweep/*.py
+          python -m py_compile amplification-sweeps/*/*.py
+          python -m py_compile accuracy-claim-audit/boost_accuracy_rows/tools/*.py
+          python -m py_compile accuracy-claim-audit/claim-audit-crlibm/work/*.py
+      - name: Read the shipped counts and print the plan
+        working-directory: coefficient-count-sweep
+        run: |
+          python count_sweep.py --plan > plan.json
+          python count_sweep.py --static --out static_counts.json
+      - name: Build a reference for a few arguments
+        working-directory: amplification-sweeps/product-amplification
+        run: |
+          python grid.py --out data/grid.csv
+          python ../common/reference.py --grid data/grid.csv --out data/reference.csv --max-arguments 4
+
+  cpp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install mpmath
+      - name: Check out the library beside the harness
+        run: git clone --depth 1 --branch v5.0.0 https://github.com/myamlak/boys.git ../boys
+      - name: Build the sweep drivers
+        run: |
+          g++ -std=c++23 -O2 -I../boys/include amplification-sweeps/product-amplification/sweep1.cpp -o "$RUNNER_TEMP/sweep1"
+          g++ -std=c++23 -O2 -I../boys/include amplification-sweeps/amplification-form/sweep2.cpp -o "$RUNNER_TEMP/sweep2"
+      - name: Run the first sweep on a few arguments
+        working-directory: amplification-sweeps/product-amplification
+        run: |
+          python3 grid.py --out data/grid.csv
+          "$RUNNER_TEMP/sweep1" --max-arguments 8
+          test -s results/cells.csv
+      - name: Build the composition driver
+        run: |
+          cmake -S composition-audit -B build -DCMAKE_BUILD_TYPE=Release -DBOYS_SOURCE_DIR=../boys
+          cmake --build build --target measure-interaction -j 4
+      - name: Run the composition smoke test
+        run: |
+          build/measure-interaction --emit-arguments "$RUNNER_TEMP/args.csv" --smoke
+          python3 composition-audit/gen_reference.py --arguments "$RUNNER_TEMP/args.csv" --out "$RUNNER_TEMP/ref.csv"
+          build/measure-interaction --arguments "$RUNNER_TEMP/args.csv" --reference "$RUNNER_TEMP/ref.csv" --out "$RUNNER_TEMP/cells.csv" --smoke
+          test -s "$RUNNER_TEMP/cells.csv"
+      - name: Check the shell and PowerShell scripts
+        run: |
+          bash -n composition-audit/run_measurement.sh
+          pwsh -NoProfile -Command "\$e=\$null;\$t=\$null;[System.Management.Automation.Language.Parser]::ParseFile('composition-audit/run_measurement.ps1',[ref]\$t,[ref]\$e)|Out-Null; if(\$e.Count){exit 1}"

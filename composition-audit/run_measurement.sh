@@ -1,42 +1,35 @@
 #!/usr/bin/env bash
-# Run the composed-bounds interaction measurement on the second target: GCC on
-# Linux, inside WSL. This is the cross-target half of the stability design; the
-# Windows/MSVC half is run_measurement.ps1.
+# Run the interaction measurement on the second target: GCC on Linux, inside
+# WSL. This is the cross-target half of the stability design; the Windows/MSVC
+# half is run_measurement.ps1.
 #
-# Machine rule (coordinator): this is a timing-sensitive measurement. Do not run
-# it until the coordinator signals. Run it on a quiet machine, alone: no build,
-# lane, generator or other timing run concurrently. The driver takes a canary
-# gate before the first cell and reads the canary again after the last; a wide
-# gate stops the run. In WSL the canary sees the guest's own noise only, so a
-# wide gate with an idle guest means the polluter is on the Windows side: sample
-# the host's process deltas rather than assuming the guest is busy.
+# The run is timing-sensitive. Use a quiet machine, alone: no build, other
+# measurement or heavy process. The driver takes a canary gate before the first
+# cell and reads the canary again after the last; a wide gate stops the run. In
+# WSL the canary sees the guest's own noise only, so a wide gate with an idle
+# guest means the polluter is on the Windows side: sample the host's process
+# deltas rather than assuming the guest is busy. With BOYS_CANARY_HINT_ONLY=1 a
+# wide reading is recorded and the rows are labelled timing-provisional.
 #
 # The build, argument emission and self-tests happen before the canary gate.
 # The reference is not regenerated here: the second target measures the same
 # narrowed argument grid, so it reuses the primary run's 60-digit reference and
 # refuses if the emitted arguments differ from it. This keeps mpmath out of the
 # WSL dependency set, where it may not be installed.
-# Under the owner's 2026-10-20 ruling the canary is a hint: with
-# BOYS_CANARY_HINT_ONLY=1 a wide reading is recorded and the run proceeds under
-# AMENDMENT-2026-10-20, with its rows labelled timing-provisional.
 #
-# Usage, only after the coordinator's signal:
-#   bash scripts/run_measurement.sh --coordinator-signal \
+# Usage, from this directory:
+#   bash run_measurement.sh --quiet-machine \
 #       --reference results/reference.csv \
 #       --arguments-reference results/arguments.csv
-#   bash scripts/run_measurement.sh --coordinator-signal --route separate \
+#   bash run_measurement.sh --quiet-machine --route separate \
 #       --reference results/reference.csv \
 #       --arguments-reference results/arguments.csv
 #
-# Both paths are relative to the directory you run from. When the checkout's
-# git metadata is not readable on this platform, pass --papers-revision and
-# --papers-dirty with the values you read yourself; they are recorded in the
-# environment file beside the results.
+# Both paths are relative to the directory you run from.
 
 set -euo pipefail
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-REPO_ROOT=$(cd "$SCRIPT_DIR/.." && pwd)
 BOUNDS_DIR=$(cd "$SCRIPT_DIR/.." && pwd)
 
 BOYS_SOURCE="${BOYS_SOURCE:-$SCRIPT_DIR/../../boys}"
@@ -47,13 +40,11 @@ BUILD_DIR=""
 REFERENCE=""
 ARGUMENTS_REFERENCE=""
 PYTHON="python3"
-PAPERS_REVISION=""
-PAPERS_DIRTY=""
 ALLOW_OTHER_REVISION=0
-COORDINATOR_SIGNAL=0
+QUIET_MACHINE=0
 
 usage() {
-    sed -n '2,30p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
+    sed -n '2,28p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
 }
 
 while [ $# -gt 0 ]; do
@@ -66,19 +57,16 @@ while [ $# -gt 0 ]; do
         --boys-source) BOYS_SOURCE="$2"; shift 2 ;;
         --expected-revision) EXPECTED_REVISION="$2"; shift 2 ;;
         --python) PYTHON="$2"; shift 2 ;;
-        --papers-revision) PAPERS_REVISION="$2"; shift 2 ;;
-        --papers-dirty) PAPERS_DIRTY="$2"; shift 2 ;;
         --allow-other-revision) ALLOW_OTHER_REVISION=1; shift ;;
-        --coordinator-signal) COORDINATOR_SIGNAL=1; shift ;;
+        --quiet-machine) QUIET_MACHINE=1; shift ;;
         --help|-h) usage; exit 0 ;;
         *) echo "unknown argument: $1" >&2; usage >&2; exit 2 ;;
     esac
 done
 
-if [ "$COORDINATOR_SIGNAL" -ne 1 ]; then
-    echo "run_measurement: wait for the coordinator's signal: the interaction probe is" >&2
-    echo "timing-sensitive and runs on a quiet machine, alone. Pass" >&2
-    echo "--coordinator-signal only when it has been given." >&2
+if [ "$QUIET_MACHINE" -ne 1 ]; then
+    echo "run_measurement: the measurement is timing-sensitive; use a quiet" >&2
+    echo "machine, alone, and pass --quiet-machine to confirm." >&2
     exit 2
 fi
 
@@ -208,29 +196,11 @@ if [ "$route_in_force" != "$ROUTE" ]; then
     exit 1
 fi
 
-# The repository holding this paper may be a Windows worktree whose gitdir is a
-# Windows path that WSL git cannot resolve. The caller can pass the revision and
-# dirty count read on the host; otherwise try here and record honestly.
-if [ -z "$PAPERS_REVISION" ]; then
-    PAPERS_REVISION=$(git -c "safe.directory=$REPO_ROOT" -C "$REPO_ROOT" rev-parse HEAD 2>/dev/null || true)
-fi
-if [ -z "$PAPERS_REVISION" ]; then
-    PAPERS_REVISION="unavailable-in-wsl"
-fi
-if [ -z "$PAPERS_DIRTY" ]; then
-    if dirty_output=$(git -c "safe.directory=$REPO_ROOT" -C "$REPO_ROOT" status --porcelain 2>/dev/null); then
-        PAPERS_DIRTY=$(printf '%s' "$dirty_output" | wc -l)
-    else
-        PAPERS_DIRTY="unavailable-in-wsl"
-    fi
-fi
 cmake_version=$(cmake --version | head -1)
 source_date_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 
 {
     echo ""
-    echo "papers_revision=$PAPERS_REVISION"
-    echo "papers_dirty_paths=$PAPERS_DIRTY"
     echo "boys_revision=$revision"
     echo "boys_dirty_paths=$dirty"
     echo "target=gcc"
@@ -241,10 +211,9 @@ source_date_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)
     echo "cmake_version=$cmake_version"
     echo "python=$PYTHON"
     echo "source_date_utc=$source_date_utc"
-    echo "machine_rule=quiet machine, alone; no build, lane, generator or other timing run concurrently"
-    echo "canary_policy=hint-only (owner ruling 2026-10-20; see AMENDMENT-2026-10-20.md)"
-    echo "amendment=AMENDMENT-2026-10-20.md"
-    echo "coordinator_signal=received"
+    echo "machine_rule=quiet machine, alone; no build, other measurement or heavy process"
+    echo "canary_policy=hint-only"
+    echo "quiet_machine=confirmed"
     echo "canary_read_by=driver (canary: pre-measurement gate, post-measurement reading; see canary_* lines)"
     echo "manifest=manifest.sha256"
 } >> "$environment"

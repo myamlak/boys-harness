@@ -1,4 +1,4 @@
-// First Paper A sweep: the recursed entry against the direct entry on every
+// First amplification sweep: the recursed entry against the direct entry on every
 // argument of the designed grid, the recurrence replica's admission, and the
 // gain the shipped recurrence really pays at every cell it recurses.
 //
@@ -25,14 +25,15 @@
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
+#include <filesystem>
 #include <limits>
 #include <string>
 #include <vector>
 
 namespace {
 
-using paper_a::kNmax;
-using paper_a::PaperPolicy;
+using sweep_replica::kNmax;
+using sweep_replica::ReplicaPolicy;
 
 struct Row {
     std::string band;
@@ -80,7 +81,8 @@ std::vector<Row> ReadGrid(const std::string& path) {
             continue;
         }
 
-        rows.push_back({text.substr(0, first), std::stod(text.substr(first + 1, second - first - 1))});
+        rows.push_back({text.substr(0, first),
+                        std::strtod(text.substr(first + 1, second - first - 1).c_str(), nullptr)});
     }
 
     std::fclose(file);
@@ -88,6 +90,12 @@ std::vector<Row> ReadGrid(const std::string& path) {
 }
 
 std::FILE* Open(const std::string& path, const char* header) {
+    const std::filesystem::path parent = std::filesystem::path(path).parent_path();
+
+    if (!parent.empty()) {
+        std::filesystem::create_directories(parent);
+    }
+
     std::FILE* file = std::fopen(path.c_str(), "w");
 
     if (!file) {
@@ -161,9 +169,9 @@ int main(int argc, char** argv) {
         for (std::size_t i = 0; i < count; ++i) {
             const double x = xs[i];
             std::array<double, kNmax + 1> shipped{};
-            boys::BoysAllOrders<PaperPolicy>(kNmax, x, shipped.data());
+            boys::BoysAllOrders<ReplicaPolicy>(kNmax, x, shipped.data());
 
-            const paper_a::Admission admitted = paper_a::AdmitReplica(x, shipped.data());
+            const sweep_replica::Admission admitted = sweep_replica::AdmitReplica(x, shipped.data());
             std::fprintf(admission, "%s,%.17g,%s,%d,%d\n", band.name, x, admitted.direction,
                          admitted.checked, admitted.matched);
 
@@ -179,7 +187,7 @@ int main(int argc, char** argv) {
                 continue;
             }
 
-            using Fit = typename PaperPolicy::Fit;
+            using Fit = typename ReplicaPolicy::Fit;
             const double half_exp = 0.5 * std::exp(-x);
 
             if (x >= Fit::kRegionAFitsFrom) {
@@ -189,7 +197,7 @@ int main(int argc, char** argv) {
                     ++served;
                 }
 
-                typename Fit::template BandSource<PaperPolicy::kDivision> source(x);
+                typename Fit::template BandSource<ReplicaPolicy::kDivision> source(x);
                 double f = source.Next(0, x);
                 // A relative seed perturbation far enough above the recurrence's
                 // rounding to be measurable.  The homogeneous map keeps the
@@ -201,8 +209,8 @@ int main(int argc, char** argv) {
                 const double reciprocal = 1.0 / x;
 
                 for (int l = 1; l <= served; ++l) {
-                    f = paper_a::UpwardStep(l, f, x, reciprocal, half_exp);
-                    p = paper_a::UpwardStep(l, p, x, reciprocal, half_exp);
+                    f = sweep_replica::UpwardStep(l, f, x, reciprocal, half_exp);
+                    p = sweep_replica::UpwardStep(l, p, x, reciprocal, half_exp);
                     std::fprintf(gain, "up,%s,%d,%.17g,%.17g\n", band.name, l, x, (p - f) / delta);
                 }
 
@@ -212,8 +220,8 @@ int main(int argc, char** argv) {
                     const double seed_delta = pert - base;
 
                     for (int l = 1; l <= kNmax; ++l) {
-                        base = paper_a::UpwardStep(l, base, x, reciprocal, half_exp);
-                        pert = paper_a::UpwardStep(l, pert, x, reciprocal, half_exp);
+                        base = sweep_replica::UpwardStep(l, base, x, reciprocal, half_exp);
+                        pert = sweep_replica::UpwardStep(l, pert, x, reciprocal, half_exp);
                     }
 
                     std::fprintf(gain, "up_ungated,%s,%d,%.17g,%.17g\n", band.name, kNmax, x,
@@ -221,14 +229,14 @@ int main(int argc, char** argv) {
                     ungated_done = true;
                 }
             } else {
-                double f = boys::detail::PolicyRegionAValue<PaperPolicy>(kNmax, x);
+                double f = boys::detail::PolicyRegionAValue<ReplicaPolicy>(kNmax, x);
                 // The same resolvable relative perturbation as the upward ladder.
                 double p = f + std::ldexp(f, -20);
                 const double delta = p - f;
 
                 for (int l = kNmax - 1; l >= 0; --l) {
-                    f = paper_a::DownwardStep(l, f, x, half_exp);
-                    p = paper_a::DownwardStep(l, p, x, half_exp);
+                    f = sweep_replica::DownwardStep(l, f, x, half_exp);
+                    p = sweep_replica::DownwardStep(l, p, x, half_exp);
                     std::fprintf(gain, "down,%s,%d,%.17g,%.17g\n", band.name, l, x, (p - f) / delta);
                 }
             }

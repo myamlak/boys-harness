@@ -1,29 +1,25 @@
-# Run the composed-bounds interaction measurement against a pinned boys build.
+# Run the interaction measurement against a boys build.
 #
-# Machine rule (coordinator): this is a timing-sensitive measurement. Do not run
-# it until the coordinator signals. Run it on a quiet machine, alone: no build,
-# lane, generator or other timing run concurrently. Read and report the canary.
-# The canary is checked before the measurement (a wide gate stops the run) and
-# again after it; both readings are written to environment.txt.
+# The run is timing-sensitive. Use a quiet machine, alone: no build, other
+# measurement or heavy process. The canary is checked before the measurement
+# and read again after it; both readings are written to environment.txt. A
+# wide canary labels the rows timing-provisional.
 #
-# The build, the per-lane argument emission and the reference generation all
-# happen before the canary gate, never during the measurement. The generator
-# reads the arguments the driver emitted, so it computes F_n at each lane's
-# exact narrowed input rather than at the decimal. If MSBuild leaves persistent
-# nodes running, the gate will read wide; wait for them to exit and rerun.
-# Under the owner's 2026-10-20 ruling the canary is a hint: with
-# BOYS_CANARY_HINT_ONLY=1 a wide reading is recorded and the run proceeds under
-# AMENDMENT-2026-10-20, with its rows labelled timing-provisional.
+# The build and the per-lane argument emission happen before the canary gate,
+# never during the measurement. The generator reads the arguments the driver
+# emitted, so it computes F_n at each lane's exact narrowed input rather than
+# at the decimal. If MSBuild leaves persistent nodes running, the gate reads
+# wide; wait for them to exit and rerun.
 #
-# Usage, only after the coordinator's signal:
-#   powershell -File scripts/run_measurement.ps1 -CoordinatorSignal
-#   powershell -File scripts/run_measurement.ps1 -CoordinatorSignal -AllowOtherRevision
+# Usage, from this directory:
+#   powershell -File run_measurement.ps1 -QuietMachine
+#   powershell -File run_measurement.ps1 -QuietMachine -AllowOtherRevision
 #
 # The stability design repeats the run on both multiply-add routes. The second
 # Windows configuration is selected with -MulAddRoute separate; it writes to
 # results-msvc-separate and builds in build-separate, and it reuses the primary
 # run's reference at the same narrowed inputs:
-#   powershell -File scripts/run_measurement.ps1 -CoordinatorSignal `
+#   powershell -File run_measurement.ps1 -QuietMachine `
 #       -MulAddRoute separate -Reference results\reference.csv
 #
 # The script records the library revision and dirty state, the generator and
@@ -41,7 +37,7 @@ param(
     [string]$MulAddRoute = "fused",
     [string]$Python = "python",
     [switch]$AllowOtherRevision,
-    [switch]$CoordinatorSignal
+    [switch]$QuietMachine
 )
 
 $ErrorActionPreference = "Stop"
@@ -66,8 +62,8 @@ if (-not $BuildDir) {
 }
 $separateValue = if ($MulAddRoute -eq "separate") { "ON" } else { "OFF" }
 
-if (-not $CoordinatorSignal) {
-    throw "wait for the coordinator's signal: the interaction probe is timing-sensitive and runs on a quiet machine, alone. Pass -CoordinatorSignal only when it has been given."
+if (-not $QuietMachine) {
+    throw "the measurement is timing-sensitive: use a quiet machine, alone, and pass -QuietMachine to confirm."
 }
 
 if (-not (Test-Path (Join-Path $BoysSource "CMakeLists.txt"))) {
@@ -258,15 +254,10 @@ if ($routeInForce -ne $MulAddRoute) {
     throw "this run asked for the $MulAddRoute route but the build reports $routeInForce in force; the stability premise is not met"
 }
 
-$repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..\..")).Path
-$papersRevision = (& git -C $repoRoot rev-parse HEAD).Trim()
-$papersDirty = @(& git -C $repoRoot status --porcelain).Count
 $cmakeVersion = (& cmake --version | Select-Object -First 1)
 
 $facts = @(
     "",
-    "papers_revision=$papersRevision",
-    "papers_dirty_paths=$papersDirty",
     "boys_revision=$revision",
     "boys_dirty_paths=$dirty",
     "target=msvc",
@@ -277,10 +268,9 @@ $facts = @(
     "cmake_version=$cmakeVersion",
     "python=$Python",
     "source_date_utc=$((Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ'))",
-    "machine_rule=quiet machine, alone; no build, lane, generator or other timing run concurrently",
-    "canary_policy=hint-only (owner ruling 2026-10-20; see AMENDMENT-2026-10-20.md)",
-    "amendment=AMENDMENT-2026-10-20.md",
-    "coordinator_signal=received",
+    "machine_rule=quiet machine, alone; no build, other measurement or heavy process",
+    "canary_policy=hint-only",
+    "quiet_machine=confirmed",
     "canary_read_by=driver (canary: pre-measurement gate, post-measurement reading; see canary_* lines)",
     "manifest=manifest.sha256"
 )

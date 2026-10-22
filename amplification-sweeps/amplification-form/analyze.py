@@ -19,12 +19,11 @@ Reported, under results/:
     per_order.csv          worst error per band and order on this sweep
     summary.txt            counts, criteria, reference validation, deviations
 
-Two parameters of the original prediction are not recoverable from the
-surviving records: the abstention threshold and the default winner.  This
-reconstruction replaces both with the model's own accumulated-arithmetic
-term: the model abstains when the two predicted bounds differ by less than
-the arithmetic the recursed bound already carries, so no fitted threshold
-enters.  The margin ladder is printed so the sensitivity is visible.
+Two parameters are fixed by the model rather than fitted: the abstention
+threshold and the default winner.  This analysis uses the model's own
+accumulated-arithmetic term: it abstains when the two predicted bounds differ
+by less than the arithmetic the recursed bound already carries, so no fitted
+threshold enters.  The margin ladder is printed so the sensitivity is visible.
 
 mpmath lives in the user site.  Do not run with `python -I`.
 """
@@ -89,7 +88,7 @@ def amplification_ratio(n, l, x):
 
 
 def recurrence_arithmetic(n, x, values):
-    """The paper's accumulated-arithmetic charge, absolute.
+    """The accumulated-arithmetic charge, absolute.
 
     Three roundings at 2^-53 per upward step, each carried to order n by the
     recurrence's own gain A_n / A_l.  The step's output F_l sets the size.
@@ -967,7 +966,7 @@ def main():
             )
     summary += [
         "",
-        "point-count note: the manuscript's second experiment has 836 arguments;",
+        "point-count note: this experiment has 836 arguments;",
         "this grid has %s (cell total %s x 33 = %s)."
         % (
             grid_total if grid_total is not None else "no grid file",

@@ -1,4 +1,4 @@
-// Second Paper A sweep: vary the seed-fit degree and the order at which the
+// Second amplification sweep: vary the seed-fit degree and the order at which the
 // recurrence starts, independently, and record every path value together
 // with an exactly known seed perturbation.
 //
@@ -30,6 +30,7 @@
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
+#include <filesystem>
 #include <limits>
 #include <map>
 #include <string>
@@ -38,8 +39,8 @@
 
 namespace {
 
-using paper_a::kNmax;
-using paper_a::PaperPolicy;
+using sweep_replica::kNmax;
+using sweep_replica::ReplicaPolicy;
 
 constexpr std::array<int, 8> kSeedOrders = {0, 2, 4, 8, 16, 24, 28, 32};
 constexpr std::array<int, 14> kDegrees = {0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24};
@@ -95,7 +96,8 @@ std::vector<Row> ReadGrid(const std::string& path) {
             continue;
         }
 
-        rows.push_back({text.substr(0, first), std::stod(text.substr(first + 1, second - first - 1))});
+        rows.push_back({text.substr(0, first),
+                        std::strtod(text.substr(first + 1, second - first - 1).c_str(), nullptr)});
     }
 
     std::fclose(file);
@@ -142,6 +144,12 @@ std::map<FitKey, std::vector<double>> ReadFits(const std::string& path) {
 }
 
 std::FILE* Open(const std::string& path, const char* header) {
+    const std::filesystem::path parent = std::filesystem::path(path).parent_path();
+
+    if (!parent.empty()) {
+        std::filesystem::create_directories(parent);
+    }
+
     std::FILE* file = std::fopen(path.c_str(), "w");
 
     if (!file) {
@@ -223,9 +231,9 @@ int main(int argc, char** argv) {
         for (std::size_t i = 0; i < count; ++i) {
             const double x = xs[i];
             std::array<double, kNmax + 1> shipped{};
-            boys::BoysAllOrders<PaperPolicy>(kNmax, x, shipped.data());
+            boys::BoysAllOrders<ReplicaPolicy>(kNmax, x, shipped.data());
 
-            const paper_a::Admission admitted = paper_a::AdmitReplica(x, shipped.data());
+            const sweep_replica::Admission admitted = sweep_replica::AdmitReplica(x, shipped.data());
             std::fprintf(admission, "%s,%.17g,%s,%d,%d\n", band.name, x, admitted.direction,
                          admitted.checked, admitted.matched);
 
@@ -257,7 +265,7 @@ int main(int argc, char** argv) {
                     }
 
                     const double seed =
-                        paper_a::SeedFit(coefficients.data(), degree, x, band.left, band.right);
+                        sweep_replica::SeedFit(coefficients.data(), degree, x, band.left, band.right);
 
                     if (!std::isfinite(seed)) {
                         continue;
@@ -279,8 +287,8 @@ int main(int argc, char** argv) {
                              seed_delta);
 
                         for (int n = start + 1; n <= kNmax; ++n) {
-                            base = paper_a::UpwardStep(n, base, x, reciprocal, half_exp);
-                            pert = paper_a::UpwardStep(n, pert, x, reciprocal, half_exp);
+                            base = sweep_replica::UpwardStep(n, base, x, reciprocal, half_exp);
+                            pert = sweep_replica::UpwardStep(n, pert, x, reciprocal, half_exp);
                             Emit(paths, "up", band.name, x, start, degree, n, base, pert - base,
                                  seed_delta);
                         }
@@ -293,8 +301,8 @@ int main(int argc, char** argv) {
                              seed_delta);
 
                         for (int n = start - 1; n >= 0; --n) {
-                            base = paper_a::DownwardStep(n, base, x, half_exp);
-                            pert = paper_a::DownwardStep(n, pert, x, half_exp);
+                            base = sweep_replica::DownwardStep(n, base, x, half_exp);
+                            pert = sweep_replica::DownwardStep(n, pert, x, half_exp);
                             Emit(paths, "down", band.name, x, start, degree, n, base, pert - base,
                                  seed_delta);
                         }

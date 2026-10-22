@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Revision, constants, toolchain and digests for one Paper A sweep run.
+"""Revision, constants, toolchain and digests for one amplification sweep run.
 
 Everything a sweep pins is read from the boys tree it was compiled against,
 never written down a second time here: the region-A edges, the dispatch
@@ -24,7 +24,7 @@ import sys
 from pathlib import Path
 
 DEFAULT_TREE = os.environ.get(
-    "BOYS_SOURCE", str(Path(__file__).resolve().parents[2] / "boys"))
+    "BOYS_SOURCE", str(Path(__file__).resolve().parents[3] / "boys"))
 
 HEADER_FILES = [
     "include/boys/accuracy.hpp",
@@ -202,7 +202,7 @@ def parse_build_defaults(tree):
 def parse_pinned_policy():
     """The policy the harness names, read from common/replica.hpp.
 
-    One source for the paper's policy: the header the sweeps compile.  The
+    One source for the stated policy: the header the sweeps compile.  The
     names are returned in StatedEvalPolicy's order.
     """
     path = Path(__file__).resolve().parents[1] / "common/replica.hpp"
