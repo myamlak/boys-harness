@@ -7,8 +7,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 if(NOT DEFINED BOYS_SOURCE_DIR)
-    message(FATAL_ERROR "pass -DBOYS_SOURCE_DIR=<path to the boys source>")
+    set(BOYS_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../boys")
 endif()
+get_filename_component(BOYS_SOURCE_DIR "${BOYS_SOURCE_DIR}" ABSOLUTE)
 
 if(NOT EXISTS "${BOYS_SOURCE_DIR}/CMakeLists.txt")
     message(FATAL_ERROR "BOYS_SOURCE_DIR does not look like the boys source: ${BOYS_SOURCE_DIR}")

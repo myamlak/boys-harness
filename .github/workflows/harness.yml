@@ -55,7 +55,7 @@ jobs:
           test -s results/cells.csv
       - name: Build the composition driver
         run: |
-          cmake -S composition-audit -B build -DCMAKE_BUILD_TYPE=Release -DBOYS_SOURCE_DIR="$(realpath ../boys)"
+          cmake -S composition-audit -B build -DCMAKE_BUILD_TYPE=Release
           cmake --build build --target measure-interaction -j 4
       - name: Run the composition smoke test
         run: |

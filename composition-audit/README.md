@@ -7,9 +7,12 @@ design against a 60-digit reference.
 ## Build
 
 ```sh
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBOYS_SOURCE_DIR=<boys>
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build --target measure-interaction
 ```
+
+The build uses the `boys` checkout beside this repository by default. Pass
+`-DBOYS_SOURCE_DIR=<path>` for another checkout.
 
 ## Run
 
@@ -30,11 +33,12 @@ bash run_measurement.sh --quiet-machine \
 ```
 
 The driver narrows each nominal argument to its lane's format, emits the
-per-lane arguments, and measures the cells against the reference. The scripts
-run the self-checks, the build, the reference and the measurement, and record
-the library revision, the build type and the canary readings beside the
-results. Use `-MulAddRoute separate` or `--route separate` for the second
-multiply-add route.
+per-lane arguments, and measures the cells against the reference. The
+measurement itself takes about a second per configuration; the build and the
+60-digit reference are the slow steps. The scripts run the self-checks, the
+build, the reference and the measurement, and record the library revision, the
+build type and the canary readings beside the results. Use `-MulAddRoute
+separate` or `--route separate` for the second multiply-add route.
 
 The Windows fused run writes to `results/`, the Windows separate run to
 `results-msvc-separate/`, and the GCC runs to `results-gcc-fused/` and

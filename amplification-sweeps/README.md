@@ -28,10 +28,11 @@ python ../common/reference.py --grid data/grid.csv --out data/reference.csv
 python analyze.py --tree .
 ```
 
-`grid.py` writes 9,352 arguments. `reference.py` computes the 60-digit
-reference and is the slow step. `sweep1` writes `results/cells.csv`,
-`results/admission.csv` and `results/replica_gain.csv`; `analyze.py` writes the
-tables in `results/` and `data/documented.csv`. The analysis needs the full
+`grid.py` writes 9,352 arguments. `sweep1` runs the full grid in about four
+seconds (GCC 15, `-O2`, one core) and writes `results/cells.csv`,
+`results/admission.csv` and `results/replica_gain.csv`. `reference.py`
+computes the 60-digit reference and is the slow step. `analyze.py` writes the
+tables in `results/` and `data/documented.csv`; the analysis needs the full
 grid.
 
 ## Second sweep
