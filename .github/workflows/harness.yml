@@ -20,6 +20,7 @@ jobs:
         run: |
           python -m py_compile coefficient-count-sweep/*.py
           python -m py_compile amplification-sweeps/*/*.py
+          python -m py_compile accuracy-claim-audit/headline_numbers.py
           python -m py_compile accuracy-claim-audit/boost_accuracy_rows/tools/*.py
           python -m py_compile accuracy-claim-audit/claim-audit-crlibm/work/*.py
       - name: Read the shipped counts and print the plan
