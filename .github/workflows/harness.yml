@@ -20,6 +20,7 @@ jobs:
         run: |
           python -m py_compile coefficient-count-sweep/*.py
           python -m py_compile amplification-sweeps/*/*.py
+          python -m py_compile accuracy-claim-audit/headline_numbers.py
           python -m py_compile accuracy-claim-audit/boost_accuracy_rows/tools/*.py
           python -m py_compile accuracy-claim-audit/claim-audit-crlibm/work/*.py
       - name: Read the shipped counts and print the plan
@@ -32,6 +33,18 @@ jobs:
         run: |
           python grid.py --out data/grid.csv
           python ../common/reference.py --grid data/grid.csv --out data/reference.csv --max-arguments 4
+      - name: A subset sweep keeps the other rows
+        working-directory: coefficient-count-sweep
+        run: |
+          python count_sweep.py --sweep --out-dir "$RUNNER_TEMP/subset" --widths 2^-7 --targets rel:1e-13
+          python count_sweep.py --sweep --out-dir "$RUNNER_TEMP/subset" --widths 2^-6 --targets rel:1e-13
+          python - <<'PY'
+          import json, os
+          path = os.path.join(os.environ["RUNNER_TEMP"], "subset", "sweep_all.json")
+          names = sorted(r["width_name"] for r in json.load(open(path))["rows"])
+          assert names == ["2^-6", "2^-7"], names
+          print("both rows kept:", names)
+          PY
 
   cpp:
     runs-on: ubuntu-latest

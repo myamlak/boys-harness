@@ -1499,17 +1499,18 @@ def sweep_mode(args) -> dict:
                             remez_iters=args.remez_iters,
                             verbose=args.progress)
             done[key] = row
-            rows = ordered_rows(done, targets, widths)
-            write_sweep_outputs(out_dir, rows, targets, meta)
+            # Write every row on disk, not only this invocation's grid: a
+            # subset run must never drop another arm's rows from the files.
+            write_sweep_outputs(out_dir, list(done.values()), targets, meta)
             c = row["cheb"].get("stored")
             r = row["rat"].get("stored")
             print(f"[{key[0]}] {name:<10} W={row['width_f']:<10.6g} "
                   f"cheb={c} rat={r} saving={row['saving']} "
                   f"({row['cheb'].get('seconds')}s + {row['rat'].get('seconds')}s)",
                   flush=True)
-    rows = ordered_rows(done, targets, widths)
+    rows = list(done.values())
     write_sweep_outputs(out_dir, rows, targets, meta)
-    print_table(rows)
+    print_table(ordered_rows(done, targets, widths))
     if remaining:
         print(f"\n{len(remaining)} row(s) remain in this grid: "
               f"{', '.join(f'{t}/{w}' for t, w in remaining)}")

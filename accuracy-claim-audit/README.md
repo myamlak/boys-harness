@@ -22,6 +22,19 @@ against an independent MPFR reference.
   `verify_findings.py` checks the two measured defects against mpmath.
   `claims_registry.tsv` is the claim classification.
 
+## Headline numbers
+
+`headline_numbers.py` prints the five counts that follow from the two claim
+registries, from any checkout of this directory:
+
+```sh
+python headline_numbers.py
+```
+
+The three false claims need the captured cell summary
+`records/summarize_cells.txt`, which is supplied with the corresponding paper
+and is not in this repository; the script says so when it is absent.
+
 ## Dependencies
 
 - Python 3.10 or newer with gmpy2 2.3.1 linked to MPFR 4.2.2 and GMP 6.3.0,
