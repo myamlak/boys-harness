@@ -1,0 +1,45 @@
+[amplification_form] starting at 0.0s
+[amplification_form] done at 660.0s
+  population {'A1': 290, 'A2': 282} of {'A1': 554, 'A2': 282}
+  counts: {'comparisons': 132, 'committed': 67, 'certified_among_committed': 0, 'certified_among_committed_agree': 0, 'certified_at_all': 0, 'certified_at_all_agree_with_delivered': 0, 'by_metric': {'absolute': 37, 'relative': 30}}
+    primary_sampled400_paper {'counts': {'abstain': 132}, 'directions': {}}
+    sampled100_paper {'counts': {'abstain': 132}, 'directions': {}}
+    sampled1600_paper {'counts': {'abstain': 132}, 'directions': {}}
+    sampled400_paper_strictsize {'counts': {'abstain': 132}, 'directions': {}}
+    sampled400_worstcharge {'counts': {'abstain': 132}, 'directions': {}}
+    coef_paper {'counts': {'abstain': 132}, 'directions': {}}
+    crude_paper {'counts': {'abstain': 132}, 'directions': {}}
+  modes: {'downward/fit': 17, 'recursed/fit': 90, 'same-fit/fit': 25} same-fit: 25 both one-signed: 0 identical trunc at same-fit: False
+   ratio symcrude_absolute {'n': 132, 'min': 2.442, 'median': 4.620373292522885e+16, 'q10': 1447324.468, 'q90': 3.8103495495229805e+17, 'max': 7.028072184286117e+17}
+   ratio symcrude_relative {'n': 132, 'min': 2.086, 'median': 2613827664609.417, 'q10': 37560531973.456, 'q90': 547458848641955.6, 'max': 2.1551005307849644e+16}
+   ratio symsharp_absolute {'n': 132, 'min': 1.222, 'median': 13.611, 'q10': 1.663, 'q90': 102.448, 'max': 1815.43}
+   ratio symsharp_relative {'n': 132, 'min': 0.0, 'median': 0.001, 'q10': 0.0, 'q90': 0.272, 'max': 3.047}
+   ratio total_absolute {'n': 132, 'min': 0.771, 'median': 10.814, 'q10': 1.086, 'q90': 100.883, 'max': 1812.659}
+   ratio total_relative {'n': 132, 'min': 0.0, 'median': 0.001, 'q10': 0.0, 'q90': 0.223, 'max': 2.402}
+   ratio trunc_absolute {'n': 132, 'min': 0.0, 'median': 1.393, 'q10': 0.0, 'q90': 48.144, 'max': 108.579}
+   ratio trunc_relative {'n': 132, 'min': 0.0, 'median': 0.0, 'q10': 0.0, 'q90': 0.015, 'max': 1.71}
+  band-max counts: {'abstain': 66}
+[product_amplification] starting at 660.0s
+[product_amplification] done at 1477.7s
+  population {'A1': 3499, 'A2': 4540} of {'A1': 4812, 'A2': 4540}
+  counts: {'comparisons': 132, 'committed': 0, 'certified_among_committed': 0, 'certified_among_committed_agree': 0, 'certified_at_all': 0, 'certified_at_all_agree_with_delivered': 0, 'by_metric': {}}
+    primary_sampled400_paper {'counts': {'abstain': 132}, 'directions': {}}
+    sampled100_paper {'counts': {'abstain': 132}, 'directions': {}}
+    sampled1600_paper {'counts': {'abstain': 132}, 'directions': {}}
+    sampled400_paper_strictsize {'counts': {'abstain': 132}, 'directions': {}}
+    sampled400_worstcharge {'counts': {'abstain': 132}, 'directions': {}}
+    coef_paper {'counts': {'abstain': 132}, 'directions': {}}
+    crude_paper {'counts': {'abstain': 132}, 'directions': {}}
+  modes: {'downward/fit': 15, 'recursed/fit': 93, 'same-fit/fit': 24} same-fit: 24 both one-signed: 0 identical trunc at same-fit: False
+   ratio symcrude_absolute {'n': 132, 'min': 2.452, 'median': 2.5013946718612844e+16, 'q10': 58038907.332, 'q90': 4.5376680327808205e+17, 'max': 6.446357213947867e+17}
+   ratio symcrude_relative {'n': 132, 'min': 10566542458.663, 'median': 1977540475299.319, 'q10': 24311955315.843, 'q90': 335265957625211.94, 'max': 2.624156016751647e+16}
+   ratio symsharp_absolute {'n': 132, 'min': 1.137, 'median': 9.163, 'q10': 1.484, 'q90': 95.693, 'max': 1567.145}
+   ratio symsharp_relative {'n': 132, 'min': 0.0, 'median': 0.001, 'q10': 0.0, 'q90': 0.228, 'max': 3.545}
+   ratio total_absolute {'n': 132, 'min': 0.771, 'median': 6.267, 'q10': 0.949, 'q90': 92.204, 'max': 1565.794}
+   ratio total_relative {'n': 132, 'min': 0.0, 'median': 0.001, 'q10': 0.0, 'q90': 0.202, 'max': 3.034}
+   ratio trunc_absolute {'n': 132, 'min': 0.0, 'median': 1.133, 'q10': 0.0, 'q90': 55.682, 'max': 87.989}
+   ratio trunc_relative {'n': 132, 'min': 0.0, 'median': 0.0, 'q10': 0.0, 'q90': 0.012, 'max': 2.374}
+  band-max counts: {'abstain': 66}
+signedness: {'count': 67, 'one_signed': 0, 'max': {'name': 'F27[0]', 'order': 27, 'r0': '2.48103e-17', 'spread': '1.60504e-16', 'ratio': 0.1545773327155417}, 'median': 0.04588792003279273}
+rational: {'pieces': 66, 'crude_positive': 0, 'sampled_positive': 63, 'crude_min': -3.6755542091102096, 'sampled_min': -0.004462767274715861}
+total 1483.2s

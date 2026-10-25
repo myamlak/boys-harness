@@ -1,0 +1,82 @@
+== amplification_form: committed 67
+   committed with L_loser = 0 (sign obstruction): 67
+   U_winner / delivered_winner: min 9.93e-06 median 1.18 max 109
+   L_loser / delivered_loser: min 0 median 0 max 0
+   certified among committed: 0
+    A1 absolute n= 0 ship    winner=ship    cert=-       x_s=0.8888     x_p=0.0004067  Uw=4.290893e-16 Ll=0.0 ratio=inf
+    A1 absolute n= 2 product winner=product cert=-       x_s=1.168      x_p=8.254e-06  Uw=7.0843676e-17 Ll=0.0 ratio=inf
+    A1 absolute n= 3 product winner=product cert=-       x_s=1.168      x_p=7.499e-07  Uw=5.0602273e-17 Ll=0.0 ratio=inf
+    A1 absolute n= 4 product winner=product cert=-       x_s=1.168      x_p=0.2186     Uw=3.820438e-17 Ll=0.0 ratio=inf
+    A1 absolute n= 5 product winner=product cert=-       x_s=2.066      x_p=0.4295     Uw=3.25689e-17 Ll=0.0 ratio=inf
+    A1 absolute n= 6 product winner=product cert=-       x_s=2.066      x_p=0.09103    Uw=2.7066849e-17 Ll=0.0 ratio=inf
+    A1 absolute n= 7 product winner=product cert=-       x_s=2.066      x_p=0.2186     Uw=2.3767948e-17 Ll=0.0 ratio=inf
+    A1 absolute n= 8 product winner=product cert=-       x_s=2.066      x_p=0.01457    Uw=1.9844376e-17 Ll=0.0 ratio=inf
+    A1 absolute n=12 product winner=product cert=-       x_s=4.9        x_p=0.1166     Uw=1.5047888e-17 Ll=0.0 ratio=inf
+    A1 absolute n=13 product winner=product cert=-       x_s=4.9        x_p=0.1168     Uw=1.2878556e-17 Ll=0.0 ratio=inf
+    A1 absolute n=14 product winner=product cert=-       x_s=4.9        x_p=0.06557    Uw=1.1979108e-17 Ll=0.0 ratio=inf
+    A1 absolute n=15 product winner=product cert=-       x_s=4.9        x_p=0.001      Uw=1.1063213e-17 Ll=0.0 ratio=inf
+    A1 absolute n=16 product winner=product cert=-       x_s=4.9        x_p=0.001      Uw=1.0584239e-17 Ll=0.0 ratio=inf
+    A1 relative n= 0 ship    winner=ship    cert=-       x_s=0.8888     x_p=5.917      Uw=4.290893e-16 Ll=0.0 ratio=inf
+    A1 relative n= 1 ship    winner=ship    cert=-       x_s=1.168      x_p=5.941      Uw=3.1779901e-16 Ll=0.0 ratio=inf
+    A1 relative n= 4 product winner=product cert=-       x_s=1.168      x_p=5.94       Uw=7.0900756e-17 Ll=0.0 ratio=inf
+    A1 relative n= 7 product winner=product cert=-       x_s=2.066      x_p=5.881      Uw=3.330239e-17 Ll=0.0 ratio=inf
+    A1 relative n= 8 product winner=product cert=-       x_s=2.066      x_p=5.94       Uw=3.2782876e-17 Ll=0.0 ratio=inf
+    A1 relative n=12 product winner=product cert=-       x_s=4.9        x_p=5.917      Uw=1.8810383e-17 Ll=0.0 ratio=inf
+    A1 relative n=13 product winner=product cert=-       x_s=4.9        x_p=5.901      Uw=1.882855e-17 Ll=0.0 ratio=inf
+    A1 relative n=14 product winner=product cert=-       x_s=4.9        x_p=5.859      Uw=1.6375012e-17 Ll=0.0 ratio=inf
+    A1 relative n=15 product winner=product cert=-       x_s=4.9        x_p=5.95       Uw=2.022088e-17 Ll=0.0 ratio=inf
+    A1 relative n=16 product winner=product cert=-       x_s=4.9        x_p=5.792      Uw=1.381192e-17 Ll=0.0 ratio=inf
+    A2 absolute n= 0 product winner=product cert=-       x_s=9.085      x_p=10.34      Uw=5.4506542e-16 Ll=0.0 ratio=inf
+    A2 absolute n= 1 product winner=product cert=-       x_s=6.332      x_p=6.388      Uw=1.5861955e-16 Ll=0.0 ratio=inf
+    A2 absolute n= 7 product winner=product cert=-       x_s=5.954      x_p=6.241      Uw=2.2728827e-17 Ll=0.0 ratio=inf
+    A2 absolute n= 8 product winner=product cert=-       x_s=5.954      x_p=6.015      Uw=1.9872493e-17 Ll=0.0 ratio=inf
+    A2 absolute n= 9 product winner=product cert=-       x_s=5.954      x_p=6.015      Uw=1.7260161e-17 Ll=0.0 ratio=inf
+    A2 absolute n=10 product winner=product cert=-       x_s=5.954      x_p=6.313      Uw=1.2771064e-17 Ll=0.0 ratio=inf
+    A2 absolute n=11 product winner=product cert=-       x_s=5.954      x_p=6.313      Uw=1.1211493e-17 Ll=0.0 ratio=inf
+    A2 absolute n=12 product winner=product cert=-       x_s=5.954      x_p=6.313      Uw=9.5827716e-18 Ll=0.0 ratio=inf
+    A2 absolute n=13 product winner=product cert=-       x_s=5.954      x_p=6.313      Uw=8.2445718e-18 Ll=0.0 ratio=inf
+    A2 absolute n=14 product winner=product cert=-       x_s=5.954      x_p=6.313      Uw=7.5461351e-18 Ll=0.0 ratio=inf
+    A2 absolute n=15 product winner=product cert=-       x_s=5.954      x_p=6.313      Uw=6.6726436e-18 Ll=0.0 ratio=inf
+    A2 absolute n=16 product winner=product cert=-       x_s=5.954      x_p=6.313      Uw=6.0647209e-18 Ll=0.0 ratio=inf
+    A2 absolute n=21 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=3.5517487e-18 Ll=0.0 ratio=inf
+    A2 absolute n=22 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=3.3448785e-18 Ll=0.0 ratio=inf
+    A2 absolute n=23 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=3.1137359e-18 Ll=0.0 ratio=inf
+    A2 absolute n=24 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=2.8428794e-18 Ll=0.0 ratio=inf
+    A2 absolute n=25 product winner=product cert=-       x_s=10.87      x_p=5.983      Uw=4.1445039e-18 Ll=0.0 ratio=inf
+    A2 absolute n=26 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=2.4422588e-18 Ll=0.0 ratio=inf
+    A2 absolute n=27 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=2.2647596e-18 Ll=0.0 ratio=inf
+    A2 absolute n=28 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=2.1167701e-18 Ll=0.0 ratio=inf
+    A2 absolute n=29 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=1.9984309e-18 Ll=0.0 ratio=inf
+    A2 absolute n=30 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=1.8512184e-18 Ll=0.0 ratio=inf
+    A2 absolute n=31 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=1.7329723e-18 Ll=0.0 ratio=inf
+    A2 absolute n=32 product winner=product cert=-       x_s=10.87      x_p=6.313      Uw=1.6137036e-18 Ll=0.0 ratio=inf
+    A2 relative n= 0 product winner=product cert=-       x_s=11.3       x_p=10.34      Uw=5.4506542e-16 Ll=0.0 ratio=inf
+    A2 relative n= 1 product winner=product cert=-       x_s=11.3       x_p=11.55      Uw=1.5914434e-16 Ll=0.0 ratio=inf
+    A2 relative n= 5 ship    winner=ship    cert=-       x_s=11         x_p=11.9       Uw=2.4361965e-16 Ll=0.0 ratio=inf
+    A2 relative n= 6 ship    winner=ship    cert=-       x_s=5.954      x_p=11.74      Uw=2.463077e-16 Ll=0.0 ratio=inf
+    A2 relative n= 7 ship    winner=ship    cert=-       x_s=5.954      x_p=11.74      Uw=2.4671983e-16 Ll=0.0 ratio=inf
+    A2 relative n= 8 ship    winner=ship    cert=-       x_s=5.954      x_p=11.86      Uw=2.4768315e-16 Ll=0.0 ratio=inf
+    A2 relative n= 9 ship    winner=ship    cert=-       x_s=5.954      x_p=11.87      Uw=2.4958298e-16 Ll=0.0 ratio=inf
+    A2 relative n=15 product winner=product cert=-       x_s=5.954      x_p=11.9       Uw=9.4711193e-18 Ll=0.0 ratio=inf
+    A2 relative n=16 product winner=product cert=-       x_s=5.954      x_p=11.9       Uw=8.5781703e-18 Ll=0.0 ratio=inf
+    A2 relative n=22 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=5.1905787e-18 Ll=0.0 ratio=inf
+    A2 relative n=23 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=4.8240834e-18 Ll=0.0 ratio=inf
+    A2 relative n=24 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=4.5026927e-18 Ll=0.0 ratio=inf
+    A2 relative n=25 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=4.2082629e-18 Ll=0.0 ratio=inf
+    A2 relative n=26 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=3.9468486e-18 Ll=0.0 ratio=inf
+    A2 relative n=27 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=3.7082649e-18 Ll=0.0 ratio=inf
+    A2 relative n=28 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=3.446049e-18 Ll=0.0 ratio=inf
+    A2 relative n=29 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=3.2926887e-18 Ll=0.0 ratio=inf
+    A2 relative n=30 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=3.1097613e-18 Ll=0.0 ratio=inf
+    A2 relative n=31 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=2.9018418e-18 Ll=0.0 ratio=inf
+    A2 relative n=32 product winner=product cert=-       x_s=10.87      x_p=11.9       Uw=2.7856213e-18 Ll=0.0 ratio=inf
+== product_amplification: committed 0
+   committed with L_loser = 0 (sign obstruction): 0
+Traceback (most recent call last):
+  File "C:\Users\myaml\AppData\Local\Temp\apriori-bound\detail.py", line 110, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\myaml\AppData\Local\Temp\apriori-bound\detail.py", line 91, in main
+    % (min(env), sorted(env)[len(env) // 2], max(env)))
+       ~~~^^^^^
+ValueError: min() iterable argument is empty

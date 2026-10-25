@@ -1,0 +1,13 @@
+committed 67 below {'ship_cell_below_theta0': 2, 'product_cell_below_theta0': 13}
+loser/winner delivered: min 1.04 (A1 absolute n=0) max 3.25e+04 (A2 absolute n=32)
+delivered gap: min 3.67e-20 median 5.22e-16 max 5.24e-09
+loser truncation one-signed: 0 []
+band metric n x_ship x_prod delivered_ship delivered_prod loser loser_lo loser_hi winner_hi
+A1 absolute  0 0.888819 0.000406662 1.5811e-16 1.63733e-16 product 0.0 3.40927e-16 4.29089e-16
+A2 absolute 32 10.865 6.31342 2.26802e-15 6.97225e-20 ship 0.0 2.45872e-14 1.6137e-18
+A1 absolute  0 0.888819 0.000406662 1.5811e-16 1.63733e-16 product 0.0 3.40927e-16 4.29089e-16
+A1 absolute 15 4.89985 0.001 1.01668e-15 1.43413e-17 ship 0.0 6.58142e-15 1.10632e-17
+A2 absolute 32 10.865 6.31342 2.26802e-15 6.97225e-20 ship 0.0 2.45872e-14 1.6137e-18
+A2 relative 32 10.865 11.8998 5.24364e-9 2.80589e-13 ship 0.0 2.45872e-14 2.78562e-18
+A2 absolute 23 10.865 6.31342 5.53793e-19 8.45416e-20 ship 0.0 2.49408e-16 3.11374e-18
+A1 relative  0 0.888819 5.91704 2.05731e-16 2.7686e-16 product 0.0 6.65117e-16 4.29089e-16
