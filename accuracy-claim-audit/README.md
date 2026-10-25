@@ -22,7 +22,11 @@ against an independent MPFR reference.
   `verify_findings.py` checks the two measured defects against mpmath.
   `claims_registry.tsv` is the claim classification.
 - `records/` — the captured cell summary `summarize_cells.txt`, the per-row
-  judged and degenerate cell counts behind the audit's sixth headline number.
+  judged and degenerate cell counts behind the audit's sixth headline number,
+  and `documented-claims-v5.tsv`, the coverage enumeration of the five
+  documents that state the Boys kernel's accuracy: one documented claim per
+  line, with the document, location, figure, scope and the gate row or book
+  that registers it (or none).
 
 ## Headline numbers
 
