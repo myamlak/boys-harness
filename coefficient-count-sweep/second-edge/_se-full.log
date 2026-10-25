@@ -1,0 +1,8 @@
+left edge a = 23.799696304216968 (scale 2 x X0); widths scaled by 2
+grid: 15 width(s) x 3 target(s); 1 row(s) already on disk
+workers: 4
+reuse rel:1e-13/2^-7 cheb=5 rat=4
+[rel:1e-13] 2^-6    W=0.03125      cheb=5 (deg=4, even) rat=4 ([1/2], lawson) rel=3.8880177061303194e-16 (0.065s + 292.419s)
+[rel:1e-13] 2^-5    W=0.0625       cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=3.1235010938035519e-15 (0.089s + 271.584s)
+[rel:1e-13] 2^-4    W=0.125        cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=4.6163469964986977e-14 (0.085s + 293.306s)
+[rel:1e-13] 2^-3    W=0.25         cheb=5 (deg=4, even) rat=5 ([2/2], remez) rel=6.6988589725718081e-16 (0.083s + 479.368s)
