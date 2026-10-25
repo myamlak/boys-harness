@@ -1,0 +1,3 @@
+amplification_form absolute cells {'n': 132, 'min': 0.9571810216771173, 'q10': 1.0824695428749362, 'median': 9.781349529483919, 'q90': 45128145821.181366, 'max': 2.1972025591223925e+132} {'rounding>10x': 65, 'mixed': 67}
+amplification_form committed losers delivered/trunc {'n': 67, 'min': 0.9852319476318041, 'q10': 4.184193303544874, 'median': 9.573021786418288, 'q90': 48.41613583981635, 'max': 133.06050358126518} >2x 62 of 67
+product_amplification absolute cells {'n': 132, 'min': 1.1080374029172142, 'q10': 1.2249466283435264, 'median': 12.96943767965985, 'q90': 934828237.541772, 'max': 6.993811099492268e+53} {'rounding>10x': 86, 'mixed': 46}

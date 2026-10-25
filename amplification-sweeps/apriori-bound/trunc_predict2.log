@@ -1,0 +1,2 @@
+absolute {'agree': {True: 27, False: 10}, 'n': 37, 'gap_min': 0.0001272026396710964, 'gap_median': 0.09964470161077729, 'gap_max': 1.8897865324304424, 'agreement_rate': 0.7297297297297297}
+relative {'agree': {True: 24, False: 6}, 'n': 30, 'gap_min': 0.0023334476140810514, 'gap_median': 0.1565101490757172, 'gap_max': 1.3068089934160785, 'agreement_rate': 0.8}

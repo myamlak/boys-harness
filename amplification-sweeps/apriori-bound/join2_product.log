@@ -1,0 +1,11 @@
+   truncation miss A1 24 product exact 5.50111e-19 trunc 5.50108e-19
+   truncation miss A1 27 product exact 5.8192e-21 trunc 5.81898e-21
+   truncation miss A1 28 ship exact -3.40853e-55 trunc 3.40841e-55
+   truncation miss A1 29 ship exact -2.17864e-47 trunc 2.17856e-47
+   truncation miss A1 30 ship exact -8.24299e-43 trunc 8.2427e-43
+   truncation miss A1 31 ship exact -3.04887e-27 trunc 3.04878e-27
+   truncation miss A1 32 product exact -6.17472e-19 trunc 6.1745e-19
+product_amplification: 132 absolute cells; truncation misses 7; paper-charge containment misses 19; strict-charge containment misses 0
+   worst paper overshoot 6.183e-18 at ('A1', 6, 'product', 0.018888863993190785)
+   worst strict overshoot 0.0 at None
+   certified upper / delivered: min 0.771 q10 0.949 median 6.27 q90 92.2 max 1.57e+03

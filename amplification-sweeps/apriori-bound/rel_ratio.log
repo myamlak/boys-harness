@@ -1,0 +1,2 @@
+amplification_form relative envelope/delivered: {'n': 132, 'min': 2.7138720844453035, 'q10': 5.8536544102343795, 'median': 14.33604917289454, 'q90': 200.7287836846811, 'max': 6854.522153666161} containment 132 misses 0
+product_amplification relative envelope/delivered: {'n': 132, 'min': 2.889413995921635, 'q10': 4.084914645824696, 'median': 9.109429081949504, 'q90': 182.85666974814936, 'max': 4060.8949120012144} containment 132 misses 0

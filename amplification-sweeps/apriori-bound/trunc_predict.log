@@ -1,0 +1,70 @@
+committed comparisons: 67
+truncation-only predictor agrees with delivered winner: {True: 55, False: 12}
+truncation gap / delivered gap: min 5.31e-08 median 0.0183 max 1.89
+A1 absolute n= 0 measured=ship    delivered=ship    trunc=ship    ts=-3.438e-56 tp=-7.834e-18 ds=1.581e-16 dp=1.637e-16 gap_tr=7.83e-18  gap_del=5.62e-18
+A1 absolute n= 2 measured=product delivered=product trunc=ship    ts=-6.492e-19 tp=-4.23e-18  ds=7.805e-17 dp=5.023e-17 gap_tr=3.58e-18  gap_del=2.78e-17
+A1 absolute n= 3 measured=product delivered=product trunc=ship    ts=-1.39e-18  tp=-3.021e-18 ds=1.843e-16 dp=5.0e-17   gap_tr=1.63e-18  gap_del=1.34e-16
+A1 absolute n= 4 measured=product delivered=product trunc=product ts=-4.164e-18 tp=3.942e-19  ds=5.541e-16 dp=3.235e-17 gap_tr=3.77e-18  gap_del=5.22e-16
+A1 absolute n= 5 measured=product delivered=product trunc=product ts=-1.962e-18 tp=1.377e-18  ds=9.531e-17 dp=2.771e-17 gap_tr=5.85e-19  gap_del=6.76e-17
+A1 absolute n= 6 measured=product delivered=product trunc=product ts=-5.224e-18 tp=1.143e-18  ds=2.533e-16 dp=3.004e-17 gap_tr=4.08e-18  gap_del=2.23e-16
+A1 absolute n= 7 measured=product delivered=product trunc=product ts=-1.644e-17 tp=-4.889e-19 ds=7.96e-16  dp=1.992e-17 gap_tr=1.6e-17   gap_del=7.76e-16
+A1 absolute n= 8 measured=product delivered=product trunc=product ts=-5.969e-17 tp=1.045e-19  ds=2.888e-15 dp=1.609e-17 gap_tr=5.96e-17  gap_del=2.87e-15
+A1 absolute n=12 measured=product delivered=product trunc=product ts=-4.769e-18 tp=-1.295e-18 ds=4.889e-17 dp=1.115e-17 gap_tr=3.47e-18  gap_del=3.77e-17
+A1 absolute n=13 measured=product delivered=product trunc=product ts=-1.217e-17 tp=-3.288e-19 ds=1.247e-16 dp=1.224e-17 gap_tr=1.18e-17  gap_del=1.12e-16
+A1 absolute n=14 measured=product delivered=product trunc=product ts=-3.352e-17 tp=3.867e-19  ds=3.436e-16 dp=1.103e-17 gap_tr=3.31e-17  gap_del=3.33e-16
+A1 absolute n=15 measured=product delivered=product trunc=product ts=-9.92e-17  tp=-2.949e-19 ds=1.017e-15 dp=1.434e-17 gap_tr=9.89e-17  gap_del=1.0e-15
+A1 absolute n=16 measured=product delivered=product trunc=product ts=-3.138e-16 tp=4.895e-19  ds=3.216e-15 dp=8.272e-18 gap_tr=3.13e-16  gap_del=3.21e-15
+A1 relative n= 0 measured=ship    delivered=ship    trunc=ship    ts=-3.438e-56 tp=-3.385e-17 ds=2.057e-16 dp=2.769e-16 gap_tr=3.38e-17  gap_del=7.11e-17
+A1 relative n= 1 measured=ship    delivered=ship    trunc=ship    ts=-5.055e-19 tp=3.078e-18  ds=3.404e-16 dp=1.095e-15 gap_tr=2.57e-18  gap_del=7.55e-16
+A1 relative n= 4 measured=product delivered=product trunc=product ts=-4.164e-18 tp=-8.997e-19 ds=1.275e-14 dp=3.787e-15 gap_tr=3.26e-18  gap_del=8.97e-15
+A1 relative n= 7 measured=product delivered=product trunc=product ts=-1.644e-17 tp=-9.53e-19  ds=7.199e-14 dp=9.225e-15 gap_tr=1.55e-17  gap_del=6.28e-14
+A1 relative n= 8 measured=product delivered=product trunc=product ts=-5.969e-17 tp=-2.993e-18 ds=3.052e-13 dp=1.331e-14 gap_tr=5.67e-17  gap_del=2.92e-13
+A1 relative n=12 measured=product delivered=product trunc=product ts=-4.769e-18 tp=6.583e-19  ds=1.066e-13 dp=1.307e-14 gap_tr=4.11e-18  gap_del=9.35e-14
+A1 relative n=13 measured=product delivered=product trunc=product ts=-1.217e-17 tp=-1.098e-18 ds=3.037e-13 dp=1.354e-14 gap_tr=1.11e-17  gap_del=2.9e-13
+A1 relative n=14 measured=product delivered=product trunc=product ts=-3.352e-17 tp=-8.295e-19 ds=9.254e-13 dp=1.572e-14 gap_tr=3.27e-17  gap_del=9.1e-13
+A1 relative n=15 measured=product delivered=product trunc=product ts=-9.92e-17  tp=1.51e-19   ds=3.003e-12 dp=1.589e-14 gap_tr=9.9e-17   gap_del=2.99e-12
+A1 relative n=16 measured=product delivered=product trunc=product ts=-3.138e-16 tp=-6.739e-19 ds=1.034e-11 dp=1.608e-14 gap_tr=3.13e-16  gap_del=1.03e-11
+A2 absolute n= 0 measured=product delivered=product trunc=ship    ts=-1.617e-17 tp=-1.721e-17 ds=8.868e-17 dp=6.838e-17 gap_tr=1.04e-18  gap_del=2.03e-17
+A2 absolute n= 1 measured=product delivered=product trunc=product ts=-1.113e-18 tp=-3.154e-19 ds=7.203e-18 dp=4.709e-18 gap_tr=7.97e-19  gap_del=2.49e-18
+A2 absolute n= 7 measured=product delivered=product trunc=ship    ts=-5.407e-20 tp=1.447e-19  ds=5.562e-19 dp=2.079e-19 gap_tr=9.06e-20  gap_del=3.48e-19
+A2 absolute n= 8 measured=product delivered=product trunc=ship    ts=-6.811e-20 tp=1.532e-19  ds=7.196e-19 dp=2.223e-19 gap_tr=8.51e-20  gap_del=4.97e-19
+A2 absolute n= 9 measured=product delivered=product trunc=ship    ts=-9.724e-20 tp=1.437e-19  ds=9.739e-19 dp=1.983e-19 gap_tr=4.65e-20  gap_del=7.76e-19
+A2 absolute n=10 measured=product delivered=product trunc=ship    ts=-1.552e-19 tp=1.581e-19  ds=1.518e-18 dp=1.878e-19 gap_tr=2.98e-21  gap_del=1.33e-18
+A2 absolute n=11 measured=product delivered=product trunc=product ts=-2.737e-19 tp=1.495e-19  ds=2.641e-18 dp=1.651e-19 gap_tr=1.24e-19  gap_del=2.48e-18
+A2 absolute n=12 measured=product delivered=product trunc=product ts=-5.286e-19 tp=1.429e-19  ds=5.06e-18  dp=1.76e-19  gap_tr=3.86e-19  gap_del=4.88e-18
+A2 absolute n=13 measured=product delivered=product trunc=product ts=-1.11e-18  tp=1.322e-19  ds=1.064e-17 dp=1.431e-19 gap_tr=9.78e-19  gap_del=1.05e-17
+A2 absolute n=14 measured=product delivered=product trunc=product ts=-2.517e-18 tp=1.301e-19  ds=2.411e-17 dp=1.352e-19 gap_tr=2.39e-18  gap_del=2.4e-17
+A2 absolute n=15 measured=product delivered=product trunc=product ts=-6.129e-18 tp=1.174e-19  ds=5.871e-17 dp=1.31e-19  gap_tr=6.01e-18  gap_del=5.86e-17
+A2 absolute n=16 measured=product delivered=product trunc=product ts=-1.596e-17 tp=1.12e-19   ds=1.528e-16 dp=1.301e-19 gap_tr=1.58e-17  gap_del=1.53e-16
+A2 absolute n=21 measured=product delivered=product trunc=ship    ts=-2.154e-20 tp=9.086e-20  ds=1.351e-19 dp=9.843e-20 gap_tr=6.93e-20  gap_del=3.67e-20
+A2 absolute n=22 measured=product delivered=product trunc=ship    ts=-4.262e-20 tp=8.853e-20  ds=2.674e-19 dp=9.547e-20 gap_tr=4.59e-20  gap_del=1.72e-19
+A2 absolute n=23 measured=product delivered=product trunc=ship    ts=-8.826e-20 tp=8.832e-20  ds=5.538e-19 dp=8.454e-20 gap_tr=5.97e-23  gap_del=4.69e-19
+A2 absolute n=24 measured=product delivered=product trunc=product ts=-1.909e-19 tp=8.625e-20  ds=1.198e-18 dp=9.174e-20 gap_tr=1.05e-19  gap_del=1.11e-18
+A2 absolute n=25 measured=product delivered=product trunc=product ts=-4.305e-19 tp=8.646e-20  ds=2.701e-18 dp=8.563e-20 gap_tr=3.44e-19  gap_del=2.62e-18
+A2 absolute n=26 measured=product delivered=product trunc=product ts=-1.01e-18  tp=8.021e-20  ds=6.338e-18 dp=8.197e-20 gap_tr=9.3e-19   gap_del=6.26e-18
+A2 absolute n=27 measured=product delivered=product trunc=product ts=-2.464e-18 tp=7.803e-20  ds=1.546e-17 dp=7.808e-20 gap_tr=2.39e-18  gap_del=1.54e-17
+A2 absolute n=28 measured=product delivered=product trunc=product ts=-6.237e-18 tp=7.576e-20  ds=3.913e-17 dp=8.705e-20 gap_tr=6.16e-18  gap_del=3.9e-17
+A2 absolute n=29 measured=product delivered=product trunc=product ts=-1.636e-17 tp=7.423e-20  ds=1.026e-16 dp=8.029e-20 gap_tr=1.63e-17  gap_del=1.03e-16
+A2 absolute n=30 measured=product delivered=product trunc=product ts=-4.442e-17 tp=7.108e-20  ds=2.787e-16 dp=8.358e-20 gap_tr=4.43e-17  gap_del=2.79e-16
+A2 absolute n=31 measured=product delivered=product trunc=product ts=-1.247e-16 tp=6.957e-20  ds=7.823e-16 dp=6.862e-20 gap_tr=1.25e-16  gap_del=7.82e-16
+A2 absolute n=32 measured=product delivered=product trunc=product ts=-3.615e-16 tp=6.79e-20   ds=2.268e-15 dp=6.972e-20 gap_tr=3.61e-16  gap_del=2.27e-15
+A2 relative n= 0 measured=product delivered=product trunc=product ts=-2.035e-17 tp=-1.721e-17 ds=3.231e-16 dp=2.481e-16 gap_tr=3.15e-18  gap_del=7.5e-17
+A2 relative n= 1 measured=product delivered=product trunc=product ts=-9.004e-19 tp=-5.955e-19 ds=4.376e-16 dp=2.542e-16 gap_tr=3.05e-19  gap_del=1.83e-16
+A2 relative n= 5 measured=ship    delivered=ship    trunc=ship    ts=-3.642e-21 tp=1.371e-19  ds=7.437e-16 dp=5.194e-15 gap_tr=1.33e-19  gap_del=4.45e-15
+A2 relative n= 6 measured=ship    delivered=ship    trunc=ship    ts=-4.952e-20 tp=1.323e-19  ds=9.126e-16 dp=1.017e-14 gap_tr=8.28e-20  gap_del=9.25e-15
+A2 relative n= 7 measured=ship    delivered=ship    trunc=ship    ts=-5.407e-20 tp=1.194e-19  ds=1.225e-15 dp=1.717e-14 gap_tr=6.53e-20  gap_del=1.59e-14
+A2 relative n= 8 measured=ship    delivered=ship    trunc=ship    ts=-6.811e-20 tp=-1.21e-19  ds=2.033e-15 dp=2.619e-14 gap_tr=5.29e-20  gap_del=2.42e-14
+A2 relative n= 9 measured=ship    delivered=ship    trunc=product ts=-9.724e-20 tp=-9.446e-20 ds=3.39e-15  dp=3.608e-14 gap_tr=2.78e-21  gap_del=3.27e-14
+A2 relative n=15 measured=product delivered=product trunc=product ts=-6.129e-18 tp=7.789e-20  ds=4.552e-13 dp=1.182e-13 gap_tr=6.05e-18  gap_del=3.37e-13
+A2 relative n=16 measured=product delivered=product trunc=product ts=-1.596e-17 tp=7.417e-20  ds=1.298e-12 dp=1.34e-13  gap_tr=1.59e-17  gap_del=1.16e-12
+A2 relative n=22 measured=product delivered=product trunc=ship    ts=-4.262e-20 tp=6.367e-20  ds=3.472e-13 dp=2.196e-13 gap_tr=2.11e-20  gap_del=1.28e-13
+A2 relative n=23 measured=product delivered=product trunc=product ts=-8.826e-20 tp=5.855e-20  ds=7.742e-13 dp=2.142e-13 gap_tr=2.97e-20  gap_del=5.6e-13
+A2 relative n=24 measured=product delivered=product trunc=product ts=-1.909e-19 tp=5.767e-20  ds=1.794e-12 dp=2.239e-13 gap_tr=1.33e-19  gap_del=1.57e-12
+A2 relative n=25 measured=product delivered=product trunc=product ts=-4.305e-19 tp=5.459e-20  ds=4.318e-12 dp=2.272e-13 gap_tr=3.76e-19  gap_del=4.09e-12
+A2 relative n=26 measured=product delivered=product trunc=product ts=-1.01e-18  tp=5.484e-20  ds=1.077e-11 dp=2.464e-13 gap_tr=9.55e-19  gap_del=1.05e-11
+A2 relative n=27 measured=product delivered=product trunc=product ts=-2.464e-18 tp=5.412e-20  ds=2.785e-11 dp=2.63e-13  gap_tr=2.41e-18  gap_del=2.76e-11
+A2 relative n=28 measured=product delivered=product trunc=product ts=-6.237e-18 tp=5.049e-20  ds=7.446e-11 dp=2.615e-13 gap_tr=6.19e-18  gap_del=7.42e-11
+A2 relative n=29 measured=product delivered=product trunc=product ts=-1.636e-17 tp=5.209e-20  ds=2.058e-10 dp=2.724e-13 gap_tr=1.63e-17  gap_del=2.06e-10
+A2 relative n=30 measured=product delivered=product trunc=product ts=-4.442e-17 tp=5.009e-20  ds=5.872e-10 dp=2.854e-13 gap_tr=4.44e-17  gap_del=5.87e-10
+A2 relative n=31 measured=product delivered=product trunc=product ts=-1.247e-16 tp=4.423e-20  ds=1.728e-9  dp=2.773e-13 gap_tr=1.25e-16  gap_del=1.73e-9
+A2 relative n=32 measured=product delivered=product trunc=product ts=-3.615e-16 tp=4.521e-20  ds=5.244e-9  dp=2.806e-13 gap_tr=3.61e-16  gap_del=5.24e-9
