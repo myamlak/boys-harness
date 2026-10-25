@@ -28,6 +28,19 @@ python stability_save_verify.py --run
 
 `cold_ladder.py` re-solves the one row whose verdict moved.
 
+## Record
+
+`records/chebyshev_recount.json` is the Chebyshev side of the sweep re-solved
+with the corrected split-Clenshaw evaluator, the transcription the generator
+uses to measure a fit's delivered error. Each of its 95 cells carries the
+stored count in the earlier record, the corrected count and the delivered
+error; the rational counts, which were not re-solved, are carried beside them.
+The file states the library revision it was measured at and the content
+digests of the generator, the coefficient header and the five records it was
+re-solved from, together with the digest of the generator the earlier counts
+came from. Run through that earlier generator, the same script reproduces all
+135 recorded rows.
+
 ## Requirements
 
 Python 3.10 or newer with `mpmath`. The library is found in a `boys` directory

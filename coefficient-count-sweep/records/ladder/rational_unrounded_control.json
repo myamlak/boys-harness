@@ -1,0 +1,739 @@
+{
+ "meta": {
+  "schema": "rational-unrounded-control-1",
+  "generated_utc": "2026-10-25T07:27:48Z",
+  "script": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\rational_unrounded_control.py",
+  "script_sha256": "090da31cd420432ef33b4232e7f6476184bd87431d3abc50c56a540a81bfa452",
+  "harness": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\count_sweep.py",
+  "harness_sha256": "a5def761c8f18d585396210b28864dc6c4a108d2cfda4f3788d87a7f6c854f10",
+  "boys_root": "C:\\Users\\myaml\\dev\\bladawiec\\external\\boys",
+  "generator_sha256": "ccc8b011f4170ce0b530bc4781b09670f42839fa18caaa38ea7d3a9ea9ba9bb4",
+  "header_sha256": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204",
+  "cells_source_sha256": "e21fc1fef88efbebf5db966bf5e7d968642e8a56906f7d5b6bbba4c2801ebb3e",
+  "settings": {
+   "nodes": 2001,
+   "remez_iters": 60,
+   "refine_outer": 300,
+   "rat_k_max": 12,
+   "reference_dps": 60,
+   "evaluation_dps": 60,
+   "grid": "uniform in t = 2*(x-a)/(b-a) - 1, endpoints included",
+   "acceptance": "the fit's value at the solver's own precision (60 digits) on the certifying grid, relative to F_0(x) at each node",
+   "search": "confirm the record's count with its own pair on the minimax route; if it misses, sweep every pair at that count and then search upward; if it meets, solve every pair at each count below on the full grid until none meets, and the Lawson route is run at a count only when the Remez route found no meeting fit and the negative answer has to be certified",
+   "workers": 8
+  },
+  "resume": {
+   "previous_generated_utc": "2026-10-25T07:22:52Z",
+   "previous_script_sha256": "090da31cd420432ef33b4232e7f6476184bd87431d3abc50c56a540a81bfa452",
+   "inherited": [
+    {
+     "id": 1,
+     "width_name": "paper",
+     "target": "rel:1e-08",
+     "count60": 7
+    },
+    {
+     "id": 2,
+     "width_name": "ship",
+     "target": "rel:1e-08",
+     "count60": 7
+    }
+   ],
+   "note": "a reused cell was computed by the earlier script revision; the changes since are the completion print, this resume, and the upward direction of the search, none of which touches the arithmetic of a cell that completed"
+  }
+ },
+ "cells": [
+  {
+   "id": 1,
+   "width_name": "paper",
+   "width": "17.089489586712256",
+   "target": "rel:1e-08",
+   "a": "11.899848152108484",
+   "b": "28.98933773882074",
+   "record": {
+    "stored": 7,
+    "m": 3,
+    "k": 3,
+    "solver": "remez",
+    "delivered_rel": "4.6114532737314548e-9",
+    "below_meets": false,
+    "source": "results-ladder/sweep_all.json"
+   },
+   "start_stored": 7,
+   "count60": 7,
+   "delta_vs_start": 0,
+   "delta_vs_record": 0,
+   "improved": false,
+   "levels": [
+    {
+     "stored": 7,
+     "pass": "confirm-remez",
+     "pairs_tried": [
+      "[3/3]"
+     ],
+     "solved": 1,
+     "meets60": true,
+     "best_rel60": "4.6114536160131115e-9",
+     "best_pair60": "[3/3] remez",
+     "seconds": 2.3,
+     "rows": [
+      {
+       "m": 3,
+       "k": 3,
+       "stored": 7,
+       "solver": "remez",
+       "rel60": "4.6114536160131115e-9",
+       "abs60": "1.1847087915151322e-9",
+       "at_t60": "-1.0",
+       "rel64": "4.6114532737314548e-9",
+       "abs64": "1.1847087035810182e-9",
+       "meets60": true,
+       "meets64": true
+      }
+     ]
+    },
+    {
+     "stored": 6,
+     "pairs_tried": [
+      "[4/1]",
+      "[3/2]",
+      "[2/3]",
+      "[1/4]"
+     ],
+     "meets60": false,
+     "passes": [
+      {
+       "stored": 6,
+       "pass": "remez",
+       "pairs_tried": [
+        "[4/1]",
+        "[3/2]",
+        "[2/3]",
+        "[1/4]"
+       ],
+       "solved": 4,
+       "meets60": false,
+       "best_rel60": "1.4864673729062842e-7",
+       "best_pair60": "[2/3] remez",
+       "seconds": 5.7,
+       "rows": [
+        {
+         "m": 2,
+         "k": 3,
+         "stored": 6,
+         "solver": "remez",
+         "rel60": "1.4864673729062842e-7",
+         "abs60": "3.6956525598159807e-8",
+         "at_t60": "-0.905",
+         "rel64": "1.4864673739369481e-7",
+         "abs64": "3.6956525673509274e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 3,
+         "k": 2,
+         "stored": 6,
+         "solver": "remez",
+         "rel60": "2.0535984306241529e-7",
+         "abs60": "5.1049091347535007e-8",
+         "at_t60": "-0.904",
+         "rel64": "2.0535984288816146e-7",
+         "abs64": "5.1049091287974532e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 1,
+         "k": 4,
+         "stored": 6,
+         "solver": "remez",
+         "rel60": "3.9909188313039574e-7",
+         "abs60": "9.7771260551285567e-8",
+         "at_t60": "-0.602",
+         "rel64": "3.9909188315353837e-7",
+         "abs64": "9.7771260585525595e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 4,
+         "k": 1,
+         "stored": 6,
+         "solver": "remez",
+         "rel60": "1.1216877763835856e-6",
+         "abs60": "2.67958752757299e-7",
+         "at_t60": "-0.591",
+         "rel64": "1.1216877762304494e-6",
+         "abs64": "2.6795875279050289e-7",
+         "meets60": false,
+         "meets64": false
+        }
+       ]
+      },
+      {
+       "stored": 6,
+       "pass": "lawson",
+       "pairs_tried": [
+        "[4/1]",
+        "[3/2]",
+        "[2/3]",
+        "[1/4]"
+       ],
+       "solved": 4,
+       "meets60": false,
+       "best_rel60": "2.2798704104084668e-7",
+       "best_pair60": "[2/3] lawson",
+       "seconds": 193.8,
+       "rows": [
+        {
+         "m": 2,
+         "k": 3,
+         "stored": 6,
+         "solver": "lawson",
+         "rel60": "2.2798704104084668e-7",
+         "abs60": "3.8944279959907087e-8",
+         "at_t60": "0.759",
+         "rel64": "2.2798704088653702e-7",
+         "abs64": "3.894427997367732e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 3,
+         "k": 2,
+         "stored": 6,
+         "solver": "lawson",
+         "rel60": "3.2314216317262012e-7",
+         "abs60": "5.5121141287082198e-8",
+         "at_t60": "0.768",
+         "rel64": "3.2314216303119969e-7",
+         "abs64": "5.5121141288964654e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 1,
+         "k": 4,
+         "stored": 6,
+         "solver": "lawson",
+         "rel60": "6.3912615060610201e-7",
+         "abs60": "1.0872129955700464e-7",
+         "at_t60": "0.785",
+         "rel64": "6.3912615055996399e-7",
+         "abs64": "1.0872129955434749e-7",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 4,
+         "k": 1,
+         "stored": 6,
+         "solver": "lawson",
+         "rel60": "1.7936160833632491e-6",
+         "abs60": "3.0397698812394125e-7",
+         "at_t60": "0.809",
+         "rel64": "1.7936160831570605e-6",
+         "abs64": "3.0397698812532853e-7",
+         "meets60": false,
+         "meets64": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "reference_seconds": 2.0,
+   "seconds": 203.9
+  },
+  {
+   "id": 2,
+   "width_name": "ship",
+   "width": "19.100151847891516",
+   "target": "rel:1e-08",
+   "a": "11.899848152108484",
+   "b": "31.0",
+   "record": {
+    "stored": 7,
+    "m": 3,
+    "k": 3,
+    "solver": "remez",
+    "delivered_rel": "9.3788955261118626e-9",
+    "below_meets": false,
+    "source": "results-ladder/sweep_all.json"
+   },
+   "start_stored": 7,
+   "count60": 7,
+   "status": null,
+   "direction": "equal",
+   "minimality": "every pair swept at each count below until one failed; that failing sweep is the below-count check rational_count applies",
+   "delta_vs_start": 0,
+   "delta_vs_record": 0,
+   "improved": false,
+   "count60_m": 3,
+   "count60_k": 3,
+   "count60_solver": "remez",
+   "count60_pair": "[3/3] remez",
+   "count60_rel60": "9.3788954896281514e-9",
+   "count60_abs60": "2.409491857986087e-9",
+   "count60_rel64": "9.3788955261118626e-9",
+   "count60_meets64": true,
+   "failing_level": {
+    "stored": 6,
+    "routes": [
+     {
+      "pass": "remez",
+      "best_rel60": "2.4458825166877457e-7",
+      "solved": 4
+     },
+     {
+      "pass": "lawson",
+      "best_rel60": "3.8168713053258365e-7",
+      "solved": 4
+     }
+    ]
+   },
+   "levels": [
+    {
+     "stored": 7,
+     "pass": "confirm-remez",
+     "pairs_tried": [
+      "[3/3]"
+     ],
+     "solved": 1,
+     "meets60": true,
+     "best_rel60": "9.3788954896281514e-9",
+     "best_pair60": "[3/3] remez",
+     "seconds": 2.1,
+     "rows": [
+      {
+       "m": 3,
+       "k": 3,
+       "stored": 7,
+       "solver": "remez",
+       "rel60": "9.3788954896281514e-9",
+       "abs60": "2.409491857986087e-9",
+       "at_t60": "-1.0",
+       "rel64": "9.3788955261118626e-9",
+       "abs64": "2.409491867358961e-9",
+       "meets60": true,
+       "meets64": true
+      }
+     ]
+    },
+    {
+     "stored": 6,
+     "pairs_tried": [
+      "[4/1]",
+      "[3/2]",
+      "[2/3]",
+      "[1/4]"
+     ],
+     "meets60": false,
+     "passes": [
+      {
+       "stored": 6,
+       "pass": "remez",
+       "pairs_tried": [
+        "[4/1]",
+        "[3/2]",
+        "[2/3]",
+        "[1/4]"
+       ],
+       "solved": 4,
+       "meets60": false,
+       "best_rel60": "2.4458825166877457e-7",
+       "best_pair60": "[2/3] remez",
+       "seconds": 9.5,
+       "rows": [
+        {
+         "m": 2,
+         "k": 3,
+         "stored": 6,
+         "solver": "remez",
+         "rel60": "2.4458825166877457e-7",
+         "abs60": "6.0671570269662694e-8",
+         "at_t60": "-0.909",
+         "rel64": "2.4458825184818025e-7",
+         "abs64": "6.0671570306145994e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 3,
+         "k": 2,
+         "stored": 6,
+         "solver": "remez",
+         "rel60": "3.3620772032664721e-7",
+         "abs60": "8.2909883666108441e-8",
+         "at_t60": "-0.616",
+         "rel64": "3.3620772047048335e-7",
+         "abs64": "8.2909883620993666e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 1,
+         "k": 4,
+         "stored": 6,
+         "solver": "remez",
+         "rel60": "6.4245196237221242e-7",
+         "abs60": "1.5605460566826689e-7",
+         "at_t60": "-0.61",
+         "rel64": "6.4245196231525481e-7",
+         "abs64": "1.5605460567837397e-7",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 4,
+         "k": 1,
+         "stored": 6,
+         "solver": "remez",
+         "rel60": "1.7728617944670764e-6",
+         "abs60": "4.1945788143579082e-7",
+         "at_t60": "-0.598",
+         "rel64": "1.7728617943898596e-6",
+         "abs64": "4.1945788143467162e-7",
+         "meets60": false,
+         "meets64": false
+        }
+       ]
+      },
+      {
+       "stored": 6,
+       "pass": "lawson",
+       "pairs_tried": [
+        "[4/1]",
+        "[3/2]",
+        "[2/3]",
+        "[1/4]"
+       ],
+       "solved": 4,
+       "meets60": false,
+       "best_rel60": "3.8168713053258365e-7",
+       "best_pair60": "[2/3] lawson",
+       "seconds": 260.9,
+       "rows": [
+        {
+         "m": 2,
+         "k": 3,
+         "stored": 6,
+         "solver": "lawson",
+         "rel60": "3.8168713053258365e-7",
+         "abs60": "6.3302336158910395e-8",
+         "at_t60": "0.746",
+         "rel64": "3.8168713041038598e-7",
+         "abs64": "6.3302336177053529e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 3,
+         "k": 2,
+         "stored": 6,
+         "solver": "lawson",
+         "rel60": "5.3781599086077712e-7",
+         "abs60": "8.904138996529498e-8",
+         "at_t60": "0.756",
+         "rel64": "5.3781599114639852e-7",
+         "abs64": "8.9041389969175594e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 1,
+         "k": 4,
+         "stored": 6,
+         "solver": "lawson",
+         "rel60": "1.0543976978977319e-6",
+         "abs60": "1.7398649288857382e-7",
+         "at_t60": "0.776",
+         "rel64": "1.0543976980413721e-6",
+         "abs64": "1.7398649286745005e-7",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 4,
+         "k": 1,
+         "stored": 6,
+         "solver": "lawson",
+         "rel60": "2.9096480313518224e-6",
+         "abs60": "4.7798934568002561e-7",
+         "at_t60": "0.803",
+         "rel64": "2.9096480313101124e-6",
+         "abs64": "4.7798934567841683e-7",
+         "meets60": false,
+         "meets64": false
+        }
+       ]
+      }
+     ],
+     "label": "below-full-sweep"
+    }
+   ],
+   "reference_seconds": 4.6,
+   "seconds": 277.2
+  },
+  {
+   "id": 3,
+   "width_name": "2^5",
+   "width": "32.0",
+   "target": "rel:1e-08",
+   "a": "11.899848152108484",
+   "b": "43.899848152108484",
+   "record": {
+    "stored": 8,
+    "m": 3,
+    "k": 4,
+    "solver": "lawson",
+    "delivered_rel": "6.6485646947186531e-9",
+    "below_meets": false,
+    "source": "results-ladder/sweep_all.json"
+   },
+   "start_stored": 8,
+   "count60": 8,
+   "status": null,
+   "direction": "equal",
+   "minimality": "every pair swept at each count below until one failed; that failing sweep is the below-count check rational_count applies",
+   "delta_vs_start": 0,
+   "delta_vs_record": 0,
+   "improved": false,
+   "count60_m": 3,
+   "count60_k": 4,
+   "count60_solver": "remez",
+   "count60_pair": "[3/4] remez",
+   "count60_rel60": "6.697297531692089e-9",
+   "count60_abs60": "1.7205740154550116e-9",
+   "count60_rel64": "6.6972979043138071e-9",
+   "count60_meets64": true,
+   "failing_level": {
+    "stored": 7,
+    "routes": [
+     {
+      "pass": "remez",
+      "best_rel60": "1.8349926147981846e-7",
+      "solved": 5
+     },
+     {
+      "pass": "lawson",
+      "best_rel60": "3.093308058079043e-7",
+      "solved": 5
+     }
+    ]
+   },
+   "levels": [
+    {
+     "stored": 8,
+     "pass": "confirm-remez",
+     "pairs_tried": [
+      "[3/4]"
+     ],
+     "solved": 1,
+     "meets60": true,
+     "best_rel60": "6.697297531692089e-9",
+     "best_pair60": "[3/4] remez",
+     "seconds": 2.8,
+     "rows": [
+      {
+       "m": 3,
+       "k": 4,
+       "stored": 8,
+       "solver": "remez",
+       "rel60": "6.697297531692089e-9",
+       "abs60": "1.7205740154550116e-9",
+       "at_t60": "-1.0",
+       "rel64": "6.6972979043138071e-9",
+       "abs64": "1.7205741111836608e-9",
+       "meets60": true,
+       "meets64": true
+      }
+     ]
+    },
+    {
+     "stored": 7,
+     "pairs_tried": [
+      "[5/1]",
+      "[4/2]",
+      "[3/3]",
+      "[2/4]",
+      "[1/5]"
+     ],
+     "meets60": false,
+     "passes": [
+      {
+       "stored": 7,
+       "pass": "remez",
+       "pairs_tried": [
+        "[5/1]",
+        "[4/2]",
+        "[3/3]",
+        "[2/4]",
+        "[1/5]"
+       ],
+       "solved": 5,
+       "meets60": false,
+       "best_rel60": "1.8349926147981846e-7",
+       "best_pair60": "[3/3] remez",
+       "seconds": 12.4,
+       "rows": [
+        {
+         "m": 3,
+         "k": 3,
+         "stored": 7,
+         "solver": "remez",
+         "rel60": "1.8349926147981846e-7",
+         "abs60": "4.1390072708544387e-8",
+         "at_t60": "-0.745",
+         "rel64": "1.8349926156413317e-7",
+         "abs64": "4.1390072762075252e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 2,
+         "k": 4,
+         "stored": 7,
+         "solver": "remez",
+         "rel60": "2.3809595087215986e-7",
+         "abs60": "5.3709626098630579e-8",
+         "at_t60": "-0.744",
+         "rel64": "2.380959508775618e-7",
+         "abs64": "5.3709626139513094e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 4,
+         "k": 2,
+         "stored": 7,
+         "solver": "remez",
+         "rel60": "4.0034821932336353e-7",
+         "abs60": "9.0008354115090195e-8",
+         "at_t60": "-0.74",
+         "rel64": "4.0034821962251287e-7",
+         "abs64": "9.0008354146812957e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 1,
+         "k": 5,
+         "stored": 7,
+         "solver": "remez",
+         "rel60": "8.8422567035077145e-7",
+         "abs60": "1.9671281533371091e-7",
+         "at_t60": "-0.733",
+         "rel64": "8.8422567060114051e-7",
+         "abs64": "1.9671281529242505e-7",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 5,
+         "k": 1,
+         "stored": 7,
+         "solver": "remez",
+         "rel60": "2.70040844849845e-6",
+         "abs60": "5.9227204932566128e-7",
+         "at_t60": "-0.721",
+         "rel64": "2.7004084483381957e-6",
+         "abs64": "5.9227204930347154e-7",
+         "meets60": false,
+         "meets64": false
+        }
+       ]
+      },
+      {
+       "stored": 7,
+       "pass": "lawson",
+       "pairs_tried": [
+        "[5/1]",
+        "[4/2]",
+        "[3/3]",
+        "[2/4]",
+        "[1/5]"
+       ],
+       "solved": 5,
+       "meets60": false,
+       "best_rel60": "3.093308058079043e-7",
+       "best_pair60": "[3/3] lawson",
+       "seconds": 264.3,
+       "rows": [
+        {
+         "m": 3,
+         "k": 3,
+         "stored": 7,
+         "solver": "lawson",
+         "rel60": "3.093308058079043e-7",
+         "abs60": "4.137486641316243e-8",
+         "at_t60": "1.0",
+         "rel64": "3.0933080574902331e-7",
+         "abs64": "4.1374866405286742e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 2,
+         "k": 4,
+         "stored": 7,
+         "solver": "lawson",
+         "rel60": "4.1066114615240204e-7",
+         "abs60": "5.4928412379604115e-8",
+         "at_t60": "1.0",
+         "rel64": "4.1066114619475942e-7",
+         "abs64": "5.492841238526967e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 4,
+         "k": 2,
+         "stored": 7,
+         "solver": "lawson",
+         "rel60": "6.9888377299814426e-7",
+         "abs60": "9.5648972938499181e-8",
+         "at_t60": "1.0",
+         "rel64": "6.9888377295124655e-7",
+         "abs64": "9.5648972944174773e-8",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 1,
+         "k": 5,
+         "stored": 7,
+         "solver": "lawson",
+         "rel60": "1.6588028702091984e-6",
+         "abs60": "2.2999264634568625e-7",
+         "at_t60": "0.811",
+         "rel64": "1.6588028703415048e-6",
+         "abs64": "2.2999264636385918e-7",
+         "meets60": false,
+         "meets64": false
+        },
+        {
+         "m": 5,
+         "k": 1,
+         "stored": 7,
+         "solver": "lawson",
+         "rel60": "5.1897562897612658e-6",
+         "abs60": "7.1529024407975651e-7",
+         "at_t60": "0.841",
+         "rel64": "5.1897562897752245e-6",
+         "abs64": "7.1529024408021721e-7",
+         "meets60": false,
+         "meets64": false
+        }
+       ]
+      }
+     ],
+     "label": "below-full-sweep"
+    }
+   ],
+   "reference_seconds": 4.4,
+   "seconds": 284.1
+  }
+ ]
+}

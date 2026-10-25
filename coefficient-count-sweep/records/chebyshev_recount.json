@@ -1,0 +1,2259 @@
+{
+ "what": "The coefficient-count paper's Chebyshev sweep re-solved with the corrected split-Clenshaw evaluator; rational counts untouched",
+ "boys": {
+  "version": "5.1.1",
+  "describe": "v5.1.0-1-g3b187d5",
+  "generator_sha256": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180",
+  "previous_generator_sha256": "ccc8b011f4170ce0b530bc4781b09670f42839fa18caaa38ea7d3a9ea9ba9bb4",
+  "coefficient_header_sha256": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204",
+  "note": "the coefficient header is unchanged; the generator digest is the identity and the revision is provenance"
+ },
+ "paper_records": {
+  "core": {
+   "sha256": "76d18cb85eca813b3d4f14d9a366be6dbabf8ccbfe9028d44c145d4cccbbefff",
+   "pinned": "v5.0.0, 482fd3388c276091834a6c12a642d9de2481c9f2"
+  },
+  "rel13": {
+   "sha256": "c185bfc0434172d82f3e029fe37626e349e28a200df9fea457f317648e9c8464",
+   "pinned": "v5.0.0, 482fd3388c276091834a6c12a642d9de2481c9f2"
+  },
+  "abs": {
+   "sha256": "0316d35417afc24bc19999cf2b7c3a168078a562a348df40a3ca4a02c7ccac5b",
+   "pinned": "v5.0.0, 482fd3388c276091834a6c12a642d9de2481c9f2"
+  },
+  "rel14": {
+   "sha256": "d199b35e47417cacd9ecf788445f320517be6e486f49dbadcbff0f3130f7ac76",
+   "pinned": "v5.0.0, 482fd3388c276091834a6c12a642d9de2481c9f2"
+  },
+  "ladder": {
+   "sha256": "e21fc1fef88efbebf5db966bf5e7d968642e8a56906f7d5b6bbba4c2801ebb3e",
+   "pinned": "v5.0.0, 482fd3388c276091834a6c12a642d9de2481c9f2"
+  }
+ },
+ "parameters": {
+  "x0": "11.899848152108484",
+  "nodes": 2000,
+  "grid": "uniform in t over [-1, 1] on [x0, x0+W]",
+  "reference": "60-digit Boys evaluation, tail floor 1e-55, at most 900 terms",
+  "degrees": {
+   "records": "4 to 64",
+   "all": "0, 1, 2 and 4 to 64"
+  },
+  "stored": "degree + 1"
+ },
+ "summary": {
+  "unique_cells": 95,
+  "changed_cells": 34,
+  "deltas": [
+   -1,
+   0
+  ],
+  "unchanged_cells": 61,
+  "group_a_parity": {
+   "odd": 28,
+   "even": 17,
+   "of": 45,
+   "by_arm": {
+    "rel13": {
+     "odd": 10,
+     "even": 5
+    },
+    "abs": {
+     "odd": 10,
+     "even": 5
+    },
+    "rel14": {
+     "odd": 8,
+     "even": 7
+    }
+   }
+  },
+  "ladder_parity": {
+   "odd": 25,
+   "even": 15,
+   "of": 40
+  },
+  "group_b_sums": {
+   "rel13": {
+    "chebyshev_old": 57,
+    "chebyshev_new": 55,
+    "rational": 46
+   },
+   "abs": {
+    "chebyshev_old": 57,
+    "chebyshev_new": 55,
+    "rational": 44
+   }
+  },
+  "shipped_totals": {
+   "chebyshev": 55,
+   "rational": 39
+  },
+  "falsifier4_increments": {
+   "2^1": {
+    "rel13_new": 9,
+    "rel13_old": 9,
+    "rel14_new": 10,
+    "rel14_old": 11,
+    "increment_old": 2,
+    "increment_new": 1
+   },
+   "2^2": {
+    "rel13_new": 11,
+    "rel13_old": 11,
+    "rel14_new": 12,
+    "rel14_old": 13,
+    "increment_old": 2,
+    "increment_new": 1
+   },
+   "2^3": {
+    "rel13_new": 14,
+    "rel13_old": 15,
+    "rel14_new": 15,
+    "rel14_old": 15,
+    "increment_old": 0,
+    "increment_new": 1
+   },
+   "2^5": {
+    "rel13_new": 25,
+    "rel13_old": 25,
+    "rel14_new": 26,
+    "rel14_old": 27,
+    "increment_old": 2,
+    "increment_new": 1
+   }
+  }
+ },
+ "cells": [
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "3.6525651318349605e-16",
+   "delivered_abs": "9.3817579212343487e-17",
+   "at_x_rel": "11.904645027108484",
+   "at_x_abs": "11.904645027108484",
+   "changed": false
+  },
+  {
+   "width": "0.015625",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^-6"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "2.5441057769262818e-16",
+   "delivered_abs": "6.531998411321444e-17",
+   "at_x_rel": "11.914262214608484",
+   "at_x_abs": "11.914262214608484",
+   "changed": false
+  },
+  {
+   "width": "0.03125",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^-5"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "3.7653260997985928e-16",
+   "delivered_abs": "9.6652954660278391e-17",
+   "at_x_rel": "11.919660652108484",
+   "at_x_abs": "11.919660652108484",
+   "changed": false
+  },
+  {
+   "width": "0.0625",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^-4"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "2.1088855146362353e-15",
+   "delivered_abs": "5.4129314601494168e-16",
+   "at_x_rel": "11.921473152108484",
+   "at_x_abs": "11.921473152108484",
+   "changed": false
+  },
+  {
+   "width": "0.125",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^-3"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "5.9380992433611782e-14",
+   "delivered_abs": "1.5249133080083231e-14",
+   "at_x_rel": "11.942660652108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "0.25",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^-2"
+   ],
+   "old_stored": 7,
+   "new_stored": 6,
+   "new_m": 5,
+   "delivered_rel": "8.925046645997553e-15",
+   "delivered_abs": "2.2913796636683047e-15",
+   "at_x_rel": "11.915598152108484",
+   "at_x_abs": "11.915598152108484",
+   "changed": true
+  },
+  {
+   "width": "0.5",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^-1"
+   ],
+   "old_stored": 7,
+   "new_stored": 7,
+   "new_m": 6,
+   "delivered_rel": "5.0509797239510392e-15",
+   "delivered_abs": "1.2878825441411252e-15",
+   "at_x_rel": "12.093098152108484",
+   "at_x_abs": "11.923848152108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 9,
+   "new_stored": 8,
+   "new_m": 7,
+   "delivered_rel": "1.0020512533600967e-14",
+   "delivered_abs": "2.5703342002603198e-15",
+   "at_x_rel": "11.936848152108484",
+   "at_x_abs": "11.936848152108484",
+   "changed": true
+  },
+  {
+   "width": "2.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^1"
+   ],
+   "old_stored": 9,
+   "new_stored": 9,
+   "new_m": 8,
+   "delivered_rel": "6.5839203198359753e-14",
+   "delivered_abs": "1.6914467617020966e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "4.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^2"
+   ],
+   "old_stored": 11,
+   "new_stored": 11,
+   "new_m": 10,
+   "delivered_rel": "7.6426925636551079e-14",
+   "delivered_abs": "1.96345140273526e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "8.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^3"
+   ],
+   "old_stored": 15,
+   "new_stored": 14,
+   "new_m": 13,
+   "delivered_rel": "6.2728320496752699e-14",
+   "delivered_abs": "1.6081800348552099e-14",
+   "at_x_rel": "11.999848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "16.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^4"
+   ],
+   "old_stored": 19,
+   "new_stored": 18,
+   "new_m": 17,
+   "delivered_rel": "9.4361230991038428e-14",
+   "delivered_abs": "2.4241939579546999e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 25,
+   "new_stored": 25,
+   "new_m": 24,
+   "delivered_rel": "2.6297301031237046e-14",
+   "delivered_abs": "6.7559269417007838e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 21,
+   "new_stored": 20,
+   "new_m": 19,
+   "delivered_rel": "3.1483124266269532e-14",
+   "delivered_abs": "8.0881945712509716e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 19,
+   "new_stored": 19,
+   "new_m": 18,
+   "delivered_rel": "3.8613631214439201e-14",
+   "delivered_abs": "9.9200625618824799e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "2.8567491415463806",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "2.8567491415463806"
+   ],
+   "old_stored": 11,
+   "new_stored": 10,
+   "new_m": 9,
+   "delivered_rel": "5.9574895679907903e-14",
+   "delivered_abs": "1.5304644231314489e-14",
+   "at_x_rel": "11.96983850607637",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "3.405194117991412",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "3.405194117991412"
+   ],
+   "old_stored": 11,
+   "new_stored": 11,
+   "new_m": 10,
+   "delivered_rel": "1.5801419755550699e-14",
+   "delivered_abs": "4.0476207078449328e-15",
+   "at_x_rel": "11.969654631527308",
+   "at_x_abs": "11.969654631527308",
+   "changed": false
+  },
+  {
+   "width": "4.091271749574425",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "4.091271749574425"
+   ],
+   "old_stored": 11,
+   "new_stored": 11,
+   "new_m": 10,
+   "delivered_rel": "9.5225534863543842e-14",
+   "delivered_abs": "2.4463984184472031e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "0.0078125",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "3.6525651318349605e-16",
+   "delivered_abs": "9.3817579212343487e-17",
+   "at_x_rel": "11.904645027108484",
+   "at_x_abs": "11.904645027108484",
+   "changed": false
+  },
+  {
+   "width": "0.015625",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^-6"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "2.5441057769262818e-16",
+   "delivered_abs": "6.531998411321444e-17",
+   "at_x_rel": "11.914262214608484",
+   "at_x_abs": "11.914262214608484",
+   "changed": false
+  },
+  {
+   "width": "0.03125",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^-5"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "3.7653260997985928e-16",
+   "delivered_abs": "9.6652954660278391e-17",
+   "at_x_rel": "11.919660652108484",
+   "at_x_abs": "11.919660652108484",
+   "changed": false
+  },
+  {
+   "width": "0.0625",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^-4"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "2.1088855146362353e-15",
+   "delivered_abs": "5.4129314601494168e-16",
+   "at_x_rel": "11.921473152108484",
+   "at_x_abs": "11.921473152108484",
+   "changed": false
+  },
+  {
+   "width": "0.125",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^-3"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "5.9380992433611782e-14",
+   "delivered_abs": "1.5249133080083231e-14",
+   "at_x_rel": "11.942660652108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "0.25",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^-2"
+   ],
+   "old_stored": 7,
+   "new_stored": 6,
+   "new_m": 5,
+   "delivered_rel": "8.925046645997553e-15",
+   "delivered_abs": "2.2913796636683047e-15",
+   "at_x_rel": "11.915598152108484",
+   "at_x_abs": "11.915598152108484",
+   "changed": true
+  },
+  {
+   "width": "0.5",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^-1"
+   ],
+   "old_stored": 7,
+   "new_stored": 7,
+   "new_m": 6,
+   "delivered_rel": "5.0509797239510392e-15",
+   "delivered_abs": "1.2878825441411252e-15",
+   "at_x_rel": "12.093098152108484",
+   "at_x_abs": "11.923848152108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 9,
+   "new_stored": 8,
+   "new_m": 7,
+   "delivered_rel": "1.0020512533600967e-14",
+   "delivered_abs": "2.5703342002603198e-15",
+   "at_x_rel": "11.936848152108484",
+   "at_x_abs": "11.936848152108484",
+   "changed": true
+  },
+  {
+   "width": "2.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^1"
+   ],
+   "old_stored": 9,
+   "new_stored": 9,
+   "new_m": 8,
+   "delivered_rel": "6.5839203198359753e-14",
+   "delivered_abs": "1.6914467617020966e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "4.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^2"
+   ],
+   "old_stored": 11,
+   "new_stored": 11,
+   "new_m": 10,
+   "delivered_rel": "7.6426925636551079e-14",
+   "delivered_abs": "1.96345140273526e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "8.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^3"
+   ],
+   "old_stored": 15,
+   "new_stored": 14,
+   "new_m": 13,
+   "delivered_rel": "6.2728320496752699e-14",
+   "delivered_abs": "1.6081800348552099e-14",
+   "at_x_rel": "11.999848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "16.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^4"
+   ],
+   "old_stored": 19,
+   "new_stored": 18,
+   "new_m": 17,
+   "delivered_rel": "9.4361230991038428e-14",
+   "delivered_abs": "2.4241939579546999e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 25,
+   "new_stored": 24,
+   "new_m": 23,
+   "delivered_rel": "1.0386857358859799e-13",
+   "delivered_abs": "2.6684430233722344e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 19,
+   "new_stored": 19,
+   "new_m": 18,
+   "delivered_rel": "1.6674668031336688e-13",
+   "delivered_abs": "4.2838175242018371e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 19,
+   "new_stored": 19,
+   "new_m": 18,
+   "delivered_rel": "3.8613631214439201e-14",
+   "delivered_abs": "9.9200625618824799e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "4.947466945561672",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "4.947466945561672"
+   ],
+   "old_stored": 13,
+   "new_stored": 12,
+   "new_m": 11,
+   "delivered_rel": "4.3403987650881986e-14",
+   "delivered_abs": "1.1141307888970152e-14",
+   "at_x_rel": "11.983955090183032",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "3.7994698932176263",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "core",
+    "rel13"
+   ],
+   "width_names": [
+    "3.7994698932176263"
+   ],
+   "old_stored": 11,
+   "new_stored": 11,
+   "new_m": 10,
+   "delivered_rel": "4.6215739652904694e-14",
+   "delivered_abs": "1.1862952854976504e-14",
+   "at_x_rel": "11.977737284919445",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "2.8567491415463806",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "2.8567491415463806"
+   ],
+   "old_stored": 11,
+   "new_stored": 10,
+   "new_m": 9,
+   "delivered_rel": "5.9574895679907903e-14",
+   "delivered_abs": "1.5304644231314489e-14",
+   "at_x_rel": "11.96983850607637",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "3.405194117991412",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "3.405194117991412"
+   ],
+   "old_stored": 11,
+   "new_stored": 11,
+   "new_m": 10,
+   "delivered_rel": "1.5801419755550699e-14",
+   "delivered_abs": "4.0476207078449328e-15",
+   "at_x_rel": "11.969654631527308",
+   "at_x_abs": "11.969654631527308",
+   "changed": false
+  },
+  {
+   "width": "4.091271749574425",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "4.091271749574425"
+   ],
+   "old_stored": 11,
+   "new_stored": 11,
+   "new_m": 10,
+   "delivered_rel": "9.5225534863543842e-14",
+   "delivered_abs": "2.4463984184472031e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "4.947466945561672",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "4.947466945561672"
+   ],
+   "old_stored": 13,
+   "new_stored": 12,
+   "new_m": 11,
+   "delivered_rel": "4.3403987650881986e-14",
+   "delivered_abs": "1.1141307888970152e-14",
+   "at_x_rel": "11.983955090183032",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "3.7994698932176263",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "abs",
+    "core"
+   ],
+   "width_names": [
+    "3.7994698932176263"
+   ],
+   "old_stored": 11,
+   "new_stored": 11,
+   "new_m": 10,
+   "delivered_rel": "4.6215739652904694e-14",
+   "delivered_abs": "1.1862952854976504e-14",
+   "at_x_rel": "11.977737284919445",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "3.6525651318349605e-16",
+   "delivered_abs": "9.3817579212343487e-17",
+   "at_x_rel": "11.904645027108484",
+   "at_x_abs": "11.904645027108484",
+   "changed": false
+  },
+  {
+   "width": "0.015625",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^-6"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "2.5441057769262818e-16",
+   "delivered_abs": "6.531998411321444e-17",
+   "at_x_rel": "11.914262214608484",
+   "at_x_abs": "11.914262214608484",
+   "changed": false
+  },
+  {
+   "width": "0.03125",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^-5"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "3.7653260997985928e-16",
+   "delivered_abs": "9.6652954660278391e-17",
+   "at_x_rel": "11.919660652108484",
+   "at_x_abs": "11.919660652108484",
+   "changed": false
+  },
+  {
+   "width": "0.0625",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^-4"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "2.1088855146362353e-15",
+   "delivered_abs": "5.4129314601494168e-16",
+   "at_x_rel": "11.921473152108484",
+   "at_x_abs": "11.921473152108484",
+   "changed": false
+  },
+  {
+   "width": "0.125",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^-3"
+   ],
+   "old_stored": 7,
+   "new_stored": 6,
+   "new_m": 5,
+   "delivered_rel": "3.5980751882029509e-16",
+   "delivered_abs": "9.2065760252656227e-17",
+   "at_x_rel": "11.995910652108484",
+   "at_x_abs": "11.995910652108484",
+   "changed": true
+  },
+  {
+   "width": "0.25",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^-2"
+   ],
+   "old_stored": 7,
+   "new_stored": 6,
+   "new_m": 5,
+   "delivered_rel": "8.925046645997553e-15",
+   "delivered_abs": "2.2913796636683047e-15",
+   "at_x_rel": "11.915598152108484",
+   "at_x_abs": "11.915598152108484",
+   "changed": true
+  },
+  {
+   "width": "0.5",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^-1"
+   ],
+   "old_stored": 7,
+   "new_stored": 7,
+   "new_m": 6,
+   "delivered_rel": "5.0509797239510392e-15",
+   "delivered_abs": "1.2878825441411252e-15",
+   "at_x_rel": "12.093098152108484",
+   "at_x_abs": "11.923848152108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 9,
+   "new_stored": 9,
+   "new_m": 8,
+   "delivered_rel": "4.4711178564911956e-16",
+   "delivered_abs": "1.129181773825032e-16",
+   "at_x_rel": "12.313848152108484",
+   "at_x_abs": "12.313848152108484",
+   "changed": false
+  },
+  {
+   "width": "2.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^1"
+   ],
+   "old_stored": 11,
+   "new_stored": 10,
+   "new_m": 9,
+   "delivered_rel": "2.3521413402011107e-15",
+   "delivered_abs": "6.0311401145446075e-16",
+   "at_x_rel": "11.945848152108484",
+   "at_x_abs": "11.945848152108484",
+   "changed": true
+  },
+  {
+   "width": "4.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^2"
+   ],
+   "old_stored": 13,
+   "new_stored": 12,
+   "new_m": 11,
+   "delivered_rel": "4.7234632037725268e-15",
+   "delivered_abs": "1.2087008513970546e-15",
+   "at_x_rel": "12.171848152108484",
+   "at_x_abs": "11.967848152108484",
+   "changed": true
+  },
+  {
+   "width": "8.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^3"
+   ],
+   "old_stored": 15,
+   "new_stored": 15,
+   "new_m": 14,
+   "delivered_rel": "6.5778429387412535e-15",
+   "delivered_abs": "1.6842337129711303e-15",
+   "at_x_rel": "11.979848152108484",
+   "at_x_abs": "11.979848152108484",
+   "changed": false
+  },
+  {
+   "width": "16.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^4"
+   ],
+   "old_stored": 21,
+   "new_stored": 20,
+   "new_m": 19,
+   "delivered_rel": "2.6530354039354677e-15",
+   "delivered_abs": "6.7040586469321616e-16",
+   "at_x_rel": "12.299848152108484",
+   "at_x_abs": "12.299848152108484",
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 27,
+   "new_stored": 26,
+   "new_m": 25,
+   "delivered_rel": "6.6343879317388689e-15",
+   "delivered_abs": "1.7044121796563215e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 21,
+   "new_stored": 21,
+   "new_m": 20,
+   "delivered_rel": "5.8115657010476147e-15",
+   "delivered_abs": "1.4823675747312902e-15",
+   "at_x_rel": "12.845305668579114",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "nodes": 2000,
+   "records": [
+    "rel14"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 21,
+   "new_stored": 20,
+   "new_m": 19,
+   "delivered_rel": "6.6343879317388689e-15",
+   "delivered_abs": "1.7044121796563215e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-08",
+   "target_kind": "rel",
+   "target_value": 1e-08,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 3,
+   "new_stored": 3,
+   "new_m": 2,
+   "delivered_rel": "2.7577136141164728e-12",
+   "delivered_abs": "7.0847238965603098e-13",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-08",
+   "target_kind": "rel",
+   "target_value": 1e-08,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "1.65341410843965e-9",
+   "delivered_abs": "4.247715348326813e-10",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-08",
+   "target_kind": "rel",
+   "target_value": 1e-08,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 16,
+   "new_stored": 16,
+   "new_m": 15,
+   "delivered_rel": "3.1718998586258468e-9",
+   "delivered_abs": "8.148792032236634e-10",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-08",
+   "target_kind": "rel",
+   "target_value": 1e-08,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 13,
+   "new_stored": 13,
+   "new_m": 12,
+   "delivered_rel": "2.289317687824688e-9",
+   "delivered_abs": "5.8813879899367753e-10",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-08",
+   "target_kind": "rel",
+   "target_value": 1e-08,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 13,
+   "new_stored": 12,
+   "new_m": 11,
+   "delivered_rel": "4.4051655469612251e-9",
+   "delivered_abs": "1.1317122075005364e-9",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-09",
+   "target_kind": "rel",
+   "target_value": 1e-09,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 3,
+   "new_stored": 3,
+   "new_m": 2,
+   "delivered_rel": "2.7577136141164728e-12",
+   "delivered_abs": "7.0847238965603098e-13",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-09",
+   "target_kind": "rel",
+   "target_value": 1e-09,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 7,
+   "new_stored": 6,
+   "new_m": 5,
+   "delivered_rel": "3.0108825735518437e-11",
+   "delivered_abs": "7.735129423659878e-12",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-09",
+   "target_kind": "rel",
+   "target_value": 1e-09,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 17,
+   "new_stored": 17,
+   "new_m": 16,
+   "delivered_rel": "9.2230205559893752e-10",
+   "delivered_abs": "2.369446696604121e-10",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-09",
+   "target_kind": "rel",
+   "target_value": 1e-09,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 15,
+   "new_stored": 14,
+   "new_m": 13,
+   "delivered_rel": "4.9089990295562878e-10",
+   "delivered_abs": "1.2611499089266891e-10",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-09",
+   "target_kind": "rel",
+   "target_value": 1e-09,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 13,
+   "new_stored": 13,
+   "new_m": 12,
+   "delivered_rel": "8.8472730904563714e-10",
+   "delivered_abs": "2.2729150250590129e-10",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-10",
+   "target_kind": "rel",
+   "target_value": 1e-10,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 3,
+   "new_stored": 3,
+   "new_m": 2,
+   "delivered_rel": "2.7577136141164728e-12",
+   "delivered_abs": "7.0847238965603098e-13",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-10",
+   "target_kind": "rel",
+   "target_value": 1e-10,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 7,
+   "new_stored": 6,
+   "new_m": 5,
+   "delivered_rel": "3.0108825735518437e-11",
+   "delivered_abs": "7.735129423659878e-12",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-10",
+   "target_kind": "rel",
+   "target_value": 1e-10,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 19,
+   "new_stored": 19,
+   "new_m": 18,
+   "delivered_rel": "7.4951287476748725e-11",
+   "delivered_abs": "1.9255414149834046e-11",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-10",
+   "target_kind": "rel",
+   "target_value": 1e-10,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 16,
+   "new_stored": 16,
+   "new_m": 15,
+   "delivered_rel": "2.1462113719006145e-11",
+   "delivered_abs": "5.5137396848386335e-12",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-10",
+   "target_kind": "rel",
+   "target_value": 1e-10,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 15,
+   "new_stored": 15,
+   "new_m": 14,
+   "delivered_rel": "3.4013534555529773e-11",
+   "delivered_abs": "8.7382714375599382e-12",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-11",
+   "target_kind": "rel",
+   "target_value": 1e-11,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 3,
+   "new_stored": 3,
+   "new_m": 2,
+   "delivered_rel": "2.7577136141164728e-12",
+   "delivered_abs": "7.0847238965603098e-13",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-11",
+   "target_kind": "rel",
+   "target_value": 1e-11,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 7,
+   "new_stored": 7,
+   "new_m": 6,
+   "delivered_rel": "5.4725646018387556e-13",
+   "delivered_abs": "1.405933125602634e-13",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-11",
+   "target_kind": "rel",
+   "target_value": 1e-11,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 21,
+   "new_stored": 21,
+   "new_m": 20,
+   "delivered_rel": "5.709959566626842e-12",
+   "delivered_abs": "1.4669212489287067e-12",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-11",
+   "target_kind": "rel",
+   "target_value": 1e-11,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 17,
+   "new_stored": 17,
+   "new_m": 16,
+   "delivered_rel": "4.352786410825215e-12",
+   "delivered_abs": "1.1182557080451763e-12",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-11",
+   "target_kind": "rel",
+   "target_value": 1e-11,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 17,
+   "new_stored": 16,
+   "new_m": 15,
+   "delivered_rel": "6.471411278304112e-12",
+   "delivered_abs": "1.6625425458676592e-12",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-12",
+   "target_kind": "rel",
+   "target_value": 1e-12,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "3.6525651318349605e-16",
+   "delivered_abs": "9.3817579212343487e-17",
+   "at_x_rel": "11.904645027108484",
+   "at_x_abs": "11.904645027108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-12",
+   "target_kind": "rel",
+   "target_value": 1e-12,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 7,
+   "new_stored": 7,
+   "new_m": 6,
+   "delivered_rel": "5.4725646018387556e-13",
+   "delivered_abs": "1.405933125602634e-13",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-12",
+   "target_kind": "rel",
+   "target_value": 1e-12,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 23,
+   "new_stored": 23,
+   "new_m": 22,
+   "delivered_rel": "4.0334986541172407e-13",
+   "delivered_abs": "1.0362288584024569e-13",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-12",
+   "target_kind": "rel",
+   "target_value": 1e-12,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 19,
+   "new_stored": 18,
+   "new_m": 17,
+   "delivered_rel": "8.6251129768022545e-13",
+   "delivered_abs": "2.2158408220666857e-13",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-12",
+   "target_kind": "rel",
+   "target_value": 1e-12,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 19,
+   "new_stored": 18,
+   "new_m": 17,
+   "delivered_rel": "2.1795668475931268e-13",
+   "delivered_abs": "5.5994318083826476e-14",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "3.6525651318349605e-16",
+   "delivered_abs": "9.3817579212343487e-17",
+   "at_x_rel": "11.904645027108484",
+   "at_x_abs": "11.904645027108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 9,
+   "new_stored": 8,
+   "new_m": 7,
+   "delivered_rel": "1.0020512533600967e-14",
+   "delivered_abs": "2.5703342002603198e-15",
+   "at_x_rel": "11.936848152108484",
+   "at_x_abs": "11.936848152108484",
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 25,
+   "new_stored": 25,
+   "new_m": 24,
+   "delivered_rel": "2.6297301031237046e-14",
+   "delivered_abs": "6.7559269417007838e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 21,
+   "new_stored": 20,
+   "new_m": 19,
+   "delivered_rel": "3.1483124266269532e-14",
+   "delivered_abs": "8.0881945712509716e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 19,
+   "new_stored": 19,
+   "new_m": 18,
+   "delivered_rel": "3.8613631214439201e-14",
+   "delivered_abs": "9.9200625618824799e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "3.6525651318349605e-16",
+   "delivered_abs": "9.3817579212343487e-17",
+   "at_x_rel": "11.904645027108484",
+   "at_x_abs": "11.904645027108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 9,
+   "new_stored": 9,
+   "new_m": 8,
+   "delivered_rel": "4.4711178564911956e-16",
+   "delivered_abs": "1.129181773825032e-16",
+   "at_x_rel": "12.313848152108484",
+   "at_x_abs": "12.313848152108484",
+   "changed": false
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 27,
+   "new_stored": 26,
+   "new_m": 25,
+   "delivered_rel": "6.6343879317388689e-15",
+   "delivered_abs": "1.7044121796563215e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 21,
+   "new_stored": 21,
+   "new_m": 20,
+   "delivered_rel": "5.8115657010476147e-15",
+   "delivered_abs": "1.4823675747312902e-15",
+   "at_x_rel": "12.845305668579114",
+   "at_x_abs": "11.899848152108484",
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 21,
+   "new_stored": 20,
+   "new_m": 19,
+   "delivered_rel": "6.6343879317388689e-15",
+   "delivered_abs": "1.7044121796563215e-15",
+   "at_x_rel": "11.899848152108484",
+   "at_x_abs": "11.899848152108484",
+   "changed": true
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-15",
+   "target_kind": "rel",
+   "target_value": 1e-15,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^-7"
+   ],
+   "old_stored": 5,
+   "new_stored": 5,
+   "new_m": 4,
+   "delivered_rel": "3.6525651318349605e-16",
+   "delivered_abs": "9.3817579212343487e-17",
+   "at_x_rel": "11.904645027108484",
+   "at_x_abs": "11.904645027108484",
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-15",
+   "target_kind": "rel",
+   "target_value": 1e-15,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^0"
+   ],
+   "old_stored": 9,
+   "new_stored": 9,
+   "new_m": 8,
+   "delivered_rel": "4.4711178564911956e-16",
+   "delivered_abs": "1.129181773825032e-16",
+   "at_x_rel": "12.313848152108484",
+   "at_x_abs": "12.313848152108484",
+   "changed": false
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-15",
+   "target_kind": "rel",
+   "target_value": 1e-15,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "2^5"
+   ],
+   "old_stored": 29,
+   "new_stored": 28,
+   "new_m": 27,
+   "delivered_rel": "6.2593394834357593e-16",
+   "delivered_abs": "1.4711115348582652e-16",
+   "at_x_rel": "31.355848152108484",
+   "at_x_abs": "12.219848152108484",
+   "changed": true
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-15",
+   "target_kind": "rel",
+   "target_value": 1e-15,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "ship"
+   ],
+   "old_stored": 23,
+   "new_stored": 23,
+   "new_m": 22,
+   "delivered_rel": "4.3423476073164529e-16",
+   "delivered_abs": "9.2311130341065157e-17",
+   "at_x_rel": "29.586588763256028",
+   "at_x_abs": "12.22455073352264",
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-15",
+   "target_kind": "rel",
+   "target_value": 1e-15,
+   "mode": "all",
+   "nodes": 2000,
+   "records": [
+    "ladder"
+   ],
+   "width_names": [
+    "paper"
+   ],
+   "old_stored": 23,
+   "new_stored": 22,
+   "new_m": 21,
+   "delivered_rel": "4.2337233128908174e-16",
+   "delivered_abs": "9.1203997384725912e-17",
+   "at_x_rel": "16.924158090601887",
+   "at_x_abs": "16.924158090601887",
+   "changed": true
+  }
+ ]
+}

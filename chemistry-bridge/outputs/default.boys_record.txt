@@ -1,0 +1,102 @@
+qcx-integrals Boys kernel: what this build is
+
+library
+  version                   5.0.0                      (boys::VersionString)
+  submodule revision        unknown                    (this build, captured at configure time)
+  multiply-add asked for    fused                      (QCX_INTEGRALS_BOYS_MULADD_SEPARATE)
+  The asked-for route is what this tree's build states, and the guards in
+  qcx/integrals/boys.hpp refuse a translation unit whose definitions disagree with it.
+  What the arithmetic is delivered by is a different question - a compiler flag is a
+  licence rather than an instruction - and the table below is the library's own
+  answer, measured where the kernels are. boys_build_record_test fails when the two
+  disagree.
+
+arithmetic backends (boys::backend::BoysBackends)
+  one row per arithmetic: the route its values were computed at, and whether a bare
+  product-plus-add in it is one rounding in this build
+  scalar-fp64               fused                      (no contraction)
+  scalar-fp32               fused                      (no contraction)
+  avx2-fp64                 fused                      (no contraction)
+  avx2-fp32                 fused                      (no contraction)
+
+the class rows an unnamed call runs (boys/boys_build_defaults.hpp)
+  One row per class a call site in this tree reaches, read through
+  boys::DefaultPolicyFor. A row is what that class's unnamed call compiles;
+  the seam's seven names below are a different combination.
+
+host, double, all orders - BoysAllOrders: the VRR seed, the derivative seed,
+the one-electron seed and the gradient gateway
+  fit route                 chebyshev                  (boys::DefaultPolicyFor<kFp64, kAllOrders>::Type::kRoute)
+  evaluation scheme         horner                     (boys::DefaultPolicyFor<kFp64, kAllOrders>::Type::kScheme)
+  interval granularity      uniform                    (boys::DefaultPolicyFor<kFp64, kAllOrders>::Type::kGranularity)
+  packing axis              orders                     (boys::DefaultPolicyFor<kFp64, kAllOrders>::Type::kPack)
+  engine budget             kFloat                     (boys::DefaultPolicyFor<kFp64, kAllOrders>::Type::kBudget)
+  division form             refined-reciprocal         (boys::DefaultPolicyFor<kFp64, kAllOrders>::Type::kDivision)
+  region-B exponential      fast                       (boys::DefaultPolicyFor<kFp64, kAllOrders>::Type::kRegionBExp)
+  row basis                 measured                   (boys::DefaultPolicyFor<kFp64, kAllOrders>::kBasis)
+  row record                host-2026-10-12            (boys::DefaultPolicyFor<kFp64, kAllOrders>::kRecord)
+
+host, float, all orders - BoysAllOrdersF32: the certified fp32 lane
+  fit route                 chebyshev                  (boys::DefaultPolicyFor<kFp32, kAllOrders>::Type::kRoute)
+  evaluation scheme         horner                     (boys::DefaultPolicyFor<kFp32, kAllOrders>::Type::kScheme)
+  interval granularity      narrow                     (boys::DefaultPolicyFor<kFp32, kAllOrders>::Type::kGranularity)
+  packing axis              arguments                  (boys::DefaultPolicyFor<kFp32, kAllOrders>::Type::kPack)
+  engine budget             kFloat                     (boys::DefaultPolicyFor<kFp32, kAllOrders>::Type::kBudget)
+  division form             refined-reciprocal         (boys::DefaultPolicyFor<kFp32, kAllOrders>::Type::kDivision)
+  region-B exponential      accurate                   (boys::DefaultPolicyFor<kFp32, kAllOrders>::Type::kRegionBExp)
+  row basis                 chosen                     (boys::DefaultPolicyFor<kFp32, kAllOrders>::kBasis)
+  row record                (none: a stated choice)    (boys::DefaultPolicyFor<kFp32, kAllOrders>::kRecord)
+
+host, double, single order - BoysSingle: the dense s-only path
+  fit route                 chebyshev                  (boys::DefaultPolicyFor<kFp64, kSingle>::Type::kRoute)
+  evaluation scheme         horner                     (boys::DefaultPolicyFor<kFp64, kSingle>::Type::kScheme)
+  interval granularity      uniform                    (boys::DefaultPolicyFor<kFp64, kSingle>::Type::kGranularity)
+  packing axis              arguments                  (boys::DefaultPolicyFor<kFp64, kSingle>::Type::kPack)
+  engine budget             kFloat                     (boys::DefaultPolicyFor<kFp64, kSingle>::Type::kBudget)
+  division form             plain-reciprocal           (boys::DefaultPolicyFor<kFp64, kSingle>::Type::kDivision)
+  region-B exponential      accurate                   (boys::DefaultPolicyFor<kFp64, kSingle>::Type::kRegionBExp)
+  row basis                 measured                   (boys::DefaultPolicyFor<kFp64, kSingle>::kBasis)
+  row record                host-2026-10-12            (boys::DefaultPolicyFor<kFp64, kSingle>::kRecord)
+
+device, double and float, all orders - BoysDeviceAllNF64 / BoysDeviceAllNF32
+  The raw device entries take the build's two device names directly and resolve
+  no class row; these are the two cells its template defaults read.
+  division form             refined-reciprocal         (boys::kDefaultDeviceDivisionForm)
+  region-B exponential      accurate                   (boys::kDefaultRegionBExp)
+  A device call that names a policy (boys/boys_cuda_policy.hpp, WithPolicy<>)
+  resolves through DefaultPolicyFor's device rows instead; that layer is not what
+  this tree's two device calls compile.
+
+the seam's seven names (the fallback a class row replaces)
+  boys::DefaultPolicyFp64 is boys::SeamPolicy<>: the seven names below composed
+  with their own defaults. boys_build_defaults.hpp states them as the fallback a
+  build that carries no row list compiles every class from. Every class this
+  tree's calls reach carries a row, so no entry this build compiles runs this
+  combination; it is printed because it is the seam's own identity, and because
+  these are the axes a reader would otherwise take for the entries' answer.
+
+  fit route                 chebyshev                  (boys::DefaultPolicyFp64::kRoute)
+  evaluation scheme         horner                     (boys::DefaultPolicyFp64::kScheme)
+  interval granularity      narrow                     (boys::DefaultPolicyFp64::kGranularity)
+  packing axis              arguments                  (boys::DefaultPolicyFp64::kPack)
+  engine budget             kFloat                     (boys::DefaultPolicyFp64::kBudget)
+  division form             refined-reciprocal         (boys::DefaultPolicyFp64::kDivision)
+  region-B exponential      fast                       (boys::DefaultPolicyFp64::kRegionBExp)
+  half-lane budget          kFp16                      (boys::DefaultPolicyFp16::kBudget)
+  The half-lane budget above is the one cell SeamPolicy<> carries at the half
+  lane; the fp16 and bf16 class rows are the table's own and are not this name.
+
+certified fit routes this build carries (boys::BoysFitRoutes)
+  chebyshev                 [0, 11.9), 1320 stored     (delivered 1.736e-16 <= bound 3.000e-14)
+  rational-minimax          [0, 11.9), 891 stored      (delivered 2.459e-14 <= bound 3.000e-14)
+  chebyshev                 [11.9, 31), 25 stored      (delivered 5.090e-17 <= bound 2.569e-14)
+  rational-minimax          [11.9, 31), 13 stored      (delivered 1.691e-14 <= bound 2.569e-14)
+
+the region-B exponential is one of the seven cells every class row above carries;
+the device entries' own default is the two-name block above. This tree names no
+value for it on either surface, and a revision that moves either name moves what
+the row or the block prints.
+
+Two labels above are spelled by this file rather than read, because the library
+publishes no name accessor for them: the engine budget and the row basis. Every
+value beside them is the library's.

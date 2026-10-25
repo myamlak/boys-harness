@@ -6,11 +6,11 @@ Run from this directory, or point it at a copy of the audit material:
     python headline_numbers.py
     python headline_numbers.py --root /path/to/boys-harness/accuracy-claim-audit
 
-The first five numbers come from the two claim registries. Both registries
-are in the boys-harness repository at tag v1.0.0, so those five print from
-that repository alone. The sixth needs the captured cell summary,
-records/summarize_cells.txt, which is supplied with the paper and is not in
-the repository; when it is absent the script says so rather than guessing.
+The first five numbers come from the two claim registries, and the sixth
+from the captured cell summary. The registries and the cell summary,
+records/summarize_cells.txt, are in the boys-harness repository, so all six
+print from that repository alone; when the cell summary is absent the script
+says so rather than guessing.
 
 Only the Python standard library is used.
 """

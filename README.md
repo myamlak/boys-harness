@@ -1,8 +1,8 @@
 # Boys-function measurement harnesses
 
 The scripts behind four measurement campaigns on the Boys function kernel, kept so that the
-measurements can be re-run and checked. The measured records accompany the corresponding
-publications.
+measurements can be re-run and checked. The measured records for each campaign are in the `data/`
+and `results/` directories beside its scripts.
 
 The kernel is the Boys library at <https://github.com/myamlak/boys>.
 
