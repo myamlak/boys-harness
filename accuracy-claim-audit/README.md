@@ -21,19 +21,23 @@ against an independent MPFR reference.
   `m2_claims.py` and `m3_defects.py` are the three measurements;
   `verify_findings.py` checks the two measured defects against mpmath.
   `claims_registry.tsv` is the claim classification.
+- `records/` — the captured cell summary `summarize_cells.txt`, the per-row
+  judged and degenerate cell counts behind the audit's sixth headline number.
 
 ## Headline numbers
 
-`headline_numbers.py` prints the five counts that follow from the two claim
-registries, from any checkout of this directory:
+`headline_numbers.py` prints the six headline numbers from any checkout of
+this directory:
 
 ```sh
 python headline_numbers.py
 ```
 
-The three false claims need the captured cell summary
-`records/summarize_cells.txt`, which is supplied with the corresponding paper
-and is not in this repository; the script says so when it is absent.
+The sixth, the row-shaped claims measured false, reads the captured cell
+summary `records/summarize_cells.txt`: the per-row judged and degenerate cell
+counts written by the Boost gate's `--cells` run, beside the two claim
+registries. When the summary is absent the script reports that number as
+unavailable rather than guessing.
 
 ## Dependencies
 
