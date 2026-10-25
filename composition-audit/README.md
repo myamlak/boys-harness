@@ -44,6 +44,18 @@ The Windows fused run writes to `results/`, the Windows separate run to
 `results-msvc-separate/`, and the GCC runs to `results-gcc-fused/` and
 `results-gcc-separate/`.
 
+## Records
+
+`records/signed-interaction.json` and `records/signed-interaction.tsv` are the
+measured factorial audit's summary: every cell of the six-axis design in each
+of the four compiler and multiply-add configurations, with the signed and
+absolute-value statistics and the interaction sums.
+
+`records/synthetic-surface.json` is the controlled study that separates the two
+statistics: 5,200 known-additive surfaces from 200 seeds, with the material
+counts each statistic reports on them. `synthetic_surface.py` produces it;
+`signed_interaction.py` reduces the measured cells.
+
 ## Requirements
 
 A C++23 compiler, CMake 3.20 or newer, the Boys source, and Python 3.10 or
