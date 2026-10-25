@@ -1,0 +1,163 @@
+# Workload pair analysis
+
+reference: 80-digit ladder, series below x = 2 and upward recurrence above;
+  validated against mp.quad at 10 arguments x 5 orders, worst relative
+  deviation 1.95135e-75 at (2.0, 12)
+
+distinct arguments: 2764, engine calls: 10935
+distinct arguments per band: A1=2272, A2=405, above=87
+
+arm paper-a: above-region worst abs 3.54288e-17 at (0, 12.853894597566626, mpf('0.00000000000000014332730746736933323017071063389252708436274704608030219944984077949518259413379835'))
+arm direct: above-region worst abs 3.54288e-17 at (0, 12.853894597566626, mpf('0.00000000000000014332730746736933323017071063389252708436274704608030219944984077949518259413379835'))
+arm model-abs-band: above-region worst abs 3.54288e-17 at (0, 12.853894597566626, mpf('0.00000000000000014332730746736933323017071063389252708436274704608030219944984077949518259413379835'))
+arm model-abs-pop: above-region worst abs 3.54288e-17 at (0, 12.853894597566626, mpf('0.00000000000000014332730746736933323017071063389252708436274704608030219944984077949518259413379835'))
+arm model-rel-band: above-region worst abs 3.54288e-17 at (0, 12.853894597566626, mpf('0.00000000000000014332730746736933323017071063389252708436274704608030219944984077949518259413379835'))
+arm model-rel-pop: above-region worst abs 3.54288e-17 at (0, 12.853894597566626, mpf('0.00000000000000014332730746736933323017071063389252708436274704608030219944984077949518259413379835'))
+
+## paper-a
+  cell  worst_abs (at x)  worst_rel (at x)
+  A1 n= 0  1.9452012e-16 (0.0288383)  2.2480413e-16 (0.817251)
+  A1 n= 1  1.0766723e-16 (0.00914537)  3.2477801e-16 (0.00914537)
+  A1 n= 2  7.1607772e-17 (1.16615)  8.1589544e-16 (1.21918)
+  A1 n= 3  9.6747921e-17 (1.18676)  1.6647107e-15 (1.18676)
+  A1 n= 4  6.1679057e-18 (0)  5.5511151e-17 (0)
+  A2 n= 0  7.3370632e-17 (9.95611)  2.751053e-16 (11.6846)
+  A2 n= 1  6.6551774e-18 (8.24259)  3.5573921e-16 (8.24259)
+  A2 n= 2  1.7487617e-18 (5.96591)  3.668101e-16 (7.57509)
+  A2 n= 3  3.8100501e-19 (7.31969)  2.5365901e-16 (7.31969)
+
+## direct
+  cell  worst_abs (at x)  worst_rel (at x)
+  A1 n= 0  2.0391495e-16 (0.413431)  2.6129563e-16 (5.75809)
+  A1 n= 1  1.036352e-16 (0.00484445)  6.2019467e-16 (5.01968)
+  A1 n= 2  5.6892086e-17 (0.00368665)  1.587255e-15 (5.93824)
+  A1 n= 3  3.9234691e-17 (0.00228808)  2.0392049e-15 (5.73613)
+  A1 n= 4  6.1679057e-18 (0)  5.5511151e-17 (0)
+  A2 n= 0  6.6427904e-17 (11.4739)  2.5389973e-16 (11.4739)
+  A2 n= 1  4.5078784e-18 (7.25284)  2.0228545e-16 (8.85875)
+  A2 n= 2  1.4589138e-18 (6.72521)  2.6256791e-16 (6.72521)
+  A2 n= 3  5.183369e-19 (6.25144)  2.0828814e-16 (6.25144)
+
+## model-abs-band
+  cell  worst_abs (at x)  worst_rel (at x)
+  A1 n= 0  1.9452012e-16 (0.0288383)  2.2480413e-16 (0.817251)
+  A1 n= 1  1.036352e-16 (0.00484445)  6.2019467e-16 (5.01968)
+  A1 n= 2  5.6892086e-17 (0.00368665)  1.587255e-15 (5.93824)
+  A1 n= 3  3.9234691e-17 (0.00228808)  2.0392049e-15 (5.73613)
+  A1 n= 4  6.1679057e-18 (0)  5.5511151e-17 (0)
+  A2 n= 0  6.6427904e-17 (11.4739)  2.5389973e-16 (11.4739)
+  A2 n= 1  4.5078784e-18 (7.25284)  2.0228545e-16 (8.85875)
+  A2 n= 2  1.4589138e-18 (6.72521)  2.6256791e-16 (6.72521)
+  A2 n= 3  5.183369e-19 (6.25144)  2.0828814e-16 (6.25144)
+
+## model-abs-pop
+  cell  worst_abs (at x)  worst_rel (at x)
+  A1 n= 0  2.0391495e-16 (0.413431)  2.3232179e-16 (0.413431)
+  A1 n= 1  1.036352e-16 (0.00484445)  6.2019467e-16 (5.01968)
+  A1 n= 2  5.6892086e-17 (0.00368665)  1.587255e-15 (5.93824)
+  A1 n= 3  3.9234691e-17 (0.00228808)  2.0392049e-15 (5.73613)
+  A1 n= 4  6.1679057e-18 (0)  5.5511151e-17 (0)
+  A2 n= 0  6.6427904e-17 (11.4739)  2.5389973e-16 (11.4739)
+  A2 n= 1  4.5078784e-18 (7.25284)  2.0228545e-16 (8.85875)
+  A2 n= 2  1.4589138e-18 (6.72521)  2.6256791e-16 (6.72521)
+  A2 n= 3  5.183369e-19 (6.25144)  2.0828814e-16 (6.25144)
+
+## model-rel-band
+  cell  worst_abs (at x)  worst_rel (at x)
+  A1 n= 0  1.9452012e-16 (0.0288383)  2.2480413e-16 (0.817251)
+  A1 n= 1  1.0766723e-16 (0.00914537)  3.2477801e-16 (0.00914537)
+  A1 n= 2  5.6892086e-17 (0.00368665)  1.587255e-15 (5.93824)
+  A1 n= 3  3.9234691e-17 (0.00228808)  2.0392049e-15 (5.73613)
+  A1 n= 4  6.1679057e-18 (0)  5.5511151e-17 (0)
+  A2 n= 0  6.6427904e-17 (11.4739)  2.5389973e-16 (11.4739)
+  A2 n= 1  4.5078784e-18 (7.25284)  2.0228545e-16 (8.85875)
+  A2 n= 2  1.4589138e-18 (6.72521)  2.6256791e-16 (6.72521)
+  A2 n= 3  5.183369e-19 (6.25144)  2.0828814e-16 (6.25144)
+
+## model-rel-pop
+  cell  worst_abs (at x)  worst_rel (at x)
+  A1 n= 0  2.0391495e-16 (0.413431)  2.3232179e-16 (0.413431)
+  A1 n= 1  1.036352e-16 (0.00484445)  3.2114061e-16 (1.37788)
+  A1 n= 2  5.6892086e-17 (0.00368665)  1.587255e-15 (5.93824)
+  A1 n= 3  3.9234691e-17 (0.00228808)  2.0392049e-15 (5.73613)
+  A1 n= 4  6.1679057e-18 (0)  5.5511151e-17 (0)
+  A2 n= 0  6.6427904e-17 (11.4739)  2.5389973e-16 (11.4739)
+  A2 n= 1  4.5078784e-18 (7.25284)  2.0228545e-16 (8.85875)
+  A2 n= 2  1.4589138e-18 (6.72521)  2.6256791e-16 (6.72521)
+  A2 n= 3  5.183369e-19 (6.25144)  2.0828814e-16 (6.25144)
+
+## referee's bar: absolute
+  model-abs-band abs: direct 2.0391495e-16 at ('A1', 0); model 1.9452012e-16 at ('A1', 0); margin 0.0460723
+    leave-one-out smallest margin 0.0 after dropping ('A1', 0) (direct 1.036352e-16, model 1.036352e-16)
+    orders >= 1 only: direct 1.036352e-16, model 1.036352e-16, margin 0.0
+    cells where the model beats always-direct: A1 n=0 (0.04607)
+
+  model-abs-pop abs: direct 2.0391495e-16 at ('A1', 0); model 2.0391495e-16 at ('A1', 0); margin 0.0
+    leave-one-out smallest margin 0.0 after dropping ('A1', 0) (direct 1.036352e-16, model 1.036352e-16)
+    orders >= 1 only: direct 1.036352e-16, model 1.036352e-16, margin 0.0
+    cells where the model beats always-direct: none
+
+  model-rel-band abs: direct 2.0391495e-16 at ('A1', 0); model 1.9452012e-16 at ('A1', 0); margin 0.0460723
+    leave-one-out smallest margin -0.038906 after dropping ('A1', 0) (direct 1.036352e-16, model 1.0766723e-16)
+    orders >= 1 only: direct 1.036352e-16, model 1.0766723e-16, margin -0.038906
+    cells where the model beats always-direct: A1 n=0 (0.04607)
+
+  model-rel-pop abs: direct 2.0391495e-16 at ('A1', 0); model 2.0391495e-16 at ('A1', 0); margin 0.0
+    leave-one-out smallest margin 0.0 after dropping ('A1', 0) (direct 1.036352e-16, model 1.036352e-16)
+    orders >= 1 only: direct 1.036352e-16, model 1.036352e-16, margin 0.0
+    cells where the model beats always-direct: none
+
+
+## referee's bar: relative
+  model-abs-band rel: direct 2.0392049e-15 at ('A1', 3); model 2.0392049e-15 at ('A1', 3); margin 0.0
+    leave-one-out smallest margin 0.0 after dropping ('A1', 0) (direct 2.0392049e-15, model 2.0392049e-15)
+    orders >= 1 only: direct 2.0392049e-15, model 2.0392049e-15, margin 0.0
+    cells where the model beats always-direct: A1 n=0 (0.1397)
+
+  model-abs-pop rel: direct 2.0392049e-15 at ('A1', 3); model 2.0392049e-15 at ('A1', 3); margin 0.0
+    leave-one-out smallest margin 0.0 after dropping ('A1', 0) (direct 2.0392049e-15, model 2.0392049e-15)
+    orders >= 1 only: direct 2.0392049e-15, model 2.0392049e-15, margin 0.0
+    cells where the model beats always-direct: A1 n=0 (0.1109)
+
+  model-rel-band rel: direct 2.0392049e-15 at ('A1', 3); model 2.0392049e-15 at ('A1', 3); margin 0.0
+    leave-one-out smallest margin 0.0 after dropping ('A1', 0) (direct 2.0392049e-15, model 2.0392049e-15)
+    orders >= 1 only: direct 2.0392049e-15, model 2.0392049e-15, margin 0.0
+    cells where the model beats always-direct: A1 n=0 (0.1397), A1 n=1 (0.4763)
+
+  model-rel-pop rel: direct 2.0392049e-15 at ('A1', 3); model 2.0392049e-15 at ('A1', 3); margin 0.0
+    leave-one-out smallest margin 0.0 after dropping ('A1', 0) (direct 2.0392049e-15, model 2.0392049e-15)
+    orders >= 1 only: direct 2.0392049e-15, model 2.0392049e-15, margin 0.0
+    cells where the model beats always-direct: A1 n=0 (0.1109), A1 n=1 (0.4822)
+
+
+## tensors: n=7, 2401 entries, max |ERI| = 4.78507
+  paper-a        vs direct         max|d| 8.881784e-16 at (2, 2, 2, 2) rms 3.861646e-17 differing 473
+  paper-a        vs model-abs-band max|d| 2.220446e-16 at (4, 4, 5, 5) rms 1.240438e-17 differing 326
+  direct         vs model-abs-band max|d| 8.881784e-16 at (2, 2, 2, 2) rms 3.164027e-17 differing 185
+  paper-a        vs model-abs-pop  max|d| 8.881784e-16 at (2, 2, 2, 2) rms 3.853875e-17 differing 435
+  direct         vs model-abs-pop  max|d| 5.551115e-17 at (0, 0, 1, 1) rms 2.513330e-18 differing 66
+  paper-a        vs model-rel-band max|d| 2.775558e-17 at (0, 1, 4, 4) rms 1.633127e-18 differing 76
+  direct         vs model-rel-band max|d| 8.881784e-16 at (2, 2, 2, 2) rms 3.864942e-17 differing 417
+  paper-a        vs model-rel-pop  max|d| 8.881784e-16 at (2, 2, 2, 2) rms 3.842281e-17 differing 339
+  direct         vs model-rel-pop  max|d| 5.551115e-17 at (0, 0, 1, 1) rms 3.128069e-18 differing 154
+
+## fixed-density and SCF energies
+  paper-a        seed_e2e 39.986701322086226 default_e2e 38.213250277995584 tight_e2e 38.213250277961976 scf_default -74.962928270826211 scf_tight -74.962928270826126
+  direct         seed_e2e 39.986701322086212 default_e2e 38.213250277993787 tight_e2e 38.213250277962217 scf_default -74.962928270826183 scf_tight -74.962928270826197
+  model-abs-band seed_e2e 39.986701322086226 default_e2e 38.213250277992692 tight_e2e 38.213250277966083 scf_default -74.962928270826168 scf_tight -74.962928270826225
+  model-abs-pop  seed_e2e 39.986701322086212 default_e2e 38.213250277999727 tight_e2e 38.213250277962146 scf_default -74.962928270826197 scf_tight -74.96292827082614
+  model-rel-band seed_e2e 39.986701322086226 default_e2e 38.213250278000459 tight_e2e 38.213250277962175 scf_default -74.962928270826154 scf_tight -74.962928270826183
+  model-rel-pop  seed_e2e 39.986701322086212 default_e2e 38.213250277991804 tight_e2e 38.213250277962011 scf_default -74.962928270826183 scf_tight -74.962928270826183
+  direct         vs paper-a: seed_e2e -1.421085e-14, default_e2e -1.797673e-12, tight_e2e +2.415845e-13, scf_default_total_energy +2.842171e-14, scf_tight_total_energy -7.105427e-14
+  model-abs-band vs paper-a: seed_e2e +0.000000e+00, default_e2e -2.891909e-12, tight_e2e +4.106937e-12, scf_default_total_energy +4.263256e-14, scf_tight_total_energy -9.947598e-14
+  model-abs-pop  vs paper-a: seed_e2e -1.421085e-14, default_e2e +4.142464e-12, tight_e2e +1.705303e-13, scf_default_total_energy +1.421085e-14, scf_tight_total_energy -1.421085e-14
+  model-rel-band vs paper-a: seed_e2e +0.000000e+00, default_e2e +4.874323e-12, tight_e2e +1.989520e-13, scf_default_total_energy +5.684342e-14, scf_tight_total_energy -5.684342e-14
+  model-rel-pop  vs paper-a: seed_e2e -1.421085e-14, default_e2e -3.780087e-12, tight_e2e +3.552714e-14, scf_default_total_energy +2.842171e-14, scf_tight_total_energy -5.684342e-14
+
+## E_2e at the shared seed density, delta vs paper-a
+  paper-a        +0.000000e+00
+  direct         -1.421085e-14
+  model-abs-band +0.000000e+00
+  model-abs-pop  -1.421085e-14
+  model-rel-band +0.000000e+00
+  model-rel-pop  -1.421085e-14

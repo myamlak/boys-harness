@@ -1,0 +1,42 @@
+--- bladawiec/integrals/CMakeLists.txt	2026-10-20 21:51:24.650373200 +0200
++++ bladawiec-pair/integrals/CMakeLists.txt	2026-10-25 11:57:11.903486200 +0100
+@@ -195,6 +195,39 @@
+     message(STATUS "qcx-integrals: the Boys-share direct instrument is compiled in")
+ endif()
+ 
++# The Paper-A chemistry bridge (scratch copy only). One compile-time switch
++# selects the policy the MD engine's fp64 Boys ladder evaluates: the default
++# arm is the library's host fp64 all-orders class row, unchanged; the paper-a
++# arm is Paper A's measured recursed policy. It goes on qcx-boys-route for the
++# same reason the instrument above does - the ladder is called inside the
++# per-class MD object libraries, which take their definitions from this target
++# alone. QCX_BRIDGE_BOYS_CAPTURE records every argument the engine forms, so
++# the bridge can evaluate both policies on the run's own argument stream.
++set(QCX_BRIDGE_BOYS_POLICY "default" CACHE STRING
++    "MD engine Boys policy for the Paper-A chemistry bridge (default|paper-a)")
++set_property(CACHE QCX_BRIDGE_BOYS_POLICY PROPERTY STRINGS default paper-a)
++if (QCX_BRIDGE_BOYS_POLICY STREQUAL "paper-a")
++    target_compile_definitions(qcx-boys-route INTERFACE QCX_BRIDGE_BOYS_POLICY_PAPER_A=1)
++    message(STATUS "qcx-integrals: the Paper-A bridge Boys policy is in force")
++elseif (NOT QCX_BRIDGE_BOYS_POLICY STREQUAL "default")
++    message(FATAL_ERROR
++        "QCX_BRIDGE_BOYS_POLICY must be default or paper-a, got '${QCX_BRIDGE_BOYS_POLICY}'")
++endif()
++
++set(QCX_BRIDGE_BOYS_CAPTURE OFF CACHE BOOL
++    "Record every MD-engine Boys argument for the Paper-A chemistry bridge (scratch copy only)")
++if (QCX_BRIDGE_BOYS_CAPTURE)
++    target_compile_definitions(qcx-boys-route INTERFACE QCX_BRIDGE_BOYS_CAPTURE=1)
++    message(STATUS "qcx-integrals: the Paper-A bridge Boys argument capture is compiled in")
++endif()
++
++set(QCX_BRIDGE_BOYS_PAIR OFF CACHE BOOL
++    "Select the Paper-A workload pair per order at run time (scratch copy only)")
++if (QCX_BRIDGE_BOYS_PAIR)
++    target_compile_definitions(qcx-boys-route INTERFACE QCX_BRIDGE_BOYS_PAIR_MODE=1)
++    message(STATUS "qcx-integrals: the Paper-A workload pair selection is compiled in")
++endif()
++
+ # The Boys-swap A/B probe's instrument, local-only and never in CI: it keeps
+ # the engine's own device Boys ladder in the tree beside the library's lane,
+ # adds the arm that selects between them and the cycle stamps around each, and
