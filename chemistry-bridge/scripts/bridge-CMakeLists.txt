@@ -1,0 +1,40 @@
+# The Paper-A chemistry bridge probe (scratch copy only).
+#
+# One executable that builds the H2O/STO-3G dense ERI tensor through the MD
+# engine, captures every Boys argument and ladder the engine forms, evaluates
+# both policies on that exact stream, runs RHF twice (default and tight
+# tolerances) and dumps the ERIs, matrices, densities and energies the offline
+# analysis compares. Two builds of this target - QCX_BRIDGE_BOYS_POLICY=default
+# and =paper-a - are the two arms of the comparison.
+
+add_executable(qcx-bridge-probe
+    probe.cpp
+    ${CMAKE_SOURCE_DIR}/tests/fixtures/h2o_sto3g.cpp)
+
+target_include_directories(qcx-bridge-probe PRIVATE
+    # The H2O/STO-3G fixture, so the probe runs the same molecule and basis the
+    # integrals tests do.
+    ${CMAKE_SOURCE_DIR}/tests/fixtures
+    # The MD engine's Boys adapter, which carries the bridge's compile-time
+    # policy switch and the capture sink.
+    ${CMAKE_SOURCE_DIR}/integrals/src)
+
+target_link_libraries(qcx-bridge-probe PRIVATE
+    qcx-scf
+    qcx-integrals
+    qcx-basisset
+    qcx-molecule
+    qcx-memory
+    qcx-core
+    qcx-boys-route
+    eigen)
+
+target_compile_features(qcx-bridge-probe PRIVATE cxx_std_23)
+
+if (MSVC)
+    # The policy-taking headers instantiate per policy; the probe names two.
+    # The option probe's own TU is what needs /bigobj in this tree, but the
+    # flag is harmless here and keeps the bridge from failing on the section
+    # limit if a later policy table grows.
+    target_compile_options(qcx-bridge-probe PRIVATE /bigobj)
+endif()
