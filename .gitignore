@@ -7,3 +7,11 @@ results-*/
 data/
 sweep1
 sweep2
+
+# The published campaigns' measured records are committed; the rules above keep
+# whatever a local re-run writes out of the tree elsewhere.
+!amplification-sweeps/amplification-form/data/
+!amplification-sweeps/amplification-form/results/
+!amplification-sweeps/product-amplification/data/
+!amplification-sweeps/product-amplification/results/
+!coefficient-count-sweep/records/

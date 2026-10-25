@@ -1,0 +1,14 @@
+reference validation
+grid: C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover\sweeps\amplification_form\data\grid.csv
+arguments: 836, orders: 33, dps: 70, digits: 60
+
+R2 series                        3.048371e-62 at A2 n=28 x=11.649276996317969 over 27555 cells
+R2b imported series              9.147034e-62 at imported series A2 n=30 x=11.362912821206137 over 264 cells
+R3 quadrature                    1.804904e-71 at A1 n=23 x=1.041812808983191 over 198 cells
+R4 committed grid (absolute)     4.975493e-46 at A1 n=2 x=3.162277660168379e-06 over 2409 cells
+R5 identity                      7.302220e-67 at A2 n=0 x=11.78309182848349 over 26720 cells
+R6 F0 gamma against erf          3.429441e-71 at A2 x=11.264003681303073 over 835 cells
+R7 accuracy-gate grid            4.944563e-25 at A2 n=16 x=11.235743927045055 over 21318 cells
+
+strict: on
+all evaluated routes inside their stated bounds

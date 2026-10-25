@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "generated_utc": "2026-10-22T21:50:16.389554+00:00",
+    "boys_root": "C:\\Users\\myaml\\dev\\bladawiec\\external\\boys",
+    "git": {
+      "commit": "482fd3388c276091834a6c12a642d9de2481c9f2",
+      "tag": "v5.0.0"
+    },
+    "header": {
+      "path": "C:\\Users\\myaml\\dev\\bladawiec\\external\\boys\\include\\boys\\boys_coefficients.hpp",
+      "sha256": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204"
+    },
+    "generator": {
+      "path": "C:\\Users\\myaml\\dev\\bladawiec\\external\\boys\\tools\\gen_boys_coefficients.py",
+      "sha256": "ccc8b011f4170ce0b530bc4781b09670f42839fa18caaa38ea7d3a9ea9ba9bb4"
+    },
+    "python": "3.14.7",
+    "note": "the nearest-neighbour's exact region-B interval and target",
+    "precision_scope": {
+      "reported_precision": "fp64",
+      "stored_type": "binary64",
+      "evaluation": "binary64, worse of the fused and separate multiply-add routes",
+      "count_unit": "coefficients of one representation of the fit",
+      "why_fp64": "the count trade is resolved at the double lane's 1e-13 F_0 contract; the nearest-neighbour comparison is 5e-14 absolute in binary64; and a binary64 coefficient is 8 bytes while a binary32 one is 4, so counts from the two lanes are not like-for-like storage",
+      "fp32_in_this_paper": "static counts only, a secondary column; not part of the width law",
+      "sweep_scope": "fp64 only: binary64 stored coefficients, binary64 evaluation, targets rel:1e-13 and abs:5e-14",
+      "fp32_comparison_would_need": "the float lane's own path: fits stored and evaluated in binary32, both multiply-add routes, certified at max(2^-22 F_n(x), 1.5e-7) from the generator's f32 fit and acceptance functions, on the float lane's own edges and partitions"
+    }
+  },
+  "settings": {
+    "nodes": 2001,
+    "coarse_stride": 5,
+    "scan_outer": 100,
+    "refine_outer": 300,
+    "remez_iters": 60,
+    "workers": 12
+  },
+  "precision": "fp64",
+  "a": "11.899848152108484",
+  "b": "28.98933773882074",
+  "width": "17.089489586712256",
+  "width_f": 17.089489586712254,
+  "target": "abs:5e-14",
+  "expected_rational_stored_from_the_paper": 12,
+  "cheb": {
+    "family": "chebyshev",
+    "stored": 19,
+    "m": 18,
+    "k": null,
+    "delivered_rel": "3.8613631214439201e-14",
+    "delivered_abs": "9.9200625618824799e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.709
+  },
+  "rat": {
+    "family": "rational",
+    "stored": 12,
+    "m": 6,
+    "k": 5,
+    "solver": "lawson",
+    "delivered_rel": "2.6813260205510409e-13",
+    "delivered_abs": "4.4581882614162684e-14",
+    "at_x_rel": "28.416839837665879",
+    "at_x_abs": "28.399750348079167",
+    "refined": true,
+    "below_meets": false,
+    "seconds": 1459.953
+  },
+  "independent_cross_check": {
+    "method": "rational interpolation at Chebyshev-Gauss nodes, monomial basis in t, solved in mpmath",
+    "dps": 60,
+    "shares_code_with_the_sweep_solvers": false,
+    "one_sided": "Interpolation is not minimax. A meeting interpolant witnesses that the stored count can reach the target; a miss is inconclusive and is not evidence against the minimax count.",
+    "target": "abs:5e-14",
+    "at": {
+      "11": {
+        "stored": 11,
+        "pairs_tried": [
+          "[9/1]",
+          "[8/2]",
+          "[7/3]",
+          "[6/4]",
+          "[5/5]",
+          "[4/6]",
+          "[3/7]",
+          "[2/8]"
+        ],
+        "fits_that_solved": 7,
+        "best": {
+          "m": 5,
+          "k": 5,
+          "stored": 11,
+          "rel": "4.6270227771529054e-11",
+          "abs": "1.1887085980001807e-11",
+          "at_x_rel": "11.899848152108484",
+          "at_x_abs": "11.899848152108484"
+        },
+        "meets": false
+      },
+      "12": {
+        "stored": 12,
+        "pairs_tried": [
+          "[10/1]",
+          "[9/2]",
+          "[8/3]",
+          "[7/4]",
+          "[6/5]",
+          "[5/6]",
+          "[4/7]",
+          "[3/8]"
+        ],
+        "fits_that_solved": 8,
+        "best": {
+          "m": 5,
+          "k": 6,
+          "stored": 12,
+          "rel": "1.8964348051648274e-12",
+          "abs": "4.8720494084823728e-13",
+          "at_x_rel": "11.899848152108484",
+          "at_x_abs": "11.899848152108484"
+        },
+        "meets": false
+      }
+    },
+    "stored_12_witnessed": false,
+    "stored_11_contradicts_the_below_check": false
+  }
+}

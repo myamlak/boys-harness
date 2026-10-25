@@ -50,6 +50,26 @@ python analyze.py --tree .
 `fits.py` computes the seed fits and is the slow step. `sweep2` writes
 `results/paths.csv`, `results/cells.csv` and `results/admission.csv`.
 
+## Deposited records
+
+The measured records behind the published tables are in each sweep's `data/` and `results/`
+directories: the grids, the 60-digit references, the per-cell delivered values of both entries, the
+per-order and band summaries, the prediction records and the provenances. They were produced at
+Boys v5.0.0 (commit `482fd33`, recorded in `results/provenance.json`).
+
+Four files are stored xz-compressed because of their size. Decompress them in place before running
+the analysis:
+
+```sh
+xz -dk amplification-form/results/paths.csv.xz \
+      product-amplification/data/reference.csv.xz \
+      product-amplification/results/cells.csv.xz \
+      product-amplification/results/replica_gain.csv.xz
+```
+
+Every other record is plain CSV. Each analysis reads only the records above; the remaining files in
+`results/` are its outputs, deposited as the paper's tables.
+
 ## Requirements
 
 Python 3.10 or newer with `mpmath`, and a C++23 compiler. The scripts look for
