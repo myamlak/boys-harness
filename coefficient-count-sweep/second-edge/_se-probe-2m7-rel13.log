@@ -1,0 +1,6 @@
+left edge a = 23.799696304216968 (scale 2 x X0); widths scaled by 2
+grid: 15 width(s) x 3 target(s); 0 row(s) already on disk
+workers: 4
+[rel:1e-13] 2^-7    W=0.015625     cheb=5 (deg=4, even) rat=4 ([1/2], lawson) rel=2.5923073947097446e-16 (0.096s + 324.829s)
+invocation wall time: 328.8 s; rows on disk: 1
+EXIT=0

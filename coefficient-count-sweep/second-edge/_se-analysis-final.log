@@ -1,0 +1,73 @@
+x0 = 11.899848152108484; a2 = 23.799696304216968
+full rows on disk: 5 of 45; Chebyshev cells: 45 of 45
+missing rational rows: rel:1e-13/2^-2, rel:1e-13/2^-1, rel:1e-13/2^0, rel:1e-13/2^1, rel:1e-13/2^2, rel:1e-13/2^3, rel:1e-13/2^4, rel:1e-13/2^5, rel:1e-13/ship, rel:1e-13/paper, abs:5e-14/2^-7, abs:5e-14/2^-6, abs:5e-14/2^-5, abs:5e-14/2^-4, abs:5e-14/2^-3, abs:5e-14/2^-2, abs:5e-14/2^-1, abs:5e-14/2^0, abs:5e-14/2^1, abs:5e-14/2^2, abs:5e-14/2^3, abs:5e-14/2^4, abs:5e-14/2^5, abs:5e-14/ship, abs:5e-14/paper, rel:1e-14/2^-7, rel:1e-14/2^-6, rel:1e-14/2^-5, rel:1e-14/2^-4, rel:1e-14/2^-3, rel:1e-14/2^-2, rel:1e-14/2^-1, rel:1e-14/2^0, rel:1e-14/2^1, rel:1e-14/2^2, rel:1e-14/2^3, rel:1e-14/2^4, rel:1e-14/2^5, rel:1e-14/ship, rel:1e-14/paper
+
+counts by target and width (cheb x0 -> a2; rat x0 -> a2)
+ rel:1e-13  2^-7  cheb 5->5  rat 4->4
+ rel:1e-13  2^-6  cheb 5->5  rat 4->4
+ rel:1e-13  2^-5  cheb 5->5  rat 4->4
+ rel:1e-13  2^-4  cheb 5->5  rat 4->4
+ rel:1e-13  2^-3  cheb 5->5  rat 5->5
+ rel:1e-13  2^-2  cheb 6->6  rat 5->--
+ rel:1e-13  2^-1  cheb 7->7  rat 6->--
+ rel:1e-13   2^0  cheb 8->8  rat 6->--
+ rel:1e-13   2^1  cheb 9->9  rat 7->--
+ rel:1e-13   2^2  cheb 11->12  rat 9->--
+ rel:1e-13   2^3  cheb 14->15  rat 11->--
+ rel:1e-13   2^4  cheb 18->19  rat 12->--
+ rel:1e-13   2^5  cheb 25->25  rat 16->--
+ rel:1e-13  ship  cheb 20->20  rat 13->--
+ rel:1e-13 paper  cheb 19->19  rat 13->--
+ abs:5e-14  2^-7  cheb 5->5  rat 4->--
+ abs:5e-14  2^-6  cheb 5->5  rat 4->--
+ abs:5e-14  2^-5  cheb 5->5  rat 4->--
+ abs:5e-14  2^-4  cheb 5->5  rat 4->--
+ abs:5e-14  2^-3  cheb 5->5  rat 5->--
+ abs:5e-14  2^-2  cheb 6->6  rat 5->--
+ abs:5e-14  2^-1  cheb 7->7  rat 6->--
+ abs:5e-14   2^0  cheb 8->8  rat 6->--
+ abs:5e-14   2^1  cheb 9->9  rat 7->--
+ abs:5e-14   2^2  cheb 11->11  rat 9->--
+ abs:5e-14   2^3  cheb 14->14  rat 11->--
+ abs:5e-14   2^4  cheb 18->18  rat 12->--
+ abs:5e-14   2^5  cheb 24->25  rat 16->--
+ abs:5e-14  ship  cheb 19->20  rat 13->--
+ abs:5e-14 paper  cheb 19->19  rat 12->--
+ rel:1e-14  2^-7  cheb 5->5  rat 4->--
+ rel:1e-14  2^-6  cheb 5->5  rat 4->--
+ rel:1e-14  2^-5  cheb 5->5  rat 4->--
+ rel:1e-14  2^-4  cheb 5->5  rat 5->--
+ rel:1e-14  2^-3  cheb 6->6  rat 5->--
+ rel:1e-14  2^-2  cheb 6->6  rat 5->--
+ rel:1e-14  2^-1  cheb 7->7  rat 6->--
+ rel:1e-14   2^0  cheb 9->9  rat 6->--
+ rel:1e-14   2^1  cheb 10->10  rat 9->--
+ rel:1e-14   2^2  cheb 12->12  rat 10->--
+ rel:1e-14   2^3  cheb 15->16  rat 11->--
+ rel:1e-14   2^4  cheb 20->20  rat 15->--
+ rel:1e-14   2^5  cheb 26->27  rat 21->--
+ rel:1e-14  ship  cheb 21->22  rat 16->--
+ rel:1e-14 paper  cheb 20->21  rat 15->--
+
+per family and target
+ rel:1e-13 cheb: differing 3/15, max |diff| 1, sum 3, parity flips 3, pair changes 3
+ rel:1e-13 rat : differing 0/5, max |diff| 0, sum 0, parity flips 0, pair changes 1
+ abs:5e-14 cheb: differing 2/15, max |diff| 1, sum 2, parity flips 2, pair changes 2
+ abs:5e-14 rat : differing 0/0, max |diff| 0, sum 0, parity flips 0, pair changes 0
+ rel:1e-14 cheb: differing 4/15, max |diff| 1, sum 4, parity flips 4, pair changes 4
+ rel:1e-14 rat : differing 0/0, max |diff| 0, sum 0, parity flips 0, pair changes 0
+
+slopes (paper estimator, thirteen scaling widths, floors in)
+ rel:1e-13 cheb: x0 0.190+-0.021 (n=13), a2 0.197+-0.021, diff +0.006 (unpaired se 0.030, z +0.22; paired se 0.003, z +2.18); endpoints 0.1935/0.1935
+ rel:1e-13 rat : INCOMPLETE
+ abs:5e-14 cheb: x0 0.188+-0.020 (n=13), a2 0.190+-0.021, diff +0.002 (unpaired se 0.029, z +0.07; paired se 0.001, z +1.73); endpoints 0.1886/0.1935
+ abs:5e-14 rat : INCOMPLETE
+ rel:1e-14 cheb: x0 0.200+-0.019 (n=13), a2 0.204+-0.020, diff +0.004 (unpaired se 0.027, z +0.14; paired se 0.002, z +2.02); endpoints 0.1982/0.2027
+ rel:1e-14 rat : INCOMPLETE
+
+count-implied constants (dyadic widths)
+ rel:1e-13 Cc: x0 0.002147..138 (med 0.04104); a2 0.002147..138 (med 0.1078); ratio 1..13.83 (med 1) vs expected 1
+ rel:1e-13 Cr: x0 0.002849..1.449 (med 0.1813); a2 0.002849..1.449 (med 0.1813); ratio 1..1 (med 1) vs expected 1
+ abs:5e-14 Cc: x0 0.004179..268.5 (med 0.06617); a2 0.00591..379.8 (med 0.113); ratio 1.414..4.486 (med 1.414) vs expected 1.414
+ rel:1e-14 Cc: x0 0.002636..13.8 (med 0.04996); a2 0.002636..13.8 (med 0.07645); ratio 1..7.822 (med 1) vs expected 1
+EXIT=0

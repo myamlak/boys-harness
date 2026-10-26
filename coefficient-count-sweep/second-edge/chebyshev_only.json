@@ -1,0 +1,1292 @@
+{
+  "meta": {
+    "schema": 2,
+    "generated_utc": "2026-10-25T16:25:32.533333+00:00",
+    "boys_root": "C:\\Users\\myaml\\dev\\_mainonly",
+    "git": {
+      "commit": "efb545edb8f9c0425958609b5a8597d99f770558",
+      "tag": null
+    },
+    "header": {
+      "path": "C:\\Users\\myaml\\dev\\_mainonly\\include\\boys\\boys_coefficients.hpp",
+      "sha256": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204"
+    },
+    "generator": {
+      "path": "C:\\Users\\myaml\\dev\\_mainonly\\tools\\gen_boys_coefficients.py",
+      "sha256": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180"
+    },
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "left_edge": "23.799696304216968",
+    "base_left_edge": "11.899848152108484",
+    "width_scale": 2,
+    "grid": {
+      "nodes": 2001
+    },
+    "solver": {
+      "cheb_degree_mode": "records"
+    }
+  },
+  "cells": [
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-7",
+      "width": "0.015625",
+      "width_x0": "0.0078125",
+      "width_f": 0.015625,
+      "a": "23.799696304216968",
+      "b": "23.815321304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.056077254859577e-16",
+        "delivered_abs": "3.734041640374926e-17",
+        "at_x_rel": "23.812797866716968",
+        "at_x_abs": "23.812797866716968",
+        "refined": true,
+        "seconds": 0.053
+      },
+      "reference_seconds": 3.24,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-7",
+      "width": "0.015625",
+      "width_x0": "0.0078125",
+      "width_f": 0.015625,
+      "a": "23.799696304216968",
+      "b": "23.815321304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.056077254859577e-16",
+        "delivered_abs": "3.734041640374926e-17",
+        "at_x_rel": "23.812797866716968",
+        "at_x_abs": "23.812797866716968",
+        "refined": true,
+        "seconds": 0.074
+      },
+      "reference_seconds": 3.24,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-7",
+      "width": "0.015625",
+      "width_x0": "0.0078125",
+      "width_f": 0.015625,
+      "a": "23.799696304216968",
+      "b": "23.815321304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.056077254859577e-16",
+        "delivered_abs": "3.734041640374926e-17",
+        "at_x_rel": "23.812797866716968",
+        "at_x_abs": "23.812797866716968",
+        "refined": true,
+        "seconds": 0.079
+      },
+      "reference_seconds": 3.24,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-6",
+      "width": "0.03125",
+      "width_x0": "0.015625",
+      "width_f": 0.03125,
+      "a": "23.799696304216968",
+      "b": "23.830946304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.5012678435120621e-16",
+        "delivered_abs": "4.5412554435874455e-17",
+        "at_x_rel": "23.826399429216968",
+        "at_x_abs": "23.826399429216968",
+        "refined": true,
+        "seconds": 0.082
+      },
+      "reference_seconds": 1.472,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-6",
+      "width": "0.03125",
+      "width_x0": "0.015625",
+      "width_f": 0.03125,
+      "a": "23.799696304216968",
+      "b": "23.830946304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.5012678435120621e-16",
+        "delivered_abs": "4.5412554435874455e-17",
+        "at_x_rel": "23.826399429216968",
+        "at_x_abs": "23.826399429216968",
+        "refined": true,
+        "seconds": 0.046
+      },
+      "reference_seconds": 1.472,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-6",
+      "width": "0.03125",
+      "width_x0": "0.015625",
+      "width_f": 0.03125,
+      "a": "23.799696304216968",
+      "b": "23.830946304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.5012678435120621e-16",
+        "delivered_abs": "4.5412554435874455e-17",
+        "at_x_rel": "23.826399429216968",
+        "at_x_abs": "23.826399429216968",
+        "refined": true,
+        "seconds": 0.069
+      },
+      "reference_seconds": 1.472,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-5",
+      "width": "0.0625",
+      "width_x0": "0.03125",
+      "width_f": 0.0625,
+      "a": "23.799696304216968",
+      "b": "23.862196304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "3.0216682310511102e-16",
+        "delivered_abs": "5.484529381812647e-17",
+        "at_x_rel": "23.839915054216968",
+        "at_x_abs": "23.839915054216968",
+        "refined": true,
+        "seconds": 0.054
+      },
+      "reference_seconds": 1.78,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-5",
+      "width": "0.0625",
+      "width_x0": "0.03125",
+      "width_f": 0.0625,
+      "a": "23.799696304216968",
+      "b": "23.862196304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "3.0216682310511102e-16",
+        "delivered_abs": "5.484529381812647e-17",
+        "at_x_rel": "23.839915054216968",
+        "at_x_abs": "23.839915054216968",
+        "refined": true,
+        "seconds": 0.053
+      },
+      "reference_seconds": 1.78,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-5",
+      "width": "0.0625",
+      "width_x0": "0.03125",
+      "width_f": 0.0625,
+      "a": "23.799696304216968",
+      "b": "23.862196304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "3.0216682310511102e-16",
+        "delivered_abs": "5.484529381812647e-17",
+        "at_x_rel": "23.839915054216968",
+        "at_x_abs": "23.839915054216968",
+        "refined": true,
+        "seconds": 0.066
+      },
+      "reference_seconds": 1.78,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-4",
+      "width": "0.125",
+      "width_x0": "0.0625",
+      "width_f": 0.125,
+      "a": "23.799696304216968",
+      "b": "23.924696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.0739537871987906e-15",
+        "delivered_abs": "3.7585528461985852e-16",
+        "at_x_rel": "23.913696304216968",
+        "at_x_abs": "23.913696304216968",
+        "refined": true,
+        "seconds": 0.083
+      },
+      "reference_seconds": 1.364,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-4",
+      "width": "0.125",
+      "width_x0": "0.0625",
+      "width_f": 0.125,
+      "a": "23.799696304216968",
+      "b": "23.924696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.0739537871987906e-15",
+        "delivered_abs": "3.7585528461985852e-16",
+        "at_x_rel": "23.913696304216968",
+        "at_x_abs": "23.913696304216968",
+        "refined": true,
+        "seconds": 0.052
+      },
+      "reference_seconds": 1.364,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-4",
+      "width": "0.125",
+      "width_x0": "0.0625",
+      "width_f": 0.125,
+      "a": "23.799696304216968",
+      "b": "23.924696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.0739537871987906e-15",
+        "delivered_abs": "3.7585528461985852e-16",
+        "at_x_rel": "23.913696304216968",
+        "at_x_abs": "23.913696304216968",
+        "refined": true,
+        "seconds": 0.055
+      },
+      "reference_seconds": 1.364,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-3",
+      "width": "0.25",
+      "width_x0": "0.125",
+      "width_f": 0.25,
+      "a": "23.799696304216968",
+      "b": "24.049696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "6.0084159113039671e-14",
+        "delivered_abs": "1.0911031102315392e-14",
+        "at_x_rel": "23.823696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 0.074
+      },
+      "reference_seconds": 1.66,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-3",
+      "width": "0.25",
+      "width_x0": "0.125",
+      "width_f": 0.25,
+      "a": "23.799696304216968",
+      "b": "24.049696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "6.0084159113039671e-14",
+        "delivered_abs": "1.0911031102315392e-14",
+        "at_x_rel": "23.823696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 0.068
+      },
+      "reference_seconds": 1.66,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-3",
+      "width": "0.25",
+      "width_x0": "0.125",
+      "width_f": 0.25,
+      "a": "23.799696304216968",
+      "b": "24.049696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 6,
+        "m": 5,
+        "k": null,
+        "delivered_rel": "3.1123761632665537e-16",
+        "delivered_abs": "5.64653226552928e-17",
+        "at_x_rel": "23.862196304216968",
+        "at_x_abs": "23.862196304216968",
+        "refined": true,
+        "seconds": 0.163
+      },
+      "reference_seconds": 1.66,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-2",
+      "width": "0.5",
+      "width_x0": "0.25",
+      "width_f": 0.5,
+      "a": "23.799696304216968",
+      "b": "24.299696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 6,
+        "m": 5,
+        "k": null,
+        "delivered_rel": "9.0925565576081797e-15",
+        "delivered_abs": "1.650557642547267e-15",
+        "at_x_rel": "23.834196304216968",
+        "at_x_abs": "23.834196304216968",
+        "refined": true,
+        "seconds": 0.206
+      },
+      "reference_seconds": 1.62,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-2",
+      "width": "0.5",
+      "width_x0": "0.25",
+      "width_f": 0.5,
+      "a": "23.799696304216968",
+      "b": "24.299696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 6,
+        "m": 5,
+        "k": null,
+        "delivered_rel": "9.0925565576081797e-15",
+        "delivered_abs": "1.650557642547267e-15",
+        "at_x_rel": "23.834196304216968",
+        "at_x_abs": "23.834196304216968",
+        "refined": true,
+        "seconds": 0.146
+      },
+      "reference_seconds": 1.62,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-2",
+      "width": "0.5",
+      "width_x0": "0.25",
+      "width_f": 0.5,
+      "a": "23.799696304216968",
+      "b": "24.299696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 6,
+        "m": 5,
+        "k": null,
+        "delivered_rel": "9.0925565576081797e-15",
+        "delivered_abs": "1.650557642547267e-15",
+        "at_x_rel": "23.834196304216968",
+        "at_x_abs": "23.834196304216968",
+        "refined": true,
+        "seconds": 0.143
+      },
+      "reference_seconds": 1.62,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-1",
+      "width": "1.0",
+      "width_x0": "0.5",
+      "width_f": 1.0,
+      "a": "23.799696304216968",
+      "b": "24.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 7,
+        "m": 6,
+        "k": null,
+        "delivered_rel": "5.3155744725899018e-15",
+        "delivered_abs": "9.6465480432964048e-16",
+        "at_x_rel": "23.847696304216968",
+        "at_x_abs": "23.847696304216968",
+        "refined": true,
+        "seconds": 0.386
+      },
+      "reference_seconds": 2.209,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-1",
+      "width": "1.0",
+      "width_x0": "0.5",
+      "width_f": 1.0,
+      "a": "23.799696304216968",
+      "b": "24.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 7,
+        "m": 6,
+        "k": null,
+        "delivered_rel": "5.3155744725899018e-15",
+        "delivered_abs": "9.6465480432964048e-16",
+        "at_x_rel": "23.847696304216968",
+        "at_x_abs": "23.847696304216968",
+        "refined": true,
+        "seconds": 0.372
+      },
+      "reference_seconds": 2.209,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-1",
+      "width": "1.0",
+      "width_x0": "0.5",
+      "width_f": 1.0,
+      "a": "23.799696304216968",
+      "b": "24.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 7,
+        "m": 6,
+        "k": null,
+        "delivered_rel": "5.3155744725899018e-15",
+        "delivered_abs": "9.6465480432964048e-16",
+        "at_x_rel": "23.847696304216968",
+        "at_x_abs": "23.847696304216968",
+        "refined": true,
+        "seconds": 0.364
+      },
+      "reference_seconds": 2.209,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^0",
+      "width": "2.0",
+      "width_x0": "1.0",
+      "width_f": 2.0,
+      "a": "23.799696304216968",
+      "b": "25.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 8,
+        "m": 7,
+        "k": null,
+        "delivered_rel": "1.106327809806438e-14",
+        "delivered_abs": "2.0065535156453549e-15",
+        "at_x_rel": "23.875696304216968",
+        "at_x_abs": "23.875696304216968",
+        "refined": true,
+        "seconds": 0.583
+      },
+      "reference_seconds": 2.157,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^0",
+      "width": "2.0",
+      "width_x0": "1.0",
+      "width_f": 2.0,
+      "a": "23.799696304216968",
+      "b": "25.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 8,
+        "m": 7,
+        "k": null,
+        "delivered_rel": "1.106327809806438e-14",
+        "delivered_abs": "2.0065535156453549e-15",
+        "at_x_rel": "23.875696304216968",
+        "at_x_abs": "23.875696304216968",
+        "refined": true,
+        "seconds": 0.627
+      },
+      "reference_seconds": 2.157,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^0",
+      "width": "2.0",
+      "width_x0": "1.0",
+      "width_f": 2.0,
+      "a": "23.799696304216968",
+      "b": "25.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 9,
+        "m": 8,
+        "k": null,
+        "delivered_rel": "4.5651517202362137e-16",
+        "delivered_abs": "8.1626394695851574e-17",
+        "at_x_rel": "25.562696304216968",
+        "at_x_abs": "24.307696304216968",
+        "refined": true,
+        "seconds": 0.513
+      },
+      "reference_seconds": 2.157,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^1",
+      "width": "4.0",
+      "width_x0": "2.0",
+      "width_f": 4.0,
+      "a": "23.799696304216968",
+      "b": "27.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 9,
+        "m": 8,
+        "k": null,
+        "delivered_rel": "7.6910830301196413e-14",
+        "delivered_abs": "1.3964144420034573e-14",
+        "at_x_rel": "23.917696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 0.439
+      },
+      "reference_seconds": 2.156,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^1",
+      "width": "4.0",
+      "width_x0": "2.0",
+      "width_f": 4.0,
+      "a": "23.799696304216968",
+      "b": "27.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 9,
+        "m": 8,
+        "k": null,
+        "delivered_rel": "7.6910830301196413e-14",
+        "delivered_abs": "1.3964144420034573e-14",
+        "at_x_rel": "23.917696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 0.457
+      },
+      "reference_seconds": 2.156,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^1",
+      "width": "4.0",
+      "width_x0": "2.0",
+      "width_f": 4.0,
+      "a": "23.799696304216968",
+      "b": "27.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 10,
+        "m": 9,
+        "k": null,
+        "delivered_rel": "3.0151608375569221e-15",
+        "delivered_abs": "5.4413334225925408e-16",
+        "at_x_rel": "24.633696304216968",
+        "at_x_abs": "23.889696304216968",
+        "refined": true,
+        "seconds": 0.55
+      },
+      "reference_seconds": 2.156,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^2",
+      "width": "8.0",
+      "width_x0": "4.0",
+      "width_f": 8.0,
+      "a": "23.799696304216968",
+      "b": "31.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 12,
+        "m": 11,
+        "k": null,
+        "delivered_rel": "7.2470787722432814e-15",
+        "delivered_abs": "1.312868357330789e-15",
+        "at_x_rel": "23.931696304216968",
+        "at_x_abs": "23.931696304216968",
+        "refined": true,
+        "seconds": 0.657
+      },
+      "reference_seconds": 1.655,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^2",
+      "width": "8.0",
+      "width_x0": "4.0",
+      "width_f": 8.0,
+      "a": "23.799696304216968",
+      "b": "31.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 11,
+        "m": 10,
+        "k": null,
+        "delivered_rel": "1.0177422941402238e-13",
+        "delivered_abs": "1.8488303245382085e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 0.587
+      },
+      "reference_seconds": 1.655,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^2",
+      "width": "8.0",
+      "width_x0": "4.0",
+      "width_f": 8.0,
+      "a": "23.799696304216968",
+      "b": "31.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 12,
+        "m": 11,
+        "k": null,
+        "delivered_rel": "7.2470787722432814e-15",
+        "delivered_abs": "1.312868357330789e-15",
+        "at_x_rel": "23.931696304216968",
+        "at_x_abs": "23.931696304216968",
+        "refined": true,
+        "seconds": 0.972
+      },
+      "reference_seconds": 1.655,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^3",
+      "width": "16.0",
+      "width_x0": "8.0",
+      "width_f": 16.0,
+      "a": "23.799696304216968",
+      "b": "39.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 15,
+        "m": 14,
+        "k": null,
+        "delivered_rel": "1.300404178419493e-14",
+        "delivered_abs": "2.3623138127016867e-15",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 1.332
+      },
+      "reference_seconds": 2.372,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^3",
+      "width": "16.0",
+      "width_x0": "8.0",
+      "width_f": 16.0,
+      "a": "23.799696304216968",
+      "b": "39.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 14,
+        "m": 13,
+        "k": null,
+        "delivered_rel": "1.0483000179370663e-13",
+        "delivered_abs": "1.9043414757694664e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 1.01
+      },
+      "reference_seconds": 2.372,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^3",
+      "width": "16.0",
+      "width_x0": "8.0",
+      "width_f": 16.0,
+      "a": "23.799696304216968",
+      "b": "39.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 16,
+        "m": 15,
+        "k": null,
+        "delivered_rel": "1.7039653398344092e-15",
+        "delivered_abs": "3.0840121714514712e-16",
+        "at_x_rel": "26.119696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 1.152
+      },
+      "reference_seconds": 2.372,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^4",
+      "width": "32.0",
+      "width_x0": "16.0",
+      "width_f": 32.0,
+      "a": "23.799696304216968",
+      "b": "55.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 19,
+        "m": 18,
+        "k": null,
+        "delivered_rel": "4.1117147677290028e-14",
+        "delivered_abs": "7.4693397259774068e-15",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 2.856
+      },
+      "reference_seconds": 3.204,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^4",
+      "width": "32.0",
+      "width_x0": "16.0",
+      "width_f": 32.0,
+      "a": "23.799696304216968",
+      "b": "55.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 18,
+        "m": 17,
+        "k": null,
+        "delivered_rel": "2.010868317537605e-13",
+        "delivered_abs": "3.6529427395540879e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 1.717
+      },
+      "reference_seconds": 3.204,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^4",
+      "width": "32.0",
+      "width_x0": "16.0",
+      "width_f": 32.0,
+      "a": "23.799696304216968",
+      "b": "55.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 20,
+        "m": 19,
+        "k": null,
+        "delivered_rel": "8.4562388266247031e-15",
+        "delivered_abs": "1.5300009593079381e-15",
+        "at_x_rel": "23.991696304216968",
+        "at_x_abs": "23.991696304216968",
+        "refined": true,
+        "seconds": 2.0
+      },
+      "reference_seconds": 3.204,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^5",
+      "width": "64.0",
+      "width_x0": "32.0",
+      "width_f": 64.0,
+      "a": "23.799696304216968",
+      "b": "87.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 25,
+        "m": 24,
+        "k": null,
+        "delivered_rel": "8.9398351276301173e-14",
+        "delivered_abs": "1.6240101620516143e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 3.267
+      },
+      "reference_seconds": 3.559,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^5",
+      "width": "64.0",
+      "width_x0": "32.0",
+      "width_f": 64.0,
+      "a": "23.799696304216968",
+      "b": "87.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 25,
+        "m": 24,
+        "k": null,
+        "delivered_rel": "8.9398351276301173e-14",
+        "delivered_abs": "1.6240101620516143e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 2.29
+      },
+      "reference_seconds": 3.559,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^5",
+      "width": "64.0",
+      "width_x0": "32.0",
+      "width_f": 64.0,
+      "a": "23.799696304216968",
+      "b": "87.799696304216968",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 27,
+        "m": 26,
+        "k": null,
+        "delivered_rel": "8.573171833652768e-15",
+        "delivered_abs": "1.5574021198484482e-15",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 3.131
+      },
+      "reference_seconds": 3.559,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "ship",
+      "width": "38.200303695783032",
+      "width_x0": "19.100151847891516",
+      "width_f": 38.200303695783035,
+      "a": "23.799696304216968",
+      "b": "62.0",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 20,
+        "m": 19,
+        "k": null,
+        "delivered_rel": "8.2217286184043186e-14",
+        "delivered_abs": "1.4935589566581585e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 1.952
+      },
+      "reference_seconds": 5.856,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "ship",
+      "width": "38.200303695783032",
+      "width_x0": "19.100151847891516",
+      "width_f": 38.200303695783035,
+      "a": "23.799696304216968",
+      "b": "62.0",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 20,
+        "m": 19,
+        "k": null,
+        "delivered_rel": "8.2217286184043186e-14",
+        "delivered_abs": "1.4935589566581585e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 1.833
+      },
+      "reference_seconds": 5.856,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "ship",
+      "width": "38.200303695783032",
+      "width_x0": "19.100151847891516",
+      "width_f": 38.200303695783035,
+      "a": "23.799696304216968",
+      "b": "62.0",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 22,
+        "m": 21,
+        "k": null,
+        "delivered_rel": "4.4478791210790309e-15",
+        "delivered_abs": "8.0800157822646757e-16",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 2.313
+      },
+      "reference_seconds": 5.856,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "paper",
+      "width": "34.178979173424512",
+      "width_x0": "17.089489586712256",
+      "width_f": 34.17897917342451,
+      "a": "23.799696304216968",
+      "b": "57.97867547764148",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 19,
+        "m": 18,
+        "k": null,
+        "delivered_rel": "9.3065278131922273e-14",
+        "delivered_abs": "1.6906235435291237e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 1.643
+      },
+      "reference_seconds": 3.412,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "paper",
+      "width": "34.178979173424512",
+      "width_x0": "17.089489586712256",
+      "width_f": 34.17897917342451,
+      "a": "23.799696304216968",
+      "b": "57.97867547764148",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 19,
+        "m": 18,
+        "k": null,
+        "delivered_rel": "9.3065278131922273e-14",
+        "delivered_abs": "1.6906235435291237e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 1.394
+      },
+      "reference_seconds": 3.412,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "paper",
+      "width": "34.178979173424512",
+      "width_x0": "17.089489586712256",
+      "width_f": 34.17897917342451,
+      "a": "23.799696304216968",
+      "b": "57.97867547764148",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 21,
+        "m": 20,
+        "k": null,
+        "delivered_rel": "4.3501865085164025e-15",
+        "delivered_abs": "7.8024600261083865e-16",
+        "at_x_rel": "24.517454866858883",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 2.208
+      },
+      "reference_seconds": 3.412,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    }
+  ]
+}
