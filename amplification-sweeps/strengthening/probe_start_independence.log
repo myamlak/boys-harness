@@ -1,0 +1,30 @@
+header: ['route', 'band', 'x', 'start', 'degree', 'n', 'value', 'pert_delta', 'seed_delta', 'transfer_ulp']
+cell: A2 x = 10.910756753077845 start = 2 degree = 20
+values read from the chain: 31 orders 2 .. 32
+
+seed F_2 = 0.0016893634233386234, reference = 0.00168936342333862342167457
+F_26 = 5.6343873049171297e-07, reference = 0.0000005634387304941069238714935
+seed error (F_start - ref)      = -1.23575e-21
+numerator (F_n - ref_n)         = -2.3939546e-18
+closed-form A_n/A_start         = 7.3095621
+measured transfer               = 1937.2483
+deviation                       = 264.029
+
+seed term |seed_error| * A_n/A_start = 9.0327913e-21
+accumulated-arithmetic charge       = 3.4614538e-17
+delivered numerator / seed term    = 265.02933
+delivered numerator / charge       = 0.069160381
+charge / seed term                 = 3832.0976
+
+the five largest charge terms (l, 3*2^-53*|F_l|*A_n/A_l):
+  l= 3  4.10399e-18
+  l= 4  4.07627e-18
+  l= 5  4.00906e-18
+  l= 6  3.87575e-18
+  l= 7  3.65196e-18
+
+interpretation: the deposited check's template is the seed term alone.
+The delivered numerator is that term plus the injected rounding; the
+charge is the size the paper's own account predicts for the injected
+part, and the two differ by the factor printed above.
+EXIT=0 (observed)
