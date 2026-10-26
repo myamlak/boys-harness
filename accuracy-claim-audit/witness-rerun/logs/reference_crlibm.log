@@ -1,0 +1,39 @@
+wrote 422 rows to C:\Users\myaml\dev\_witness\raw\crlibm_sinh_reference.csv
+60-vs-100 digit rounding decisions that differ: 0
+
+== named witness and its two neighbours ==
+input_bits                            x         exact_sinh rn_expected      rn_got           ru_got           rd_expected      rd_got           rz_got          
+408633ce8fb9f87d      710.4758600739439 1.79769313486e+308 7feffffffffffd3b 7feffffffffffd3b 7feffffffffffd3b 7feffffffffffd3a 7feffffffffffd3a 7feffffffffffd3a
+408633ce8fb9f87e       710.475860073944 1.79769313486e+308 7ff0000000000000 7ff0000000000000 7ff0000000000000 7fefffffffffffff 7ff0000000000000 7ff0000000000000
+408633ce8fb9f87f      710.4758600739441 1.79769313486e+308 7ff0000000000000 7ff0000000000000 7ff0000000000000 7fefffffffffffff 7fefffffffffffff 7fefffffffffffff
+c08633ce8fb9f87e      -710.475860073944 -1.79769313486e+308 fff0000000000000 fff0000000000000 fff0000000000000 fff0000000000000 fff0000000000000 fff0000000000000
+
+== mismatches per routine ==
+sinh_rn: 0 of 422 inputs
+sinh_ru: 1 of 422 inputs
+  x=-710.475860073944 (c08633ce8fb9f87e) exact=-1.7976931348623787561e+308 expected=ffefffffffffffff got=fff0000000000000
+sinh_rd: 1 of 422 inputs
+  x=710.475860073944 (408633ce8fb9f87e) exact=1.7976931348623787561e+308 expected=7fefffffffffffff got=7ff0000000000000
+sinh_rz: 2 of 422 inputs
+  x=710.475860073944 (408633ce8fb9f87e) exact=1.7976931348623787561e+308 expected=7fefffffffffffff got=7ff0000000000000
+  x=-710.475860073944 (c08633ce8fb9f87e) exact=-1.7976931348623787561e+308 expected=ffefffffffffffff got=fff0000000000000
+
+== sampled inputs where the routine returned +inf ==
+sinh_rn: 146 sampled inputs, bits 408633ce8fb9f87e..7fefffffffffffff, sampled-contiguous=False
+  of these, 0 are wrong
+sinh_ru: 146 sampled inputs, bits 408633ce8fb9f87e..7fefffffffffffff, sampled-contiguous=False
+  of these, 0 are wrong
+sinh_rd: 1 sampled inputs, bits 408633ce8fb9f87e..408633ce8fb9f87e, sampled-contiguous=True
+  of these, 1 are wrong
+sinh_rz: 1 sampled inputs, bits 408633ce8fb9f87e..408633ce8fb9f87e, sampled-contiguous=True
+  of these, 1 are wrong
+
+crlibm sinh reference: independent checks
+mpmath 1.4.1, mp.dps = 60
+x = 0x408633ce8fb9f87e = 710.475860073944
+exact sinh = 1.797693134862378756102678651411607362985e+308
+ODE residual sinh'' - sinh = 0.0 (relative)
+cosh(1/3)^2 - sinh(1/3)^2 - 1 = 0.0
+log(sinh(x)) = 709.782712893384031803813853119
+asinh(exact) - x = 0.0
+

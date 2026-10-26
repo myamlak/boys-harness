@@ -1,0 +1,7 @@
+'vswhere.exe' is not recognized as an internal or external command,
+operable program or batch file.
+=== compiler ===
+Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64
+boost_airy_witness.cpp
+C:\Users\myaml\dev\_witness\scripts\..\src\boost_airy_witness.cpp(35): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\myaml\dev\_witness\scripts\..\src\boost_airy_witness.cpp(65): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.

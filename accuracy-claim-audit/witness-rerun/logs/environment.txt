@@ -1,0 +1,73 @@
+Witness rerun: environment and provenance
+=========================================
+Rerun date: 2026-10-26
+
+Host
+----
+Windows 11 Pro, version 10.0.26200, x86-64.
+The crlibm build and the crlibm driver ran in WSL2 Ubuntu on the same
+machine, x86-64.
+
+Windows compiler (Boost witness)
+--------------------------------
+Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64
+(Visual Studio 18 Community, cl 19.51.36260).
+Predefined by the driver's environment header:
+  _MSC_VER=1951
+  _MSC_FULL_VER=195136260
+  sizeof(double)=8, FLT_EVAL_METHOD=0
+Compile flags used by scripts/build_boost.bat:
+  /nologo /std:c++17 /EHsc /O2 /W3 /MD /fp:precise
+
+Boost
+-----
+Boost.Math 1.92.0, header-only.
+  BOOST_VERSION 109200
+  BOOST_LIB_VERSION "1_92"
+Archive: https://archives.boost.io/release/1.92.0/source/boost_1_92_0.tar.gz
+Size:    235,384,471 bytes
+SHA-256: c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce
+The hash matches the release site's own .json descriptor for 1.92.0.
+
+Python reference (both claims)
+------------------------------
+Python 3.14.7 (MSC v.1944 64 bit (AMD64)).
+mpmath 1.4.1, mp.dps = 60 for both references.
+Scripts were run with `python -I`.
+
+Linux compiler (crlibm witness)
+-------------------------------
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+configure build/host: x86_64-pc-linux-gnu
+glibc 2.43 (Ubuntu 26.04 LTS)
+autoconf 2.72, automake 1.18.1, libtool present
+crlibm library compile flags (from logs/crlibm_build.log):
+  -std=c99 -Wall -msse2 -mfpmath=sse -O2
+crlibm configure command:
+  CFLAGS="-O2" ./configure --enable-sse2 --disable-mpfr --disable-double-extended
+The configure log selects log.c, the non-double-extended implementation.
+The sinh implementation, csh_fast.c, contains no double-extended
+conditional and is compiled from the same source either way.
+Driver compile command:
+  gcc -O2 -std=c99 -msse2 -mfpmath=sse -I. \
+      -o raw/crlibm_sinh_witness src/crlibm_sinh_witness.c libcrlibm.a -lm
+
+crlibm
+------
+crlibm 1.0beta5 (VERSION file: 1.0beta5).
+Archive: https://github.com/taschini/crlibm/archive/eb3063791aa75bc9705b49283bf14250465220a7.tar.gz
+Commit:  eb3063791aa75bc9705b49283bf14250465220a7 (mirror of the INRIA Forge
+         release, as used by the audit)
+Size:    2,432,556 bytes
+SHA-256: 79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5
+Extracted directory renamed from
+  crlibm-eb3063791aa75bc9705b49283bf14250465220a7
+to
+  crlibm-1.0beta5
+
+Determinism
+-----------
+Both witness programs were run a second time and the two outputs compared
+byte for byte with cmp:
+  Boost:  raw/boost_airy_raw.csv vs logs/boost_airy_raw_rerun.csv  (identical)
+  crlibm: raw/crlibm_sinh_raw.csv vs logs/crlibm_sinh_raw_rerun.csv (identical)
