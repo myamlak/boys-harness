@@ -1,0 +1,476 @@
+{
+  "schema": "figure-ratio/1",
+  "title": "Per-lane maximum of the measured error over the published figure, with the regenerated cells and the reproduced aggregate counts",
+  "purpose": "The composition study quotes a largest figure ratio of 0.629 on the double lane and 0.819 on the single. The deposited records/signed-interaction.json carries the contrast counts but not the figure ratio, and the four cells files the ratio was reduced from were not deposited. This record regenerates the four cell files from the pinned kernel revision, verifies that every aggregate count in records/signed-interaction.json reproduces, and deposits the per-lane ratio and its cell.",
+  "kernel": {
+    "library": "boys",
+    "version": "5.0.0",
+    "revision": "482fd3388c276091834a6c12a642d9de2481c9f2",
+    "worktree_clean": true
+  },
+  "sources": {
+    "note": "sha256 of the harness files that produced this record, read from the composition-audit directory; the reduction ran copies with these exact digests",
+    "measure_interaction.cpp": "e2fda6e305727800ee5b83e2e3edd10461ee687aa1fd6c76230c25f45cdaf93e",
+    "CMakeLists.txt": "efffab99b5ab89dbe552330a269b4650f3d19f26e3e77b16708c154de36398c6",
+    "gen_reference.py": "a8dc35e8e473a3a2f3feed183825fa4c7f9b7e18e518348a67ee444a7d4dd5cf",
+    "signed_interaction.py": "f4c5e884b87d257af1d2fe7897d0ba81307565488408dab7ab605cb34b874ebc",
+    "summarise_interaction.py": "df67f52e83319591f2e2acbb53bec69e494fd6a17e6be9ffcc30f18ff56e4c86"
+  },
+  "commands": {
+    "note": "BOYS is a worktree of the boys repository at the pinned revision; all commands ran from the composition-audit directory or a scratch root beside the results.",
+    "worktree": "git -C <boys-repo> worktree add <BOYS> 482fd33",
+    "msvc_configure": "cmake -S . -B build-msvc-fused -G \"Visual Studio 18 2026\" -A x64 -DBOYS_SOURCE_DIR=<BOYS> -DBOYS_MULADD_SEPARATE=OFF",
+    "msvc_build": "cmake --build build-msvc-fused --target measure-interaction --config Release",
+    "gcc_configure": "cmake -S . -B build-gcc-fused -G Ninja -DCMAKE_BUILD_TYPE=Release -DBOYS_SOURCE_DIR=<BOYS> -DBOYS_MULADD_SEPARATE=OFF",
+    "gcc_build": "cmake --build build-gcc-fused --target measure-interaction",
+    "arguments": "<exe> --emit-arguments results/arguments.csv",
+    "reference": "python gen_reference.py --arguments results/arguments.csv --out results/reference.csv",
+    "measure": "<exe> --arguments results/arguments.csv --reference results/reference.csv --out results/cells.csv --env results/environment.txt",
+    "reduce": "python scripts/signed_interaction.py"
+  },
+  "measurement": {
+    "driver": "measure_interaction.cpp",
+    "grid": {
+      "nominal_arguments": 26,
+      "exact": 16,
+      "generic": 10,
+      "orders": "0..32",
+      "rows_per_configuration": 494208,
+      "note": "576 cells (144 combinations x 4 lanes) x 26 arguments x 33 orders"
+    },
+    "arguments_file": {
+      "path": "results/arguments.csv",
+      "sha256": "04eb574b48ce60360c2f61302ba86b2a24522a4b25f11cb700efc6103f277a08",
+      "rows": 104
+    },
+    "reference": {
+      "path": "results/reference.csv",
+      "sha256": "484ff2240eab39825740f2a240473cffe6062ef2391b94a9ef3cc82f5c0d9cc9",
+      "rows": 3432,
+      "description": "single 60-digit mpmath evaluation per (lane, narrowed argument, order), split into a double-double hi/lo pair by gen_reference.py; the regenerated file is byte-identical to the digest the deposited record names",
+      "identity_residual_relative": 1.50885e-61,
+      "quadrature_vs_gamma_absolute": 3.88938e-62
+    },
+    "figure": {
+      "source": "the driver's `figure` column, the value returned by BoysAccuracyGuaranteed(precision, n, x, route, scheme, pack, partition, form, exp) for the same cell and point",
+      "row_statement": "on fp64 and fp32 the half-digit term is zero, so the row's whole statement (limit) equals the published figure; on the half lanes it is figure plus the half digit, and those lanes are outside this record"
+    },
+    "ratio": "|abs_err| / figure for every measured (cell, n, x) row of the lane, maximum over the lane; abs_err = |(value - ref_hi) - ref_lo|, the same signed error the signed-interaction record uses",
+    "determinism": "The cells rows are deterministic: all four regenerated files carry exactly the sha256 the deposited record names, and the files are byte-identical across compilers within a route.",
+    "machine_load": "not controlled. No timing is reported by this record; the driver's canary was wide under concurrent load and was run in hint-only mode. The error rows do not depend on it."
+  },
+  "configurations": {
+    "msvc-fused": {
+      "compiler": "msvc",
+      "compiler_version": "1951",
+      "build": "Visual Studio 18 2026, Release (multi-config)",
+      "muladd_route_in_force": "fused",
+      "muladd_selected": "fused",
+      "scalar_contracts": 0,
+      "avx2_defined": 1,
+      "cells": {
+        "path": "results/cells.csv",
+        "sha256": "a80771fb9de8f9b22fe042031b0b6212f976ba1cd5696b7f824391f9cd53ebfc",
+        "rows": 494208,
+        "refusals": 0,
+        "xz": {
+          "size_bytes": 3796704,
+          "sha256": "4af5694810099d07ac9eee268f20073f08d63242731d08a06ebc3d1328c0638d",
+          "xz": "XZ Utils 5.8.3, xz -k -6 -T4",
+          "compressed_ratio": 0.02318
+        }
+      },
+      "lanes": {
+        "fp64": {
+          "max_ratio": 0.629268025193091,
+          "max_ratio_3dp": 0.629,
+          "cell": {
+            "route": "rational-minimax",
+            "scheme": "split-clenshaw",
+            "partition": "shipped",
+            "pack": "arguments",
+            "form": "exact-division",
+            "exp": "accurate"
+          },
+          "n": 0,
+          "x_nominal": 12.0,
+          "x": 12.0,
+          "abs_err": 1.6098653907154834e-14,
+          "figure": 2.558314305293831e-14
+        },
+        "fp32": {
+          "max_ratio": 0.8191245254432976,
+          "max_ratio_3dp": 0.819,
+          "cell": {
+            "route": "rational-minimax",
+            "scheme": "split-clenshaw",
+            "partition": "shipped",
+            "pack": "orders",
+            "form": "exact-division",
+            "exp": "accurate"
+          },
+          "n": 16,
+          "x_nominal": 0.125,
+          "x": 0.125,
+          "abs_err": 1.2286867881649464e-07,
+          "figure": 1.5e-07
+        }
+      },
+      "bound_check": {
+        "max_figure_ratio_by_lane": {
+          "bf16": 0.9985908700338076,
+          "fp16": 0.9934027438291815,
+          "fp32": 0.8191245254432976,
+          "fp64": 0.629268025193091
+        },
+        "readings_over_the_published_statement": 0,
+        "rows_scanned": 494208,
+        "note": "the driver's figure_ratio column, |err|/limit with limit the row's whole statement; the half lanes' limit includes the half digit, so their ratios stay below 1 too. This is the statement 'the sum bounds every measured cell'."
+      },
+      "signed_interaction_counts": {
+        "contrasts": 1808,
+        "informative_contrasts": 1648,
+        "material_contrasts": {
+          "0.05": 912,
+          "0.1": 901,
+          "0.2": 899
+        },
+        "absolute_value_reproduction": {
+          "0.05": 466,
+          "0.1": 388,
+          "0.2": 332
+        },
+        "material_multway_readings": {
+          "0.05": 2985,
+          "0.1": 2690,
+          "0.2": 2210
+        },
+        "verdict_by_alpha": {
+          "0.05": "interaction-material",
+          "0.1": "interaction-material",
+          "0.2": "interaction-material"
+        }
+      }
+    },
+    "msvc-separate": {
+      "compiler": "msvc",
+      "compiler_version": "1951",
+      "build": "Visual Studio 18 2026, Release (multi-config)",
+      "muladd_route_in_force": "separate",
+      "muladd_selected": "separate",
+      "scalar_contracts": 0,
+      "avx2_defined": 1,
+      "cells": {
+        "path": "results-msvc-separate/cells.csv",
+        "sha256": "89e5a3d4ee0934f993ea0c82db820fe29d0c1e31b3d65c94054ebd0cb867bd71",
+        "rows": 494208,
+        "refusals": 0,
+        "xz": {
+          "size_bytes": 3776060,
+          "sha256": "f3493c4ca6aceaf642bcb8e5ef4b4d330c1214f64e467e284c7526ed1094b5bb",
+          "xz": "XZ Utils 5.8.3, xz -k -6 -T4",
+          "compressed_ratio": 0.02306
+        }
+      },
+      "lanes": {
+        "fp64": {
+          "max_ratio": 0.6270981920683498,
+          "max_ratio_3dp": 0.627,
+          "cell": {
+            "route": "rational-minimax",
+            "scheme": "split-clenshaw",
+            "partition": "shipped",
+            "pack": "arguments",
+            "form": "exact-division",
+            "exp": "accurate"
+          },
+          "n": 0,
+          "x_nominal": 12.0,
+          "x": 12.0,
+          "abs_err": 1.6043142755923576e-14,
+          "figure": 2.558314305293831e-14
+        },
+        "fp32": {
+          "max_ratio": 0.8191245254432976,
+          "max_ratio_3dp": 0.819,
+          "cell": {
+            "route": "rational-minimax",
+            "scheme": "split-clenshaw",
+            "partition": "shipped",
+            "pack": "orders",
+            "form": "exact-division",
+            "exp": "accurate"
+          },
+          "n": 16,
+          "x_nominal": 0.125,
+          "x": 0.125,
+          "abs_err": 1.2286867881649464e-07,
+          "figure": 1.5e-07
+        }
+      },
+      "bound_check": {
+        "max_figure_ratio_by_lane": {
+          "bf16": 0.9985908700338076,
+          "fp16": 0.9934027438291815,
+          "fp32": 0.8191245254432976,
+          "fp64": 0.6270981920683498
+        },
+        "readings_over_the_published_statement": 0,
+        "rows_scanned": 494208,
+        "note": "the driver's figure_ratio column, |err|/limit with limit the row's whole statement; the half lanes' limit includes the half digit, so their ratios stay below 1 too. This is the statement 'the sum bounds every measured cell'."
+      },
+      "signed_interaction_counts": {
+        "contrasts": 1808,
+        "informative_contrasts": 1648,
+        "material_contrasts": {
+          "0.05": 914,
+          "0.1": 903,
+          "0.2": 901
+        },
+        "absolute_value_reproduction": {
+          "0.05": 474,
+          "0.1": 418,
+          "0.2": 374
+        },
+        "material_multway_readings": {
+          "0.05": 2957,
+          "0.1": 2675,
+          "0.2": 2195
+        },
+        "verdict_by_alpha": {
+          "0.05": "interaction-material",
+          "0.1": "interaction-material",
+          "0.2": "interaction-material"
+        }
+      }
+    },
+    "gcc-fused": {
+      "compiler": "gnu-or-clang",
+      "compiler_version": "15.2.0",
+      "build": "Ninja, Release",
+      "muladd_route_in_force": "fused",
+      "muladd_selected": "fused",
+      "scalar_contracts": 0,
+      "avx2_defined": 1,
+      "cells": {
+        "path": "results-gcc-fused/cells.csv",
+        "sha256": "a80771fb9de8f9b22fe042031b0b6212f976ba1cd5696b7f824391f9cd53ebfc",
+        "rows": 494208,
+        "refusals": 0,
+        "xz": {
+          "size_bytes": 3796704,
+          "sha256": "4af5694810099d07ac9eee268f20073f08d63242731d08a06ebc3d1328c0638d",
+          "xz": "XZ Utils 5.8.3, xz -k -6 -T4",
+          "compressed_ratio": 0.02318
+        }
+      },
+      "lanes": {
+        "fp64": {
+          "max_ratio": 0.629268025193091,
+          "max_ratio_3dp": 0.629,
+          "cell": {
+            "route": "rational-minimax",
+            "scheme": "split-clenshaw",
+            "partition": "shipped",
+            "pack": "arguments",
+            "form": "exact-division",
+            "exp": "accurate"
+          },
+          "n": 0,
+          "x_nominal": 12.0,
+          "x": 12.0,
+          "abs_err": 1.6098653907154834e-14,
+          "figure": 2.558314305293831e-14
+        },
+        "fp32": {
+          "max_ratio": 0.8191245254432976,
+          "max_ratio_3dp": 0.819,
+          "cell": {
+            "route": "rational-minimax",
+            "scheme": "split-clenshaw",
+            "partition": "shipped",
+            "pack": "orders",
+            "form": "exact-division",
+            "exp": "accurate"
+          },
+          "n": 16,
+          "x_nominal": 0.125,
+          "x": 0.125,
+          "abs_err": 1.2286867881649464e-07,
+          "figure": 1.5e-07
+        }
+      },
+      "bound_check": {
+        "max_figure_ratio_by_lane": {
+          "bf16": 0.9985908700338076,
+          "fp16": 0.9934027438291815,
+          "fp32": 0.8191245254432976,
+          "fp64": 0.629268025193091
+        },
+        "readings_over_the_published_statement": 0,
+        "rows_scanned": 494208,
+        "note": "the driver's figure_ratio column, |err|/limit with limit the row's whole statement; the half lanes' limit includes the half digit, so their ratios stay below 1 too. This is the statement 'the sum bounds every measured cell'."
+      },
+      "signed_interaction_counts": {
+        "contrasts": 1808,
+        "informative_contrasts": 1648,
+        "material_contrasts": {
+          "0.05": 912,
+          "0.1": 901,
+          "0.2": 899
+        },
+        "absolute_value_reproduction": {
+          "0.05": 466,
+          "0.1": 388,
+          "0.2": 332
+        },
+        "material_multway_readings": {
+          "0.05": 2985,
+          "0.1": 2690,
+          "0.2": 2210
+        },
+        "verdict_by_alpha": {
+          "0.05": "interaction-material",
+          "0.1": "interaction-material",
+          "0.2": "interaction-material"
+        }
+      }
+    },
+    "gcc-separate": {
+      "compiler": "gnu-or-clang",
+      "compiler_version": "15.2.0",
+      "build": "Ninja, Release",
+      "muladd_route_in_force": "separate",
+      "muladd_selected": "separate",
+      "scalar_contracts": 0,
+      "avx2_defined": 1,
+      "cells": {
+        "path": "results-gcc-separate/cells.csv",
+        "sha256": "89e5a3d4ee0934f993ea0c82db820fe29d0c1e31b3d65c94054ebd0cb867bd71",
+        "rows": 494208,
+        "refusals": 0,
+        "xz": {
+          "size_bytes": 3776060,
+          "sha256": "f3493c4ca6aceaf642bcb8e5ef4b4d330c1214f64e467e284c7526ed1094b5bb",
+          "xz": "XZ Utils 5.8.3, xz -k -6 -T4",
+          "compressed_ratio": 0.02306
+        }
+      },
+      "lanes": {
+        "fp64": {
+          "max_ratio": 0.6270981920683498,
+          "max_ratio_3dp": 0.627,
+          "cell": {
+            "route": "rational-minimax",
+            "scheme": "split-clenshaw",
+            "partition": "shipped",
+            "pack": "arguments",
+            "form": "exact-division",
+            "exp": "accurate"
+          },
+          "n": 0,
+          "x_nominal": 12.0,
+          "x": 12.0,
+          "abs_err": 1.6043142755923576e-14,
+          "figure": 2.558314305293831e-14
+        },
+        "fp32": {
+          "max_ratio": 0.8191245254432976,
+          "max_ratio_3dp": 0.819,
+          "cell": {
+            "route": "rational-minimax",
+            "scheme": "split-clenshaw",
+            "partition": "shipped",
+            "pack": "orders",
+            "form": "exact-division",
+            "exp": "accurate"
+          },
+          "n": 16,
+          "x_nominal": 0.125,
+          "x": 0.125,
+          "abs_err": 1.2286867881649464e-07,
+          "figure": 1.5e-07
+        }
+      },
+      "bound_check": {
+        "max_figure_ratio_by_lane": {
+          "bf16": 0.9985908700338076,
+          "fp16": 0.9934027438291815,
+          "fp32": 0.8191245254432976,
+          "fp64": 0.6270981920683498
+        },
+        "readings_over_the_published_statement": 0,
+        "rows_scanned": 494208,
+        "note": "the driver's figure_ratio column, |err|/limit with limit the row's whole statement; the half lanes' limit includes the half digit, so their ratios stay below 1 too. This is the statement 'the sum bounds every measured cell'."
+      },
+      "signed_interaction_counts": {
+        "contrasts": 1808,
+        "informative_contrasts": 1648,
+        "material_contrasts": {
+          "0.05": 914,
+          "0.1": 903,
+          "0.2": 901
+        },
+        "absolute_value_reproduction": {
+          "0.05": 474,
+          "0.1": 418,
+          "0.2": 374
+        },
+        "material_multway_readings": {
+          "0.05": 2957,
+          "0.1": 2675,
+          "0.2": 2195
+        },
+        "verdict_by_alpha": {
+          "0.05": "interaction-material",
+          "0.1": "interaction-material",
+          "0.2": "interaction-material"
+        }
+      }
+    }
+  },
+  "route_checks": {
+    "fused": {
+      "byte_identical": true,
+      "sha256": [
+        "a80771fb9de8f9b22fe042031b0b6212f976ba1cd5696b7f824391f9cd53ebfc"
+      ]
+    },
+    "separate": {
+      "byte_identical": true,
+      "sha256": [
+        "89e5a3d4ee0934f993ea0c82db820fe29d0c1e31b3d65c94054ebd0cb867bd71"
+      ]
+    }
+  },
+  "reproduction": {
+    "deposited_record": "records/signed-interaction.json",
+    "regenerated_record": "regenerated from the four files above by the deposited signed_interaction.py (its import, summarise_interaction.py, unchanged)",
+    "layout": "signed_interaction.py takes its root from parents[1] of its own path, so the reduction ran with the script in a scripts/ subdirectory of a scratch root holding results/ and results-msvc-separate/ etc.; the record's paths_relative_to names that original layout. Running the copy that sits at composition-audit/ resolves the root to the harness repository itself and writes records/ there, not beside the deposited record.",
+    "comparison": "the regenerated record is byte-identical to the deposited record: cmp exits 0 and both carry sha256 0407939982e9031f4953c073120040a31adb4112ed704c08155d6ecdf8447686",
+    "cell_sha256_match": {
+      "fused": true,
+      "separate": true
+    },
+    "counts_checked": [
+      "901 material four-cell contrasts at 10 per cent on the fused route",
+      "903 material four-cell contrasts at 10 per cent on the separate route",
+      "912/914 at 5 per cent and 899/901 at 20 per cent",
+      "1,648 informative of 1,808 contrasts in every configuration",
+      "388/418 material under the absolute cell-maximum statistic at 10 per cent",
+      "four configurations: msvc and gcc crossed with fused and separate",
+      "cell files byte-identical across compilers within a route"
+    ]
+  },
+  "claim_check": {
+    "paper_sentence": "the largest figure ratio, a measured error divided by the published figure, is 0.629 on the double lane and 0.819 on the single (main.tex sec:composition; supplement S12 panel A)",
+    "double_lane_max_over_the_four_configurations": 0.629268025193091,
+    "single_lane_max_over_the_four_configurations": 0.8191245254432976,
+    "reproduces": true,
+    "qualification": "0.629 is attained only on the fused route; the separate route's double-lane maximum is 0.6270981920683498. 0.819 is attained on both routes. The quoted pair is true as a maximum over the four configurations, but the sentence does not say that it is a maximum over them or name the route that attains the double-lane value; a reader can take 0.629 as a per-route figure, and the separate route does not attain it (its value is lower, so every cell is still inside the figure)."
+  },
+  "cells_archive": {
+    "note": "the four cells files are 163.8 MB each; the xz archives are held in scratch and are not part of this record's deposit set",
+    "command": "xz -k -6 -T4 cells.csv"
+  }
+}

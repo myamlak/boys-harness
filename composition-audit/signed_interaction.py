@@ -65,7 +65,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import summarise_interaction as si
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parent
 RECORDS = ROOT / "records"
 
 AXES = si.AXES
