@@ -1,0 +1,6 @@
+wrote 2349 distinct arguments to C:\Users\myaml\dev\_witness\raw\boost_airy_inputs.txt
+wrote C:\Users\myaml\dev\_witness\raw\boost_airy_inputs_meta.csv
+  named airy_ai witness (paper): 35.9 -> 4041f33333333333 = 35.9
+  named airy_bi witness (paper): 78.1252 -> 4053880346dc5d64 = 78.1252
+  paper's widest sampled argument: 78.13 -> 40538851eb851eb8 = 78.13
+  external gate's airy_bi maximum (context): 88.258434442270058 -> 4056108a309d6d6f = 88.25843444227006

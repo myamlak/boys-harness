@@ -1,0 +1,17 @@
+Boost.Math Airy reference: independent checks
+mpmath 1.4.1, mp.dps = 60
+x = 35.9 exact double = 35.9, bits 4041f33333333333
+ODE residual Ai'' - x Ai: |res| = 0.0 (relative)
+ODE residual Bi'' - x Bi: |res| = 8.15161e-62 (relative)
+Wronskian Ai Bi' - Ai' Bi = 0.318309886183790671537767526745
+Wronskian residual vs 1/pi = 1.22189e-61 (relative)
+
+60-vs-100 digit stability (does the reference round to the same binary64?)
+  x=35.9: Ai same=True Bi same=True
+  x=36.282: Ai same=True Bi same=True
+  x=77.764: Ai same=True Bi same=True
+  x=78.1252: Ai same=True Bi same=True
+  x=78.12521875: Ai same=True Bi same=True
+  x=78.13: Ai same=True Bi same=True
+  x=88.25843444227006: Ai same=True Bi same=True
+all stable: True

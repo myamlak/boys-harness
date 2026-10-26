@@ -1,0 +1,8 @@
+crlibm sinh reference: independent checks
+mpmath 1.4.1, mp.dps = 60
+x = 0x408633ce8fb9f87e = 710.475860073944
+exact sinh = 1.797693134862378756102678651411607362985e+308
+ODE residual sinh'' - sinh = 0.0 (relative)
+cosh(1/3)^2 - sinh(1/3)^2 - 1 = 0.0
+log(sinh(x)) = 709.782712893384031803813853119
+asinh(exact) - x = 0.0

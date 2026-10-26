@@ -1,0 +1,423 @@
+input_bits,x,label
+3ff0000000000000,1.0,1.0 sanity point
+408632ce8fb9f87e,710.350860073944,base - 2^40
+408633cd8fb9f87e,710.475371792694,base - 2^32
+408633ce8fb9f83e,710.4758600739367,positive neighbour -64
+408633ce8fb9f83f,710.4758600739368,positive neighbour -63
+408633ce8fb9f840,710.4758600739369,positive neighbour -62
+408633ce8fb9f841,710.475860073937,positive neighbour -61
+408633ce8fb9f842,710.4758600739372,positive neighbour -60
+408633ce8fb9f843,710.4758600739373,positive neighbour -59
+408633ce8fb9f844,710.4758600739374,positive neighbour -58
+408633ce8fb9f845,710.4758600739375,positive neighbour -57
+408633ce8fb9f846,710.4758600739376,positive neighbour -56
+408633ce8fb9f847,710.4758600739377,positive neighbour -55
+408633ce8fb9f848,710.4758600739378,positive neighbour -54
+408633ce8fb9f849,710.475860073938,positive neighbour -53
+408633ce8fb9f84a,710.4758600739381,positive neighbour -52
+408633ce8fb9f84b,710.4758600739382,positive neighbour -51
+408633ce8fb9f84c,710.4758600739383,positive neighbour -50
+408633ce8fb9f84d,710.4758600739384,positive neighbour -49
+408633ce8fb9f84e,710.4758600739385,positive neighbour -48
+408633ce8fb9f84f,710.4758600739386,positive neighbour -47
+408633ce8fb9f850,710.4758600739387,positive neighbour -46
+408633ce8fb9f851,710.4758600739389,positive neighbour -45
+408633ce8fb9f852,710.475860073939,positive neighbour -44
+408633ce8fb9f853,710.4758600739391,positive neighbour -43
+408633ce8fb9f854,710.4758600739392,positive neighbour -42
+408633ce8fb9f855,710.4758600739393,positive neighbour -41
+408633ce8fb9f856,710.4758600739394,positive neighbour -40
+408633ce8fb9f857,710.4758600739395,positive neighbour -39
+408633ce8fb9f858,710.4758600739397,positive neighbour -38
+408633ce8fb9f859,710.4758600739398,positive neighbour -37
+408633ce8fb9f85a,710.4758600739399,positive neighbour -36
+408633ce8fb9f85b,710.47586007394,positive neighbour -35
+408633ce8fb9f85c,710.4758600739401,positive neighbour -34
+408633ce8fb9f85d,710.4758600739402,positive neighbour -33
+408633ce8fb9f85e,710.4758600739403,positive neighbour -32
+408633ce8fb9f85f,710.4758600739405,positive neighbour -31
+408633ce8fb9f860,710.4758600739406,positive neighbour -30
+408633ce8fb9f861,710.4758600739407,positive neighbour -29
+408633ce8fb9f862,710.4758600739408,positive neighbour -28
+408633ce8fb9f863,710.4758600739409,positive neighbour -27
+408633ce8fb9f864,710.475860073941,positive neighbour -26
+408633ce8fb9f865,710.4758600739411,positive neighbour -25
+408633ce8fb9f866,710.4758600739412,positive neighbour -24
+408633ce8fb9f867,710.4758600739414,positive neighbour -23
+408633ce8fb9f868,710.4758600739415,positive neighbour -22
+408633ce8fb9f869,710.4758600739416,positive neighbour -21
+408633ce8fb9f86a,710.4758600739417,positive neighbour -20
+408633ce8fb9f86b,710.4758600739418,positive neighbour -19
+408633ce8fb9f86c,710.4758600739419,positive neighbour -18
+408633ce8fb9f86d,710.475860073942,positive neighbour -17
+408633ce8fb9f86e,710.4758600739422,positive neighbour -16
+408633ce8fb9f86f,710.4758600739423,positive neighbour -15
+408633ce8fb9f870,710.4758600739424,positive neighbour -14
+408633ce8fb9f871,710.4758600739425,positive neighbour -13
+408633ce8fb9f872,710.4758600739426,positive neighbour -12
+408633ce8fb9f873,710.4758600739427,positive neighbour -11
+408633ce8fb9f874,710.4758600739428,positive neighbour -10
+408633ce8fb9f875,710.475860073943,positive neighbour -9
+408633ce8fb9f876,710.4758600739431,positive neighbour -8
+408633ce8fb9f877,710.4758600739432,positive neighbour -7
+408633ce8fb9f878,710.4758600739433,positive neighbour -6
+408633ce8fb9f879,710.4758600739434,positive neighbour -5
+408633ce8fb9f87a,710.4758600739435,positive neighbour -4
+408633ce8fb9f87b,710.4758600739436,positive neighbour -3
+408633ce8fb9f87c,710.4758600739437,positive neighbour -2
+408633ce8fb9f87d,710.4758600739439,positive neighbour -1
+408633ce8fb9f87e,710.475860073944,positive neighbour +0
+408633ce8fb9f87f,710.4758600739441,positive neighbour +1
+408633ce8fb9f880,710.4758600739442,positive neighbour +2
+408633ce8fb9f881,710.4758600739443,positive neighbour +3
+408633ce8fb9f882,710.4758600739444,positive neighbour +4
+408633ce8fb9f883,710.4758600739445,positive neighbour +5
+408633ce8fb9f884,710.4758600739447,positive neighbour +6
+408633ce8fb9f885,710.4758600739448,positive neighbour +7
+408633ce8fb9f886,710.4758600739449,positive neighbour +8
+408633ce8fb9f887,710.475860073945,positive neighbour +9
+408633ce8fb9f888,710.4758600739451,positive neighbour +10
+408633ce8fb9f889,710.4758600739452,positive neighbour +11
+408633ce8fb9f88a,710.4758600739453,positive neighbour +12
+408633ce8fb9f88b,710.4758600739455,positive neighbour +13
+408633ce8fb9f88c,710.4758600739456,positive neighbour +14
+408633ce8fb9f88d,710.4758600739457,positive neighbour +15
+408633ce8fb9f88e,710.4758600739458,positive neighbour +16
+408633ce8fb9f88f,710.4758600739459,positive neighbour +17
+408633ce8fb9f890,710.475860073946,positive neighbour +18
+408633ce8fb9f891,710.4758600739461,positive neighbour +19
+408633ce8fb9f892,710.4758600739463,positive neighbour +20
+408633ce8fb9f893,710.4758600739464,positive neighbour +21
+408633ce8fb9f894,710.4758600739465,positive neighbour +22
+408633ce8fb9f895,710.4758600739466,positive neighbour +23
+408633ce8fb9f896,710.4758600739467,positive neighbour +24
+408633ce8fb9f897,710.4758600739468,positive neighbour +25
+408633ce8fb9f898,710.4758600739469,positive neighbour +26
+408633ce8fb9f899,710.475860073947,positive neighbour +27
+408633ce8fb9f89a,710.4758600739472,positive neighbour +28
+408633ce8fb9f89b,710.4758600739473,positive neighbour +29
+408633ce8fb9f89c,710.4758600739474,positive neighbour +30
+408633ce8fb9f89d,710.4758600739475,positive neighbour +31
+408633ce8fb9f89e,710.4758600739476,positive neighbour +32
+408633ce8fb9f89f,710.4758600739477,positive neighbour +33
+408633ce8fb9f8a0,710.4758600739478,positive neighbour +34
+408633ce8fb9f8a1,710.475860073948,positive neighbour +35
+408633ce8fb9f8a2,710.4758600739481,positive neighbour +36
+408633ce8fb9f8a3,710.4758600739482,positive neighbour +37
+408633ce8fb9f8a4,710.4758600739483,positive neighbour +38
+408633ce8fb9f8a5,710.4758600739484,positive neighbour +39
+408633ce8fb9f8a6,710.4758600739485,positive neighbour +40
+408633ce8fb9f8a7,710.4758600739486,positive neighbour +41
+408633ce8fb9f8a8,710.4758600739488,positive neighbour +42
+408633ce8fb9f8a9,710.4758600739489,positive neighbour +43
+408633ce8fb9f8aa,710.475860073949,positive neighbour +44
+408633ce8fb9f8ab,710.4758600739491,positive neighbour +45
+408633ce8fb9f8ac,710.4758600739492,positive neighbour +46
+408633ce8fb9f8ad,710.4758600739493,positive neighbour +47
+408633ce8fb9f8ae,710.4758600739494,positive neighbour +48
+408633ce8fb9f8af,710.4758600739495,positive neighbour +49
+408633ce8fb9f8b0,710.4758600739497,positive neighbour +50
+408633ce8fb9f8b1,710.4758600739498,positive neighbour +51
+408633ce8fb9f8b2,710.4758600739499,positive neighbour +52
+408633ce8fb9f8b3,710.47586007395,positive neighbour +53
+408633ce8fb9f8b4,710.4758600739501,positive neighbour +54
+408633ce8fb9f8b5,710.4758600739502,positive neighbour +55
+408633ce8fb9f8b6,710.4758600739503,positive neighbour +56
+408633ce8fb9f8b7,710.4758600739505,positive neighbour +57
+408633ce8fb9f8b8,710.4758600739506,positive neighbour +58
+408633ce8fb9f8b9,710.4758600739507,positive neighbour +59
+408633ce8fb9f8ba,710.4758600739508,positive neighbour +60
+408633ce8fb9f8bb,710.4758600739509,positive neighbour +61
+408633ce8fb9f8bc,710.475860073951,positive neighbour +62
+408633ce8fb9f8bd,710.4758600739511,positive neighbour +63
+408633ce8fb9f8be,710.4758600739513,positive neighbour +64
+408633de8fb9f87e,710.483672573944,positive tail k=1
+408633ee8fb9f87e,710.491485073944,positive tail k=2
+408633fe8fb9f87e,710.499297573944,positive tail k=3
+4086340e8fb9f87e,710.507110073944,positive tail k=4
+4086341e8fb9f87e,710.514922573944,positive tail k=5
+4086342e8fb9f87e,710.522735073944,positive tail k=6
+4086343e8fb9f87e,710.530547573944,positive tail k=7
+4086344e8fb9f87e,710.538360073944,positive tail k=8
+4086345e8fb9f87e,710.546172573944,positive tail k=9
+4086346e8fb9f87e,710.553985073944,positive tail k=10
+4086347e8fb9f87e,710.561797573944,positive tail k=11
+4086348e8fb9f87e,710.569610073944,positive tail k=12
+4086349e8fb9f87e,710.577422573944,positive tail k=13
+408634ae8fb9f87e,710.585235073944,positive tail k=14
+408634be8fb9f87e,710.593047573944,positive tail k=15
+408634ce8fb9f87e,710.600860073944,positive tail k=16
+408634de8fb9f87e,710.608672573944,positive tail k=17
+408634ee8fb9f87e,710.616485073944,positive tail k=18
+408634fe8fb9f87e,710.624297573944,positive tail k=19
+4086350e8fb9f87e,710.632110073944,positive tail k=20
+4086351e8fb9f87e,710.639922573944,positive tail k=21
+4086352e8fb9f87e,710.647735073944,positive tail k=22
+4086353e8fb9f87e,710.655547573944,positive tail k=23
+4086354e8fb9f87e,710.663360073944,positive tail k=24
+4086355e8fb9f87e,710.671172573944,positive tail k=25
+4086356e8fb9f87e,710.678985073944,positive tail k=26
+4086357e8fb9f87e,710.686797573944,positive tail k=27
+4086358e8fb9f87e,710.694610073944,positive tail k=28
+4086359e8fb9f87e,710.702422573944,positive tail k=29
+408635ae8fb9f87e,710.710235073944,positive tail k=30
+408635be8fb9f87e,710.718047573944,positive tail k=31
+408635ce8fb9f87e,710.725860073944,positive tail k=32
+408635de8fb9f87e,710.733672573944,positive tail k=33
+408635ee8fb9f87e,710.741485073944,positive tail k=34
+408635fe8fb9f87e,710.749297573944,positive tail k=35
+4086360e8fb9f87e,710.757110073944,positive tail k=36
+4086361e8fb9f87e,710.764922573944,positive tail k=37
+4086362e8fb9f87e,710.772735073944,positive tail k=38
+4086363e8fb9f87e,710.780547573944,positive tail k=39
+4086364e8fb9f87e,710.788360073944,positive tail k=40
+7fed7fffffffffff,1.6572483587011973e+308,positive near DBL_MAX i=40
+7fed8fffffffffff,1.6607594781052252e+308,positive near DBL_MAX i=39
+7fed9fffffffffff,1.6642705975092532e+308,positive near DBL_MAX i=38
+7fedafffffffffff,1.6677817169132812e+308,positive near DBL_MAX i=37
+7fedbfffffffffff,1.6712928363173091e+308,positive near DBL_MAX i=36
+7fedcfffffffffff,1.674803955721337e+308,positive near DBL_MAX i=35
+7feddfffffffffff,1.678315075125365e+308,positive near DBL_MAX i=34
+7fedefffffffffff,1.681826194529393e+308,positive near DBL_MAX i=33
+7fedffffffffffff,1.685337313933421e+308,positive near DBL_MAX i=32
+7fee0fffffffffff,1.688848433337449e+308,positive near DBL_MAX i=31
+7fee1fffffffffff,1.6923595527414769e+308,positive near DBL_MAX i=30
+7fee2fffffffffff,1.6958706721455048e+308,positive near DBL_MAX i=29
+7fee3fffffffffff,1.6993817915495328e+308,positive near DBL_MAX i=28
+7fee4fffffffffff,1.7028929109535608e+308,positive near DBL_MAX i=27
+7fee5fffffffffff,1.7064040303575887e+308,positive near DBL_MAX i=26
+7fee6fffffffffff,1.7099151497616167e+308,positive near DBL_MAX i=25
+7fee7fffffffffff,1.7134262691656446e+308,positive near DBL_MAX i=24
+7fee8fffffffffff,1.7169373885696726e+308,positive near DBL_MAX i=23
+7fee9fffffffffff,1.7204485079737006e+308,positive near DBL_MAX i=22
+7feeafffffffffff,1.7239596273777285e+308,positive near DBL_MAX i=21
+7feebfffffffffff,1.7274707467817565e+308,positive near DBL_MAX i=20
+7feecfffffffffff,1.7309818661857845e+308,positive near DBL_MAX i=19
+7feedfffffffffff,1.7344929855898124e+308,positive near DBL_MAX i=18
+7feeefffffffffff,1.7380041049938404e+308,positive near DBL_MAX i=17
+7feeffffffffffff,1.7415152243978683e+308,positive near DBL_MAX i=16
+7fef0fffffffffff,1.7450263438018963e+308,positive near DBL_MAX i=15
+7fef1fffffffffff,1.7485374632059243e+308,positive near DBL_MAX i=14
+7fef2fffffffffff,1.7520485826099522e+308,positive near DBL_MAX i=13
+7fef3fffffffffff,1.7555597020139802e+308,positive near DBL_MAX i=12
+7fef4fffffffffff,1.7590708214180081e+308,positive near DBL_MAX i=11
+7fef5fffffffffff,1.7625819408220361e+308,positive near DBL_MAX i=10
+7fef6fffffffffff,1.766093060226064e+308,positive near DBL_MAX i=9
+7fef7fffffffffff,1.769604179630092e+308,positive near DBL_MAX i=8
+7fef8fffffffffff,1.77311529903412e+308,positive near DBL_MAX i=7
+7fef9fffffffffff,1.776626418438148e+308,positive near DBL_MAX i=6
+7fefafffffffffff,1.780137537842176e+308,positive near DBL_MAX i=5
+7fefbfffffffffff,1.7836486572462039e+308,positive near DBL_MAX i=4
+7fefcfffffffffff,1.7871597766502318e+308,positive near DBL_MAX i=3
+7fefdfffffffffff,1.7906708960542598e+308,positive near DBL_MAX i=2
+7fefefffffffffff,1.7941820154582877e+308,positive near DBL_MAX i=1
+7fefffffffffffff,1.7976931348623157e+308,DBL_MAX
+c08633ce8fb9f83e,-710.4758600739367,negative neighbour -64
+c08633ce8fb9f83f,-710.4758600739368,negative neighbour -63
+c08633ce8fb9f840,-710.4758600739369,negative neighbour -62
+c08633ce8fb9f841,-710.475860073937,negative neighbour -61
+c08633ce8fb9f842,-710.4758600739372,negative neighbour -60
+c08633ce8fb9f843,-710.4758600739373,negative neighbour -59
+c08633ce8fb9f844,-710.4758600739374,negative neighbour -58
+c08633ce8fb9f845,-710.4758600739375,negative neighbour -57
+c08633ce8fb9f846,-710.4758600739376,negative neighbour -56
+c08633ce8fb9f847,-710.4758600739377,negative neighbour -55
+c08633ce8fb9f848,-710.4758600739378,negative neighbour -54
+c08633ce8fb9f849,-710.475860073938,negative neighbour -53
+c08633ce8fb9f84a,-710.4758600739381,negative neighbour -52
+c08633ce8fb9f84b,-710.4758600739382,negative neighbour -51
+c08633ce8fb9f84c,-710.4758600739383,negative neighbour -50
+c08633ce8fb9f84d,-710.4758600739384,negative neighbour -49
+c08633ce8fb9f84e,-710.4758600739385,negative neighbour -48
+c08633ce8fb9f84f,-710.4758600739386,negative neighbour -47
+c08633ce8fb9f850,-710.4758600739387,negative neighbour -46
+c08633ce8fb9f851,-710.4758600739389,negative neighbour -45
+c08633ce8fb9f852,-710.475860073939,negative neighbour -44
+c08633ce8fb9f853,-710.4758600739391,negative neighbour -43
+c08633ce8fb9f854,-710.4758600739392,negative neighbour -42
+c08633ce8fb9f855,-710.4758600739393,negative neighbour -41
+c08633ce8fb9f856,-710.4758600739394,negative neighbour -40
+c08633ce8fb9f857,-710.4758600739395,negative neighbour -39
+c08633ce8fb9f858,-710.4758600739397,negative neighbour -38
+c08633ce8fb9f859,-710.4758600739398,negative neighbour -37
+c08633ce8fb9f85a,-710.4758600739399,negative neighbour -36
+c08633ce8fb9f85b,-710.47586007394,negative neighbour -35
+c08633ce8fb9f85c,-710.4758600739401,negative neighbour -34
+c08633ce8fb9f85d,-710.4758600739402,negative neighbour -33
+c08633ce8fb9f85e,-710.4758600739403,negative neighbour -32
+c08633ce8fb9f85f,-710.4758600739405,negative neighbour -31
+c08633ce8fb9f860,-710.4758600739406,negative neighbour -30
+c08633ce8fb9f861,-710.4758600739407,negative neighbour -29
+c08633ce8fb9f862,-710.4758600739408,negative neighbour -28
+c08633ce8fb9f863,-710.4758600739409,negative neighbour -27
+c08633ce8fb9f864,-710.475860073941,negative neighbour -26
+c08633ce8fb9f865,-710.4758600739411,negative neighbour -25
+c08633ce8fb9f866,-710.4758600739412,negative neighbour -24
+c08633ce8fb9f867,-710.4758600739414,negative neighbour -23
+c08633ce8fb9f868,-710.4758600739415,negative neighbour -22
+c08633ce8fb9f869,-710.4758600739416,negative neighbour -21
+c08633ce8fb9f86a,-710.4758600739417,negative neighbour -20
+c08633ce8fb9f86b,-710.4758600739418,negative neighbour -19
+c08633ce8fb9f86c,-710.4758600739419,negative neighbour -18
+c08633ce8fb9f86d,-710.475860073942,negative neighbour -17
+c08633ce8fb9f86e,-710.4758600739422,negative neighbour -16
+c08633ce8fb9f86f,-710.4758600739423,negative neighbour -15
+c08633ce8fb9f870,-710.4758600739424,negative neighbour -14
+c08633ce8fb9f871,-710.4758600739425,negative neighbour -13
+c08633ce8fb9f872,-710.4758600739426,negative neighbour -12
+c08633ce8fb9f873,-710.4758600739427,negative neighbour -11
+c08633ce8fb9f874,-710.4758600739428,negative neighbour -10
+c08633ce8fb9f875,-710.475860073943,negative neighbour -9
+c08633ce8fb9f876,-710.4758600739431,negative neighbour -8
+c08633ce8fb9f877,-710.4758600739432,negative neighbour -7
+c08633ce8fb9f878,-710.4758600739433,negative neighbour -6
+c08633ce8fb9f879,-710.4758600739434,negative neighbour -5
+c08633ce8fb9f87a,-710.4758600739435,negative neighbour -4
+c08633ce8fb9f87b,-710.4758600739436,negative neighbour -3
+c08633ce8fb9f87c,-710.4758600739437,negative neighbour -2
+c08633ce8fb9f87d,-710.4758600739439,negative neighbour -1
+c08633ce8fb9f87e,-710.475860073944,negative neighbour +0
+c08633ce8fb9f87f,-710.4758600739441,negative neighbour +1
+c08633ce8fb9f880,-710.4758600739442,negative neighbour +2
+c08633ce8fb9f881,-710.4758600739443,negative neighbour +3
+c08633ce8fb9f882,-710.4758600739444,negative neighbour +4
+c08633ce8fb9f883,-710.4758600739445,negative neighbour +5
+c08633ce8fb9f884,-710.4758600739447,negative neighbour +6
+c08633ce8fb9f885,-710.4758600739448,negative neighbour +7
+c08633ce8fb9f886,-710.4758600739449,negative neighbour +8
+c08633ce8fb9f887,-710.475860073945,negative neighbour +9
+c08633ce8fb9f888,-710.4758600739451,negative neighbour +10
+c08633ce8fb9f889,-710.4758600739452,negative neighbour +11
+c08633ce8fb9f88a,-710.4758600739453,negative neighbour +12
+c08633ce8fb9f88b,-710.4758600739455,negative neighbour +13
+c08633ce8fb9f88c,-710.4758600739456,negative neighbour +14
+c08633ce8fb9f88d,-710.4758600739457,negative neighbour +15
+c08633ce8fb9f88e,-710.4758600739458,negative neighbour +16
+c08633ce8fb9f88f,-710.4758600739459,negative neighbour +17
+c08633ce8fb9f890,-710.475860073946,negative neighbour +18
+c08633ce8fb9f891,-710.4758600739461,negative neighbour +19
+c08633ce8fb9f892,-710.4758600739463,negative neighbour +20
+c08633ce8fb9f893,-710.4758600739464,negative neighbour +21
+c08633ce8fb9f894,-710.4758600739465,negative neighbour +22
+c08633ce8fb9f895,-710.4758600739466,negative neighbour +23
+c08633ce8fb9f896,-710.4758600739467,negative neighbour +24
+c08633ce8fb9f897,-710.4758600739468,negative neighbour +25
+c08633ce8fb9f898,-710.4758600739469,negative neighbour +26
+c08633ce8fb9f899,-710.475860073947,negative neighbour +27
+c08633ce8fb9f89a,-710.4758600739472,negative neighbour +28
+c08633ce8fb9f89b,-710.4758600739473,negative neighbour +29
+c08633ce8fb9f89c,-710.4758600739474,negative neighbour +30
+c08633ce8fb9f89d,-710.4758600739475,negative neighbour +31
+c08633ce8fb9f89e,-710.4758600739476,negative neighbour +32
+c08633ce8fb9f89f,-710.4758600739477,negative neighbour +33
+c08633ce8fb9f8a0,-710.4758600739478,negative neighbour +34
+c08633ce8fb9f8a1,-710.475860073948,negative neighbour +35
+c08633ce8fb9f8a2,-710.4758600739481,negative neighbour +36
+c08633ce8fb9f8a3,-710.4758600739482,negative neighbour +37
+c08633ce8fb9f8a4,-710.4758600739483,negative neighbour +38
+c08633ce8fb9f8a5,-710.4758600739484,negative neighbour +39
+c08633ce8fb9f8a6,-710.4758600739485,negative neighbour +40
+c08633ce8fb9f8a7,-710.4758600739486,negative neighbour +41
+c08633ce8fb9f8a8,-710.4758600739488,negative neighbour +42
+c08633ce8fb9f8a9,-710.4758600739489,negative neighbour +43
+c08633ce8fb9f8aa,-710.475860073949,negative neighbour +44
+c08633ce8fb9f8ab,-710.4758600739491,negative neighbour +45
+c08633ce8fb9f8ac,-710.4758600739492,negative neighbour +46
+c08633ce8fb9f8ad,-710.4758600739493,negative neighbour +47
+c08633ce8fb9f8ae,-710.4758600739494,negative neighbour +48
+c08633ce8fb9f8af,-710.4758600739495,negative neighbour +49
+c08633ce8fb9f8b0,-710.4758600739497,negative neighbour +50
+c08633ce8fb9f8b1,-710.4758600739498,negative neighbour +51
+c08633ce8fb9f8b2,-710.4758600739499,negative neighbour +52
+c08633ce8fb9f8b3,-710.47586007395,negative neighbour +53
+c08633ce8fb9f8b4,-710.4758600739501,negative neighbour +54
+c08633ce8fb9f8b5,-710.4758600739502,negative neighbour +55
+c08633ce8fb9f8b6,-710.4758600739503,negative neighbour +56
+c08633ce8fb9f8b7,-710.4758600739505,negative neighbour +57
+c08633ce8fb9f8b8,-710.4758600739506,negative neighbour +58
+c08633ce8fb9f8b9,-710.4758600739507,negative neighbour +59
+c08633ce8fb9f8ba,-710.4758600739508,negative neighbour +60
+c08633ce8fb9f8bb,-710.4758600739509,negative neighbour +61
+c08633ce8fb9f8bc,-710.475860073951,negative neighbour +62
+c08633ce8fb9f8bd,-710.4758600739511,negative neighbour +63
+c08633ce8fb9f8be,-710.4758600739513,negative neighbour +64
+c08633de8fb9f87e,-710.483672573944,negative tail k=1
+c08633ee8fb9f87e,-710.491485073944,negative tail k=2
+c08633fe8fb9f87e,-710.499297573944,negative tail k=3
+c086340e8fb9f87e,-710.507110073944,negative tail k=4
+c086341e8fb9f87e,-710.514922573944,negative tail k=5
+c086342e8fb9f87e,-710.522735073944,negative tail k=6
+c086343e8fb9f87e,-710.530547573944,negative tail k=7
+c086344e8fb9f87e,-710.538360073944,negative tail k=8
+c086345e8fb9f87e,-710.546172573944,negative tail k=9
+c086346e8fb9f87e,-710.553985073944,negative tail k=10
+c086347e8fb9f87e,-710.561797573944,negative tail k=11
+c086348e8fb9f87e,-710.569610073944,negative tail k=12
+c086349e8fb9f87e,-710.577422573944,negative tail k=13
+c08634ae8fb9f87e,-710.585235073944,negative tail k=14
+c08634be8fb9f87e,-710.593047573944,negative tail k=15
+c08634ce8fb9f87e,-710.600860073944,negative tail k=16
+c08634de8fb9f87e,-710.608672573944,negative tail k=17
+c08634ee8fb9f87e,-710.616485073944,negative tail k=18
+c08634fe8fb9f87e,-710.624297573944,negative tail k=19
+c086350e8fb9f87e,-710.632110073944,negative tail k=20
+c086351e8fb9f87e,-710.639922573944,negative tail k=21
+c086352e8fb9f87e,-710.647735073944,negative tail k=22
+c086353e8fb9f87e,-710.655547573944,negative tail k=23
+c086354e8fb9f87e,-710.663360073944,negative tail k=24
+c086355e8fb9f87e,-710.671172573944,negative tail k=25
+c086356e8fb9f87e,-710.678985073944,negative tail k=26
+c086357e8fb9f87e,-710.686797573944,negative tail k=27
+c086358e8fb9f87e,-710.694610073944,negative tail k=28
+c086359e8fb9f87e,-710.702422573944,negative tail k=29
+c08635ae8fb9f87e,-710.710235073944,negative tail k=30
+c08635be8fb9f87e,-710.718047573944,negative tail k=31
+c08635ce8fb9f87e,-710.725860073944,negative tail k=32
+c08635de8fb9f87e,-710.733672573944,negative tail k=33
+c08635ee8fb9f87e,-710.741485073944,negative tail k=34
+c08635fe8fb9f87e,-710.749297573944,negative tail k=35
+c086360e8fb9f87e,-710.757110073944,negative tail k=36
+c086361e8fb9f87e,-710.764922573944,negative tail k=37
+c086362e8fb9f87e,-710.772735073944,negative tail k=38
+c086363e8fb9f87e,-710.780547573944,negative tail k=39
+c086364e8fb9f87e,-710.788360073944,negative tail k=40
+ffed7fffffffffff,-1.6572483587011973e+308,negative near DBL_MAX i=40
+ffed8fffffffffff,-1.6607594781052252e+308,negative near DBL_MAX i=39
+ffed9fffffffffff,-1.6642705975092532e+308,negative near DBL_MAX i=38
+ffedafffffffffff,-1.6677817169132812e+308,negative near DBL_MAX i=37
+ffedbfffffffffff,-1.6712928363173091e+308,negative near DBL_MAX i=36
+ffedcfffffffffff,-1.674803955721337e+308,negative near DBL_MAX i=35
+ffeddfffffffffff,-1.678315075125365e+308,negative near DBL_MAX i=34
+ffedefffffffffff,-1.681826194529393e+308,negative near DBL_MAX i=33
+ffedffffffffffff,-1.685337313933421e+308,negative near DBL_MAX i=32
+ffee0fffffffffff,-1.688848433337449e+308,negative near DBL_MAX i=31
+ffee1fffffffffff,-1.6923595527414769e+308,negative near DBL_MAX i=30
+ffee2fffffffffff,-1.6958706721455048e+308,negative near DBL_MAX i=29
+ffee3fffffffffff,-1.6993817915495328e+308,negative near DBL_MAX i=28
+ffee4fffffffffff,-1.7028929109535608e+308,negative near DBL_MAX i=27
+ffee5fffffffffff,-1.7064040303575887e+308,negative near DBL_MAX i=26
+ffee6fffffffffff,-1.7099151497616167e+308,negative near DBL_MAX i=25
+ffee7fffffffffff,-1.7134262691656446e+308,negative near DBL_MAX i=24
+ffee8fffffffffff,-1.7169373885696726e+308,negative near DBL_MAX i=23
+ffee9fffffffffff,-1.7204485079737006e+308,negative near DBL_MAX i=22
+ffeeafffffffffff,-1.7239596273777285e+308,negative near DBL_MAX i=21
+ffeebfffffffffff,-1.7274707467817565e+308,negative near DBL_MAX i=20
+ffeecfffffffffff,-1.7309818661857845e+308,negative near DBL_MAX i=19
+ffeedfffffffffff,-1.7344929855898124e+308,negative near DBL_MAX i=18
+ffeeefffffffffff,-1.7380041049938404e+308,negative near DBL_MAX i=17
+ffeeffffffffffff,-1.7415152243978683e+308,negative near DBL_MAX i=16
+ffef0fffffffffff,-1.7450263438018963e+308,negative near DBL_MAX i=15
+ffef1fffffffffff,-1.7485374632059243e+308,negative near DBL_MAX i=14
+ffef2fffffffffff,-1.7520485826099522e+308,negative near DBL_MAX i=13
+ffef3fffffffffff,-1.7555597020139802e+308,negative near DBL_MAX i=12
+ffef4fffffffffff,-1.7590708214180081e+308,negative near DBL_MAX i=11
+ffef5fffffffffff,-1.7625819408220361e+308,negative near DBL_MAX i=10
+ffef6fffffffffff,-1.766093060226064e+308,negative near DBL_MAX i=9
+ffef7fffffffffff,-1.769604179630092e+308,negative near DBL_MAX i=8
+ffef8fffffffffff,-1.77311529903412e+308,negative near DBL_MAX i=7
+ffef9fffffffffff,-1.776626418438148e+308,negative near DBL_MAX i=6
+ffefafffffffffff,-1.780137537842176e+308,negative near DBL_MAX i=5
+ffefbfffffffffff,-1.7836486572462039e+308,negative near DBL_MAX i=4
+ffefcfffffffffff,-1.7871597766502318e+308,negative near DBL_MAX i=3
+ffefdfffffffffff,-1.7906708960542598e+308,negative near DBL_MAX i=2
+ffefefffffffffff,-1.7941820154582877e+308,negative near DBL_MAX i=1

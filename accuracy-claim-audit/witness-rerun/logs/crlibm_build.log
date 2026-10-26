@@ -1,0 +1,323 @@
+=== toolchain ===
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+x86_64
+=== configure ===
+Making distclean in scs_lib
+make[1]: Entering directory '/mnt/c/Users/myaml/dev/_witness/third_party/crlibm-1.0beta5/scs_lib'
+rm -f  libscs.a
+rm -f *.o
+rm -f *.tab.c
+rm -f  
+test . = "." || rm -f  
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f ./.deps/addition_scs.Po
+rm -f ./.deps/division_scs.Po
+rm -f ./.deps/double2scs.Po
+rm -f ./.deps/multiplication_scs.Po
+rm -f ./.deps/print_scs.Po
+rm -f ./.deps/scs2double.Po
+rm -f ./.deps/scs2mpfr.Po
+rm -f ./.deps/scs_private.Po
+rm -f ./.deps/zero_scs.Po
+rm -f Makefile
+make[1]: Leaving directory '/mnt/c/Users/myaml/dev/_witness/third_party/crlibm-1.0beta5/scs_lib'
+Making distclean in .
+make[1]: Entering directory '/mnt/c/Users/myaml/dev/_witness/third_party/crlibm-1.0beta5'
+rm -f  libcrlibm.a
+rm -f *.o
+rm -f *.tab.c
+rm -f  
+test . = "." || rm -f  
+rm -f crlibm_config.h stamp-h1
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f cscope.out cscope.in.out cscope.po.out cscope.files
+make[1]: Leaving directory '/mnt/c/Users/myaml/dev/_witness/third_party/crlibm-1.0beta5'
+Making distclean in tests
+make[1]: Entering directory '/mnt/c/Users/myaml/dev/_witness/third_party/crlibm-1.0beta5/tests'
+rm -f  crlibm_testval crlibm_soaktest crlibm_testperf crlibm_blindtest crlibm_generate_test_vectors
+rm -f  check_exp check_expm1 check_log check_log2 check_log10 check_log1p check_sin check_cos check_tan check_asin check_acos check_atan  check_sinh check_cosh check_sinpi check_cospi check_tanpi check_asinpi check_acospi check_atanpi check_pow
+rm -f *.o
+rm -f  check_exp.log check_expm1.log check_log.log check_log2.log check_log10.log check_log1p.log check_sin.log check_cos.log check_tan.log check_asin.log check_acos.log check_atan.log check_sinh.log check_cosh.log check_sinpi.log check_cospi.log check_tanpi.log check_asinpi.log check_acospi.log check_atanpi.log check_pow.log
+rm -f  check_exp.trs check_expm1.trs check_log.trs check_log2.trs check_log10.trs check_log1p.trs check_sin.trs check_cos.trs check_tan.trs check_asin.trs check_acos.trs check_atan.trs check_sinh.trs check_cosh.trs check_sinpi.trs check_cospi.trs check_tanpi.trs check_asinpi.trs check_acospi.trs check_atanpi.trs check_pow.trs
+rm -f  test-suite.log
+rm -f *.tab.c
+rm -f  
+test . = "." || rm -f  
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f ./.deps/blind_test.Po
+rm -f ./.deps/generate_test_vectors.Po
+rm -f ./.deps/soak_test-interval.Po
+rm -f ./.deps/soak_test.Po
+rm -f ./.deps/test_common.Po
+rm -f ./.deps/test_perf-interval.Po
+rm -f ./.deps/test_perf.Po
+rm -f ./.deps/test_val.Po
+rm -f Makefile
+make[1]: Leaving directory '/mnt/c/Users/myaml/dev/_witness/third_party/crlibm-1.0beta5/tests'
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -f ./.deps/asincos.Po
+rm -f ./.deps/atan_accurate.Po
+rm -f ./.deps/atan_fast.Po
+rm -f ./.deps/crlibm_private.Po
+rm -f ./.deps/csh_fast.Po
+rm -f ./.deps/exp-td-standalone.Po
+rm -f ./.deps/exp-td.Po
+rm -f ./.deps/expm1-standalone.Po
+rm -f ./.deps/expm1.Po
+rm -f ./.deps/log-de.Po
+rm -f ./.deps/log.Po
+rm -f ./.deps/log10-td.Po
+rm -f ./.deps/log1p.Po
+rm -f ./.deps/log2-td.Po
+rm -f ./.deps/pow.Po
+rm -f ./.deps/rem_pio2_accurate.Po
+rm -f ./.deps/trigo_accurate.Po
+rm -f ./.deps/trigo_fast.Po
+rm -f ./.deps/trigpi.Po
+rm -f ./.deps/triple-double.Po
+rm -f Makefile
+configure.ac:6: warning: AM_INIT_AUTOMAKE: two- and three-arguments forms are deprecated.
+./lib/autoconf/general.m4:2434: AC_DIAGNOSE is expanded from...
+aclocal.m4:429: AM_INIT_AUTOMAKE is expanded from...
+configure.ac:6: the top level
+configure.ac:114: warning: The macro 'AC_HEADER_STDC' is obsolete.
+configure.ac:114: You should run autoupdate.
+./lib/autoconf/headers.m4:663: AC_HEADER_STDC is expanded from...
+configure.ac:114: the top level
+configure.ac:138: warning: The macro 'AC_C_LONG_DOUBLE' is obsolete.
+configure.ac:138: You should run autoupdate.
+./lib/autoconf/types.m4:478: AC_C_LONG_DOUBLE is expanded from...
+configure.ac:138: the top level
+configure.ac:6: warning: AM_INIT_AUTOMAKE: two- and three-arguments forms are deprecated.  For more info, see:
+configure.ac:6: https://www.gnu.org/software/automake/manual/automake.html#Modernize-AM_005fINIT_005fAUTOMAKE-invocation
+scs_lib/Makefile.am:5: warning: 'INCLUDES' is the old name for 'AM_CPPFLAGS' (or '*_CPPFLAGS')
+tests/Makefile.am:12: warning: 'INCLUDES' is the old name for 'AM_CPPFLAGS' (or '*_CPPFLAGS')
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking whether UID '1000' is supported by ustar format... yes
+checking whether GID '1000' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking whether make sets $(MAKE)... (cached) yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking for ranlib... ranlib
+checking whether ln -s works... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for sqrt... no
+checking for fenv.h... yes
+checking for float.h... yes
+checking for fpu_control.h... yes
+checking for log in -lm... yes
+checking whether byte ordering is bigendian... no
+checking for long double with more range or precision than double... yes
+checking size of int... 4
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating tests/Makefile
+config.status: creating scs_lib/Makefile
+config.status: creating crlibm_config.h
+config.status: executing depfiles commands
+=== build scs_lib ===
+make: Entering directory '/mnt/c/Users/myaml/dev/_witness/third_party/crlibm-1.0beta5/scs_lib'
+gcc -DHAVE_CONFIG_H -I. -I.. -I..    -O2 -MT scs_private.o -MD -MP -MF .deps/scs_private.Tpo -c -o scs_private.o scs_private.c
+mv -f .deps/scs_private.Tpo .deps/scs_private.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I..    -O2 -MT double2scs.o -MD -MP -MF .deps/double2scs.Tpo -c -o double2scs.o double2scs.c
+mv -f .deps/double2scs.Tpo .deps/double2scs.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I..    -O2 -MT print_scs.o -MD -MP -MF .deps/print_scs.Tpo -c -o print_scs.o print_scs.c
+mv -f .deps/print_scs.Tpo .deps/print_scs.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I..    -O2 -MT division_scs.o -MD -MP -MF .deps/division_scs.Tpo -c -o division_scs.o division_scs.c
+mv -f .deps/division_scs.Tpo .deps/division_scs.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I..    -O2 -MT addition_scs.o -MD -MP -MF .deps/addition_scs.Tpo -c -o addition_scs.o addition_scs.c
+mv -f .deps/addition_scs.Tpo .deps/addition_scs.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I..    -O2 -MT multiplication_scs.o -MD -MP -MF .deps/multiplication_scs.Tpo -c -o multiplication_scs.o multiplication_scs.c
+mv -f .deps/multiplication_scs.Tpo .deps/multiplication_scs.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I..    -O2 -MT scs2double.o -MD -MP -MF .deps/scs2double.Tpo -c -o scs2double.o scs2double.c
+mv -f .deps/scs2double.Tpo .deps/scs2double.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I..    -O2 -MT zero_scs.o -MD -MP -MF .deps/zero_scs.Tpo -c -o zero_scs.o zero_scs.c
+mv -f .deps/zero_scs.Tpo .deps/zero_scs.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I..    -O2 -MT scs2mpfr.o -MD -MP -MF .deps/scs2mpfr.Tpo -c -o scs2mpfr.o scs2mpfr.c
+mv -f .deps/scs2mpfr.Tpo .deps/scs2mpfr.Po
+rm -f libscs.a
+ar cr libscs.a scs_private.o double2scs.o print_scs.o division_scs.o addition_scs.o multiplication_scs.o scs2double.o zero_scs.o scs2mpfr.o 
+ranlib libscs.a
+make: Leaving directory '/mnt/c/Users/myaml/dev/_witness/third_party/crlibm-1.0beta5/scs_lib'
+=== build libcrlibm.a ===
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT crlibm_private.o -MD -MP -MF .deps/crlibm_private.Tpo -c -o crlibm_private.o crlibm_private.c
+mv -f .deps/crlibm_private.Tpo .deps/crlibm_private.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT triple-double.o -MD -MP -MF .deps/triple-double.Tpo -c -o triple-double.o triple-double.c
+mv -f .deps/triple-double.Tpo .deps/triple-double.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT exp-td.o -MD -MP -MF .deps/exp-td.Tpo -c -o exp-td.o exp-td.c
+exp-td.c: In function ‘exp_rn’:
+exp-td.c:118:26: warning: unused variable ‘s5’ [-Wunused-variable]
+  118 |   double s1, s2, s3, s4, s5;
+      |                          ^~
+exp-td.c:118:22: warning: unused variable ‘s4’ [-Wunused-variable]
+  118 |   double s1, s2, s3, s4, s5;
+      |                      ^~
+exp-td.c:118:18: warning: unused variable ‘s3’ [-Wunused-variable]
+  118 |   double s1, s2, s3, s4, s5;
+      |                  ^~
+exp-td.c:118:14: warning: unused variable ‘s2’ [-Wunused-variable]
+  118 |   double s1, s2, s3, s4, s5;
+      |              ^~
+exp-td.c:118:10: warning: unused variable ‘s1’ [-Wunused-variable]
+  118 |   double s1, s2, s3, s4, s5;
+      |          ^~
+exp-td.c: In function ‘exp_ru’:
+exp-td.c:407:26: warning: unused variable ‘s5’ [-Wunused-variable]
+  407 |   double s1, s2, s3, s4, s5;
+      |                          ^~
+exp-td.c:407:22: warning: unused variable ‘s4’ [-Wunused-variable]
+  407 |   double s1, s2, s3, s4, s5;
+      |                      ^~
+exp-td.c:407:18: warning: unused variable ‘s3’ [-Wunused-variable]
+  407 |   double s1, s2, s3, s4, s5;
+      |                  ^~
+exp-td.c:407:14: warning: unused variable ‘s2’ [-Wunused-variable]
+  407 |   double s1, s2, s3, s4, s5;
+      |              ^~
+exp-td.c:407:10: warning: unused variable ‘s1’ [-Wunused-variable]
+  407 |   double s1, s2, s3, s4, s5;
+      |          ^~
+exp-td.c: In function ‘exp_rd’:
+exp-td.c:709:26: warning: unused variable ‘s5’ [-Wunused-variable]
+  709 |   double s1, s2, s3, s4, s5;
+      |                          ^~
+exp-td.c:709:22: warning: unused variable ‘s4’ [-Wunused-variable]
+  709 |   double s1, s2, s3, s4, s5;
+      |                      ^~
+exp-td.c:709:18: warning: unused variable ‘s3’ [-Wunused-variable]
+  709 |   double s1, s2, s3, s4, s5;
+      |                  ^~
+exp-td.c:709:14: warning: unused variable ‘s2’ [-Wunused-variable]
+  709 |   double s1, s2, s3, s4, s5;
+      |              ^~
+exp-td.c:709:10: warning: unused variable ‘s1’ [-Wunused-variable]
+  709 |   double s1, s2, s3, s4, s5;
+      |          ^~
+mv -f .deps/exp-td.Tpo .deps/exp-td.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT exp-td-standalone.o -MD -MP -MF .deps/exp-td-standalone.Tpo -c -o exp-td-standalone.o exp-td-standalone.c
+mv -f .deps/exp-td-standalone.Tpo .deps/exp-td-standalone.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT expm1-standalone.o -MD -MP -MF .deps/expm1-standalone.Tpo -c -o expm1-standalone.o expm1-standalone.c
+mv -f .deps/expm1-standalone.Tpo .deps/expm1-standalone.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT expm1.o -MD -MP -MF .deps/expm1.Tpo -c -o expm1.o expm1.c
+mv -f .deps/expm1.Tpo .deps/expm1.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT log.o -MD -MP -MF .deps/log.Tpo -c -o log.o log.c
+log.c: In function ‘log_rn’:
+log.c:102:20: warning: division by zero [-Wdiv-by-zero]
+  102 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log_ru’:
+log.c:282:20: warning: division by zero [-Wdiv-by-zero]
+  282 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log_rd’:
+log.c:461:20: warning: division by zero [-Wdiv-by-zero]
+  461 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log_rz’:
+log.c:640:20: warning: division by zero [-Wdiv-by-zero]
+  640 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log2_rn’:
+log.c:818:20: warning: division by zero [-Wdiv-by-zero]
+  818 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log2_ru’:
+log.c:984:20: warning: division by zero [-Wdiv-by-zero]
+  984 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log2_rd’:
+log.c:1166:20: warning: division by zero [-Wdiv-by-zero]
+ 1166 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log2_rz’:
+log.c:1348:20: warning: division by zero [-Wdiv-by-zero]
+ 1348 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log10_rn’:
+log.c:1531:20: warning: division by zero [-Wdiv-by-zero]
+ 1531 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log10_ru’:
+log.c:1718:20: warning: division by zero [-Wdiv-by-zero]
+ 1718 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log10_rd’:
+log.c:1905:20: warning: division by zero [-Wdiv-by-zero]
+ 1905 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+log.c: In function ‘log10_rz’:
+log.c:2091:20: warning: division by zero [-Wdiv-by-zero]
+ 2091 |        return (x-x)/0;                      /* log(-x) = Nan    */
+      |                    ^
+mv -f .deps/log.Tpo .deps/log.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT log1p.o -MD -MP -MF .deps/log1p.Tpo -c -o log1p.o log1p.c
+mv -f .deps/log1p.Tpo .deps/log1p.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT rem_pio2_accurate.o -MD -MP -MF .deps/rem_pio2_accurate.Tpo -c -o rem_pio2_accurate.o rem_pio2_accurate.c
+mv -f .deps/rem_pio2_accurate.Tpo .deps/rem_pio2_accurate.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT trigo_fast.o -MD -MP -MF .deps/trigo_fast.Tpo -c -o trigo_fast.o trigo_fast.c
+mv -f .deps/trigo_fast.Tpo .deps/trigo_fast.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT trigo_accurate.o -MD -MP -MF .deps/trigo_accurate.Tpo -c -o trigo_accurate.o trigo_accurate.c
+mv -f .deps/trigo_accurate.Tpo .deps/trigo_accurate.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT trigpi.o -MD -MP -MF .deps/trigpi.Tpo -c -o trigpi.o trigpi.c
+mv -f .deps/trigpi.Tpo .deps/trigpi.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT asincos.o -MD -MP -MF .deps/asincos.Tpo -c -o asincos.o asincos.c
+asincos.c: In function ‘asinpi_rd’:
+asincos.c:3450:29: warning: variable ‘deltal’ set but not used [-Wunused-but-set-variable]
+ 3450 |   double deltatemp, deltah, deltal;
+      |                             ^~~~~~
+asincos.c: In function ‘asinpi_ru’:
+asincos.c:3804:29: warning: variable ‘deltal’ set but not used [-Wunused-but-set-variable]
+ 3804 |   double deltatemp, deltah, deltal;
+      |                             ^~~~~~
+asincos.c: In function ‘asinpi_rz’:
+asincos.c:4157:29: warning: variable ‘deltal’ set but not used [-Wunused-but-set-variable]
+ 4157 |   double deltatemp, deltah, deltal;
+      |                             ^~~~~~
+mv -f .deps/asincos.Tpo .deps/asincos.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT pow.o -MD -MP -MF .deps/pow.Tpo -c -o pow.o pow.c
+mv -f .deps/pow.Tpo .deps/pow.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT atan_fast.o -MD -MP -MF .deps/atan_fast.Tpo -c -o atan_fast.o atan_fast.c
+mv -f .deps/atan_fast.Tpo .deps/atan_fast.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT atan_accurate.o -MD -MP -MF .deps/atan_accurate.Tpo -c -o atan_accurate.o atan_accurate.c
+mv -f .deps/atan_accurate.Tpo .deps/atan_accurate.Po
+gcc -DHAVE_CONFIG_H -I.    -std=c99 -Wall -msse2 -mfpmath=sse  -O2 -MT csh_fast.o -MD -MP -MF .deps/csh_fast.Tpo -c -o csh_fast.o csh_fast.c
+mv -f .deps/csh_fast.Tpo .deps/csh_fast.Po
+rm -f libcrlibm.a
+ar cr libcrlibm.a crlibm_private.o triple-double.o exp-td.o exp-td-standalone.o expm1-standalone.o expm1.o log.o log1p.o rem_pio2_accurate.o trigo_fast.o trigo_accurate.o trigpi.o asincos.o pow.o atan_fast.o atan_accurate.o csh_fast.o scs_lib/scs_private.o scs_lib/addition_scs.o scs_lib/division_scs.o scs_lib/print_scs.o scs_lib/double2scs.o scs_lib/zero_scs.o scs_lib/multiplication_scs.o scs_lib/scs2double.o
+ranlib libcrlibm.a
+=== build driver ===
+=== built /mnt/c/Users/myaml/dev/_witness/raw/crlibm_sinh_witness ===

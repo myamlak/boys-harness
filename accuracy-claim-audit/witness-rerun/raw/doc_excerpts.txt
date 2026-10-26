@@ -1,0 +1,78 @@
+Documentation excerpts, quoted at run time from the pinned sources
+==================================================================
+
+Boost.Math 1.92.0
+-----------------
+archive: https://archives.boost.io/release/1.92.0/source/boost_1_92_0.tar.gz
+sha256:  c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce
+size:    235,384,471 bytes
+
+boost/version.hpp:
+  #define BOOST_VERSION 109200
+  #define BOOST_LIB_VERSION "1_92"
+
+libs/math/doc/sf/airy.qbk, lines 52-53 (airy_ai page), 106-107 (airy_bi
+page), and again at 160-161 (airy_aip) and 214-215 (airy_bip):
+
+  In general though, the relative error is low (less than 100 [epsilon]) for /x > 0/ while
+  only the absolute error is low for /x < 0/ as the following error plot illustrates:
+
+The rendered HTML pages ai.html and bi.html print the same sentence with
+[epsilon] rendered as the Greek epsilon.  The paper's quotation "less than
+100 eps" is this sentence; epsilon is the binary64 format epsilon, 2^-52.
+
+
+crlibm 1.0beta5
+---------------
+archive: https://github.com/taschini/crlibm/archive/eb3063791aa75bc9705b49283bf14250465220a7.tar.gz
+sha256:  79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5
+size:    2,432,556 bytes
+commit:  eb3063791aa75bc9705b49283bf14250465220a7
+VERSION: 1.0beta5
+
+docs/latex/0_getting-started.tex, line 149 (Table 1):
+
+  sinh & sinh\_rn & sinh\_ru & sinh\_rd & sinh\_rz & complete & complete (paper)\\ \hline
+
+docs/latex/0_getting-started.tex, lines 173-177, the definition of the
+first state column:
+
+  \item The first indicates the state of the search for worst cases
+    for correct rounding \cite{LMT98,Lef2000}. If it indicates
+    ``complete'', it means that the function is guaranteed to return
+    correct rounding on its whole floating-point input range.
+
+csh_fast.h, line 16:
+
+  static db_number const max_input_csh =  {{0x408633CE,0x8FB9F87E}};     /*7.1047586007e+02*/
+
+csh_fast.c, line 619 (sinh_ru) and line 671 (sinh_rd):
+
+  if (y.d > max_input_csh.d) { /* out of range */
+
+The guard is a strict inequality, so the double equal to max_input_csh.d
+is not caught here and reaches the accurate path.
+
+csh_fast.c, line 706 (sinh_rd), the last line of the accurate path:
+
+    return 1024. * res.d;
+
+The multiplication is a hardware binary64 operation in the caller's
+rounding mode, which is round-to-nearest unless the caller changed it;
+crlibm does not set it.  At the named input the intermediate overflows,
+so this line yields +infinity where directed rounding requires
++DBL_MAX.
+
+csh_fast.c, lines 713-719 (sinh_rz):
+
+  double sinh_rz(double x){
+    if( x > 0) {
+      return(sinh_rd(x));
+    }
+    else {
+      return(sinh_ru(x));
+    }
+  }
+
+The same strict guard exists in sinh_ru at line 619; the same final
+multiplication exists there at line 656 and in sinh_rn at line 602.

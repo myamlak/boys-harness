@@ -1,0 +1,80 @@
+Witness rerun: command record
+=============================
+Working directory for every command below:
+  C:\Users\myaml\dev\_witness
+The scripts derive the witness root from their own location, so the deposit
+can be moved.  Python is invoked with -I.  Exit codes are the ones observed
+at the rerun.
+
+Claim 1: Boost.Math Airy
+------------------------
+python -I scripts/make_boost_inputs.py
+  exit 0
+  writes raw/boost_airy_inputs.txt, raw/boost_airy_inputs_meta.csv
+
+cmd /c scripts\build_boost.bat > logs\boost_build.log 2>&1
+  exit 0
+  prints the compiler version and builds raw/boost_airy_witness.exe
+  (the log also records two harmless C4996 warnings from fopen/sscanf)
+
+raw\boost_airy_witness.exe raw\boost_airy_inputs.txt > raw\boost_airy_raw.csv
+  exit 0
+  2349 arguments, 4 comment lines and one header in the CSV
+
+python -I scripts/reference_boost.py > logs\reference_boost.log 2>&1
+  exit 0
+  writes raw/boost_airy_reference.csv (4698 rows)
+  writes raw/boost_independent_check.txt
+
+Second run for determinism:
+raw\boost_airy_witness.exe raw\boost_airy_inputs.txt > logs\boost_airy_raw_rerun.csv
+  exit 0
+cmp raw\boost_airy_raw.csv logs\boost_airy_raw_rerun.csv
+  exit 0, no output (byte-identical)
+
+Claim 2: crlibm sinh
+--------------------
+python -I scripts/make_crlibm_inputs.py
+  exit 0
+  writes raw/crlibm_sinh_inputs.txt, raw/crlibm_sinh_inputs_meta.csv
+  422 distinct arguments
+
+wsl -e bash -lc 'cd /mnt/c/Users/myaml/dev/_witness && \
+  bash scripts/build_crlibm.sh > logs/crlibm_build.log 2>&1'
+  first attempt: exit 1 at the driver compile, because the driver used
+    FLT_EVAL_METHOD without including <float.h>; the library itself had
+    built.  <float.h> was added to src/crlibm_sinh_witness.c.
+  the first configure had also selected the double-extended log branch;
+    --disable-double-extended was added to scripts/build_crlibm.sh to
+    match the audit's documented non-double-extended configuration.
+  final attempt: exit 0, log deposited; log.c selected, driver built.
+
+wsl -e bash -lc 'cd /mnt/c/Users/myaml/dev/_witness && \
+  raw/crlibm_sinh_witness raw/crlibm_sinh_inputs.txt > raw/crlibm_sinh_raw.csv'
+  exit 0
+  422 arguments
+
+python -I scripts/reference_crlibm.py > logs\reference_crlibm.log 2>&1
+  exit 0
+  writes raw/crlibm_sinh_reference.csv (422 rows including header)
+  writes raw/crlibm_sinh_independent_check.txt
+
+python -I scripts/crlibm_threshold_context.py
+  exit 0
+  writes raw/crlibm_threshold_context.txt
+
+Second run for determinism:
+wsl -e bash -lc 'cd /mnt/c/Users/myaml/dev/_witness && \
+  raw/crlibm_sinh_witness raw/crlibm_sinh_inputs.txt > logs/crlibm_sinh_raw_rerun.csv'
+  exit 0
+cmp raw\crlibm_sinh_raw.csv logs\crlibm_sinh_raw_rerun.csv
+  exit 0, no output (byte-identical)
+
+Note on the audit's build command
+---------------------------------
+accuracy-claim-audit/README.md describes the crlibm build as
+non-double-extended but its listed configure line does not pass
+--disable-double-extended.  configure.ac gives the double-extended branch
+as the default, so on this host the flag is required to obtain the
+documented configuration.  csh_fast.c, the sinh source, has no
+double-extended conditional; the flag selects log.c rather than log-de.c.

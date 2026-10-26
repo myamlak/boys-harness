@@ -1,0 +1,53 @@
+wrote 4698 rows to C:\Users\myaml\dev\_witness\raw\boost_airy_reference.csv
+
+== named arguments: error in eps = 2^-52 ==
+function                      x input_bits          error_eps  paper_eps
+airy_ai                    35.9 4041f33333333333   121.395340    121.395
+airy_ai                 78.1252 4053880346dc5d64   148.297779        n/a
+airy_ai             78.12521875 4053880395810625   414.878957    414.111
+airy_ai                   78.13 40538851eb851eb8   247.193968        n/a
+airy_ai       88.25843444227006 4056108a309d6d6f   534.561915        n/a
+airy_bi                    35.9 4041f33333333333   120.848885    121.395
+airy_bi                 78.1252 4053880346dc5d64   149.324772        n/a
+airy_bi             78.12521875 4053880395810625   414.110896    414.111
+airy_bi                   78.13 40538851eb851eb8   244.728194        n/a
+airy_bi       88.25843444227006 4056108a309d6d6f   529.766809        n/a
+
+== worst in dense windows (step 0.001) ==
+airy_ai  window [35.4, 36.4]: max 127.149510 eps at x=36.282 (404224189374bc6a)
+         named 35.9: 121.395340 eps at x=35.9
+         max within +/-0.5 of 35.9: 127.149510 eps at x=36.282 (404224189374bc6a)
+airy_bi  window [77.6, 78.6]: max 441.685988 eps at x=77.764 (405370e560418937)
+         named 78.1252: 149.324772 eps at x=78.1252
+         named 78.12521875: 414.110896 eps at x=78.12521875
+         named 78.13: 244.728194 eps at x=78.13
+         max within +/-0.5 of 78.1252: 441.685988 eps at x=77.764 (405370e560418937)
+
+== reconstructed audit grids (row table in the deposit) ==
+airy_ai  audit A2 grid: max 414.878957 eps at x=78.12521875 (4053880395810625) [audit A2 grid i=50]
+airy_bi  audit A2 grid: max 414.110896 eps at x=78.12521875 (4053880395810625) [audit A2 grid i=50]
+airy_ai  audit D1 grid: max 71.140608 eps at x=33.6875 (4040d80000000000) [audit D1 grid i=20]
+airy_bi  audit D1 grid: max 71.863591 eps at x=35.53125 (4041c40000000000) [audit D1 grid i=30]
+
+== overall maxima in the sampled set ==
+airy_ai : 534.561915 eps at x=88.25843444227006 (4056108a309d6d6f)
+airy_bi : 529.766809 eps at x=88.25843444227006 (4056108a309d6d6f)
+
+Boost.Math Airy reference: independent checks
+mpmath 1.4.1, mp.dps = 60
+x = 35.9 exact double = 35.9, bits 4041f33333333333
+ODE residual Ai'' - x Ai: |res| = 0.0 (relative)
+ODE residual Bi'' - x Bi: |res| = 8.15161e-62 (relative)
+Wronskian Ai Bi' - Ai' Bi = 0.318309886183790671537767526745
+Wronskian residual vs 1/pi = 1.22189e-61 (relative)
+
+60-vs-100 digit stability (does the reference round to the same binary64?)
+  x=35.9: Ai same=True Bi same=True
+  x=36.282: Ai same=True Bi same=True
+  x=77.764: Ai same=True Bi same=True
+  x=78.1252: Ai same=True Bi same=True
+  x=78.12521875: Ai same=True Bi same=True
+  x=78.13: Ai same=True Bi same=True
+  x=88.25843444227006: Ai same=True Bi same=True
+all stable: True
+
