@@ -1,0 +1,63 @@
+paths rows scanned: 3004442
+
+(1) exact-perturbation transfer, every 97th row, n != start
+    cells: 9505
+    worst relative deviation: 5.570598620124316
+    records kept: 9505; max by key 5.570598620124316; above 2: 232
+    ten worst rows (deviation, band, x, start, degree, n, measured, closed form,
+    |pert_delta|/|value|, that over eps.  The last ratio is the gate's own
+    margin: a value near 16 is a perturbation one rounding away from noise.)
+      5.5706  A2 x=11.896188857019089 start=2 deg=2 n=25  meas=2.8125 closed=0.428043  pert/value=1.16e-14  /eps=52.4
+      5.56762  A2 x=10.981406138722891 start=4 deg=16 n=19  meas=3.84375 closed=0.585258  pert/value=5.81e-14  /eps=262
+      5.17717  A2 x=11.334653066948119 start=2 deg=12 n=22  meas=0.903809 closed=0.146314  pert/value=3.93e-13  /eps=1.77e+03
+      5.17073  A2 x=7.0276408694349346 start=0 deg=16 n=10  meas=0.0134277 closed=0.00217604  pert/value=7.72e-15  /eps=34.8
+      5.16585  A2 x=10.953146384464873 start=4 deg=24 n=27  meas=1362.21 closed=220.928  pert/value=3.61e-11  /eps=1.63e+05
+      5.03591  A1 x=3.8761990005125533 start=0 deg=4 n=31  meas=2.87852e+15 closed=4.76899e+14  pert/value=3.24e-13  /eps=1.46e+03
+      4.83411  A2 x=11.730289626560374 start=2 deg=14 n=28  meas=39.7131 closed=6.80706  pert/value=3.72e-11  /eps=1.68e+05
+      4.83374  A2 x=10.981406138722891 start=4 deg=22 n=29  meas=7894.46 closed=1353.24  pert/value=2.4e-10  /eps=1.08e+06
+      4.78505  A2 x=11.136834787141991 start=4 deg=14 n=19  meas=2.74219 closed=0.474013  pert/value=4.78e-14  /eps=215
+      4.76583  A2 x=8.8254915107046017 start=0 deg=16 n=18  meas=0.0462036 closed=0.00801335  pert/value=3.63e-13  /eps=1.64e+03
+      4.70463  A2 x=10.967276261593881 start=2 deg=6 n=24  meas=7.0918 closed=1.24317  pert/value=1.99e-12  /eps=8.98e+03
+      4.67405  A2 x=10.967276261593881 start=4 deg=4 n=17  meas=1.25781 closed=0.221678  pert/value=2.33e-14  /eps=105
+    the summary's worst cell, found whether or not it is in the sample:
+      5.5706  A2 x=11.896188857019089 start=2 deg=2 n=25  meas=2.8125 closed=0.428043  pert/value=1.16e-14  /eps=52.4
+      1.95757  A2 x=10.910756753077845 start=2 deg=2 n=25  meas=9.25 closed=3.12756  pert/value=5.77e-15  /eps=26
+      0.659236  A2 x=11.786809135076412 start=0 deg=2 n=25  meas=0.00474167 closed=0.00285774  pert/value=1.61e-13  /eps=727
+      0.626319  A2 x=8.324996979802755 start=2 deg=2 n=25  meas=2560 closed=1574.11  pert/value=6.46e-15  /eps=29.1
+      0.0928512  A2 x=6.3879253780765701 start=8 deg=2 n=25  meas=4.06323e+06 closed=4.47912e+06  pert/value=1.55e-14  /eps=70
+    deviation distribution: median 0.208  p90 0.947  p99 2.75
+    cells with the perturbation above 4500 eps of the value: 6297, worst 5.17
+    cells within a factor two of the 16-eps gate (<= 32 eps): 537, worst 3.87
+
+(2) start-independence, non-canonical starts, every 16th argument
+    cells: 132496
+    worst relative deviation: 1.398619401680519e+183
+    unmeasurable cells by the 16-eps gate on the expected numerator: 34190 of 132496
+    ten worst rows (deviation, band, x, start, degree, n, measured, closed form,
+    seed error, |value_n|, expected numerator / 16-eps floor)
+      1.39862e+183  A1 x=3.1622776601683792e-06 start=28 deg=24 n=0  meas=-4.32167 closed=3.08995e-183  seed=-3.21e-18  value=1  ratio=2.8e-186 UNMEASURABLE
+      1.2066e+183  A1 x=3.1622776601683792e-06 start=28 deg=20 n=0  meas=3.72834 closed=3.08995e-183  seed=3.73e-18  value=1  ratio=3.24e-186 UNMEASURABLE
+      1.2066e+183  A1 x=3.1622776601683792e-06 start=28 deg=22 n=0  meas=3.72834 closed=3.08995e-183  seed=3.73e-18  value=1  ratio=3.24e-186 UNMEASURABLE
+      1.87046e+182  A1 x=3.1622776601683792e-06 start=28 deg=18 n=0  meas=-0.577962 closed=3.08995e-183  seed=-2.4e-17  value=1  ratio=2.09e-185 UNMEASURABLE
+      1.1843e+180  A1 x=3.1622776601683792e-06 start=28 deg=16 n=0  meas=-0.00365942 closed=3.08995e-183  seed=-3.8e-15  value=1  ratio=3.3e-183 UNMEASURABLE
+      8.87182e+177  A1 x=3.1622776601683792e-06 start=28 deg=14 n=0  meas=-2.74135e-05 closed=3.08995e-183  seed=-5.07e-13  value=1  ratio=4.41e-181 UNMEASURABLE
+      5.98224e+177  A1 x=3.1622776601683792e-06 start=28 deg=24 n=1  meas=2.92271 closed=4.88564e-178  seed=-3.21e-18  value=0.333  ratio=1.33e-180 UNMEASURABLE
+      5.16092e+177  A1 x=3.1622776601683792e-06 start=28 deg=20 n=1  meas=-2.52144 closed=4.88564e-178  seed=3.73e-18  value=0.333  ratio=1.54e-180 UNMEASURABLE
+      5.16092e+177  A1 x=3.1622776601683792e-06 start=28 deg=22 n=1  meas=-2.52144 closed=4.88564e-178  seed=3.73e-18  value=0.333  ratio=1.54e-180 UNMEASURABLE
+      8.0004e+176  A1 x=3.1622776601683792e-06 start=28 deg=18 n=1  meas=0.390871 closed=4.88564e-178  seed=-2.4e-17  value=0.333  ratio=9.91e-180 UNMEASURABLE
+    measurable cells: 98306 of 132496
+    worst measurable deviation: 264.029 at A2 start=2 deg=20 n=26 x=10.910756753077845
+    measurable cells with deviation above 1: 2710
+    unmeasurable among the 100 worst cells: 100
+
+(3) n^p q^n with two free parameters
+    cells: 26648  p=-8.892238833209769 q=3.028657826313866
+    maximum |residual| in log units: 687.0537228913399
+    rms: 55.64197937662048
+    range of log(transfer): -11.5563 .. 690.082
+    range of n*log(x): -690.776 .. 79.2488
+    per-argument refit of the same family: 833 arguments, worst residual 4.12561
+    worst five arguments: [(4.125608, ('A1', 7.498942093324558e-07)), (4.125608, ('A1', 5.108969774506928e-06)), (4.125608, ('A1', 9.085175756516868e-05)), (4.125608, ('A1', 0.029916890803630927)), (4.125608, ('A1', 2.6101572156825368e-08))]
+    three-parameter refit log T = c1 log n + c2 n + c3 n log x:
+      c1=-9.219335065715763 c2=3.432380221903073 c3=-0.9999317383958976 (c3 = -1 would be the derived x^-n)
+      maximum |residual|: 4.1257  rms: 0.988478

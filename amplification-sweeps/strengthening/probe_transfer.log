@@ -1,0 +1,28 @@
+cell: A2 x = 11.896188857019089 start = 2 degree = 2
+seed = 0.0014833226011728142  ULP = 2.1684043449710089e-19  closed form A_25/A_2 = 0.42804319097896554
+
+replay against the deposited one-ULP chain, n = 3..32:
+  base values differing from the record: 0
+  perturbation deltas differing from the record: 0
+  deposited transfer at n=25: 2.8125; replay: 2.8125
+
+k-ULP seed perturbation, measured transfer_t = (F_t(seed + k ulp) - F_t(seed)) / (k ulp)
+k        transfer at n=25   deviation from closed form   max deviation over n=3..32
+1        2.8125   5.5706                  5.77414
+2        1.40625   2.2853                  2.38707
+4        0.703125   0.64265                  0.693535
+16       0.51171875   0.195484                  0.241926
+64       0.45166015625   0.0551743                  0.068599
+256      0.435546875   0.0175302                  0.017652
+1024     0.4288330078125   0.00184518                  0.00250822
+4096     0.42848968505859375   0.00104311                  0.00112618
+16384    0.42810821533203125   0.000151911                  0.000161437
+65536    0.42805004119873047   1.60036e-05                  2.19789e-05
+1048576  0.42804360389709473   9.64665e-07                  2.30539e-06
+16777216 0.42804325930774212   1.59631e-07                  1.85104e-07
+
+closed form A_n/A_2 at n=25: 0.42804319097896554
+the one-ULP measured transfer 2.8125 is 6.57x the closed form;
+2.8125 is the deposited perturbation delta 6.0986e-19 over the seed ULP 2.1684e-19,
+i.e. the two chains differ by 90 ULP of F_25, not by the 13.7 ULP the closed form asks for.
+EXIT=0

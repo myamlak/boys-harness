@@ -1,0 +1,56 @@
+cells read: first 308616, second 27588
+arguments read: first 9352, second 836
+shared arguments: 648 of the second's 836 (first 9352, first-only 8704, second-only 188)
+  by band: A1 shared 460, first-only 4352, second-only 94  A2 shared 188, first-only 4352, second-only 94
+shared arguments whose 33 reference values agree digit for digit: 359 of 648
+worst relative reference difference on a shared argument: 9.98147e-60 at ('A2', 11.094445155754963) order 17
+shared cells compared: 21384, bit-identical (both entries): 21384, differing: 0
+population arguments (x >= theta0): first 8039, second 572, shared 411, first-only 7628, second-only 161
+measured winners differing between sweeps: 8 of 132 comparisons
+  A1 relative order  3: first ship    (ratio 0.846950)   second product (ratio 1.708860)
+  A1 relative order  5: first product (ratio 1.375024)   second ship    (ratio 0.849028)
+  A1 relative order 17: first product (ratio 1.455138)   second ship    (ratio 0.954810)
+  A1 relative order 32: first product (ratio 2.074801)   second ship    (ratio 0.879257)
+  A2 absolute order 17: first ship    (ratio 0.959072)   second tie     (ratio 1.000000)
+  A2 absolute order 19: first ship    (ratio 0.960651)   second tie     (ratio 1.000000)
+  A2 absolute order 20: first product (ratio 1.231481)   second ship    (ratio 0.888397)
+  A2 relative order 21: first product (ratio 1.594129)   second ship    (ratio 0.816521)
+
+same-fit region B1 orders 17..32, first-sweep arguments; ratio = |recursed-ref| / |direct-ref| over cells whose direct entry is not the correctly rounded value
+order  cells  identical  rec_ok  dir_ok  median   q25      q75      frac<1   band rec/dir
+   17   3696    1069    1532    1116  0.666667  0.0384615  1.19048  0.5557   0.472339
+   18   3688    1049    1447    1124  0.777778  0.105263  1.37143  0.5306   0.430632
+   19   3758    1073    1355    1054  0.875  0.25  1.4  0.5232   0.545983
+   20   3849    1062    1309     963  1  0.222222  1.5  0.4936   0.470115
+   21   4021    1036    1180     791  1  0.3  1.58333  0.4917   0.343904
+   22   3723    1053    1471    1089  0.888889  0.111111  1.5  0.5111   0.427831
+   23   3720    1063    1421    1092  0.866667  0.157895  1.5  0.5164   0.486334
+   24   3787    1030    1341    1025  0.987654  0.242424  1.5  0.5004   0.461260
+   25   3749    1081    1428    1063  0.8  0.142857  1.35714  0.5332   0.476079
+   26   3833     985    1317     979  0.8  0.181818  1.5  0.5202   0.386137
+   27   3892    1028    1305     920  0.894737  0.2  1.5  0.5141   0.520540
+   28   3653    1116    1539    1159  0.674419  0.0701754  1.32184  0.5448   0.454459
+   29   3632    1130    1557    1180  0.666667  0.0454545  1.13953  0.5675   0.429573
+   30   3702    1098    1530    1110  0.727273  0.0769231  1.36364  0.5440   0.444966
+   31   3674    1109    1506    1138  0.714286  0.1  1.25373  0.5514   0.483963
+   32   3759    1230    1168    1053  1  0.291667  1.33871  0.4911   0.950854
+
+the same on the second sweep's arguments
+order  cells  identical  rec_ok  dir_ok  median   q25      q75      frac<1   band rec/dir
+   17    395     163     251     159  0.5  0  1  0.5620   0.477818
+   18    388     167     249     166  0.5  0  1  0.5928   0.450245
+   19    391     173     227     163  0.714286  0  1  0.5524   0.575305
+   20    401     168     231     153  0.666667  0  1  0.5561   0.462959
+   21    426     172     220     128  0.666667  0  1  0.5329   0.398015
+   22    400     160     264     154  0.5  0  1  0.5925   0.472436
+   23    389     161     248     165  0.526316  0  1  0.5938   0.620542
+   24    381     168     232     173  0.8  0  1  0.5197   0.576262
+   25    400     167     232     154  0.5  0  1  0.5650   0.483919
+   26    401     145     205     153  0.5  0  1  0.5761   0.533408
+   27    405     170     244     149  0.5  0  1  0.5951   0.544528
+   28    386     163     248     168  0.5  0  1  0.5907   0.518059
+   29    377     179     243     177  0.5  0  1  0.5889   0.551033
+   30    393     167     265     161  0.428571  0  1  0.6260   0.410947
+   31    380     168     252     174  0.5  0  1  0.6132   0.454011
+   32    415     205     166     139  1  0.181818  1  0.4241   0.960800
+EXIT=0

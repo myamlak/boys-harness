@@ -1,0 +1,7 @@
+sweep: first
+cells: 308616 reference arguments: 9352
+model_from: 1.0855252345349333
+per_order reproduction: 264 values checked, 0 mismatched
+band_summary reproduction: 0 mismatched rows
+model population arguments: {'A1': 3499, 'A2': 4540} cells: {'A1': 115467, 'A2': 149820}
+wrote out\first_m0

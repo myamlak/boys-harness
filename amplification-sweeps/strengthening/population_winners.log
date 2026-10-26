@@ -1,0 +1,62 @@
+cells read: 308616 reference arguments: 9352
+
+comparisons whose measured winner changes when the band maxima are restricted to x >= theta0: 14 of 132
+  A1 absolute order  0: whole ship    -> population product
+      whole ship 1.6610920772963861e-16 at x=0.66231233687485824   product 2.2079726518177838e-16 at x=0.060321154747383421
+      pop   ship 1.3755401165396436e-16 at x=1.7169946918691685   product 1.3116554139209733e-16 at x=3.0004807439584642
+  A1 absolute order 10: whole ship    -> population product
+      whole ship 1.033736666968787e-17 at x=4.9439138953385218   product 1.4553771042828541e-17 at x=0.0072854042586237133
+      pop   ship 1.033736666968787e-17 at x=4.9439138953385218   product 6.6441049123768534e-18 at x=1.2856028548337064
+  A1 absolute order 17: whole ship    -> population product
+      whole ship 4.4719622144459081e-18 at x=0.09307842725578519   product 9.4676900807283315e-18 at x=0.15520267693306655
+      pop   ship 4.1016598154390839e-18 at x=5.949923309138514   product 3.4076411959051339e-18 at x=1.215633830155411
+  A1 absolute order 18: whole ship    -> population product
+      whole ship 4.389038091174305e-18 at x=0.080978493248086925   product 1.0192075110602288e-17 at x=0.060321154747383421
+      pop   ship 3.8293707523775041e-18 at x=5.8830347812074031   product 3.1770620591290186e-18 at x=1.1796794087931795
+  A1 absolute order 19: whole ship    -> population product
+      whole ship 4.2675129095863417e-18 at x=0.42706974569334649   product 7.8162065863463319e-18 at x=0.094214416888865671
+      pop   ship 3.7442140360094787e-18 at x=1.2856028548337064   product 3.1489803967860106e-18 at x=1.1443715934463372
+  A1 absolute order 21: whole ship    -> population product
+      whole ship 3.7874785654975068e-18 at x=0.00063788632180061811   product 1.1013191973671032e-17 at x=0.054958769034658239
+      pop   ship 3.5807964249029174e-18 at x=5.9499162006364967   product 3.4080150073953887e-18 at x=1.4268341162210758
+  A1 absolute order 23: whole ship    -> population product
+      whole ship 3.7437372156850717e-18 at x=3.4807005884284109e-05   product 7.6978726846449034e-18 at x=0.00063788632180061811
+      pop   ship 3.6971314892219007e-18 at x=5.8835871232242738   product 2.8406811175488332e-18 at x=1.3775853691317272
+  A1 absolute order 24: whole ship    -> population product
+      whole ship 3.8160691937321872e-18 at x=5.8976298214795468   product 8.2731425059166721e-18 at x=4.6160999466007456e-06
+      pop   ship 3.8160691937321872e-18 at x=5.8976298214795468   product 2.4593595399263985e-18 at x=1.215633830155411
+  A1 absolute order 25: whole ship    -> population product
+      whole ship 3.5208180341768227e-18 at x=0.14526181826304302   product 7.3954479787761746e-18 at x=0.064033275146707425
+      pop   ship 3.2554574536353594e-18 at x=1.1754061205448725   product 2.3880957156469559e-18 at x=1.1754061205448725
+  A1 absolute order 26: whole ship    -> population product
+      whole ship 3.2713010255372182e-18 at x=1.0855252345349335   product 8.4718736974711764e-18 at x=0.00054688749486908605
+      pop   ship 3.2713010255372182e-18 at x=1.0855252345349335   product 2.7762775455243638e-18 at x=1.278785051125916
+  A1 absolute order 27: whole ship    -> population product
+      whole ship 3.5404914957352824e-18 at x=0.072854042586237136   product 6.8015774997373289e-18 at x=6.514506214219339e-11
+      pop   ship 3.0388087021126632e-18 at x=1.0859028257783458   product 2.7748339753040018e-18 at x=1.1754061205448725
+  A1 absolute order 29: whole ship    -> population product
+      whole ship 3.1549666700714254e-18 at x=1e-08   product 7.3444261120991534e-18 at x=0.01156499314212267
+      pop   ship 2.7029113044413826e-18 at x=5.9499115634972206   product 2.2334901236963847e-18 at x=1.2856028548337064
+  A1 absolute order 30: whole ship    -> population product
+      whole ship 3.0245614019330212e-18 at x=3.5812858188836395e-11   product 6.7972857996679811e-18 at x=0.001
+      pop   ship 2.2475333160454123e-18 at x=1.0855252345349335   product 2.070095939465399e-18 at x=1.4268341162210758
+  A1 absolute order 31: whole ship    -> population product
+      whole ship 2.8501727600443424e-18 at x=1.5553719360115414e-07   product 5.8892343504397088e-18 at x=0.11708302596588638
+      pop   ship 2.6425788683849046e-18 at x=5.9450032949389264   product 1.7131498741706241e-18 at x=1.2856028548337064
+
+margin 1: commits 69, right against the whole-band winners 68, wrong 1
+  against the population-restricted winners: right 69, wrong 0, abstain-at-tie 0
+margin 0: commits 99, right against the whole-band winners 85, wrong 14
+  against the population-restricted winners: right 87, wrong 11, abstain-at-tie 1
+    wrong: A1 absolute order 1 chose product, population winner ship (whole-band winner ship)
+    wrong: A1 absolute order 9 chose product, population winner ship (whole-band winner ship)
+    wrong: A1 relative order 3 chose product, population winner ship (whole-band winner ship)
+    wrong: A1 relative order 9 chose product, population winner ship (whole-band winner ship)
+    wrong: A2 absolute order 19 chose product, population winner ship (whole-band winner ship)
+    wrong: A2 relative order 11 chose product, population winner ship (whole-band winner ship)
+    wrong: A2 relative order 12 chose product, population winner ship (whole-band winner ship)
+    wrong: A2 relative order 13 chose product, population winner ship (whole-band winner ship)
+    wrong: A2 relative order 18 chose product, population winner ship (whole-band winner ship)
+    wrong: A2 relative order 19 chose product, population winner ship (whole-band winner ship)
+    wrong: A2 relative order 20 chose product, population winner ship (whole-band winner ship)
+    tie: A2 absolute order 18, choice product, whole-band winner tie

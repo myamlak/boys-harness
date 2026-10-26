@@ -1,0 +1,35 @@
+paths rows scanned: 3004442
+sampled cells: 132496   (check_transfers.log: 132496)
+measurable cells: 98306   (98 306)
+
+split by the model's population (x >= theta0 = 1.0855252345349333):
+  inside population: measurable  71569, bound violations   3607, worst deviation 264.029 at A2 x=10.910756753077845 start=2 deg=20 n=26
+  below  population: measurable  26737, bound violations  13899, worst deviation 65.0102 at A1 x=0.03287966539999454 start=24 deg=20 n=26
+
+bound |measured - a|/a <= charge/seed_term, on every measurable cell:
+  all   : violations 17506 of 98306; deviation/bound median 0.133  p90 2.54  p99 919  max 5.25049e+06
+  inside: violations  3607 of 71569; deviation/bound median 0.0935  p90 0.607  p99 2.43  max 533.91
+  below : violations 13899 of 26737; deviation/bound median 1.12  p90 25.2  p99 1.84e+05  max 5.25049e+06
+
+the two regimes the seed-only template recognises, inside the population:
+  inside: seed term above the charge (bound <= 1): 61666 cells, deviation > 1:    0
+          charge above the seed term (bound  > 1):  9903 cells, deviation > 1: 1913
+  below : seed term above the charge (bound <= 1): 25001 cells, deviation > 1:  426
+          charge above the seed term (bound  > 1):  1736 cells, deviation > 1:  371
+
+worst measurable deviation overall: 264.029 at A2 x=10.910756753077845 start=2 degree=20 n=26
+  inside the population: yes
+  its bound, charge/seed_term: 3832.1
+  its measured transfer and A_n/A_start: 1937.25  7.30956
+worst measurable deviation inside the population: 264.029 at A2 x=10.910756753077845 start=2 degree=20 n=26
+  its bound, charge/seed_term: 3832.1
+  measured transfer and A_n/A_start: 1937.25  7.30956
+  delivered relative error |F_n - ref| / |F_n|: 4.25e-12
+  (check_transfers.log reports 264.029 at A2 start=2 deg=20 n=26 x=10.910756753077845)
+
+the five population cells that most exceed the charge bound, by deviation/bound:
+  deviation 6.25042e-17  bound 1.17069e-19  ratio 533.91  delivered rel err 2.85e+03  A1 x=1.8976049875123064 start=2 deg=0 n=3
+  deviation 3.49861e-16  bound 1.50434e-17  ratio 23.2567  delivered rel err 22.1  A1 x=2.6317407495956342 start=8 deg=0 n=9
+  deviation 2.7502e-17  bound 1.21715e-18  ratio 22.5953  delivered rel err 274  A2 x=9.81505205805367 start=8 deg=2 n=9
+  deviation 9.04499e-17  bound 4.89993e-18  ratio 18.4594  delivered rel err 68  A2 x=9.2935327806658492 start=16 deg=2 n=17
+  deviation 7.02721e-17  bound 3.93516e-18  ratio 17.8575  delivered rel err 86.9  A2 x=10.262068581528943 start=8 deg=2 n=2

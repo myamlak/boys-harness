@@ -1,0 +1,18 @@
+PASS raw/cells.csv == product-amplification/results/cells.csv.xz  dd26d0b2a4352113d9f15433ec991adfacc211607ae9586c0bb51cd12b3f3369
+PASS raw/reference.csv == product-amplification/data/reference.csv.xz  1e554a3540c6a15535b80f7f2597360bfc3a75919fa71d1496b284f348deb5b9
+PASS raw/paths.csv == amplification-form/results/paths.csv.xz  81001a06d80c88e5b3ddac1f3dd011cae6f8ce2e806c8bf1f7f26e85dd8c8219
+PASS analyze.py read_reference body identical
+PASS analyze.py amplification body identical
+PASS analyze.py recurrence_arithmetic body identical
+     paper-tree analyze.py sha256  a6172f1e7af6d8c6b59cf4a9f158c082fc9751a7e35aa5ba8cd883001f91edc3
+     deposit    analyze.py sha256  4e7454492a53cef13b7ce2b98ff10bde0529ac406c105a570193499a69077f20
+PASS same boys commit  482fd3388c276091834a6c12a642d9de2481c9f2
+PASS same boys tag  v5.0.0
+PASS both boys trees clean
+PASS same compiler  C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\cl.EXE
+PASS same compile flags  /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2
+PASS same 15 boys digests  15 entries
+PASS same machine  trompek
+
+all checks passed
+EXIT=0

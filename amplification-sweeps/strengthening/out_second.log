@@ -1,0 +1,10 @@
+sweep: second
+cells: 27588 reference arguments: 836
+model_from: 1.0855252345349333
+per_order reproduction: 264 values checked, 0 mismatched
+band_summary reproduction: 0 mismatched rows
+model population arguments: {'A1': 290, 'A2': 282} cells: {'A1': 9570, 'A2': 9306}
+deposited prediction.csv: 132 rows, 0 mismatches on state/choice/right
+deposited prediction_scan.csv: 28 rows, 0 mismatches
+wrote out\second
+EXIT=0

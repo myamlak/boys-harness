@@ -1,0 +1,217 @@
+==============================================================================
+first sweep, band A1 orders 17..32
+cells: 158796 arguments: 4812
+
+order  metric    full-band rec/dir  ratio   population rec/dir  ratio
+   17  absolute  4.47196221e-18 / 9.46769008e-18  0.472339  4.10165982e-18 / 3.4076412e-18  1.203665
+   17  relative  3.7759204e-14 / 2.59488838e-14  1.455138  3.7759204e-14 / 2.59488838e-14  1.455138
+   18  absolute  4.38903809e-18 / 1.01920751e-17  0.430632  3.82937075e-18 / 3.17706206e-18  1.205318
+   18  relative  3.58056636e-14 / 2.17639336e-14  1.645183  3.58056636e-14 / 2.17639336e-14  1.645183
+   19  absolute  4.26751291e-18 / 7.81620659e-18  0.545983  3.74421404e-18 / 3.1489804e-18  1.189024
+   19  relative  3.62055362e-14 / 2.53931323e-14  1.425800  3.62055362e-14 / 2.53931323e-14  1.425800
+   20  absolute  4.0673709e-18 / 8.65186529e-18  0.470115  2.96136922e-18 / 3.2975517e-18  0.898051
+   20  relative  3.26411597e-14 / 2.54197082e-14  1.284089  3.26411597e-14 / 2.54197082e-14  1.284089
+   21  absolute  3.78747857e-18 / 1.1013192e-17  0.343904  3.58079642e-18 / 3.40801501e-18  1.050699
+   21  relative  4.36833914e-14 / 2.92233942e-14  1.494809  4.36833914e-14 / 2.92233942e-14  1.494809
+   22  absolute  3.8890938e-18 / 9.09026234e-18  0.427831  3.13167188e-18 / 3.60438795e-18  0.868850
+   22  relative  3.674982e-14 / 2.34536062e-14  1.566916  3.674982e-14 / 2.34536062e-14  1.566916
+   23  absolute  3.74373722e-18 / 7.69787268e-18  0.486334  3.69713149e-18 / 2.84068112e-18  1.301495
+   23  relative  4.75898506e-14 / 3.32438641e-14  1.431538  4.75898506e-14 / 3.32438641e-14  1.431538
+   24  absolute  3.81606919e-18 / 8.27314251e-18  0.461260  3.81606919e-18 / 2.45935954e-18  1.551652
+   24  relative  5.25171572e-14 / 3.12778595e-14  1.679052  5.25171572e-14 / 3.12778595e-14  1.679052
+   25  absolute  3.52081803e-18 / 7.39544798e-18  0.476079  3.25545745e-18 / 2.38809572e-18  1.363202
+   25  relative  4.16721497e-14 / 3.3624014e-14  1.239357  4.16721497e-14 / 3.3624014e-14  1.239357
+   26  absolute  3.27130103e-18 / 8.4718737e-18  0.386137  3.27130103e-18 / 2.77627755e-18  1.178305
+   26  relative  3.73729022e-14 / 2.14132625e-14  1.745316  3.73729022e-14 / 2.14132625e-14  1.745316
+   27  absolute  3.5404915e-18 / 6.8015775e-18  0.520540  3.0388087e-18 / 2.77483398e-18  1.095132
+   27  relative  4.49759216e-14 / 2.82536251e-14  1.591864  4.49759216e-14 / 2.82536251e-14  1.591864
+   28  absolute  3.21522088e-18 / 7.0748241e-18  0.454459  2.27997253e-18 / 2.48736066e-18  0.916623
+   28  relative  3.94095249e-14 / 2.09916846e-14  1.877387  3.94095249e-14 / 2.09916846e-14  1.877387
+   29  absolute  3.15496667e-18 / 7.34442611e-18  0.429573  2.7029113e-18 / 2.23349012e-18  1.210174
+   29  relative  4.93439932e-14 / 2.97576818e-14  1.658193  4.93439932e-14 / 2.97576818e-14  1.658193
+   30  absolute  3.0245614e-18 / 6.7972858e-18  0.444966  2.24753332e-18 / 2.07009594e-18  1.085715
+   30  relative  3.77359795e-14 / 2.17942816e-14  1.731462  3.77359795e-14 / 2.17942816e-14  1.731462
+   31  absolute  2.85017276e-18 / 5.88923435e-18  0.483963  2.64257887e-18 / 1.71314987e-18  1.542526
+   31  relative  5.20169589e-14 / 1.81729195e-14  2.862334  5.20169589e-14 / 1.81729195e-14  2.862334
+   32  absolute  4.94366208e-18 / 5.19918327e-18  0.950854  1.92693629e-18 / 1.98420382e-18  0.971138
+   32  relative  3.51493935e-14 / 1.6941088e-14  2.074801  3.51493935e-14 / 1.6941088e-14  2.074801
+
+population worsts at (order, metric, entry): x
+  17 absolute rec at x = 5.9499233
+  17 absolute dir at x = 1.2156338
+  17 relative rec at x = 5.9499233
+  17 relative dir at x = 5.9474664
+  18 absolute rec at x = 5.8830348
+  18 absolute dir at x = 1.1796794
+  18 relative rec at x = 5.8830348
+  18 relative dir at x = 5.9335009
+  19 absolute rec at x = 1.2856029
+  19 absolute dir at x = 1.1443716
+  19 relative rec at x = 5.9489175
+  19 relative dir at x = 5.9379536
+  20 absolute rec at x = 5.9095666
+  20 absolute dir at x = 1.3814371
+  20 relative rec at x = 5.9095666
+  20 relative dir at x = 5.942528
+  21 absolute rec at x = 5.9499162
+  21 absolute dir at x = 1.4268341
+  21 relative rec at x = 5.9499162
+  21 relative dir at x = 5.9383591
+  22 absolute rec at x = 1.0855252
+  22 absolute dir at x = 1.1754061
+  22 relative rec at x = 5.9499233
+  22 relative dir at x = 5.9496082
+  23 absolute rec at x = 5.8835871
+  23 absolute dir at x = 1.3775854
+  23 relative rec at x = 5.8835871
+  23 relative dir at x = 5.9466686
+  24 absolute rec at x = 5.8976298
+  24 absolute dir at x = 1.2156338
+  24 relative rec at x = 5.8976298
+  24 relative dir at x = 5.9412084
+  25 absolute rec at x = 1.1754061
+  25 absolute dir at x = 1.1754061
+  25 relative rec at x = 5.9470815
+  25 relative dir at x = 5.9499241
+  26 absolute rec at x = 1.0855252
+  26 absolute dir at x = 1.2787851
+  26 relative rec at x = 5.9499157
+  26 relative dir at x = 5.9498532
+  27 absolute rec at x = 1.0859028
+  27 absolute dir at x = 1.1754061
+  27 relative rec at x = 5.9494612
+  27 relative dir at x = 5.9499241
+  28 absolute rec at x = 5.8378579
+  28 absolute dir at x = 1.2156338
+  28 relative rec at x = 5.9498827
+  28 relative dir at x = 5.949924
+  29 absolute rec at x = 5.9499116
+  29 absolute dir at x = 1.2856029
+  29 relative rec at x = 5.9499116
+  29 relative dir at x = 5.9487262
+  30 absolute rec at x = 1.0855252
+  30 absolute dir at x = 1.4268341
+  30 relative rec at x = 5.9472775
+  30 relative dir at x = 5.9498321
+  31 absolute rec at x = 5.9450033
+  31 absolute dir at x = 1.2856029
+  31 relative rec at x = 5.9450033
+  31 relative dir at x = 5.9498735
+  32 absolute rec at x = 1.3698931
+  32 absolute dir at x = 1.3775854
+  32 relative rec at x = 5.9499013
+  32 relative dir at x = 5.949924
+
+per-cell distribution inside the population, orders 17..32:
+  cells 55984, bit-identical 8612, rec correctly rounded 8052, dir correctly rounded 7790
+  ratio quantiles over 48194 cells with a non-zero direct error: q10 0 q25 0.384615 median 1 q75 1.83929 q90 3.74194
+  fraction of cells with ratio < 1: 0.4733
+==============================================================================
+second sweep, band A1 orders 17..32
+cells: 18282 arguments: 554
+
+order  metric    full-band rec/dir  ratio   population rec/dir  ratio
+   17  absolute  4.2033571e-18 / 8.79699234e-18  0.477818  3.15498272e-18 / 2.63359104e-18  1.197977
+   17  relative  1.86530503e-14 / 1.95358789e-14  0.954810  1.86530503e-14 / 1.95358789e-14  0.954810
+   18  absolute  4.38809739e-18 / 9.74601818e-18  0.450245  2.90523243e-18 / 3.17706206e-18  0.914440
+   18  relative  2.34143362e-14 / 1.42896699e-14  1.638550  2.34143362e-14 / 1.42896699e-14  1.638550
+   19  absolute  4.35884029e-18 / 7.57657338e-18  0.575305  3.74421404e-18 / 3.1489804e-18  1.189024
+   19  relative  2.50117532e-14 / 2.24667098e-14  1.113281  2.50117532e-14 / 2.24667098e-14  1.113281
+   20  absolute  3.64841028e-18 / 7.88064035e-18  0.462959  2.77063936e-18 / 2.97394957e-18  0.931636
+   20  relative  2.87385909e-14 / 1.37488057e-14  2.090261  2.87385909e-14 / 1.37488057e-14  2.090261
+   21  absolute  3.54469303e-18 / 8.9059271e-18  0.398015  2.69569815e-18 / 3.40801501e-18  0.790988
+   21  relative  2.81302599e-14 / 2.19599021e-14  1.280983  2.81302599e-14 / 2.19599021e-14  1.280983
+   22  absolute  3.83213212e-18 / 8.11142679e-18  0.472436  3.13167188e-18 / 3.13167188e-18  1.000000
+   22  relative  2.12967201e-14 / 1.83104255e-14  1.163093  2.12967201e-14 / 1.83104255e-14  1.163093
+   23  absolute  3.74373722e-18 / 6.03301642e-18  0.620542  2.53129481e-18 / 2.13972778e-18  1.182999
+   23  relative  2.98706546e-14 / 1.90045088e-14  1.571767  2.98706546e-14 / 1.90045088e-14  1.571767
+   24  absolute  3.22932358e-18 / 5.60391666e-18  0.576262  2.89072674e-18 / 2.14314104e-18  1.348827
+   24  relative  3.944525e-14 / 2.33005418e-14  1.692890  3.944525e-14 / 2.33005418e-14  1.692890
+   25  absolute  2.84536827e-18 / 5.87984547e-18  0.483919  2.79567464e-18 / 2.29362996e-18  1.218887
+   25  relative  3.53909341e-14 / 2.45812724e-14  1.439752  3.53909341e-14 / 2.45812724e-14  1.439752
+   26  absolute  3.27130103e-18 / 6.13283071e-18  0.533408  3.27130103e-18 / 2.71490941e-18  1.204939
+   26  relative  2.24152962e-14 / 1.41352045e-14  1.585778  2.24152962e-14 / 1.41352045e-14  1.585778
+   27  absolute  3.5404915e-18 / 6.50194024e-18  0.544528  2.48919593e-18 / 2.48919593e-18  1.000000
+   27  relative  3.43609969e-14 / 1.84149908e-14  1.865925  3.43609969e-14 / 1.84149908e-14  1.865925
+   28  absolute  3.10135357e-18 / 5.98648526e-18  0.518059  2.12106837e-18 / 1.8216877e-18  1.164342
+   28  relative  3.32094495e-14 / 1.33531662e-14  2.487009  3.32094495e-14 / 1.33531662e-14  2.487009
+   29  absolute  3.15496667e-18 / 5.72555437e-18  0.551033  2.23349012e-18 / 2.23349012e-18  1.000000
+   29  relative  3.00652792e-14 / 2.17482689e-14  1.382422  3.00652792e-14 / 2.17482689e-14  1.382422
+   30  absolute  2.79332559e-18 / 6.7972858e-18  0.410947  2.24753332e-18 / 2.07009594e-18  1.085715
+   30  relative  2.90733575e-14 / 1.77494646e-14  1.637985  2.90733575e-14 / 1.77494646e-14  1.637985
+   31  absolute  2.51104797e-18 / 5.5308118e-18  0.454011  1.91991245e-18 / 1.71314987e-18  1.120691
+   31  relative  2.55219201e-14 / 1.48480266e-14  1.718876  2.55219201e-14 / 1.48480266e-14  1.718876
+   32  absolute  4.63662974e-18 / 4.82580172e-18  0.960800  1.61670843e-18 / 1.45796474e-18  1.108880
+   32  relative  1.91603919e-14 / 2.17915685e-14  0.879257  1.91603919e-14 / 2.17915685e-14  0.879257
+
+population worsts at (order, metric, entry): x
+  17 absolute rec at x = 1.1477025
+  17 absolute dir at x = 1.2856029
+  17 relative rec at x = 5.8664061
+  17 relative dir at x = 5.9495174
+  18 absolute rec at x = 1.0855252
+  18 absolute dir at x = 1.1796794
+  18 relative rec at x = 5.9462648
+  18 relative dir at x = 5.9300194
+  19 absolute rec at x = 1.2856029
+  19 absolute dir at x = 1.1443716
+  19 relative rec at x = 5.7919033
+  19 relative dir at x = 5.9495174
+  20 absolute rec at x = 1.4268341
+  20 absolute dir at x = 1.8152201
+  20 relative rec at x = 5.9397631
+  20 relative dir at x = 5.9170444
+  21 absolute rec at x = 1.0855252
+  21 absolute dir at x = 1.4268341
+  21 relative rec at x = 5.9008523
+  21 relative dir at x = 5.9170444
+  22 absolute rec at x = 1.0855252
+  22 absolute dir at x = 1.0855252
+  22 relative rec at x = 5.7174006
+  22 relative dir at x = 5.9462648
+  23 absolute rec at x = 5.7919033
+  23 absolute dir at x = 1.4268341
+  23 relative rec at x = 5.7919033
+  23 relative dir at x = 5.8043191
+  24 absolute rec at x = 5.8043191
+  24 absolute dir at x = 1.4268341
+  24 relative rec at x = 5.9409089
+  24 relative dir at x = 5.8814608
+  25 absolute rec at x = 1.3679878
+  25 absolute dir at x = 1.4268341
+  25 relative rec at x = 5.7723765
+  25 relative dir at x = 5.9397631
+  26 absolute rec at x = 1.0855252
+  26 absolute dir at x = 1.4268341
+  26 relative rec at x = 5.7919033
+  26 relative dir at x = 5.7373751
+  27 absolute rec at x = 1.0855252
+  27 absolute dir at x = 1.0855252
+  27 relative rec at x = 5.9300194
+  27 relative dir at x = 5.8664061
+  28 absolute rec at x = 1.1477025
+  28 absolute dir at x = 1.1443716
+  28 relative rec at x = 5.9300194
+  28 relative dir at x = 5.8664061
+  29 absolute rec at x = 1.2856029
+  29 absolute dir at x = 1.2856029
+  29 relative rec at x = 5.9300194
+  29 relative dir at x = 5.9495174
+  30 absolute rec at x = 1.0855252
+  30 absolute dir at x = 1.4268341
+  30 relative rec at x = 5.9409089
+  30 relative dir at x = 5.9397631
+  31 absolute rec at x = 1.1443716
+  31 absolute dir at x = 1.2856029
+  31 relative rec at x = 5.9409089
+  31 relative dir at x = 5.9397631
+  32 absolute rec at x = 1.1443716
+  32 absolute dir at x = 1.4268341
+  32 relative rec at x = 5.6428978
+  32 relative dir at x = 5.9300194
+
+per-cell distribution inside the population, orders 17..32:
+  cells 4640, bit-identical 1094, rec correctly rounded 906, dir correctly rounded 896
+  ratio quantiles over 3744 cells with a non-zero direct error: q10 0 q25 0.342857 median 1 q75 1.5 q90 3
+  fraction of cells with ratio < 1: 0.4562
+EXIT=0
