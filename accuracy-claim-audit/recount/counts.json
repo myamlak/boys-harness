@@ -1,0 +1,3127 @@
+{
+  "paper": "papers-b-v5/papers/claims-as-rows",
+  "generated_by": "recount.py",
+  "definitions": {
+    "B": "add_expected_result(...) call with >=8 top-level arguments in libs/math/test/test_*.cpp",
+    "V": "data row in tests/*.testdata with mode N/P/M/Z and 4 or 6 hex words",
+    "G": "line containing '->' in gappa/**/*.gappa (alternatives reported)",
+    "C": "comment line in top-level *.c/*.h with a power-of-two literal and one of error/accurate/accuracy/precision/bound"
+  },
+  "provenance": {
+    "boost": {
+      "source_root": "C:\\Users\\myaml\\dev\\_boost-smoke\\boost-1_92-src\\boost_1_92_0",
+      "version_macro": 109200,
+      "version_ok": true,
+      "has_libs_math_test": true,
+      "archive": {
+        "path": "C:\\Users\\myaml\\dev\\_witness\\downloads\\boost_1_92_0.tar.gz",
+        "bytes": 235384471,
+        "sha256": "c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce",
+        "top_directory": "boost_1_92_0",
+        "expected_sha256": "c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce",
+        "sha256_matches": true
+      },
+      "witness_headers": {
+        "root": "C:\\Users\\myaml\\dev\\_witness\\third_party\\boost_1_92_0",
+        "version_macro": 109200,
+        "boost_math": {
+          "comparable": true,
+          "subdir": "boost/math",
+          "files_in_a": 521,
+          "files_in_b": 521,
+          "files_compared": 521,
+          "identical": 521,
+          "only_in_a": [],
+          "only_in_b": [],
+          "differing": []
+        },
+        "has_libs_math_test": false
+      }
+    },
+    "crlibm": {
+      "source_root": "C:\\Users\\myaml\\dev\\_witness\\third_party\\crlibm-1.0beta5",
+      "version_file": "1.0beta5",
+      "version_ok": true,
+      "expected_commit": "eb3063791aa75bc9705b49283bf14250465220a7",
+      "archive": {
+        "path": "C:\\Users\\myaml\\dev\\_witness\\downloads\\crlibm-eb306379.tar.gz",
+        "bytes": 2432556,
+        "sha256": "79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5",
+        "top_directory": "crlibm-eb3063791aa75bc9705b49283bf14250465220a7",
+        "commit_from_top_directory": "eb3063791aa75bc9705b49283bf14250465220a7",
+        "commit_matches": true
+      }
+    }
+  },
+  "boost": {
+    "version_macro": 109200,
+    "test_directory": "C:\\Users\\myaml\\dev\\_boost-smoke\\boost-1_92-src\\boost_1_92_0\\libs\\math\\test",
+    "test_files": 522,
+    "bound_records": 499,
+    "bound_records_plain_preprocessor_variant": 499,
+    "directives_met": [
+      "#else",
+      "#ifdef BOOST_MATH_ENABLE_SYCL",
+      "#ifdef __aarch64__",
+      "#ifndef BOOST_MATH_ENABLE_SYCL"
+    ],
+    "per_file": {
+      "test_0F1.cpp": 3,
+      "test_1F1.cpp": 18,
+      "test_1F1_log.cpp": 15,
+      "test_1F1_regularized.cpp": 15,
+      "test_2F0.cpp": 5,
+      "test_bessel_i.cpp": 8,
+      "test_bessel_i_prime.cpp": 13,
+      "test_bessel_j.cpp": 29,
+      "test_bessel_j_prime.cpp": 26,
+      "test_bessel_k.cpp": 5,
+      "test_bessel_k_prime.cpp": 4,
+      "test_bessel_y.cpp": 24,
+      "test_bessel_y_prime.cpp": 26,
+      "test_beta.cpp": 7,
+      "test_binomial_coeff.cpp": 4,
+      "test_carlson.cpp": 6,
+      "test_cbrt.cpp": 2,
+      "test_digamma.cpp": 5,
+      "test_ellint_1.cpp": 2,
+      "test_ellint_2.cpp": 3,
+      "test_ellint_3.cpp": 3,
+      "test_ellint_d.cpp": 2,
+      "test_erf.cpp": 7,
+      "test_expint.cpp": 8,
+      "test_expm1_extra.cpp": 1,
+      "test_gamma.cpp": 34,
+      "test_gamma_mp.cpp": 5,
+      "test_hermite.cpp": 2,
+      "test_heuman_lambda.cpp": 2,
+      "test_hypergeometric_dist.cpp": 5,
+      "test_ibeta.cpp": 34,
+      "test_ibeta_derivative.cpp": 10,
+      "test_ibeta_inv.cpp": 10,
+      "test_ibeta_inv_ab.cpp": 4,
+      "test_igamma.cpp": 39,
+      "test_igamma_inv.cpp": 13,
+      "test_igamma_inva.cpp": 4,
+      "test_inv_hyp.cpp": 3,
+      "test_jacobi.cpp": 6,
+      "test_jacobi_theta.cpp": 3,
+      "test_jacobi_zeta.cpp": 2,
+      "test_laguerre.cpp": 11,
+      "test_legendre.cpp": 17,
+      "test_long_double_support.cpp": 1,
+      "test_nc_beta.cpp": 6,
+      "test_nc_chi_squared.cpp": 4,
+      "test_nc_t.cpp": 9,
+      "test_nc_t_quad.cpp": 3,
+      "test_owens_t.cpp": 3,
+      "test_polygamma.cpp": 6,
+      "test_sinc.cpp": 1,
+      "test_spherical_harmonic.cpp": 3,
+      "test_tgamma_ratio.cpp": 10,
+      "test_trig.cpp": 1,
+      "test_trigamma.cpp": 1,
+      "test_zeta.cpp": 6
+    },
+    "records": [
+      [
+        "test_0F1.cpp",
+        31
+      ],
+      [
+        "test_0F1.cpp",
+        38
+      ],
+      [
+        "test_0F1.cpp",
+        46
+      ],
+      [
+        "test_1F1.cpp",
+        30
+      ],
+      [
+        "test_1F1.cpp",
+        37
+      ],
+      [
+        "test_1F1.cpp",
+        44
+      ],
+      [
+        "test_1F1.cpp",
+        52
+      ],
+      [
+        "test_1F1.cpp",
+        59
+      ],
+      [
+        "test_1F1.cpp",
+        66
+      ],
+      [
+        "test_1F1.cpp",
+        79
+      ],
+      [
+        "test_1F1.cpp",
+        87
+      ],
+      [
+        "test_1F1.cpp",
+        95
+      ],
+      [
+        "test_1F1.cpp",
+        102
+      ],
+      [
+        "test_1F1.cpp",
+        110
+      ],
+      [
+        "test_1F1.cpp",
+        121
+      ],
+      [
+        "test_1F1.cpp",
+        130
+      ],
+      [
+        "test_1F1.cpp",
+        138
+      ],
+      [
+        "test_1F1.cpp",
+        146
+      ],
+      [
+        "test_1F1.cpp",
+        153
+      ],
+      [
+        "test_1F1.cpp",
+        160
+      ],
+      [
+        "test_1F1.cpp",
+        167
+      ],
+      [
+        "test_1F1_log.cpp",
+        30
+      ],
+      [
+        "test_1F1_log.cpp",
+        37
+      ],
+      [
+        "test_1F1_log.cpp",
+        44
+      ],
+      [
+        "test_1F1_log.cpp",
+        52
+      ],
+      [
+        "test_1F1_log.cpp",
+        59
+      ],
+      [
+        "test_1F1_log.cpp",
+        66
+      ],
+      [
+        "test_1F1_log.cpp",
+        79
+      ],
+      [
+        "test_1F1_log.cpp",
+        87
+      ],
+      [
+        "test_1F1_log.cpp",
+        95
+      ],
+      [
+        "test_1F1_log.cpp",
+        102
+      ],
+      [
+        "test_1F1_log.cpp",
+        112
+      ],
+      [
+        "test_1F1_log.cpp",
+        120
+      ],
+      [
+        "test_1F1_log.cpp",
+        128
+      ],
+      [
+        "test_1F1_log.cpp",
+        135
+      ],
+      [
+        "test_1F1_log.cpp",
+        142
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        32
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        39
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        46
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        54
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        61
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        68
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        81
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        89
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        97
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        104
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        114
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        122
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        130
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        137
+      ],
+      [
+        "test_1F1_regularized.cpp",
+        144
+      ],
+      [
+        "test_2F0.cpp",
+        34
+      ],
+      [
+        "test_2F0.cpp",
+        41
+      ],
+      [
+        "test_2F0.cpp",
+        51
+      ],
+      [
+        "test_2F0.cpp",
+        58
+      ],
+      [
+        "test_2F0.cpp",
+        65
+      ],
+      [
+        "test_bessel_i.cpp",
+        70
+      ],
+      [
+        "test_bessel_i.cpp",
+        80
+      ],
+      [
+        "test_bessel_i.cpp",
+        94
+      ],
+      [
+        "test_bessel_i.cpp",
+        106
+      ],
+      [
+        "test_bessel_i.cpp",
+        113
+      ],
+      [
+        "test_bessel_i.cpp",
+        120
+      ],
+      [
+        "test_bessel_i.cpp",
+        127
+      ],
+      [
+        "test_bessel_i.cpp",
+        145
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        55
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        70
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        84
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        92
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        99
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        106
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        113
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        120
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        127
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        141
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        148
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        155
+      ],
+      [
+        "test_bessel_i_prime.cpp",
+        162
+      ],
+      [
+        "test_bessel_j.cpp",
+        72
+      ],
+      [
+        "test_bessel_j.cpp",
+        79
+      ],
+      [
+        "test_bessel_j.cpp",
+        86
+      ],
+      [
+        "test_bessel_j.cpp",
+        93
+      ],
+      [
+        "test_bessel_j.cpp",
+        103
+      ],
+      [
+        "test_bessel_j.cpp",
+        110
+      ],
+      [
+        "test_bessel_j.cpp",
+        123
+      ],
+      [
+        "test_bessel_j.cpp",
+        130
+      ],
+      [
+        "test_bessel_j.cpp",
+        137
+      ],
+      [
+        "test_bessel_j.cpp",
+        147
+      ],
+      [
+        "test_bessel_j.cpp",
+        154
+      ],
+      [
+        "test_bessel_j.cpp",
+        165
+      ],
+      [
+        "test_bessel_j.cpp",
+        172
+      ],
+      [
+        "test_bessel_j.cpp",
+        188
+      ],
+      [
+        "test_bessel_j.cpp",
+        202
+      ],
+      [
+        "test_bessel_j.cpp",
+        209
+      ],
+      [
+        "test_bessel_j.cpp",
+        216
+      ],
+      [
+        "test_bessel_j.cpp",
+        223
+      ],
+      [
+        "test_bessel_j.cpp",
+        233
+      ],
+      [
+        "test_bessel_j.cpp",
+        240
+      ],
+      [
+        "test_bessel_j.cpp",
+        247
+      ],
+      [
+        "test_bessel_j.cpp",
+        257
+      ],
+      [
+        "test_bessel_j.cpp",
+        264
+      ],
+      [
+        "test_bessel_j.cpp",
+        271
+      ],
+      [
+        "test_bessel_j.cpp",
+        280
+      ],
+      [
+        "test_bessel_j.cpp",
+        287
+      ],
+      [
+        "test_bessel_j.cpp",
+        294
+      ],
+      [
+        "test_bessel_j.cpp",
+        301
+      ],
+      [
+        "test_bessel_j.cpp",
+        311
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        58
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        65
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        72
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        79
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        89
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        96
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        109
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        116
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        123
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        133
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        140
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        147
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        154
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        170
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        184
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        191
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        198
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        205
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        215
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        222
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        229
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        238
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        245
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        252
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        259
+      ],
+      [
+        "test_bessel_j_prime.cpp",
+        269
+      ],
+      [
+        "test_bessel_k.cpp",
+        81
+      ],
+      [
+        "test_bessel_k.cpp",
+        89
+      ],
+      [
+        "test_bessel_k.cpp",
+        96
+      ],
+      [
+        "test_bessel_k.cpp",
+        103
+      ],
+      [
+        "test_bessel_k.cpp",
+        110
+      ],
+      [
+        "test_bessel_k_prime.cpp",
+        65
+      ],
+      [
+        "test_bessel_k_prime.cpp",
+        73
+      ],
+      [
+        "test_bessel_k_prime.cpp",
+        80
+      ],
+      [
+        "test_bessel_k_prime.cpp",
+        87
+      ],
+      [
+        "test_bessel_y.cpp",
+        70
+      ],
+      [
+        "test_bessel_y.cpp",
+        77
+      ],
+      [
+        "test_bessel_y.cpp",
+        87
+      ],
+      [
+        "test_bessel_y.cpp",
+        94
+      ],
+      [
+        "test_bessel_y.cpp",
+        105
+      ],
+      [
+        "test_bessel_y.cpp",
+        112
+      ],
+      [
+        "test_bessel_y.cpp",
+        123
+      ],
+      [
+        "test_bessel_y.cpp",
+        130
+      ],
+      [
+        "test_bessel_y.cpp",
+        137
+      ],
+      [
+        "test_bessel_y.cpp",
+        147
+      ],
+      [
+        "test_bessel_y.cpp",
+        154
+      ],
+      [
+        "test_bessel_y.cpp",
+        161
+      ],
+      [
+        "test_bessel_y.cpp",
+        171
+      ],
+      [
+        "test_bessel_y.cpp",
+        178
+      ],
+      [
+        "test_bessel_y.cpp",
+        185
+      ],
+      [
+        "test_bessel_y.cpp",
+        196
+      ],
+      [
+        "test_bessel_y.cpp",
+        209
+      ],
+      [
+        "test_bessel_y.cpp",
+        216
+      ],
+      [
+        "test_bessel_y.cpp",
+        226
+      ],
+      [
+        "test_bessel_y.cpp",
+        238
+      ],
+      [
+        "test_bessel_y.cpp",
+        245
+      ],
+      [
+        "test_bessel_y.cpp",
+        259
+      ],
+      [
+        "test_bessel_y.cpp",
+        269
+      ],
+      [
+        "test_bessel_y.cpp",
+        279
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        56
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        63
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        73
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        80
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        91
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        98
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        115
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        122
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        129
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        139
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        146
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        154
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        164
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        171
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        178
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        189
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        196
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        203
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        214
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        227
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        234
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        246
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        253
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        263
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        273
+      ],
+      [
+        "test_bessel_y_prime.cpp",
+        283
+      ],
+      [
+        "test_beta.cpp",
+        55
+      ],
+      [
+        "test_beta.cpp",
+        64
+      ],
+      [
+        "test_beta.cpp",
+        71
+      ],
+      [
+        "test_beta.cpp",
+        78
+      ],
+      [
+        "test_beta.cpp",
+        85
+      ],
+      [
+        "test_beta.cpp",
+        92
+      ],
+      [
+        "test_beta.cpp",
+        99
+      ],
+      [
+        "test_binomial_coeff.cpp",
+        50
+      ],
+      [
+        "test_binomial_coeff.cpp",
+        57
+      ],
+      [
+        "test_binomial_coeff.cpp",
+        64
+      ],
+      [
+        "test_binomial_coeff.cpp",
+        71
+      ],
+      [
+        "test_carlson.cpp",
+        62
+      ],
+      [
+        "test_carlson.cpp",
+        69
+      ],
+      [
+        "test_carlson.cpp",
+        80
+      ],
+      [
+        "test_carlson.cpp",
+        87
+      ],
+      [
+        "test_carlson.cpp",
+        94
+      ],
+      [
+        "test_carlson.cpp",
+        101
+      ],
+      [
+        "test_cbrt.cpp",
+        62
+      ],
+      [
+        "test_cbrt.cpp",
+        69
+      ],
+      [
+        "test_digamma.cpp",
+        38
+      ],
+      [
+        "test_digamma.cpp",
+        45
+      ],
+      [
+        "test_digamma.cpp",
+        52
+      ],
+      [
+        "test_digamma.cpp",
+        61
+      ],
+      [
+        "test_digamma.cpp",
+        69
+      ],
+      [
+        "test_ellint_1.cpp",
+        68
+      ],
+      [
+        "test_ellint_1.cpp",
+        75
+      ],
+      [
+        "test_ellint_2.cpp",
+        63
+      ],
+      [
+        "test_ellint_2.cpp",
+        74
+      ],
+      [
+        "test_ellint_2.cpp",
+        85
+      ],
+      [
+        "test_ellint_3.cpp",
+        59
+      ],
+      [
+        "test_ellint_3.cpp",
+        66
+      ],
+      [
+        "test_ellint_3.cpp",
+        73
+      ],
+      [
+        "test_ellint_d.cpp",
+        65
+      ],
+      [
+        "test_ellint_d.cpp",
+        72
+      ],
+      [
+        "test_erf.cpp",
+        76
+      ],
+      [
+        "test_erf.cpp",
+        83
+      ],
+      [
+        "test_erf.cpp",
+        91
+      ],
+      [
+        "test_erf.cpp",
+        98
+      ],
+      [
+        "test_erf.cpp",
+        110
+      ],
+      [
+        "test_erf.cpp",
+        117
+      ],
+      [
+        "test_erf.cpp",
+        124
+      ],
+      [
+        "test_expint.cpp",
+        55
+      ],
+      [
+        "test_expint.cpp",
+        62
+      ],
+      [
+        "test_expint.cpp",
+        69
+      ],
+      [
+        "test_expint.cpp",
+        77
+      ],
+      [
+        "test_expint.cpp",
+        84
+      ],
+      [
+        "test_expint.cpp",
+        97
+      ],
+      [
+        "test_expint.cpp",
+        105
+      ],
+      [
+        "test_expint.cpp",
+        112
+      ],
+      [
+        "test_expm1_extra.cpp",
+        39
+      ],
+      [
+        "test_gamma.cpp",
+        63
+      ],
+      [
+        "test_gamma.cpp",
+        73
+      ],
+      [
+        "test_gamma.cpp",
+        80
+      ],
+      [
+        "test_gamma.cpp",
+        87
+      ],
+      [
+        "test_gamma.cpp",
+        98
+      ],
+      [
+        "test_gamma.cpp",
+        105
+      ],
+      [
+        "test_gamma.cpp",
+        112
+      ],
+      [
+        "test_gamma.cpp",
+        125
+      ],
+      [
+        "test_gamma.cpp",
+        132
+      ],
+      [
+        "test_gamma.cpp",
+        139
+      ],
+      [
+        "test_gamma.cpp",
+        146
+      ],
+      [
+        "test_gamma.cpp",
+        153
+      ],
+      [
+        "test_gamma.cpp",
+        160
+      ],
+      [
+        "test_gamma.cpp",
+        167
+      ],
+      [
+        "test_gamma.cpp",
+        174
+      ],
+      [
+        "test_gamma.cpp",
+        184
+      ],
+      [
+        "test_gamma.cpp",
+        191
+      ],
+      [
+        "test_gamma.cpp",
+        198
+      ],
+      [
+        "test_gamma.cpp",
+        205
+      ],
+      [
+        "test_gamma.cpp",
+        212
+      ],
+      [
+        "test_gamma.cpp",
+        222
+      ],
+      [
+        "test_gamma.cpp",
+        232
+      ],
+      [
+        "test_gamma.cpp",
+        239
+      ],
+      [
+        "test_gamma.cpp",
+        250
+      ],
+      [
+        "test_gamma.cpp",
+        257
+      ],
+      [
+        "test_gamma.cpp",
+        264
+      ],
+      [
+        "test_gamma.cpp",
+        271
+      ],
+      [
+        "test_gamma.cpp",
+        278
+      ],
+      [
+        "test_gamma.cpp",
+        285
+      ],
+      [
+        "test_gamma.cpp",
+        293
+      ],
+      [
+        "test_gamma.cpp",
+        300
+      ],
+      [
+        "test_gamma.cpp",
+        307
+      ],
+      [
+        "test_gamma.cpp",
+        314
+      ],
+      [
+        "test_gamma.cpp",
+        321
+      ],
+      [
+        "test_gamma_mp.cpp",
+        127
+      ],
+      [
+        "test_gamma_mp.cpp",
+        134
+      ],
+      [
+        "test_gamma_mp.cpp",
+        141
+      ],
+      [
+        "test_gamma_mp.cpp",
+        148
+      ],
+      [
+        "test_gamma_mp.cpp",
+        155
+      ],
+      [
+        "test_hermite.cpp",
+        65
+      ],
+      [
+        "test_hermite.cpp",
+        72
+      ],
+      [
+        "test_heuman_lambda.cpp",
+        63
+      ],
+      [
+        "test_heuman_lambda.cpp",
+        70
+      ],
+      [
+        "test_hypergeometric_dist.cpp",
+        78
+      ],
+      [
+        "test_hypergeometric_dist.cpp",
+        85
+      ],
+      [
+        "test_hypergeometric_dist.cpp",
+        95
+      ],
+      [
+        "test_hypergeometric_dist.cpp",
+        102
+      ],
+      [
+        "test_hypergeometric_dist.cpp",
+        109
+      ],
+      [
+        "test_ibeta.cpp",
+        77
+      ],
+      [
+        "test_ibeta.cpp",
+        90
+      ],
+      [
+        "test_ibeta.cpp",
+        97
+      ],
+      [
+        "test_ibeta.cpp",
+        106
+      ],
+      [
+        "test_ibeta.cpp",
+        113
+      ],
+      [
+        "test_ibeta.cpp",
+        127
+      ],
+      [
+        "test_ibeta.cpp",
+        134
+      ],
+      [
+        "test_ibeta.cpp",
+        141
+      ],
+      [
+        "test_ibeta.cpp",
+        151
+      ],
+      [
+        "test_ibeta.cpp",
+        158
+      ],
+      [
+        "test_ibeta.cpp",
+        167
+      ],
+      [
+        "test_ibeta.cpp",
+        182
+      ],
+      [
+        "test_ibeta.cpp",
+        192
+      ],
+      [
+        "test_ibeta.cpp",
+        202
+      ],
+      [
+        "test_ibeta.cpp",
+        209
+      ],
+      [
+        "test_ibeta.cpp",
+        216
+      ],
+      [
+        "test_ibeta.cpp",
+        223
+      ],
+      [
+        "test_ibeta.cpp",
+        230
+      ],
+      [
+        "test_ibeta.cpp",
+        240
+      ],
+      [
+        "test_ibeta.cpp",
+        247
+      ],
+      [
+        "test_ibeta.cpp",
+        254
+      ],
+      [
+        "test_ibeta.cpp",
+        264
+      ],
+      [
+        "test_ibeta.cpp",
+        271
+      ],
+      [
+        "test_ibeta.cpp",
+        278
+      ],
+      [
+        "test_ibeta.cpp",
+        290
+      ],
+      [
+        "test_ibeta.cpp",
+        301
+      ],
+      [
+        "test_ibeta.cpp",
+        308
+      ],
+      [
+        "test_ibeta.cpp",
+        315
+      ],
+      [
+        "test_ibeta.cpp",
+        322
+      ],
+      [
+        "test_ibeta.cpp",
+        329
+      ],
+      [
+        "test_ibeta.cpp",
+        337
+      ],
+      [
+        "test_ibeta.cpp",
+        344
+      ],
+      [
+        "test_ibeta.cpp",
+        351
+      ],
+      [
+        "test_ibeta.cpp",
+        360
+      ],
+      [
+        "test_ibeta_derivative.cpp",
+        65
+      ],
+      [
+        "test_ibeta_derivative.cpp",
+        72
+      ],
+      [
+        "test_ibeta_derivative.cpp",
+        79
+      ],
+      [
+        "test_ibeta_derivative.cpp",
+        88
+      ],
+      [
+        "test_ibeta_derivative.cpp",
+        96
+      ],
+      [
+        "test_ibeta_derivative.cpp",
+        103
+      ],
+      [
+        "test_ibeta_derivative.cpp",
+        110
+      ],
+      [
+        "test_ibeta_derivative.cpp",
+        120
+      ],
+      [
+        "test_ibeta_derivative.cpp",
+        127
+      ],
+      [
+        "test_ibeta_derivative.cpp",
+        134
+      ],
+      [
+        "test_ibeta_inv.cpp",
+        94
+      ],
+      [
+        "test_ibeta_inv.cpp",
+        101
+      ],
+      [
+        "test_ibeta_inv.cpp",
+        108
+      ],
+      [
+        "test_ibeta_inv.cpp",
+        122
+      ],
+      [
+        "test_ibeta_inv.cpp",
+        129
+      ],
+      [
+        "test_ibeta_inv.cpp",
+        142
+      ],
+      [
+        "test_ibeta_inv.cpp",
+        155
+      ],
+      [
+        "test_ibeta_inv.cpp",
+        168
+      ],
+      [
+        "test_ibeta_inv.cpp",
+        178
+      ],
+      [
+        "test_ibeta_inv.cpp",
+        186
+      ],
+      [
+        "test_ibeta_inv_ab.cpp",
+        74
+      ],
+      [
+        "test_ibeta_inv_ab.cpp",
+        84
+      ],
+      [
+        "test_ibeta_inv_ab.cpp",
+        91
+      ],
+      [
+        "test_ibeta_inv_ab.cpp",
+        98
+      ],
+      [
+        "test_igamma.cpp",
+        74
+      ],
+      [
+        "test_igamma.cpp",
+        81
+      ],
+      [
+        "test_igamma.cpp",
+        88
+      ],
+      [
+        "test_igamma.cpp",
+        95
+      ],
+      [
+        "test_igamma.cpp",
+        102
+      ],
+      [
+        "test_igamma.cpp",
+        115
+      ],
+      [
+        "test_igamma.cpp",
+        122
+      ],
+      [
+        "test_igamma.cpp",
+        129
+      ],
+      [
+        "test_igamma.cpp",
+        136
+      ],
+      [
+        "test_igamma.cpp",
+        143
+      ],
+      [
+        "test_igamma.cpp",
+        150
+      ],
+      [
+        "test_igamma.cpp",
+        160
+      ],
+      [
+        "test_igamma.cpp",
+        167
+      ],
+      [
+        "test_igamma.cpp",
+        177
+      ],
+      [
+        "test_igamma.cpp",
+        184
+      ],
+      [
+        "test_igamma.cpp",
+        191
+      ],
+      [
+        "test_igamma.cpp",
+        198
+      ],
+      [
+        "test_igamma.cpp",
+        209
+      ],
+      [
+        "test_igamma.cpp",
+        220
+      ],
+      [
+        "test_igamma.cpp",
+        227
+      ],
+      [
+        "test_igamma.cpp",
+        234
+      ],
+      [
+        "test_igamma.cpp",
+        241
+      ],
+      [
+        "test_igamma.cpp",
+        248
+      ],
+      [
+        "test_igamma.cpp",
+        258
+      ],
+      [
+        "test_igamma.cpp",
+        265
+      ],
+      [
+        "test_igamma.cpp",
+        272
+      ],
+      [
+        "test_igamma.cpp",
+        279
+      ],
+      [
+        "test_igamma.cpp",
+        286
+      ],
+      [
+        "test_igamma.cpp",
+        299
+      ],
+      [
+        "test_igamma.cpp",
+        312
+      ],
+      [
+        "test_igamma.cpp",
+        319
+      ],
+      [
+        "test_igamma.cpp",
+        326
+      ],
+      [
+        "test_igamma.cpp",
+        333
+      ],
+      [
+        "test_igamma.cpp",
+        340
+      ],
+      [
+        "test_igamma.cpp",
+        347
+      ],
+      [
+        "test_igamma.cpp",
+        354
+      ],
+      [
+        "test_igamma.cpp",
+        361
+      ],
+      [
+        "test_igamma.cpp",
+        368
+      ],
+      [
+        "test_igamma.cpp",
+        375
+      ],
+      [
+        "test_igamma_inv.cpp",
+        80
+      ],
+      [
+        "test_igamma_inv.cpp",
+        87
+      ],
+      [
+        "test_igamma_inv.cpp",
+        99
+      ],
+      [
+        "test_igamma_inv.cpp",
+        110
+      ],
+      [
+        "test_igamma_inv.cpp",
+        126
+      ],
+      [
+        "test_igamma_inv.cpp",
+        133
+      ],
+      [
+        "test_igamma_inv.cpp",
+        140
+      ],
+      [
+        "test_igamma_inv.cpp",
+        147
+      ],
+      [
+        "test_igamma_inv.cpp",
+        154
+      ],
+      [
+        "test_igamma_inv.cpp",
+        161
+      ],
+      [
+        "test_igamma_inv.cpp",
+        168
+      ],
+      [
+        "test_igamma_inv.cpp",
+        175
+      ],
+      [
+        "test_igamma_inv.cpp",
+        182
+      ],
+      [
+        "test_igamma_inva.cpp",
+        75
+      ],
+      [
+        "test_igamma_inva.cpp",
+        86
+      ],
+      [
+        "test_igamma_inva.cpp",
+        93
+      ],
+      [
+        "test_igamma_inva.cpp",
+        102
+      ],
+      [
+        "test_inv_hyp.cpp",
+        69
+      ],
+      [
+        "test_inv_hyp.cpp",
+        76
+      ],
+      [
+        "test_inv_hyp.cpp",
+        83
+      ],
+      [
+        "test_jacobi.cpp",
+        54
+      ],
+      [
+        "test_jacobi.cpp",
+        61
+      ],
+      [
+        "test_jacobi.cpp",
+        68
+      ],
+      [
+        "test_jacobi.cpp",
+        81
+      ],
+      [
+        "test_jacobi.cpp",
+        88
+      ],
+      [
+        "test_jacobi.cpp",
+        99
+      ],
+      [
+        "test_jacobi_theta.cpp",
+        23
+      ],
+      [
+        "test_jacobi_theta.cpp",
+        31
+      ],
+      [
+        "test_jacobi_theta.cpp",
+        41
+      ],
+      [
+        "test_jacobi_zeta.cpp",
+        63
+      ],
+      [
+        "test_jacobi_zeta.cpp",
+        70
+      ],
+      [
+        "test_laguerre.cpp",
+        61
+      ],
+      [
+        "test_laguerre.cpp",
+        70
+      ],
+      [
+        "test_laguerre.cpp",
+        77
+      ],
+      [
+        "test_laguerre.cpp",
+        84
+      ],
+      [
+        "test_laguerre.cpp",
+        91
+      ],
+      [
+        "test_laguerre.cpp",
+        98
+      ],
+      [
+        "test_laguerre.cpp",
+        105
+      ],
+      [
+        "test_laguerre.cpp",
+        112
+      ],
+      [
+        "test_laguerre.cpp",
+        119
+      ],
+      [
+        "test_laguerre.cpp",
+        130
+      ],
+      [
+        "test_laguerre.cpp",
+        137
+      ],
+      [
+        "test_legendre.cpp",
+        59
+      ],
+      [
+        "test_legendre.cpp",
+        70
+      ],
+      [
+        "test_legendre.cpp",
+        77
+      ],
+      [
+        "test_legendre.cpp",
+        84
+      ],
+      [
+        "test_legendre.cpp",
+        91
+      ],
+      [
+        "test_legendre.cpp",
+        98
+      ],
+      [
+        "test_legendre.cpp",
+        109
+      ],
+      [
+        "test_legendre.cpp",
+        116
+      ],
+      [
+        "test_legendre.cpp",
+        123
+      ],
+      [
+        "test_legendre.cpp",
+        130
+      ],
+      [
+        "test_legendre.cpp",
+        137
+      ],
+      [
+        "test_legendre.cpp",
+        144
+      ],
+      [
+        "test_legendre.cpp",
+        152
+      ],
+      [
+        "test_legendre.cpp",
+        159
+      ],
+      [
+        "test_legendre.cpp",
+        166
+      ],
+      [
+        "test_legendre.cpp",
+        173
+      ],
+      [
+        "test_legendre.cpp",
+        180
+      ],
+      [
+        "test_long_double_support.cpp",
+        41
+      ],
+      [
+        "test_nc_beta.cpp",
+        90
+      ],
+      [
+        "test_nc_beta.cpp",
+        101
+      ],
+      [
+        "test_nc_beta.cpp",
+        108
+      ],
+      [
+        "test_nc_beta.cpp",
+        120
+      ],
+      [
+        "test_nc_beta.cpp",
+        127
+      ],
+      [
+        "test_nc_beta.cpp",
+        134
+      ],
+      [
+        "test_nc_chi_squared.cpp",
+        87
+      ],
+      [
+        "test_nc_chi_squared.cpp",
+        97
+      ],
+      [
+        "test_nc_chi_squared.cpp",
+        104
+      ],
+      [
+        "test_nc_chi_squared.cpp",
+        116
+      ],
+      [
+        "test_nc_t.cpp",
+        73
+      ],
+      [
+        "test_nc_t.cpp",
+        80
+      ],
+      [
+        "test_nc_t.cpp",
+        88
+      ],
+      [
+        "test_nc_t.cpp",
+        95
+      ],
+      [
+        "test_nc_t.cpp",
+        102
+      ],
+      [
+        "test_nc_t.cpp",
+        109
+      ],
+      [
+        "test_nc_t.cpp",
+        116
+      ],
+      [
+        "test_nc_t.cpp",
+        123
+      ],
+      [
+        "test_nc_t.cpp",
+        130
+      ],
+      [
+        "test_nc_t_quad.cpp",
+        62
+      ],
+      [
+        "test_nc_t_quad.cpp",
+        69
+      ],
+      [
+        "test_nc_t_quad.cpp",
+        76
+      ],
+      [
+        "test_owens_t.cpp",
+        97
+      ],
+      [
+        "test_owens_t.cpp",
+        107
+      ],
+      [
+        "test_owens_t.cpp",
+        117
+      ],
+      [
+        "test_polygamma.cpp",
+        30
+      ],
+      [
+        "test_polygamma.cpp",
+        38
+      ],
+      [
+        "test_polygamma.cpp",
+        46
+      ],
+      [
+        "test_polygamma.cpp",
+        57
+      ],
+      [
+        "test_polygamma.cpp",
+        66
+      ],
+      [
+        "test_polygamma.cpp",
+        73
+      ],
+      [
+        "test_sinc.cpp",
+        41
+      ],
+      [
+        "test_spherical_harmonic.cpp",
+        68
+      ],
+      [
+        "test_spherical_harmonic.cpp",
+        80
+      ],
+      [
+        "test_spherical_harmonic.cpp",
+        87
+      ],
+      [
+        "test_tgamma_ratio.cpp",
+        56
+      ],
+      [
+        "test_tgamma_ratio.cpp",
+        66
+      ],
+      [
+        "test_tgamma_ratio.cpp",
+        73
+      ],
+      [
+        "test_tgamma_ratio.cpp",
+        81
+      ],
+      [
+        "test_tgamma_ratio.cpp",
+        91
+      ],
+      [
+        "test_tgamma_ratio.cpp",
+        101
+      ],
+      [
+        "test_tgamma_ratio.cpp",
+        111
+      ],
+      [
+        "test_tgamma_ratio.cpp",
+        118
+      ],
+      [
+        "test_tgamma_ratio.cpp",
+        125
+      ],
+      [
+        "test_tgamma_ratio.cpp",
+        132
+      ],
+      [
+        "test_trig.cpp",
+        45
+      ],
+      [
+        "test_trigamma.cpp",
+        35
+      ],
+      [
+        "test_zeta.cpp",
+        54
+      ],
+      [
+        "test_zeta.cpp",
+        61
+      ],
+      [
+        "test_zeta.cpp",
+        68
+      ],
+      [
+        "test_zeta.cpp",
+        75
+      ],
+      [
+        "test_zeta.cpp",
+        82
+      ],
+      [
+        "test_zeta.cpp",
+        89
+      ]
+    ],
+    "version_ok": true
+  },
+  "crlibm": {
+    "vectors": {
+      "test_directory": "C:\\Users\\myaml\\dev\\_witness\\third_party\\crlibm-1.0beta5\\tests",
+      "files": 21,
+      "total": 63617,
+      "per_file": {
+        "acos.testdata": {
+          "vectors": 272,
+          "by_mode": {
+            "M": 33,
+            "N": 110,
+            "P": 33,
+            "Z": 96
+          }
+        },
+        "acospi.testdata": {
+          "vectors": 61,
+          "by_mode": {
+            "M": 5,
+            "N": 22,
+            "P": 5,
+            "Z": 29
+          }
+        },
+        "asin.testdata": {
+          "vectors": 2625,
+          "by_mode": {
+            "M": 595,
+            "N": 748,
+            "P": 649,
+            "Z": 633
+          }
+        },
+        "asinpi.testdata": {
+          "vectors": 58,
+          "by_mode": {
+            "M": 7,
+            "N": 21,
+            "P": 7,
+            "Z": 23
+          }
+        },
+        "atan.testdata": {
+          "vectors": 6852,
+          "by_mode": {
+            "M": 368,
+            "N": 5623,
+            "P": 367,
+            "Z": 494
+          }
+        },
+        "atanpi.testdata": {
+          "vectors": 126,
+          "by_mode": {
+            "M": 19,
+            "N": 40,
+            "P": 19,
+            "Z": 48
+          }
+        },
+        "cos.testdata": {
+          "vectors": 11941,
+          "by_mode": {
+            "M": 354,
+            "N": 10790,
+            "P": 353,
+            "Z": 444
+          }
+        },
+        "cosh.testdata": {
+          "vectors": 2105,
+          "by_mode": {
+            "M": 495,
+            "N": 549,
+            "P": 495,
+            "Z": 566
+          }
+        },
+        "cospi.testdata": {
+          "vectors": 244,
+          "by_mode": {
+            "M": 43,
+            "N": 83,
+            "P": 43,
+            "Z": 75
+          }
+        },
+        "exp.testdata": {
+          "vectors": 6140,
+          "by_mode": {
+            "M": 13,
+            "N": 4771,
+            "P": 638,
+            "Z": 718
+          }
+        },
+        "expm1.testdata": {
+          "vectors": 732,
+          "by_mode": {
+            "M": 32,
+            "N": 239,
+            "P": 34,
+            "Z": 427
+          }
+        },
+        "log.testdata": {
+          "vectors": 1226,
+          "by_mode": {
+            "M": 28,
+            "N": 1117,
+            "P": 28,
+            "Z": 53
+          }
+        },
+        "log10.testdata": {
+          "vectors": 148,
+          "by_mode": {
+            "M": 28,
+            "N": 52,
+            "P": 28,
+            "Z": 40
+          }
+        },
+        "log1p.testdata": {
+          "vectors": 586,
+          "by_mode": {
+            "M": 8,
+            "N": 227,
+            "P": 8,
+            "Z": 343
+          }
+        },
+        "log2.testdata": {
+          "vectors": 431,
+          "by_mode": {
+            "M": 107,
+            "N": 104,
+            "P": 107,
+            "Z": 113
+          }
+        },
+        "pow.testdata": {
+          "vectors": 10003,
+          "by_mode": {
+            "N": 10003
+          }
+        },
+        "sin.testdata": {
+          "vectors": 11017,
+          "by_mode": {
+            "M": 150,
+            "N": 10533,
+            "P": 148,
+            "Z": 186
+          }
+        },
+        "sinh.testdata": {
+          "vectors": 1543,
+          "by_mode": {
+            "M": 356,
+            "N": 416,
+            "P": 356,
+            "Z": 415
+          }
+        },
+        "sinpi.testdata": {
+          "vectors": 341,
+          "by_mode": {
+            "M": 49,
+            "N": 121,
+            "P": 49,
+            "Z": 122
+          }
+        },
+        "tan.testdata": {
+          "vectors": 6886,
+          "by_mode": {
+            "M": 349,
+            "N": 5723,
+            "P": 349,
+            "Z": 465
+          }
+        },
+        "tanpi.testdata": {
+          "vectors": 280,
+          "by_mode": {
+            "M": 50,
+            "N": 90,
+            "P": 50,
+            "Z": 90
+          }
+        }
+      },
+      "unparsed": []
+    },
+    "gappa": {
+      "gappa_directory": "C:\\Users\\myaml\\dev\\_witness\\third_party\\crlibm-1.0beta5\\gappa",
+      "files": 46,
+      "arrow_lines": 791,
+      "arrow_occurrences": 791,
+      "noncomment_arrow_lines": 783,
+      "noncomment_terminated": 707,
+      "noncomment_continued": 76,
+      "scripted_invocations": 6,
+      "invocations": [
+        [
+          "exp-td/exp-td-proof.sh",
+          6,
+          "sed -f ../maple/TEMPEXP/exp-td-accurate.sed exp-td-accurate1.gappa | $GAPPA"
+        ],
+        [
+          "exp-td/exp-td-proof.sh",
+          7,
+          "sed -f ../maple/TEMPEXP/exp-td-accurate.sed exp-td-accurate2.gappa | $GAPPA"
+        ],
+        [
+          "exp-td/exp-td-proof.sh",
+          8,
+          "sed -f ../maple/TEMPEXP/exp-td-accurate.sed exp-td-accurate3.gappa | $GAPPA"
+        ],
+        [
+          "exp-td/exp-td-proof.sh",
+          9,
+          "sed -f ../maple/TEMPEXP/exp-td-accurate.sed exp-td-accurate4.gappa | $GAPPA"
+        ],
+        [
+          "sqrt-proof.sh",
+          7,
+          "sed -f sqrt.sed sqrt12.gappa | $GAPPA"
+        ],
+        [
+          "sqrt-proof.sh",
+          9,
+          "sed -f sqrt.sed sqrt13.gappa | $GAPPA"
+        ]
+      ],
+      "per_file": {
+        "asin/asinAccuR0.gappa": {
+          "arrow_lines": 55,
+          "arrow_occurrences": 55,
+          "noncomment_arrow_lines": 55,
+          "noncomment_terminated": 54
+        },
+        "asin/asinAccuR1.gappa": {
+          "arrow_lines": 37,
+          "arrow_occurrences": 37,
+          "noncomment_arrow_lines": 37,
+          "noncomment_terminated": 36
+        },
+        "asin/asinAccuR2.gappa": {
+          "arrow_lines": 37,
+          "arrow_occurrences": 37,
+          "noncomment_arrow_lines": 37,
+          "noncomment_terminated": 36
+        },
+        "asin/asinAccuR3.gappa": {
+          "arrow_lines": 37,
+          "arrow_occurrences": 37,
+          "noncomment_arrow_lines": 37,
+          "noncomment_terminated": 36
+        },
+        "asin/asinAccuR4.gappa": {
+          "arrow_lines": 37,
+          "arrow_occurrences": 37,
+          "noncomment_arrow_lines": 37,
+          "noncomment_terminated": 36
+        },
+        "asin/asinAccuR5.gappa": {
+          "arrow_lines": 37,
+          "arrow_occurrences": 37,
+          "noncomment_arrow_lines": 37,
+          "noncomment_terminated": 36
+        },
+        "asin/asinAccuR6.gappa": {
+          "arrow_lines": 37,
+          "arrow_occurrences": 37,
+          "noncomment_arrow_lines": 37,
+          "noncomment_terminated": 36
+        },
+        "asin/asinAccuR7.gappa": {
+          "arrow_lines": 37,
+          "arrow_occurrences": 37,
+          "noncomment_arrow_lines": 37,
+          "noncomment_terminated": 36
+        },
+        "asin/asinAccuR8.gappa": {
+          "arrow_lines": 37,
+          "arrow_occurrences": 37,
+          "noncomment_arrow_lines": 37,
+          "noncomment_terminated": 36
+        },
+        "asin/asinAccuR9.gappa": {
+          "arrow_lines": 25,
+          "arrow_occurrences": 25,
+          "noncomment_arrow_lines": 25,
+          "noncomment_terminated": 24
+        },
+        "asin/asinQuickR0.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "asin/asinQuickR1.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "asin/asinQuickR2.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "asin/asinQuickR3.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "asin/asinQuickR4.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "asin/asinQuickR5.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "asin/asinQuickR6.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "asin/asinQuickR7.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "asin/asinQuickR8.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "asin/asinQuickR9.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "exp-td/exp-td-accurate1.gappa": {
+          "arrow_lines": 8,
+          "arrow_occurrences": 8,
+          "noncomment_arrow_lines": 8,
+          "noncomment_terminated": 4
+        },
+        "exp-td/exp-td-accurate2.gappa": {
+          "arrow_lines": 16,
+          "arrow_occurrences": 16,
+          "noncomment_arrow_lines": 16,
+          "noncomment_terminated": 14
+        },
+        "exp-td/exp-td-accurate3.gappa": {
+          "arrow_lines": 3,
+          "arrow_occurrences": 3,
+          "noncomment_arrow_lines": 3,
+          "noncomment_terminated": 2
+        },
+        "exp-td/exp-td-accurate4.gappa": {
+          "arrow_lines": 3,
+          "arrow_occurrences": 3,
+          "noncomment_arrow_lines": 3,
+          "noncomment_terminated": 2
+        },
+        "log-de/log-de-acc-index0-E0.gappa": {
+          "arrow_lines": 4,
+          "arrow_occurrences": 4,
+          "noncomment_arrow_lines": 4,
+          "noncomment_terminated": 3
+        },
+        "log-de/log-de-acc-index0-E1N.gappa": {
+          "arrow_lines": 9,
+          "arrow_occurrences": 9,
+          "noncomment_arrow_lines": 8,
+          "noncomment_terminated": 7
+        },
+        "log-de/log-de-acc-index1N-E0.gappa": {
+          "arrow_lines": 9,
+          "arrow_occurrences": 9,
+          "noncomment_arrow_lines": 8,
+          "noncomment_terminated": 7
+        },
+        "log-de/log-de-acc-index1N-E1N.gappa": {
+          "arrow_lines": 9,
+          "arrow_occurrences": 9,
+          "noncomment_arrow_lines": 8,
+          "noncomment_terminated": 7
+        },
+        "log-de/log-de-index0-E0.gappa": {
+          "arrow_lines": 24,
+          "arrow_occurrences": 24,
+          "noncomment_arrow_lines": 21,
+          "noncomment_terminated": 14
+        },
+        "log-de/log-de-index0-E1N.gappa": {
+          "arrow_lines": 7,
+          "arrow_occurrences": 7,
+          "noncomment_arrow_lines": 7,
+          "noncomment_terminated": 6
+        },
+        "log-de/log-de-index1N-E0N.gappa": {
+          "arrow_lines": 8,
+          "arrow_occurrences": 8,
+          "noncomment_arrow_lines": 8,
+          "noncomment_terminated": 6
+        },
+        "log-td/log-td-accurate-E0-logir0.gappa": {
+          "arrow_lines": 43,
+          "arrow_occurrences": 43,
+          "noncomment_arrow_lines": 43,
+          "noncomment_terminated": 40
+        },
+        "log-td/log-td-accurate-E0.gappa": {
+          "arrow_lines": 44,
+          "arrow_occurrences": 44,
+          "noncomment_arrow_lines": 44,
+          "noncomment_terminated": 42
+        },
+        "log-td/log-td-accurate.gappa": {
+          "arrow_lines": 45,
+          "arrow_occurrences": 45,
+          "noncomment_arrow_lines": 45,
+          "noncomment_terminated": 43
+        },
+        "log-td/log-td-E0-logir0.gappa": {
+          "arrow_lines": 21,
+          "arrow_occurrences": 21,
+          "noncomment_arrow_lines": 21,
+          "noncomment_terminated": 17
+        },
+        "log-td/log-td-E0.gappa": {
+          "arrow_lines": 21,
+          "arrow_occurrences": 21,
+          "noncomment_arrow_lines": 21,
+          "noncomment_terminated": 20
+        },
+        "log-td/log-td.gappa": {
+          "arrow_lines": 23,
+          "arrow_occurrences": 23,
+          "noncomment_arrow_lines": 23,
+          "noncomment_terminated": 22
+        },
+        "sqrt12.gappa": {
+          "arrow_lines": 17,
+          "arrow_occurrences": 17,
+          "noncomment_arrow_lines": 17,
+          "noncomment_terminated": 12
+        },
+        "sqrt13.gappa": {
+          "arrow_lines": 22,
+          "arrow_occurrences": 22,
+          "noncomment_arrow_lines": 22,
+          "noncomment_terminated": 16
+        },
+        "trigos/SinCosCase3.gappa": {
+          "arrow_lines": 17,
+          "arrow_occurrences": 17,
+          "noncomment_arrow_lines": 17,
+          "noncomment_terminated": 16
+        },
+        "trigos/SinZero.gappa": {
+          "arrow_lines": 18,
+          "arrow_occurrences": 18,
+          "noncomment_arrow_lines": 16,
+          "noncomment_terminated": 12
+        },
+        "trigos/TanCase2.gappa": {
+          "arrow_lines": 6,
+          "arrow_occurrences": 6,
+          "noncomment_arrow_lines": 6,
+          "noncomment_terminated": 5
+        },
+        "trigpi/cospi-accurate.gappa": {
+          "arrow_lines": 7,
+          "arrow_occurrences": 7,
+          "noncomment_arrow_lines": 7,
+          "noncomment_terminated": 6
+        },
+        "trigpi/cospi-quick.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        },
+        "trigpi/sinpi-accurate.gappa": {
+          "arrow_lines": 19,
+          "arrow_occurrences": 19,
+          "noncomment_arrow_lines": 19,
+          "noncomment_terminated": 18
+        },
+        "trigpi/sinpi-quick.gappa": {
+          "arrow_lines": 1,
+          "arrow_occurrences": 1,
+          "noncomment_arrow_lines": 1,
+          "noncomment_terminated": 0
+        }
+      }
+    },
+    "source_comments": {
+      "scope": "top-level *.c and *.h; tests/, gappa/, maple/, docs/, scs_lib/ excluded",
+      "lines": 41,
+      "accuracy_word_only": 38,
+      "interval_statements": 7,
+      "value_bound": 31,
+      "magnitude_only": 3,
+      "records": [
+        [
+          "acos-td.c",
+          425,
+          "We must prove extra accuracy in the interval 0..sin(2^(-18))"
+        ],
+        [
+          "acos-td.c",
+          701,
+          "We must prove extra accuracy in the interval 0..sin(2^(-18))"
+        ],
+        [
+          "acos-td.c",
+          975,
+          "We must prove extra accuracy in the interval 0..sin(2^(-18))"
+        ],
+        [
+          "asin-td.c",
+          368,
+          "We must prove extra accuracy in the interval 0..sin(2^(-18))"
+        ],
+        [
+          "asin-td.c",
+          621,
+          "We must prove extra accuracy in the interval 0..sin(2^(-18))"
+        ],
+        [
+          "asin-td.c",
+          866,
+          "We must prove extra accuracy in the interval 0..sin(2^(-18))"
+        ],
+        [
+          "asin-td.c",
+          1104,
+          "We must prove extra accuracy in the interval 0..sin(2^(-18))"
+        ],
+        [
+          "crlibm_private.c",
+          119,
+          "relative error is smaller than 2^-103"
+        ],
+        [
+          "crlibm_private.c",
+          137,
+          "relative error is smaller than 2^-103"
+        ],
+        [
+          "crlibm_private.c",
+          197,
+          "relative error is smaller than 2^-102"
+        ],
+        [
+          "crlibm_private.c",
+          222,
+          "relative error is smaller than 2^-104"
+        ],
+        [
+          "crlibm_private.h",
+          501,
+          "relative error is smaller than 2^-103"
+        ],
+        [
+          "crlibm_private.h",
+          658,
+          "relative error is smaller than 2^-102"
+        ],
+        [
+          "exp-td.c",
+          203,
+          "Cody and Waite like, accurate to 2^-84"
+        ],
+        [
+          "exp-td.c",
+          510,
+          "Cody and Waite like, accurate to 2^-84"
+        ],
+        [
+          "exp-td.c",
+          817,
+          "Cody and Waite like, accurate to 2^-84"
+        ],
+        [
+          "expm1-standalone.c",
+          21,
+          "Computes exp(x)-1 with an accuracy of 120 bits (128 for |x| <= 2^(-5)) as"
+        ],
+        [
+          "log1p.c",
+          289,
+          "Simple range reduction for x > 2^(125) (sh > 2^(125)): x + 1 is not exact but its error less than 2^(-125)"
+        ],
+        [
+          "log1p.c",
+          577,
+          "Simple range reduction for x > 2^(125) (sh > 2^(125)): x + 1 is not exact but its error less than 2^(-125)"
+        ],
+        [
+          "log1p.c",
+          864,
+          "Simple range reduction for x > 2^(125) (sh > 2^(125)): x + 1 is not exact but its error less than 2^(-125)"
+        ],
+        [
+          "log1p.c",
+          1151,
+          "Simple range reduction for x > 2^(125) (sh > 2^(125)): x + 1 is not exact but its error less than 2^(-125)"
+        ],
+        [
+          "log2_accurate.c",
+          144,
+          "Polynomial evaluation of log2(1 + R) with an error less than 2^(-130)"
+        ],
+        [
+          "log2_accurate.c",
+          224,
+          "Polynomial evaluation of log2(1 + R) with an error less than 2^(-130)"
+        ],
+        [
+          "log2_accurate.c",
+          305,
+          "Polynomial evaluation of log2(1 + R) with an error less than 2^(-130)"
+        ],
+        [
+          "log_accurate.c",
+          108,
+          "Polynomial evaluation of log(1 + R) with an error less than 2^(-130)"
+        ],
+        [
+          "pow.c",
+          301,
+          "which is an approximate to x^y with a relative error or less than 2^(-118.5),"
+        ],
+        [
+          "pow.c",
+          316,
+          "is an approximate to x^y with an relative error of 2^(-117)"
+        ],
+        [
+          "pow.c",
+          534,
+          "2^G * (kh + kl) approximates x^y with an error eps less than 2^(-117), i.e."
+        ],
+        [
+          "pow.c",
+          581,
+          "bounded by 2^11. It is therefore possible to"
+        ],
+        [
+          "pow.c",
+          584,
+          "is bounded by 2^11, it suffices to compute the"
+        ],
+        [
+          "pow.c",
+          641,
+          "E is bounded in magnitude by 2^11. 2^F * n is equal to y by"
+        ],
+        [
+          "trigo_accurate.c",
+          43,
+          "Approximation error lower than  2^(-133)"
+        ],
+        [
+          "trigo_accurate.c",
+          65,
+          "Approximation error lower than  2^(-128)"
+        ],
+        [
+          "trigpi.c",
+          368,
+          "in this case, SCS computation, accurate to 2^-210 which is provably enough"
+        ],
+        [
+          "trigpi.c",
+          448,
+          "in this case, SCS computation, accurate to 2^-210 which is provably enough"
+        ],
+        [
+          "trigpi.c",
+          519,
+          "in this case, SCS computation, accurate to 2^-210 which is provably enough"
+        ],
+        [
+          "trigpi.c",
+          592,
+          "in this case, SCS computation, accurate to 2^-210 which is provably enough"
+        ],
+        [
+          "trigpi.c",
+          914,
+          "in this case, SCS computation, accurate to 2^-210 which is provably enough"
+        ],
+        [
+          "trigpi.c",
+          990,
+          "in this case, SCS computation, accurate to 2^-210 which is provably enough"
+        ],
+        [
+          "trigpi.c",
+          1070,
+          "in this case, SCS computation, accurate to 2^-210 which is provably enough"
+        ],
+        [
+          "trigpi.c",
+          1143,
+          "in this case, SCS computation, accurate to 2^-210 which is provably enough"
+        ]
+      ]
+    }
+  },
+  "registry": {
+    "path": "registry\\counts.json",
+    "library": "crlibm",
+    "version": "1.0beta5 (VERSION file)",
+    "machine_checked_not_in_manual": {
+      "vector_assertions": 63617,
+      "vector_functions": 21,
+      "gappa_obligations": 791,
+      "gappa_files": 46,
+      "source_comment_bounds": 41
+    },
+    "documented_claims_total": 42,
+    "documented_internal_numeric_bound_sentences": 44,
+    "m1": {
+      "vectors": 63617,
+      "disagreements": 9,
+      "disagreements_on_finite_values": 0,
+      "note": "all 9 are NaN bit patterns (sign or payload); tests/blind_test.c accepts any NaN where the vector expects NaN"
+    },
+    "m2": {
+      "queries": 361286,
+      "rounding_mode_results_checked": 1445144,
+      "failures": 12,
+      "sinh_failures": 4,
+      "atanpi_failures": 8,
+      "undecided_reference_points": 44
+    },
+    "table_s9_prose": {
+      "oracle_mismatches": 0,
+      "oracle_trials": 5999,
+      "oracle_overflow_boundary": 72,
+      "own_vector_disagreements": 0,
+      "own_vector_decided_approx": 48000
+    },
+    "defects": {
+      "sinh": {
+        "claim": "0_getting-started.tex:149, worst cases complete = correctly rounded on the whole floating-point input range",
+        "measured": "sinh_rd and sinh_rz return +inf at x = 0x408633ce8fb9f87e; IEEE requires the largest finite double. Mirrored at x = -0x408633ce8fb9f87e for sinh_ru and sinh_rz",
+        "verdict": "real defect, documented claim shown false",
+        "mechanism": "csh_fast.c guards the overflow shortcut with x > max_input_csh (lines 575, 577, 619, 671) while cosh uses x >= max_input_csh (lines 224, 278); max_input_csh is byte-for-byte the failing input (csh_fast.h:16)",
+        "control": "cosh at the same input and modes is correct, and cosh.testdata covers that input while sinh.testdata has no entry there",
+        "independent_confirmations": [
+          "MPFR Ziv reference",
+          "mpmath at 400 digits",
+          "glibc libm under FE_DOWNWARD/FE_TOWARDZERO"
+        ]
+      },
+      "atanpi": {
+        "claim": "0_getting-started.tex:156, worst cases [tan(2^-25 pi), tan(2^-5 pi)]",
+        "measured": "atanpi_rd and atanpi_rz return 0.5 where the correctly rounded value is 0.5 - 2^-54, for |x| above about 3e16 up to 1e300; negative mirror fails atanpi_ru and atanpi_rz",
+        "verdict": "real defect, but OUTSIDE the documented domain, so not a false claim; the manual states correct rounding is proven only on [9.4e-8, 0.098]"
+      }
+    },
+    "per_query_results_deposited": false,
+    "m2_script_writes_m2_results": null,
+    "conclusion_files_in_workdir": [
+      "counts.json"
+    ]
+  },
+  "comparison": [
+    {
+      "claim": "boost.suite_bounds",
+      "paper": 499,
+      "recount": 499,
+      "agrees": true,
+      "rule": "B",
+      "location": "main.tex sec:problem-contrast; supplement S6",
+      "basis": "engine",
+      "note": "one add_expected_result call with >=8 top-level arguments"
+    },
+    {
+      "claim": "boost.test_files",
+      "paper": 522,
+      "recount": 522,
+      "agrees": true,
+      "rule": "B",
+      "location": "supplement S6 ('499 bounds across 522 test files')",
+      "basis": "engine",
+      "note": "count of libs/math/test/test_*.cpp"
+    },
+    {
+      "claim": "crlibm.vector_assertions",
+      "paper": 63617,
+      "recount": 63617,
+      "agrees": true,
+      "rule": "V",
+      "location": "main.tex sec:problem-contrast; supplement S6, Table S9",
+      "basis": "engine",
+      "note": ""
+    },
+    {
+      "claim": "crlibm.vector_functions",
+      "paper": 21,
+      "recount": 21,
+      "agrees": true,
+      "rule": "V",
+      "location": "supplement S6 ('over 21 functions')",
+      "basis": "engine",
+      "note": "one *.testdata file per function"
+    },
+    {
+      "claim": "crlibm.gappa_obligations",
+      "paper": 791,
+      "recount": 791,
+      "agrees": true,
+      "rule": "G",
+      "location": "main.tex sec:problem-contrast; supplement S6, S8",
+      "basis": "engine",
+      "note": "arrow-line count; alternatives: 783 non-comment arrow lines, 707 arrow lines ending in ';', 46 files, 6 scripted gappa invocations"
+    },
+    {
+      "claim": "crlibm.gappa_files",
+      "paper": 46,
+      "recount": 46,
+      "agrees": true,
+      "rule": "G",
+      "location": "supplement S6 ('across 46 files')",
+      "basis": "engine",
+      "note": ""
+    },
+    {
+      "claim": "crlibm.source_comment_bounds",
+      "paper": 41,
+      "recount": 41,
+      "agrees": true,
+      "rule": "C",
+      "location": "main.tex sec:problem-contrast; supplement S6",
+      "basis": "engine",
+      "note": "the broad line rule reproduces 41; the paper does not state it. accuracy-word-only reading: 38; value-bound reading (accuracy word minus 7 interval statements): 31; 3 magnitude-only lines ('bounded by 2^11')"
+    },
+    {
+      "claim": "crlibm.correct_rounding_failures",
+      "paper": 12,
+      "recount": 12,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9; main.tex sec:problem-held",
+      "basis": "registry aggregate only",
+      "note": "per-query results not deposited"
+    },
+    {
+      "claim": "crlibm.failures.sinh",
+      "paper": 4,
+      "recount": 4,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9; main.tex sec:problem-held",
+      "basis": "registry aggregate only",
+      "note": "per-query results not deposited"
+    },
+    {
+      "claim": "crlibm.failures.atanpi",
+      "paper": 8,
+      "recount": 8,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9; main.tex sec:problem-held",
+      "basis": "registry aggregate only",
+      "note": "registry describes these as outside the documented domain"
+    },
+    {
+      "claim": "crlibm.undecided_reference_points",
+      "paper": 44,
+      "recount": 44,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9",
+      "basis": "registry aggregate only",
+      "note": "m2 field; not the unrelated 44 internal manual sentences"
+    },
+    {
+      "claim": "crlibm.queries",
+      "paper": 361286,
+      "recount": 361286,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9",
+      "basis": "registry aggregate only",
+      "note": "4 rounding modes per query: 361286 * 4 = 1445144"
+    },
+    {
+      "claim": "crlibm.rounding_mode_results",
+      "paper": 1445144,
+      "recount": 1445144,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9",
+      "basis": "registry aggregate only",
+      "note": ""
+    },
+    {
+      "claim": "table_s9.oracle_mismatches",
+      "paper": 0,
+      "recount": 0,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9",
+      "basis": "registry prose",
+      "note": ""
+    },
+    {
+      "claim": "table_s9.oracle_trials",
+      "paper": 5999,
+      "recount": 5999,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9",
+      "basis": "registry prose",
+      "note": ""
+    },
+    {
+      "claim": "table_s9.oracle_overflow_boundary",
+      "paper": 72,
+      "recount": 72,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9",
+      "basis": "registry prose",
+      "note": ""
+    },
+    {
+      "claim": "table_s9.own_vectors_decided_approx",
+      "paper": 48000,
+      "recount": 48000,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9 ('about 48,000')",
+      "basis": "registry prose; stated as approximate",
+      "note": "the paper says about 48,000; the registry says (~48,000)"
+    },
+    {
+      "claim": "table_s9.own_vector_disagreements",
+      "paper": 0,
+      "recount": 0,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9",
+      "basis": "registry prose",
+      "note": ""
+    },
+    {
+      "claim": "table_s9.vector_count",
+      "paper": 63617,
+      "recount": 63617,
+      "agrees": true,
+      "rule": "V",
+      "location": "supplement Table S9",
+      "basis": "engine",
+      "note": "the registry m1 vectors field is also 63,617"
+    },
+    {
+      "claim": "table_s9.vector_disagreements",
+      "paper": 9,
+      "recount": 9,
+      "agrees": true,
+      "rule": "registry",
+      "location": "supplement Table S9",
+      "basis": "registry aggregate only",
+      "note": "0 on finite values; all 9 are NaN bit patterns"
+    }
+  ],
+  "summary": {
+    "claims_checked": 20,
+    "engine_recounted": 8,
+    "engine_agree": 8,
+    "aggregate_only": 12,
+    "aggregate_agree": 12,
+    "disagreements": [],
+    "per_query_failure_split_recounted": false
+  }
+}

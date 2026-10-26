@@ -1,0 +1,500 @@
+file,line,compiler,stdlib,platform,type,group,function,max_eps,mean_eps
+test_0F1.cpp,31,.*,.*,.*,largest_type,Integer.*,.*,300,100
+test_0F1.cpp,38,.*,.*,.*,largest_type,Real.*,.*,2000,1000
+test_0F1.cpp,46,.*,.*,.*,largest_type,Large.*,.*,1300,300
+test_1F1.cpp,30,.*,.*,.*,cpp_bin_float_quad|cpp_bin_float_double_extended,Integer a values,.*,25000,800
+test_1F1.cpp,37,.*,.*,.*,cpp_bin_float_quad|cpp_bin_float_double_extended,Large.*,.*,500000,22000
+test_1F1.cpp,44,.*,.*,.*,cpp_bin_float_quad|cpp_bin_float_double_extended,Small.*,.*,2000,200
+test_1F1.cpp,52,.*,.*,.*,dec_40,Integer a values,.*,12000,800
+test_1F1.cpp,59,.*,.*,.*,dec_40,Large.*,.*,20000000L,650000L
+test_1F1.cpp,66,.*,.*,.*,dec_40,Small.*,.*,1000,300
+test_1F1.cpp,79,.*,.*,.*,double,Integer a values,.*,5,3
+test_1F1.cpp,87,.*,.*,.*,double,Small.*,.*,5,3
+test_1F1.cpp,95,.*,.*,.*,double,Large.*,.*,40,20
+test_1F1.cpp,102,.*,.*,.*,double,Bug.*,.*,300,50
+test_1F1.cpp,110,.*,.*,.*,double,.*double limited precision.*,.*,10,5
+test_1F1.cpp,121,.*,.*,.*,double,Bug.*,.*,10,2
+test_1F1.cpp,130,.*,.*,.*,largest_type,Integer a values,.*,16000,600
+test_1F1.cpp,138,.*,.*,.*,largest_type,Small.*,.*,2000,200
+test_1F1.cpp,146,.*,.*,.*,largest_type,Large.*,.*,400000,9000
+test_1F1.cpp,153,.*,.*,.*,dec_40,Bug cases.*,.*,2200000,430000
+test_1F1.cpp,160,.*,.*,.*,largest_type,Bug cases.*,.*,1500000,430000
+test_1F1.cpp,167,.*,.*,.*,largest_type,.*negative.*,.*,200,100
+test_1F1_log.cpp,30,.*,.*,.*,cpp_bin_float_quad|cpp_bin_float_double_extended,Integer a values,.*,25000,800
+test_1F1_log.cpp,37,.*,.*,.*,cpp_bin_float_quad|cpp_bin_float_double_extended,Large.*,.*,500000,20000
+test_1F1_log.cpp,44,.*,.*,.*,cpp_bin_float_quad|cpp_bin_float_double_extended,Small.*,.*,2000,200
+test_1F1_log.cpp,52,.*,.*,.*,dec_40,Integer a values,.*,12000,800
+test_1F1_log.cpp,59,.*,.*,.*,dec_40,Large.*,.*,20000000L,600000L
+test_1F1_log.cpp,66,.*,.*,.*,dec_40,Small.*,.*,1000,300
+test_1F1_log.cpp,79,.*,.*,.*,double,Integer a values,.*,5,3
+test_1F1_log.cpp,87,.*,.*,.*,double,Small.*,.*,5,3
+test_1F1_log.cpp,95,.*,.*,.*,double,Large.*,.*,40,20
+test_1F1_log.cpp,102,.*,.*,.*,double,Bug.*,.*,300,50
+test_1F1_log.cpp,112,.*,.*,.*,largest_type,Integer a values,.*,16000,600
+test_1F1_log.cpp,120,.*,.*,.*,largest_type,Small.*,.*,2000,200
+test_1F1_log.cpp,128,.*,.*,.*,largest_type,Large.*,.*,400000,8000
+test_1F1_log.cpp,135,.*,.*,.*,dec_40,Bug cases.*,.*,2200000,400000
+test_1F1_log.cpp,142,.*,.*,.*,largest_type,Bug cases.*,.*,1500000,400000
+test_1F1_regularized.cpp,32,.*,.*,.*,cpp_bin_float_quad|cpp_bin_float_double_extended,Integer a values,.*,25000,800
+test_1F1_regularized.cpp,39,.*,.*,.*,cpp_bin_float_quad|cpp_bin_float_double_extended,Large.*,.*,500000,20000
+test_1F1_regularized.cpp,46,.*,.*,.*,cpp_bin_float_quad|cpp_bin_float_double_extended,Small.*,.*,2000,200
+test_1F1_regularized.cpp,54,.*,.*,.*,dec_40,Integer a values,.*,12000,800
+test_1F1_regularized.cpp,61,.*,.*,.*,dec_40,Large.*,.*,200000000L,20000000L
+test_1F1_regularized.cpp,68,.*,.*,.*,dec_40,Small.*,.*,1000,300
+test_1F1_regularized.cpp,81,.*,.*,.*,double,Integer a values,.*,5,3
+test_1F1_regularized.cpp,89,.*,.*,.*,double,Small.*,.*,5,3
+test_1F1_regularized.cpp,97,.*,.*,.*,double,Large.*,.*,100,20
+test_1F1_regularized.cpp,104,.*,.*,.*,double,Bug.*,.*,300,50
+test_1F1_regularized.cpp,114,.*,.*,.*,largest_type,Integer a values,.*,16000,600
+test_1F1_regularized.cpp,122,.*,.*,.*,largest_type,Small.*,.*,2000,200
+test_1F1_regularized.cpp,130,.*,.*,.*,largest_type,Large.*,.*,400000,8000
+test_1F1_regularized.cpp,137,.*,.*,.*,dec_40,Bug cases.*,.*,2200000,400000
+test_1F1_regularized.cpp,144,.*,.*,.*,largest_type,Bug cases.*,.*,1500000,400000
+test_2F0.cpp,34,.*,.*,.*,double,Random non-integer a2.*,.*,10,5
+test_2F0.cpp,41,.*,.*,.*,double,a1 = a2 \\+ 0\\.5,.*,10,5
+test_2F0.cpp,51,.*,.*,.*,largest_type,Random non-integer a2.*,.*,9000,3000
+test_2F0.cpp,58,.*,.*,.*,largest_type,Integer.*,.*,300,100
+test_2F0.cpp,65,.*,.*,.*,largest_type,a1 = a2 \\+ 0\\.5,.*,2000,200
+test_bessel_i.cpp,70,.*,.*,Mac OS,largest_type,.*,.*,400,200
+test_bessel_i.cpp,80,GNU.*,.*,Cygwin*,largest_type,.*,.*,400,200
+test_bessel_i.cpp,94,.*,.*,linux,largest_type,.*Random.*,.*,400,200
+test_bessel_i.cpp,106,GNU.*,.*,Win32.*,largest_type,.*Random.*,.*,400,200
+test_bessel_i.cpp,113,GNU.*,.*,Win32.*,largest_type,.*,.*,30,10
+test_bessel_i.cpp,120,.*,.*,.*Solaris.*,largest_type,.*,.*,500,200
+test_bessel_i.cpp,127,.*,.*,.*,largest_type,.*,.*,20,10
+test_bessel_i.cpp,145,.*,.*,.*,real_concept,.*,.*,500,200
+test_bessel_i_prime.cpp,55,.*,.*,Mac OS,largest_type,.*,.*,3500,1500
+test_bessel_i_prime.cpp,70,GNU.*,.*,Cygwin*,largest_type,.*,.*,3500,1000
+test_bessel_i_prime.cpp,84,.*,.*,linux,largest_type,.*Random.*,.*,600,200
+test_bessel_i_prime.cpp,92,GNU.*,.*,Win32.*,largest_type,.*Random.*,.*,500,200
+test_bessel_i_prime.cpp,99,GNU.*,.*,Win32.*,largest_type,.*,.*,3500,1000
+test_bessel_i_prime.cpp,106,.*,.*,.*,largest_type,.*I'v.*Mathworld.*,.*,4200,2000
+test_bessel_i_prime.cpp,113,.*,.*,.*Solaris.*,largest_type,.*,.*,900,300
+test_bessel_i_prime.cpp,120,.*,.*,Win32.*,largest_type,.*,.*,60,25
+test_bessel_i_prime.cpp,127,.*,.*,.*,largest_type,.*,.*,40,25
+test_bessel_i_prime.cpp,141,.*,.*,.*,real_concept,.*I'v.*Mathworld.*,.*,4500,2000
+test_bessel_i_prime.cpp,148,.*,.*,.*Solaris.*,real_concept,.*,.*,800,400
+test_bessel_i_prime.cpp,155,.*,.*,.*,real_concept,.*,.*,600,200
+test_bessel_i_prime.cpp,162,.*,.*,.*,double,.*,.*,2,1
+test_bessel_j.cpp,72,.*,.*,HP-UX,largest_type,.*J0.*Tricky.*,.*,80000000000LL,80000000000LL
+test_bessel_j.cpp,79,.*,.*,HP-UX,largest_type,.*J1.*Tricky.*,.*,3000000,2000000
+test_bessel_j.cpp,86,.*,.*,HP-UX,double,.*Tricky.*,.*,100000,100000
+test_bessel_j.cpp,93,.*,.*,HP-UX,largest_type,.*J.*Tricky.*,.*,3000,500
+test_bessel_j.cpp,103,.*Tru64.*,.*,.*,double,.*Tricky.*,.*,100000,100000
+test_bessel_j.cpp,110,.*Tru64.*,.*,.*,largest_type,.*Tricky large.*,.*,3000,1000
+test_bessel_j.cpp,123,.*,.*,Sun Solaris,largest_type,Bessel J: Random Data.*Tricky.*,.*,3000,500
+test_bessel_j.cpp,130,.*,.*,Sun Solaris,double,.*Tricky.*,.*,200000,100000
+test_bessel_j.cpp,137,.*,.*,Sun Solaris,largest_type,.*J.*tricky.*,.*,400000000,200000000
+test_bessel_j.cpp,147,.*,.*,Mac OS,largest_type,.*J0.*Tricky.*,.*,400000000,400000000
+test_bessel_j.cpp,154,.*,.*,Mac OS,largest_type,.*J1.*Tricky.*,.*,3000000,2000000
+test_bessel_j.cpp,165,.*,.*,Mac OS,largest_type,Bessel JN.*,.*,40000,20000
+test_bessel_j.cpp,172,.*,.*,Mac OS,largest_type,Bessel J:.*,.*,50000,20000
+test_bessel_j.cpp,188,.*,.*,linux,largest_type,.*J:.*,.*,40000,30000
+test_bessel_j.cpp,202,.*,.*,.*,double,.*J0.*Tricky.*,.*,400000,400000
+test_bessel_j.cpp,209,.*,.*,.*,double,.*J1.*Tricky.*,.*,5000,5000
+test_bessel_j.cpp,216,.*,.*,.*,double,.*(JN|j).*|.*Tricky.*,.*,50,50
+test_bessel_j.cpp,223,.*,.*,.*,double,.*,.*,30,30
+test_bessel_j.cpp,233,.*,.*,.*,largest_type,.*J0.*Tricky.*,.*,400000000,400000000
+test_bessel_j.cpp,240,.*,.*,.*,largest_type,.*J1.*Tricky.*,.*,5000000,5000000
+test_bessel_j.cpp,247,.*,.*,.*,largest_type,.*(JN|j).*|.*Tricky.*,.*,33000,20000
+test_bessel_j.cpp,257,.*,.*,.*,double,.*J0.*Tricky.*,.*,100000,100000
+test_bessel_j.cpp,264,.*,.*,.*,double,.*J1.*Tricky.*,.*,70,50
+test_bessel_j.cpp,271,.*,.*,.*,double,.*Mathworld.*,.*,20,10
+test_bessel_j.cpp,280,.*,.*,.*,largest_type,.*J0.*Tricky.*,.*,400000000,400000000
+test_bessel_j.cpp,287,.*,.*,.*,largest_type,.*J1.*Tricky.*,.*,5000000,5000000
+test_bessel_j.cpp,294,.*,.*,.*,largest_type,Bessel j:.*|Bessel JN: Mathworld.*|.*Tricky.*,.*,1500,700
+test_bessel_j.cpp,301,.*,.*,.*,largest_type,.*,.*,40,20
+test_bessel_j.cpp,311,.*,.*,.*,float,Bessel J: Mathworld Data,.*,20,20
+test_bessel_j_prime.cpp,58,.*,.*,HP-UX,largest_type,.*J0'.*Tricky.*,.*,80000000000LL,80000000000LL
+test_bessel_j_prime.cpp,65,.*,.*,HP-UX,largest_type,.*J1'.*Tricky.*,.*,3000000,2000000
+test_bessel_j_prime.cpp,72,.*,.*,HP-UX,double,.*Tricky.*,.*,100000,100000
+test_bessel_j_prime.cpp,79,.*,.*,HP-UX,largest_type,.*J'.*Tricky.*,.*,3000,500
+test_bessel_j_prime.cpp,89,.*Tru64.*,.*,.*,double,.*Tricky.*,.*,100000,100000
+test_bessel_j_prime.cpp,96,.*Tru64.*,.*,.*,largest_type,.*Tricky large.*,.*,3000,1000
+test_bessel_j_prime.cpp,109,.*,.*,Sun Solaris,largest_type,Bessel J': Random Data.*Tricky.*,.*,3000,500
+test_bessel_j_prime.cpp,116,.*,.*,Sun Solaris,double,.*Tricky.*,.*,200000,100000
+test_bessel_j_prime.cpp,123,.*,.*,Sun Solaris,largest_type,.*J'.*tricky.*,.*,400000000,200000000
+test_bessel_j_prime.cpp,133,.*,.*,Mac OS,largest_type,.*J0'.*Tricky.*,.*,400000000,400000000
+test_bessel_j_prime.cpp,140,.*,.*,Mac OS,largest_type,.*J1'.*Tricky.*,.*,3000000,2000000
+test_bessel_j_prime.cpp,147,.*,.*,Mac OS,largest_type,Bessel JN'.*,.*,60000,20000
+test_bessel_j_prime.cpp,154,.*,.*,Mac OS,largest_type,Bessel J':.*,.*,60000,20000
+test_bessel_j_prime.cpp,170,.*,.*,linux,largest_type,.*J':.*,.*,60000,30000
+test_bessel_j_prime.cpp,184,.*,.*,.*,double,.*J0'.*Tricky.*,.*,400000,400000
+test_bessel_j_prime.cpp,191,.*,.*,.*,double,.*J1'.*Tricky.*,.*,5000,5000
+test_bessel_j_prime.cpp,198,.*,.*,.*,double,.*(JN'|j').*|.*Tricky.*,.*,50,50
+test_bessel_j_prime.cpp,205,.*,.*,.*,double,.*,.*,30,30
+test_bessel_j_prime.cpp,215,.*,.*,.*,largest_type,.*J0'.*Tricky.*,.*,400000000,400000000
+test_bessel_j_prime.cpp,222,.*,.*,.*,largest_type,.*J1'.*Tricky.*,.*,5000000,5000000
+test_bessel_j_prime.cpp,229,.*,.*,.*,largest_type,.*(JN'|j').*|.*Tricky.*,.*,60000,40000
+test_bessel_j_prime.cpp,238,.*,.*,.*,largest_type,.*J0'.*Tricky.*,.*,400000000,400000000
+test_bessel_j_prime.cpp,245,.*,.*,.*,largest_type,.*J1'.*Tricky.*,.*,5000000,5000000
+test_bessel_j_prime.cpp,252,.*,.*,.*,largest_type,Bessel j':.*|Bessel JN': Mathworld.*|.*Tricky.*,.*,1500,700
+test_bessel_j_prime.cpp,259,.*,.*,.*,largest_type,.*,.*,40,20
+test_bessel_j_prime.cpp,269,.*,.*,.*,float|double,Bessel J': Mathworld Data,.*,30,20
+test_bessel_k.cpp,81,.*,.*,Mac OS,largest_type,.*,.*,4000,1300
+test_bessel_k.cpp,89,GNU.*,.*,Win32.*,largest_type,.*large.*,.*,250,100
+test_bessel_k.cpp,96,.*,.*,.*,largest_type,.*large.*,.*,100,50
+test_bessel_k.cpp,103,.*,.*,.*,real_concept,.*,.*,90,50
+test_bessel_k.cpp,110,.*,.*,.*,largest_type,.*,.*,35,15
+test_bessel_k_prime.cpp,65,.*,.*,Mac OS,largest_type,.*,.*,4000,1300
+test_bessel_k_prime.cpp,73,GNU.*,.*,Win32.*,largest_type,.*large.*,.*,250,100
+test_bessel_k_prime.cpp,80,.*,.*,.*,largest_type,.*large.*,.*,100,75
+test_bessel_k_prime.cpp,87,.*,.*,.*,largest_type,.*,.*,35,15
+test_bessel_y.cpp,70,.*,.*,HP-UX|Sun Solaris,largest_type,.*(Y[nv]|y).*Random.*,.*,30000,30000
+test_bessel_y.cpp,77,.*,.*,HP-UX|Sun Solaris,largest_type,.*Y[01Nv].*,.*,1300,500
+test_bessel_y.cpp,87,.*Tru64.*,.*,.*,largest_type,.*(Y[nv]|y).*Random.*,.*,30000,30000
+test_bessel_y.cpp,94,.*Tru64.*,.*,.*,largest_type,.*Y[01Nv].*,.*,400,200
+test_bessel_y.cpp,105,.*,.*,Mac OS,largest_type,.*(Y[nv1]).*,.*,600000,100000
+test_bessel_y.cpp,112,.*,.*,Mac OS,long double|real_concept,.*Y[0].*,.*,1200,1000
+test_bessel_y.cpp,123,.*,.*,linux,largest_type,.*Yv.*Random.*,.*,200000,200000
+test_bessel_y.cpp,130,.*,.*,linux,largest_type,.*Y[01v].*,.*,2000,1000
+test_bessel_y.cpp,137,.*,.*,linux,largest_type,.*Yn.*,.*,30000,30000
+test_bessel_y.cpp,147,GNU.*,.*,Win32.*,largest_type,.*Yv.*Random.*,.*,200000,200000
+test_bessel_y.cpp,154,GNU.*,.*,Win32.*,largest_type,.*Y[01v].*,.*,2000,1000
+test_bessel_y.cpp,161,GNU.*,.*,Win32.*,largest_type,.*Yn.*,.*,30000,30000
+test_bessel_y.cpp,171,GNU.*,.*,Cygwin*,largest_type,.*Yv.*Random.*,.*,400000,300000
+test_bessel_y.cpp,178,GNU.*,.*,Cygwin*,largest_type,.*Y[01v].*,.*,2000,1000
+test_bessel_y.cpp,185,GNU.*,.*,Cygwin*,largest_type,.*Yn.*,.*,30000,30000
+test_bessel_y.cpp,196,GNU.*,.*,Sun.*,largest_type,Y[0N].*Mathworld.*,.*,2000,2000
+test_bessel_y.cpp,209,.*,.*,.*,double,.*Y[Nn].*,.*,20,20
+test_bessel_y.cpp,216,.*,.*,.*,double,.*Yv.*,.*,80,70
+test_bessel_y.cpp,226,.*,.*,.*,double,.*Yv.*Mathworld.*,.*,20,5
+test_bessel_y.cpp,238,.*,.*,.*,real_concept,.*(Y[nv]|y).*Random.*,.*,2000,2000
+test_bessel_y.cpp,245,.*,.*,.*,largest_type,.*(Y[nv]|y).*Random.*,.*,1500,1000
+test_bessel_y.cpp,259,GNU.*,.*,Sun.*,largest_type,Y[0N].*,.*,200,200
+test_bessel_y.cpp,269,.*,.*,.*,largest_type,.*,.*,80,40
+test_bessel_y.cpp,279,.*,.*,.*,float,Yv: Mathworld Data,.*,20,20
+test_bessel_y_prime.cpp,56,.*,.*,HP-UX|Sun Solaris,largest_type,.*(Y'[nv]|y').*Random.*,.*,150000,30000
+test_bessel_y_prime.cpp,63,.*,.*,HP-UX|Sun Solaris,largest_type,.*Y'[01Nv].*,.*,1300,500
+test_bessel_y_prime.cpp,73,.*Tru64.*,.*,.*,largest_type,.*(Y'[nv]|y').*Random.*,.*,30000,30000
+test_bessel_y_prime.cpp,80,.*Tru64.*,.*,.*,largest_type,.*Y'[01Nv].*,.*,400,200
+test_bessel_y_prime.cpp,91,.*,.*,Mac OS,largest_type,.*(Y'[nv1]).*,.*,600000,100000
+test_bessel_y_prime.cpp,98,.*,.*,Mac OS,long double|real_concept,.*Y'[0].*,.*,1500,1000
+test_bessel_y_prime.cpp,115,.*,.*,linux,double,.*,.*,30,20
+test_bessel_y_prime.cpp,122,.*,.*,linux,largest_type,.*Y'v.*Random.*,.*,7000000,700000
+test_bessel_y_prime.cpp,129,.*,.*,linux,largest_type,.*Y'[01v].*,.*,7000,3000
+test_bessel_y_prime.cpp,139,.*,.*,linux,largest_type,.*Y'v.*Random.*,.*,400000,200000
+test_bessel_y_prime.cpp,146,.*,.*,linux,largest_type,.*Y'[01v].*,.*,2000,1000
+test_bessel_y_prime.cpp,154,.*,.*,linux,largest_type,.*Y'n.*,.*,30000,30000
+test_bessel_y_prime.cpp,164,GNU.*,.*,Win32.*,largest_type,.*Y'v.*Random.*,.*,400000,300000
+test_bessel_y_prime.cpp,171,GNU.*,.*,Win32.*,largest_type,.*Y'[01v].*,.*,2000,1000
+test_bessel_y_prime.cpp,178,GNU.*,.*,Win32.*,largest_type,.*Y'n.*,.*,30000,30000
+test_bessel_y_prime.cpp,189,GNU.*,.*,Cygwin*,largest_type,.*Y'v.*Random.*,.*,400000,300000
+test_bessel_y_prime.cpp,196,GNU.*,.*,Cygwin*,largest_type,.*Y'[01v].*,.*,2000,1000
+test_bessel_y_prime.cpp,203,GNU.*,.*,Cygwin*,largest_type,.*Y'n.*,.*,30000,30000
+test_bessel_y_prime.cpp,214,GNU.*,.*,Sun.*,largest_type,Y'[0N].*Mathworld.*,.*,2000,2000
+test_bessel_y_prime.cpp,227,.*,.*,.*,double,.*Y'[Nn].*,.*,20,20
+test_bessel_y_prime.cpp,234,.*,.*,.*,double,.*Y'v.*,.*,200,70
+test_bessel_y_prime.cpp,246,.*,.*,.*,real_concept,.*(Y'[nv]|y').*Random.*,.*,40000,3000
+test_bessel_y_prime.cpp,253,.*,.*,.*,largest_type,.*(Y'[nv]|y').*Random.*,.*,40000,3000
+test_bessel_y_prime.cpp,263,GNU.*,.*,Sun.*,largest_type,Y'[0N].*,.*,200,200
+test_bessel_y_prime.cpp,273,.*,.*,.*,largest_type,.*,.*,720,600
+test_bessel_y_prime.cpp,283,.*,.*,.*,float|double,Y'v: Mathworld Data,.*,30,20
+test_beta.cpp,55,.*,.*,Mac OS.*,(long\\s+)?double,Beta Function: Medium.*,beta,200,35
+test_beta.cpp,64,.*,.*,.*,(long\\s+)?double,Beta Function: Small.*,beta,8,5
+test_beta.cpp,71,.*,.*,.*,(long\\s+)?double,Beta Function: Medium.*,beta,160,35
+test_beta.cpp,78,.*,.*,.*,(long\\s+)?double,Beta Function: Divergent.*,beta,30,6
+test_beta.cpp,85,.*,.*,.*,real_concept,Beta Function: Small.*,beta,25,15
+test_beta.cpp,92,.*,.*,.*,real_concept,Beta Function: Medium.*,beta,150,40
+test_beta.cpp,99,.*,.*,.*,real_concept,Beta Function: Divergent.*,beta,30,15
+test_binomial_coeff.cpp,50,.*,.*,.*,largest_type,.*large.*,.*,100,20
+test_binomial_coeff.cpp,57,.*,.*,.*,real_concept,.*large.*,.*,250,100
+test_binomial_coeff.cpp,64,.*,.*,.*,real_concept,.*,.*,150,30
+test_binomial_coeff.cpp,71,.*,.*,.*,.*,.*,.*,2,1
+test_carlson.cpp,62,.*,.*,BOOST_PLATFORM,largest_type,.*RJ.*,.*,1000,50
+test_carlson.cpp,69,.*,.*,BOOST_PLATFORM,real_concept,.*RJ.*,.*,1000,50
+test_carlson.cpp,80,.*,.*,.*,largest_type,.*RJ.*,.*,250,50
+test_carlson.cpp,87,.*,.*,.*,real_concept,.*RJ.*,.*,250,50
+test_carlson.cpp,94,.*,.*,.*,largest_type,.*,.*,25,8
+test_carlson.cpp,101,.*,.*,.*,real_concept,.*,.*,25,8
+test_cbrt.cpp,62,Borland.*,.*,.*,long double,.*,.*,10,6
+test_cbrt.cpp,69,.*,.*,.*,largest_type,.*,.*,2,2
+test_digamma.cpp,38,.*,.*,.*,.*,.*Negative.*,.*,300,40
+test_digamma.cpp,45,.*,.*,.*,real_concept,.*Near the Positive Root.*,.*,25000,3000
+test_digamma.cpp,52,.*,.*,.*,real_concept,.*Half.*,.*,15,10
+test_digamma.cpp,61,.*,.*,.*,real_concept,.*Near Zero.*,.*,15,10
+test_digamma.cpp,69,.*,.*,.*,.*,.*,.*,3,3
+test_ellint_1.cpp,68,.*,.*,.*,largest_type,.*,.*,5,3
+test_ellint_1.cpp,75,.*,.*,.*,real_concept,.*,.*,5,3
+test_ellint_2.cpp,63,.*,.*,.*,long double|real_concept,.*Mathworld.*,.*,40,10
+test_ellint_2.cpp,74,.*,.*,.*,largest_type,.*,.*,15,6
+test_ellint_2.cpp,85,.*,.*,.*,real_concept,.*,.*,15,6
+test_ellint_3.cpp,59,.*,.*,.*,largest_type,.*Large.*,.*,50,20
+test_ellint_3.cpp,66,.*,.*,.*,largest_type,.*Mathworld.*,.*,600,200
+test_ellint_3.cpp,73,.*,.*,.*,largest_type,.*,.*,15,8
+test_ellint_d.cpp,65,.*,.*,.*,largest_type,.*,.*,15,6
+test_ellint_d.cpp,72,.*,.*,.*,real_concept,.*,.*,15,6
+test_erf.cpp,76,.*,.*,Mac OS,largest_type,Erf Function:.*Large.*,erfc,4300,1300
+test_erf.cpp,83,.*,.*,Mac OS,largest_type,Erf Function:.*,erfc,40,10
+test_erf.cpp,91,.*,.*,.*,real_concept,Erf Function:.*,erfc?,20,6
+test_erf.cpp,98,.*,.*,.*,real_concept,Inverse Erfc.*,erfc_inv,80,10
+test_erf.cpp,110,.*,.*,.*,.*,Erf Function:.*,erfc?,2,2
+test_erf.cpp,117,.*aCC.*,.*,.*,.*,Inverse Erfc.*,erfc_inv,80,10
+test_erf.cpp,124,.*,.*,.*,.*,Inverse Erf.*,erfc?_inv,18,4
+test_expint.cpp,55,.*,.*,Mac OS,float|double|long double,.*E1.*,.*,30,10
+test_expint.cpp,62,.*,.*,Mac OS,float|double|long double|real_concept,.*Ei.*,.*,300,200
+test_expint.cpp,69,.*,.*,Mac OS,.*,.*,.*,40,15
+test_expint.cpp,77,.*,.*,.*,float|double|long double,.*E1.*,.*,2,1
+test_expint.cpp,84,.*,.*,.*,float|double|long double,.*Ei.*,.*,6,3
+test_expint.cpp,97,.*,.*,.*,real_concept,.*Ei.*,.*,150,50
+test_expint.cpp,105,.*,.*,.*,real_concept,.*Ei.*,.*,150,50
+test_expint.cpp,112,.*,.*,.*,.*,.*,.*,25,5
+test_expm1_extra.cpp,39,.*,.*,.*,.*,.*,.*,4,3
+test_gamma.cpp,63,.*,.*,Mac OS,largest_type,factorials,tgamma,100,15
+test_gamma.cpp,73,GNU.*,.*,Win32.*,largest_type,factorials,tgamma,100,15
+test_gamma.cpp,80,GNU.*,.*,Win32.*,real_concept,factorials,tgamma,600,200
+test_gamma.cpp,87,GNU.*,.*,Win32.*,real_concept,near.*,tgamma,200,100
+test_gamma.cpp,98,GNU.*,.*,Cygwin*,largest_type,factorials,tgamma,100,15
+test_gamma.cpp,105,GNU.*,.*,Cygwin*,real_concept,factorials,tgamma,600,200
+test_gamma.cpp,112,GNU.*,.*,Cygwin*,real_concept,near.*,tgamma,200,100
+test_gamma.cpp,125,.*,.*,linux,largest_type,factorials,tgamma,600,200
+test_gamma.cpp,132,.*,.*,linux,largest_type,factorials,lgamma,30,10
+test_gamma.cpp,139,.*,.*,linux,largest_type,near (1|2|-10),tgamma,10,5
+test_gamma.cpp,146,.*,.*,linux,largest_type,near (1|2|-10),lgamma,50,50
+test_gamma.cpp,153,.*,.*,linux,largest_type,tgamma1pm1.*,tgamma1pm1,50,15
+test_gamma.cpp,160,.*,.*,linux,real_concept,factorials,tgamma,600,100
+test_gamma.cpp,167,.*,.*,linux,real_concept,near (0|-55),(t|l)gamma,300,150
+test_gamma.cpp,174,.*,.*,linux,real_concept,tgamma1pm1.*,tgamma1pm1,40,10
+test_gamma.cpp,184,.*,.*,HP-UX,largest_type,factorials,tgamma,5,4
+test_gamma.cpp,191,.*,.*,HP-UX,largest_type,near (0|-55),tgamma,10,5
+test_gamma.cpp,198,.*,.*,HP-UX,largest_type,near (1|2|-10),lgamma,250,200
+test_gamma.cpp,205,.*,.*,HP-UX,real_concept,factorials,lgamma,50,20
+test_gamma.cpp,212,.*,.*,HP-UX,real_concept,tgamma1pm1.*,tgamma1pm1,200,80
+test_gamma.cpp,222,.*Tru64.*,.*,.*,real_concept,factorials,lgamma,50,20
+test_gamma.cpp,232,.*,.*,Sun.*,largest_type,factorials,tgamma,450,100
+test_gamma.cpp,239,.*,.*,.*Solaris.*,real_concept,factorials,tgamma,450,150
+test_gamma.cpp,250,.*,.*,.*,largest_type,factorials,tgamma,4,1
+test_gamma.cpp,257,.*,.*,.*,largest_type,factorials,lgamma,9,1
+test_gamma.cpp,264,.*,.*,.*,largest_type,near (0|-55),(t|l)gamma,200,100
+test_gamma.cpp,271,.*,.*,.*,largest_type,near (1|2|-10),tgamma,10,5
+test_gamma.cpp,278,.*,.*,.*,largest_type,near (1|2|-10),lgamma,14,7
+test_gamma.cpp,285,.*,.*,.*,largest_type,tgamma1pm1.*,tgamma1pm1,30,9
+test_gamma.cpp,293,.*,.*,.*,real_concept,factorials,tgamma,600,100
+test_gamma.cpp,300,.*,.*,.*,real_concept,factorials,lgamma,200,20
+test_gamma.cpp,307,.*,.*,.*,real_concept,near.*,tgamma,300,100
+test_gamma.cpp,314,.*,.*,.*,real_concept,near.*,lgamma,40000000,10000000
+test_gamma.cpp,321,.*,.*,.*,real_concept,tgamma1pm1.*,tgamma1pm1,20,5
+test_gamma_mp.cpp,127,.*,.*,.*,cpp_bin_float_100|number<cpp_bin_float<85> >,.*,lgamma,600000,300000
+test_gamma_mp.cpp,134,.*,.*,.*,number<cpp_bin_float<[56]5> >,.*,lgamma,7000,3000
+test_gamma_mp.cpp,141,.*,.*,.*,number<cpp_bin_float<75> >,.*,lgamma,40000,15000
+test_gamma_mp.cpp,148,.*,.*,.*,.*,.*,lgamma,600,200
+test_gamma_mp.cpp,155,.*,.*,.*,.*,.*,[tl]gamma,120,50
+test_hermite.cpp,65,.*,.*,.*,largest_type,.*,hermite,10,5
+test_hermite.cpp,72,.*,.*,.*,real_concept,.*,hermite,10,5
+test_heuman_lambda.cpp,63,.*,.*,.*,largest_type,.*,.*,15,6
+test_heuman_lambda.cpp,70,.*,.*,.*,real_concept,.*,.*,15,6
+test_hypergeometric_dist.cpp,78,.*,.*,.*,double,Random.*,.*,1500,1500
+test_hypergeometric_dist.cpp,85,.*,.*,.*,double,.*,.*,10,10
+test_hypergeometric_dist.cpp,95,.*,.*,.*,real_concept,Random.*,.*,250000000,25000000
+test_hypergeometric_dist.cpp,102,.*,.*,.*,largest_type,Random.*,.*,10000000,5000000
+test_hypergeometric_dist.cpp,109,.*,.*,.*,largest_type,.*,.*,50,20
+test_ibeta.cpp,77,[^|]*,[^|]*,Mac OS,real_concept,(?i).*large.*,.*,400000,50000
+test_ibeta.cpp,90,[^|]*,[^|]*,linux,largest_type,(?i).*small.*,.*,350,100
+test_ibeta.cpp,97,[^|]*,[^|]*,linux,largest_type,(?i).*medium.*,.*,300,80
+test_ibeta.cpp,106,[^|]*,[^|]*,[^|]*,largest_type,(?i).*Very Large.*,.*,2000000,200000
+test_ibeta.cpp,113,[^|]*,[^|]*,.*,largest_type,(?i).*Asymptotically.*,.*,900000000,90000000
+test_ibeta.cpp,127,[^|]*,[^|]*,Mac OS,largest_type,(?i).*Very Large.*,.*,20000000,2000000
+test_ibeta.cpp,134,[^|]*,[^|]*,Mac OS,largest_type,(?i).*Asymptotically Large.*,.*,900000000,80000000
+test_ibeta.cpp,141,[^|]*,[^|]*,linux|Mac OS,largest_type,(?i).*large.*,.*,200000,10000
+test_ibeta.cpp,151,[^|]*,[^|]*,.*,double,(?i).*Asymptotically.*,.*,500000,50000
+test_ibeta.cpp,158,[^|]*,[^|]*,.*,double,(?i).*large.*,.*,200,20
+test_ibeta.cpp,167,[^|]*,[^|]*,linux|Mac OS,real_concept,(?i).*medium.*,.*,350,100
+test_ibeta.cpp,182,[^|]*,[^|]*,HP-UX,largest_type,(?i).*large.*,.*,200000,10000
+test_ibeta.cpp,192,.*Tru64.*,.*,.*,largest_type,(?i).*large.*,.*,130000,10000
+test_ibeta.cpp,202,[^|]*,[^|]*,Sun.*,largest_type,(?i).*large.*,.*,130000,10000
+test_ibeta.cpp,209,[^|]*,[^|]*,Sun.*,largest_type,(?i).*small.*,.*,130,30
+test_ibeta.cpp,216,[^|]*,[^|]*,Sun.*,largest_type,(?i).*medium.*,.*,250,40
+test_ibeta.cpp,223,[^|]*,[^|]*,Sun.*,real_concept,(?i).*medium.*,.*,250,40
+test_ibeta.cpp,230,[^|]*,[^|]*,Sun.*,real_concept,(?i).*small.*,.*,130,30
+test_ibeta.cpp,240,GNU[^|]*,[^|]*,Win32[^|]*,real_concept,(?i).*medium.*,.*,400,50
+test_ibeta.cpp,247,GNU.*,.*,Win32.*,double,(?i).*large.*,.*,20,10
+test_ibeta.cpp,254,GNU.*,.*,Win32.*,largest_type,(?i).*large.*,.*,200000,10000
+test_ibeta.cpp,264,GNU[^|]*,[^|]*,Cygwin*,real_concept,(?i).*medium.*,.*,400,50
+test_ibeta.cpp,271,GNU.*,.*,Cygwin*,double,(?i).*large.*,.*,20,10
+test_ibeta.cpp,278,GNU.*,.*,Cygwin*,largest_type,(?i).*large.*,.*,200000,10000
+test_ibeta.cpp,290,[^|]*,[^|]*,BOOST_PLATFORM,largest_type,(?i).*large.*,.*,13000,500
+test_ibeta.cpp,301,[^|]*,[^|]*,[^|]*,largest_type,(?i).*small.*,.*,90,25
+test_ibeta.cpp,308,[^|]*,[^|]*,[^|]*,largest_type,(?i).*medium.*,.*,350,50
+test_ibeta.cpp,315,[^|]*,[^|]*,[^|]*,largest_type,(?i).*Very Large.*,.*,200000,20000
+test_ibeta.cpp,322,[^|]*,[^|]*,[^|]*,largest_type,(?i).*Asymptotically Large.*,.*,900000000,80000000
+test_ibeta.cpp,329,[^|]*,[^|]*,[^|]*,largest_type,(?i).*large.*,.*,5000,500
+test_ibeta.cpp,337,[^|]*,[^|]*,[^|]*,real_concept,(?i).*small.*,.*,90,25
+test_ibeta.cpp,344,[^|]*,[^|]*,[^|]*,real_concept,(?i).*medium.*,.*,250,50
+test_ibeta.cpp,351,[^|]*,[^|]*,[^|]*,real_concept,(?i).*large.*,.*,200000,50000
+test_ibeta.cpp,360,[^|]*,[^|]*,[^|]*,[^|]*,[^|]*,.*,2,2
+test_ibeta_derivative.cpp,65,[^|]*,[^|]*,[^|]*,largest_type,[^|]*Medium.*,.*,200000,7000
+test_ibeta_derivative.cpp,72,[^|]*,[^|]*,[^|]*,real_concept,[^|]*Large.*,.*,300000,10000
+test_ibeta_derivative.cpp,79,[^|]*,[^|]*,[^|]*,largest_type,[^|]*Large.*,.*,80000,5000
+test_ibeta_derivative.cpp,88,[^|]*,[^|]*,[^|]*,largest_type,[^|]*Integer.*,.*,4000000,100000
+test_ibeta_derivative.cpp,96,[^|]*,[^|]*,[^|]*,largest_type,[^|]*Integer.*,.*,30000,1500
+test_ibeta_derivative.cpp,103,[^|]*,[^|]*,[^|]*,double,[^|]*Large.*,.*,3900,300
+test_ibeta_derivative.cpp,110,[^|]*,[^|]*,[^|]*,double,[^|]*,.*,200,50
+test_ibeta_derivative.cpp,120,[^|]*,[^|]*,[^|]*,real_concept,[^|]*large.*,.*,200000,6000
+test_ibeta_derivative.cpp,127,[^|]*,[^|]*,[^|]*,largest_type,[^|]*large.*,.*,3300,200
+test_ibeta_derivative.cpp,134,[^|]*,[^|]*,[^|]*,largest_type,[^|]*,.*,300,100
+test_ibeta_inv.cpp,94,.*,.*,.*,double,.*,.*,20,10
+test_ibeta_inv.cpp,101,.*,.*,.*,long double,.*,.*,200000,100000
+test_ibeta_inv.cpp,108,.*,.*,.*,real_concept,.*,.*,5000000L,500000
+test_ibeta_inv.cpp,122,GNU.*,.*,Win32.*,double,.*,.*,10,10
+test_ibeta_inv.cpp,129,GNU.*,.*,Win32.*,largest_type,.*,.*,300000,20000
+test_ibeta_inv.cpp,142,.*,.*,HP-UX|Sun Solaris,long double,.*,.*,200000,100000
+test_ibeta_inv.cpp,155,HP Tru64.*,.*,.*,long double,.*,.*,200000,100000
+test_ibeta_inv.cpp,168,.*,.*,.*,largest_type,.*,.*,200000,5000
+test_ibeta_inv.cpp,178,.*,.*,.*,largest_type,.*,.*,10000,1000
+test_ibeta_inv.cpp,186,.*,.*,.*,real_concept,.*,.*,500000,500000
+test_ibeta_inv_ab.cpp,74,.*,.*,linux,largest_type,.*,.*,3000,500
+test_ibeta_inv_ab.cpp,84,.*,.*,.*,largest_type,.*,.*,500,500
+test_ibeta_inv_ab.cpp,91,.*,.*,.*,float|double,.*,.*,5,3
+test_ibeta_inv_ab.cpp,98,.*,.*,.*,real_concept,.*,.*,1000000,500000
+test_igamma.cpp,74,[^|]*,[^|]*,linux,largest_type,[^|]*medium[^|]*,[^|]*,1300,200
+test_igamma.cpp,81,[^|]*,[^|]*,.*Solaris.*,real_concept,[^|]*medium[^|]*,[^|]*,1000,200
+test_igamma.cpp,88,[^|]*,[^|]*,linux,largest_type,[^|]*integer[^|]*,[^|]*,1300,200
+test_igamma.cpp,95,[^|]*,[^|]*,linux,real_concept,[^|]*medium[^|]*,[^|]*,1300,200
+test_igamma.cpp,102,[^|]*,[^|]*,linux,real_concept,[^|]*integer[^|]*,[^|]*,600,200
+test_igamma.cpp,115,[^|]*,[^|]*,Mac OS,largest_type,[^|]*medium[^|]*,[^|]*,5000,1000
+test_igamma.cpp,122,[^|]*,[^|]*,Mac OS,largest_type,[^|]*small[^|]*,[^|]*,80,40
+test_igamma.cpp,129,[^|]*,[^|]*,Mac OS,largest_type,[^|]*integer[^|]*,[^|]*,2000,300
+test_igamma.cpp,136,[^|]*,[^|]*,Mac OS,real_concept,[^|]*medium[^|]*,[^|]*,5000,1000
+test_igamma.cpp,143,[^|]*,[^|]*,Mac OS,real_concept,[^|]*small[^|]*,[^|]*,75,15
+test_igamma.cpp,150,[^|]*,[^|]*,Mac OS,real_concept,[^|]*integer[^|]*,[^|]*,2000,300
+test_igamma.cpp,160,[^|]*,[^|]*,HP-UX,largest_type,[^|]*medium[^|]*,[^|]*,500,50
+test_igamma.cpp,167,[^|]*,[^|]*,HP-UX,real_concept,[^|]*medium[^|]*,[^|]*,500,100
+test_igamma.cpp,177,[^|]*,[^|]*,Sun.*,largest_type,[^|]*medium[^|]*,[^|]*,500,100
+test_igamma.cpp,184,[^|]*,[^|]*,Sun.*,largest_type,[^|]*integer[^|]*,[^|]*,100,30
+test_igamma.cpp,191,[^|]*,[^|]*,Sun.*,real_concept,[^|]*medium[^|]*,[^|]*,500,100
+test_igamma.cpp,198,[^|]*,[^|]*,Sun.*,real_concept,[^|]*integer[^|]*,[^|]*,100,30
+test_igamma.cpp,209,[^|]*,[^|]*,Mac OS,largest_type,[^|]*medium[^|]*,[^|]*,100,50
+test_igamma.cpp,220,GNU[^|]*,[^|]*,Win32[^|]*,real_concept,[^|]*medium[^|]*,[^|]*,1300,200
+test_igamma.cpp,227,GNU[^|]*,[^|]*,Win32[^|]*,largest_type,[^|]*medium[^|]*,[^|]*,700,200
+test_igamma.cpp,234,GNU[^|]*,[^|]*,Win32[^|]*,largest_type,[^|]*small[^|]*,[^|]*,100,50
+test_igamma.cpp,241,GNU[^|]*,[^|]*,Win32[^|]*,largest_type,[^|]*integer[^|]*,.*,120,50
+test_igamma.cpp,248,GNU[^|]*,[^|]*,Win32[^|]*,real_concept,[^|]*integer[^|]*,.*,100,50
+test_igamma.cpp,258,GNU[^|]*,[^|]*,Cygwin*,real_concept,[^|]*medium[^|]*,[^|]*,1300,200
+test_igamma.cpp,265,GNU[^|]*,[^|]*,Cygwin*,largest_type,[^|]*medium[^|]*,[^|]*,700,200
+test_igamma.cpp,272,GNU[^|]*,[^|]*,Cygwin*,largest_type,[^|]*small[^|]*,[^|]*,100,50
+test_igamma.cpp,279,GNU[^|]*,[^|]*,Cygwin*,largest_type,[^|]*integer[^|]*,.*,120,50
+test_igamma.cpp,286,GNU[^|]*,[^|]*,Cygwin*,real_concept,[^|]*integer[^|]*,.*,100,50
+test_igamma.cpp,299,[^|]*,[^|]*,[^|]*,largest_type,[^|]*large[^|]*,.*,40000,3000
+test_igamma.cpp,312,[^|]*,[^|]*,[^|]*,largest_type,[^|]*medium[^|]*,[^|]*,50,20
+test_igamma.cpp,319,[^|]*,[^|]*,[^|]*,largest_type,[^|]*small[^|]*,[^|]*,20,10
+test_igamma.cpp,326,[^|]*,[^|]*,[^|]*,largest_type,[^|]*large[^|]*,gamma_q,500,50
+test_igamma.cpp,333,[^|]*,[^|]*,Cygwin,largest_type,[^|]*large[^|]*,gamma_p,700,50
+test_igamma.cpp,340,[^|]*,[^|]*,[^|]*,largest_type,[^|]*large[^|]*,gamma_p,350,50
+test_igamma.cpp,347,[^|]*,[^|]*,[^|]*,largest_type,[^|]*integer[^|]*,.*,20,10
+test_igamma.cpp,354,[^|]*,[^|]*,[^|]*,real_concept,[^|]*medium[^|]*,[^|]*,1500,400
+test_igamma.cpp,361,[^|]*,[^|]*,[^|]*,real_concept,[^|]*small[^|]*,.*,100,20
+test_igamma.cpp,368,[^|]*,[^|]*,[^|]*,real_concept,[^|]*large[^|]*,.*,1000000,100000
+test_igamma.cpp,375,[^|]*,[^|]*,[^|]*,real_concept,[^|]*integer[^|]*,.*,200,40
+test_igamma_inv.cpp,80,[^|]*,[^|]*,[^|]*,largest_type,[^|]*small[^|]*,[^|]*,200000,10000
+test_igamma_inv.cpp,87,[^|]*,[^|]*,[^|]*,real_concept,[^|]*small[^|]*,[^|]*,98000,12000
+test_igamma_inv.cpp,99,[^|]*,[^|]*,linux.*,largest_type,[^|]*medium[^|]*,[^|]*,350,5
+test_igamma_inv.cpp,110,[^|]*,[^|]*,linux.*,largest_type,[^|]*large[^|]*,[^|]*,150,5
+test_igamma_inv.cpp,126,[^|]*,[^|]*,[^|]*,largest_type,[^|]*medium[^|]*,[^|]*,20,5
+test_igamma_inv.cpp,133,[^|]*,[^|]*,[^|]*,largest_type,[^|]*large[^|]*,[^|]*,5,2
+test_igamma_inv.cpp,140,[^|]*,[^|]*,[^|]*,largest_type,[^|]*small[^|]*,[^|]*,2100,500
+test_igamma_inv.cpp,147,[^|]*,[^|]*,[^|]*,float|double,[^|]*small[^|]*,gamma_p_inv,500,60
+test_igamma_inv.cpp,154,[^|]*,[^|]*,[^|]*,float|double,[^|]*,gamma_q_inv,350,60
+test_igamma_inv.cpp,161,[^|]*,[^|]*,[^|]*,float|double,[^|]*,[^|]*,4,2
+test_igamma_inv.cpp,168,[^|]*,[^|]*,[^|]*,real_concept,[^|]*medium[^|]*,[^|]*,20,5
+test_igamma_inv.cpp,175,[^|]*,[^|]*,[^|]*,real_concept,[^|]*large[^|]*,[^|]*,1000,500
+test_igamma_inv.cpp,182,[^|]*,[^|]*,[^|]*,real_concept,[^|]*small[^|]*,[^|]*,3700,500
+test_igamma_inva.cpp,75,[^|]*,[^|]*,linux,largest_type,[^|]*,[^|]*,800,200
+test_igamma_inva.cpp,86,[^|]*,[^|]*,[^|]*,real_concept,[^|]*,[^|]*,3000,1000
+test_igamma_inva.cpp,93,[^|]*,[^|]*,[^|]*,largest_type,[^|]*,[^|]*,300,100
+test_igamma_inva.cpp,102,[^|]*,[^|]*,[^|]*,float|double,[^|]*,[^|]*,10,5
+test_inv_hyp.cpp,69,.*,.*,.*,largest_type,atanh.*,.*,6,1
+test_inv_hyp.cpp,76,.*,.*,.*,real_concept,.*,.*,4,2
+test_inv_hyp.cpp,83,.*,.*,.*,largest_type,.*,.*,4,1
+test_jacobi.cpp,54,.*,.*,.*,largest_type,.*Mathworld.*,.*,500,250
+test_jacobi.cpp,61,.*,.*,.*,largest_type,.*Large Phi.*,.*,50000,5000
+test_jacobi.cpp,68,.*,.*,.*,largest_type,.*near 1.*,.*,7000,500
+test_jacobi.cpp,81,.*,.*,.*,double,.*Large Phi.*,.*,500,50
+test_jacobi.cpp,88,.*,.*,.*,double,.*near 1.*,.*,10,5
+test_jacobi.cpp,99,.*,.*,.*,largest_type,.*,.*,50,20
+test_jacobi_theta.cpp,18,.*,.*,.*,.*,.*Small Tau.*,.*,1000,200
+test_jacobi_theta.cpp,26,.*,.*,.*,.*,.*WolframAlpha.*,.*,60,15
+test_jacobi_theta.cpp,36,.*,.*,.*,.*,.*,.*,20,5
+test_jacobi_zeta.cpp,63,.*,.*,.*,largest_type,.*,.*,15,6
+test_jacobi_zeta.cpp,70,.*,.*,.*,real_concept,.*,.*,15,6
+test_laguerre.cpp,61,.*,.*,.*,double,.*,.*,10,5
+test_laguerre.cpp,70,.*,.*,linux.*|Mac OS|Sun.*,largest_type,.*,.*,40000,1000
+test_laguerre.cpp,77,.*,.*,linux.*|Mac OS|Sun.*,real_concept,.*,.*,40000,1000
+test_laguerre.cpp,84,GNU.*,.*,Cygwin*,largest_type,.*,.*,40000,1000
+test_laguerre.cpp,91,GNU.*,.*,Cygwin*,real_concept,.*,.*,40000,1000
+test_laguerre.cpp,98,GNU.*,.*,Win32.*,largest_type,.*,.*,40000,1000
+test_laguerre.cpp,105,GNU.*,.*,Win32.*,real_concept,.*,.*,40000,1000
+test_laguerre.cpp,112,.*,.*,IBM Aix,largest_type,.*,.*,5000,500
+test_laguerre.cpp,119,.*,.*,IBM Aix,real_concept,.*,.*,5000,500
+test_laguerre.cpp,130,.*,.*,.*,largest_type,.*,.*,4000,500
+test_laguerre.cpp,137,.*,.*,.*,real_concept,.*,.*,4000,500
+test_legendre.cpp,59,.*,.*,.*,double,.*,.*,10,5
+test_legendre.cpp,70,.*,.*,.*,largest_type,Legendre Polynomials.*Large.*,legendre_p,1000,200
+test_legendre.cpp,77,Intel.*,.*,.*,largest_type,Legendre Polynomials.*Large.*,legendre_q,10000,1000
+test_legendre.cpp,84,.*,.*,.*,largest_type,Legendre Polynomials.*Large.*,legendre_q,7000,1000
+test_legendre.cpp,91,.*,.*,.*,real_concept,Legendre Polynomials.*Large.*,legendre_p,1000,200
+test_legendre.cpp,98,.*,.*,.*,real_concept,Legendre Polynomials.*Large.*,legendre_q,7000,1000
+test_legendre.cpp,109,.*,.*,.*,largest_type,Legendre Polynomials.*Large.*,legendre_p,500,200
+test_legendre.cpp,116,.*,.*,.*,largest_type,Legendre Polynomials.*Large.*,legendre_q,5400,500
+test_legendre.cpp,123,.*,.*,.*,largest_type,Legendre Polynomials.*,legendre_p,300,80
+test_legendre.cpp,130,.*,.*,.*,largest_type,Legendre Polynomials.*,legendre_q,100,50
+test_legendre.cpp,137,Intel.*,.*,.*,largest_type,Associated Legendre Polynomials.*,.*,300,20
+test_legendre.cpp,144,.*,.*,.*,largest_type,Associated Legendre Polynomials.*,.*,200,20
+test_legendre.cpp,152,.*,.*,.*,real_concept,Legendre Polynomials.*Large.*,legendre_p,500,200
+test_legendre.cpp,159,.*,.*,.*,real_concept,Legendre Polynomials.*Large.*,legendre_q,5400,500
+test_legendre.cpp,166,.*,.*,.*,real_concept,Legendre Polynomials.*,legendre_p,300,80
+test_legendre.cpp,173,.*,.*,.*,real_concept,Legendre Polynomials.*,legendre_q,100,50
+test_legendre.cpp,180,.*,.*,.*,real_concept,Associated Legendre Polynomials.*,.*,200,20
+test_long_double_support.cpp,41,.*,.*,.*,largest_type,.*,.*,50,20
+test_nc_beta.cpp,90,[^|]*,[^|]*,[^|]*,double,[^|]*large[^|]*,[^|]*,5,5
+test_nc_beta.cpp,101,[^|]*,[^|]*,[^|]*,largest_type,[^|]*medium[^|]*,[^|]*,1200,500
+test_nc_beta.cpp,108,[^|]*,[^|]*,[^|]*,largest_type,[^|]*large[^|]*,[^|]*,40000,6000
+test_nc_beta.cpp,120,[^|]*,[^|]*,[^|]*,largest_type,[^|]*medium[^|]*,[^|]*,1500,500
+test_nc_beta.cpp,127,[^|]*,[^|]*,[^|]*,real_concept,[^|]*large[^|]*,[^|]*,30000,5000
+test_nc_beta.cpp,134,[^|]*,[^|]*,[^|]*,largest_type,[^|]*large[^|]*,[^|]*,20000,2000
+test_nc_chi_squared.cpp,87,[^|]*,[^|]*,Mac OS,largest_type,[^|]*medium[^|]*,[^|]*,550,100
+test_nc_chi_squared.cpp,97,[^|]*,[^|]*,[^|]*,largest_type,[^|]*medium[^|]*,[^|]*,350,100
+test_nc_chi_squared.cpp,104,[^|]*,[^|]*,[^|]*,largest_type,[^|]*large[^|]*,[^|]*,17000,3000
+test_nc_chi_squared.cpp,116,[^|]*,[^|]*,[^|]*,double,[^|]*,[^|]*,3,2
+test_nc_t.cpp,73,[^|]*,[^|]*,[^|]*,largest_type,[^|]*large[^|]*,[^|]*,2000000,200000
+test_nc_t.cpp,80,[^|]*,[^|]*,[^|]*,double,[^|]*large[^|]*,[^|]*,500,100
+test_nc_t.cpp,88,[^|]*,[^|]*,[^|]*,real_concept,[^|]*,[^|]*,300000,100000
+test_nc_t.cpp,95,[^|]*,[^|]*,[^|]*,largest_type,[^|]*large[^|]*,[^|]*,1500,300
+test_nc_t.cpp,102,[^|]*,[^|]*,[^|]*,largest_type,[^|]*small[^|]*,[^|]*,400,100
+test_nc_t.cpp,109,[^|]*,[^|]*,.*Solaris.*,largest_type,[^|]*,[^|]*,400,100
+test_nc_t.cpp,116,[^|]*,[^|]*,[^|]*,double,[^|]*PDF,[^|]*,static_cast<std::uintmax_t>(1 / boost::math::tools::root_epsilon<double>()),static_cast<std::uintmax_t>(1 / boost::math::tools::root_epsilon<double>())
+test_nc_t.cpp,123,[^|]*,[^|]*,[^|]*,long double,[^|]*PDF,[^|]*,static_cast<std::uintmax_t>(1 / boost::math::tools::root_epsilon<long double>()),static_cast<std::uintmax_t>(1 / boost::math::tools::root_epsilon<long double>())
+test_nc_t.cpp,130,[^|]*,[^|]*,[^|]*,largest_type,[^|]*,[^|]*,250,50
+test_nc_t_quad.cpp,62,[^|]*,[^|]*,[^|]*,cpp_bin_float_quad,.*large parameters.*,[^|]*,300000,100000
+test_nc_t_quad.cpp,69,[^|]*,[^|]*,[^|]*,cpp_bin_float_quad,[^|]*PDF,[^|]*,static_cast<std::uintmax_t>(1 / boost::math::tools::root_epsilon<boost::multiprecision::cpp_bin_float_quad>()),static_cast<std::uintmax_t>(1 / boost::math::tools::root_epsilon<boost::multiprecision::cpp_bin_float_quad>())
+test_nc_t_quad.cpp,76,[^|]*,[^|]*,[^|]*,cpp_bin_float_quad,[^|]*,[^|]*,250,50
+test_owens_t.cpp,97,.*,.*,.*,largest_type,.*,owens_t,10000000,1000000
+test_owens_t.cpp,107,.*,.*,.*,largest_type,.*,owens_t,500,100
+test_owens_t.cpp,117,.*,.*,.*,largest_type,.*,owens_t,60,5
+test_polygamma.cpp,30,.*,.*,.*,largest_type,.*large arguments,.*,700,200
+test_polygamma.cpp,38,.*,.*,.*,largest_type,.*large arguments,.*,400,200
+test_polygamma.cpp,46,.*,.*,.*,largest_type,.*negative.*,.*,800,500
+test_polygamma.cpp,57,.*,.*,.*,double,.*bug cases.*,.*,100,30
+test_polygamma.cpp,66,.*,.*,.*,largest_type,.*bug cases.*,.*,100000,50000
+test_polygamma.cpp,73,.*,.*,.*,largest_type,.*,.*,40,10
+test_sinc.cpp,41,.*,.*,.*,.*,.*,.*,3,3
+test_spherical_harmonic.cpp,68,.*,.*,.*,double,.*,.*,15,5
+test_spherical_harmonic.cpp,80,.*,.*,.*,largest_type,.*,.*,30000,1000
+test_spherical_harmonic.cpp,87,.*,.*,.*,real_concept,.*,.*,30000,1000
+test_tgamma_ratio.cpp,56,[^|]*,[^|]*,HP-UX|Mac OS|linux|.*(bsd|BSD).*,float,[^|]*,tgamma_ratio[^|]*,35,8
+test_tgamma_ratio.cpp,66,[^|]*,[^|]*,linux.*,largest_type,[^|]*,tgamma_ratio[^|]*,300,100
+test_tgamma_ratio.cpp,73,[^|]*,[^|]*,linux.*,real_concept,[^|]*,tgamma_ratio[^|]*,300,100
+test_tgamma_ratio.cpp,81,GNU.*,[^|]*,Win32.*,largest_type,[^|]*,tgamma_ratio[^|]*,300,100
+test_tgamma_ratio.cpp,91,GNU.*,[^|]*,Cygwin*,largest_type,[^|]*,tgamma_ratio[^|]*,300,100
+test_tgamma_ratio.cpp,101,[^|]*,[^|]*,.*Solaris.*,largest_type,[^|]*,tgamma_ratio[^|]*,200,100
+test_tgamma_ratio.cpp,111,[^|]*,[^|]*,[^|]*,largest_type,[^|]*,tgamma_delta_ratio[^|]*,30,20
+test_tgamma_ratio.cpp,118,[^|]*,[^|]*,[^|]*,largest_type,[^|]*,tgamma_ratio[^|]*,100,50
+test_tgamma_ratio.cpp,125,[^|]*,[^|]*,[^|]*,real_concept,[^|]*,tgamma_delta_ratio[^|]*,50,20
+test_tgamma_ratio.cpp,132,[^|]*,[^|]*,[^|]*,real_concept,[^|]*,[^|]*,250,150
+test_trig.cpp,45,.*,.*,.*,largest_type,.*,.*,2,1
+test_trigamma.cpp,35,.*,.*,.*,largest_type,.*,.*,20,10
+test_zeta.cpp,54,.*,.*,.*,largest_type,.*Random values less than 1,.*,1200,500
+test_zeta.cpp,61,.*,.*,.*,real_concept,.*Random values less than 1,.*,1200,500
+test_zeta.cpp,68,.*,.*,.*,largest_type,.*Integer.*,.*,30,15
+test_zeta.cpp,75,.*,.*,.*,largest_type,.*,.*,3,3
+test_zeta.cpp,82,.*,.*,.*Solaris.*,real_concept,.*,.*,60,15
+test_zeta.cpp,89,.*,.*,.*,real_concept,.*,.*,40,15
