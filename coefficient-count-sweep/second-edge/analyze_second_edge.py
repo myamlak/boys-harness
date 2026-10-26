@@ -35,10 +35,9 @@ X0_TEXT = "11.899848152108484"
 mp.mp.dps = 50
 X0 = mp.mpf(X0_TEXT)
 
-RECOUNT = Path(r"C:\Users\myaml\dev\papers-harness-repo\coefficient-count-sweep"
-               r"\records\chebyshev_recount.json")
-RESULT_FILES = (PAPER / "results" / "sweep_all.json",
-                PAPER / "results-sensitivity" / "sweep_all.json")
+RECOUNT = PAPER.parent / "records" / "chebyshev_recount.json"
+RESULT_FILES = (PAPER.parent / "records" / "core" / "sweep_all.json",
+                PAPER.parent / "records" / "core" / "sweep_rel_1e-14.json")
 
 
 def width_of(name: str):
@@ -56,7 +55,7 @@ def label_for(target: str) -> str:
     return f"{kind}:{value}"
 
 
-def load_baseline(path: Path):
+def load_baseline(path: Path, result_files=RESULT_FILES):
     """The paper's x0 Group A counts, keyed by (target, width name)."""
     if not path.exists():
         raise SystemExit(f"baseline record missing: {path}")
@@ -80,7 +79,7 @@ def load_baseline(path: Path):
             "at_x_abs": cell["at_x_abs"],
         }
     rational = {}
-    for path in RESULT_FILES:
+    for path in result_files:
         doc = json.loads(path.read_text(encoding="utf-8"))
         for row in doc["rows"]:
             if row["width_name"] not in NAMES or row["target"] not in TARGETS:
@@ -178,19 +177,23 @@ def fmt(value, digits=6):
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--second-edge",
-                        default=str(PAPER / "results-second-edge" / "sweep_all.json"))
+                        default=str(PAPER / "sweep_all.json"))
     parser.add_argument("--chebyshev-only",
-                        default=str(PAPER / "results-second-edge"
-                                    / "chebyshev_only.json"))
+                        default=str(PAPER / "chebyshev_only.json"))
     parser.add_argument("--recount", default=str(RECOUNT))
+    parser.add_argument("--baseline", action="append", default=None,
+                        help="a sweep record holding the first edge's counts; repeatable. "
+                             "Default: the deposit's records/core/.")
     parser.add_argument("--out-dir",
-                        default=str(PAPER / "results-second-edge"))
+                        default=str(PAPER))
     args = parser.parse_args(argv)
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
     mp.mp.dps = 50
-    cheb0, rat0 = load_baseline(Path(args.recount))
+    cheb0, rat0 = load_baseline(
+        Path(args.recount),
+        [Path(p) for p in args.baseline] if args.baseline else RESULT_FILES)
     second_doc, second = load_second(Path(args.second_edge))
     cheb_only = {}
     cheb_only_path = Path(args.chebyshev_only)
