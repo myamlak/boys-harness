@@ -56,6 +56,19 @@ statistics: 5,200 known-additive surfaces from 200 seeds, with the material
 counts each statistic reports on them. `synthetic_surface.py` produces it;
 `signed_interaction.py` reduces the measured cells.
 
+`records/figure-ratio.json` is the positive result the same run supports: the
+largest measured error over the published figure at each cell of the resolving
+lanes, per configuration, with the cell it occurs at and the sha256 of the
+cell file it was read from. It is at most 0.629 on the double lane (0.627 on
+the separate multiply-add route) and 0.819 on the single lane.
+
+`records/cells/` holds the four configurations' cell files, compressed: the
+494,208 rows each configuration measured. Decompressed beside the scripts as
+`results/cells.csv`, `results-msvc-separate/cells.csv`,
+`results-gcc-fused/cells.csv` and `results-gcc-separate/cells.csv`, they are
+what `signed_interaction.py` reduces, and both `figure-ratio.json` and
+`signed-interaction.json` recompute from them.
+
 ## Requirements
 
 A C++23 compiler, CMake 3.20 or newer, the Boys source, and Python 3.10 or

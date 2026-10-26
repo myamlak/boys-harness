@@ -1,0 +1,41 @@
+population: {'A1': 290, 'A2': 282} model_from: 1.0855252345349333
+validation (deposited control numbers in brackets):
+  true margin 1: (67, 67, 0) [67, 67, 0]
+  surrogate margin 1: (21, 21, 0) [21, 21, 0]
+  true margin 0.94: (74, 74, 0) [74, 74, 0]
+  surrogate margin 0.94: (68, 68, 0) [68, 68, 0]
+  true margin 0.946: (73, 73, 0) [73, 73, 0]
+  surrogate margin 0.946: (67, 67, 0) [67, 67, 0]
+  true margin 0: (100, 83, 17) [100, 83, 17]
+  surrogate 21 inside true 67: True ; lost = 46
+  74 set, 68 set, overlap: 74 68 68 ; true only 6 ; surrogate only 0
+
+first experiment, read from out/first/prediction.csv: commits 69, right 68, wrong 1
+binomial intervals (the independence assumption is false; the block rows below
+resample whole orders):
+count                                   k/n      Wilson 95%          Clopper-Pearson 95%
+  model commitments right, second experiment, margin 1  67/67   [0.9458, 1.0000]   [0.9464, 1.0000]
+  wrong commitments, second experiment, margin 0  17/100  [0.1089, 0.2555]   [0.1023, 0.2582]
+    of which not a measured tie           14/100  [0.0853, 0.2214]   [0.0787, 0.2237]
+  true-model commitments lost by the surrogate, margin 1  46/67   [0.5680, 0.7849]   [0.5616, 0.7944]
+  model commitments right, first experiment, margin 1  68/69   [0.9224, 0.9974]   [0.9219, 0.9996]
+
+margin 0: wrong comparisons by order (committed comparisons in brackets):
+  0:0(4)  1:1(4)  2:1(4)  3:0(4)  4:0(4)  5:1(4)  6:0(4)  7:0(4)  8:0(4)  9:2(4)  10:1(4)  11:1(4)  12:1(4)  13:1(4)  14:0(4)  15:0(4)  16:0(4)  17:1(2)  18:2(2)  19:2(2)  20:2(2)  21:1(2)  22:0(2)  23:0(2)  24:0(2)  25:0(2)  26:0(2)  27:0(2)  28:0(2)  29:0(2)  30:0(2)  31:0(2)  32:0(2)
+  distinct orders carrying at least one wrong commitment: 13 of 33 orders with commitments
+
+margin 0 wrong rate, order-block jackknife: mean 0.1700  SE 0.0418  (naive binomial SE 0.0376)
+  order-block bootstrap 95% interval for the wrong rate: [0.0943, 0.2604]
+
+the 46 lost commitments by order (all right for the true model):
+  4:1  5:1  6:1  7:1  8:2  12:3  13:3  14:3  15:4  16:4  21:1  22:2  23:2  24:2  25:2  26:2  27:2  28:2  29:2  30:2  31:2  32:2
+  orders with at least one lost commitment: 22
+  order-block bootstrap 95% interval for the lost fraction: [0.5231, 0.8361]
+  the 67/67 right rate under the same block resample: [1.0000, 1.0000] (every committed comparison is right, so resampling orders cannot produce a failure; the lower bound is a statement about the sampling of comparisons, not about this sample)
+
+margin 0.94 per-order commitment difference (true minus surrogate):
+  3:+1  4:+1  11:+1  14:+1  21:+1  22:+1
+  total difference: 6
+  order-block jackknife of the difference: mean 6.000 SE 2.250
+  order-block bootstrap 95% interval for the difference: [2, 10]
+EXIT=0

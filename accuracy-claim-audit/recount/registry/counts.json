@@ -1,0 +1,70 @@
+{
+  "library": {
+    "name": "crlibm",
+    "version": "1.0beta5 (VERSION file)",
+    "source": "github.com/taschini/crlibm, a mirror of the INRIA Forge project (anonymous access to gitlab.inria.fr/crlibm requires authentication)",
+    "built": "WSL Ubuntu, autotools, gcc 15.2, --enable-sse2, x86-64 Linux, the non-double-extended configuration"
+  },
+  "reference": {
+    "primary": "MPFR 4.2.2 through gmpy2 2.3.1, Ziv loop with directed-rounding brackets",
+    "validated_against": [
+      "exact Fraction/CPython oracle for to_double(): 0 mismatches in 5999 trials incl. 72 overflow-boundary cases",
+      "crlibm's own tests/*.testdata, generated independently by the authors with MPFR: 0 disagreements on all decided points (~48,000)",
+      "mpmath 1.4.1 at 400 digits, used for the two defect verifications",
+      "glibc libm in the four hardware rounding modes, used to confirm the IEEE overflow convention"
+    ]
+  },
+  "documented_claims": {
+    "universe": "accuracy statements in the shipped manual (docs/latex/*.tex) about public crlibm entry points",
+    "table1_rows_active": 19,
+    "table1_rows_commented_out": 2,
+    "row_shaped_as_written_no_interpretation": 18,
+    "interpreted_rows": 21,
+    "not_row_shaped_rows": 3,
+    "total": 42,
+    "row_shaped_fraction_strict": "18/42 = 43%",
+    "row_shaped_fraction_if_interpreted_rows_accepted": "39/42 = 93%",
+    "comparison": "Boost.Math audit: 2/320 = 0.6%",
+    "internal_numeric_bound_sentences": 44
+  },
+  "machine_checked_not_in_manual": {
+    "test_vector_assertions": 63617,
+    "test_vector_functions": 21,
+    "gappa_goal_obligations": 791,
+    "gappa_files": 46,
+    "numeric_bounds_in_source_comments": 41,
+    "numeric_bounds_in_public_header": 0
+  },
+  "measurements": {
+    "m1_crlibm_vs_own_vectors": {
+      "vectors": 63617,
+      "disagreements": 9,
+      "disagreements_on_finite_values": 0,
+      "note": "all 9 are NaN bit patterns (sign or payload); tests/blind_test.c accepts any NaN where the vector expects NaN"
+    },
+    "m2_crlibm_vs_independent_reference": {
+      "queries": 361286,
+      "rounding_mode_results_checked": 1445144,
+      "failures": 12,
+      "sinh_failures": 4,
+      "atanpi_failures": 8,
+      "undecided_reference_points": 44
+    }
+  },
+  "defects": {
+    "sinh": {
+      "claim": "0_getting-started.tex:149, worst cases complete = correctly rounded on the whole floating-point input range",
+      "measured": "sinh_rd and sinh_rz return +inf at x = 0x408633ce8fb9f87e; IEEE requires the largest finite double. Mirrored at x = -0x408633ce8fb9f87e for sinh_ru and sinh_rz",
+      "verdict": "real defect, documented claim shown false",
+      "mechanism": "csh_fast.c guards the overflow shortcut with x > max_input_csh (lines 575, 577, 619, 671) while cosh uses x >= max_input_csh (lines 224, 278); max_input_csh is byte-for-byte the failing input (csh_fast.h:16)",
+      "control": "cosh at the same input and modes is correct, and cosh.testdata covers that input while sinh.testdata has no entry there",
+      "independent_confirmations": ["MPFR Ziv reference", "mpmath at 400 digits", "glibc libm under FE_DOWNWARD/FE_TOWARDZERO"]
+    },
+    "atanpi": {
+      "claim": "0_getting-started.tex:156, worst cases [tan(2^-25 pi), tan(2^-5 pi)]",
+      "measured": "atanpi_rd and atanpi_rz return 0.5 where the correctly rounded value is 0.5 - 2^-54, for |x| above about 3e16 up to 1e300; negative mirror fails atanpi_ru and atanpi_rz",
+      "verdict": "real defect, but OUTSIDE the documented domain, so not a false claim; the manual states correct rounding is proven only on [9.4e-8, 0.098]"
+    }
+  },
+  "filename_note": "work/ holds the audit scripts and logs under C:/Users/myaml/dev/_claim-audit-crlibm/"
+}
