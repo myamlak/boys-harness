@@ -866,6 +866,120 @@
         "rat_m_parity": "odd",
         "rat_k_parity": "even"
       }
+    },
+    {
+      "precision": "fp64",
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "ship",
+      "width": "38.200303695783032",
+      "width_f": 38.200303695783035,
+      "a": "23.799696304216968",
+      "b": "62.0",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 20,
+        "m": 19,
+        "k": null,
+        "delivered_rel": "8.2217286184043186e-14",
+        "delivered_abs": "1.4935589566581585e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 0.772
+      },
+      "rat": {
+        "family": "rational",
+        "stored": 12,
+        "m": 5,
+        "k": 6,
+        "solver": "remez",
+        "delivered_rel": "2.0032318257468704e-14",
+        "delivered_abs": "3.6390702910206167e-15",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "below_meets": false,
+        "seconds": 1519.592
+      },
+      "saving": 8,
+      "settings": {
+        "nodes": 2001,
+        "coarse_stride": 5,
+        "scan_outer": 100,
+        "refine_outer": 300,
+        "remez_iters": 60,
+        "cheb_degree_mode": "records",
+        "rat_k_max": 8,
+        "workers": 4
+      },
+      "width_x0": "19.100151847891516",
+      "parity": {
+        "cheb_degree": 19,
+        "cheb_degree_parity": "odd",
+        "rat_m": 5,
+        "rat_k": 6,
+        "rat_m_parity": "odd",
+        "rat_k_parity": "even"
+      }
+    },
+    {
+      "precision": "fp64",
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "paper",
+      "width": "34.178979173424512",
+      "width_f": 34.17897917342451,
+      "a": "23.799696304216968",
+      "b": "57.97867547764148",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 19,
+        "m": 18,
+        "k": null,
+        "delivered_rel": "9.3065278131922273e-14",
+        "delivered_abs": "1.6906235435291237e-14",
+        "at_x_rel": "23.799696304216968",
+        "at_x_abs": "23.799696304216968",
+        "refined": true,
+        "seconds": 1.137
+      },
+      "rat": {
+        "family": "rational",
+        "stored": 12,
+        "m": 5,
+        "k": 6,
+        "solver": "remez",
+        "delivered_rel": "6.8376159653086205e-15",
+        "delivered_abs": "1.1475495633183621e-15",
+        "at_x_rel": "27.884084315441197",
+        "at_x_abs": "27.884084315441197",
+        "refined": true,
+        "below_meets": false,
+        "seconds": 1778.588
+      },
+      "saving": 7,
+      "settings": {
+        "nodes": 2001,
+        "coarse_stride": 5,
+        "scan_outer": 100,
+        "refine_outer": 300,
+        "remez_iters": 60,
+        "cheb_degree_mode": "records",
+        "rat_k_max": 8,
+        "workers": 4
+      },
+      "width_x0": "17.089489586712256",
+      "parity": {
+        "cheb_degree": 18,
+        "cheb_degree_parity": "even",
+        "rat_m": 5,
+        "rat_k": 6,
+        "rat_m_parity": "odd",
+        "rat_k_parity": "even"
+      }
     }
   ]
 }

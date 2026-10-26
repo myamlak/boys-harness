@@ -1,0 +1,50 @@
+left edge a = 23.799696304216968 (scale 2 x X0); widths scaled by 2
+grid: 15 width(s) x 3 target(s); 5 row(s) already on disk
+workers: 4
+reuse rel:1e-13/2^-7 cheb=5 rat=4
+reuse rel:1e-13/2^-6 cheb=5 rat=4
+reuse rel:1e-13/2^-5 cheb=5 rat=4
+reuse rel:1e-13/2^-4 cheb=5 rat=4
+reuse rel:1e-13/2^-3 cheb=5 rat=5
+[rel:1e-13] 2^-2    W=0.5          cheb=6 (deg=5, odd) rat=5 ([2/2], remez) rel=1.5152494807634637e-14 (0.214s + 534.858s)
+[rel:1e-13] 2^-1    W=1            cheb=7 (deg=6, even) rat=6 ([2/3], remez) rel=1.3878510705704759e-15 (0.202s + 743.58s)
+[rel:1e-13] 2^0     W=2            cheb=8 (deg=7, odd) rat=6 ([2/3], remez) rel=6.831352185647985e-14 (0.384s + 455.574s)
+[rel:1e-13] 2^1     W=4            cheb=9 (deg=8, even) rat=7 ([3/3], remez) rel=3.5463968774874166e-14 (0.267s + 805.572s)
+[rel:1e-13] 2^2     W=8            cheb=12 (deg=11, odd) rat=8 ([3/4], remez) rel=5.4868123385869151e-14 (0.77s + 1287.906s)
+[rel:1e-13] 2^3     W=16           cheb=15 (deg=14, even) rat=10 ([4/5], remez) rel=6.2926660941980663e-15 (1.606s + 2059.173s)
+[rel:1e-13] 2^4     W=32           cheb=19 (deg=18, even) rat=11 ([5/5], remez) rel=8.5884213039664286e-14 (1.112s + 969.496s)
+[rel:1e-13] 2^5     W=64           cheb=25 (deg=24, even) rat=14 ([5/8], lawson) rel=6.6604771705766508e-15 (1.595s + 2401.785s)
+[rel:1e-13] ship    W=38.2003      cheb=20 (deg=19, odd) rat=12 ([5/6], remez) rel=2.0032318257468704e-14 (0.772s + 1519.592s)
+[rel:1e-13] paper   W=34.179       cheb=19 (deg=18, even) rat=12 ([5/6], remez) rel=6.8376159653086205e-15 (1.137s + 1778.588s)
+[abs:5e-14] 2^-7    W=0.015625     cheb=5 (deg=4, even) rat=4 ([1/2], lawson) rel=2.5923073947097446e-16 (0.032s + 130.818s)
+[abs:5e-14] 2^-6    W=0.03125      cheb=5 (deg=4, even) rat=4 ([1/2], lawson) rel=3.8880177061303194e-16 (0.031s + 128.724s)
+[abs:5e-14] 2^-5    W=0.0625       cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=3.1235010938035519e-15 (0.031s + 129.475s)
+[abs:5e-14] 2^-4    W=0.125        cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=4.6163469964986977e-14 (0.043s + 131.399s)
+[abs:5e-14] 2^-3    W=0.25         cheb=5 (deg=4, even) rat=5 ([2/2], remez) rel=6.6988589725718081e-16 (0.031s + 254.141s)
+[abs:5e-14] 2^-2    W=0.5          cheb=6 (deg=5, odd) rat=5 ([2/2], remez) rel=1.5152494807634637e-14 (0.061s + 260.622s)
+[abs:5e-14] 2^-1    W=1            cheb=7 (deg=6, even) rat=6 ([2/3], remez) rel=1.3878510705704759e-15 (0.091s + 381.857s)
+[abs:5e-14] 2^0     W=2            cheb=8 (deg=7, odd) rat=6 ([2/3], remez) rel=6.831352185647985e-14 (0.132s + 340.596s)
+[abs:5e-14] 2^1     W=4            cheb=9 (deg=8, even) rat=7 ([3/3], remez) rel=3.5463968774874166e-14 (0.167s + 493.058s)
+[abs:5e-14] 2^2     W=8            cheb=11 (deg=10, even) rat=8 ([3/4], remez) rel=5.4868123385869151e-14 (0.312s + 695.777s)
+[abs:5e-14] 2^3     W=16           cheb=14 (deg=13, odd) rat=9 ([4/4], remez) rel=2.0777604046111483e-13 (0.352s + 620.017s)
+[abs:5e-14] 2^4     W=32           cheb=18 (deg=17, odd) rat=11 ([5/5], remez) rel=8.5884213039664286e-14 (0.541s + 1243.166s)
+[abs:5e-14] 2^5     W=64           cheb=25 (deg=24, even) rat=13 ([6/6], lawson) rel=1.5638089016229537e-13 (1.005s + 1710.816s)
+[abs:5e-14] ship    W=38.2003      cheb=20 (deg=19, odd) rat=12 ([5/6], lawson) rel=2.7124868958070809e-14 (0.649s + 1822.98s)
+[abs:5e-14] paper   W=34.179       cheb=19 (deg=18, even) rat=11 ([5/5], remez) rel=1.4638850615741243e-13 (0.631s + 1155.474s)
+[rel:1e-14] 2^-7    W=0.015625     cheb=5 (deg=4, even) rat=4 ([1/2], lawson) rel=2.5923073947097446e-16 (0.029s + 131.001s)
+[rel:1e-14] 2^-6    W=0.03125      cheb=5 (deg=4, even) rat=4 ([1/2], lawson) rel=3.8880177061303194e-16 (0.028s + 128.883s)
+[rel:1e-14] 2^-5    W=0.0625       cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=3.1235010938035519e-15 (0.03s + 130.413s)
+[rel:1e-14] 2^-4    W=0.125        cheb=5 (deg=4, even) rat=5 ([2/2], lawson) rel=2.6131908627466802e-16 (0.035s + 272.611s)
+[rel:1e-14] 2^-3    W=0.25         cheb=6 (deg=5, odd) rat=5 ([2/2], remez) rel=6.6988589725718081e-16 (0.064s + 259.334s)
+[rel:1e-14] 2^-2    W=0.5          cheb=6 (deg=5, odd) rat=6 ([2/3], remez) rel=2.6618600403300874e-16 (0.075s + 384.093s)
+[rel:1e-14] 2^-1    W=1            cheb=7 (deg=6, even) rat=6 ([2/3], remez) rel=1.3878510705704759e-15 (0.138s + 368.968s)
+[rel:1e-14] 2^0     W=2            cheb=9 (deg=8, even) rat=7 ([3/3], remez) rel=5.9510406691592052e-16 (0.169s + 608.849s)
+[rel:1e-14] 2^1     W=4            cheb=10 (deg=9, odd) rat=8 ([3/4], remez) rel=5.5693060162950876e-16 (0.205s + 829.963s)
+[rel:1e-14] 2^2     W=8            cheb=12 (deg=11, odd) rat=9 ([4/4], remez) rel=1.2114641647338344e-15 (0.41s + 984.54s)
+[rel:1e-14] 2^3     W=16           cheb=16 (deg=15, odd) rat=10 ([4/5], remez) rel=6.2926660941980663e-15 (0.75s + 779.007s)
+[rel:1e-14] 2^4     W=32           cheb=20 (deg=19, odd) rat=12 ([5/6], lawson) rel=2.9429848715939086e-15 (0.71s + 1390.64s)
+[rel:1e-14] 2^5     W=64           cheb=27 (deg=26, even) rat=14 ([5/8], lawson) rel=6.6604771705766508e-15 (1.673s + 1499.049s)
+[rel:1e-14] ship    W=38.2003      cheb=22 (deg=21, odd) rat=13 ([4/8], lawson) rel=1.3493285104096609e-15 (1.04s + 2261.567s)
+[rel:1e-14] paper   W=34.179       cheb=21 (deg=20, even) rat=12 ([5/6], remez) rel=6.8376159653086205e-15 (1.166s + 1326.123s)
+invocation wall time: 33453.0 s; rows on disk: 45
+EXIT=0
