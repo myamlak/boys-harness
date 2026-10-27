@@ -1,0 +1,23 @@
+﻿Compiled-input comparison for the bridge tree, 2026-10-27T00:59:12.0547711+01:00
+
+include/boys: 62 files; after the transplant 62/62 equal v5.1.1 and 61/62 still equal v5.0.0 (version.hpp differs).
+  detail: include-boys-compare-after.txt
+
+src/ files (all 14), bridge hash vs each worktree:
+boys.cpp	577b7e93995b60cf75717cc6066d0c6094dcf93b2dc51cb0c217a7e9efdd8773	v5.0.0 True v5.1.1 True
+boys_backend_registry.hpp	105ed219333bfad46b783a900e12d00e3568915e9c66e4b87870c360baed4997	v5.0.0 True v5.1.1 True
+boys_backend_simd.hpp	498d7d34020c26a9e4e25a4153c861dc528ba1898a1067b73369c10e69b5f941	v5.0.0 True v5.1.1 True
+boys_c.cpp	b341913156b5bf43480a3613e6c61e535f9fadd1d827264cd745592c887b95d2	v5.0.0 True v5.1.1 True
+boys_cuda.cpp	28e90b5e57cfb1f09d3dca2b6745438d9adf08814bc96509e900549f3dc8f2d0	v5.0.0 True v5.1.1 True
+boys_cuda.cu	87a809a344e4dc8a6be1e83c9e335c2763ea5f729420736260657e7e4b903d41	v5.0.0 True v5.1.1 True
+boys_cuda_probe.cpp	f9a7334c2716a294f1f33d315497233a95abfbe19b54a8978de5274062a103e8	v5.0.0 True v5.1.1 True
+boys_cuda_probe_entries.hpp	0769f883c56ae2e5012c5a362fdf80bd8a7c4026c9af1a7242aa311735355a39	v5.0.0 True v5.1.1 True
+boys_cuda_probe_kernels.cu	306c19f21e83d4dfdc3d8c8dcb29b5a4084beaf860e5557de6ca43536f3efa7d	v5.0.0 True v5.1.1 True
+boys_defaults.cpp	a7b5812bd34501d9d351882635ab93f5a6c5cc2262605450aae420e71b01f37e	v5.0.0 True v5.1.1 True
+boys_orders_simd.cpp	e66e7422617ac12a1a1fa7af69382a65247c71b439335222fedaf99cfb8c9b34	v5.0.0 True v5.1.1 True
+boys_orders_simd.hpp	5e4fa0585512941e03d323f5afe8344cd98540472184fd1fd0a4f8a99a09ce77	v5.0.0 True v5.1.1 True
+boys_probe.cpp	7e6f10a04eb7b525f757ba511c50f05f6b7ceea93fbe8abc3bf40d0463091bba	v5.0.0 True v5.1.1 True
+boys_simd.cpp	d73811f143bc470a4ac30c8c8222981b48ec8290f37cdc3c28e9b1c8a9b11a7c	v5.0.0 True v5.1.1 True
+
+v5.0.0..v5.1.1 changed no file under src/ (boys-tag-diff.log, 19 changed paths; none under src/).
+The bridge does not consume external/boys/CMakeLists.txt: integrals/CMakeLists.txt lists the five compiled .cpp files itself.
