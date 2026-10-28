@@ -91,7 +91,8 @@ python make_frontier.py
 from the records and formatted; none is retyped. `make_tables.py` must run
 first because it creates `tables/`. On the deposited records the three
 commands reproduce the measurement tree's `tables/*.tex` and
-`figures/per-order-ratio.dat` byte for byte.
+`figures/per-order-ratio.dat` byte for byte on Windows, where the measurement
+ran; elsewhere the output is identical up to line endings.
 
 Do not run the Python scripts with `python -I`: isolated mode hides the
 user-site `mpmath`. `make_tables.py` uses only the standard library;
@@ -154,8 +155,10 @@ comparison, not a file from the measurement tree.
 ## Files
 
 Every file is listed with its byte count and SHA-256. `README.md` is this
-file and is the only file not listed. The copied files are byte-for-byte
-copies of the measurement tree's files, except `paths.csv.xz` (see below).
+file and is the only file not listed. The files are stored byte-exactly:
+`.gitattributes` turns off line-ending conversion, so a clone on any platform
+yields these bytes. The copied files are byte-for-byte copies of the
+measurement tree's files, except `paths.csv.xz` (see below).
 
 ### Root scripts
 
