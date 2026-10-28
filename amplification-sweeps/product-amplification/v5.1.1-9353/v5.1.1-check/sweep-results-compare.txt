@@ -1,0 +1,18 @@
+== sweeps\amplification_form\results vs C:\Users\myaml\dev\papers-harness-repo\amplification-sweeps\amplification-form\results
+  admission.csv: SAME (837 lines)
+  band_summary.csv: SAME (5 lines)
+  cells.csv: SAME (27589 lines)
+  paths.csv: MISSING in deposit
+  per_order.csv: SAME (133 lines)
+  prediction.csv: SAME (133 lines)
+  prediction_scan.csv: SAME (29 lines)
+  transfer_cells.csv: SAME (27556 lines)
+== sweeps\product_amplification\results vs C:\Users\myaml\dev\papers-harness-repo\amplification-sweeps\product-amplification\results
+  admission.csv: SAME (9353 lines)
+  band_summary.csv: SAME (5 lines)
+  cells.csv: MISSING in deposit
+  decomposition.csv: SAME (5 lines)
+  gain_up.csv: SAME (67 lines)
+  growth.csv: SAME (67 lines)
+  per_order.csv: SAME (133 lines)
+  replica_gain.csv: MISSING in deposit
