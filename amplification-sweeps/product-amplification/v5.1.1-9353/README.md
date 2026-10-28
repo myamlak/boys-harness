@@ -155,9 +155,10 @@ comparison, not a file from the measurement tree.
 ## Files
 
 Every file is listed with its byte count and SHA-256. `README.md` is this
-file and is the only file not listed. The files are stored byte-exactly: `.gitattributes` turns
-off line-ending conversion, so a clone on any platform yields these bytes. The copied files are byte-for-byte
-copies of the measurement tree's files, except `paths.csv.xz` (see below).
+file and is the only file not listed. The files are stored byte-exactly:
+`.gitattributes` turns off line-ending conversion, so a clone on any platform
+yields these bytes. The copied files are byte-for-byte copies of the
+measurement tree's files, except `paths.csv.xz` (see below).
 
 ### Root scripts
 
