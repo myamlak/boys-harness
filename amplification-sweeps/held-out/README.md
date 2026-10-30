@@ -125,23 +125,23 @@ a tie (A2 absolute, order 18), which the rule abstains on.
 
 The commitments are 53 to direct and 5 to recursed.  The recursed commitments
 are A1 relative order 0 and A2 relative orders 5, 6, 7 and 8.  Every other
-commitment is direct, which is the same dominant direction the paper reports.
+commitment is direct, which is the same dominant direction the earlier sweeps report.
 
-One asymmetry is inherited from the paper's own analysis and worth naming: the
+One asymmetry is inherited from the original analysis and worth naming: the
 model's B and D are maxima over the model population, while the measured
 winner is decided by band maxima over the whole held-out grid, including the
 A1 arguments below `kTierThresholds[0]`.  At A1 absolute order 0 the measured
 direct worst is attained at x = 7.09e-07, outside the population; the
-commitment is still right.  The paper's second sweep has the same structure.
+commitment is still right.  The second sweep has the same structure.
 
 ## What this establishes and what it does not
 
 Establishes, on the pinned v5.1.1 kernel, its own 60-digit reference, and an
 argument set disjoint from both earlier sweeps:
 
-* the implementation this sweep scores is the paper's rule: the model
-  reproduces the paper's 132-row table field for field and at its printed
-  precision, and reproduces the paper's own 65 / 65 / 67 score, before it sees
+* the implementation this sweep scores is the frozen rule: the model
+  reproduces the 132-row table field for field and at its printed
+  precision, and reproduces the original 65 / 65 / 67 score, before it sees
   a held-out cell;
 * applied unchanged at the frozen margin, the rule is right on all 58
   commitments it makes on the held-out set, and declines to commit on 74 of
@@ -161,7 +161,7 @@ Does not establish:
 * anything about A1 arguments below the model population, or about the
   unserved-order cells beyond the model's own unserved rule.
 * anything about a margin other than the frozen one.  No margin scan is run
-  here, by design: the held-out set is scored once, at the value the paper
+  here, by design: the held-out set is scored once, at the value the rule
   prints.
 * statistical confidence.  The 132 comparisons are dependent by construction
   (band maxima over a common grid), so "58 of 58" is a record, not a
