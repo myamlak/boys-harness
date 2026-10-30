@@ -30,7 +30,7 @@ Every step is also run through the replica body of `../common/replica.hpp`
 and compared bit for bit; the replica admission of the shipped ladder is the
 same check the other sweeps record.
 
-The calibration is the paper's, on the paper's population (arguments at or
+The calibration is the decision model's, on its population (arguments at or
 above `kTierThresholds[0]` = 1.0855252345349333, where the entry's order-0
 value really is a seed error): for every order and every combination of band
 and metric the analysis forms
@@ -40,7 +40,7 @@ and metric the analysis forms
     D(x)    = |direct_n(x) - F_n ref|          the direct delivered error
     E(x)    = |spliced_n(x) - F_n ref|         the spliced delivered error
 
-and takes the band maximum of each, as the paper compares band maxima.  The
+and takes the band maximum of each, as the decision rule compares band maxima.  The
 seed term orders the comparison
 
     predicted spliced  if S < D   (the seed term is below the direct error)
@@ -57,7 +57,7 @@ leaving 128 comparisons.
 The full 836-argument grid is not measurable and is not scored.  x = 0 is in
 the grid; A_n(0) is not finite for n >= 1; outside the population 103 A1 cells
 already have a non-finite spliced value.  Every band maximum there would be an
-overflow artefact.  The population is the paper's own domain.
+overflow artefact.  The population is the decision rule's own domain.
 
 ## Commands
 

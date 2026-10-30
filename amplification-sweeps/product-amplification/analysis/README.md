@@ -1,11 +1,11 @@
-# Paper analysis and tables
+# Analysis and tables
 
-The scripts that generate Paper A's tables from the deposited records, and the
-tables the paper prints. The copies are byte-identical to the paper working tree
-at `papers-a-v5`, branch `myamlak/paper-a-v5`, commit `78bbbd6`. Five of the
-scripts are untracked in that commit and exist only in the working tree:
-`make_prediction_record.py`, `make_heldout_score.py`, `make_seed_fit_ratio.py`,
-`make_seedfit_score.py` and `sweeps/amplification_form/seed_fit_ratio.py`.
+The scripts that generate the tables from the deposited records, and the
+tables themselves. `make_tables.py`, `make_endtoend.py`, `make_frontier.py`,
+`make_prediction_record.py` and `merge_per_order.py` produce the printed
+tables; `make_heldout_score.py`, `make_seed_fit_ratio.py`,
+`make_seedfit_score.py` and `sweeps/amplification_form/seed_fit_ratio.py`
+produce the five experiment tables.
 
 ## What is here
 
@@ -24,16 +24,16 @@ scripts are untracked in that commit and exist only in the working tree:
     sweeps/product_amplification/analyze.py
                                the second sweep's per-order, band, growth and gain records
 
-`tables/` holds the paper's tables; fourteen are printed. The other four,
+`tables/` holds the tables; fourteen are printed. The other four,
 `per-order-A1-{abs,rel}.tex` and `per-order-A2-{abs,rel}.tex`, are written by
 `make_tables.py` and consumed by `merge_per_order.py`, and are carried here
-because the paper's `tables/` directory holds them.
+because the generation chain writes them into the same directory.
 
 ## The v5.2.0 check
 
 The table step recorded in `../v5.2.0-check/tables-after-deposited.sha256` was
 run with the scripts of that check's own date. The scripts here are the ones
-the paper's final tables use. Three tables (`endtoend.tex`, `frontier.tex`,
+that generate the tables carried here. Three tables (`endtoend.tex`, `frontier.tex`,
 `prediction-record.tex`) changed after the check, when `analyze.py` gained the
 exponential term in the accumulated-arithmetic model. The check's own record
 is not altered.
@@ -41,7 +41,7 @@ is not altered.
 ## Regenerating from the deposit
 
 The scripts resolve their inputs relative to their own directory, at the paths
-they occupy in the paper tree, so assemble a scratch tree and run them there.
+they occupy in the measurement tree, so assemble a scratch tree and run them there.
 From this directory:
 
     scratch/

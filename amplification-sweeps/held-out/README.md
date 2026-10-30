@@ -1,11 +1,11 @@
 # Held-out test
 
-The paper's decision rule and its abstention margin were both introduced and
-scored on the first two sweeps.  A referee's objection is that a rule scored on
-the data that suggested it proves little.  This sweep freezes the rule and the
-margin exactly as the paper prints them in `../../tables/prediction-record.tex`
-and applies them, with no adjustment, to a third argument set that is disjoint
-from both earlier sweeps.
+The decision rule and its abstention margin were introduced and scored on the
+first two sweeps, and a rule scored on the data that suggested it proves
+little.  This sweep freezes the rule and the margin exactly as
+`../../tables/prediction-record.tex` records them, and applies them, with no
+adjustment, to a third argument set that is disjoint from both earlier
+sweeps.
 
 ## The frozen rule
 
@@ -33,8 +33,8 @@ it to the second sweep's own cells and reference and requires it to reproduce
 `../amplification_form/results/prediction_record.csv` field for field, all 132
 rows at 17 digits, and then `../../tables/prediction-record.tex` through the
 table's own two format steps (six significant figures for a measured value,
-the shortest spelling of its argument) and in the paper's own words.  That
-check also reproduces the paper's own score: 65 commitments, all 65 right, 67
+the shortest spelling of its argument) and in the same words.  That
+check also reproduces the original score: 65 commitments, all 65 right, 67
 abstentions.  A mismatch stops the run before any held-out number is written.
 
 ## The held-out argument set
