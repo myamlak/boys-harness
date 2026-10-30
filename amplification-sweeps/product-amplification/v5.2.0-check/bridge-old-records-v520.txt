@@ -1,0 +1,126 @@
+Old-side records for the v5.2.0 bridge comparison, 2026-10-28T20:24:40+01:00
+
+1. The old side's provenance: C:\Users\myaml\dev\_bridge-v520\old-records against C:\Users\myaml\dev\_bridge-v511\runs
+  NOT COPIED from v5.1.1 runs: ccpvtz-default.eri.txt  270819892 bytes
+  NOT COPIED from v5.1.1 runs: ccpvtz-paper-a.eri.txt  270813606 bytes
+  52 files; 52 byte-identical, 0 differing, 0 missing, 2 in the source and not copied.
+  ccpvtz-default.eri.txt: v5.1.1 sha256 fb36b7c4f8add87ce35216d66c147fdd772981c59dc9ee38055c11b6c6022354; v5.2.0 sha256 fb36b7c4f8add87ce35216d66c147fdd772981c59dc9ee38055c11b6c6022354; identical
+  ccpvtz-paper-a.eri.txt: v5.1.1 sha256 50d7c1c9c5038003c7374714a52606008854b13ed2d83af9ea262fdf00bb5f94; v5.2.0 sha256 50d7c1c9c5038003c7374714a52606008854b13ed2d83af9ea262fdf00bb5f94; identical
+  the old side's boys_record files state version 5.1.1
+  (the two uncopied files are the cc-pVTZ dense tensors; they are compared above by SHA-256, not by copy)
+
+2. Against the harness working tree, C:\Users\myaml\dev\papers-harness-repo\chemistry-bridge\outputs
+   (the -v511 files are not in the v1.0.11 tree; they are identified by path and hash, not by a tag)
+  SAME via plain 631gstar-default.args.txt                    (no 631gstar-default-v511.args.txt)
+  SAME 631gstar-default.boys_record.txt               (631gstar-default-v511.boys_record.txt)
+  SAME 631gstar-default.default.density.bin           (631gstar-default-v511.default.density.bin)
+  SAME 631gstar-default.default.trace.txt             (631gstar-default-v511.default.trace.txt)
+  SAME 631gstar-default.eri.txt                       (631gstar-default-v511.eri.txt)
+  SAME 631gstar-default.eri_max.txt                   (631gstar-default-v511.eri_max.txt)
+  SAME 631gstar-default.matrices.txt                  (631gstar-default-v511.matrices.txt)
+  SAME 631gstar-default.summary.txt                   (631gstar-default-v511.summary.txt)
+  SAME 631gstar-default.tight.trace.txt               (631gstar-default-v511.tight.trace.txt)
+  SAME via plain 631gstar-paper-a.args.txt                    (no 631gstar-paper-a-v511.args.txt)
+  SAME 631gstar-paper-a.boys_record.txt               (631gstar-paper-a-v511.boys_record.txt)
+  SAME 631gstar-paper-a.default.density.bin           (631gstar-paper-a-v511.default.density.bin)
+  SAME 631gstar-paper-a.default.trace.txt             (631gstar-paper-a-v511.default.trace.txt)
+  SAME 631gstar-paper-a.eri.txt                       (631gstar-paper-a-v511.eri.txt)
+  SAME 631gstar-paper-a.eri_max.txt                   (631gstar-paper-a-v511.eri_max.txt)
+  SAME 631gstar-paper-a.matrices.txt                  (631gstar-paper-a-v511.matrices.txt)
+  SAME 631gstar-paper-a.summary.txt                   (631gstar-paper-a-v511.summary.txt)
+  SAME 631gstar-paper-a.tight.trace.txt               (631gstar-paper-a-v511.tight.trace.txt)
+  SAME ccpvtz-default.args.txt                        (ccpvtz-default-v511.args.txt.xz)
+  SAME ccpvtz-default.boys_record.txt                 (ccpvtz-default-v511.boys_record.txt)
+  SAME ccpvtz-default.default.density.bin             (ccpvtz-default-v511.default.density.bin)
+  SAME ccpvtz-default.default.trace.txt               (ccpvtz-default-v511.default.trace.txt)
+  SAME ccpvtz-default.eri_max.txt                     (ccpvtz-default-v511.eri_max.txt)
+  SAME ccpvtz-default.matrices.txt                    (ccpvtz-default-v511.matrices.txt)
+  SAME ccpvtz-default.summary.txt                     (ccpvtz-default-v511.summary.txt)
+  SAME ccpvtz-default.tight.trace.txt                 (ccpvtz-default-v511.tight.trace.txt)
+  SAME ccpvtz-paper-a.args.txt                        (ccpvtz-paper-a-v511.args.txt.xz)
+  SAME ccpvtz-paper-a.boys_record.txt                 (ccpvtz-paper-a-v511.boys_record.txt)
+  SAME ccpvtz-paper-a.default.density.bin             (ccpvtz-paper-a-v511.default.density.bin)
+  SAME ccpvtz-paper-a.default.trace.txt               (ccpvtz-paper-a-v511.default.trace.txt)
+  SAME ccpvtz-paper-a.eri_max.txt                     (ccpvtz-paper-a-v511.eri_max.txt)
+  SAME ccpvtz-paper-a.matrices.txt                    (ccpvtz-paper-a-v511.matrices.txt)
+  SAME ccpvtz-paper-a.summary.txt                     (ccpvtz-paper-a-v511.summary.txt)
+  SAME ccpvtz-paper-a.tight.trace.txt                 (ccpvtz-paper-a-v511.tight.trace.txt)
+  SAME via plain default.args.txt                             (no default-v511.args.txt)
+  SAME default.boys_record.txt                        (default-v511.boys_record.txt)
+  SAME default.default.density.bin                    (default-v511.default.density.bin)
+  SAME default.default.trace.txt                      (default-v511.default.trace.txt)
+  SAME default.eri.txt                                (default-v511.eri.txt)
+  SAME default.eri_max.txt                            (default-v511.eri_max.txt)
+  SAME default.matrices.txt                           (default-v511.matrices.txt)
+  SAME default.summary.txt                            (default-v511.summary.txt)
+  SAME default.tight.trace.txt                        (default-v511.tight.trace.txt)
+  SAME via plain paper-a.args.txt                             (no paper-a-v511.args.txt)
+  SAME paper-a.boys_record.txt                        (paper-a-v511.boys_record.txt)
+  SAME paper-a.default.density.bin                    (paper-a-v511.default.density.bin)
+  SAME paper-a.default.trace.txt                      (paper-a-v511.default.trace.txt)
+  SAME paper-a.eri.txt                                (paper-a-v511.eri.txt)
+  SAME paper-a.eri_max.txt                            (paper-a-v511.eri_max.txt)
+  SAME paper-a.matrices.txt                           (paper-a-v511.matrices.txt)
+  SAME paper-a.summary.txt                            (paper-a-v511.summary.txt)
+  SAME paper-a.tight.trace.txt                        (paper-a-v511.tight.trace.txt)
+  48 same by -v511 name, 4 same via the plain file, 0 differing, 0 missing.
+  the working tree's -v511 boys_record files state version 5.1.1
+
+3. Against the v1.0.11 tag's chemistry-bridge/outputs/
+   (read from the object store at tag 1aa52650755d7445134a105d289029300096e7dd, commit e4513b62b381d49ee5ec1165f25195ea6bf8ff7f)
+   the tag's boys_record files state version 5.0.0
+  SAME 631gstar-default.args.txt                      (631gstar-default.args.txt)
+  DIFFERS 631gstar-default.boys_record.txt            line 4: '  version                   5.1.1                      (boys::VersionString)' vs '  version                   5.0.0                      (boys::VersionString)'
+  SAME 631gstar-default.default.density.bin           (631gstar-default.default.density.bin)
+  DIFFERS 631gstar-default.default.trace.txt          line 1: 'iter=1 wall=0.055660 e=-69.877572622052725 dE=69.877572622052725 rmsd=0.13635569002047773 conv=0 diis=wait diiserr=3.510' vs 'iter=1 wall=0.007072 e=-69.877572622052725 dE=69.877572622052725 rmsd=0.13635569002047773 conv=0 diis=wait diiserr=3.510'
+  SAME 631gstar-default.eri.txt                       (631gstar-default.eri.txt)
+  SAME 631gstar-default.eri_max.txt                   (631gstar-default.eri_max.txt)
+  SAME 631gstar-default.matrices.txt                  (631gstar-default.matrices.txt)
+  DIFFERS 631gstar-default.summary.txt                line 6: 'molecule_atoms=3' vs 'shells=10'
+  DIFFERS 631gstar-default.tight.trace.txt            line 1: 'iter=1 wall=0.060259 e=-69.877572622052725 dE=69.877572622052725 rmsd=0.13635569002047773 conv=0 diis=wait diiserr=3.510' vs 'iter=1 wall=0.011352 e=-69.877572622052725 dE=69.877572622052725 rmsd=0.13635569002047773 conv=0 diis=wait diiserr=3.510'
+  SAME 631gstar-paper-a.args.txt                      (631gstar-paper-a.args.txt)
+  DIFFERS 631gstar-paper-a.boys_record.txt            line 4: '  version                   5.1.1                      (boys::VersionString)' vs '  version                   5.0.0                      (boys::VersionString)'
+  SAME 631gstar-paper-a.default.density.bin           (631gstar-paper-a.default.density.bin)
+  DIFFERS 631gstar-paper-a.default.trace.txt          line 1: 'iter=1 wall=0.043541 e=-69.877572622052782 dE=69.877572622052782 rmsd=0.13635569002047815 conv=0 diis=wait diiserr=3.510' vs 'iter=1 wall=0.021636 e=-69.877572622052782 dE=69.877572622052782 rmsd=0.13635569002047815 conv=0 diis=wait diiserr=3.510'
+  SAME 631gstar-paper-a.eri.txt                       (631gstar-paper-a.eri.txt)
+  SAME 631gstar-paper-a.eri_max.txt                   (631gstar-paper-a.eri_max.txt)
+  SAME 631gstar-paper-a.matrices.txt                  (631gstar-paper-a.matrices.txt)
+  DIFFERS 631gstar-paper-a.summary.txt                line 6: 'molecule_atoms=3' vs 'shells=10'
+  DIFFERS 631gstar-paper-a.tight.trace.txt            line 1: 'iter=1 wall=0.049564 e=-69.877572622052782 dE=69.877572622052782 rmsd=0.13635569002047815 conv=0 diis=wait diiserr=3.510' vs 'iter=1 wall=0.014936 e=-69.877572622052782 dE=69.877572622052782 rmsd=0.13635569002047815 conv=0 diis=wait diiserr=3.510'
+  SAME ccpvtz-default.args.txt                        (ccpvtz-default.args.txt.xz)
+  DIFFERS ccpvtz-default.boys_record.txt              line 4: '  version                   5.1.1                      (boys::VersionString)' vs '  version                   5.0.0                      (boys::VersionString)'
+  SAME ccpvtz-default.default.density.bin             (ccpvtz-default.default.density.bin)
+  DIFFERS ccpvtz-default.default.trace.txt            line 1: 'iter=1 wall=0.710324 e=-74.300514133077584 dE=74.300514133077584 rmsd=0.06404567474013613 conv=0 diis=wait diiserr=10.64' vs 'iter=1 wall=0.114255 e=-74.300514133077584 dE=74.300514133077584 rmsd=0.06404567474013613 conv=0 diis=wait diiserr=10.64'
+  SAME ccpvtz-default.eri_max.txt                     (ccpvtz-default.eri_max.txt)
+  SAME ccpvtz-default.matrices.txt                    (ccpvtz-default.matrices.txt)
+  SAME ccpvtz-default.summary.txt                     (ccpvtz-default.summary.txt)
+  DIFFERS ccpvtz-default.tight.trace.txt              line 1: 'iter=1 wall=0.403885 e=-74.300514133077584 dE=74.300514133077584 rmsd=0.06404567474013613 conv=0 diis=wait diiserr=10.64' vs 'iter=1 wall=0.119270 e=-74.300514133077584 dE=74.300514133077584 rmsd=0.06404567474013613 conv=0 diis=wait diiserr=10.64'
+  SAME ccpvtz-paper-a.args.txt                        (ccpvtz-paper-a.args.txt.xz)
+  DIFFERS ccpvtz-paper-a.boys_record.txt              line 4: '  version                   5.1.1                      (boys::VersionString)' vs '  version                   5.0.0                      (boys::VersionString)'
+  SAME ccpvtz-paper-a.default.density.bin             (ccpvtz-paper-a.default.density.bin)
+  DIFFERS ccpvtz-paper-a.default.trace.txt            line 1: 'iter=1 wall=0.871532 e=-74.300514133077542 dE=74.300514133077542 rmsd=0.064045674740134062 conv=0 diis=wait diiserr=10.6' vs 'iter=1 wall=0.067917 e=-74.300514133077542 dE=74.300514133077542 rmsd=0.064045674740134062 conv=0 diis=wait diiserr=10.6'
+  SAME ccpvtz-paper-a.eri_max.txt                     (ccpvtz-paper-a.eri_max.txt)
+  SAME ccpvtz-paper-a.matrices.txt                    (ccpvtz-paper-a.matrices.txt)
+  SAME ccpvtz-paper-a.summary.txt                     (ccpvtz-paper-a.summary.txt)
+  DIFFERS ccpvtz-paper-a.tight.trace.txt              line 1: 'iter=1 wall=1.182700 e=-74.300514133077542 dE=74.300514133077542 rmsd=0.064045674740134062 conv=0 diis=wait diiserr=10.6' vs 'iter=1 wall=0.036294 e=-74.300514133077542 dE=74.300514133077542 rmsd=0.064045674740134062 conv=0 diis=wait diiserr=10.6'
+  SAME default.args.txt                               (default.args.txt)
+  DIFFERS default.boys_record.txt                     line 4: '  version                   5.1.1                      (boys::VersionString)' vs '  version                   5.0.0                      (boys::VersionString)'
+  SAME default.default.density.bin                    (default.default.density.bin)
+  DIFFERS default.default.trace.txt                   line 1: 'iter=1 wall=0.026787 e=-74.079857491468218 dE=74.079857491468218 rmsd=0.1930927809353202 conv=0 diis=wait diiserr=1.2824' vs 'iter=1 wall=0.002484 e=-74.079857491468218 dE=74.079857491468218 rmsd=0.1930927809353202 conv=0 diis=wait diiserr=1.2824'
+  SAME default.eri.txt                                (default.eri.txt)
+  SAME default.eri_max.txt                            (default.eri_max.txt)
+  SAME default.matrices.txt                           (default.matrices.txt)
+  DIFFERS default.summary.txt                         line 3: 'basis_source=sto-3g-fixture' vs 'n=7'
+  DIFFERS default.tight.trace.txt                     line 1: 'iter=1 wall=0.063829 e=-74.079857491468218 dE=74.079857491468218 rmsd=0.1930927809353202 conv=0 diis=wait diiserr=1.2824' vs 'iter=1 wall=0.001673 e=-74.079857491468218 dE=74.079857491468218 rmsd=0.1930927809353202 conv=0 diis=wait diiserr=1.2824'
+  SAME paper-a.args.txt                               (paper-a.args.txt)
+  DIFFERS paper-a.boys_record.txt                     line 4: '  version                   5.1.1                      (boys::VersionString)' vs '  version                   5.0.0                      (boys::VersionString)'
+  SAME paper-a.default.density.bin                    (paper-a.default.density.bin)
+  DIFFERS paper-a.default.trace.txt                   line 1: 'iter=1 wall=0.029585 e=-74.07985749146826 dE=74.07985749146826 rmsd=0.19309278093532009 conv=0 diis=wait diiserr=1.28243' vs 'iter=1 wall=0.009446 e=-74.07985749146826 dE=74.07985749146826 rmsd=0.19309278093532009 conv=0 diis=wait diiserr=1.28243'
+  SAME paper-a.eri.txt                                (paper-a.eri.txt)
+  SAME paper-a.eri_max.txt                            (paper-a.eri_max.txt)
+  SAME paper-a.matrices.txt                           (paper-a.matrices.txt)
+  DIFFERS paper-a.summary.txt                         line 3: 'basis_source=sto-3g-fixture' vs 'n=7'
+  DIFFERS paper-a.tight.trace.txt                     line 1: 'iter=1 wall=0.015941 e=-74.07985749146826 dE=74.07985749146826 rmsd=0.19309278093532009 conv=0 diis=wait diiserr=1.28243' vs 'iter=1 wall=0.004899 e=-74.07985749146826 dE=74.07985749146826 rmsd=0.19309278093532009 conv=0 diis=wait diiserr=1.28243'
+  30 same, 22 differing, 0 missing.
+
+The tag's set is the v5.0.0 run: its own record states 5.0.0, and the tag carries no -v511 names.  The v5.1.1 run's records are not deposited in v1.0.11; only the v5.1.1-check comparison records are, under amplification-sweeps/product-amplification/v5.1.1-9353/.  The differences above are therefore between two library versions, reported as such, and the old side of the v5.2.0 comparison is the v5.1.1 run's own output, established by section 1.

@@ -1,0 +1,39 @@
+The execution check's common scripts against the paper tree's copies
+A diff here is a difference in what ran; it is reported, not smoothed.
+
+=== boysprovenance.py: 32 diff line(s)
+--- paper sweeps/common/boysprovenance.py
++++ check run/sweeps/common/boysprovenance.py
+@@ -243,17 +243,20 @@
+ 
+ 
+ def revision(tree):
+-    exact = run_git(tree, "describe", "--tags", "--exact-match", "HEAD")
+-    describe = run_git(tree, "describe", "--tags", "--always", "--dirty")
+-    head = run_git(tree, "rev-parse", "HEAD")
+-    status = run_git(tree, "status", "--porcelain")
++    # This execution check runs without invoking git.  The worktree identity
++    # was established from the repository's object store by
++    # sweeps/v5.2.0-check/run/verify_pub_tree.py (HEAD is the tag's commit;
++    # every file matches the tag tree; no extra files), and the verified
++    # values arrive in the environment so this record keeps the usual schema.
+     return {
+         "tree": str(tree),
+-        "tag_at_head": exact["stdout"] if exact.get("returncode") == 0 else None,
+-        "describe": describe.get("stdout", ""),
+-        "commit": head.get("stdout", ""),
+-        "dirty": bool(status.get("stdout", "")),
+-        "status_porcelain": status.get("stdout", "").splitlines(),
++        "tag_at_head": os.environ.get("BOYS_TAG_AT_HEAD"),
++        "describe": os.environ.get("BOYS_DESCRIBE", ""),
++        "commit": os.environ.get("BOYS_COMMIT", ""),
++        "dirty": os.environ.get("BOYS_DIRTY", "0") == "1",
++        "status_porcelain": [],
++        "git_invoked": False,
++        "verified_by": "sweeps/v5.2.0-check/run/verify_pub_tree.py",
+     }
+ 
+ 
+
+=== reference.py: identical
+

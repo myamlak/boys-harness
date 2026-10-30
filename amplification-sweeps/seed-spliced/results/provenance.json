@@ -1,0 +1,912 @@
+{
+  "boys": {
+    "commit": "834bdbb18a30ac8538b519436429f78d41f187ce",
+    "content_check": {
+      "files_in_record": 21,
+      "kernel_files_digested": 62,
+      "matched": 15,
+      "mismatched": [],
+      "not_in_record": [
+        "include/boys/backend.hpp",
+        "include/boys/boys_accuracy_here.hpp",
+        "include/boys/boys_all.hpp",
+        "include/boys/boys_arguments_lanes.hpp",
+        "include/boys/boys_backend_simd.hpp",
+        "include/boys/boys_c.h",
+        "include/boys/boys_coefficients_d_coarse_cheb.hpp",
+        "include/boys/boys_coefficients_d_coarse_mono.hpp",
+        "include/boys/boys_coefficients_d_coarse_rat.hpp",
+        "include/boys/boys_coefficients_d_far.hpp",
+        "include/boys/boys_coefficients_d_narrow_cheb.hpp",
+        "include/boys/boys_coefficients_d_narrow_mono.hpp",
+        "include/boys/boys_coefficients_d_narrow_rat.hpp",
+        "include/boys/boys_coefficients_d_uniform_cheb.hpp",
+        "include/boys/boys_coefficients_d_uniform_cheb_transposed.hpp",
+        "include/boys/boys_coefficients_d_uniform_mono.hpp",
+        "include/boys/boys_coefficients_d_uniform_mono_transposed.hpp",
+        "include/boys/boys_coefficients_d_uniform_rat.hpp",
+        "include/boys/boys_coefficients_f32_coarse_cheb.hpp",
+        "include/boys/boys_coefficients_f32_coarse_mono.hpp",
+        "include/boys/boys_coefficients_f32_coarse_rat.hpp",
+        "include/boys/boys_coefficients_f32_narrow_cheb.hpp",
+        "include/boys/boys_coefficients_f32_narrow_mono.hpp",
+        "include/boys/boys_coefficients_f32_narrow_rat.hpp",
+        "include/boys/boys_coefficients_f32_uniform_cheb.hpp",
+        "include/boys/boys_coefficients_f32_uniform_mono.hpp",
+        "include/boys/boys_coefficients_f32_uniform_rat.hpp",
+        "include/boys/boys_cuda.hpp",
+        "include/boys/boys_cuda_arithmetic.hpp",
+        "include/boys/boys_cuda_device.hpp",
+        "include/boys/boys_cuda_launch.hpp",
+        "include/boys/boys_cuda_muladd.hpp",
+        "include/boys/boys_cuda_options.hpp",
+        "include/boys/boys_cuda_policy.hpp",
+        "include/boys/boys_cuda_probe.hpp",
+        "include/boys/boys_default_tables.hpp",
+        "include/boys/boys_device_tables.hpp",
+        "include/boys/boys_effective_degrees.hpp",
+        "include/boys/boys_fit32.hpp",
+        "include/boys/boys_fit_rational.hpp",
+        "include/boys/boys_fit_uniform.hpp",
+        "include/boys/boys_flat_grid.hpp",
+        "include/boys/boys_orders_lanes.hpp",
+        "include/boys/boys_probe.hpp",
+        "include/boys/boys_span.hpp",
+        "include/boys/dependent_false.hpp",
+        "include/boys/f16.hpp",
+        "include/boys/half2.hpp",
+        "include/boys/isa_tiers.hpp",
+        "include/boys/status.hpp"
+      ]
+    },
+    "git_used": false,
+    "revision_source": "C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\amplification_form\\results\\provenance.json",
+    "revision_source_sha256": "a1ed6ea36dacb67163392eba46556ed2504b2eaa65e3f2122114bf9f83ff38d7",
+    "tag": "v5.1.1",
+    "tree": "C:\\Users\\myaml\\dev\\_boys-v511",
+    "version_header": "5.1.1"
+  },
+  "build_defaults": {
+    "host_fp64_all_orders": {
+      "basis": "RowBasis::kMeasured",
+      "budget": "BoysBudget::kFloat",
+      "device": "kHost",
+      "division_form": "DivisionForm::kRefinedReciprocal",
+      "eval_scheme": "EvalScheme::kHorner",
+      "fit_route": "FitRoute::kChebyshev",
+      "granularity": "FitGranularity::kUniform",
+      "pack_axis": "PackAxis::kOrders",
+      "precision": "kFp64",
+      "record": "host-2026-10-12",
+      "region_b_exp": "RegionBExp::kFast",
+      "shape": "kAllOrders"
+    },
+    "rows": [
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kHost",
+        "division_form": "DivisionForm::kRefinedReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kOrders",
+        "precision": "kFp64",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kFast",
+        "shape": "kAllOrders"
+      },
+      {
+        "basis": "RowBasis::kChosen",
+        "budget": "BoysBudget::kFloat",
+        "device": "kHost",
+        "division_form": "DivisionForm::kRefinedReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kNarrow",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp32",
+        "record": "",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllOrders"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kNarrow",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp16",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllOrders"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp64",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kSingle"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp64",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kFast",
+        "shape": "kFixedN"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kHost",
+        "division_form": "DivisionForm::kExactDivision",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kOrders",
+        "precision": "kFp64",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllN"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kOrders",
+        "precision": "kFp64",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllNAtOrders"
+      },
+      {
+        "basis": "RowBasis::kChosen",
+        "budget": "BoysBudget::kFloat",
+        "device": "kHost",
+        "division_form": "DivisionForm::kRefinedReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp32",
+        "record": "",
+        "region_b_exp": "RegionBExp::kFast",
+        "shape": "kSingle"
+      },
+      {
+        "basis": "RowBasis::kChosen",
+        "budget": "BoysBudget::kFloat",
+        "device": "kHost",
+        "division_form": "DivisionForm::kRefinedReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kNarrow",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp32",
+        "record": "",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllN"
+      },
+      {
+        "basis": "RowBasis::kChosen",
+        "budget": "BoysBudget::kFloat",
+        "device": "kHost",
+        "division_form": "DivisionForm::kRefinedReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp32",
+        "record": "",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kFixedN"
+      },
+      {
+        "basis": "RowBasis::kChosen",
+        "budget": "BoysBudget::kFloat",
+        "device": "kHost",
+        "division_form": "DivisionForm::kRefinedReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kRationalMinimax",
+        "granularity": "FitGranularity::kNarrow",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp32",
+        "record": "",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllNAtOrders"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp16",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kSingle"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp16",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kFixedN"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kNarrow",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp16",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kFast",
+        "shape": "kAllN"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kNarrow",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp16",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllNAtOrders"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kRationalMinimax",
+        "granularity": "FitGranularity::kNarrow",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kBf16",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllOrders"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kBf16",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kFast",
+        "shape": "kSingle"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kBf16",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kFixedN"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kRationalMinimax",
+        "granularity": "FitGranularity::kNarrow",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kBf16",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllN"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kHost",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kRationalMinimax",
+        "granularity": "FitGranularity::kNarrow",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kBf16",
+        "record": "host-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllNAtOrders"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kRefinedReciprocal",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kCoarsest",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp64Device",
+        "record": "quadro-t1000-2026-10-06",
+        "region_b_exp": "RegionBExp::kFast",
+        "shape": "kSingle"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kRefinedReciprocal",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kCoarsest",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp32Device",
+        "record": "quadro-t1000-2026-10-06",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kSingle"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kExactDivision",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kCoarsest",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp16Device",
+        "record": "quadro-t1000-2026-10-06",
+        "region_b_exp": "RegionBExp::kFast",
+        "shape": "kSingle"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kNarrow",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp64Device",
+        "record": "quadro-t1000-2026-10-06",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllOrders"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kExactDivision",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kOrders",
+        "precision": "kFp32Device",
+        "record": "quadro-t1000-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllOrders"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kExactDivision",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kOrders",
+        "precision": "kFp16Device",
+        "record": "quadro-t1000-2026-10-06",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllOrders"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kExactDivision",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kCoarsest",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp64Device",
+        "record": "quadro-t1000-2026-10-12",
+        "region_b_exp": "RegionBExp::kFast",
+        "shape": "kAllN"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFloat",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kCoarsest",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp32Device",
+        "record": "quadro-t1000-2026-10-06",
+        "region_b_exp": "RegionBExp::kFast",
+        "shape": "kAllN"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kRefinedReciprocal",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kCoarsest",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kFp16Device",
+        "record": "quadro-t1000-2026-10-12",
+        "region_b_exp": "RegionBExp::kFast",
+        "shape": "kAllN"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kExactDivision",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kCoarsest",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kBf16Device",
+        "record": "quadro-t1000-2026-10-06",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kSingle"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kExactDivision",
+        "eval_scheme": "EvalScheme::kHorner",
+        "fit_route": "FitRoute::kRationalMinimax",
+        "granularity": "FitGranularity::kUniform",
+        "pack_axis": "PackAxis::kOrders",
+        "precision": "kBf16Device",
+        "record": "quadro-t1000-2026-10-12",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllOrders"
+      },
+      {
+        "basis": "RowBasis::kMeasured",
+        "budget": "BoysBudget::kFp16",
+        "device": "kDevice",
+        "division_form": "DivisionForm::kPlainReciprocal",
+        "eval_scheme": "EvalScheme::kSplitClenshaw",
+        "fit_route": "FitRoute::kChebyshev",
+        "granularity": "FitGranularity::kCoarsest",
+        "pack_axis": "PackAxis::kArguments",
+        "precision": "kBf16Device",
+        "record": "quadro-t1000-2026-10-06",
+        "region_b_exp": "RegionBExp::kAccurate",
+        "shape": "kAllN"
+      }
+    ],
+    "seam": {
+      "BOYS_BUILD_DEFAULT_DEVICE_DIVISION_FORM": "DivisionForm::kRefinedReciprocal",
+      "BOYS_BUILD_DEFAULT_DEVICE_REGION_B_EXP": "RegionBExp::kAccurate",
+      "BOYS_BUILD_DEFAULT_DIVISION_FORM": "DivisionForm::kRefinedReciprocal",
+      "BOYS_BUILD_DEFAULT_EVAL_SCHEME": "EvalScheme::kHorner",
+      "BOYS_BUILD_DEFAULT_FIT_GRANULARITY": "FitGranularity::kNarrow",
+      "BOYS_BUILD_DEFAULT_FIT_ROUTE": "FitRoute::kChebyshev",
+      "BOYS_BUILD_DEFAULT_PACK_AXIS": "PackAxis::kArguments"
+    }
+  },
+  "compiler": {
+    "banner": "usage: cl [ option... ] filename... [ /link linkoption... ]",
+    "environment": {
+      "VSCMD_VER": "18.0",
+      "VisualStudioVersion": "18.0"
+    },
+    "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\cl.EXE"
+  },
+  "constants": {
+    "kExtendedBDeg": 24,
+    "kExtendedBX0": 1.0855252345349333,
+    "kMaxBoysOrder": 32,
+    "kRegionA1Edge": 5.949924076054242,
+    "kRegionAEnd": 11.899848152108484,
+    "kTierThresholds": [
+      1.0855252345349333,
+      1.0855252345349333,
+      1.0855252345349333,
+      1.0855252345349333,
+      1.0855252345349333,
+      2.015297705335114,
+      2.015297705335114,
+      2.015297705335114,
+      2.015297705335114,
+      4.897870299825657,
+      4.897870299825657,
+      4.897870299825657,
+      4.897870299825657,
+      4.897870299825657,
+      4.897870299825657,
+      4.897870299825657,
+      4.897870299825657,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762,
+      10.783587858916762
+    ],
+    "regionADegrees": [
+      18,
+      20
+    ],
+    "regionAPieces": [
+      {
+        "degree": 20,
+        "from": 0.0,
+        "to": 5.949924076054242
+      },
+      {
+        "degree": 18,
+        "from": 5.949924076054242,
+        "to": 11.899848152108484
+      }
+    ]
+  },
+  "digests": {
+    "boys/include/boys/accuracy.hpp": {
+      "bytes": 42488,
+      "sha256": "57c7b40c50cbbf71a4fd356bd62492672bb3b2eedc9e7693110ce7d0f819dfc5"
+    },
+    "boys/include/boys/backend.hpp": {
+      "bytes": 15405,
+      "sha256": "38c6d5051bd7c4b4ce55f3566689cbfe2f068588028ed574835fb4a90e49c0cb"
+    },
+    "boys/include/boys/boys.hpp": {
+      "bytes": 779,
+      "sha256": "7df021b424c6dcdcc71a5698617d9c03c5de86188795041a64463a06a5bde4ac"
+    },
+    "boys/include/boys/boys_accuracy_here.hpp": {
+      "bytes": 38614,
+      "sha256": "ef0e63c63ad91ab34d9b44d2a815fb0be953a6b30f307943db451677f2e2eb97"
+    },
+    "boys/include/boys/boys_all.hpp": {
+      "bytes": 2163,
+      "sha256": "5be0d740b82868cecec305125c8dcd04e4824bd1a14d0b3b6f434c55759c9e87"
+    },
+    "boys/include/boys/boys_arguments_lanes.hpp": {
+      "bytes": 20429,
+      "sha256": "79ae480079dab65ec51b033c8b954ee471f09c7f649a660c7796bc497adecd80"
+    },
+    "boys/include/boys/boys_backend_simd.hpp": {
+      "bytes": 6121,
+      "sha256": "e274de6da0d7b11abd20b2cc459a04166978d30edda57a458cefdfe723147074"
+    },
+    "boys/include/boys/boys_build_defaults.hpp": {
+      "bytes": 23199,
+      "sha256": "b4db3664f9fe4260a352472bdb709c7ea6932a7142937778cf1d00b2ece0df81"
+    },
+    "boys/include/boys/boys_c.h": {
+      "bytes": 5025,
+      "sha256": "7c3ff99a07ddb4a9e8b41320632a1f6a0f9c63c4f4bdfe9f1778dda3f0e4014c"
+    },
+    "boys/include/boys/boys_coefficients.hpp": {
+      "bytes": 143213,
+      "sha256": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204"
+    },
+    "boys/include/boys/boys_coefficients_d_coarse_cheb.hpp": {
+      "bytes": 36494,
+      "sha256": "7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e"
+    },
+    "boys/include/boys/boys_coefficients_d_coarse_mono.hpp": {
+      "bytes": 36626,
+      "sha256": "97d33714d421d93fe50798aad49bcf05fc20fffbaae9de72c6037ff7778a2505"
+    },
+    "boys/include/boys/boys_coefficients_d_coarse_rat.hpp": {
+      "bytes": 25072,
+      "sha256": "4ba32e64ee9152de8ad4ed539b5cd3bfaa84164ee23820fb625e922bff363e4c"
+    },
+    "boys/include/boys/boys_coefficients_d_far.hpp": {
+      "bytes": 335894,
+      "sha256": "5af8ec47f5b133ec37b807c01ff769591afeaa55a5f04fa84c1b0cd37f7732b4"
+    },
+    "boys/include/boys/boys_coefficients_d_narrow_cheb.hpp": {
+      "bytes": 93539,
+      "sha256": "17713d76e1382d9bd5e46d326a55ed8d709deaa298e7026ad0dfa47c81a22ecc"
+    },
+    "boys/include/boys/boys_coefficients_d_narrow_mono.hpp": {
+      "bytes": 93543,
+      "sha256": "b7b90c5d00095786e3e127072a8bd1fd2f7591236471695afb3791dfe156d597"
+    },
+    "boys/include/boys/boys_coefficients_d_narrow_rat.hpp": {
+      "bytes": 72999,
+      "sha256": "24d7692131a068cfbe84fea480dd61cfb6ab74ea60fbe2b4af1d1d8ae49a5b4b"
+    },
+    "boys/include/boys/boys_coefficients_d_uniform_cheb.hpp": {
+      "bytes": 2668635,
+      "sha256": "28f932bb8f1d7f4d2a693687d5ab685b4765f31a4eab447dbdd9df8698272185"
+    },
+    "boys/include/boys/boys_coefficients_d_uniform_cheb_transposed.hpp": {
+      "bytes": 2910026,
+      "sha256": "fab92465088ebcc44e83f08cc161a688f699e42f924b264210c7fbaa8d0848b8"
+    },
+    "boys/include/boys/boys_coefficients_d_uniform_mono.hpp": {
+      "bytes": 2668639,
+      "sha256": "35db563c1aeb28ecf55fee3c5a17209dd9a8a5497de10d5885f2166710393f89"
+    },
+    "boys/include/boys/boys_coefficients_d_uniform_mono_transposed.hpp": {
+      "bytes": 2909716,
+      "sha256": "b97abda2adba952051e6a87af97c513f70ab25b43aa84772e71f4197aab5b975"
+    },
+    "boys/include/boys/boys_coefficients_d_uniform_rat.hpp": {
+      "bytes": 3055614,
+      "sha256": "28cf0bbf05828f03a82b81670da1ddf566a1797052c33081b78e4fae49f379d5"
+    },
+    "boys/include/boys/boys_coefficients_f32_coarse_cheb.hpp": {
+      "bytes": 40295,
+      "sha256": "619740c19a0caaa905dcb16694dd898ead09e5dc0d2403d5a3939a17cfc8b693"
+    },
+    "boys/include/boys/boys_coefficients_f32_coarse_mono.hpp": {
+      "bytes": 40427,
+      "sha256": "dfb6e1634d76100470a86cd809ff620befecb9514a2543c43b9fcf9f3a6baaaa"
+    },
+    "boys/include/boys/boys_coefficients_f32_coarse_rat.hpp": {
+      "bytes": 14032,
+      "sha256": "1780b14f4382ccab07b469b192ae6868be14cdddf83615ab4c2422c022c56e3c"
+    },
+    "boys/include/boys/boys_coefficients_f32_narrow_cheb.hpp": {
+      "bytes": 43613,
+      "sha256": "06ac9c5ee5fe2bba3ae0ec5a228d412f4e3dccf5c6d41af5cb7e63b48901a6d8"
+    },
+    "boys/include/boys/boys_coefficients_f32_narrow_mono.hpp": {
+      "bytes": 43617,
+      "sha256": "fd227bc0ee723996381272d6ad26ae28622e1066c0d6284bf2f90ff66a7d8d83"
+    },
+    "boys/include/boys/boys_coefficients_f32_narrow_rat.hpp": {
+      "bytes": 36161,
+      "sha256": "09fff507f0907fe2836e551886497c6512e31a77986c8f18578ffd6e7c37c331"
+    },
+    "boys/include/boys/boys_coefficients_f32_uniform_cheb.hpp": {
+      "bytes": 358099,
+      "sha256": "731e119838f2ba6b9d6b91bb99f25164ad000573cebae4e65715fd2e6d5417e6"
+    },
+    "boys/include/boys/boys_coefficients_f32_uniform_mono.hpp": {
+      "bytes": 358103,
+      "sha256": "e59636a52a711b26dd1546f34fabac8d16e17ad50de7aa100664fa8fa549eaac"
+    },
+    "boys/include/boys/boys_coefficients_f32_uniform_rat.hpp": {
+      "bytes": 449040,
+      "sha256": "e5090fbe19893682ec7b9c7b983ab3c8090170c3626299e6cbd7e71874f1002d"
+    },
+    "boys/include/boys/boys_cuda.hpp": {
+      "bytes": 299625,
+      "sha256": "d4bc6709354248aa6bcc79a7a4d91545cdfcd4b75de8bdf6575934d803f4666b"
+    },
+    "boys/include/boys/boys_cuda_arithmetic.hpp": {
+      "bytes": 54486,
+      "sha256": "2ee24a318cbea459c24dc708da2a6d72ca81bc8a818f33ee35002ac88499284d"
+    },
+    "boys/include/boys/boys_cuda_device.hpp": {
+      "bytes": 197153,
+      "sha256": "78905861728a90ae632f52bcee0c2b071187cfb4be5cb84be05f268af4178c9e"
+    },
+    "boys/include/boys/boys_cuda_launch.hpp": {
+      "bytes": 23884,
+      "sha256": "664c716b422bf18185243e64832d39e8edd25ec2b754ee2f9d4916ca81271be4"
+    },
+    "boys/include/boys/boys_cuda_muladd.hpp": {
+      "bytes": 2609,
+      "sha256": "6fb0d300629adacda0fd51978cc4ca566521137d7dacf1edc8ff5e0f12a7a63d"
+    },
+    "boys/include/boys/boys_cuda_options.hpp": {
+      "bytes": 137780,
+      "sha256": "d16dce5a29d93eea6ce419d66d88528af64338e40d2b0ecde2cf9fd5c3e84bed"
+    },
+    "boys/include/boys/boys_cuda_policy.hpp": {
+      "bytes": 132498,
+      "sha256": "aad6d345788e824c60e637b335589fc11c5421656417825431e2812dc159b42c"
+    },
+    "boys/include/boys/boys_cuda_probe.hpp": {
+      "bytes": 88674,
+      "sha256": "6e3c0eb667e58980883f7e72f0a2729cda702cb4476c8d1a5a00736472827866"
+    },
+    "boys/include/boys/boys_decl.hpp": {
+      "bytes": 114481,
+      "sha256": "8e4b3ff2dbdef360fac0928e2475d6324d3cb0149eacba28793c3cb1f2d5b250"
+    },
+    "boys/include/boys/boys_default_tables.hpp": {
+      "bytes": 860,
+      "sha256": "74388aeabc3754d5506f7ff89134fe0da0dab3d5016f607b21f5ddef029b66b1"
+    },
+    "boys/include/boys/boys_device_tables.hpp": {
+      "bytes": 26739,
+      "sha256": "058e6b66cf68ed4412a163f8f6875e93da37bb7f98df3be373ea17eeb4f750ea"
+    },
+    "boys/include/boys/boys_effective_degrees.hpp": {
+      "bytes": 44840,
+      "sha256": "32eef040a83bd59c77e975f15d5f30f0c85dd68148842726f9f03f2e4e34d66b"
+    },
+    "boys/include/boys/boys_fit32.hpp": {
+      "bytes": 50039,
+      "sha256": "81dc8c371f37aaf3df8d1902707c2f120040df82b819aa84fc61a23a64183455"
+    },
+    "boys/include/boys/boys_fit_chebyshev.hpp": {
+      "bytes": 25366,
+      "sha256": "fb9548fef06c5cfd22b9dacf7d859125499e065dfe3803aeb683eaff8d81fb6c"
+    },
+    "boys/include/boys/boys_fit_core.hpp": {
+      "bytes": 18588,
+      "sha256": "40b8273a54a61ba591f836835856e8196c5cbd2ad03f952646d436b93c585efb"
+    },
+    "boys/include/boys/boys_fit_rational.hpp": {
+      "bytes": 11532,
+      "sha256": "b1e79eed57e9fe09e38c5380f9d8ddcf3998e05894a8bc2de27b3478c28f105a"
+    },
+    "boys/include/boys/boys_fit_uniform.hpp": {
+      "bytes": 15579,
+      "sha256": "0d71c19ba5ad08cf58377ef4bf592e34d378b07cd92a501b4746fb2f00765291"
+    },
+    "boys/include/boys/boys_flat_grid.hpp": {
+      "bytes": 8166,
+      "sha256": "8ae70fbdc9b42d8a52bb19badacd3379155454036d5dd700f86ba59c64c0d43d"
+    },
+    "boys/include/boys/boys_impl.hpp": {
+      "bytes": 149207,
+      "sha256": "4a384f8d3303953a65379b4b83707c17b6d36aac0044a7feb0bbc33867a7391b"
+    },
+    "boys/include/boys/boys_orders_lanes.hpp": {
+      "bytes": 106789,
+      "sha256": "a16427ea2f9b46a0231325b4b089cb73523481e223748417fbb3ae320e974ff3"
+    },
+    "boys/include/boys/boys_probe.hpp": {
+      "bytes": 70506,
+      "sha256": "8141bb577ab12d58dd9e74f433e9422ab6143af47241ed4df2511822387cb467"
+    },
+    "boys/include/boys/boys_span.hpp": {
+      "bytes": 12255,
+      "sha256": "d0b05554d34dd695aaa3ae6dd500a623ae284429212c8b1a28de014e556194d4"
+    },
+    "boys/include/boys/boys_transform.hpp": {
+      "bytes": 23300,
+      "sha256": "d6351fcf238309cccf97780364acb7a09620fadda7a3830eafb344956a5de602"
+    },
+    "boys/include/boys/dependent_false.hpp": {
+      "bytes": 1541,
+      "sha256": "f30dfa5f9ba90ed0fb86d7ba9eaea61cf6d09e169a3d6901b99521c7745ed781"
+    },
+    "boys/include/boys/f16.hpp": {
+      "bytes": 15522,
+      "sha256": "e13fd05586aa73c8cb3da44d12ee55462dbfe5c3b1acaefd700185fba87fd3df"
+    },
+    "boys/include/boys/half2.hpp": {
+      "bytes": 11264,
+      "sha256": "ef8646b1b73a2e37e647beb2e4a3b0f43f3d636787e459fb4be75403d179ff91"
+    },
+    "boys/include/boys/isa_tiers.hpp": {
+      "bytes": 10341,
+      "sha256": "fd71f11061539e18d3067ae5c1f8017789237e0a03df596715cf81a33368f2f1"
+    },
+    "boys/include/boys/kernels.hpp": {
+      "bytes": 27957,
+      "sha256": "b1a3a40a2e25e1782d965311a601db4f3dacb4ddb0ed62b3bd2bd00251304867"
+    },
+    "boys/include/boys/policy.hpp": {
+      "bytes": 27640,
+      "sha256": "72fe3e2b3039768dc8ecbbb64ac128e6093b5351f9375905b226afe665945e59"
+    },
+    "boys/include/boys/status.hpp": {
+      "bytes": 956,
+      "sha256": "2043500fdaa01f3ed411ce188d5ec89946108a4fe9e6fa0ed839e89e66759df7"
+    },
+    "boys/include/boys/version.hpp": {
+      "bytes": 4275,
+      "sha256": "48900211c5286230a2873c74dc07fc978b0d873a06d67bb0f6fc7d146edf9aba"
+    },
+    "boys/tests/data/boys_accuracy_gate_reference.csv": {
+      "bytes": 11103414,
+      "sha256": "a2a667ce4d8bfdba12bd902d76e1e1bc1ee607965ca74d7da6a49aaf2ddcd678"
+    },
+    "boys/tests/data/boys_reference.csv": {
+      "bytes": 199657,
+      "sha256": "e25cf343be108c21842f5590aa98cf73d32faa6bf772862cd8afcf39772f17e8"
+    },
+    "boys/tools/gen_boys_accuracy_gate_reference.py": {
+      "bytes": 20298,
+      "sha256": "ba8a8547ac8286510fce60d30b006aa9490e62ea4229791d51ef94fe1bba1c50"
+    },
+    "harness/README.md": {
+      "bytes": 8793,
+      "sha256": "f6e785415c52f8da3390425618eef73cc190bcf8bb89486cb77d7e0f7583f232"
+    },
+    "harness/analyze.py": {
+      "bytes": 21659,
+      "sha256": "ded1cffd424f7b72ab451b0d6cd010a2daa19d8e8185997081f7853291946f00"
+    },
+    "harness/provenance.py": {
+      "bytes": 6309,
+      "sha256": "d71fd1030cb9b86624963f5514d996c6ff09b59f30c8cc6d7177843c41de0785"
+    },
+    "harness/run.ps1": {
+      "bytes": 3630,
+      "sha256": "71d131852e481cc08a615659acd015459a0384aa43c9f4679d6af5feb4949e0e"
+    },
+    "harness/sweep_seed.cpp": {
+      "bytes": 7581,
+      "sha256": "775a7da7b78463b6dba612be6eeb09609d30f8976112b121084e345653a85f68"
+    }
+  },
+  "flags": "/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I C:\\Users\\myaml\\dev\\_boys-v511\\include C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\seed-spliced\\sweep_seed.cpp C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\seed-spliced\\build\\sweep_seed.obj C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\seed-spliced\\build\\sweep_seed.exe",
+  "generated_utc": "2026-10-30T18:21:53.386211+00:00",
+  "harness": "sweep_seed",
+  "machine": {
+    "logical_processors": 12,
+    "machine": "AMD64",
+    "node": "trompek",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+    "python": "3.14.7"
+  },
+  "pinned_policy": {
+    "budget": "boys::BoysBudget::kFloat",
+    "division_form": "boys::DivisionForm::kRefinedReciprocal",
+    "eval_scheme": "boys::EvalScheme::kSplitClenshaw",
+    "fit_route": "boys::FitRoute::kChebyshev",
+    "granularity": "boys::FitGranularity::kCoarsest",
+    "pack_axis": "boys::PackAxis::kArguments",
+    "region_b_exp": "boys::RegionBExp::kFast"
+  }
+}

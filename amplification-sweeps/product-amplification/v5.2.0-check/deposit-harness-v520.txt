@@ -1,0 +1,66 @@
+The deposited provenance's harness digests and the files they name
+Tag v1.0.11, tag object 1aa52650755d7445134a105d289029300096e7dd, commit e4513b62b381d49ee5ec1165f25195ea6bf8ff7f, read from the object store.
+Paper tree C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover.
+
+The digest section is digests["harness/<name>"], each entry a byte
+count and a SHA-256 digest; the top-level "harness" field names the
+sweep script, not a digest group.  The deposit carries two provenance
+records per tree: the run record (results/provenance.json) and the
+v5.1.1 check's copy (v5.1.1-check/<tree>-provenance.json); both are
+read.  Each digest is printed as bytes/sha256-prefix; a dash means the
+entry does not exist there.  run=dep, check=dep and paper=dep compare
+the run record's digest, the check copy's digest and the paper tree's
+copy against the deposit's own copy.
+
+=== product_amplification
+  run record  results/provenance.json 24406/15e4c0f3
+  check copy  product-amplification-provenance.json 24406/03c5e2f8
+  the two documents differ in 9 field(s): /digests/harness/SWEEP.md/bytes, /digests/harness/SWEEP.md/sha256, /digests/harness/analyze.py/bytes, /digests/harness/analyze.py/sha256, /digests/harness/grid.py/bytes, /digests/harness/grid.py/sha256, /digests/harness/run.ps1/bytes, /digests/harness/run.ps1/sha256, /generated_utc
+    /digests/harness/SWEEP.md/bytes
+      run  : 11150
+      check: 10133
+    /digests/harness/SWEEP.md/sha256
+      run  : 'a1fbbf2bc6d8e07b22bc9cc22ecaf74774c663609ed991d5f6af75c099cedecd'
+      check: '4af424e95f49348c63331d669a63bcac4b72e2212ec555a0159487e0f5e1544f'
+    /digests/harness/analyze.py/bytes
+      run  : 18225
+      check: 18145
+    /digests/harness/analyze.py/sha256
+      run  : '7d5caf0ac3bd8c3a0f418451a6e990915b4238ccf6b96657a30b5e20e35ba686'
+      check: 'a5d944763416fc0523614d12233acc4e219e2ca09f44234775ce739357ad6dae'
+    /digests/harness/grid.py/bytes
+      run  : 6195
+      check: 4019
+    /digests/harness/grid.py/sha256
+      run  : 'b44134bad3521056bcda37474e71424109b99b2d2f8ff4362acb43000ef23524'
+      check: 'e7f9490823ee65f610745e93c1bc4448a5e9f95d7ce7f814deec3aaa13a38168'
+    /digests/harness/run.ps1/bytes
+      run  : 3878
+      check: 3827
+    /digests/harness/run.ps1/sha256
+      run  : 'b7e09e02cbe445a96f98dede5d347b70959075cd9bc9a9dea3e4006e09e20a33'
+      check: 'b5e416397656888776a88703411fb23ec8011844bd5d0e6be8cb8950c47a3b05'
+    /generated_utc
+      run  : '2026-10-27T21:38:40.459440+00:00'
+      check: '2026-10-26T22:23:19.872280+00:00'
+  file             run record     check copy        deposit          paper  run=dep  check=dep  paper=dep
+  SWEEP.md     11150/a1fbbf2b 10133/4af424e9              - 11150/a1fbbf2b        -          -          -
+  analyze.py   18225/7d5caf0a 18145/a5d94476 18225/7d5caf0a 18225/7d5caf0a      yes         NO        yes
+  grid.py       6195/b44134ba  4019/e7f94908  6195/b44134ba  6195/b44134ba      yes         NO        yes
+  run.ps1       3878/b7e09e02  3827/b5e41639  3878/b7e09e02  3878/b7e09e02      yes         NO        yes
+  sweep1.cpp    8569/309bcb71  8569/309bcb71  8569/309bcb71  8569/309bcb71      yes        yes        yes
+  sweep2.cpp                -              -              -              -        -          -          -
+
+=== amplification_form
+  run record  results/provenance.json 24538/a1ed6ea3
+  check copy  amplification-form-provenance.json 24538/a1ed6ea3
+  the two documents differ in 0 field(s): none
+  file             run record     check copy        deposit          paper  run=dep  check=dep  paper=dep
+  SWEEP.md     10283/be29f13e 10283/be29f13e              - 10205/b872096c        -          -          -
+  analyze.py   41469/1c9b5c49 41469/1c9b5c49              - 43991/7da9291c        -          -          -
+  grid.py       3559/30f555b1  3559/30f555b1              -  3559/30f555b1        -          -          -
+  run.ps1       3550/3ac72c43  3550/3ac72c43              -  3601/57100192        -          -          -
+  sweep1.cpp                -              -              -              -        -          -          -
+  sweep2.cpp   11309/57e91b7e 11309/57e91b7e              - 11309/57e91b7e        -          -          -
+
+The deposit carries no SWEEP.md in either tree, yet all four provenance records name one.  The product tree carries two records of different vintages, identical apart from four script digests and generated_utc: the run record, generated 2026-10-27T21:38:40Z, records for analyze.py, grid.py, run.ps1 and sweep1.cpp exactly the digests of the copies the deposit carries (the same bytes as the paper tree), and for SWEEP.md the digest of the paper tree's copy; the check copy, generated 2026-10-26T22:23:19Z, records earlier versions of SWEEP.md, analyze.py, grid.py and run.ps1, and only its sweep1.cpp digest agrees with them.  The form tree's two records are byte-identical (24538/a1ed6ea3), and its SWEEP.md, analyze.py and run.ps1 digests likewise name versions other than the paper tree's, while its grid.py and sweep2.cpp digests match it; the form deposit carries none of these files.  Every data record is reproduced by the v5.2.0 run regardless, so the inconsistency is in the provenance's harness digest section alone.  It is reported here, not smoothed.

@@ -1,0 +1,85 @@
+﻿=== v1.0.9
+  tag 889900acece32618f9600d56105a8019f98f5067
+    tag      v1.0.9
+    object   01f672f7dc92388fafef8d04da70e0f09dd7102a
+    type     commit
+  commit 01f672f7dc92388fafef8d04da70e0f09dd7102a
+    tree     23e121d01ebd7b2e26bdc2a5978355c9b44d2ce7
+    files    436
+    VERSION  1.0.1
+
+=== v1.0.10
+  tag ef1dbf926cf4150d6017e2543d30f148145aa48e
+    tag      v1.0.10
+    object   1ad2c81bc0efedda708e090fbc03c37be65d0a58
+    type     commit
+  commit 1ad2c81bc0efedda708e090fbc03c37be65d0a58
+    tree     d4dccfc8e0fdeffc5f3a42532745f7aadfc230e6
+    files    488
+    VERSION  1.0.1
+
+=== v1.0.11
+  tag 1aa52650755d7445134a105d289029300096e7dd
+    tag      v1.0.11
+    object   e4513b62b381d49ee5ec1165f25195ea6bf8ff7f
+    type     commit
+  commit e4513b62b381d49ee5ec1165f25195ea6bf8ff7f
+    tree     f5596acfddb16b572a75f8dadfe915a1720a0646
+    files    489
+    VERSION  1.0.11
+
+v1.0.10 -> v1.0.11: 488 -> 489 files
+  added   1: ['.gitattributes']
+  removed 0: []
+  changed 41:
+    VERSION                                                                                                6 ->        8 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/README.md                                   13540 ->    13765 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/make_endtoend.py                             8030 ->     8242 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/make_tables.py                               8949 ->     9206 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/data/fits.csv     91166 ->    93903 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/data/fits_validation.txt    14273 ->    14504 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/data/grid.csv     19552 ->    20389 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/data/reference.csv  1825123 ->  1825960 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/data/reference_validation.txt      897 ->      911 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/admission.csv    29329 ->    30166 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/band_summary.csv      576 ->      581 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/cells.csv  1887356 ->  1914945 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/per_order.csv    12683 ->    12816 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/prediction.csv    13223 ->    13356 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/prediction_record.csv    18257 ->    18390 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/prediction_scan.csv      900 ->      929 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/provenance.json    23881 ->    24538 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/summary.txt    15509 ->    15594 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/transfer_cells.csv  2164145 ->  2191701 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/data/documented.csv      723 ->      757 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/data/grid.csv   219439 ->   228793 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/data/reference.csv 20578946 -> 20588300 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/data/reference_validation.txt      907 ->      921 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/admission.csv   325802 ->   335156 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/band_summary.csv      772 ->      777 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/cells.csv 21364149 -> 21672799 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/decomposition.csv      922 ->      927 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/gain_up.csv     2391 ->     2458 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/growth.csv     2830 ->     2897 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/per_order.csv    12745 ->    12878 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/provenance.json    23753 ->    24406 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/replica_gain.csv  7652491 ->  7820122 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/summary.txt     3407 ->     3455 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/v5.1.1-check/amplification-form-provenance.json    23881 ->    24538 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/v5.1.1-check/bridge-compare-v511.txt        13762 ->    13910 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/v5.1.1-check/bridge-run-summary-v511.txt     1552 ->     1571 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/v5.1.1-check/compiled-tree-compare.txt       2024 ->     2047 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/v5.1.1-check/include-boys-compare-after.txt    10440 ->    10507 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/v5.1.1-check/include-boys-compare-before.txt    14878 ->    14949 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/v5.1.1-check/product-amplification-provenance.json    23753 ->    24406 bytes
+    amplification-sweeps/product-amplification/v5.1.1-9353/v5.1.1-check/sweep-results-compare.txt        814 ->      832 bytes
+
+v1.0.11 bundle against this paper tree
+  MISSING in paper: C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover\sweeps\v5.1.1-check\check_v500_compare.py
+  compared: 45 identical, 0 differing, 1 missing
+  bundle entries with no paper-tree path (not compared): 4
+    README.md
+    make_endtoend.py
+    make_frontier.py
+    make_tables.py
+

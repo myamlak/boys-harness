@@ -1,0 +1,106 @@
+Field-by-field difference between the v5.1.1-check provenance copies
+and the v5.2.0 execution-check records.  The deposited side is
+sweeps/v5.1.1-check/<tree>-provenance.json, the copy the v5.1.1 run
+deposited; the new side is run/sweeps/<tree>/results/provenance.json.
+Line endings are not involved (the comparison is on the parsed JSON).
+
+=== product_amplification: 17 differing field(s)
+  /boys/commit
+    deposited: '834bdbb18a30ac8538b519436429f78d41f187ce'
+    new      : '55ca0e316ad2f9f776424bfee9f365dfc322058b'
+  /boys/describe
+    deposited: 'v5.1.1'
+    new      : 'v5.2.0'
+  /boys/git_invoked
+    deposited: <absent>
+    new      : False
+  /boys/tag_at_head
+    deposited: 'v5.1.1'
+    new      : 'v5.2.0'
+  /boys/tree
+    deposited: 'C:\\Users\\myaml\\dev\\_boys-v511'
+    new      : 'C:\\Users\\myaml\\dev\\_boys-v520-pub'
+  /boys/verified_by
+    deposited: <absent>
+    new      : 'sweeps/v5.2.0-check/run/verify_pub_tree.py'
+  /digests/boys/include/boys/version.hpp/sha256
+    deposited: '48900211c5286230a2873c74dc07fc978b0d873a06d67bb0f6fc7d146edf9aba'
+    new      : 'ac7352ed90bbc4fc615387e6fe8289b5cc26dc596e361c484f8adb3955b3b2a6'
+  /digests/harness/SWEEP.md/bytes
+    deposited: 10133
+    new      : 11150
+  /digests/harness/SWEEP.md/sha256
+    deposited: '4af424e95f49348c63331d669a63bcac4b72e2212ec555a0159487e0f5e1544f'
+    new      : 'a1fbbf2bc6d8e07b22bc9cc22ecaf74774c663609ed991d5f6af75c099cedecd'
+  /digests/harness/analyze.py/bytes
+    deposited: 18145
+    new      : 18225
+  /digests/harness/analyze.py/sha256
+    deposited: 'a5d944763416fc0523614d12233acc4e219e2ca09f44234775ce739357ad6dae'
+    new      : '7d5caf0ac3bd8c3a0f418451a6e990915b4238ccf6b96657a30b5e20e35ba686'
+  /digests/harness/grid.py/bytes
+    deposited: 4019
+    new      : 6195
+  /digests/harness/grid.py/sha256
+    deposited: 'e7f9490823ee65f610745e93c1bc4448a5e9f95d7ce7f814deec3aaa13a38168'
+    new      : 'b44134bad3521056bcda37474e71424109b99b2d2f8ff4362acb43000ef23524'
+  /digests/harness/run.ps1/bytes
+    deposited: 3827
+    new      : 3878
+  /digests/harness/run.ps1/sha256
+    deposited: 'b5e416397656888776a88703411fb23ec8011844bd5d0e6be8cb8950c47a3b05'
+    new      : 'b7e09e02cbe445a96f98dede5d347b70959075cd9bc9a9dea3e4006e09e20a33'
+  /flags
+    deposited: '/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I C:\\Users\\myaml\\dev\\_boys-v511\\include C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\product_amplification\\sweep1.cpp C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\product_amplification\\build\\sweep1.obj C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\product_amplification\\build\\sweep1.exe'
+    new      : '/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I C:\\Users\\myaml\\dev\\_boys-v520-pub\\include /Fobuild\\sweep1.obj /Febuild\\sweep1.exe sweep1.cpp'
+  /generated_utc
+    deposited: '2026-10-26T22:23:19.872280+00:00'
+    new      : '2026-10-28T19:13:44.228934+00:00'
+
+=== amplification_form: 15 differing field(s)
+  /boys/commit
+    deposited: '834bdbb18a30ac8538b519436429f78d41f187ce'
+    new      : '55ca0e316ad2f9f776424bfee9f365dfc322058b'
+  /boys/describe
+    deposited: 'v5.1.1'
+    new      : 'v5.2.0'
+  /boys/git_invoked
+    deposited: <absent>
+    new      : False
+  /boys/tag_at_head
+    deposited: 'v5.1.1'
+    new      : 'v5.2.0'
+  /boys/tree
+    deposited: 'C:\\Users\\myaml\\dev\\_boys-v511'
+    new      : 'C:\\Users\\myaml\\dev\\_boys-v520-pub'
+  /boys/verified_by
+    deposited: <absent>
+    new      : 'sweeps/v5.2.0-check/run/verify_pub_tree.py'
+  /digests/boys/include/boys/version.hpp/sha256
+    deposited: '48900211c5286230a2873c74dc07fc978b0d873a06d67bb0f6fc7d146edf9aba'
+    new      : 'ac7352ed90bbc4fc615387e6fe8289b5cc26dc596e361c484f8adb3955b3b2a6'
+  /digests/harness/SWEEP.md/bytes
+    deposited: 10283
+    new      : 10205
+  /digests/harness/SWEEP.md/sha256
+    deposited: 'be29f13e93d1eaafcf57a5158d1b74185ea8c880eca1e67d327cea4e948d289b'
+    new      : 'b872096ce67fc47d27d9ae6e0d198b583572e5c5f5d2f750d3fb31789b7b9241'
+  /digests/harness/analyze.py/bytes
+    deposited: 41469
+    new      : 43991
+  /digests/harness/analyze.py/sha256
+    deposited: '1c9b5c49b326a86733f79ac861ea550337c247cd863d03147f75e82e880db357'
+    new      : '7da9291c2c9feb4d8dcbd434b17754ed0125e6b958f1c160c2e6c1ad6fd25065'
+  /digests/harness/run.ps1/bytes
+    deposited: 3550
+    new      : 3601
+  /digests/harness/run.ps1/sha256
+    deposited: '3ac72c43b612b13944c939082c7bddaa226bdc931cf5697f1181e715bda55e48'
+    new      : '5710019229a482abbbe109efc2ac83a3adb567c3c0d2a7a1e52680c955b37572'
+  /flags
+    deposited: '/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I C:\\Users\\myaml\\dev\\_boys-v511\\include C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\amplification_form\\sweep2.cpp C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\amplification_form\\build\\sweep2.obj C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\amplification_form\\build\\sweep2.exe'
+    new      : '/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I C:\\Users\\myaml\\dev\\_boys-v520-pub\\include /Fobuild\\sweep2.obj /Febuild\\sweep2.exe sweep2.cpp'
+  /generated_utc
+    deposited: '2026-10-26T22:13:08.089010+00:00'
+    new      : '2026-10-28T19:14:52.878078+00:00'
+

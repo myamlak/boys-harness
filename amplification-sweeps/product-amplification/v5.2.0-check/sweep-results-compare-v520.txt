@@ -1,0 +1,67 @@
+﻿sweep tree / file: byte comparison, CRLF folded to LF
+SAME        product_amplification  results/cells.csv  (308650 lines, 21672799 bytes deposited)
+SAME        product_amplification  results/admission.csv  (9354 lines, 335156 bytes deposited)
+SAME        product_amplification  results/replica_gain.csv  (167631 lines, 7820122 bytes deposited)
+SAME        product_amplification  results/per_order.csv  (133 lines, 12878 bytes deposited)
+SAME        product_amplification  results/band_summary.csv  (5 lines, 777 bytes deposited)
+SAME        product_amplification  results/gain_up.csv  (67 lines, 2458 bytes deposited)
+SAME        product_amplification  results/growth.csv  (67 lines, 2897 bytes deposited)
+SAME        product_amplification  results/decomposition.csv  (5 lines, 927 bytes deposited)
+DIFF        product_amplification  results/summary.txt  (48 vs 48 lines)
+    line 2
+      deposited: reference: C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover\sweeps\product_amplification\data\reference.csv
+      new      : reference: C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover\sweeps\v5.2.0-check\run\sweeps\product_amplification\data\reference.csv
+DIFF        product_amplification  results/provenance.json  (653 vs 655 lines)
+    line 3
+      deposited:     "commit": "834bdbb18a30ac8538b519436429f78d41f187ce",
+      new      :     "commit": "55ca0e316ad2f9f776424bfee9f365dfc322058b",
+    line 4
+      deposited:     "describe": "v5.1.1",
+      new      :     "describe": "v5.2.0",
+    line 6
+      deposited:     "status_porcelain": [],
+      new      :     "git_invoked": false,
+    line 7
+      deposited:     "tag_at_head": "v5.1.1",
+      new      :     "status_porcelain": [],
+    line 8
+      deposited:     "tree": "C:\\Users\\myaml\\dev\\_boys-v511"
+      new      :     "tag_at_head": "v5.2.0",
+    line 9
+      deposited:   },
+      new      :     "tree": "C:\\Users\\myaml\\dev\\_boys-v520-pub",
+    length differs beyond the common prefix
+SAME        product_amplification  data/documented.csv  (34 lines, 757 bytes deposited)
+SAME        amplification_form     results/paths.csv  (3004443 lines, 291827555 bytes deposited)
+SAME        amplification_form     results/cells.csv  (27589 lines, 1914945 bytes deposited)
+SAME        amplification_form     results/admission.csv  (837 lines, 30166 bytes deposited)
+SAME        amplification_form     results/per_order.csv  (133 lines, 12816 bytes deposited)
+SAME        amplification_form     results/band_summary.csv  (5 lines, 581 bytes deposited)
+SAME        amplification_form     results/prediction.csv  (133 lines, 13356 bytes deposited)
+SAME        amplification_form     results/prediction_scan.csv  (29 lines, 929 bytes deposited)
+SAME        amplification_form     results/prediction_record.csv  (133 lines, 18390 bytes deposited)
+SAME        amplification_form     results/transfer_cells.csv  (27556 lines, 2191701 bytes deposited)
+DIFF        amplification_form     results/summary.txt  (85 vs 85 lines)
+    line 2
+      deposited: reference: C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover\sweeps\amplification_form\data\reference.csv
+      new      : reference: C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover\sweeps\v5.2.0-check\run\sweeps\amplification_form\data\reference.csv
+DIFF        amplification_form     results/provenance.json  (657 vs 659 lines)
+    line 3
+      deposited:     "commit": "834bdbb18a30ac8538b519436429f78d41f187ce",
+      new      :     "commit": "55ca0e316ad2f9f776424bfee9f365dfc322058b",
+    line 4
+      deposited:     "describe": "v5.1.1",
+      new      :     "describe": "v5.2.0",
+    line 6
+      deposited:     "status_porcelain": [],
+      new      :     "git_invoked": false,
+    line 7
+      deposited:     "tag_at_head": "v5.1.1",
+      new      :     "status_porcelain": [],
+    line 8
+      deposited:     "tree": "C:\\Users\\myaml\\dev\\_boys-v511"
+      new      :     "tag_at_head": "v5.2.0",
+    line 9
+      deposited:   },
+      new      :     "tree": "C:\\Users\\myaml\\dev\\_boys-v520-pub",
+    length differs beyond the common prefix

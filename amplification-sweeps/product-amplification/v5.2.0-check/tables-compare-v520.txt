@@ -1,0 +1,19 @@
+﻿Tables and figure data: regenerated in the scratch tree against the
+deposited tables beside the manuscript. CRLF folded to LF.
+
+SAME   tables/band-level.tex                         609 bytes deposited
+SAME   tables/band-ratios.tex                        474 bytes deposited
+SAME   tables/endtoend.tex                           917 bytes deposited
+SAME   tables/frontier.tex                          1356 bytes deposited
+SAME   tables/gain.tex                              2415 bytes deposited
+SAME   tables/growth.tex                            2279 bytes deposited
+SAME   tables/per-order-A1-abs.tex                  3038 bytes deposited
+SAME   tables/per-order-A1-rel.tex                  2955 bytes deposited
+SAME   tables/per-order-A2-abs.tex                  2965 bytes deposited
+SAME   tables/per-order-A2-rel.tex                  2993 bytes deposited
+SAME   tables/per-order.tex                        13062 bytes deposited
+SAME   tables/prediction-record.tex                16719 bytes deposited
+SAME   tables/recovered-b2.tex                      5045 bytes deposited
+SAME   figures/per-order-ratio.dat                  1185 bytes deposited
+
+verdict: all identical

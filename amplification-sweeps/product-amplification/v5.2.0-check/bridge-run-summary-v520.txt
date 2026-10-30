@@ -1,0 +1,36 @@
+Lane command summary (v5.2.0 bridge), 2026-10-28T20:22:07+01:00
+
+Probe runs and analyses, FINISH lines as the lane script wrote them:
+  logs/run-default.log            FINISH 2026-10-28T20:04:07.8512697+01:00 STEP=run-default EXIT=0 SECONDS=0.3
+  logs/run-paper-a.log            FINISH 2026-10-28T20:04:08.0941534+01:00 STEP=run-paper-a EXIT=0 SECONDS=0.2
+  logs/run-631gstar-default.log   FINISH 2026-10-28T20:04:08.9696329+01:00 STEP=run-631gstar-default EXIT=0 SECONDS=0.9
+  logs/run-631gstar-paper-a.log   FINISH 2026-10-28T20:04:10.1364175+01:00 STEP=run-631gstar-paper-a EXIT=0 SECONDS=1.2
+  logs/run-ccpvtz-default.log     FINISH 2026-10-28T20:05:04.9859171+01:00 STEP=run-ccpvtz-default EXIT=0 SECONDS=54.8
+  logs/run-ccpvtz-paper-a.log     FINISH 2026-10-28T20:05:56.1375675+01:00 STEP=run-ccpvtz-paper-a EXIT=0 SECONDS=51.1
+  logs/analysis-sto3g.log         FINISH 2026-10-28T20:05:58.5593332+01:00 STEP=analysis-sto3g EXIT=0 SECONDS=2.4
+  logs/analysis-631gstar.log      FINISH 2026-10-28T20:06:10.0939176+01:00 STEP=analysis-631gstar EXIT=0 SECONDS=11.5
+  logs/analysis-ccpvtz.log        FINISH 2026-10-28T20:13:31.3183226+01:00 STEP=analysis-ccpvtz EXIT=0 SECONDS=441.2
+
+9 steps, all EXIT=0.
+
+The lane script, C:\Users\myaml\dev\_bridge-v520\scripts\run_all.ps1, ran the commands below; the variables are resolved the way PowerShell resolves them:
+  $root = 'C:\Users\myaml\dev\_bridge-v520'
+  $bridge = 'C:\Users\myaml\dev\bladawiec-bridge'
+  $exeDefault = 'C:\Users\myaml\dev\bladawiec-bridge\build-bridge-default\bridge\Release\qcx-bridge-probe.exe'
+  $exePaper = 'C:\Users\myaml\dev\bladawiec-bridge\build-bridge-paper-a\bridge\Release\qcx-bridge-probe.exe'
+  $analyze = 'C:\Users\myaml\dev\papers-harness-repo\chemistry-bridge\scripts\analyze.py'
+  $out = 'C:\Users\myaml\dev\_bridge-v520\runs'
+
+  & $exeDefault "$out\default" *> "$root\logs\run-default.log"
+  & $exePaper "$out\paper-a" *> "$root\logs\run-paper-a.log"
+  & $exeDefault "$out\631gstar-default" data/basis/6-31g-star *> "$root\logs\run-631gstar-default.log"
+  & $exePaper "$out\631gstar-paper-a" data/basis/6-31g-star *> "$root\logs\run-631gstar-paper-a.log"
+  & $exeDefault "$out\ccpvtz-default" data/basis/cc-pvtz *> "$root\logs\run-ccpvtz-default.log"
+  & $exePaper "$out\ccpvtz-paper-a" data/basis/cc-pvtz *> "$root\logs\run-ccpvtz-paper-a.log"
+  & python $analyze "$out\default" "$out\paper-a" "$root\logs\analysis-sto3g-v520.txt" *> "$root\logs\analysis-sto3g-v520.log"
+  & python $analyze "$out\631gstar-default" "$out\631gstar-paper-a" "$root\logs\analysis-631gstar-v520.txt" *> "$root\logs\analysis-631gstar-v520.log"
+  & python $analyze "$out\ccpvtz-default" "$out\ccpvtz-paper-a" "$root\logs\analysis-ccpvtz-v520.txt" *> "$root\logs\analysis-ccpvtz-v520.log"
+
+The six run logs hold the probe's console output and its FINISH line; each analysis step writes its console output to logs/analysis-<set>-v520.log and its FINISH line to logs/analysis-<set>.log.
+
+The two probe binaries were built before this run; the build commands and logs are not in this directory.  compiled-tree-compare-v520.txt records what they were built from: their paths, sizes, SHA-256 digests and timestamps, the sources under external/boys compared file by file with the v5.2.0 tag's worktree, and the version each probe's own record states, 5.2.0 for all six arms.

@@ -1,0 +1,173 @@
+{
+  "check": "source-identity-and-execution",
+  "commit": {
+    "parent": "834bdbb18a30ac8538b519436429f78d41f187ce",
+    "sha": "55ca0e316ad2f9f776424bfee9f365dfc322058b",
+    "short": "55ca0e3",
+    "subject": "Claim-book registrations and half-format sweeps (#19)",
+    "tree": "312e72ab11f314d41834286143ce5549bafad72c"
+  },
+  "deposit": {
+    "commit": "482fd3388c276091834a6c12a642d9de2481c9f2",
+    "release": "5.0.0",
+    "repository": "myamlak/boys-harness",
+    "tag": "v1.0.9"
+  },
+  "deposit_v511_records": {
+    "commit": "e4513b62b381d49ee5ec1165f25195ea6bf8ff7f",
+    "differing": 0,
+    "identical": 45,
+    "mapped": 46,
+    "missing_from_paper": [
+      "C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\v5.1.1-check\\check_v500_compare.py"
+    ],
+    "path": "amplification-sweeps/product-amplification/v5.1.1-9353/",
+    "record": "harness-deposit-compare-v111.txt",
+    "repository": "myamlak/boys-harness",
+    "tag": "v1.0.11",
+    "tag_object": "1aa52650755d7445134a105d289029300096e7dd"
+  },
+  "evaluated_files": {
+    "include_boys": 62,
+    "include_boys_differing": [
+      "include/boys/version.hpp"
+    ],
+    "include_boys_identical_to_v511": 61,
+    "src": 14,
+    "src_differing": [],
+    "src_identical_to_v511": 14
+  },
+  "execution": {
+    "all_steps_exit_zero": true,
+    "boys_tree": "C:\\Users\\myaml\\dev\\_boys-v520-pub",
+    "boys_tree_identity": "run/pub-tree-identity.txt",
+    "compiler": "Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64",
+    "compiler_path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\cl.exe",
+    "steps": [
+      {
+        "exit": 0,
+        "seconds": 0.9,
+        "step": "sweep1-provenance"
+      },
+      {
+        "exit": 0,
+        "seconds": 23.3,
+        "step": "sweep1-build"
+      },
+      {
+        "exit": 0,
+        "seconds": 1.6,
+        "step": "sweep1-run"
+      },
+      {
+        "exit": 0,
+        "seconds": 42.9,
+        "step": "sweep1-analyze"
+      },
+      {
+        "exit": 0,
+        "seconds": 0.9,
+        "step": "sweep2-provenance"
+      },
+      {
+        "exit": 0,
+        "seconds": 28.0,
+        "step": "sweep2-build"
+      },
+      {
+        "exit": 0,
+        "seconds": 22.3,
+        "step": "sweep2-run"
+      },
+      {
+        "exit": 0,
+        "seconds": 75.6,
+        "step": "sweep2-analyze"
+      },
+      {
+        "exit": 0,
+        "seconds": 3.3,
+        "step": "tables"
+      },
+      {
+        "exit": 0,
+        "seconds": 0.3,
+        "step": "merge-per-order"
+      },
+      {
+        "exit": 0,
+        "seconds": 0.6,
+        "step": "endtoend"
+      },
+      {
+        "exit": 0,
+        "seconds": 0.9,
+        "step": "frontier"
+      },
+      {
+        "exit": 0,
+        "seconds": 0.3,
+        "step": "prediction-record"
+      }
+    ]
+  },
+  "generated_utc": "2026-10-28T19:17:52.722798+00:00",
+  "git_invoked": false,
+  "input_comparison": {
+    "differing": 0,
+    "extra": 0,
+    "files_compared": 20,
+    "identical": 20,
+    "missing": 0,
+    "record": "scratch-tree-compare-v520.txt"
+  },
+  "note": "Tag, commit and tree were read from the repository's loose ref and object files without invoking git. The evaluated sources in the worktree match the tagged tree's blobs, so no measured error can change from a source difference. The execution check, which is separate from this generator, then compiled both sweeps against the tagged tree with the documented compile line, ran them on the deposited grids, fits and 60-digit references, and compared every produced record with the deposited one; the steps and exit codes are in run/logs/execution-check.log and the outcomes in the execution, sweep_comparison and table_comparison entries. The v1.0.11 deposit carries the v5.1.1 records, not this check.",
+  "reference_run": {
+    "commit": "834bdbb18a30ac8538b519436429f78d41f187ce",
+    "records": "sweeps/v5.1.1-check/",
+    "release": "5.1.1"
+  },
+  "release": "5.2.0",
+  "run_performed": true,
+  "source_tree": {
+    "head_commit": "14c25bf8df04eaf585790aa2674bafcb15d65b8c",
+    "head_ref": "refs/heads/myamlak/accuracy-gate-umbrella",
+    "head_tree": "312e72ab11f314d41834286143ce5549bafad72c",
+    "path": "C:\\Users\\myaml\\dev\\_boys-umbrella"
+  },
+  "sweep_comparison": {
+    "differing": [
+      "product_amplification results/summary.txt",
+      "product_amplification results/provenance.json",
+      "amplification_form results/summary.txt",
+      "amplification_form results/provenance.json"
+    ],
+    "files_compared": 22,
+    "identical": 18,
+    "record": "sweep-results-compare-v520.txt"
+  },
+  "table_comparison": {
+    "identical": 14,
+    "record": "tables-compare-v520.txt",
+    "verdict": "all identical"
+  },
+  "tag": {
+    "date_utc": "2026-10-28T18:09:47+00:00",
+    "message": "boys 5.2.0: the claim-book registration table, the measured rows and the exhaustive half sweeps",
+    "name": "v5.2.0",
+    "object": "cb1ce4c79eb22a83bc2fa116c6647df9b08a0e2e",
+    "tagger": "Marcin Makowski <myamlak@gmail.com> 1793210987 +0100"
+  },
+  "tag_tree_blobs": {
+    "files_checked": 76,
+    "matches": 76
+  },
+  "v511_provenance_digests": {
+    "differing": [
+      "include/boys/version.hpp"
+    ],
+    "matching": 14,
+    "recorded": 15
+  },
+  "v520_check_in_deposit": false
+}
