@@ -1,0 +1,176 @@
+Record files: new v5.2.0 run against the v5.1.1 record
+==============================================================================
+  STO-3G / default
+    .args.txt                SAME  341626 bytes sha256 d98a37398890b6504ee5a6f702604b8fd5f8b7034dad069884b18b19cb6bbf83
+    .summary.txt             SAME  1678 bytes sha256 6119aa34c5a0534cbc7d9fdfccc9f01e4728dfda35f69445b9fc4aef27e7988d
+    .matrices.txt            SAME  3736 bytes sha256 8acf6069f478119e96dbe771f9bfb75845711c450446abd9b9382f645e7fa5ba
+    .eri_max.txt             SAME  20 bytes sha256 37388c68191b31b8d20b04fa92e35b06f2e31e10dd55cf792cd74c58590ac169
+    .default.density.bin     SAME  7378 bytes sha256 0369fab19f3780ef3f7e1ca2bda255f1caea813015fe3b445eeaade72dae3ef6
+    .default.trace.txt       DIFF  old 2325 bytes 09edbd174fbaaa6d11d7a8e212ac70ee0a81f7c54b6f2a1f622116b4cdfb774d  new 2325 bytes 196b79a79dc5caa934b95fa3a280ca1706232bc9148fdb5f2a0650705552d7bc
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .tight.trace.txt         DIFF  old 7371 bytes 511fbe592e1938b8c9ab5f36c3295c27ce9e646a9ca1bd281f268265d55376e1  new 7371 bytes 4de02cd375c81303d7cf074baae1347a892a2dac7b2e93851adca89f10f2dc71
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .eri.txt                 SAME  50099 bytes sha256 74dae86bce88c3c2bd2a30a8a8bfcede8c60cbfd51e97c5da8771b666d62a22b
+    .boys_record.txt         1 differing line(s) of 102; line count old/new = 102/102
+      line 4 old:   version                   5.1.1                      (boys::VersionString)
+      line 4 new:   version                   5.2.0                      (boys::VersionString)
+      new sha256 a76dc25e41152a6cc3666048d793c486e8212a2d6e95c84e7916cbb83cc3e0fd
+  STO-3G / paper-a
+    .args.txt                SAME  341464 bytes sha256 87baacd108a3b91a9fa8def0afb2b2ee5e7a2531d811ce6dbd15964657cb7120
+    .summary.txt             SAME  1670 bytes sha256 5cff4122d9f3bd3cf5cd447d39434a5134c316b1af1639260fcb52347b97c832
+    .matrices.txt            SAME  3737 bytes sha256 cd3455443a03481388cab70176bdf3ace1a15f51451f77ac5ed035e876acf52b
+    .eri_max.txt             SAME  20 bytes sha256 37388c68191b31b8d20b04fa92e35b06f2e31e10dd55cf792cd74c58590ac169
+    .default.density.bin     SAME  7378 bytes sha256 6f76461ea4691f4c34266068f6b7a1f3e7e2c88d8871ed32f7642f8183dede92
+    .default.trace.txt       DIFF  old 2294 bytes 92ae3b873d4390b42e3e3f1b635daa6cc83667a1c886e9416183f4736610fe26  new 2294 bytes 3c00fef887abcb87542db602c1fd7bc33eb34bc2a12740685fea246b670eaba4
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .tight.trace.txt         DIFF  old 10114 bytes 70d40e722a9bb5cc753bf566e81eeca132c240ee9a0e5f63d51fe9d79a4ec4a0  new 10114 bytes 978b39b8db91cda7b2694ab2bd885c68ba5f7ca04ed56ea248f834e90407fc50
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .eri.txt                 SAME  50067 bytes sha256 21953d29be8258d3dffc76c1132dbe4f202bc99530eb0caba3f1cae8fd61e9c9
+    .boys_record.txt         1 differing line(s) of 102; line count old/new = 102/102
+      line 4 old:   version                   5.1.1                      (boys::VersionString)
+      line 4 new:   version                   5.2.0                      (boys::VersionString)
+      new sha256 a76dc25e41152a6cc3666048d793c486e8212a2d6e95c84e7916cbb83cc3e0fd
+
+  6-31G* / 631gstar-default
+    .args.txt                SAME  1964038 bytes sha256 bd12796578d9f139ea84eb79e6afe96575aa0e8f78bd0cef505ce06216fcb6dc
+    .summary.txt             DIFF  old 1910 bytes 03b8801624030af840ed51aa8afd980fb9582eec1fe0beb9f52ea035e908d204  new 1874 bytes e04ebb0b0d607d0e957cb27ffcddf2eaa7b943073290cfc36273538665193fe2
+      keys only in old: []
+      keys only in new: []
+      values changed:  ['basis_directory']
+        basis_directory: old C:/Users/myaml/dev/bladawiec-bridge/data/basis/6-31g-star new data/basis/6-31g-star
+    .matrices.txt            SAME  27665 bytes sha256 d60eaa1ab7c03041952ce367898507b78425c456981dbe73bc71e2a9a95d8a30
+    .eri_max.txt             SAME  20 bytes sha256 cafce3d90c0aa48bd8a9a736bd707c279fdf1d795bc3bb9fc8dd8a638d9921c8
+    .default.density.bin     SAME  62632 bytes sha256 9f86f64a066ca691d298b3a7f9de3834d521c88c19d4ca96b591343a184f8f51
+    .default.trace.txt       DIFF  old 3499 bytes 199bb4d399f9ab3bd8bbcfe024bcb80c9215d58e2c79461f95b09d556b34d098  new 3499 bytes 0238a1d4104645215bfd09aa94716e9147ce2c9f3672ecf3cb1bb1bc34992842
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .tight.trace.txt         DIFF  old 15098 bytes e054326973fcc7af49eeab0fdbb6145383bece3d2cc3e6a047853c7717f78d5c  new 15098 bytes c1072114e96f14e111b128eb883db8e798962d72707b52581c42c3b69deff041
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .eri.txt                 SAME  2173683 bytes sha256 d468322f80a641a197dbefaa5430bd7d4b4c17b52849dad513c3d09ed7fb8e6e
+    .boys_record.txt         1 differing line(s) of 102; line count old/new = 102/102
+      line 4 old:   version                   5.1.1                      (boys::VersionString)
+      line 4 new:   version                   5.2.0                      (boys::VersionString)
+      new sha256 a76dc25e41152a6cc3666048d793c486e8212a2d6e95c84e7916cbb83cc3e0fd
+  6-31G* / 631gstar-paper-a
+    .args.txt                SAME  1963606 bytes sha256 52e054ee25561a52f5b323c23523f603e52b765bdf3578e048b59a971e71ba76
+    .summary.txt             DIFF  old 1880 bytes 0e1daeac34f03d1e3b491182a45407e3785387d5be15f82350437d93831a44c1  new 1844 bytes 0d844574d799adef259cd6f33e9daa6cb37d91d624ad4d6c2e261fb62df97ba3
+      keys only in old: []
+      keys only in new: []
+      values changed:  ['basis_directory']
+        basis_directory: old C:/Users/myaml/dev/bladawiec-bridge/data/basis/6-31g-star new data/basis/6-31g-star
+    .matrices.txt            SAME  27640 bytes sha256 0ca422c7de55dd9962af6f2e39618f1dca47956804842557cdb4f63509e73210
+    .eri_max.txt             SAME  20 bytes sha256 cafce3d90c0aa48bd8a9a736bd707c279fdf1d795bc3bb9fc8dd8a638d9921c8
+    .default.density.bin     SAME  62632 bytes sha256 5a401e30f202d92e2917827d82224e36b15e48c18335ddae0b757f18401d5409
+    .default.trace.txt       DIFF  old 3519 bytes 159e6e19a03e8f81e06fae5e14ae01924091066f53d9212a2dc96c423f1bae2d  new 3519 bytes 947ef8996f150fdebf6af7adc8e3049e0122cf81c5afb093e373e8c18674e747
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .tight.trace.txt         DIFF  old 15104 bytes 643299212c5de03cbf2c5910dbb5fc29e3e307a9f49c425d7c68ffc8d143e30a  new 15104 bytes 093cf58f525cf6808d8fcb51d7352cb7f647fce1c19f91141deade1a59122960
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .eri.txt                 SAME  2173903 bytes sha256 f2d756c5c8ca3686c2c17dd8435a75834847a08e31cda7294911d5805f388076
+    .boys_record.txt         1 differing line(s) of 102; line count old/new = 102/102
+      line 4 old:   version                   5.1.1                      (boys::VersionString)
+      line 4 new:   version                   5.2.0                      (boys::VersionString)
+      new sha256 a76dc25e41152a6cc3666048d793c486e8212a2d6e95c84e7916cbb83cc3e0fd
+
+  cc-pVTZ / ccpvtz-default
+    .args.txt                SAME  18728341 bytes sha256 13bd60ab6cac5e97ba930fac67dc6e67d9bb9b1cf22b2a63d4e1abf4b08b9715
+    .summary.txt             DIFF  old 2081 bytes 95f22fa4ace39f4c34bbd5c023521066ddb63281604287c71405604418bb6ccc  new 2045 bytes 5750ec2589f9de9ee15185738a0662a9ad0fee030a1c1e4a677d858b4dc8e388
+      keys only in old: []
+      keys only in new: []
+      values changed:  ['basis_directory']
+        basis_directory: old C:/Users/myaml/dev/bladawiec-bridge/data/basis/cc-pvtz new data/basis/cc-pvtz
+    .matrices.txt            SAME  301240 bytes sha256 01e39821a534fc5da49b1b7cbbe16ca63b80bfb0d47a9a2d0300d24e896abe62
+    .eri_max.txt             SAME  20 bytes sha256 1d4e7acbd6756eefb5694bedbb986f199e003156288af9a53e437ebfa73f562e
+    .default.density.bin     SAME  754028 bytes sha256 1bc6ebcdd58e2624bfe5fd1ff8c58ec2279cf58356655e224610cb1860dfd5f2
+    .default.trace.txt       DIFF  old 4257 bytes 401bcb9c9940b5af466844d49bc9708c6dcf300e5af6ea9dbcfb2fa373a60486  new 4257 bytes dfacd16bd0ce83b3179ad1f65e9273d783747b456a5c09d40d57efbd08dc737f
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .tight.trace.txt         DIFF  old 17883 bytes 8f6a854110d4871bc141dff6484903f20042d0d25b46bcc62b2eb58612ba5397  new 17883 bytes f74e10a2e4573f3bb4f800a8eff475fd214122f3c4a346b67be5ad784eb26262
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .eri.txt                 SAME  270819892 bytes sha256 fb36b7c4f8add87ce35216d66c147fdd772981c59dc9ee38055c11b6c6022354
+    .boys_record.txt         1 differing line(s) of 102; line count old/new = 102/102
+      line 4 old:   version                   5.1.1                      (boys::VersionString)
+      line 4 new:   version                   5.2.0                      (boys::VersionString)
+      new sha256 a76dc25e41152a6cc3666048d793c486e8212a2d6e95c84e7916cbb83cc3e0fd
+  cc-pVTZ / ccpvtz-paper-a
+    .args.txt                SAME  18721507 bytes sha256 82247c0867ada405f90d76dc3d1d0cfd19ac86625e71b6767abf735ab88bef6e
+    .summary.txt             DIFF  old 2069 bytes 94c9e358de62e90b3acb3e7e4bbec1f414efc8314db2ed39146412bed3fcfbfd  new 2033 bytes 0e5ccbc56bdf3e680408d29032a7bf34ebaf74d529649e0917a9101b0c2c18e2
+      keys only in old: []
+      keys only in new: []
+      values changed:  ['basis_directory']
+        basis_directory: old C:/Users/myaml/dev/bladawiec-bridge/data/basis/cc-pvtz new data/basis/cc-pvtz
+    .matrices.txt            SAME  301272 bytes sha256 5553cedba48647daddf4925357f8e789d06357b8bb61cf74dcf386be23307e27
+    .eri_max.txt             SAME  20 bytes sha256 1d4e7acbd6756eefb5694bedbb986f199e003156288af9a53e437ebfa73f562e
+    .default.density.bin     SAME  754028 bytes sha256 6b62224ca55f6aaa6707ab05971a499c1fa885a02c4caee17562c9721c3da4e3
+    .default.trace.txt       DIFF  old 4259 bytes cdb98fa29b7be872583af4543f7e11573c71c9807d17caed660391c39835184c  new 4259 bytes 77d8fcad968c0a6962debc9ae9331c97235e43226a47953ea5b689b65885ed08
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .tight.trace.txt         DIFF  old 17881 bytes 921dd842bd7747998ff98b94edb31d81bfcdd72e36eb39206f005f0d553c362c  new 17876 bytes 4b136279348ae6267fce08f5287a9ca0d57a4f5ff52640e9754761a62319de71
+      trace fields differing: ['wall']
+      the only differing field is wall
+    .eri.txt                 SAME  270813606 bytes sha256 50d7c1c9c5038003c7374714a52606008854b13ed2d83af9ea262fdf00bb5f94
+    .boys_record.txt         1 differing line(s) of 102; line count old/new = 102/102
+      line 4 old:   version                   5.1.1                      (boys::VersionString)
+      line 4 new:   version                   5.2.0                      (boys::VersionString)
+      new sha256 a76dc25e41152a6cc3666048d793c486e8212a2d6e95c84e7916cbb83cc3e0fd
+
+Stream inventory and route extremes, recomputed from the arguments
+==============================================================================
+  STO-3G
+    old: sha256 d98a37398890b6504ee5a6f702604b8fd5f8b7034dad069884b18b19cb6bbf83
+      calls 10935 (distinct 2764), nmax 4, largest x 28.033987699960576
+      share B1/B2 = 86.73 / 10.88 %, B1+B2 = 97.61 %
+      max |dF| = 3.219647e-15 at order 0 x = 0.058133111316822465
+      max dF/contract = 3.282 % at order 0 x = 0.058133111316822465 (dF = 3.219647e-15)
+      max |dF| in B2 = 1.110223e-16 at order 0 x = 7.2345109473525353
+    new: sha256 d98a37398890b6504ee5a6f702604b8fd5f8b7034dad069884b18b19cb6bbf83
+      calls 10935 (distinct 2764), nmax 4, largest x 28.033987699960576
+      share B1/B2 = 86.73 / 10.88 %, B1+B2 = 97.61 %
+      max |dF| = 3.219647e-15 at order 0 x = 0.058133111316822465
+      max dF/contract = 3.282 % at order 0 x = 0.058133111316822465 (dF = 3.219647e-15)
+      max |dF| in B2 = 1.110223e-16 at order 0 x = 7.2345109473525353
+
+  6-31G*
+    old: sha256 bd12796578d9f139ea84eb79e6afe96575aa0e8f78bd0cef505ce06216fcb6dc
+      calls 51570 (distinct 14163), nmax 8, largest x 153.30510853866076
+      share B1/B2 = 74.96 / 8.92 %, B1+B2 = 83.88 %
+      max |dF| = 3.219647e-15 at order 0 x = 1.92508455331846e-08
+      max dF/contract = 3.224 % at order 0 x = 0.0038329278134401272 (dF = 3.219647e-15)
+      max |dF| in B2 = 1.110223e-16 at order 0 x = 6.691393109539888
+    new: sha256 bd12796578d9f139ea84eb79e6afe96575aa0e8f78bd0cef505ce06216fcb6dc
+      calls 51570 (distinct 14163), nmax 8, largest x 153.30510853866076
+      share B1/B2 = 74.96 / 8.92 %, B1+B2 = 83.88 %
+      max |dF| = 3.219647e-15 at order 0 x = 1.92508455331846e-08
+      max dF/contract = 3.224 % at order 0 x = 0.0038329278134401272 (dF = 3.219647e-15)
+      max |dF| in B2 = 1.110223e-16 at order 0 x = 6.691393109539888
+
+  cc-pVTZ
+    old: sha256 13bd60ab6cac5e97ba930fac67dc6e67d9bb9b1cf22b2a63d4e1abf4b08b9715
+      calls 262484 (distinct 81627), nmax 12, largest x 277.20922853176552
+      share B1/B2 = 78.73 / 6.85 %, B1+B2 = 85.58 %
+      max |dF| = 3.219647e-15 at order 0 x = 8.069323580776033e-08
+      max dF/contract = 5.025 % at order 8 x = 2.0505504716548182 (dF = 2.976785e-15)
+      max |dF| in B2 = 1.110223e-16 at order 0 x = 6.0150277567130841
+      order 12: 1 cell(s), max |dF| = 0.000000e+00
+    new: sha256 13bd60ab6cac5e97ba930fac67dc6e67d9bb9b1cf22b2a63d4e1abf4b08b9715
+      calls 262484 (distinct 81627), nmax 12, largest x 277.20922853176552
+      share B1/B2 = 78.73 / 6.85 %, B1+B2 = 85.58 %
+      max |dF| = 3.219647e-15 at order 0 x = 8.069323580776033e-08
+      max dF/contract = 5.025 % at order 8 x = 2.0505504716548182 (dF = 2.976785e-15)
+      max |dF| in B2 = 1.110223e-16 at order 0 x = 6.0150277567130841
+      order 12: 1 cell(s), max |dF| = 0.000000e+00
+
+  args byte identity STO-3G / default: True
+  args byte identity STO-3G / paper-a: True
+  args byte identity 6-31G* / 631gstar-default: True
+  args byte identity 6-31G* / 631gstar-paper-a: True
+  args byte identity cc-pVTZ / ccpvtz-default: True
+  args byte identity cc-pVTZ / ccpvtz-paper-a: True
+

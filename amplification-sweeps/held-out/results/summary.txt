@@ -1,0 +1,103 @@
+held-out summary
+reference: C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover\sweeps\held-out\data\reference.csv
+grid: 1300 arguments (A1 650, A2 650), rule H in grid.py
+model population: arguments at or above kTierThresholds[0] = 1.0855252345349333: A1 483, A2 650
+
+self-check passed: 132 rows reproduced field for field from amplification_form/results/prediction_record.csv and from tables/prediction-record.tex; on the second sweep's own cells the frozen rule commits 65, is right 65, abstains 67
+The margin is FROZEN_MARGIN = 1.0 unit of T, as in the paper's record;
+this script has no option that changes it, and the grid was fixed before
+this run.
+
+admission:
+  downward  arguments  167, cells   5511, bit-identical   5511
+  upward    arguments 1133, cells  18821, bit-identical  18821
+
+the frozen rule: abstain iff |B - D| <= T; direct iff D < B - T;
+recursed iff D > B + T.  B = band max of the recursed bound (seed term
+plus arithmetic where the order is served, the direct error where it is
+not); D = band max of the direct error; T = band max of the arithmetic
+term.  The winner is measured on this grid.
+
+held-out score, orders 0-32:
+  A1 absolute commits 13, right 13, wrong  0, abstains 20 of 33
+  A1 relative commits  8, right  8, wrong  0, abstains 25 of 33
+  A2 absolute commits 20, right 20, wrong  0, abstains 13 of 33
+  A2 relative commits 17, right 17, wrong  0, abstains 16 of 33
+  all                commits 58, right 58, wrong  0, abstains 74 of 132
+  abstention rate: 74/132 = 56.1 per cent
+
+every commitment:
+    A1 absolute n= 0: direct (B 1.3169458839191004e-16, D 1.2808240435088811e-16, T 0.0; measured direct)
+    A1 absolute n= 2: direct (B 2.2251335357204578e-16, D 2.3846261749254311e-17, T 1.9316533978424961e-16; measured direct)
+    A1 absolute n= 3: direct (B 5.4772782456633005e-16, D 1.530840054248947e-17, T 4.9447841374374629e-16; measured direct)
+    A1 absolute n= 4: direct (B 1.7900135648396038e-15, D 1.4148086259602136e-17, T 1.6260865752358716e-15; measured direct)
+    A1 absolute n= 5: direct (B 4.5224982810329908e-16, D 1.2503544764412679e-17, T 3.8581532892678164e-16; measured direct)
+    A1 absolute n= 6: direct (B 1.2372972127923306e-15, D 1.1102469511863911e-17, T 1.0572654786228484e-15; measured direct)
+    A1 absolute n= 7: direct (B 3.9735837625663198e-15, D 8.3295220524012961e-18, T 3.397009660217102e-15; measured direct)
+    A1 absolute n= 8: direct (B 1.4694168601165039e-14, D 7.7369712182757179e-18, T 1.2563533365574709e-14; measured direct)
+    A1 absolute n=12: direct (B 2.8026828056816325e-16, D 4.3401781363551049e-18, T 2.709519277399833e-16; measured direct)
+    A1 absolute n=13: direct (B 7.1448938823116125e-16, D 3.6023249806483796e-18, T 6.9125288917168568e-16; measured direct)
+    A1 absolute n=14: direct (B 1.9666221342967202e-15, D 3.9171926823880978e-18, T 1.9040590260439279e-15; measured direct)
+    A1 absolute n=15: direct (B 5.8134910853176765e-15, D 3.6633786286592543e-18, T 5.6326555419159333e-15; measured direct)
+    A1 absolute n=16: direct (B 1.8369709556912626e-14, D 4.189781384432766e-18, T 1.7811259923097799e-14; measured direct)
+    A1 relative n= 0: recursed (B 2.2931368140806438e-16, D 2.961117890867038e-16, T 0.0; measured recursed)
+    A1 relative n= 7: direct (B 3.4849297418709891e-13, D 9.5745919025989111e-15, T 2.9792602108550764e-13; measured direct)
+    A1 relative n= 8: direct (B 1.5045867094875233e-12, D 1.6820158655381049e-14, T 1.286423603751765e-12; measured direct)
+    A1 relative n=12: direct (B 6.1383520613785484e-13, D 1.8422277509774401e-14, T 5.9153964745751595e-13; measured direct)
+    A1 relative n=13: direct (B 1.7489132181081661e-12, D 1.7142517795606207e-14, T 1.6865867492831973e-12; measured direct)
+    A1 relative n=14: direct (B 5.3242833318071978e-12, D 1.5543530555300156e-14, T 5.138160062719178e-12; measured direct)
+    A1 relative n=15: direct (B 1.7256756667292801e-11, D 1.3475760177290344e-14, T 1.6665251521960408e-11; measured direct)
+    A1 relative n=16: direct (B 5.9347053226228921e-11, D 1.7100793045989031e-14, T 5.7353376736016852e-11; measured direct)
+    A2 absolute n= 0: direct (B 9.8474878169641547e-17, D 7.1593880118838766e-17, T 0.0; measured direct)
+    A2 absolute n= 1: direct (B 1.5399030920061728e-17, D 4.4207100365110514e-18, T 1.0139002139268764e-17; measured direct)
+    A2 absolute n= 8: direct (B 3.8356273344990635e-18, D 2.454352744779839e-19, T 3.5200853046413545e-18; measured direct)
+    A2 absolute n= 9: direct (B 5.6241479809776981e-18, D 2.1372306253919565e-19, T 5.1733679122130262e-18; measured direct)
+    A2 absolute n=10: direct (B 9.1087854811292333e-18, D 1.9349102366282371e-19, T 8.3890434321688444e-18; measured direct)
+    A2 absolute n=11: direct (B 1.6191946953597477e-17, D 1.9344589929137666e-19, T 1.4921797749680052e-17; measured direct)
+    A2 absolute n=12: direct (B 3.14043972825696e-17, D 1.8111720838182035e-19, T 2.8949455790057648e-17; measured direct)
+    A2 absolute n=13: direct (B 6.6078228030675988e-17, D 1.4379132825678783e-19, T 6.0920722232719045e-17; measured direct)
+    A2 absolute n=14: direct (B 1.5002354933892068e-16, D 1.6733205129476596e-19, T 1.383214963854273e-16; measured direct)
+    A2 absolute n=15: direct (B 3.6570000378478913e-16, D 1.4488947517748882e-19, T 3.3718203252905191e-16; measured direct)
+    A2 absolute n=16: direct (B 9.5276400645041246e-16, D 1.3486349552441044e-19, T 8.7847254688411953e-16; measured direct)
+    A2 absolute n=24: direct (B 1.1333802436277425e-17, D 1.0195627247092187e-19, T 1.1142585763512642e-17; measured direct)
+    A2 absolute n=25: direct (B 2.57140626551827e-17, D 9.3496723785304659e-20, T 2.5287413326757314e-17; measured direct)
+    A2 absolute n=26: direct (B 6.0720530401199986e-17, D 9.2143104680402357e-20, T 5.9730003611974633e-17; measured direct)
+    A2 absolute n=27: direct (B 1.4900618685758201e-16, D 8.32207564606443e-20, T 1.4661706602408205e-16; measured direct)
+    A2 absolute n=28: direct (B 3.7945399830937656e-16, D 8.6644012335509572e-20, T 3.7347589908249052e-16; measured direct)
+    A2 absolute n=29: direct (B 1.001442102498722e-15, D 8.4897274661727177e-20, T 9.8594460096124845e-16; measured direct)
+    A2 absolute n=30: direct (B 2.7357071588315756e-15, D 8.260193961050335e-20, T 2.6941358506325122e-15; measured direct)
+    A2 absolute n=31: direct (B 7.726648431004354e-15, D 7.6816740713436121e-20, T 7.6113948551973925e-15; measured direct)
+    A2 absolute n=32: direct (B 2.2538416364275726e-14, D 7.2433637165867783e-20, T 2.2208524928060243e-14; measured direct)
+    A2 relative n= 0: direct (B 3.7850199859642887e-16, D 2.5146729186478759e-16, T 0.0; measured direct)
+    A2 relative n= 1: direct (B 7.1158999916213623e-16, D 2.3566992540131622e-16, T 3.3467201366773181e-16; measured direct)
+    A2 relative n= 5: recursed (B 2.6624463735189084e-15, D 5.3762932338023045e-15, T 2.3884527987057979e-15; measured recursed)
+    A2 relative n= 6: recursed (B 4.0188215952371969e-15, D 1.1966836975196817e-14, T 3.6476254662964964e-15; measured recursed)
+    A2 relative n= 7: recursed (B 6.3913651623889771e-15, D 1.8474747485523828e-14, T 5.8416569626759915e-15; measured recursed)
+    A2 relative n= 8: recursed (B 1.0803982110927424e-14, D 2.9455449267155919e-14, T 9.9151807519876929e-15; measured recursed)
+    A2 relative n=15: direct (B 2.8257628796208744e-12, D 1.2663386546007062e-13, T 2.605404571271808e-12; measured direct)
+    A2 relative n=16: direct (B 8.0645802654016582e-12, D 1.4195405568180693e-13, T 7.4357472000253354e-12; measured direct)
+    A2 relative n=24: direct (B 1.5959186688863975e-11, D 2.3268775411802202e-13, T 1.5644948965204547e-11; measured direct)
+    A2 relative n=25: direct (B 3.8631529242234938e-11, D 2.4463529551623515e-13, T 3.7881225602793625e-11; measured direct)
+    A2 relative n=26: direct (B 9.6968546461045232e-11, D 2.5428656040804779e-13, T 9.5111298446341125e-11; measured direct)
+    A2 relative n=27: direct (B 2.5210325981410387e-10, D 2.7178466707326359e-13, T 2.4734273269256452e-10; measured direct)
+    A2 relative n=28: direct (B 6.7812515373781885e-10, D 2.7929902195301651e-13, T 6.6550350803346161e-10; measured direct)
+    A2 relative n=29: direct (B 1.8852735306579482e-9, D 2.9013102393957096e-13, T 1.8506954825781238e-9; measured direct)
+    A2 relative n=30: direct (B 5.4118340420626418e-9, D 3.0096287668868797e-13, T 5.3140474595666045e-9; measured direct)
+    A2 relative n=31: direct (B 1.6025611293836949e-8, D 2.9167419469279122e-13, T 1.5740414354633701e-8; measured direct)
+    A2 relative n=32: direct (B 4.8910259256564135e-8, D 3.0163104811318254e-13, T 4.8053201300927835e-8; measured direct)
+
+reference validation:
+  reference validation
+  grid: C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover\sweeps\held-out\data\grid.csv
+  arguments: 1300, orders: 33, dps: 70, digits: 60
+  
+  R2 series                        4.207543e-62 at A2 n=30 x=11.899848141025888 over 42900 cells
+  R2b imported series              8.753715e-62 at imported series A2 n=19 x=11.855312345558037 over 462 cells
+  R3 quadrature                    2.140988e-71 at A1 n=11 x=5.949924064971645 over 363 cells
+  R4 committed grid (absolute)     not evaluated
+  R5 identity                      9.469972e-67 at A2 n=0 x=11.765561671225317 over 41600 cells
+  R6 F0 gamma against erf          3.622066e-71 at A1 x=3.057599872416763 over 1300 cells
+  R7 accuracy-gate grid            not evaluated
+  
+  strict: on
+  all evaluated routes inside their stated bounds

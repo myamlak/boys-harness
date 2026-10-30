@@ -1,0 +1,30 @@
+The execution check's sweep trees against the paper tree's records
+Every input and harness file the run reads, CRLF folded. Build and
+results directories are excluded: the results are compared by
+compare_sweeps.py and the build products are not records.
+
+=== product_amplification
+SAME     SWEEP.md
+SAME     analyze.py
+SAME     data/documented.csv
+SAME     data/grid.csv
+SAME     data/reference.csv
+SAME     data/reference_validation.txt
+SAME     grid.py
+SAME     run.ps1
+SAME     sweep1.cpp
+
+=== amplification_form
+SAME     SWEEP.md
+SAME     analyze.py
+SAME     data/fits.csv
+SAME     data/fits_validation.txt
+SAME     data/grid.csv
+SAME     data/reference.csv
+SAME     data/reference_validation.txt
+SAME     fits.py
+SAME     grid.py
+SAME     run.ps1
+SAME     sweep2.cpp
+
+compared: 20 identical, 0 differing, 0 missing, 0 extra

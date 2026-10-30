@@ -70,6 +70,37 @@ xz -dk amplification-form/results/paths.csv.xz \
 Every other record is plain CSV. Each analysis reads only the records above; the remaining files in
 `results/` are its outputs, deposited as the paper's tables.
 
+## The v5.2.0 execution check
+
+`product-amplification/v5.2.0-check/` is the source and execution check of the
+two sweeps at Boys tag v5.2.0, with the v5.2.1 source-identity note
+(`v5.2.1-note.md`) beside its `README.md`. It carries the tag, commit and tree
+identity, the file-by-file source comparisons against v5.1.1 and v5.2.1, the
+compiler and flag line, and the comparisons of the re-run sweep, table and
+integral-engine records against the v5.1.1 run's own output. The v5.1.1 sweep
+records are deposited in `product-amplification/v5.1.1-9353/`.
+
+Read its `README.md` first; it is the check's own record. The
+`*-compare-*.txt`, `*-diff-*.txt` and `source-diff-*.txt` files are the
+evidence, each naming the files and lines that differ. `run/run_execution_check.ps1`
+holds the thirteen steps verbatim, and the other scripts under `run/`
+regenerate the comparison records from the trees they name; `make_check.py`
+regenerates the source manifests. The check's console logs, scratch sweep
+trees, build products and Python byte-code are not carried; the two provenance
+records its run wrote are in `run/sweeps/*/results/`.
+
+## The paper's analysis and the two later experiments
+
+`product-amplification/paper-analysis/` holds the scripts and the tables the final paper uses,
+byte-identical to the paper tree, with the regeneration recipe in its `README.md`.
+
+`seed-spliced/` holds the seed-spliced sweep: the upward recurrence seeded with the direct entry's
+own order-0 value, on the second sweep's 836 arguments, with its driver, grid, 60-digit reference,
+records, analysis and provenance.
+
+`held-out/` holds the held-out test: the paper's frozen decision rule scored on a disjoint
+1,300-argument grid, with its driver, grid, 60-digit reference, records, analysis and provenance.
+
 ## Requirements
 
 Python 3.10 or newer with `mpmath`, and a C++23 compiler. The scripts look for
