@@ -1,0 +1,90 @@
+on disk: 0 full row(s) (both edges), 0 Chebyshev cell(s) (both edges)
+function x^-1/2; left edge a = 11.899848152108484 (scale 1 x X0); widths scaled by 1
+grid: 15 width(s) x 3 target(s); 0 full row(s) and 0 Chebyshev cell(s) already on disk
+workers: 2
+[rel:1e-13] 2^-7    W=0.0078125    cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=3.5837541858623983e-16 (0.218s + 709.515s)
+[rel:1e-13] 2^-6    W=0.015625     cheb=5 (deg=4, even) rat=4 ([1/2], lawson) rel=5.0316520705114284e-16 (0.309s + 689.632s)
+[rel:1e-13] 2^-5    W=0.03125      cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=3.1573589559801275e-15 (0.098s + 631.854s)
+[rel:1e-13] 2^-4    W=0.0625       cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=4.6284085861306979e-14 (0.117s + 572.537s)
+[rel:1e-13] 2^-3    W=0.125        cheb=5 (deg=4, even) rat=5 ([2/2], remez) rel=7.448246467265126e-16 (0.097s + 953.4s)
+[rel:1e-13] 2^-2    W=0.25         cheb=6 (deg=5, odd) rat=5 ([2/2], remez) rel=1.5110641400400828e-14 (0.207s + 850.791s)
+[rel:1e-13] 2^-1    W=0.5          cheb=7 (deg=6, even) rat=6 ([2/3], remez) rel=1.4329888024718868e-15 (0.305s + 1578.598s)
+[rel:1e-13] 2^0     W=1            cheb=8 (deg=7, odd) rat=6 ([2/3], remez) rel=6.823444405932408e-14 (0.403s + 1159.106s)
+[rel:1e-13] 2^1     W=2            cheb=9 (deg=8, even) rat=7 ([3/3], remez) rel=3.5680780906544046e-14 (0.57s + 1745.0s)
+[rel:1e-13] 2^2     W=4            cheb=12 (deg=11, odd) rat=8 ([3/4], remez) rel=5.5595963070597714e-14 (1.016s + 1981.237s)
+[rel:1e-13] 2^3     W=8            cheb=15 (deg=14, even) rat=10 ([4/5], remez) rel=7.4326876832818622e-15 (1.051s + 4902.104s)
+[rel:1e-13] 2^4     W=16           cheb=19 (deg=18, even) rat=11 ([5/5], remez) rel=9.2362453219619869e-14 (1.809s + 2814.747s)
+[rel:1e-13] 2^5     W=32           cheb=25 (deg=24, even) rat=14 ([6/7], remez) rel=1.4518988606593886e-14 (2.438s + 7539.87s)
+[rel:1e-13] ship    W=19.1002      cheb=20 (deg=19, odd) rat=12 ([5/6], remez) rel=2.5335600113288958e-14 (2.035s + 5296.019s)
+[rel:1e-13] paper   W=17.0895      cheb=19 (deg=18, even) rat=12 ([5/6], remez) rel=1.0103339228160897e-14 (1.727s + 6248.055s)
+[abs:5e-14] 2^-7    W=0.0078125    cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=3.5837541858623983e-16 (0.076s + 389.752s)
+[abs:5e-14] 2^-6    W=0.015625     cheb=5 (deg=4, even) rat=4 ([1/2], lawson) rel=5.0316520705114284e-16 (0.093s + 450.843s)
+[abs:5e-14] 2^-5    W=0.03125      cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=3.1573589559801275e-15 (0.095s + 415.122s)
+[abs:5e-14] 2^-4    W=0.0625       cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=4.6284085861306979e-14 (0.06s + 400.609s)
+[abs:5e-14] 2^-3    W=0.125        cheb=5 (deg=4, even) rat=5 ([2/2], remez) rel=7.448246467265126e-16 (0.057s + 703.209s)
+[abs:5e-14] 2^-2    W=0.25         cheb=6 (deg=5, odd) rat=5 ([2/2], remez) rel=1.5110641400400828e-14 (0.179s + 763.364s)
+[abs:5e-14] 2^-1    W=0.5          cheb=7 (deg=6, even) rat=6 ([2/3], remez) rel=1.4329888024718868e-15 (0.29s + 1316.493s)
+[abs:5e-14] 2^0     W=1            cheb=8 (deg=7, odd) rat=6 ([2/3], remez) rel=6.823444405932408e-14 (0.292s + 782.486s)
+[abs:5e-14] 2^1     W=2            cheb=9 (deg=8, even) rat=7 ([3/3], remez) rel=3.5680780906544046e-14 (0.385s + 1050.829s)
+[abs:5e-14] 2^2     W=4            cheb=11 (deg=10, even) rat=8 ([3/4], remez) rel=5.5595963070597714e-14 (0.345s + 40231.574s)
+[abs:5e-14] 2^3     W=8            cheb=14 (deg=13, odd) rat=10 ([4/5], remez) rel=7.4326876832818622e-15 (0.708s + 3717.531s)
+[abs:5e-14] 2^4     W=16           cheb=19 (deg=18, even) rat=11 ([5/5], remez) rel=9.2362453219619869e-14 (2.03s + 4128.724s)
+[abs:5e-14] 2^5     W=32           cheb=25 (deg=24, even) rat=13 ([6/6], remez) rel=1.2637889611862421e-13 (1.887s + 4155.991s)
+ERROR abs:5e-14/ship: BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+Traceback (most recent call last):
+  File "C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\tail_instance_sweep.py", line 411, in main
+    row = cs.sweep_one(g, a, name, width, target, args.nodes,
+                       args.stride,
+    ...<4 lines>...
+                       k_max=current["rat_k_max"],
+                       verbose=args.progress)
+  File "C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\count_sweep.py", line 1340, in sweep_one
+    rat = rational_count(g, a, b, ts, xs, ref, target, coarse_idx,
+                         scan_outer=scan_outer,
+    ...<2 lines>...
+                         k_max=k_max,
+                         verbose=verbose)
+  File "C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\count_sweep.py", line 1240, in rational_count
+    below_meets = bool(refine_pairs(
+                       ~~~~~~~~~~~~^
+        g, below_pairs, a, b, ts, xs, ref, target, refine_outer,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        remez_iters))
+        ^^^^^^^^^^^^
+  File "C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\count_sweep.py", line 1181, in refine_pairs
+    outs = g.run_jobs(rat_candidate_job, specs)
+  File "C:\Users\myaml\dev\_mainonly\tools\gen_boys_coefficients.py", line 220, in run_jobs
+    return list(pool.map(fn, jobs))
+  File "C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\process.py", line 712, in _chain_from_iterable_of_lists
+    for element in iterable:
+                   ^^^^^^^^
+  File "C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 645, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 312, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 454, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 396, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+[abs:5e-14] paper   W=17.0895      cheb=19 (deg=18, even) rat=11 ([5/5], remez) rel=1.5547350408175246e-13 (1.171s + 3336.591s)
+[rel:1e-14] 2^-7    W=0.0078125    cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=3.5837541858623983e-16 (0.045s + 276.259s)
+[rel:1e-14] 2^-6    W=0.015625     cheb=5 (deg=4, even) rat=4 ([1/2], lawson) rel=5.0316520705114284e-16 (0.038s + 305.275s)
+[rel:1e-14] 2^-5    W=0.03125      cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=3.1573589559801275e-15 (0.098s + 346.791s)
+[rel:1e-14] 2^-4    W=0.0625       cheb=5 (deg=4, even) rat=5 ([3/1], lawson) rel=2.9710626920629065e-16 (0.08s + 560.19s)
+[rel:1e-14] 2^-3    W=0.125        cheb=6 (deg=5, odd) rat=5 ([2/2], remez) rel=7.448246467265126e-16 (0.089s + 534.219s)
+[rel:1e-14] 2^-2    W=0.25         cheb=6 (deg=5, odd) rat=6 ([3/2], lawson) rel=3.2134081291345814e-16 (0.185s + 1117.921s)
+[rel:1e-14] 2^-1    W=0.5          cheb=7 (deg=6, even) rat=6 ([2/3], remez) rel=1.4329888024718868e-15 (0.21s + 1078.645s)
+[rel:1e-14] 2^0     W=1            cheb=9 (deg=8, even) rat=7 ([3/3], remez) rel=5.8636897523648705e-16 (0.297s + 1630.595s)
+[rel:1e-14] 2^1     W=2            cheb=10 (deg=9, odd) rat=8 ([3/4], remez) rel=5.8099838609662076e-16 (0.508s + 2187.635s)
+[rel:1e-14] 2^2     W=4            cheb=12 (deg=11, odd) rat=9 ([4/4], remez) rel=1.2595076451596106e-15 (0.416s + 2470.303s)
+[rel:1e-14] 2^3     W=8            cheb=16 (deg=15, odd) rat=10 ([4/5], remez) rel=7.4326876832818622e-15 (0.775s + 1708.015s)
+[rel:1e-14] 2^4     W=16           cheb=20 (deg=19, odd) rat=12 ([5/6], remez) rel=6.1909919328491926e-15 (1.312s + 2885.997s)
+[rel:1e-14] 2^5     W=32           cheb=27 (deg=26, even) rat=15 ([8/6], remez) rel=5.563410409146117e-15 (1.902s + 5389.103s)
+[rel:1e-14] ship    W=19.1002      cheb=22 (deg=21, odd) rat=13 ([5/7], remez) rel=2.6158556487786687e-15 (1.361s + 4347.689s)
+[rel:1e-14] paper   W=17.0895      cheb=21 (deg=20, even) rat=13 ([6/6], remez) rel=1.2724647935467588e-15 (1.558s + 4530.398s)
+invocation wall time: 132430.5 s; full rows on disk: 44; Chebyshev cells on disk: 44; this invocation: 44 row(s), 0 cell(s)
+EXIT=0

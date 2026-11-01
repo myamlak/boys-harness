@@ -1,0 +1,1512 @@
+{
+  "command": "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\recertify_ladder.py --cell 5",
+  "started_utc": "2026-10-26T19:24:05Z",
+  "meta": {
+    "schema": "ladder-recertification-1",
+    "generated_utc": "2026-10-26T19:24:05Z",
+    "script": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\recertify_ladder.py",
+    "script_sha256": "0b7f4d17fd3c93c6d3c7235bcc87f42cdc608386a0af7120a100f71cfda6b47c",
+    "reused_harness": {
+      "path": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\count_sweep.py",
+      "sha256": "a5def761c8f18d585396210b28864dc6c4a108d2cfda4f3788d87a7f6c854f10",
+      "functions": [
+        "load_generator",
+        "make_nodes",
+        "reference",
+        "refine_pairs",
+        "meets",
+        "parse_targets",
+        "width_set",
+        "RAT_MIN_STORED",
+        "RAT_MAX_STORED"
+      ]
+    },
+    "boys_root": "C:\\Users\\myaml\\dev\\bladawiec\\external\\boys",
+    "git": {
+      "commit": "51e5a1868a43aa11cfbfeba2ea28dac8749806fc",
+      "tag": "v5.1.0"
+    },
+    "papers_git": {
+      "commit": "90bee913e553e19733ad250afe71e6b652c023ac",
+      "tag": null
+    },
+    "header": {
+      "path": "C:\\Users\\myaml\\dev\\bladawiec\\external\\boys\\include\\boys\\boys_coefficients.hpp",
+      "sha256": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204"
+    },
+    "generator": {
+      "path": "C:\\Users\\myaml\\dev\\bladawiec\\external\\boys\\tools\\gen_boys_coefficients.py",
+      "sha256": "ccc8b011f4170ce0b530bc4781b09670f42839fa18caaa38ea7d3a9ea9ba9bb4"
+    },
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "settings": {
+      "nodes": 4000,
+      "grid_points": 4001,
+      "remez_iters": 120,
+      "refine_outer": 600,
+      "rat_k_max": 12,
+      "reference_dps": 60,
+      "reference_tail_floor": "1.0e-55",
+      "reference_terms": 900,
+      "grid": "uniform in t = 2*(x-a)/(b-a) - 1, endpoints included",
+      "acceptance": "worse of the fused and separate binary64 evaluation routes, relative to F_0(x) at each node",
+      "workers": 12
+    },
+    "precision_scope": {
+      "reported_precision": "fp64",
+      "stored_type": "binary64",
+      "evaluation": "binary64, worse of the fused and separate multiply-add routes",
+      "count_unit": "coefficients of one representation of the fit",
+      "why_fp64": "the count trade is resolved at the double lane's 1e-13 F_0 contract; the nearest-neighbour comparison is 5e-14 absolute in binary64; and a binary64 coefficient is 8 bytes while a binary32 one is 4, so counts from the two lanes are not like-for-like storage",
+      "fp32_in_this_paper": "static counts only, a secondary column; not part of the width law",
+      "sweep_scope": "fp64 only: binary64 stored coefficients, binary64 evaluation, targets rel:1e-13 and abs:5e-14",
+      "fp32_comparison_would_need": "the float lane's own path: fits stored and evaluated in binary32, both multiply-add routes, certified at max(2^-22 F_n(x), 1.5e-7) from the generator's f32 fit and acceptance functions, on the float lane's own edges and partitions"
+    },
+    "method": {
+      "count_unit": "(m + 1) numerator coefficients + k denominator coefficients, q_0 held at 1",
+      "certified": "the smallest stored count at which some (m,k) pair with k <= 12 meets the target on the full 4,001-node grid; the count below it is settled by solving every pair there, not a coarse scan",
+      "batch": "count_sweep.refine_pairs with its acceptance threshold set to infinity, so every solved pair's delivered error is returned; the ladder target is applied to the fits by count_sweep.meets",
+      "walk": "start at the record's stored count minus one; if a pair meets there, walk down while the count below still has a meeting pair; otherwise check the record count and, if no pair meets, walk up to the first count that does",
+      "target_semantics": "relative to F_0(x) at each node, the ladder's own reading"
+    },
+    "cells_source": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\results-ladder\\sweep_all.json",
+    "cells_source_sha256": "e21fc1fef88efbebf5db966bf5e7d968642e8a56906f7d5b6bbba4c2801ebb3e",
+    "provenance_note": "boys git records the worktree HEAD when a fragment was written; the generator and header sha256 digests are the content identity and are carried per cell in content_identity"
+  },
+  "cell": {
+    "id": 5,
+    "why": "flagged below_meets; excluded from the paper-width fit",
+    "width_name": "paper",
+    "width": "17.089489586712256",
+    "width_f": 17.089489586712254,
+    "a": "11.899848152108484",
+    "b": "28.98933773882074",
+    "target": "rel:1e-15",
+    "target_kind": "rel",
+    "target_value": 1e-15,
+    "record_stored": 18,
+    "record_pair": [
+      14,
+      3
+    ],
+    "record_solver": "lawson",
+    "record_delivered_rel": "8.5936591774929992e-16",
+    "record_below_meets": true,
+    "brief_count": 14,
+    "brief_count_note": "the work order's count for this cell; for cells 1-5 it is the numerator degree m of the recorded pair, not (m+1)+k",
+    "walk": [
+      {
+        "stored": 17,
+        "role": "one below the record count",
+        "any_meets": false
+      },
+      {
+        "stored": 18,
+        "role": "the record count",
+        "any_meets": false
+      },
+      {
+        "stored": 19,
+        "role": "walk up",
+        "any_meets": true
+      }
+    ],
+    "levels": [
+      {
+        "stored": 17,
+        "pairs_tried": [
+          "[15/1]",
+          "[14/2]",
+          "[13/3]",
+          "[12/4]",
+          "[11/5]",
+          "[10/6]",
+          "[9/7]",
+          "[8/8]",
+          "[7/9]",
+          "[6/10]",
+          "[5/11]",
+          "[4/12]"
+        ],
+        "rows": [
+          {
+            "m": 15,
+            "k": 1,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "3.2497063567983901e-14",
+                "delivered_abs": "7.6400325412365441e-15",
+                "at_x_rel": "15.018680001683471",
+                "at_x_abs": "13.912135550943852",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "2.5767835167049944e-13",
+                "delivered_abs": "4.2561123396803647e-14",
+                "at_x_rel": "28.788536236176871",
+                "at_x_abs": "28.788536236176871",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "3.2497063567983901e-14",
+              "delivered_abs": "7.6400325412365441e-15",
+              "at_x_rel": "15.018680001683471",
+              "at_x_abs": "13.912135550943852",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 14,
+            "k": 2,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "4.6925064534718942e-15",
+                "delivered_abs": "1.1990915825078438e-15",
+                "at_x_rel": "12.028019324008826",
+                "at_x_abs": "12.028019324008826",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "9.3024826322181299e-14",
+                "delivered_abs": "1.53117440740345e-14",
+                "at_x_rel": "28.98933773882074",
+                "at_x_abs": "28.98933773882074",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "4.6925064534718942e-15",
+              "delivered_abs": "1.1990915825078438e-15",
+              "at_x_rel": "12.028019324008826",
+              "at_x_abs": "12.028019324008826",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 13,
+            "k": 3,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "1.4133663600377765e-15",
+                "delivered_abs": "3.6103393285399934e-16",
+                "at_x_rel": "12.036564068802182",
+                "at_x_abs": "12.036564068802182",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.04526173654898e-15",
+                "delivered_abs": "2.6834110501812565e-16",
+                "at_x_rel": "11.916937641695196",
+                "at_x_abs": "11.916937641695196",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "1.04526173654898e-15",
+              "delivered_abs": "2.6834110501812565e-16",
+              "at_x_rel": "11.916937641695196",
+              "at_x_abs": "11.916937641695196",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 12,
+            "k": 4,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "1.018623002321406e-15",
+                "delivered_abs": "2.5733836560511761e-16",
+                "at_x_rel": "12.3057235297929",
+                "at_x_abs": "12.3057235297929",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.7986272455214845e-14",
+                "delivered_abs": "2.9605129250796337e-15",
+                "at_x_rel": "28.98933773882074",
+                "at_x_abs": "28.98933773882074",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "1.018623002321406e-15",
+              "delivered_abs": "2.5733836560511761e-16",
+              "at_x_rel": "12.3057235297929",
+              "at_x_abs": "12.3057235297929",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 11,
+            "k": 5,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "3.5124204059208942e-15",
+                "delivered_abs": "9.0219893983250818e-16",
+                "at_x_rel": "11.904120524505162",
+                "at_x_abs": "11.904120524505162",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "2.8307055128179129e-15",
+                "delivered_abs": "7.1964258800403431e-16",
+                "at_x_rel": "12.15191812351249",
+                "at_x_abs": "12.15191812351249",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "2.8307055128179129e-15",
+              "delivered_abs": "7.1964258800403431e-16",
+              "at_x_rel": "12.15191812351249",
+              "at_x_abs": "12.15191812351249",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 10,
+            "k": 6,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "4.2141892542479415e-15",
+                "delivered_abs": "1.0768656179737272e-15",
+                "at_x_rel": "12.028019324008826",
+                "at_x_abs": "12.028019324008826",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "4.9263772819208991e-15",
+                "delivered_abs": "1.2491301679757038e-15",
+                "at_x_rel": "12.216003709462661",
+                "at_x_abs": "12.216003709462661",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "4.2141892542479415e-15",
+              "delivered_abs": "1.0768656179737272e-15",
+              "at_x_rel": "12.028019324008826",
+              "at_x_abs": "12.028019324008826",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 9,
+            "k": 7,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "5.9711470748097925e-15",
+                "delivered_abs": "1.512719533982052e-15",
+                "at_x_rel": "12.237365571446051",
+                "at_x_abs": "12.237365571446051",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "4.3220981542636024e-15",
+                "delivered_abs": "1.1015094634785363e-15",
+                "at_x_rel": "12.092104909958997",
+                "at_x_abs": "12.092104909958997",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "4.3220981542636024e-15",
+              "delivered_abs": "1.1015094634785363e-15",
+              "at_x_rel": "12.092104909958997",
+              "at_x_abs": "12.092104909958997",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 8,
+            "k": 8,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "5.3312888830211259e-15",
+                "delivered_abs": "1.36792078539618e-15",
+                "at_x_rel": "11.92975475888523",
+                "at_x_abs": "11.92975475888523",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "5.1244757851987993e-15",
+                "delivered_abs": "1.3150914561555262e-15",
+                "at_x_rel": "11.925482386488552",
+                "at_x_abs": "11.925482386488552",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "5.1244757851987993e-15",
+              "delivered_abs": "1.3150914561555262e-15",
+              "at_x_rel": "11.925482386488552",
+              "at_x_abs": "11.925482386488552",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 7,
+            "k": 9,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "6.9747345636649173e-15",
+                "delivered_abs": "1.7876822629137769e-15",
+                "at_x_rel": "11.955388993265299",
+                "at_x_abs": "11.955388993265299",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "6.9924440974566144e-15",
+                "delivered_abs": "1.7817464542796065e-15",
+                "at_x_rel": "12.096377282355675",
+                "at_x_abs": "12.096377282355675",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "6.9747345636649173e-15",
+              "delivered_abs": "1.7876822629137769e-15",
+              "at_x_rel": "11.955388993265299",
+              "at_x_abs": "11.955388993265299",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 6,
+            "k": 10,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "3.991140053262934e-15",
+                "delivered_abs": "1.0233280193503839e-15",
+                "at_x_rel": "11.946844248471943",
+                "at_x_abs": "11.946844248471943",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "4.7388723327037293e-15",
+                "delivered_abs": "1.2051744462729237e-15",
+                "at_x_rel": "12.143373378719134",
+                "at_x_abs": "12.143373378719134",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "3.991140053262934e-15",
+              "delivered_abs": "1.0233280193503839e-15",
+              "at_x_rel": "11.946844248471943",
+              "at_x_abs": "11.946844248471943",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 5,
+            "k": 11,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "3.9310454250746237e-15",
+                "delivered_abs": "1.0057640658311543e-15",
+                "at_x_rel": "11.998112717232079",
+                "at_x_abs": "11.998112717232079",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "3.3529969692315785e-15",
+                "delivered_abs": "8.4197946915257801e-16",
+                "at_x_rel": "12.455256563676632",
+                "at_x_abs": "12.455256563676632",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "3.3529969692315785e-15",
+              "delivered_abs": "8.4197946915257801e-16",
+              "at_x_rel": "12.455256563676632",
+              "at_x_abs": "12.455256563676632",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 4,
+            "k": 12,
+            "stored": 17,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "6.6596411012404495e-15",
+                "delivered_abs": "1.7093663176595735e-15",
+                "at_x_rel": "11.921210014091874",
+                "at_x_abs": "11.921210014091874",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "3.2430259825353337e-15",
+                "delivered_abs": "8.1590509349264589e-16",
+                "at_x_rel": "12.408260467313174",
+                "at_x_abs": "12.408260467313174",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "3.2430259825353337e-15",
+              "delivered_abs": "8.1590509349264589e-16",
+              "at_x_rel": "12.408260467313174",
+              "at_x_abs": "12.408260467313174",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          }
+        ],
+        "any_meets": false,
+        "meeting_pairs": [],
+        "best_meeting": null,
+        "best_pair": {
+          "m": 12,
+          "k": 4,
+          "stored": 17,
+          "solvers": [
+            {
+              "solver": "remez",
+              "delivered_rel": "1.018623002321406e-15",
+              "delivered_abs": "2.5733836560511761e-16",
+              "at_x_rel": "12.3057235297929",
+              "at_x_abs": "12.3057235297929",
+              "meets": false
+            },
+            {
+              "solver": "lawson",
+              "delivered_rel": "1.7986272455214845e-14",
+              "delivered_abs": "2.9605129250796337e-15",
+              "at_x_rel": "28.98933773882074",
+              "at_x_abs": "28.98933773882074",
+              "meets": false
+            }
+          ],
+          "best": {
+            "solver": "remez",
+            "delivered_rel": "1.018623002321406e-15",
+            "delivered_abs": "2.5733836560511761e-16",
+            "at_x_rel": "12.3057235297929",
+            "at_x_abs": "12.3057235297929",
+            "meets": false
+          },
+          "meets": false,
+          "no_finite_fit": false
+        },
+        "seconds": 14782.9
+      },
+      {
+        "stored": 18,
+        "pairs_tried": [
+          "[16/1]",
+          "[15/2]",
+          "[14/3]",
+          "[13/4]",
+          "[12/5]",
+          "[11/6]",
+          "[10/7]",
+          "[9/8]",
+          "[8/9]",
+          "[7/10]",
+          "[6/11]",
+          "[5/12]"
+        ],
+        "rows": [
+          {
+            "m": 16,
+            "k": 1,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "6.5124234095035481e-15",
+                "delivered_abs": "1.5157947697502747e-15",
+                "at_x_rel": "14.668345465155869",
+                "at_x_abs": "12.929489899707897",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "5.5628923099683393e-14",
+                "delivered_abs": "9.1855874587678146e-15",
+                "at_x_rel": "28.805625725763583",
+                "at_x_abs": "28.805625725763583",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "6.5124234095035481e-15",
+              "delivered_abs": "1.5157947697502747e-15",
+              "at_x_rel": "14.668345465155869",
+              "at_x_abs": "12.929489899707897",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 15,
+            "k": 2,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "1.1826920595079711e-15",
+                "delivered_abs": "2.8416779346333261e-16",
+                "at_x_rel": "13.604524738383032",
+                "at_x_abs": "13.604524738383032",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.3040904874047689e-14",
+                "delivered_abs": "2.1465129881960864e-15",
+                "at_x_rel": "28.98933773882074",
+                "at_x_abs": "28.98933773882074",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "1.1826920595079711e-15",
+              "delivered_abs": "2.8416779346333261e-16",
+              "at_x_rel": "13.604524738383032",
+              "at_x_abs": "13.604524738383032",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 14,
+            "k": 3,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "1.0166328168235554e-15",
+                "delivered_abs": "2.598758444917654e-16",
+                "at_x_rel": "12.01947457921547",
+                "at_x_abs": "12.01947457921547",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.4203135954834663e-15",
+                "delivered_abs": "3.5850786255997785e-16",
+                "at_x_rel": "12.32708539177629",
+                "at_x_abs": "12.32708539177629",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "1.0166328168235554e-15",
+              "delivered_abs": "2.598758444917654e-16",
+              "at_x_rel": "12.01947457921547",
+              "at_x_abs": "12.01947457921547",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 13,
+            "k": 4,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "5.1155446839964177e-15",
+                "delivered_abs": "1.3081215329424866e-15",
+                "at_x_rel": "12.010929834422114",
+                "at_x_abs": "12.010929834422114",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "2.4395008388272595e-15",
+                "delivered_abs": "6.2403897773986156e-16",
+                "at_x_rel": "12.002385089628758",
+                "at_x_abs": "12.002385089628758",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "2.4395008388272595e-15",
+              "delivered_abs": "6.2403897773986156e-16",
+              "at_x_rel": "12.002385089628758",
+              "at_x_abs": "12.002385089628758",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 12,
+            "k": 5,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "2.1264170506015602e-15",
+                "delivered_abs": "5.4589686117441478e-16",
+                "at_x_rel": "11.916937641695196",
+                "at_x_abs": "11.916937641695196",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "2.2091042861169041e-15",
+                "delivered_abs": "5.658074947196475e-16",
+                "at_x_rel": "11.972478482852011",
+                "at_x_abs": "11.972478482852011",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "2.1264170506015602e-15",
+              "delivered_abs": "5.4589686117441478e-16",
+              "at_x_rel": "11.916937641695196",
+              "at_x_abs": "11.916937641695196",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 11,
+            "k": 6,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "7.568165790152328e-15",
+                "delivered_abs": "1.9363269494255106e-15",
+                "at_x_rel": "11.998112717232079",
+                "at_x_abs": "11.998112717232079",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "3.7370353644260111e-15",
+                "delivered_abs": "9.5240313207800328e-16",
+                "at_x_rel": "12.092104909958997",
+                "at_x_abs": "12.092104909958997",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "3.7370353644260111e-15",
+              "delivered_abs": "9.5240313207800328e-16",
+              "at_x_rel": "12.092104909958997",
+              "at_x_abs": "12.092104909958997",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 10,
+            "k": 7,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "6.514172081045989e-15",
+                "delivered_abs": "1.6699346850116684e-15",
+                "at_x_rel": "11.951116620868621",
+                "at_x_abs": "11.951116620868621",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "5.0119607738076107e-15",
+                "delivered_abs": "1.2755232269116054e-15",
+                "at_x_rel": "12.126283889132421",
+                "at_x_abs": "12.126283889132421",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "5.0119607738076107e-15",
+              "delivered_abs": "1.2755232269116054e-15",
+              "at_x_rel": "12.126283889132421",
+              "at_x_abs": "12.126283889132421",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 9,
+            "k": 8,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "3.7945865700545607e-15",
+                "delivered_abs": "9.5947308725401176e-16",
+                "at_x_rel": "12.28436166780951",
+                "at_x_abs": "12.28436166780951",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.6144283869957809e-15",
+                "delivered_abs": "4.1408742766031695e-16",
+                "at_x_rel": "11.938299503678587",
+                "at_x_abs": "11.938299503678587",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "1.6144283869957809e-15",
+              "delivered_abs": "4.1408742766031695e-16",
+              "at_x_rel": "11.938299503678587",
+              "at_x_abs": "11.938299503678587",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 8,
+            "k": 9,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "4.5294147932978964e-15",
+                "delivered_abs": "1.1611340277824807e-15",
+                "at_x_rel": "11.951116620868621",
+                "at_x_abs": "11.951116620868621",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.6337858031851068e-15",
+                "delivered_abs": "4.1303603509520749e-16",
+                "at_x_rel": "12.288634040206188",
+                "at_x_abs": "12.288634040206188",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "1.6337858031851068e-15",
+              "delivered_abs": "4.1303603509520749e-16",
+              "at_x_rel": "12.288634040206188",
+              "at_x_abs": "12.288634040206188",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 7,
+            "k": 10,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "5.2300828013880987e-15",
+                "delivered_abs": "1.3310343781428633e-15",
+                "at_x_rel": "12.126283889132421",
+                "at_x_abs": "12.126283889132421",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "2.7204284972552338e-15",
+                "delivered_abs": "6.9751766881860874e-16",
+                "at_x_rel": "11.946844248471943",
+                "at_x_abs": "11.946844248471943",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "2.7204284972552338e-15",
+              "delivered_abs": "6.9751766881860874e-16",
+              "at_x_rel": "11.946844248471943",
+              "at_x_abs": "11.946844248471943",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 6,
+            "k": 11,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "9.1365105735414368e-15",
+                "delivered_abs": "2.3392569048231422e-15",
+                "at_x_rel": "11.981023227645367",
+                "at_x_abs": "11.981023227645367",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "3.2343403372577619e-15",
+                "delivered_abs": "8.1881037106099934e-16",
+                "at_x_rel": "12.254455061032763",
+                "at_x_abs": "12.254455061032763",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "3.2343403372577619e-15",
+              "delivered_abs": "8.1881037106099934e-16",
+              "at_x_rel": "12.254455061032763",
+              "at_x_abs": "12.254455061032763",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 5,
+            "k": 12,
+            "stored": 18,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "4.7929769593349529e-15",
+                "delivered_abs": "1.2304599782258357e-15",
+                "at_x_rel": "11.916937641695196",
+                "at_x_abs": "11.916937641695196",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "3.2438691467600247e-15",
+                "delivered_abs": "8.3068875499240026e-16",
+                "at_x_rel": "11.976750855248689",
+                "at_x_abs": "11.976750855248689",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "3.2438691467600247e-15",
+              "delivered_abs": "8.3068875499240026e-16",
+              "at_x_rel": "11.976750855248689",
+              "at_x_abs": "11.976750855248689",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          }
+        ],
+        "any_meets": false,
+        "meeting_pairs": [],
+        "best_meeting": null,
+        "best_pair": {
+          "m": 14,
+          "k": 3,
+          "stored": 18,
+          "solvers": [
+            {
+              "solver": "remez",
+              "delivered_rel": "1.0166328168235554e-15",
+              "delivered_abs": "2.598758444917654e-16",
+              "at_x_rel": "12.01947457921547",
+              "at_x_abs": "12.01947457921547",
+              "meets": false
+            },
+            {
+              "solver": "lawson",
+              "delivered_rel": "1.4203135954834663e-15",
+              "delivered_abs": "3.5850786255997785e-16",
+              "at_x_rel": "12.32708539177629",
+              "at_x_abs": "12.32708539177629",
+              "meets": false
+            }
+          ],
+          "best": {
+            "solver": "remez",
+            "delivered_rel": "1.0166328168235554e-15",
+            "delivered_abs": "2.598758444917654e-16",
+            "at_x_rel": "12.01947457921547",
+            "at_x_abs": "12.01947457921547",
+            "meets": false
+          },
+          "meets": false,
+          "no_finite_fit": false
+        },
+        "seconds": 13486.4
+      },
+      {
+        "stored": 19,
+        "pairs_tried": [
+          "[17/1]",
+          "[16/2]",
+          "[15/3]",
+          "[14/4]",
+          "[13/5]",
+          "[12/6]",
+          "[11/7]",
+          "[10/8]",
+          "[9/9]",
+          "[8/10]",
+          "[7/11]",
+          "[6/12]"
+        ],
+        "rows": [
+          {
+            "m": 17,
+            "k": 1,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "1.3869995522405092e-15",
+                "delivered_abs": "3.2936837903237444e-16",
+                "at_x_rel": "16.787442173908189",
+                "at_x_abs": "12.848314824171014",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.0348828162370943e-14",
+                "delivered_abs": "1.707938112010672e-15",
+                "at_x_rel": "28.83553233254033",
+                "at_x_abs": "28.83553233254033",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "1.3869995522405092e-15",
+              "delivered_abs": "3.2936837903237444e-16",
+              "at_x_rel": "16.787442173908189",
+              "at_x_abs": "12.848314824171014",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 16,
+            "k": 2,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "4.9417659065639777e-16",
+                "delivered_abs": "1.2443861665854112e-16",
+                "at_x_rel": "14.330828045818302",
+                "at_x_abs": "12.002385089628758",
+                "meets": true
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "3.334202246858021e-15",
+                "delivered_abs": "5.4884503328243254e-16",
+                "at_x_rel": "28.985065366424062",
+                "at_x_abs": "28.985065366424062",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "4.9417659065639777e-16",
+              "delivered_abs": "1.2443861665854112e-16",
+              "at_x_rel": "14.330828045818302",
+              "at_x_abs": "12.002385089628758",
+              "meets": true
+            },
+            "meets": true,
+            "no_finite_fit": false
+          },
+          {
+            "m": 15,
+            "k": 3,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "1.0005814386611539e-15",
+                "delivered_abs": "2.549133981765046e-16",
+                "at_x_rel": "12.100649654752353",
+                "at_x_abs": "12.100649654752353",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.1960527320997695e-15",
+                "delivered_abs": "3.0552278162274152e-16",
+                "at_x_rel": "12.036564068802182",
+                "at_x_abs": "12.036564068802182",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "1.0005814386611539e-15",
+              "delivered_abs": "2.549133981765046e-16",
+              "at_x_rel": "12.100649654752353",
+              "at_x_abs": "12.100649654752353",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 14,
+            "k": 4,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "2.8735105876521851e-15",
+                "delivered_abs": "7.3506128020237722e-16",
+                "at_x_rel": "12.002385089628758",
+                "at_x_abs": "12.002385089628758",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.8963692906658141e-15",
+                "delivered_abs": "4.8544837854903619e-16",
+                "at_x_rel": "11.985295600042045",
+                "at_x_abs": "11.985295600042045",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "1.8963692906658141e-15",
+              "delivered_abs": "4.8544837854903619e-16",
+              "at_x_rel": "11.985295600042045",
+              "at_x_abs": "11.985295600042045",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 13,
+            "k": 5,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "1.8280754788694125e-15",
+                "delivered_abs": "4.6680263709523884e-16",
+                "at_x_rel": "12.045108813595538",
+                "at_x_abs": "12.045108813595538",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "2.3800576145637136e-15",
+                "delivered_abs": "5.9929724003030965e-16",
+                "at_x_rel": "12.544976384006872",
+                "at_x_abs": "11.955388993265299",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "1.8280754788694125e-15",
+              "delivered_abs": "4.6680263709523884e-16",
+              "at_x_rel": "12.045108813595538",
+              "at_x_abs": "12.045108813595538",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 12,
+            "k": 6,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "6.0149244433855306e-15",
+                "delivered_abs": "1.5356503664048346e-15",
+                "at_x_rel": "12.049381185992216",
+                "at_x_abs": "12.049381185992216",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "3.2075723646541404e-15",
+                "delivered_abs": "8.2345261733070392e-16",
+                "at_x_rel": "11.916937641695196",
+                "at_x_abs": "11.916937641695196",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "3.2075723646541404e-15",
+              "delivered_abs": "8.2345261733070392e-16",
+              "at_x_rel": "11.916937641695196",
+              "at_x_abs": "11.916937641695196",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 11,
+            "k": 7,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "1.5481017632544623e-15",
+                "delivered_abs": "3.9636661172911828e-16",
+                "at_x_rel": "11.981023227645367",
+                "at_x_abs": "11.981023227645367",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.1850116759935154e-14",
+                "delivered_abs": "3.0416339472097613e-15",
+                "at_x_rel": "11.921210014091874",
+                "at_x_abs": "11.921210014091874",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "remez",
+              "delivered_rel": "1.5481017632544623e-15",
+              "delivered_abs": "3.9636661172911828e-16",
+              "at_x_rel": "11.981023227645367",
+              "at_x_abs": "11.981023227645367",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 10,
+            "k": 8,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "lawson",
+                "delivered_rel": "8.1883762580039952e-15",
+                "delivered_abs": "2.0740663245883866e-15",
+                "at_x_rel": "12.241637943842729",
+                "at_x_abs": "12.241637943842729",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "8.1883762580039952e-15",
+              "delivered_abs": "2.0740663245883866e-15",
+              "at_x_rel": "12.241637943842729",
+              "at_x_abs": "12.241637943842729",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 9,
+            "k": 9,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "2.4068052872066347e-14",
+                "delivered_abs": "6.1655373816906581e-15",
+                "at_x_rel": "11.968206110455333",
+                "at_x_abs": "11.968206110455333",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "9.8683343881518106e-15",
+                "delivered_abs": "2.5288840661925837e-15",
+                "at_x_rel": "11.959661365661977",
+                "at_x_abs": "11.959661365661977",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "9.8683343881518106e-15",
+              "delivered_abs": "2.5288840661925837e-15",
+              "at_x_rel": "11.959661365661977",
+              "at_x_abs": "11.959661365661977",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 8,
+            "k": 10,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "2.137855588130961e-14",
+                "delivered_abs": "5.4417124768672084e-15",
+                "at_x_rel": "12.122011516735743",
+                "at_x_abs": "12.122011516735743",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "8.7222131421657082e-15",
+                "delivered_abs": "2.2166454244224953e-15",
+                "at_x_rel": "12.160462868305846",
+                "at_x_abs": "12.160462868305846",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "8.7222131421657082e-15",
+              "delivered_abs": "2.2166454244224953e-15",
+              "at_x_rel": "12.160462868305846",
+              "at_x_abs": "12.160462868305846",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 7,
+            "k": 11,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "lawson",
+                "delivered_rel": "1.4173007819289306e-14",
+                "delivered_abs": "3.5949594295691269e-15",
+                "at_x_rel": "12.207458964669305",
+                "at_x_abs": "12.207458964669305",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "1.4173007819289306e-14",
+              "delivered_abs": "3.5949594295691269e-15",
+              "at_x_rel": "12.207458964669305",
+              "at_x_abs": "12.207458964669305",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          },
+          {
+            "m": 6,
+            "k": 12,
+            "stored": 19,
+            "solvers": [
+              {
+                "solver": "remez",
+                "delivered_rel": "4.3428012470204417e-15",
+                "delivered_abs": "1.1140916931180788e-15",
+                "at_x_rel": "11.934027131281909",
+                "at_x_abs": "11.934027131281909",
+                "meets": false
+              },
+              {
+                "solver": "lawson",
+                "delivered_rel": "2.1671469423108607e-15",
+                "delivered_abs": "5.4271048412830737e-16",
+                "at_x_rel": "12.523614522023481",
+                "at_x_abs": "12.523614522023481",
+                "meets": false
+              }
+            ],
+            "best": {
+              "solver": "lawson",
+              "delivered_rel": "2.1671469423108607e-15",
+              "delivered_abs": "5.4271048412830737e-16",
+              "at_x_rel": "12.523614522023481",
+              "at_x_abs": "12.523614522023481",
+              "meets": false
+            },
+            "meets": false,
+            "no_finite_fit": false
+          }
+        ],
+        "any_meets": true,
+        "meeting_pairs": [
+          "[16/2]"
+        ],
+        "best_meeting": {
+          "m": 16,
+          "k": 2,
+          "stored": 19,
+          "solvers": [
+            {
+              "solver": "remez",
+              "delivered_rel": "4.9417659065639777e-16",
+              "delivered_abs": "1.2443861665854112e-16",
+              "at_x_rel": "14.330828045818302",
+              "at_x_abs": "12.002385089628758",
+              "meets": true
+            },
+            {
+              "solver": "lawson",
+              "delivered_rel": "3.334202246858021e-15",
+              "delivered_abs": "5.4884503328243254e-16",
+              "at_x_rel": "28.985065366424062",
+              "at_x_abs": "28.985065366424062",
+              "meets": false
+            }
+          ],
+          "best": {
+            "solver": "remez",
+            "delivered_rel": "4.9417659065639777e-16",
+            "delivered_abs": "1.2443861665854112e-16",
+            "at_x_rel": "14.330828045818302",
+            "at_x_abs": "12.002385089628758",
+            "meets": true
+          },
+          "meets": true,
+          "no_finite_fit": false
+        },
+        "best_pair": {
+          "m": 16,
+          "k": 2,
+          "stored": 19,
+          "solvers": [
+            {
+              "solver": "remez",
+              "delivered_rel": "4.9417659065639777e-16",
+              "delivered_abs": "1.2443861665854112e-16",
+              "at_x_rel": "14.330828045818302",
+              "at_x_abs": "12.002385089628758",
+              "meets": true
+            },
+            {
+              "solver": "lawson",
+              "delivered_rel": "3.334202246858021e-15",
+              "delivered_abs": "5.4884503328243254e-16",
+              "at_x_rel": "28.985065366424062",
+              "at_x_abs": "28.985065366424062",
+              "meets": false
+            }
+          ],
+          "best": {
+            "solver": "remez",
+            "delivered_rel": "4.9417659065639777e-16",
+            "delivered_abs": "1.2443861665854112e-16",
+            "at_x_rel": "14.330828045818302",
+            "at_x_abs": "12.002385089628758",
+            "meets": true
+          },
+          "meets": true,
+          "no_finite_fit": false
+        },
+        "seconds": 14410.7
+      }
+    ],
+    "old_count_status": "no_pair_meets (no pair at the record count meets)",
+    "old_count_certifies": false,
+    "no_pair_meets_at_old_count": true,
+    "certified_stored": 19,
+    "certifying_pair": {
+      "m": 16,
+      "k": 2,
+      "stored": 19,
+      "solver": "remez",
+      "delivered_rel": "4.9417659065639777e-16",
+      "delivered_abs": "1.2443861665854112e-16",
+      "at_x_rel": "14.330828045818302",
+      "meets": true
+    },
+    "certified_level_meets": true,
+    "level_below_certified_meets": false,
+    "verdict": "moves",
+    "grid_seconds": 3.4,
+    "seconds": 42683.5
+  },
+  "finished_utc": "2026-10-27T07:15:29Z"
+}

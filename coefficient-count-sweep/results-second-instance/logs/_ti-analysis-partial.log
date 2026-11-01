@@ -1,0 +1,109 @@
+function x^-1/2; x0 = 11.899848152108484; a2 = 23.799696304216968
+full rows on disk: 6 of 90; Chebyshev cells: 0 of 90
+kappa(a2,2W)/kappa(x0,W)-1 max: 2.54447e-48
+
+rel:1e-13   width   cheb x0/a2   rat x0/a2
+   2^-7 x0   5/  5     4/  4
+   2^-6 x0   5/  5     4/  4
+   2^-5 x0   5/  5     4/  4
+   2^-4 x0   5/  5   None/None
+   2^-3 x0   5/  5   None/None
+   2^-2 x0   6/  6   None/None
+   2^-1 x0   7/  7   None/None
+    2^0 x0   8/  8   None/None
+    2^1 x0   9/  9   None/None
+    2^2 x0  12/ 12   None/None
+    2^3 x0  15/ 15   None/None
+    2^4 x0  19/ 19   None/None
+    2^5 x0  25/ 25   None/None
+   ship x0  20/ 20   None/None
+  paper x0  19/ 19   None/None
+
+abs:5e-14   width   cheb x0/a2   rat x0/a2
+   2^-7 x0   5/  5   None/None
+   2^-6 x0   5/  5   None/None
+   2^-5 x0   5/  5   None/None
+   2^-4 x0   5/  5   None/None
+   2^-3 x0   5/  5   None/None
+   2^-2 x0   6/  6   None/None
+   2^-1 x0   7/  7   None/None
+    2^0 x0   8/  8   None/None
+    2^1 x0   9/  9   None/None
+    2^2 x0  11/ 11   None/None
+    2^3 x0  14/ 14   None/None
+    2^4 x0  19/ 18   None/None
+    2^5 x0  25/ 25   None/None
+   ship x0  20/ 20   None/None
+  paper x0  19/ 19   None/None
+
+rel:1e-14   width   cheb x0/a2   rat x0/a2
+   2^-7 x0   5/  5   None/None
+   2^-6 x0   5/  5   None/None
+   2^-5 x0   5/  5   None/None
+   2^-4 x0   5/  5   None/None
+   2^-3 x0   6/  6   None/None
+   2^-2 x0   6/  6   None/None
+   2^-1 x0   7/  7   None/None
+    2^0 x0   9/  9   None/None
+    2^1 x0  10/ 10   None/None
+    2^2 x0  12/ 12   None/None
+    2^3 x0  16/ 16   None/None
+    2^4 x0  20/ 20   None/None
+    2^5 x0  27/ 27   None/None
+   ship x0  22/ 22   None/None
+  paper x0  21/ 21   None/None
+
+slopes (paper estimator, thirteen scaling widths, floors in)
+ rel:1e-13 cheb: x0 0.19671+-0.02114 (n=13), a2 0.19671+-0.02114, diff +0.00000 (unpaired z +0.00, paired z n/a); endpoints 0.1935/0.1935
+ rel:1e-13 rat: PARTIAL at n=3 (['2^-7', '2^-6', '2^-5']): secants 0.00000/0.00000, no s.e.
+ abs:5e-14 cheb: x0 0.19246+-0.02132 (n=13), a2 0.19031+-0.02090, diff -0.00214 (unpaired z -0.07, paired z -1.39); endpoints 0.1935/0.1935
+ abs:5e-14 rat: INCOMPLETE ([])
+ rel:1e-14 cheb: x0 0.20417+-0.01976 (n=13), a2 0.20417+-0.01976, diff +0.00000 (unpaired z +0.00, paired z n/a); endpoints 0.2027/0.2027
+ rel:1e-14 rat: INCOMPLETE ([])
+
+model secants at each edge's measured constant
+ x0 rel:1e-13 cheb: C=0.10784700403231671 model beta 0.2065, max|N-model| 0.821, drift 1.26 dec
+ x0 rel:1e-13 rat: NO CONSTANT (all floors)
+ x0 abs:5e-14 cheb: C=0.12701023512852443 model beta 0.2062, max|N-model| 0.865, drift 0.92 dec
+ x0 abs:5e-14 rat: NO CONSTANT (incomplete)
+ x0 rel:1e-14 cheb: C=0.076449303429737572 model beta 0.2082, max|N-model| 0.640, drift 2.14 dec
+ x0 rel:1e-14 rat: NO CONSTANT (incomplete)
+ a2 rel:1e-13 cheb: C=0.10784700403231671 model beta 0.2065, max|N-model| 0.821, drift 1.26 dec
+ a2 rel:1e-13 rat: NO CONSTANT (all floors)
+ a2 abs:5e-14 cheb: C=0.10010266137665466 model beta 0.2057, max|N-model| 0.932, drift 0.75 dec
+ a2 abs:5e-14 rat: NO CONSTANT (incomplete)
+ a2 rel:1e-14 cheb: C=0.076449303429737572 model beta 0.2082, max|N-model| 0.640, drift 2.14 dec
+ a2 rel:1e-14 rat: NO CONSTANT (incomplete)
+
+target-increment test (rel:1e-13 -> rel:1e-14)
+ x0 cheb: max|residual| 0.877, outside one: 0/15, outside two: 0/15, signs ----+--++---+++
+ x0 rat: INCOMPLETE
+ a2 cheb: max|residual| 0.877, outside one: 0/15, outside two: 0/15, signs ----+--++---+++
+ a2 rat: INCOMPLETE
+
+ladder test (free line in L, residual and corrected second difference <= 1)
+ The paper's raw second-difference criterion presumes the dense ladder's equal L spacing;
+ the Group A target spacings are unequal, so the spacing term is reported and removed.
+ x0 cheb: 10 width(s) tested, flips ['2^2', '2^3'], max|residual| 0.478323509231835, max|second diff| raw 2 corrected 1.434970527695501
+ x0 rat: 0 width(s) tested, flips none, max|residual| None, max|second diff| raw None corrected None
+ a2 cheb: 10 width(s) tested, flips ['2^2', '2^5', 'ship', 'paper'], max|residual| 0.4512214506683776, max|second diff| raw 2 corrected 1.3536643520051281
+ a2 rat: 0 width(s) tested, flips none, max|residual| None, max|second diff| raw None corrected None
+
+model prediction of the a2 count from the x0 count
+ rel:1e-13 cheb: residual +0.000 to +0.000 (0 above, 0 below, n=15)
+ rel:1e-13 rat: residual +0.000 to +0.000 (0 above, 0 below, n=3)
+ abs:5e-14 cheb: residual -0.778 to +0.300 (14 above, 1 below, n=15)
+ rel:1e-14 cheb: residual +0.000 to +0.000 (0 above, 0 below, n=15)
+
+count-implied constant ratio C(a2)/C(x0)
+ rel:1e-13 cheb: 1..1 (med 1) vs expected 1
+ rel:1e-13 rat: 1..1 (med 1) vs expected 1
+ abs:5e-14 cheb: 0.297..1.41 (med 1.41) vs expected 1.41
+ rel:1e-14 cheb: 1..1 (med 1) vs expected 1
+
+rational excess over the leading law (Cr=4)
+ x0 rel:1e-13: 2^-7:-0.10 2^-6:-0.33 2^-5:-0.59
+ a2 rel:1e-13: 2^-7:-0.10 2^-6:-0.33 2^-5:-0.59
+
+wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-second-instance\analysis.json
+EXIT=0

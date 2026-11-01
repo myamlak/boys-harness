@@ -1,0 +1,6 @@
+function boys_F0; left edge a = 11.899848152108484 (scale 1 x X0); widths scaled by 1
+grid: 15 width(s) x 3 target(s); 0 full row(s) and 0 Chebyshev cell(s) already on disk
+workers: 4
+cheb [rel:1e-13] 2^-7    W=0.0078125    stored=5 (deg=4) rel=3.6525651318349605e-16 abs=9.3817579212343487e-17 (0.101s)
+invocation wall time: 3.2 s; full rows on disk: 0; Chebyshev cells on disk: 1; this invocation: 0 row(s), 1 cell(s)
+EXIT=0

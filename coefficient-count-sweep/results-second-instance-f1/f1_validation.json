@@ -1,0 +1,257 @@
+{
+  "kernel_root": "C:\\Users\\myaml\\dev\\_mainonly",
+  "generator_sha256": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180",
+  "header_sha256": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204",
+  "RAT_DPS": 60,
+  "RAT_TAIL_FLOOR": "1.0e-55",
+  "RAT_TERMS": 900,
+  "identity": "F_1(x) = (F_0(x) - exp(-x))/(2x); F_0 from boys_ref(0, x, RAT_TAIL_FLOOR, RAT_TERMS) at RAT_DPS; the exact closed form and the integral are separate witnesses",
+  "samples": {
+    "0.125": {
+      "x": "0.125",
+      "F0_boys_ref": "0.9598504379197684325648478",
+      "F0_exact": "0.9598504379197684325648478",
+      "F0_boys_ref_vs_exact_digits": 57.959353391944006,
+      "F1_reference": "0.3094141413406921187998226",
+      "F1_integral": "0.3094141413406921187998226",
+      "F1_reference_vs_integral_digits": 56.865326062921056,
+      "F1_series": "0.3094141413406921187998226",
+      "F1_series_dps": 80,
+      "F1_reference_vs_series_digits": 56.86532606292107,
+      "x_pow_3_2_F1_over_sqrtpi_over_4": "0.030859595783726729501",
+      "recurrence_vs_boys_ref_digits": {
+        "0": {
+          "relative_difference": "1.357828434e-57"
+        },
+        "1": {
+          "relative_difference": "3.400887717e-60"
+        },
+        "2": {
+          "relative_difference": "3.180704882e-57"
+        }
+      }
+    },
+    "0.25": {
+      "x": "0.25",
+      "F0_boys_ref": "0.9225620128255848975114059",
+      "F0_exact": "0.9225620128255848975114059",
+      "F0_boys_ref_vs_exact_digits": 57.69278906502769,
+      "F1_reference": "0.2875224595083600585324712",
+      "F1_integral": "0.2875224595083600585324712",
+      "F1_reference_vs_integral_digits": 56.88556163429257,
+      "F1_series": "0.2875224595083600585324712",
+      "F1_series_dps": 80,
+      "F1_reference_vs_series_digits": 56.88556163429257,
+      "x_pow_3_2_F1_over_sqrtpi_over_4": "0.081108588345324140636",
+      "recurrence_vs_boys_ref_digits": {
+        "0": {
+          "relative_difference": "1.29212171e-57"
+        },
+        "1": {
+          "relative_difference": "8.125462093e-61"
+        },
+        "2": {
+          "relative_difference": "1.73441004e-60"
+        }
+      }
+    },
+    "0.5": {
+      "x": "0.5",
+      "F0_boys_ref": "0.8556243918921488031733046",
+      "F0_exact": "0.8556243918921488031733046",
+      "F0_boys_ref_vs_exact_digits": 59.024338937306574,
+      "F1_reference": "0.2490937321795153795695051",
+      "F1_integral": "0.2490937321795153795695051",
+      "F1_reference_vs_integral_digits": 58.490445370771326,
+      "F1_series": "0.2490937321795153795695051",
+      "F1_series_dps": 80,
+      "F1_reference_vs_series_digits": 58.49044537077119,
+      "x_pow_3_2_F1_over_sqrtpi_over_4": "0.19874804309879919757",
+      "recurrence_vs_boys_ref_digits": {
+        "0": {
+          "relative_difference": "1.327201948e-60"
+        },
+        "1": {
+          "relative_difference": "2.763317737e-61"
+        },
+        "2": {
+          "relative_difference": "1.500194235e-60"
+        }
+      }
+    },
+    "1": {
+      "x": "1",
+      "F0_boys_ref": "0.7468241328124270253994674",
+      "F0_exact": "0.7468241328124270253994674",
+      "F0_boys_ref_vs_exact_digits": 57.258605569056186,
+      "F1_reference": "0.1894723458204923519019718",
+      "F1_integral": "0.1894723458204923519019718",
+      "F1_reference_vs_integral_digits": 56.963957185403274,
+      "F1_series": "0.1894723458204923519019718",
+      "F1_series_dps": 80,
+      "F1_reference_vs_series_digits": 56.963957185403274,
+      "x_pow_3_2_F1_over_sqrtpi_over_4": "0.427593295529120166",
+      "recurrence_vs_boys_ref_digits": {
+        "0": {
+          "relative_difference": "3.079117851e-61"
+        },
+        "1": {
+          "relative_difference": "9.697394954e-62"
+        },
+        "2": {
+          "relative_difference": "1.132300953e-56"
+        }
+      }
+    },
+    "2": {
+      "x": "2",
+      "F0_boys_ref": "0.5981440066613041014657119",
+      "F0_exact": "0.5981440066613041014657119",
+      "F0_boys_ref_vs_exact_digits": 58.10127758266406,
+      "F1_reference": "0.1157021808561728523929281",
+      "F1_integral": "0.1157021808561728523929281",
+      "F1_reference_vs_integral_digits": 57.989547328630074,
+      "F1_series": "0.1157021808561728523929281",
+      "F1_series_dps": 81,
+      "F1_reference_vs_series_digits": 57.98954732863012,
+      "x_pow_3_2_F1_over_sqrtpi_over_4": "0.7385358700508893778",
+      "recurrence_vs_boys_ref_digits": {
+        "0": {
+          "relative_difference": "1.680774087e-61"
+        },
+        "1": {
+          "relative_difference": "4.479827348e-57"
+        },
+        "2": {
+          "relative_difference": "9.166353165e-57"
+        }
+      }
+    },
+    "11.899848152108484": {
+      "x": "11.899848152108484",
+      "F0_boys_ref": "0.2569057156730954307710795",
+      "F0_exact": "0.2569057156730954307710795",
+      "F0_boys_ref_vs_exact_digits": 60.518862886404364,
+      "F1_reference": "0.01079421018458887939774409",
+      "F1_integral": "0.01079421018458887939774409",
+      "F1_reference_vs_integral_digits": 60.58421979290393,
+      "F1_series": "0.01079421018458887939774409",
+      "F1_series_dps": 85,
+      "F1_reference_vs_series_digits": 60.58421979392544,
+      "x_pow_3_2_F1_over_sqrtpi_over_4": "0.99997249551573558438",
+      "recurrence_vs_boys_ref_digits": {
+        "0": {
+          "relative_difference": "1.914207252e-60"
+        },
+        "1": {
+          "relative_difference": "1.418387915e-59"
+        },
+        "2": {
+          "relative_difference": "1.218602453e-58"
+        }
+      }
+    },
+    "23.799696304216968": {
+      "x": "23.799696304216968",
+      "F0_boys_ref": "0.1816599678703612916565128",
+      "F0_exact": "0.1816599678703612916565128",
+      "F0_boys_ref_vs_exact_digits": 60.36834835282823,
+      "F1_reference": "0.003816434577613709377790712",
+      "F1_integral": "0.003816434577613709377790712",
+      "F1_reference_vs_integral_digits": 60.3254461740858,
+      "F1_series": "0.003816434577613709377790712",
+      "F1_series_dps": 91,
+      "F1_reference_vs_series_digits": 60.32544617249653,
+      "x_pow_3_2_F1_over_sqrtpi_over_4": "0.99999999974087077771",
+      "recurrence_vs_boys_ref_digits": {
+        "0": {
+          "relative_difference": "7.96183353e-62"
+        },
+        "1": {
+          "relative_difference": "5.52676894e-61"
+        },
+        "2": {
+          "relative_difference": "1.879077534e-61"
+        }
+      }
+    },
+    "43.899848152108487": {
+      "x": "43.899848152108487",
+      "F0_boys_ref": "0.1337560489816083506706508",
+      "F0_exact": "0.1337560489816083506706508",
+      "F0_boys_ref_vs_exact_digits": 60.83746254278085,
+      "F1_reference": "0.001523422683811539752854469",
+      "F1_integral": "0.001523422683811539752854469",
+      "F1_reference_vs_integral_digits": 60.901349375401004,
+      "F1_series": "0.001523422683811539752854469",
+      "F1_series_dps": 101,
+      "F1_reference_vs_series_digits": 60.90134943420525,
+      "x_pow_3_2_F1_over_sqrtpi_over_4": "0.99999999999999999935",
+      "recurrence_vs_boys_ref_digits": {
+        "0": {
+          "relative_difference": "3.989151154e-61"
+        },
+        "1": {
+          "relative_difference": "6.384697445e-61"
+        },
+        "2": {
+          "relative_difference": "3.003077661e-61"
+        }
+      }
+    },
+    "87.799696304216968": {
+      "x": "87.799696304216968",
+      "F0_boys_ref": "0.09457980925961527208895279",
+      "F0_exact": "0.09457980925961527208895279",
+      "F0_boys_ref_vs_exact_digits": 60.084887553620895,
+      "F1_reference": "0.0005386112551682747633489473",
+      "F1_integral": "0.0005386112551682747633489473",
+      "F1_reference_vs_integral_digits": 60.16038858847268,
+      "F1_series": "0.0005386112551682747633489473",
+      "F1_series_dps": 123,
+      "F1_reference_vs_series_digits": 60.1603886094681,
+      "x_pow_3_2_F1_over_sqrtpi_over_4": "1.0",
+      "recurrence_vs_boys_ref_digits": {
+        "0": {
+          "relative_difference": "5.641511664e-61"
+        },
+        "1": {
+          "relative_difference": "1.418894041e-60"
+        },
+        "2": {
+          "relative_difference": "8.493986313e-61"
+        }
+      }
+    },
+    "200": {
+      "x": "200",
+      "F0_boys_ref": "0.06266570686577501256039413",
+      "F0_exact": "0.06266570686577501256039413",
+      "F0_boys_ref_vs_exact_digits": 60.80920904963122,
+      "F1_reference": "0.0001566642671644375314009853",
+      "F1_integral": "0.0001566642671644375314009853",
+      "F1_reference_vs_integral_digits": 60.58640383319607,
+      "F1_series": "0.0001566642671644375314009853",
+      "F1_series_dps": 180,
+      "F1_reference_vs_series_digits": 60.5864035736804,
+      "x_pow_3_2_F1_over_sqrtpi_over_4": "1.0",
+      "recurrence_vs_boys_ref_digits": {
+        "0": {
+          "relative_difference": "2.424437408e-61"
+        },
+        "1": {
+          "relative_difference": "6.313639084e-61"
+        },
+        "2": {
+          "relative_difference": "0.0"
+        }
+      }
+    }
+  },
+  "worst_digits": {
+    "F0_boys_ref_vs_exact": 57.258605569056186,
+    "F1_reference_vs_integral": 56.865326062921056,
+    "F1_reference_vs_series": 56.86532606292107
+  },
+  "verdict": "the F_1 reference agrees with the high-precision integral and with the entire series to at least 57 digits, and the F_0 reference it is built on agrees with the exact closed form to at least 57 digits"
+}

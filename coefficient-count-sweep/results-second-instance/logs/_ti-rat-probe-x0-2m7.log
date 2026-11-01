@@ -1,0 +1,10 @@
+on disk: 0 full row(s) (both edges), 90 Chebyshev cell(s) (both edges)
+function x^-1/2; left edge a = 11.899848152108484 (scale 1 x X0); widths scaled by 1
+grid: 15 width(s) x 3 target(s); 0 full row(s) and 90 Chebyshev cell(s) already on disk
+workers: 4
+  cheb degree 4 ...
+  rat stored 3 ...
+  rat stored 4 ...
+[rel:1e-13] 2^-7    W=0.0078125    cheb=5 (deg=4, even) rat=4 ([1/2], remez) rel=3.5837541858623983e-16 (0.104s + 402.391s)
+invocation wall time: 402.7 s; full rows on disk: 1; Chebyshev cells on disk: 90; this invocation: 1 row(s), 0 cell(s)
+EXIT=0
