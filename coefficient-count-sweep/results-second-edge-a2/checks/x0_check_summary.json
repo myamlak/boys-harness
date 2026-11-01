@@ -1,0 +1,97 @@
+{
+ "generated_utc": "2026-11-01T15:01:04Z",
+ "edge": "x0",
+ "a": 11.899848152108484,
+ "wall_seconds": 31.4,
+ "workers": 1,
+ "cells": [
+  {
+   "cell_id": "A_abs514_p1",
+   "edge": "x0",
+   "group": "A",
+   "kind": "abs",
+   "target": 5e-14,
+   "W": 2.0,
+   "a": 11.899848152108484,
+   "width_name": "p1",
+   "target_tag": "abs514",
+   "x0_count_used_for_bound": 7,
+   "max_stored": 10,
+   "levels_complete": 7,
+   "first_meet_default": 7,
+   "tightened_levels": [
+    6
+   ],
+   "default_settings": {
+    "name": "default",
+    "tol": 0.0001,
+    "maxiter": 1000,
+    "npi": -30,
+    "init_steps": 100,
+    "max_step_size": 0.1
+   },
+   "tightened_settings": {
+    "name": "tightened",
+    "tol": 1e-08,
+    "maxiter": 5000,
+    "npi": -40,
+    "init_steps": 300,
+    "max_step_size": 0.05
+   },
+   "corrected_count": 7,
+   "pair": [
+    5,
+    1
+   ],
+   "witness": {
+    "m": 5,
+    "k": 1,
+    "stored": 7,
+    "route": "default",
+    "converged": false,
+    "deviation": 0.008431703204047292,
+    "rel_2001": 6.970833590794224e-14,
+    "abs_2001": 1.659783421814609e-14,
+    "den_2001": 0.8687076198449832,
+    "rel_4001": 6.970833590794224e-14,
+    "abs_4001": 1.659783421814609e-14,
+    "den_4001": 0.8687076198449832,
+    "P": [
+     "0.24674733862146113",
+     "0.0077722035396334896",
+     "-0.00011594493789380049",
+     "3.1620498531254777e-6",
+     "-9.1207610414551225e-8",
+     "1.9966176456054104e-9"
+    ],
+    "Q": [
+     "1.0",
+     "0.070258385400016621",
+     "9.9548984946456535e-16",
+     "9.0023755804856709e-16",
+     "-5.0530265562090421e-16",
+     "-7.396548752153944e-16"
+    ]
+   },
+   "witness_selection": "both",
+   "delivered_2001": 1.659783421814609e-14,
+   "delivered_4001": 1.659783421814609e-14,
+   "guard_2001": 0.8687076198449832,
+   "guard_4001": 0.8687076198449832,
+   "best_below": 2.8735347434860614e-13,
+   "best_below_pair": [
+    3,
+    2
+   ],
+   "best_below_any": 2.8735347434860614e-13,
+   "below_ratio": 5.747069486972123,
+   "route": "default",
+   "count_lowered_by_tightened": false,
+   "meets_4001": true,
+   "guard_4001_ok": true,
+   "witness_converged": false,
+   "margin_limited": true,
+   "solid": false
+  }
+ ]
+}

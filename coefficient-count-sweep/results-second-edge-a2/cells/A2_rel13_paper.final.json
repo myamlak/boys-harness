@@ -1,0 +1,88 @@
+{
+ "cell_id": "A2_rel13_paper",
+ "edge": "a2",
+ "group": "A",
+ "kind": "rel",
+ "target": 1e-13,
+ "W": 34.17897917342451,
+ "a": 23.79969630421697,
+ "width_name": "paper",
+ "target_tag": "rel13",
+ "x0_count_used_for_bound": 12,
+ "max_stored": 15,
+ "levels_complete": 11,
+ "first_meet_default": 11,
+ "tightened_levels": [
+  10
+ ],
+ "default_settings": {
+  "name": "default",
+  "tol": 0.0001,
+  "maxiter": 1000,
+  "npi": -30,
+  "init_steps": 100,
+  "max_step_size": 0.1
+ },
+ "tightened_settings": {
+  "name": "tightened",
+  "tol": 1e-08,
+  "maxiter": 5000,
+  "npi": -40,
+  "init_steps": 300,
+  "max_step_size": 0.05
+ },
+ "corrected_count": 11,
+ "pair": [
+  5,
+  5
+ ],
+ "witness": {
+  "m": 5,
+  "k": 5,
+  "stored": 11,
+  "route": "default",
+  "converged": false,
+  "deviation": 0.006849315068493178,
+  "rel_2001": 6.963415247016035e-14,
+  "abs_2001": 8.271161533457416e-15,
+  "den_2001": 0.08644322394684165,
+  "rel_4001": 6.963415247016035e-14,
+  "abs_4001": 8.298917109073045e-15,
+  "den_4001": 0.08644322394684165,
+  "P": [
+   "0.13859281271876697",
+   "0.1341073183552517",
+   "0.04512729367642868",
+   "0.006150268280288593",
+   "0.00029051255600295484",
+   "2.1655358620535754e-6"
+  ],
+  "Q": [
+   "1.0",
+   "1.1766086663868209",
+   "0.5059856254930392",
+   "0.095855117354395299",
+   "0.0074833147928455787",
+   "0.0001658164704684631"
+  ]
+ },
+ "witness_selection": "both",
+ "delivered_2001": 6.963415247016035e-14,
+ "delivered_4001": 6.963415247016035e-14,
+ "guard_2001": 0.08644322394684165,
+ "guard_4001": 0.08644322394684165,
+ "best_below": 1.3499963600464991e-12,
+ "best_below_pair": [
+  4,
+  5
+ ],
+ "best_below_any": 1.3499963600464991e-12,
+ "below_ratio": 13.49996360046499,
+ "route": "default",
+ "count_lowered_by_tightened": false,
+ "meets_4001": true,
+ "guard_4001_ok": true,
+ "witness_converged": false,
+ "margin_limited": true,
+ "solid": false
+}

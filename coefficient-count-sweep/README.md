@@ -142,8 +142,9 @@ The paper's data statement and supplement name these record blocks; the F1
 analysis beside the paper names the F0 control. Each block is copied verbatim
 from the paper's record set, with the source column giving its path there,
 and no file was edited. `baryrat` 2.1.2,
-the BRASIL rational minimax solver, produced `results-corrected/`; it is
-independent of the kernel's Remez and Lawson implementations. The remaining
+the BRASIL rational minimax solver, produced `results-corrected/` and
+`results-second-edge-a2/`; it is independent of the kernel's Remez and Lawson
+implementations. The remaining
 records were produced by the kernel's own recorded harness: their drivers
 import `count_sweep.py`, the recorded revision described above, and the
 kernel's generator, and every rational count in them is a kernel Remez or
@@ -155,9 +156,21 @@ Lawson solve.
 | `results-second-instance/` | `results-second-instance/` | `analysis/tail_instance_sweep.py` and `analysis/analyze_tail_instance.py` |
 | `results-second-instance-f1/` | `results-second-instance-f1/` | `analysis/second_instance_f1_sweep.py` and `analysis/analyze_second_instance_f1.py`, with `analysis/f1_reference.py` |
 | `results-second-instance-f1-control/` | `results-second-instance-f1-control/` | `analysis/second_instance_f1_sweep.py` with `--function F0` |
+| `results-second-edge-a2/` | `results-second-edge-a2/` | `second_edge_a2_solver.py`, `analyze_second_edge_a2.py` and `verify_witnesses.py`, with `baryrat` 2.1.2 |
 | `recertification/cell_5.json` | `_recert/cell_5.json` | `recertify_ladder.py --cell 5`, over the recorded harness |
 | `results-second-instance-f1/knee-f1/` | `_knee-f1/` | `knee_walk_f1.py`, `make_corrected_record.py` and the F1 analysis scripts |
 | `analysis/` | the paper's record set, top level | the drivers, analysers and reference named above, with `ladder_analysis.py` and `validate_tail_instance.py` |
+
+`results-second-edge-a2/` is the independent solver's record at the second
+Boys left edge `a2 = 2 x0 = 23.799696304216968`, for the three targets
+(`rel:1e-13`, `abs:5e-14`, `rel:1e-14`) over the fifteen Group A widths.
+`baryrat` 2.1.2, the BRASIL rational minimax algorithm, produced every cell
+under the paper's acceptance rule unchanged; the `x0` side of every
+comparison is `results-corrected/corrected-counts.json`. The run is 45 cells
+on six workers: 1359.7 s of production wall, 1405.6 s including the two
+probes. All 45 witnesses pass the independent re-evaluation in
+`verify_witnesses.py`. A count is an existence upper bound under this solver,
+not a minimality proof.
 
 `results-second-instance-f1/knee-f1/` is the paper's `_knee-f1/` block, copied
 verbatim. `knee_walk_f1.py` produced the two walk records with
@@ -337,6 +350,129 @@ hash the same, as do the knee block's `model_table.json` and
 | `results-second-instance-f1-control/sweep_x0_rel_1e-13.json` | `32a730e4d11e44009707806fd47e6b78d7276c3d4ecbf9028b06215cc37fc675` |
 | `results-second-instance-f1-control/sweep_x0_rel_1e-14.csv` | `bb426d6109b5bcfce583381d5f7f29cd7b397395a8015e9ed779c7660c9be1e2` |
 | `results-second-instance-f1-control/sweep_x0_rel_1e-14.json` | `cb7225b0a211cbe1b34164d5c946b9cff88b6c81cbac316adc04e2194bd0f796` |
+
+**`results-second-edge-a2/`**
+
+| File | SHA-256 |
+| --- | --- |
+| `results-second-edge-a2/a2_run_summary.json` | `fbdc935ace63fe6fda9867b0e5e57f36ddb35dd285869bcb72c0cfeb6f34149b` |
+| `results-second-edge-a2/analysis.json` | `f49f8aa67c845d427ad43a1b0ded76002638996a0fdf43ec18d2ba8c12cd6b4a` |
+| `results-second-edge-a2/analyze_second_edge_a2.py` | `2de78c6158544e05b1628398dd6ca26f1dd1d526f622172ead219655c9d1df0f` |
+| `results-second-edge-a2/cells/A2_abs514_m1.final.json` | `d9b51b9db28d38286991bb2d511708dc3633204ec3431741e9479dc687b85eda` |
+| `results-second-edge-a2/cells/A2_abs514_m1.json` | `9a0596c2c6f4487a8c7989f2a50a0463b7997177ad364a8ef56508531f17e40a` |
+| `results-second-edge-a2/cells/A2_abs514_m2.final.json` | `f3567d749277517d7d78c326eba60eefa6c2db4da5cdce33b47436f1db779f93` |
+| `results-second-edge-a2/cells/A2_abs514_m2.json` | `4ef1c681ca6160862a3baf35f81a6778f66f35cd7c7ce8d2d5105851beca86df` |
+| `results-second-edge-a2/cells/A2_abs514_m3.final.json` | `77d2cd9206b9ac14d31c951e66f5c7a20a8645fc6703c8de0befee4e62545373` |
+| `results-second-edge-a2/cells/A2_abs514_m3.json` | `82bd3d572350af46f66307ef481f5b8c83563a6c492d50cd43bfcddff80d4d1f` |
+| `results-second-edge-a2/cells/A2_abs514_m4.final.json` | `cbea23cb23c26f9e4b7d3d77c852346b866a2bcb32b342b9216cbd43adf309a5` |
+| `results-second-edge-a2/cells/A2_abs514_m4.json` | `7a9b5c8d20261497c65f2d2c82065ac1295114d4c23e656110784d899a8e9d54` |
+| `results-second-edge-a2/cells/A2_abs514_m5.final.json` | `555dba18c58735bd333d178d6acd62bf2754d8398c2abd259e00b92243e6c7f6` |
+| `results-second-edge-a2/cells/A2_abs514_m5.json` | `a2c77e47a37056303051efeb6aafe84d0a6e77ef8bba4e3669e71c8fd65e653c` |
+| `results-second-edge-a2/cells/A2_abs514_m6.final.json` | `537d28c573318d91f935e3514d0a134a689ebe1a7e5d1be02c82fc429233eba3` |
+| `results-second-edge-a2/cells/A2_abs514_m6.json` | `e6c55173945e0c21f22e211014eb785edf9f587e28468de24420cc1fa6140698` |
+| `results-second-edge-a2/cells/A2_abs514_m7.final.json` | `5329c818d761296650ff1bc1d0e1c8f4f8f65df195212683fc5e06f4423bbba0` |
+| `results-second-edge-a2/cells/A2_abs514_m7.json` | `0e084f25dfe18c17f46bd7cbf58f0144a618f4ff80b1c0323b4bef6a706364f2` |
+| `results-second-edge-a2/cells/A2_abs514_p0.final.json` | `6de9d2a32128556e259943bfaadd1ec2c1b323b4e4427e4ac4930774e7111ea6` |
+| `results-second-edge-a2/cells/A2_abs514_p0.json` | `f9cac70104380118aec919acb1f44a1488ef0761b63dd4f28ff4741cfc9f18dc` |
+| `results-second-edge-a2/cells/A2_abs514_p1.final.json` | `947a26e8a7d0db61dc7639ada90b99eff9379ffa89a82cbecd6d510e30cc5d81` |
+| `results-second-edge-a2/cells/A2_abs514_p1.json` | `028b75b49c5d30e2bb9b364f523313a9ccac8358e8c91dadb7328109df88fcde` |
+| `results-second-edge-a2/cells/A2_abs514_p2.final.json` | `efde211736d5858b05c8fadfea7a84728b33a3d2f53edd7f156e7851fb27c051` |
+| `results-second-edge-a2/cells/A2_abs514_p2.json` | `0fbc1790f3aa29697078b3a8d52ef5b7e945bd79c3ac60108d2a00360c28a3ca` |
+| `results-second-edge-a2/cells/A2_abs514_p3.final.json` | `f17677164e3a72bad9769d47fea1ea1f8623beb5a23932399e6e631808632d45` |
+| `results-second-edge-a2/cells/A2_abs514_p3.json` | `05ca8cddc0bbc55fed59c46bed9f0e65e953134f75ce63f1e3bdc529b58794b8` |
+| `results-second-edge-a2/cells/A2_abs514_p4.final.json` | `c444d29db1c1c83b1b80cd4f15176b482118c03744a28ade9007cd5b2a31496f` |
+| `results-second-edge-a2/cells/A2_abs514_p4.json` | `48f040e86666ddbbe527a68e4dc6449223cd46841a8d4afd71783be051ffa6ef` |
+| `results-second-edge-a2/cells/A2_abs514_p5.final.json` | `fb3b48a5853415abef28c5523e6d2f47bf7834623a99cc35a4ae2ec6f0ace54e` |
+| `results-second-edge-a2/cells/A2_abs514_p5.json` | `4927b030a28fe5a44a39f9cd6518358d56a852f70f93c33e6e6086d8dd74102a` |
+| `results-second-edge-a2/cells/A2_abs514_paper.final.json` | `5512a09971291123957f2da3fff3c86620748356bebd148f053d16487053a9d1` |
+| `results-second-edge-a2/cells/A2_abs514_paper.json` | `04f760b0cf8f0952e03f19c52f37ae1c647b48f381b797ab0c3e80054927b28f` |
+| `results-second-edge-a2/cells/A2_abs514_ship.final.json` | `a69ad5ac0f0323bf5a842faa5831ae890f664ca620cd65f8b71885ac6bd56d89` |
+| `results-second-edge-a2/cells/A2_abs514_ship.json` | `fe39116fc0ea805e2e02b7d11f928b3b2c116a357a5f2391bc73d2262f8032ec` |
+| `results-second-edge-a2/cells/A2_rel13_m1.final.json` | `56f246bbbb5dbd8a0b88e608f2661f3e7bb2a3d8f54dcb846272102cb6f77e78` |
+| `results-second-edge-a2/cells/A2_rel13_m1.json` | `8892caf98808e3e8736fc45e08b6aaa9fbff9520b6001ed311b2321173800ad7` |
+| `results-second-edge-a2/cells/A2_rel13_m2.final.json` | `117282fd7ebbe7fa347f19632e66940d043069ed3df76d948e2f1306a0d27597` |
+| `results-second-edge-a2/cells/A2_rel13_m2.json` | `aa06ff4ed9c1b2336f9e055ca43c5486cc7f26572eadb0ee530e0e1469a7ee8b` |
+| `results-second-edge-a2/cells/A2_rel13_m3.final.json` | `fb0df4612f8c3d5e6af1e4809061874b5f60424bc6cb2f52eb463f22dfc382eb` |
+| `results-second-edge-a2/cells/A2_rel13_m3.json` | `9fa8f075a49fe71f6e74f2229ea93d4584c9922e4772d7d1e3c5f80e1293c5bd` |
+| `results-second-edge-a2/cells/A2_rel13_m4.final.json` | `2c915b35ba47425910e7d689c4038ce595cf42bd143faefb03f4aed7a82c306b` |
+| `results-second-edge-a2/cells/A2_rel13_m4.json` | `3693f8a65cff7ddeb0c5f7f79315cc7373fc3834b8b7e639ae833a90f6456a8b` |
+| `results-second-edge-a2/cells/A2_rel13_m5.final.json` | `1763628edc6ea7de025636bc754859dd4e32689d280c934feab54bdcfeaca869` |
+| `results-second-edge-a2/cells/A2_rel13_m5.json` | `59c08984816fdcb9934db304a6922cd6cb43c063ece9a720a80575d5ea1eba7c` |
+| `results-second-edge-a2/cells/A2_rel13_m6.final.json` | `298caa0ebbfcea0b1edf3c688d3546cde1f195ac6a1ab4fecde1aa3194dffd4e` |
+| `results-second-edge-a2/cells/A2_rel13_m6.json` | `784bf3d564ac31ef7c2235f89b28e7cc80ad660c9024e2414ebf48e2b138c3f6` |
+| `results-second-edge-a2/cells/A2_rel13_m7.final.json` | `90dddd2b7bf940175e4f6932e02e878a4c5243b468f5a65cfc3c39ed22080dc1` |
+| `results-second-edge-a2/cells/A2_rel13_m7.json` | `859091300336102ef462c6b8b5caa7c0c12e44777f2da9375a07d3fb8aaf3bff` |
+| `results-second-edge-a2/cells/A2_rel13_p0.final.json` | `ebbee9c081586a0245cb14d68ae5a7dcb78dfb3b89557653d0c449fdcf250f93` |
+| `results-second-edge-a2/cells/A2_rel13_p0.json` | `9cd2023c0ddbe0239cc69ffe1a2c19c1bf6958a970eaf1d7df33d1d29c231d94` |
+| `results-second-edge-a2/cells/A2_rel13_p1.final.json` | `15e7c07670a1c593abad6044ef18c0ca05f866a369fdcbb266a04e4bc4253648` |
+| `results-second-edge-a2/cells/A2_rel13_p1.json` | `8ac1c50056e34c1f7ee652e31f656ceacd7a1bae36d5b6e18a5191f74296c2a6` |
+| `results-second-edge-a2/cells/A2_rel13_p2.final.json` | `b82e1d3a7e113b0f23d7ddd23203b7902e53a2e5614f4b32bbd124043b888eca` |
+| `results-second-edge-a2/cells/A2_rel13_p2.json` | `c34892088beb2b77d21ab8eeceb7b2823da908adfb8bc506091820a09a23def4` |
+| `results-second-edge-a2/cells/A2_rel13_p3.final.json` | `830c4dbf1dea48704b4006a09d901238471261f9eb752a8baa2be389e1907e35` |
+| `results-second-edge-a2/cells/A2_rel13_p3.json` | `65f834ca875f4891f2894c048ba74a200440a500b3e62a7d7365d2e77422018a` |
+| `results-second-edge-a2/cells/A2_rel13_p4.final.json` | `1d11e8b7bc0a42d9370ce336e3b199808bafcbb28069e666e9439bafd75f2acd` |
+| `results-second-edge-a2/cells/A2_rel13_p4.json` | `3d48b28dd1e7436f132c177bff3414be2fbad9d1d9bb80a6ca05b0a5ee24fd24` |
+| `results-second-edge-a2/cells/A2_rel13_p5.final.json` | `6a11f64a7ecfc7162be1b97ceda92d68f7ceb91aa9088b69a47282e8569747b9` |
+| `results-second-edge-a2/cells/A2_rel13_p5.json` | `ad2ecc14648d60803261b060bf0cb384d5084574956c1c9bea9c8bfd702364c0` |
+| `results-second-edge-a2/cells/A2_rel13_paper.final.json` | `d93159d20dad87e004cff31851923193a12ef307039faaa83b7330ea8462353e` |
+| `results-second-edge-a2/cells/A2_rel13_paper.json` | `053274afc944f9bd5d92e3c482dbc86eda182bff2c869b1309fbebb066d0c822` |
+| `results-second-edge-a2/cells/A2_rel13_ship.final.json` | `5d9d0842c36e40323f29f4e03fe78a4383b8482f5611e898c15d7492e73142f4` |
+| `results-second-edge-a2/cells/A2_rel13_ship.json` | `7c872b04bbc1095b20d7470b7e9c0ecb16cfe29607184f9f47c8f7440f74a03e` |
+| `results-second-edge-a2/cells/A2_rel14_m1.final.json` | `2ce7f2da8a227e1f68f9be757f26606481456a6e189ce97457a663999625718b` |
+| `results-second-edge-a2/cells/A2_rel14_m1.json` | `45c924463a7d78132032a8d29a6347c65d358f13b0de1590db4190145e8756d8` |
+| `results-second-edge-a2/cells/A2_rel14_m2.final.json` | `a13b7602a1f5bb25185f8a1ddcfdf989a8306f6521252709c4e8b86cabc0f6a3` |
+| `results-second-edge-a2/cells/A2_rel14_m2.json` | `a23f04fc93783607475520808d095bcdbdd00c0ad9bda2a406a6bc9c9d8494f0` |
+| `results-second-edge-a2/cells/A2_rel14_m3.final.json` | `93bd42b78ddf1a5a92b46f8ec590d79a6ed112b17db82bc44e7202ae0996255c` |
+| `results-second-edge-a2/cells/A2_rel14_m3.json` | `bc0c0bc6beaa625b7835d2c2a3871db6b9d717ecf81fab47995bfaeaadf9a0dd` |
+| `results-second-edge-a2/cells/A2_rel14_m4.final.json` | `461dfc3c25309a48bd98ae7e178e32ee9d7f5d63e8d0266851c763ae344ef72a` |
+| `results-second-edge-a2/cells/A2_rel14_m4.json` | `0b763fcfc3178ed4244d7a17aa69991a212d4d55b62136411a1e1d824d7f4e4e` |
+| `results-second-edge-a2/cells/A2_rel14_m5.final.json` | `02efe331223e968a5654d1753f0f2a9d0ff86793ae2cf268d6d7084872ae8234` |
+| `results-second-edge-a2/cells/A2_rel14_m5.json` | `afe2fbea0967e389287078caebaad48f27fbd035c504c78a753c9b443a37344d` |
+| `results-second-edge-a2/cells/A2_rel14_m6.final.json` | `56d6eaedd28a239e92bf49b5806964208b8252913d55d4bf02bf688eb9f89580` |
+| `results-second-edge-a2/cells/A2_rel14_m6.json` | `2603d92ed3d01e59b874500574af8745150538b4f550b912d2233c06f949b67a` |
+| `results-second-edge-a2/cells/A2_rel14_m7.final.json` | `6a1c3e4238984475b4e6a92c0a421e8f8e68661dd958be2c966df32fe3ae2164` |
+| `results-second-edge-a2/cells/A2_rel14_m7.json` | `ef60b68f287b7077c4fa56a44c97510e39b6b46461946922fc695fdca980fb26` |
+| `results-second-edge-a2/cells/A2_rel14_p0.final.json` | `dee5735ded1a7139e360d1f543d80293804b6a315c4d27faa41295895ae20840` |
+| `results-second-edge-a2/cells/A2_rel14_p0.json` | `a2b50f999b7928e128a0b6f11481cd9666e445023c9cf20c24d96da68ca81854` |
+| `results-second-edge-a2/cells/A2_rel14_p1.final.json` | `4883d586a26a4887db302fa759bfa91d73ff7bef3721a81fbe8da4ea2f72cffd` |
+| `results-second-edge-a2/cells/A2_rel14_p1.json` | `cb5a1f532b89d96b7bf036f7ae73bf8485d452a73c58bd21b30e2329297cdf9b` |
+| `results-second-edge-a2/cells/A2_rel14_p2.final.json` | `b8c837984e4a8c54ebe074564d8fd354a00badbead59d77fce241e0150c0909a` |
+| `results-second-edge-a2/cells/A2_rel14_p2.json` | `40406f0bd17abe777416010e8e6ab1738f14fd58b5896db92feef7e01ce9e099` |
+| `results-second-edge-a2/cells/A2_rel14_p3.final.json` | `9f34e34396bda558143f26e651d73923b6753939ca9aa227f0dfe20d61c5257d` |
+| `results-second-edge-a2/cells/A2_rel14_p3.json` | `78432affba6927bf1809d52a3f41e1ddc28a9bf5c5b7d973d5f41a2f2a29f1b5` |
+| `results-second-edge-a2/cells/A2_rel14_p4.final.json` | `a154e7eeed2d1cbbdf4c88b1cfc51715762ec2edd2e927aba1e4717bea3d1a8a` |
+| `results-second-edge-a2/cells/A2_rel14_p4.json` | `11a259e1f9e37678e67a01e1bf258d3da7bdf1372f22a14a25d47924c289da77` |
+| `results-second-edge-a2/cells/A2_rel14_p5.final.json` | `21f61910489c9883105e1c388943d11decd02240c24a7cc68d86a9789a72a807` |
+| `results-second-edge-a2/cells/A2_rel14_p5.json` | `cd8853593ef1baf15854bf21bebf5183625ea93dd88f80b47c267397db715f5c` |
+| `results-second-edge-a2/cells/A2_rel14_paper.final.json` | `9d74e8e98e7d4f67538986d890191cce7679e302d0d713cae045cacbf6e4c157` |
+| `results-second-edge-a2/cells/A2_rel14_paper.json` | `44e6438da01a2426932195d5fc6c7a0df96127a63fe0066d03e774e5776cba88` |
+| `results-second-edge-a2/cells/A2_rel14_ship.final.json` | `59fbbecd7d432184d2ace9e6953138d9d68fd18d3b4e96d510164f5cf849749b` |
+| `results-second-edge-a2/cells/A2_rel14_ship.json` | `ae93ce051261a6a7bdb984a49512b651a80872fd0b04d04852e376c684b5fd9c` |
+| `results-second-edge-a2/checks/A_abs514_p1.final.json` | `15f5c7722acdbb45e9deca85ae86f7f626526bbc9d18937c434fae5fee58c3a7` |
+| `results-second-edge-a2/checks/A_abs514_p1.json` | `1ca181d9de48060e7b3ffb324086888d77865bf1a05d8f08fef6427ee00cf71e` |
+| `results-second-edge-a2/checks/x0_check_summary.json` | `778d1c68a87506fbd0ec25165c2fe44854c41ea3c776213ba0c1f701d334e980` |
+| `results-second-edge-a2/checks/x0_fidelity_comparison.json` | `b739793b8b9f6e1553c114b9093cf928d758e958dadd528db6a33a30ede6c06a` |
+| `results-second-edge-a2/comparison.csv` | `3e6a6a41bb2960aeb7e19fc4713be48f6a5f9af957ad4e5085f549b154bb92c6` |
+| `results-second-edge-a2/counts_by_width_target.csv` | `222e7121c60947f52dffacbfdb8d725b4713af4ec597ab322c245c740ae05c90` |
+| `results-second-edge-a2/logs/analysis.log` | `1eaad2b9431334ef2f070e59c60d6171adaa763b0b8f14c42b2c04a474860932` |
+| `results-second-edge-a2/logs/chunk1_summary.json` | `ee199cdc20d0afc6873e74938d9f5767fdba11f61fcb2233056b2ec5050fc35c` |
+| `results-second-edge-a2/logs/chunk2_summary.json` | `98600ae4cd29093638f4b7e9b356f020c96a96af9587b310f022c0e408394cc1` |
+| `results-second-edge-a2/logs/chunk3a_summary.json` | `66ebf8c6054794e135bdcfb41b60891f6d788937055776500ee1f88e8a876768` |
+| `results-second-edge-a2/logs/chunk3b_summary.json` | `b40172771fadb8932ed64b31640056513b7b770a71ff8344e54d41658ce350bd` |
+| `results-second-edge-a2/logs/chunk3c_summary.json` | `fbdc935ace63fe6fda9867b0e5e57f36ddb35dd285869bcb72c0cfeb6f34149b` |
+| `results-second-edge-a2/logs/probe_a2_abs514_p0.log` | `38c89477dd6faa444ec266dbc5cbb56ef48c8d9d91981f1da7f91702fd2715a3` |
+| `results-second-edge-a2/logs/probe_x0_abs514_p1.log` | `bab2310083e230274ba820791357b8500e43e8994a8488fe027657aa573c1d3d` |
+| `results-second-edge-a2/logs/run_chunk1.log` | `9113e8fc7f7345423e4c4d52fe5e8a21a6b5053cbbbc7ba6cb03a14b157291d0` |
+| `results-second-edge-a2/logs/run_chunk2.log` | `f6e87e525b19b56b839682113ede403b90fb550ff16d64469ec3c168eb90bc44` |
+| `results-second-edge-a2/logs/run_chunk3a_p5.log` | `0a0be685264e2bbeefec2cee8abd5bbc6525da39315def618343826c3a4b7abb` |
+| `results-second-edge-a2/logs/run_chunk3b_p4.log` | `891644febe2b687216926be8036544ae64287e24764f0b25138f8382b40a2dad` |
+| `results-second-edge-a2/logs/run_chunk3c_ship_paper.log` | `d716e0468d54a7c66a16d70f58396e35809f27aa6213e470c1e23c57f27c2f63` |
+| `results-second-edge-a2/logs/verify_witnesses.log` | `8a2e265c2fb7d516ab9eaa2b3babd60b222385245e2d51ce939c38f8c048e4c7` |
+| `results-second-edge-a2/README.md` | `708d7df3961cd930bb1d1911de178b5609078ebaf1b3ff2443253a5f5bd92a87` |
+| `results-second-edge-a2/second_edge_a2_solver.py` | `f181b939d3a7091ecb0bb222806fb54d07a6174a8c998e4af23c58d41b13b4b7` |
+| `results-second-edge-a2/second-edge-a2-counts.csv` | `f0ddede7107c6cd815f8b5b0ba0a0f557645d4041f89e78512a6060f46b6dcbc` |
+| `results-second-edge-a2/second-edge-a2-counts.json` | `0b98c5d33f3cf068bb8eea3182c42e08cc1e831cedd222af81369a2031e7e792` |
+| `results-second-edge-a2/verify_witnesses.py` | `a15f2c7af0eda7cdb7ce01cd8373b82c47a4639ca5bd1d2a32f9b6deaea4b381` |
 
 **`recertification/` and `analysis/`**
 

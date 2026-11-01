@@ -1,0 +1,82 @@
+{
+ "cell_id": "A2_abs514_m4",
+ "edge": "a2",
+ "group": "A",
+ "kind": "abs",
+ "target": 5e-14,
+ "W": 0.125,
+ "a": 23.79969630421697,
+ "width_name": "m4",
+ "target_tag": "abs514",
+ "x0_count_used_for_bound": 4,
+ "max_stored": 7,
+ "levels_complete": 4,
+ "first_meet_default": 4,
+ "tightened_levels": [
+  3
+ ],
+ "default_settings": {
+  "name": "default",
+  "tol": 0.0001,
+  "maxiter": 1000,
+  "npi": -30,
+  "init_steps": 100,
+  "max_step_size": 0.1
+ },
+ "tightened_settings": {
+  "name": "tightened",
+  "tol": 1e-08,
+  "maxiter": 5000,
+  "npi": -40,
+  "init_steps": 300,
+  "max_step_size": 0.05
+ },
+ "corrected_count": 4,
+ "pair": [
+  1,
+  2
+ ],
+ "witness": {
+  "m": 1,
+  "k": 2,
+  "stored": 4,
+  "route": "default",
+  "converged": true,
+  "deviation": 0.0,
+  "rel_2001": 4.629495155221638e-14,
+  "abs_2001": 8.409939411535561e-15,
+  "den_2001": 0.9947752731991913,
+  "rel_4001": 4.629495155221638e-14,
+  "abs_4001": 8.409939411535561e-15,
+  "den_4001": 0.9947752731991913,
+  "P": [
+   "0.1814219094777662",
+   "0.00023759106261448483",
+   "8.357445178279719e-17"
+  ],
+  "Q": [
+   "1.0",
+   "0.0026192079636128973",
+   "8.575324351455015e-7"
+  ]
+ },
+ "witness_selection": "both",
+ "delivered_2001": 8.409939411535561e-15,
+ "delivered_4001": 8.409939411535561e-15,
+ "guard_2001": 0.9947752731991913,
+ "guard_4001": 0.9947752731991913,
+ "best_below": 2.546787780666193e-11,
+ "best_below_pair": [
+  1,
+  1
+ ],
+ "best_below_any": 2.546787780666193e-11,
+ "below_ratio": 509.35755613323863,
+ "route": "default",
+ "count_lowered_by_tightened": false,
+ "meets_4001": true,
+ "guard_4001_ok": true,
+ "witness_converged": true,
+ "margin_limited": false,
+ "solid": true
+}
