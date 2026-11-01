@@ -1,0 +1,1717 @@
+{
+  "meta": {
+    "generated_utc": "2026-10-26T19:26:21.203983+00:00",
+    "schema": 2,
+    "boys_root": "C:\\Users\\myaml\\dev\\_mainonly",
+    "git": {
+      "commit": "834bdbb18a30ac8538b519436429f78d41f187ce",
+      "tag": "v5.1.1"
+    },
+    "header": {
+      "path": "C:\\Users\\myaml\\dev\\_mainonly\\include\\boys\\boys_coefficients.hpp",
+      "sha256": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204"
+    },
+    "generator": {
+      "path": "C:\\Users\\myaml\\dev\\_mainonly\\tools\\gen_boys_coefficients.py",
+      "sha256": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180"
+    },
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "precision_scope": {
+      "reported_precision": "fp64",
+      "stored_type": "binary64",
+      "evaluation": "binary64, worse of the fused and separate multiply-add routes",
+      "count_unit": "coefficients of one representation of the fit",
+      "why_fp64": "the count trade is resolved at the double lane's 1e-13 F_0 contract; the nearest-neighbour comparison is 5e-14 absolute in binary64; and a binary64 coefficient is 8 bytes while a binary32 one is 4, so counts from the two lanes are not like-for-like storage",
+      "fp32_in_this_paper": "static counts only, a secondary column; not part of the width law",
+      "sweep_scope": "fp64 only: binary64 stored coefficients, binary64 evaluation, targets rel:1e-13 and abs:5e-14",
+      "fp32_comparison_would_need": "the float lane's own path: fits stored and evaluated in binary32, both multiply-add routes, certified at max(2^-22 F_n(x), 1.5e-7) from the generator's f32 fit and acceptance functions, on the float lane's own edges and partitions"
+    },
+    "grid": {
+      "nodes": 2001,
+      "coarse_stride": 5
+    },
+    "solver": {
+      "scan_outer": 100,
+      "refine_outer": 300,
+      "remez_iters": 60,
+      "cheb_deg": [
+        4,
+        64
+      ],
+      "cheb_degree_mode": "records",
+      "cheb_degrees": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "rat_stored": [
+        3,
+        40
+      ],
+      "rat_k_max": 8
+    },
+    "function": "boys_F0",
+    "left_edge": "11.899848152108484",
+    "base_left_edge": "11.899848152108484",
+    "width_scale": 1,
+    "matched_ratio": "every width is the Group A width multiplied by 1, so W/a is the Group A W/x0",
+    "reference": "the generator's own boys_ref(0, x, 1e-55, 900); the control run",
+    "harness": {
+      "count_sweep": {
+        "path": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\count_sweep.py",
+        "sha256": "a5def761c8f18d585396210b28864dc6c4a108d2cfda4f3788d87a7f6c854f10"
+      },
+      "driver": {
+        "path": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\tail_instance_sweep.py",
+        "sha256": "fc87a1dd4dca0ce6ea18685d185857dc19fda8d45e9baed37ff28540bf77518c"
+      }
+    },
+    "target_note": "rel targets are relative to f; abs:5e-14 is an absolute error on f, unscaled (the paper's absolute arm is F_0(a)-scaled through L; the analysis states the model convention it uses)"
+  },
+  "precision_scope": {
+    "reported_precision": "fp64",
+    "stored_type": "binary64",
+    "evaluation": "binary64, worse of the fused and separate multiply-add routes",
+    "count_unit": "coefficients of one representation of the fit",
+    "why_fp64": "the count trade is resolved at the double lane's 1e-13 F_0 contract; the nearest-neighbour comparison is 5e-14 absolute in binary64; and a binary64 coefficient is 8 bytes while a binary32 one is 4, so counts from the two lanes are not like-for-like storage",
+    "fp32_in_this_paper": "static counts only, a secondary column; not part of the width law",
+    "sweep_scope": "fp64 only: binary64 stored coefficients, binary64 evaluation, targets rel:1e-13 and abs:5e-14",
+    "fp32_comparison_would_need": "the float lane's own path: fits stored and evaluated in binary32, both multiply-add routes, certified at max(2^-22 F_n(x), 1.5e-7) from the generator's f32 fit and acceptance functions, on the float lane's own edges and partitions"
+  },
+  "cells": [
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-7",
+      "width_x0": "0.0078125",
+      "width": "0.0078125",
+      "width_f": 0.0078125,
+      "a": "11.899848152108484",
+      "b": "11.907660652108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "3.6525651318349605e-16",
+        "delivered_abs": "9.3817579212343487e-17",
+        "at_x_rel": "11.904645027108484",
+        "at_x_abs": "11.904645027108484",
+        "refined": true,
+        "seconds": 0.101
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 2.954,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-7",
+      "width_x0": "0.0078125",
+      "width": "0.0078125",
+      "width_f": 0.0078125,
+      "a": "11.899848152108484",
+      "b": "11.907660652108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "3.6525651318349605e-16",
+        "delivered_abs": "9.3817579212343487e-17",
+        "at_x_rel": "11.904645027108484",
+        "at_x_abs": "11.904645027108484",
+        "refined": true,
+        "seconds": 0.103
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 2.762,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-7",
+      "width_x0": "0.0078125",
+      "width": "0.0078125",
+      "width_f": 0.0078125,
+      "a": "11.899848152108484",
+      "b": "11.907660652108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "3.6525651318349605e-16",
+        "delivered_abs": "9.3817579212343487e-17",
+        "at_x_rel": "11.904645027108484",
+        "at_x_abs": "11.904645027108484",
+        "refined": true,
+        "seconds": 0.09
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 2.762,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-6",
+      "width_x0": "0.015625",
+      "width": "0.015625",
+      "width_f": 0.015625,
+      "a": "11.899848152108484",
+      "b": "11.915473152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.5441057769262818e-16",
+        "delivered_abs": "6.531998411321444e-17",
+        "at_x_rel": "11.914262214608484",
+        "at_x_abs": "11.914262214608484",
+        "refined": true,
+        "seconds": 0.048
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.127,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-6",
+      "width_x0": "0.015625",
+      "width": "0.015625",
+      "width_f": 0.015625,
+      "a": "11.899848152108484",
+      "b": "11.915473152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.5441057769262818e-16",
+        "delivered_abs": "6.531998411321444e-17",
+        "at_x_rel": "11.914262214608484",
+        "at_x_abs": "11.914262214608484",
+        "refined": true,
+        "seconds": 0.047
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.127,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-6",
+      "width_x0": "0.015625",
+      "width": "0.015625",
+      "width_f": 0.015625,
+      "a": "11.899848152108484",
+      "b": "11.915473152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.5441057769262818e-16",
+        "delivered_abs": "6.531998411321444e-17",
+        "at_x_rel": "11.914262214608484",
+        "at_x_abs": "11.914262214608484",
+        "refined": true,
+        "seconds": 0.054
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.127,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-5",
+      "width_x0": "0.03125",
+      "width": "0.03125",
+      "width_f": 0.03125,
+      "a": "11.899848152108484",
+      "b": "11.931098152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "3.7653260997985928e-16",
+        "delivered_abs": "9.6652954660278391e-17",
+        "at_x_rel": "11.919660652108484",
+        "at_x_abs": "11.919660652108484",
+        "refined": true,
+        "seconds": 0.068
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.352,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-5",
+      "width_x0": "0.03125",
+      "width": "0.03125",
+      "width_f": 0.03125,
+      "a": "11.899848152108484",
+      "b": "11.931098152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "3.7653260997985928e-16",
+        "delivered_abs": "9.6652954660278391e-17",
+        "at_x_rel": "11.919660652108484",
+        "at_x_abs": "11.919660652108484",
+        "refined": true,
+        "seconds": 0.081
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.352,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-5",
+      "width_x0": "0.03125",
+      "width": "0.03125",
+      "width_f": 0.03125,
+      "a": "11.899848152108484",
+      "b": "11.931098152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "3.7653260997985928e-16",
+        "delivered_abs": "9.6652954660278391e-17",
+        "at_x_rel": "11.919660652108484",
+        "at_x_abs": "11.919660652108484",
+        "refined": true,
+        "seconds": 0.074
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.352,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-4",
+      "width_x0": "0.0625",
+      "width": "0.0625",
+      "width_f": 0.0625,
+      "a": "11.899848152108484",
+      "b": "11.962348152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.1088855146362353e-15",
+        "delivered_abs": "5.4129314601494168e-16",
+        "at_x_rel": "11.921473152108484",
+        "at_x_abs": "11.921473152108484",
+        "refined": true,
+        "seconds": 0.089
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.461,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-4",
+      "width_x0": "0.0625",
+      "width": "0.0625",
+      "width_f": 0.0625,
+      "a": "11.899848152108484",
+      "b": "11.962348152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.1088855146362353e-15",
+        "delivered_abs": "5.4129314601494168e-16",
+        "at_x_rel": "11.921473152108484",
+        "at_x_abs": "11.921473152108484",
+        "refined": true,
+        "seconds": 0.089
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.461,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-4",
+      "width_x0": "0.0625",
+      "width": "0.0625",
+      "width_f": 0.0625,
+      "a": "11.899848152108484",
+      "b": "11.962348152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "2.1088855146362353e-15",
+        "delivered_abs": "5.4129314601494168e-16",
+        "at_x_rel": "11.921473152108484",
+        "at_x_abs": "11.921473152108484",
+        "refined": true,
+        "seconds": 0.081
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.461,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-3",
+      "width_x0": "0.125",
+      "width": "0.125",
+      "width_f": 0.125,
+      "a": "11.899848152108484",
+      "b": "12.024848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "5.9380992433611782e-14",
+        "delivered_abs": "1.5249133080083231e-14",
+        "at_x_rel": "11.942660652108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 0.096
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.438,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-3",
+      "width_x0": "0.125",
+      "width": "0.125",
+      "width_f": 0.125,
+      "a": "11.899848152108484",
+      "b": "12.024848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 5,
+        "m": 4,
+        "k": null,
+        "delivered_rel": "5.9380992433611782e-14",
+        "delivered_abs": "1.5249133080083231e-14",
+        "at_x_rel": "11.942660652108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 0.091
+      },
+      "parity": {
+        "cheb_degree": 4,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.438,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-3",
+      "width_x0": "0.125",
+      "width": "0.125",
+      "width_f": 0.125,
+      "a": "11.899848152108484",
+      "b": "12.024848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 6,
+        "m": 5,
+        "k": null,
+        "delivered_rel": "3.5980751882029509e-16",
+        "delivered_abs": "9.2065760252656227e-17",
+        "at_x_rel": "11.995910652108484",
+        "at_x_abs": "11.995910652108484",
+        "refined": true,
+        "seconds": 0.174
+      },
+      "parity": {
+        "cheb_degree": 5,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.438,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-2",
+      "width_x0": "0.25",
+      "width": "0.25",
+      "width_f": 0.25,
+      "a": "11.899848152108484",
+      "b": "12.149848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 6,
+        "m": 5,
+        "k": null,
+        "delivered_rel": "8.925046645997553e-15",
+        "delivered_abs": "2.2913796636683047e-15",
+        "at_x_rel": "11.915598152108484",
+        "at_x_abs": "11.915598152108484",
+        "refined": true,
+        "seconds": 0.198
+      },
+      "parity": {
+        "cheb_degree": 5,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.232,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-2",
+      "width_x0": "0.25",
+      "width": "0.25",
+      "width_f": 0.25,
+      "a": "11.899848152108484",
+      "b": "12.149848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 6,
+        "m": 5,
+        "k": null,
+        "delivered_rel": "8.925046645997553e-15",
+        "delivered_abs": "2.2913796636683047e-15",
+        "at_x_rel": "11.915598152108484",
+        "at_x_abs": "11.915598152108484",
+        "refined": true,
+        "seconds": 0.165
+      },
+      "parity": {
+        "cheb_degree": 5,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.232,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-2",
+      "width_x0": "0.25",
+      "width": "0.25",
+      "width_f": 0.25,
+      "a": "11.899848152108484",
+      "b": "12.149848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 6,
+        "m": 5,
+        "k": null,
+        "delivered_rel": "8.925046645997553e-15",
+        "delivered_abs": "2.2913796636683047e-15",
+        "at_x_rel": "11.915598152108484",
+        "at_x_abs": "11.915598152108484",
+        "refined": true,
+        "seconds": 0.167
+      },
+      "parity": {
+        "cheb_degree": 5,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.232,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^-1",
+      "width_x0": "0.5",
+      "width": "0.5",
+      "width_f": 0.5,
+      "a": "11.899848152108484",
+      "b": "12.399848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 7,
+        "m": 6,
+        "k": null,
+        "delivered_rel": "5.0509797239510392e-15",
+        "delivered_abs": "1.2878825441411252e-15",
+        "at_x_rel": "12.093098152108484",
+        "at_x_abs": "11.923848152108484",
+        "refined": true,
+        "seconds": 0.326
+      },
+      "parity": {
+        "cheb_degree": 6,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.237,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^-1",
+      "width_x0": "0.5",
+      "width": "0.5",
+      "width_f": 0.5,
+      "a": "11.899848152108484",
+      "b": "12.399848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 7,
+        "m": 6,
+        "k": null,
+        "delivered_rel": "5.0509797239510392e-15",
+        "delivered_abs": "1.2878825441411252e-15",
+        "at_x_rel": "12.093098152108484",
+        "at_x_abs": "11.923848152108484",
+        "refined": true,
+        "seconds": 0.366
+      },
+      "parity": {
+        "cheb_degree": 6,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.237,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^-1",
+      "width_x0": "0.5",
+      "width": "0.5",
+      "width_f": 0.5,
+      "a": "11.899848152108484",
+      "b": "12.399848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 7,
+        "m": 6,
+        "k": null,
+        "delivered_rel": "5.0509797239510392e-15",
+        "delivered_abs": "1.2878825441411252e-15",
+        "at_x_rel": "12.093098152108484",
+        "at_x_abs": "11.923848152108484",
+        "refined": true,
+        "seconds": 0.34
+      },
+      "parity": {
+        "cheb_degree": 6,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.237,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^0",
+      "width_x0": "1.0",
+      "width": "1.0",
+      "width_f": 1.0,
+      "a": "11.899848152108484",
+      "b": "12.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 8,
+        "m": 7,
+        "k": null,
+        "delivered_rel": "1.0020512533600967e-14",
+        "delivered_abs": "2.5703342002603198e-15",
+        "at_x_rel": "11.936848152108484",
+        "at_x_abs": "11.936848152108484",
+        "refined": true,
+        "seconds": 0.544
+      },
+      "parity": {
+        "cheb_degree": 7,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.539,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^0",
+      "width_x0": "1.0",
+      "width": "1.0",
+      "width_f": 1.0,
+      "a": "11.899848152108484",
+      "b": "12.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 8,
+        "m": 7,
+        "k": null,
+        "delivered_rel": "1.0020512533600967e-14",
+        "delivered_abs": "2.5703342002603198e-15",
+        "at_x_rel": "11.936848152108484",
+        "at_x_abs": "11.936848152108484",
+        "refined": true,
+        "seconds": 0.468
+      },
+      "parity": {
+        "cheb_degree": 7,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.539,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^0",
+      "width_x0": "1.0",
+      "width": "1.0",
+      "width_f": 1.0,
+      "a": "11.899848152108484",
+      "b": "12.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 9,
+        "m": 8,
+        "k": null,
+        "delivered_rel": "4.4711178564911956e-16",
+        "delivered_abs": "1.129181773825032e-16",
+        "at_x_rel": "12.313848152108484",
+        "at_x_abs": "12.313848152108484",
+        "refined": true,
+        "seconds": 0.595
+      },
+      "parity": {
+        "cheb_degree": 8,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.539,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^1",
+      "width_x0": "2.0",
+      "width": "2.0",
+      "width_f": 2.0,
+      "a": "11.899848152108484",
+      "b": "13.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 9,
+        "m": 8,
+        "k": null,
+        "delivered_rel": "6.5839203198359753e-14",
+        "delivered_abs": "1.6914467617020966e-14",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 0.589
+      },
+      "parity": {
+        "cheb_degree": 8,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.748,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^1",
+      "width_x0": "2.0",
+      "width": "2.0",
+      "width_f": 2.0,
+      "a": "11.899848152108484",
+      "b": "13.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 9,
+        "m": 8,
+        "k": null,
+        "delivered_rel": "6.5839203198359753e-14",
+        "delivered_abs": "1.6914467617020966e-14",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 0.54
+      },
+      "parity": {
+        "cheb_degree": 8,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.748,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^1",
+      "width_x0": "2.0",
+      "width": "2.0",
+      "width_f": 2.0,
+      "a": "11.899848152108484",
+      "b": "13.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 10,
+        "m": 9,
+        "k": null,
+        "delivered_rel": "2.3521413402011107e-15",
+        "delivered_abs": "6.0311401145446075e-16",
+        "at_x_rel": "11.945848152108484",
+        "at_x_abs": "11.945848152108484",
+        "refined": true,
+        "seconds": 0.682
+      },
+      "parity": {
+        "cheb_degree": 9,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.748,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^2",
+      "width_x0": "4.0",
+      "width": "4.0",
+      "width_f": 4.0,
+      "a": "11.899848152108484",
+      "b": "15.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 11,
+        "m": 10,
+        "k": null,
+        "delivered_rel": "7.6426925636551079e-14",
+        "delivered_abs": "1.96345140273526e-14",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 1.2
+      },
+      "parity": {
+        "cheb_degree": 10,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 2.129,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^2",
+      "width_x0": "4.0",
+      "width": "4.0",
+      "width_f": 4.0,
+      "a": "11.899848152108484",
+      "b": "15.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 11,
+        "m": 10,
+        "k": null,
+        "delivered_rel": "7.6426925636551079e-14",
+        "delivered_abs": "1.96345140273526e-14",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 0.875
+      },
+      "parity": {
+        "cheb_degree": 10,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 2.129,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^2",
+      "width_x0": "4.0",
+      "width": "4.0",
+      "width_f": 4.0,
+      "a": "11.899848152108484",
+      "b": "15.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 12,
+        "m": 11,
+        "k": null,
+        "delivered_rel": "4.7234632037725268e-15",
+        "delivered_abs": "1.2087008513970546e-15",
+        "at_x_rel": "12.171848152108484",
+        "at_x_abs": "11.967848152108484",
+        "refined": true,
+        "seconds": 1.055
+      },
+      "parity": {
+        "cheb_degree": 11,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 2.129,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^3",
+      "width_x0": "8.0",
+      "width": "8.0",
+      "width_f": 8.0,
+      "a": "11.899848152108484",
+      "b": "19.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 14,
+        "m": 13,
+        "k": null,
+        "delivered_rel": "6.2728320496752699e-14",
+        "delivered_abs": "1.6081800348552099e-14",
+        "at_x_rel": "11.999848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 1.309
+      },
+      "parity": {
+        "cheb_degree": 13,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.701,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^3",
+      "width_x0": "8.0",
+      "width": "8.0",
+      "width_f": 8.0,
+      "a": "11.899848152108484",
+      "b": "19.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 14,
+        "m": 13,
+        "k": null,
+        "delivered_rel": "6.2728320496752699e-14",
+        "delivered_abs": "1.6081800348552099e-14",
+        "at_x_rel": "11.999848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 1.216
+      },
+      "parity": {
+        "cheb_degree": 13,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.701,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^3",
+      "width_x0": "8.0",
+      "width": "8.0",
+      "width_f": 8.0,
+      "a": "11.899848152108484",
+      "b": "19.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 15,
+        "m": 14,
+        "k": null,
+        "delivered_rel": "6.5778429387412535e-15",
+        "delivered_abs": "1.6842337129711303e-15",
+        "at_x_rel": "11.979848152108484",
+        "at_x_abs": "11.979848152108484",
+        "refined": true,
+        "seconds": 1.321
+      },
+      "parity": {
+        "cheb_degree": 14,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 1.701,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^4",
+      "width_x0": "16.0",
+      "width": "16.0",
+      "width_f": 16.0,
+      "a": "11.899848152108484",
+      "b": "27.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 18,
+        "m": 17,
+        "k": null,
+        "delivered_rel": "9.4361230991038428e-14",
+        "delivered_abs": "2.4241939579546999e-14",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 1.675
+      },
+      "parity": {
+        "cheb_degree": 17,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.771,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^4",
+      "width_x0": "16.0",
+      "width": "16.0",
+      "width_f": 16.0,
+      "a": "11.899848152108484",
+      "b": "27.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 18,
+        "m": 17,
+        "k": null,
+        "delivered_rel": "9.4361230991038428e-14",
+        "delivered_abs": "2.4241939579546999e-14",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 2.016
+      },
+      "parity": {
+        "cheb_degree": 17,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.771,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^4",
+      "width_x0": "16.0",
+      "width": "16.0",
+      "width_f": 16.0,
+      "a": "11.899848152108484",
+      "b": "27.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 20,
+        "m": 19,
+        "k": null,
+        "delivered_rel": "2.6530354039354677e-15",
+        "delivered_abs": "6.7040586469321616e-16",
+        "at_x_rel": "12.299848152108484",
+        "at_x_abs": "12.299848152108484",
+        "refined": true,
+        "seconds": 2.474
+      },
+      "parity": {
+        "cheb_degree": 19,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 1.771,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "2^5",
+      "width_x0": "32.0",
+      "width": "32.0",
+      "width_f": 32.0,
+      "a": "11.899848152108484",
+      "b": "43.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 25,
+        "m": 24,
+        "k": null,
+        "delivered_rel": "2.6297301031237046e-14",
+        "delivered_abs": "6.7559269417007838e-15",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 3.844
+      },
+      "parity": {
+        "cheb_degree": 24,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 3.188,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "2^5",
+      "width_x0": "32.0",
+      "width": "32.0",
+      "width_f": 32.0,
+      "a": "11.899848152108484",
+      "b": "43.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 24,
+        "m": 23,
+        "k": null,
+        "delivered_rel": "1.0386857358859799e-13",
+        "delivered_abs": "2.6684430233722344e-14",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 3.046
+      },
+      "parity": {
+        "cheb_degree": 23,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 3.188,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "2^5",
+      "width_x0": "32.0",
+      "width": "32.0",
+      "width_f": 32.0,
+      "a": "11.899848152108484",
+      "b": "43.899848152108484",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 26,
+        "m": 25,
+        "k": null,
+        "delivered_rel": "6.6343879317388689e-15",
+        "delivered_abs": "1.7044121796563215e-15",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 3.216
+      },
+      "parity": {
+        "cheb_degree": 25,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 3.188,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "ship",
+      "width_x0": "19.100151847891516",
+      "width": "19.100151847891516",
+      "width_f": 19.100151847891517,
+      "a": "11.899848152108484",
+      "b": "31.0",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 20,
+        "m": 19,
+        "k": null,
+        "delivered_rel": "3.1483124266269532e-14",
+        "delivered_abs": "8.0881945712509716e-15",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 1.362
+      },
+      "parity": {
+        "cheb_degree": 19,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 3.033,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "ship",
+      "width_x0": "19.100151847891516",
+      "width": "19.100151847891516",
+      "width_f": 19.100151847891517,
+      "a": "11.899848152108484",
+      "b": "31.0",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 19,
+        "m": 18,
+        "k": null,
+        "delivered_rel": "1.6674668031336688e-13",
+        "delivered_abs": "4.2838175242018371e-14",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 1.528
+      },
+      "parity": {
+        "cheb_degree": 18,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 3.033,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "ship",
+      "width_x0": "19.100151847891516",
+      "width": "19.100151847891516",
+      "width_f": 19.100151847891517,
+      "a": "11.899848152108484",
+      "b": "31.0",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 21,
+        "m": 20,
+        "k": null,
+        "delivered_rel": "5.8115657010476147e-15",
+        "delivered_abs": "1.4823675747312902e-15",
+        "at_x_rel": "12.845305668579114",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 2.468
+      },
+      "parity": {
+        "cheb_degree": 20,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 3.033,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-13",
+      "target_kind": "rel",
+      "target_value": 1e-13,
+      "width_name": "paper",
+      "width_x0": "17.089489586712256",
+      "width": "17.089489586712256",
+      "width_f": 17.089489586712254,
+      "a": "11.899848152108484",
+      "b": "28.98933773882074",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 19,
+        "m": 18,
+        "k": null,
+        "delivered_rel": "3.8613631214439201e-14",
+        "delivered_abs": "9.9200625618824799e-15",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 1.993
+      },
+      "parity": {
+        "cheb_degree": 18,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 3.844,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "abs:5e-14",
+      "target_kind": "abs",
+      "target_value": 5e-14,
+      "width_name": "paper",
+      "width_x0": "17.089489586712256",
+      "width": "17.089489586712256",
+      "width_f": 17.089489586712254,
+      "a": "11.899848152108484",
+      "b": "28.98933773882074",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 19,
+        "m": 18,
+        "k": null,
+        "delivered_rel": "3.8613631214439201e-14",
+        "delivered_abs": "9.9200625618824799e-15",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 1.363
+      },
+      "parity": {
+        "cheb_degree": 18,
+        "cheb_degree_parity": "even"
+      },
+      "status": null,
+      "reference_seconds": 3.844,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    },
+    {
+      "function": "boys_F0",
+      "edge_scale": 1,
+      "target": "rel:1e-14",
+      "target_kind": "rel",
+      "target_value": 1e-14,
+      "width_name": "paper",
+      "width_x0": "17.089489586712256",
+      "width": "17.089489586712256",
+      "width_f": 17.089489586712254,
+      "a": "11.899848152108484",
+      "b": "28.98933773882074",
+      "cheb": {
+        "family": "chebyshev",
+        "stored": 20,
+        "m": 19,
+        "k": null,
+        "delivered_rel": "6.6343879317388689e-15",
+        "delivered_abs": "1.7044121796563215e-15",
+        "at_x_rel": "11.899848152108484",
+        "at_x_abs": "11.899848152108484",
+        "refined": true,
+        "seconds": 1.273
+      },
+      "parity": {
+        "cheb_degree": 19,
+        "cheb_degree_parity": "odd"
+      },
+      "status": null,
+      "reference_seconds": 3.844,
+      "settings": {
+        "nodes": 2001,
+        "cheb_degree_mode": "records"
+      }
+    }
+  ]
+}

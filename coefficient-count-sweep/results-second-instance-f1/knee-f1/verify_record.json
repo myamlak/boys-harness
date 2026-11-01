@@ -1,0 +1,209 @@
+{
+ "record": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\results-second-instance-f1\\sweep_all.json",
+ "checks": {
+  "rows_90": {
+   "ok": true,
+   "detail": 90
+  },
+  "unique_cells": {
+   "ok": true,
+   "detail": 90
+  },
+  "edge_x0_45": {
+   "ok": true,
+   "detail": 45
+  },
+  "edge_a2_45": {
+   "ok": true,
+   "detail": 45
+  },
+  "target_rel:1e-13_30": {
+   "ok": true,
+   "detail": 30
+  },
+  "target_abs:5e-14_30": {
+   "ok": true,
+   "detail": 30
+  },
+  "target_rel:1e-14_30": {
+   "ok": true,
+   "detail": 30
+  },
+  "complete_x0_rel:1e-13": {
+   "ok": true,
+   "detail": []
+  },
+  "complete_x0_abs:5e-14": {
+   "ok": true,
+   "detail": []
+  },
+  "complete_x0_rel:1e-14": {
+   "ok": true,
+   "detail": []
+  },
+  "complete_a2_rel:1e-13": {
+   "ok": true,
+   "detail": []
+  },
+  "complete_a2_abs:5e-14": {
+   "ok": true,
+   "detail": []
+  },
+  "complete_a2_rel:1e-14": {
+   "ok": true,
+   "detail": []
+  },
+  "settings_uniform": {
+   "ok": true,
+   "detail": []
+  },
+  "grid_2001_5": {
+   "ok": true,
+   "detail": {
+    "nodes": 2001,
+    "coarse_stride": 5
+   }
+  },
+  "a2_double": {
+   "ok": true,
+   "detail": [
+    [
+     "2^-7",
+     2.0,
+     2.0
+    ],
+    [
+     "2^-7",
+     2.0,
+     2.0
+    ],
+    [
+     "2^-7",
+     2.0,
+     2.0
+    ]
+   ]
+  },
+  "all_cells_meet": {
+   "ok": true,
+   "detail": []
+  },
+  "rows_consistent": {
+   "ok": true,
+   "detail": []
+  },
+  "digest_header": {
+   "ok": true,
+   "detail": {
+    "path": "C:\\Users\\myaml\\dev\\_mainonly\\include\\boys\\boys_coefficients.hpp",
+    "record": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204",
+    "disk": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204"
+   }
+  },
+  "digest_generator": {
+   "ok": true,
+   "detail": {
+    "path": "C:\\Users\\myaml\\dev\\_mainonly\\tools\\gen_boys_coefficients.py",
+    "record": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180",
+    "disk": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180"
+   }
+  },
+  "digest_harness": {
+   "ok": true,
+   "detail": {
+    "path": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\count_sweep.py",
+    "record": "a5def761c8f18d585396210b28864dc6c4a108d2cfda4f3788d87a7f6c854f10",
+    "disk": "a5def761c8f18d585396210b28864dc6c4a108d2cfda4f3788d87a7f6c854f10"
+   }
+  },
+  "digest_f1_reference": {
+   "ok": true,
+   "detail": {
+    "path": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\f1_reference.py",
+    "record": "711d02e580d7b4fc5d258f21304ea02d37c2fff6bb1b6ba6c208d18da914e56e",
+    "disk": "711d02e580d7b4fc5d258f21304ea02d37c2fff6bb1b6ba6c208d18da914e56e"
+   }
+  },
+  "digest_driver": {
+   "ok": true,
+   "detail": {
+    "path": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\second_instance_f1_sweep.py",
+    "record": "7f682420e74bd6cd85fb1cfc57b7b235edeebc258c493ef24562ca184d471ff4",
+    "disk": "7f682420e74bd6cd85fb1cfc57b7b235edeebc258c493ef24562ca184d471ff4"
+   }
+  },
+  "f1_reference_validation": {
+   "ok": true,
+   "detail": {
+    "verdict": "the F_1 reference agrees with the high-precision integral and with the entire series to at least 57 digits, and the F_0 reference it is built on agrees with the exact closed form to at least 57 digits",
+    "worst_digits": {
+     "F0_boys_ref_vs_exact": 57.258605569056186,
+     "F1_reference_vs_integral": 56.865326062921056,
+     "F1_reference_vs_series": 56.86532606292107
+    }
+   }
+  },
+  "fitpath_check": {
+   "ok": true,
+   "detail": {
+    "max_abs_diff": 1.6180261874136553e-34,
+    "max_rel_to_max_coeff": 1.499713824473988e-32,
+    "n_bands": 30
+   }
+  },
+  "lane_control_3": {
+   "ok": true,
+   "detail": []
+  },
+  "below_rows_two": {
+   "ok": true,
+   "detail": [
+    [
+     "a2",
+     "rel:1e-14",
+     "2^5",
+     21,
+     17,
+     3,
+     true
+    ],
+    [
+     "a2",
+     "rel:1e-13",
+     "paper",
+     13,
+     5,
+     7,
+     true
+    ]
+   ]
+  }
+ },
+ "fails": [],
+ "below_rows": [
+  [
+   "a2",
+   "rel:1e-14",
+   "2^5",
+   21,
+   17,
+   3,
+   true
+  ],
+  [
+   "a2",
+   "rel:1e-13",
+   "paper",
+   13,
+   5,
+   7,
+   true
+  ]
+ ],
+ "meta": {
+  "generated_utc": "2026-10-27T18:41:12Z",
+  "kernel_version": "5.1.1",
+  "python": "3.14.7",
+  "platform": "Windows-11-10.0.26200-SP0"
+ }
+}

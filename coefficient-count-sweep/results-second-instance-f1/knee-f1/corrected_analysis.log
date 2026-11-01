@@ -1,0 +1,169 @@
+F_1 second instance: x0 = 11.899848152108484, a2 = 23.799696304216968
+F_1(x0) = 0.0107942101846; F_1(a2) = 0.00381643457761
+L(x0): rel:1e-13 29.933606, abs:5e-14 26.098008, rel:1e-14 32.236191
+L(a2): rel:1e-13 29.933606, abs:5e-14 25.058315, rel:1e-14 32.236191
+rows on disk: 90; missing x0 0, missing a2 0
+
+counts (cheb x0->a2; rat x0->a2)
+ rel:1e-13  2^-7  cheb 5->5  rat 4->4
+ rel:1e-13  2^-6  cheb 5->5  rat 4->4
+ rel:1e-13  2^-5  cheb 5->5  rat 4->4
+ rel:1e-13  2^-4  cheb 5->5  rat 5->4
+ rel:1e-13  2^-3  cheb 6->6  rat 5->5
+ rel:1e-13  2^-2  cheb 7->7  rat 5->5
+ rel:1e-13  2^-1  cheb 7->7  rat 6->6
+ rel:1e-13   2^0  cheb 9->9  rat 7->6
+ rel:1e-13   2^1  cheb 10->10  rat 8->7
+ rel:1e-13   2^2  cheb 13->13  rat 10->8
+ rel:1e-13   2^3  cheb 16->16  rat 12->10
+ rel:1e-13   2^4  cheb 20->21  rat 15->12
+ rel:1e-13   2^5  cheb 27->29  rat 19->15
+ rel:1e-13  ship  cheb 22->23  rat 16->13
+ rel:1e-13 paper  cheb 21->22  rat 15->12
+ abs:5e-14  2^-7  cheb 5->5  rat 3->3
+ abs:5e-14  2^-6  cheb 5->5  rat 4->3
+ abs:5e-14  2^-5  cheb 5->5  rat 4->4
+ abs:5e-14  2^-4  cheb 5->5  rat 4->4
+ abs:5e-14  2^-3  cheb 5->5  rat 4->4
+ abs:5e-14  2^-2  cheb 6->6  rat 5->5
+ abs:5e-14  2^-1  cheb 7->6  rat 5->5
+ abs:5e-14   2^0  cheb 8->7  rat 6->6
+ abs:5e-14   2^1  cheb 9->9  rat 7->6
+ abs:5e-14   2^2  cheb 11->11  rat 8->7
+ abs:5e-14   2^3  cheb 14->14  rat 10->8
+ abs:5e-14   2^4  cheb 18->18  rat 12->10
+ abs:5e-14   2^5  cheb 24->24  rat 16->12
+ abs:5e-14  ship  cheb 19->19  rat 13->10
+ abs:5e-14 paper  cheb 18->18  rat 12->10
+ rel:1e-14  2^-7  cheb 5->5  rat 4->4
+ rel:1e-14  2^-6  cheb 5->5  rat 4->4
+ rel:1e-14  2^-5  cheb 5->5  rat 4->4
+ rel:1e-14  2^-4  cheb 6->6  rat 5->5
+ rel:1e-14  2^-3  cheb 6->6  rat 5->5
+ rel:1e-14  2^-2  cheb 7->7  rat 6->6
+ rel:1e-14  2^-1  cheb 8->8  rat 6->6
+ rel:1e-14   2^0  cheb 9->9  rat 7->7
+ rel:1e-14   2^1  cheb 11->11  rat 8->8
+ rel:1e-14   2^2  cheb 13->14  rat 10->9
+ rel:1e-14   2^3  cheb 17->17  rat 12->11
+ rel:1e-14   2^4  cheb 22->23  rat 16->13
+ rel:1e-14   2^5  cheb 29->31  rat 23->20
+ rel:1e-14  ship  cheb 23->25  rat 18->14
+ rel:1e-14 paper  cheb 22->23  rat 17->14
+
+per family and target
+ rel:1e-13 cheb: differing 4/15, max |diff| 2, sum 5, parity flips 3, pair changes 4
+ rel:1e-13 rat : differing 9/15, max |diff| 4, sum -20, parity flips 6, pair changes 10
+ abs:5e-14 cheb: differing 2/15, max |diff| 1, sum -2, parity flips 2, pair changes 2
+ abs:5e-14 rat : differing 8/15, max |diff| 4, sum -16, parity flips 4, pair changes 8
+ rel:1e-14 cheb: differing 5/15, max |diff| 2, sum 7, parity flips 3, pair changes 5
+ rel:1e-14 rat : differing 6/15, max |diff| 4, sum -15, parity flips 5, pair changes 10
+
+slopes (paper estimator, thirteen widths, floors in)
+ rel:1e-13 cheb: x0 0.205+-0.018 (n=13), a2 0.210+-0.020, diff +0.005 (z +0.20/+2.65); model 0.208/0.209; endpoints 0.2027/0.2113
+ rel:1e-13 rat : x0 0.188+-0.015 (n=13), a2 0.159+-0.014, diff -0.029 (z -1.41/-3.70); model 0.143/0.140; endpoints 0.1873/0.1589
+ abs:5e-14 cheb: x0 0.188+-0.020 (n=13), a2 0.187+-0.023, diff -0.001 (z -0.03/-0.18); model 0.205/0.205; endpoints 0.1886/0.1886
+ abs:5e-14 rat : x0 0.179+-0.015 (n=13), a2 0.157+-0.009, diff -0.022 (z -1.27/-1.96); model 0.139/0.136; endpoints 0.2013/0.1667
+ rel:1e-14 cheb: x0 0.211+-0.017 (n=13), a2 0.218+-0.018, diff +0.007 (z +0.27/+2.84); model 0.210/0.210; endpoints 0.2113/0.2194
+ rel:1e-14 rat : x0 0.198+-0.018 (n=13), a2 0.178+-0.015, diff -0.020 (z -0.87/-4.08); model 0.143/0.143; endpoints 0.2103/0.1935
+
+target-affine residuals in coefficients (floor rows excluded)
+cheb x0: n=21, max |resid| 0.877, mean -0.105, outside 1 0, outside 2 0
+cheb a2: n=21, max |resid| 0.79, mean 0.0911, outside 1 0, outside 2 0
+rat  x0: n=29, max |resid| 3.08, mean 0.387, outside 1 8, outside 2 1
+rat  a2: n=28, max |resid| 4.08, mean 0.301, outside 1 4, outside 2 1
+
+free-line ladder over the three arms (paper rule, floors out)
+cheb x0: tested 10/15 widths, failed ['2^-1', '2^2'], max |resid| 0.49, max |2nd diff| 1.47, verdict fail
+          tested widths: ['2^-2', '2^-1', '2^0', '2^1', '2^2', '2^3', '2^4', '2^5', 'ship', 'paper']
+rat  x0: tested 14/15 widths, failed ['2^-2', '2^2', '2^3', '2^5'], max |resid| 0.897, max |2nd diff| 2.69, verdict fail
+          tested widths: ['2^-6', '2^-5', '2^-4', '2^-3', '2^-2', '2^-1', '2^0', '2^1', '2^2', '2^3', '2^4', '2^5', 'ship', 'paper']
+cheb a2: tested 10/15 widths, failed ['2^0', 'paper'], max |resid| 0.41, max |2nd diff| 1.23, verdict fail
+          tested widths: ['2^-2', '2^-1', '2^0', '2^1', '2^2', '2^3', '2^4', '2^5', 'ship', 'paper']
+rat  a2: tested 13/15 widths, failed ['2^-4', '2^-2', '2^0', '2^5', 'paper'], max |resid| 1.56, max |2nd diff| 4.67, verdict fail
+          tested widths: ['2^-5', '2^-4', '2^-3', '2^-2', '2^-1', '2^0', '2^1', '2^2', '2^3', '2^4', '2^5', 'ship', 'paper']
+
+width-law residuals (median-constant model)
+ rel:1e-13 cheb x0: C 1.085, max |resid| 0.573 over 13
+ rel:1e-13 cheb a2: C 3.643, max |resid| 0.951 over 13
+ rel:1e-13 rat  x0: C 6.08, max |resid| 5.379 over 13
+ rel:1e-13 rat  a2: C 0.1813, max |resid| 2.776 over 13
+ abs:5e-14 cheb x0: C 1.575, max |resid| 0.953 over 13
+ abs:5e-14 cheb a2: C 4.411, max |resid| 0.954 over 13
+ abs:5e-14 rat  x0: C 1.625, max |resid| 4.429 over 13
+ abs:5e-14 rat  a2: C 0.3733, max |resid| 1.428 over 13
+ rel:1e-14 cheb x0: C 0.8635, max |resid| 0.447 over 13
+ rel:1e-14 cheb a2: C 1.287, max |resid| 1.858 over 13
+ rel:1e-14 rat  x0: C 0.8703, max |resid| 9.237 over 13
+ rel:1e-14 rat  a2: C 0.8667, max |resid| 6.238 over 13
+
+free width law: N-1 affine in 1/rate (floors out)
+ rel:1e-13 cheb x0: n=9, q=30.02+-0.59, max |resid| 0.615
+ rel:1e-13 cheb a2: n=9, q=32.74+-0.57, max |resid| 0.481
+ rel:1e-13 rat  x0: n=13, q=49.22+-2.07, max |resid| 1.204
+ rel:1e-13 rat  a2: n=13, q=36.04+-1.56, max |resid| 0.904
+ abs:5e-14 cheb x0: n=8, q=26.47+-0.23, max |resid| 0.201
+ abs:5e-14 cheb a2: n=8, q=27.40+-0.52, max |resid| 0.433
+ abs:5e-14 rat  x0: n=12, q=39.82+-2.17, max |resid| 1.322
+ abs:5e-14 rat  a2: n=11, q=27.76+-1.29, max |resid| 0.528
+ rel:1e-14 cheb x0: n=10, q=32.79+-0.34, max |resid| 0.295
+ rel:1e-14 cheb a2: n=10, q=35.40+-0.40, max |resid| 0.441
+ rel:1e-14 rat  x0: n=13, q=57.36+-4.23, max |resid| 3.123
+ rel:1e-14 rat  a2: n=13, q=46.70+-3.57, max |resid| 2.860
+
+matched-cell model residuals at a2 (coefficients)
+ rel:1e-13 cheb: n=15, max 2.000, mean +0.333, |r|<=1 14, |r|<=2 15
+ rel:1e-13 rat : n=15, max 4.000, mean -1.333, |r|<=1 9, |r|<=2 10
+ abs:5e-14 cheb: n=15, max 0.901, mean +0.240, |r|<=1 15, |r|<=2 15
+ abs:5e-14 rat : n=15, max 3.587, mean -0.839, |r|<=1 10, |r|<=2 13
+ rel:1e-14 cheb: n=15, max 2.000, mean +0.467, |r|<=1 13, |r|<=2 15
+ rel:1e-14 rat : n=15, max 4.000, mean -1.000, |r|<=1 10, |r|<=2 11
+
+count-implied constants over the dyadic widths, a2/x0 ratio
+ rel:1e-13 cheb: x0 0.034-138, a2 0.034-138, ratio 1-10.1 (median 1, expected 1)
+ rel:1e-13 rat : x0 0.0227-4.56e+06, a2 0.00285-195, ratio 4.28e-05-1 (median 0.00971, expected 1)
+ abs:5e-14 cheb: x0 0.0995-6.39e+03, a2 0.114-1.81e+04, ratio 0.0291-2.83 (median 2.83, expected 2.83)
+ abs:5e-14 rat : x0 0.00275-1.12e+05, a2 0.00195-13.5, ratio 0.000121-2.83 (median 2.83, expected 2.83)
+ rel:1e-14 cheb: x0 0.0541-13.8, a2 0.0541-13.8, ratio 1-13.8 (median 1, expected 1)
+ rel:1e-14 rat : x0 0.00227-1.07e+10, a2 0.00227-5.64e+06, ratio 0.000149-1 (median 1, expected 1)
+
+F_0 bands from the paper's records (same code)
+ rel:1e-13 cheb: differing 3/15, max |diff| 1, sum 3
+ rel:1e-13 rat : differing 6/15, max |diff| 2, sum -7
+ abs:5e-14 cheb: differing 2/15, max |diff| 1, sum 2
+ abs:5e-14 rat : differing 6/15, max |diff| 3, sum -9
+ rel:1e-14 cheb: differing 4/15, max |diff| 1, sum 4
+ rel:1e-14 rat : differing 8/14, max |diff| 3, sum -10
+ rel:1e-13 cheb F0: x0 0.190+-0.021, a2 0.197+-0.021, diff +0.006
+ rel:1e-13 rat  F0: x0 0.168+-0.015, a2 0.152+-0.012, diff -0.016
+ abs:5e-14 cheb F0: x0 0.188+-0.020, a2 0.190+-0.021, diff +0.002
+ abs:5e-14 rat  F0: x0 0.168+-0.015, a2 0.145+-0.011, diff -0.022
+ rel:1e-14 cheb F0: x0 0.200+-0.019, a2 0.204+-0.020, diff +0.004
+ rel:1e-14 rat  F0: x0 0.170+-0.017, a2 0.148+-0.008, diff -0.022
+
+F_0 free-line ladder over the three arms (same rule)
+cheb x0: tested 10/15 widths, failed ['2^5', 'ship'], max |resid| 0.334, max |2nd diff| 1, verdict fail
+rat  x0: tested 14/15 widths, failed ['2^4', 'ship'], max |resid| 0.407, max |2nd diff| 1.22, verdict fail
+cheb a2: tested 10/15 widths, failed ['2^2', '2^5', 'ship', 'paper'], max |resid| 0.441, max |2nd diff| 1.32, verdict fail
+rat  a2: tested 15/15 widths, failed ['2^3', '2^5', 'paper'], max |resid| 0.441, max |2nd diff| 1.32, verdict fail
+
+F_0 free width law and matched-cell residuals
+ rel:1e-13 cheb x0: n=8, max |resid| 0.389
+ rel:1e-13 cheb a2: n=8, max |resid| 0.501
+ rel:1e-13 cheb matched a2: max 1.000, mean +0.200, |r|<=1 15/15
+ rel:1e-13 rat  x0: n=13, max |resid| 1.051
+ rel:1e-13 rat  a2: n=13, max |resid| 0.679
+ rel:1e-13 rat  matched a2: max 2.000, mean -0.467, |r|<=1 13/15
+ abs:5e-14 cheb x0: n=8, max |resid| 0.201
+ abs:5e-14 cheb a2: n=8, max |resid| 0.389
+ abs:5e-14 cheb matched a2: max 1.300, mean +0.258, |r|<=1 13/15
+ abs:5e-14 rat  x0: n=13, max |resid| 1.051
+ abs:5e-14 rat  a2: n=13, max |resid| 0.403
+ abs:5e-14 rat  matched a2: max 2.862, mean -0.524, |r|<=1 13/15
+ rel:1e-14 cheb x0: n=9, max |resid| 0.589
+ rel:1e-14 cheb a2: n=9, max |resid| 0.540
+ rel:1e-14 cheb matched a2: max 1.000, mean +0.267, |r|<=1 15/15
+ rel:1e-14 rat  x0: n=12, max |resid| 1.308
+ rel:1e-14 rat  a2: n=13, max |resid| 0.409
+ rel:1e-14 rat  matched a2: max 3.000, mean -0.714, |r|<=1 11/14
+ANALYSIS_EXIT=0

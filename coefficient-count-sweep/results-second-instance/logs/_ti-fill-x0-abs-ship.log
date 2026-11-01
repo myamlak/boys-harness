@@ -1,0 +1,7 @@
+on disk: 44 full row(s) (both edges), 44 Chebyshev cell(s) (both edges)
+function x^-1/2; left edge a = 11.899848152108484 (scale 1 x X0); widths scaled by 1
+grid: 15 width(s) x 3 target(s); 44 full row(s) and 44 Chebyshev cell(s) already on disk
+workers: 2
+[abs:5e-14] ship    W=19.1002      cheb=20 (deg=19, odd) rat=12 ([5/6], remez) rel=2.5335600113288958e-14 (1.068s + 3550.833s)
+invocation wall time: 3552.0 s; full rows on disk: 45; Chebyshev cells on disk: 45; this invocation: 1 row(s), 0 cell(s)
+EXIT=0

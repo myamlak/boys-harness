@@ -1,0 +1,50 @@
+==== knee walk start 2026-10-28T19:16:18 ====
+cell a2-paper-rel13: a=23.799696304216968 b=57.97867547764148 target=rel:1e-13 recorded stored=13 below_meets=True
+workers 4; nodes 2001; k<=8
+level 12: solving 8 pair(s) ['[10/1]', '[9/2]', '[8/3]', '[7/4]', '[6/5]', '[5/6]', '[4/7]', '[3/8]']
+level 12: MEETS (1 fit(s)); best [5/6] remez rel=9.8135199887375673e-14 (809.5 s)
+level 11: solving 8 pair(s) ['[9/1]', '[8/2]', '[7/3]', '[6/4]', '[5/5]', '[4/6]', '[3/7]', '[2/8]']
+level 11: misses (790.6 s)
+{
+ "stored": 12,
+ "first_missing_level": 11,
+ "floor": 3,
+ "truncated_at_floor": false,
+ "moved": 1,
+ "best": {
+  "m": 5,
+  "k": 6,
+  "solver": "remez",
+  "rel": "9.8135199887375673e-14",
+  "abs": "3.6543637737753758e-16",
+  "at_x_rel": "24.19275456471135",
+  "at_x_abs": "24.19275456471135"
+ }
+}
+wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\_knee-f1\knee_walk_a2-paper-rel13.json
+EXIT_A=0
+cell a2-2^5-rel14: a=23.799696304216968 b=87.799696304216968 target=rel:1e-14 recorded stored=21 below_meets=True
+workers 4; nodes 2001; k<=8
+level 20: solving 8 pair(s) ['[18/1]', '[17/2]', '[16/3]', '[15/4]', '[14/5]', '[13/6]', '[12/7]', '[11/8]']
+level 20: MEETS (1 fit(s)); best [16/3] remez rel=7.6654044836520552e-15 (2157.4 s)
+level 19: solving 8 pair(s) ['[17/1]', '[16/2]', '[15/3]', '[14/4]', '[13/5]', '[12/6]', '[11/7]', '[10/8]']
+level 19: misses (1878.5 s)
+{
+ "stored": 20,
+ "first_missing_level": 19,
+ "floor": 3,
+ "truncated_at_floor": false,
+ "moved": 1,
+ "best": {
+  "m": 16,
+  "k": 3,
+  "solver": "remez",
+  "rel": "7.6654044836520552e-15",
+  "abs": "2.7463149892715112e-17",
+  "at_x_rel": "24.823696304216968",
+  "at_x_abs": "24.823696304216968"
+ }
+}
+wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\_knee-f1\knee_walk_a2-2^5-rel14.json
+EXIT_B=0
+==== knee walk end 2026-10-28T20:50:22 ====

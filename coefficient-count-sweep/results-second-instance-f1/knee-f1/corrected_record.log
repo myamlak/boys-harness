@@ -1,0 +1,4 @@
+wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\_knee-f1\corrected\sweep_all.json (42b8f689ddb4f20fa6a6a5e60c171641f9a6fb7bd6edcbcda92d484e88d0a173)
+a2-paper-rel13: recorded 13 [5/7] remez -> corrected 12 [5/6] remez (moved 1); level 11 misses
+a2-2^5-rel14: recorded 21 [17/3] remez -> corrected 20 [16/3] remez (moved 1); level 19 misses
+RECORD_EXIT=0
