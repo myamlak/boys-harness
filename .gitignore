@@ -31,3 +31,6 @@ sweep2
 !coefficient-count-sweep/results-second-instance/
 !coefficient-count-sweep/results-second-instance-f1/
 !coefficient-count-sweep/results-second-instance-f1-control/
+!coefficient-count-sweep/results-f1-independent/
+!coefficient-count-sweep/results-shipped-seed/
+!coefficient-count-sweep/results-third-edge/
