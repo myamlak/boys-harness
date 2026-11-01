@@ -16,7 +16,7 @@ SOLVER = Path(__file__).resolve().parent.parent / "results-second-edge-a2" / "se
 spec = importlib.util.spec_from_file_location("dep", SOLVER)
 dep = importlib.util.module_from_spec(spec); spec.loader.exec_module(dep)
 
-OUT = Path(__file__).resolve().parent / "shipped_seed"
+OUT = Path(__file__).resolve().parent
 OUT.mkdir(exist_ok=True)
 BAR = 2.56905715673095443e-14
 EDGES = [11.899848152108484, 14.756597293654865, 18.161791411646277,

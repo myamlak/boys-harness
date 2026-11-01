@@ -29,8 +29,8 @@ Each run covers 45 cells: the fifteen Group A widths at three targets (relative 
 | `run_f1_a62.json` | F1 | 62.0 | yes | 6 | 1364.1 | 2026-11-01T21:52:06Z |
 | `run_f1_a124.json` | F1 | 124.0 | yes | 6 | 840.0 | 2026-11-01T22:06:07Z |
 
-`x0` and `a2` are the paper's two second edges. At 62 and 124 the exponential term of F1 is below
-1e-26, under every target, so those two runs are the transient-free control.
+`x0` and `a2` are the paper's two second edges. At 62 and 124 the factor 1 - g1 of F1 is 1.06e-26
+and 1.8e-53, below every target at both edges, so those two runs are the transient-free control.
 
 ## Comparison with the kernel's delivered record
 
@@ -47,13 +47,10 @@ At the two control edges the relative targets agree in all fifteen widths (15 of
 coefficient lower at the larger edge. The second-edge dependence of the F1 counts is therefore not
 an artefact of the exponential transient.
 
-## Shipped rational seeds
+## Neighbouring records
 
-`shipped_seed_check.py` runs the same solver at the library's bar for the rational seed, an
-absolute 2.56905715673095443e-14, on the six intervals the library stores a rational seed for
-(`coarsestB.json`, `narrowB_p0.json` to `narrowB_p4.json`). The shipped seeds are minimal at that
-bar: 13 stored coefficients on the coarsest interval and 9, 7, 8, 8 and 7 on the narrow pieces, 39
-in all. No admissible pair one stored coefficient lower meets the bar on any of the six intervals.
+`../results-shipped-seed/` holds the check of the library's shipped rational seeds at its own bar,
+and `../results-third-edge/` the F0 third-edge control at a left edge of 31.
 
 ## Reproducing
 
@@ -63,7 +60,7 @@ python rational_instance_solver.py --function f1 --left 11.899848152108484 --tag
 ```
 
 `--only <cell_id>` runs one cell. Records are written under `<out-dir>/cells/`; each run summary is
-the JSON beside this file, verbatim as the run wrote it. `shipped_seed_check.py` regenerates the six
-seed records; `compare_counts.py` reads the kernel records already in this repository.
+the JSON beside this file, verbatim as the run wrote it. `compare_counts.py` reads the kernel
+records already in this repository.
 
 The runs need `baryrat` 2.1.2 and `mpmath` importable.

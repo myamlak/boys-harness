@@ -1,0 +1,364 @@
+{
+ "a": "31",
+ "scale": 2.605075258418927,
+ "rows": [
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^-7",
+   "width_x0": "0.0078125",
+   "width": "0.020352150456397867",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^-6",
+   "width_x0": "0.015625",
+   "width": "0.040704300912795735",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^-5",
+   "width_x0": "0.03125",
+   "width": "0.081408601825591469",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^-4",
+   "width_x0": "0.0625",
+   "width": "0.16281720365118294",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^-3",
+   "width_x0": "0.125",
+   "width": "0.32563440730236588",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^-2",
+   "width_x0": "0.25",
+   "width": "0.65126881460473175",
+   "cheb_stored": 6,
+   "cheb_m": 5
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^-1",
+   "width_x0": "0.5",
+   "width": "1.3025376292094635",
+   "cheb_stored": 7,
+   "cheb_m": 6
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^0",
+   "width_x0": "1.0",
+   "width": "2.605075258418927",
+   "cheb_stored": 8,
+   "cheb_m": 7
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^1",
+   "width_x0": "2.0",
+   "width": "5.210150516837854",
+   "cheb_stored": 9,
+   "cheb_m": 8
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^2",
+   "width_x0": "4.0",
+   "width": "10.420301033675708",
+   "cheb_stored": 12,
+   "cheb_m": 11
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^3",
+   "width_x0": "8.0",
+   "width": "20.840602067351416",
+   "cheb_stored": 15,
+   "cheb_m": 14
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^4",
+   "width_x0": "16.0",
+   "width": "41.681204134702832",
+   "cheb_stored": 19,
+   "cheb_m": 18
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "2^5",
+   "width_x0": "32.0",
+   "width": "83.362408269405664",
+   "error": "RuntimeError: boys_ref: F_0(112.32238493404045868) is not converged in 300 terms - the term is still above 1.0e-26 and the sum is truncated. An argument this far past the series' peak needs a larger max_terms."
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "ship",
+   "width_x0": "19.100151847891516",
+   "width": "49.757333010986737",
+   "cheb_stored": 20,
+   "cheb_m": 19
+  },
+  {
+   "target": "rel:1e-13",
+   "width_name": "paper",
+   "width_x0": "17.089489586712256",
+   "width": "44.519406501351992",
+   "cheb_stored": 19,
+   "cheb_m": 18
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^-7",
+   "width_x0": "0.0078125",
+   "width": "0.020352150456397867",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^-6",
+   "width_x0": "0.015625",
+   "width": "0.040704300912795735",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^-5",
+   "width_x0": "0.03125",
+   "width": "0.081408601825591469",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^-4",
+   "width_x0": "0.0625",
+   "width": "0.16281720365118294",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^-3",
+   "width_x0": "0.125",
+   "width": "0.32563440730236588",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^-2",
+   "width_x0": "0.25",
+   "width": "0.65126881460473175",
+   "cheb_stored": 6,
+   "cheb_m": 5
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^-1",
+   "width_x0": "0.5",
+   "width": "1.3025376292094635",
+   "cheb_stored": 7,
+   "cheb_m": 6
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^0",
+   "width_x0": "1.0",
+   "width": "2.605075258418927",
+   "cheb_stored": 8,
+   "cheb_m": 7
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^1",
+   "width_x0": "2.0",
+   "width": "5.210150516837854",
+   "cheb_stored": 9,
+   "cheb_m": 8
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^2",
+   "width_x0": "4.0",
+   "width": "10.420301033675708",
+   "cheb_stored": 11,
+   "cheb_m": 10
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^3",
+   "width_x0": "8.0",
+   "width": "20.840602067351416",
+   "cheb_stored": 14,
+   "cheb_m": 13
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^4",
+   "width_x0": "16.0",
+   "width": "41.681204134702832",
+   "cheb_stored": 18,
+   "cheb_m": 17
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "2^5",
+   "width_x0": "32.0",
+   "width": "83.362408269405664",
+   "error": "RuntimeError: boys_ref: F_0(112.32238493404045868) is not converged in 300 terms - the term is still above 1.0e-26 and the sum is truncated. An argument this far past the series' peak needs a larger max_terms."
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "ship",
+   "width_x0": "19.100151847891516",
+   "width": "49.757333010986737",
+   "cheb_stored": 20,
+   "cheb_m": 19
+  },
+  {
+   "target": "abs:5e-14",
+   "width_name": "paper",
+   "width_x0": "17.089489586712256",
+   "width": "44.519406501351992",
+   "cheb_stored": 19,
+   "cheb_m": 18
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^-7",
+   "width_x0": "0.0078125",
+   "width": "0.020352150456397867",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^-6",
+   "width_x0": "0.015625",
+   "width": "0.040704300912795735",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^-5",
+   "width_x0": "0.03125",
+   "width": "0.081408601825591469",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^-4",
+   "width_x0": "0.0625",
+   "width": "0.16281720365118294",
+   "cheb_stored": 5,
+   "cheb_m": 4
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^-3",
+   "width_x0": "0.125",
+   "width": "0.32563440730236588",
+   "cheb_stored": 6,
+   "cheb_m": 5
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^-2",
+   "width_x0": "0.25",
+   "width": "0.65126881460473175",
+   "cheb_stored": 6,
+   "cheb_m": 5
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^-1",
+   "width_x0": "0.5",
+   "width": "1.3025376292094635",
+   "cheb_stored": 7,
+   "cheb_m": 6
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^0",
+   "width_x0": "1.0",
+   "width": "2.605075258418927",
+   "cheb_stored": 9,
+   "cheb_m": 8
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^1",
+   "width_x0": "2.0",
+   "width": "5.210150516837854",
+   "cheb_stored": 10,
+   "cheb_m": 9
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^2",
+   "width_x0": "4.0",
+   "width": "10.420301033675708",
+   "cheb_stored": 12,
+   "cheb_m": 11
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^3",
+   "width_x0": "8.0",
+   "width": "20.840602067351416",
+   "cheb_stored": 16,
+   "cheb_m": 15
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^4",
+   "width_x0": "16.0",
+   "width": "41.681204134702832",
+   "cheb_stored": 20,
+   "cheb_m": 19
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "2^5",
+   "width_x0": "32.0",
+   "width": "83.362408269405664",
+   "error": "RuntimeError: boys_ref: F_0(112.32238493404045868) is not converged in 300 terms - the term is still above 1.0e-26 and the sum is truncated. An argument this far past the series' peak needs a larger max_terms."
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "ship",
+   "width_x0": "19.100151847891516",
+   "width": "49.757333010986737",
+   "cheb_stored": 22,
+   "cheb_m": 21
+  },
+  {
+   "target": "rel:1e-14",
+   "width_name": "paper",
+   "width_x0": "17.089489586712256",
+   "width": "44.519406501351992",
+   "cheb_stored": 21,
+   "cheb_m": 20
+  }
+ ],
+ "wall_seconds": 129.4445366859436
+}
