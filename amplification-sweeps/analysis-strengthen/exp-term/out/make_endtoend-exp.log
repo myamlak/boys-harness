@@ -1,0 +1,19 @@
+absolute {'commits': 37, 'abstains': 29, 'direct': '1.63733e-16', 'recursed': '3.21615e-15', 'model_direct': '1.5811e-16', 'model_recursed': '1.5811e-16', 'direct_at': ('A1', 'absolute', 0), 'recursed_at': ('A1', 'absolute', 16), 'model_direct_at': (('A1', 'absolute', 0), 'ship'), 'model_recursed_at': (('A1', 'absolute', 0), 'ship')}
+  reduction vs direct: 3.43%
+  reduction vs recursed: 95.08%
+  direct fallback worst 1.5811e-16  (always-direct 1.63733e-16)
+  recursed fallback worst 1.5811e-16
+  always-direct worst at ('A1', 'absolute', 0)
+  always-recursed worst at ('A1', 'absolute', 16)
+  model(direct) worst at (('A1', 'absolute', 0), 'ship')
+  model(recursed) worst at (('A1', 'absolute', 0), 'ship')
+relative {'commits': 28, 'abstains': 38, 'direct': '2.8537e-13', 'recursed': '5.24364e-09', 'model_direct': '2.8537e-13', 'model_recursed': '2.8537e-13', 'direct_at': ('A2', 'relative', 30), 'recursed_at': ('A2', 'relative', 32), 'model_direct_at': (('A2', 'relative', 30), 'product'), 'model_recursed_at': (('A2', 'relative', 30), 'product')}
+  reduction vs direct: 0.00%
+  reduction vs recursed: 99.99%
+  direct fallback worst 2.8537e-13  (always-direct 2.8537e-13)
+  recursed fallback worst 2.8537e-13
+  always-direct worst at ('A2', 'relative', 30)
+  always-recursed worst at ('A2', 'relative', 32)
+  model(direct) worst at (('A2', 'relative', 30), 'product')
+  model(recursed) worst at (('A2', 'relative', 30), 'product')
+wrote tables/endtoend.tex

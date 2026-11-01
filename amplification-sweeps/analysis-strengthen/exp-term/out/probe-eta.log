@@ -1,0 +1,12 @@
+﻿=== second experiment
+  none (0)     commits  67 right  67 abstains  65; differs at 0: 
+  const 2^-52  commits  65 right  65 abstains  67; differs at 2: A1/relative/1:ship->abstain, A2/relative/9:ship->abstain
+  const 2^-53  commits  66 right  66 abstains  66; differs at 1: A1/relative/1:ship->abstain
+  ulp(value)   commits  65 right  65 abstains  67; differs at 2: A1/relative/1:ship->abstain, A2/relative/9:ship->abstain
+
+=== first experiment
+  none (0)     commits  69 right  68 abstains  63; differs at 0: 
+  const 2^-52  commits  68 right  67 abstains  64; differs at 1: A1/relative/1:ship->abstain
+  const 2^-53  commits  68 right  67 abstains  64; differs at 1: A1/relative/1:ship->abstain
+  ulp(value)   commits  68 right  67 abstains  64; differs at 1: A1/relative/1:ship->abstain
+

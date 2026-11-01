@@ -1,0 +1,9 @@
+frozen n0 kept true commitments 65 changed 19 wrong winner 4 abstentions 15 all changed relative False
+  wrong: [('A2', 'relative', 5), ('A2', 'relative', 6), ('A2', 'relative', 7), ('A2', 'relative', 8)]
+  abstain: [('A1', 'absolute', 5), ('A1', 'absolute', 12), ('A1', 'absolute', 13), ('A1', 'absolute', 14), ('A1', 'absolute', 15), ('A1', 'absolute', 16), ('A1', 'relative', 4), ('A1', 'relative', 7), ('A1', 'relative', 8), ('A1', 'relative', 12), ('A1', 'relative', 13), ('A1', 'relative', 14), ('A1', 'relative', 15), ('A1', 'relative', 16), ('A2', 'relative', 16)]
+frozen n0 also true commitments 65 changed 21 wrong winner 6 abstentions 15 all changed relative False
+  wrong: [('A2', 'absolute', 0), ('A2', 'relative', 0), ('A2', 'relative', 5), ('A2', 'relative', 6), ('A2', 'relative', 7), ('A2', 'relative', 8)]
+  abstain: [('A1', 'absolute', 5), ('A1', 'absolute', 12), ('A1', 'absolute', 13), ('A1', 'absolute', 14), ('A1', 'absolute', 15), ('A1', 'absolute', 16), ('A1', 'relative', 4), ('A1', 'relative', 7), ('A1', 'relative', 8), ('A1', 'relative', 12), ('A1', 'relative', 13), ('A1', 'relative', 14), ('A1', 'relative', 15), ('A1', 'relative', 16), ('A2', 'relative', 16)]
+unit true commitments 65 changed 7 wrong winner 4 abstentions 3 all changed relative True
+  wrong: [('A2', 'relative', 5), ('A2', 'relative', 6), ('A2', 'relative', 7), ('A2', 'relative', 8)]
+  abstain: [('A1', 'relative', 4), ('A1', 'relative', 7), ('A1', 'relative', 8)]

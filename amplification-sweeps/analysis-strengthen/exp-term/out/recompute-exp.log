@@ -1,0 +1,76 @@
+population {'A1': 290, 'A2': 282} model_from 1.0855252345349333
+TRUE margin 1: commits 65 right 65 wrong 0
+  A1 absolute commits 13 right 13 wrong 0
+  A1 relative commits 9 right 9 wrong 0
+  A2 absolute commits 24 right 24 wrong 0
+  A2 relative commits 19 right 19 wrong 0
+TRUE frontier zero-error commits: 4 .. 72 (69 distinct counts)
+TRUE max zero-error step(s): [(0.9370280266358412, 0.9487137337300439, 72, 72, 0)]
+
+MONOTONE SURROGATE margin 1: commits 19 right 19 wrong 0
+  A1 absolute commits 5 right 5 wrong 0
+  A1 relative commits 1 right 1 wrong 0
+  A2 absolute commits 7 right 7 wrong 0
+  A2 relative commits 6 right 6 wrong 0
+  true commits 65, surrogate commits 19, lost 46, gained 0
+  lost that were wrong for the true model: 0
+  gained that are wrong for the surrogate: 0
+  surrogate frontier zero-error commits: 4 .. 72 (69 distinct)
+    max zero-error step(s): [(0.9145765332915271, 0.916674620016327, 72, 72, 0)]
+  shape worth (true ceiling - surrogate ceiling): 0
+  at margin 0.94: true [72, 72, 0], surrogate [68, 68, 0]
+  at margin 1.0: true [65, 65, 0], surrogate [19, 19, 0]
+  at margin 0.946: true [72, 72, 0], surrogate [67, 67, 0]
+  matched target 65: attained
+    margin interval [0.95369977753459337, 0.95485670624425141), midpoint 0.95427824188942239 -> commits 65 right 65 wrong 0
+    neighbour commits 64 right 64 wrong 0 on [0.95485670624425141, 0.96192554645403946)
+    neighbour commits 66 right 66 wrong 0 on [0.94871373373004388, 0.95369977753459337)
+
+FROZEN-FIRST A_n=1/(2x), n=0 kept A_0=1 margin 1: commits 73 right 53 wrong 20
+  A1 absolute commits 7 right 7 wrong 0
+  A1 relative commits 1 right 1 wrong 0
+  A2 absolute commits 33 right 29 wrong 4
+  A2 relative commits 32 right 16 wrong 16
+  vs true set: lost 15, gained 23, gained-wrong 16
+  zero-error commits: 4 .. 4 (1 distinct)
+    max zero-error step(s): [(59.32420848765128, inf, 4, 4, 0)]
+
+FROZEN-FIRST A_n=1/(2x), n=0 also margin 1: commits 73 right 51 wrong 22
+  A1 absolute commits 7 right 7 wrong 0
+  A1 relative commits 1 right 1 wrong 0
+  A2 absolute commits 33 right 28 wrong 5
+  A2 relative commits 32 right 15 wrong 17
+  vs true set: lost 15, gained 23, gained-wrong 16
+  zero-error commits: none; smallest wrong count 2 at commits 4
+
+UNIT A_n=1 margin 1: commits 96 right 69 wrong 27
+  A1 absolute commits 17 right 14 wrong 3
+  A1 relative commits 13 right 9 wrong 4
+  A2 absolute commits 33 right 29 wrong 4
+  A2 relative commits 33 right 17 wrong 16
+  vs true set: lost 3, gained 34, gained-wrong 23
+  zero-error commits: 4 .. 4 (1 distinct)
+    max zero-error step(s): [(1449.8373997385888, inf, 4, 4, 0)]
+
+POPULATION winners x >= theta0, true model margin 1: commits 65 right 65 wrong 0
+  orders where the restricted winner differs among true commitments: 0
+  surrogate at matched margin, population winners: commits 65 right 65 wrong 0
+
+COMMITMENTS whose measured winning cell is below theta0: 14 of 65
+  A1 absolute n= 0 winner ship    x=0.88881931955209315
+  A1 absolute n= 2 winner product x=8.2540418526801834e-06
+  A1 absolute n= 3 winner product x=7.4989420933245585e-07
+  A1 absolute n= 4 winner product x=0.21856212775871139
+  A1 absolute n= 5 winner product x=0.42950594371464423
+  A1 absolute n= 6 winner product x=0.091033047204217787
+  A1 absolute n= 7 winner product x=0.21856212775871139
+  A1 absolute n= 8 winner product x=0.014570808517247427
+  A1 absolute n=12 winner product x=0.11656646813797941
+  A1 absolute n=13 winner product x=0.11675632362499488
+  A1 absolute n=14 winner product x=0.065568638327613435
+  A1 absolute n=15 winner product x=0.001
+  A1 absolute n=16 winner product x=0.001
+  A1 relative n= 0 winner ship    x=0.88881931955209315
+
+FIRST SWEEP prediction: commits 68 right 67 wrong 1
+FIRST SWEEP margin 0: commits 99 right 84 wrong 15 ties 1

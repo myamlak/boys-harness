@@ -1,0 +1,308 @@
+======== abstract-band-ratios | main.tex | abstract, band-worst ratios
+QUOTE: '27.9 and 63.2 in absolute error, 323.2 and'
+TEMPLATE: '{v1} and {v2} in absolute error, {v3} and'
+VALUES: {"v1": {"compute": "band_ratio", "args": {"sweep": "first", "band": "A1", "metric": "absolute"}, "format": "sf:3"}, "v2": {"compute": "band_ratio", "args": {"sweep": "first", "band": "A2", "metric": "absolute"}, "format": "sf:3"}, "v3": {"compute": "band_ratio", "args": {"sweep": "first", "band": "A1", "metric": "relative"}, "format": "sf:4"}}
+======== abstract-second-size | main.tex | abstract, second sweep size and resolved arguments
+QUOTE: 'In a second 836-argument experiment, 832'
+TEMPLATE: 'In a second {v1}-argument experiment, {v2}'
+VALUES: {"v1": {"compute": "summary", "args": {"sweep": "second", "field": "grid_total"}, "format": "int"}, "v2": {"compute": "resolved_total", "args": {"sweep": "second"}, "format": "int"}}
+======== abstract-commits | main.tex | abstract, commitments and comparisons
+QUOTE: 'it commits at 67 of 132 band-metric comparisons'
+TEMPLATE: 'it commits at {v1} of {v2} band-metric comparisons'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "rows"}, "format": "int"}}
+======== abstract-abstains | main.tex | abstract, abstentions
+QUOTE: 'abstaining at 65'
+TEMPLATE: 'abstaining at {v1}'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "abstains"}, "format": "int"}}
+======== abstract-first-commits | main.tex | abstract, first-sweep commitments
+QUOTE: 'the first sweep replicates at 69'
+TEMPLATE: 'the first sweep replicates at {v1}'
+VALUES: {"v1": {"compute": "intervals", "args": {"field": "first_total"}, "format": "int"}}
+======== abstract-first-right | main.tex | abstract, first-sweep right commitments
+QUOTE: '68 right against the whole-band winner'
+TEMPLATE: '{v1} right against the whole-band winner'
+VALUES: {"v1": {"compute": "intervals", "args": {"field": "first_right"}, "format": "int"}}
+======== abstract-oracle | main.tex | abstract, exact oracle certifications
+QUOTE: 'certifies none of the 67'
+TEMPLATE: 'certifies {w1} of the {v2}'
+VALUES: {"w1": {"compute": "apriori", "args": {"field": "certifies"}, "format": "zero_phrase:none"}, "v2": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== intro-band-ratios | main.tex | introduction, band-worst ratios
+QUOTE: 'by 27.9 and 63.2 in worst absolute error and 323.2 and'
+TEMPLATE: 'by {v1} and {v2} in worst absolute error and {v3} and'
+VALUES: {"v1": {"compute": "band_ratio", "args": {"sweep": "first", "band": "A1", "metric": "absolute"}, "format": "sf:3"}, "v2": {"compute": "band_ratio", "args": {"sweep": "first", "band": "A2", "metric": "absolute"}, "format": "sf:3"}, "v3": {"compute": "band_ratio", "args": {"sweep": "first", "band": "A1", "metric": "relative"}, "format": "sf:4"}}
+======== intro-commits | main.tex | introduction, commitments and comparisons
+QUOTE: 'commits at 67 of the 132 band-metric'
+TEMPLATE: 'commits at {v1} of the {v2} band-metric'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "rows"}, "format": "int"}}
+======== intro-abstains | main.tex | introduction, abstentions
+QUOTE: 'abstaining at 65'
+TEMPLATE: 'abstaining at {v1}'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "abstains"}, "format": "int"}}
+======== intro-first-commits | main.tex | introduction, first-sweep commitments
+QUOTE: 'first sweep replicates at 69 commitments'
+TEMPLATE: 'first sweep replicates at {v1} commitments'
+VALUES: {"v1": {"compute": "intervals", "args": {"field": "first_total"}, "format": "int"}}
+======== intro-first-right | main.tex | introduction, first-sweep right commitments
+QUOTE: '68 right against the whole-band'
+TEMPLATE: '{v1} right against the whole-band'
+VALUES: {"v1": {"compute": "intervals", "args": {"field": "first_right"}, "format": "int"}}
+======== intro-oracle | main.tex | introduction, exact oracle certifications
+QUOTE: 'certifies none of the 67'
+TEMPLATE: 'certifies {w1} of the {v2}'
+VALUES: {"w1": {"compute": "apriori", "args": {"field": "certifies"}, "format": "zero_phrase:none"}, "v2": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== intro-bases | main.tex | introduction, number of bases
+QUOTE: 'on water in three bases'
+TEMPLATE: 'on water in {w1} bases'
+VALUES: {"w1": {"compute": "bridge_all", "args": {"field": "bases"}, "format": "en"}}
+======== intro-cell-win | main.tex | introduction, single order-0 win
+QUOTE: 'does not beat always-direct on any base except one order-0'
+TEMPLATE: 'does not beat always-direct on any base except {w1} order-0'
+VALUES: {"w1": {"compute": "workload", "args": {"basis": "sto3g", "field": "bases_beating_direct"}, "format": "en"}}
+======== intro-sto-margin | main.tex | introduction, STO-3G signed margin
+QUOTE: 'a 4.607 per cent STO-3G win'
+TEMPLATE: 'a {v1} per cent STO-3G win'
+VALUES: {"v1": {"compute": "workload", "args": {"basis": "sto3g", "field": "margin_abs_pct"}, "format": "sf:4"}}
+======== prediction-b1-rel | main.tex | Section 5, B1 relative commitments and their outcomes
+QUOTE: 'it commits to 10, eight to the direct entry and two to the recursed, and is right at all 10'
+TEMPLATE: 'it commits to {v1}, {w1} to the direct entry and {w2} to the recursed, and is right at all {v2}'
+VALUES: {"v1": {"compute": "prediction_group", "args": {"band": "A1", "metric": "relative", "field": "commits"}, "format": "int"}, "w1": {"compute": "prediction_group", "args": {"band": "A1", "metric": "relative", "field": "choice_product"}, "format": "en"}, "w2": {"compute": "prediction_group", "args": {"band": "A1", "metric": "relative", "field": "choice_ship"}, "format": "en"}, "v2": {"compute": "prediction_group", "args": {"band": "A1", "metric": "relative", "field": "right"}, "format": "int"}}
+======== prediction-b2-rel | main.tex | Section 5, B2 relative commitments and their outcomes
+QUOTE: '20 by relative, 15 of them to the direct entry and five to the recursed, and is right at every one'
+TEMPLATE: '{v1} by relative, {v2} of them to the direct entry and {w1} to the recursed, and is right at every one'
+VALUES: {"v1": {"compute": "prediction_group", "args": {"band": "A2", "metric": "relative", "field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_group", "args": {"band": "A2", "metric": "relative", "field": "choice_product"}, "format": "int"}, "w1": {"compute": "prediction_group", "args": {"band": "A2", "metric": "relative", "field": "choice_ship"}, "format": "en"}}
+======== prediction-total | main.tex | Section 5, total model commitments
+QUOTE: 'commits at 67 of the 132 band-metric order comparisons'
+TEMPLATE: 'commits at {v1} of the {v2} band-metric order comparisons'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "rows"}, "format": "int"}}
+======== replication-commits | main.tex | Section 5, first-sweep commitments at the model margin
+QUOTE: 'commits at 69 of the 132 comparisons'
+TEMPLATE: 'commits at {v1} of the {v2} comparisons'
+VALUES: {"v1": {"compute": "population_winners", "args": {"field": "margin1_commits"}, "format": "int"}, "v2": {"compute": "population_winners", "args": {"field": "comparisons"}, "format": "int"}}
+======== replication-pop-right | main.tex | Section 5, first-sweep population score
+QUOTE: 'it is right at all 69'
+TEMPLATE: 'it is right at all {v1}'
+VALUES: {"v1": {"compute": "population_winners", "args": {"field": "margin1_pop_right"}, "format": "int"}}
+======== replication-whole-right | main.tex | Section 5, first-sweep whole-band score
+QUOTE: 'it is right at 68'
+TEMPLATE: 'it is right at {v1}'
+VALUES: {"v1": {"compute": "population_winners", "args": {"field": "margin1_whole_right"}, "format": "int"}}
+======== replication-direct | main.tex | Section 5, always-direct within the committed comparisons
+QUOTE: 'right at 60 of the 69 here and at 59 of the 67 above'
+TEMPLATE: 'right at {v1} of the {v2} here and at {v3} of the {v4} above'
+VALUES: {"v1": {"compute": "first_prediction", "args": {"field": "direct_right"}, "format": "int"}, "v2": {"compute": "population_winners", "args": {"field": "margin1_commits"}, "format": "int"}, "v3": {"compute": "prediction_group", "args": {"band": "all", "metric": "all", "field": "direct_in_committed"}, "format": "int"}, "v4": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== replication-ladder | main.tex | Section 5, commitment ladders of the two sweeps
+QUOTE: '99 against 100 at zero margin, 96 against 95 at a quarter of the term, 93 against 93 at half of it, and 69 against 67 at the term'
+TEMPLATE: '{v1} against {v2} at zero margin, {v3} against {v4} at a quarter of the term, {v5} against {v6} at half of it, and {v7} against {v8} at the term'
+VALUES: {"v1": {"compute": "prediction_scan", "args": {"which": "first", "margin": "0", "field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_scan", "args": {"which": "second", "margin": "0", "field": "commits"}, "format": "int"}, "v3": {"compute": "prediction_scan", "args": {"which": "first", "margin": "0.25", "field": "commits"}, "format": "int"}, "v4": {"compute": "prediction_scan", "args": {"which": "second", "margin": "0.25", "field": "commits"}, "format": "int"}, "v5": {"compute": "prediction_scan", "args": {"which": "first", "margin": "0.5", "field": "commits"}, "format": "int"}, "v6": {"compute": "prediction_scan", "args": {"which": "second", "margin": "0.5", "field": "commits"}, "format": "int"}, "v7": {"compute": "prediction_scan", "args": {"which": "first", "margin": "1", "field": "commits"}, "format": "int"}, "v8": {"compute": "prediction_scan", "args": {"which": "second", "margin": "1", "field": "commits"}, "format": "int"}}
+======== samefit-coverage | main.tex | Section 5, coverage and score on the remaining comparisons
+QUOTE: 'Over the remaining 100 its coverage is 67 per cent, where the always-direct is right at 71, wrong at 26 and tied at three'
+TEMPLATE: 'Over the remaining {v1} its coverage is {v2} per cent, where the always-direct is right at {v3}, wrong at {v4} and tied at {w1}'
+VALUES: {"v1": {"compute": "prediction_samefit", "args": {"field": "rest_rows"}, "format": "int"}, "v2": {"compute": "prediction_samefit", "args": {"field": "rest_coverage_pct"}, "format": "int"}, "v3": {"compute": "prediction_samefit", "args": {"field": "rest_direct_right"}, "format": "int"}, "v4": {"compute": "prediction_samefit", "args": {"field": "rest_direct_wrong"}, "format": "int"}, "w1": {"compute": "prediction_samefit", "args": {"field": "rest_direct_tied"}, "format": "en"}}
+======== group-wins | main.tex | Section 5, per-group fixed-route and model scores
+QUOTE: 'the better fixed route is right at more of the 33 orders than the model in three of the four groups - 20 against 13 in B1 absolute, 26 against 10 in B1 relative and 29 against 24 in B2 absolute; the model leads only in B2 relative, 20 against 17'
+TEMPLATE: 'the better fixed route is right at more of the {v1} orders than the model in three of the four groups - {v2} against {v3} in B1 absolute, {v4} against {v5} in B1 relative and {v6} against {v7} in B2 absolute; the model leads only in B2 relative, {v8} against {v9}'
+VALUES: {"v1": {"compute": "prediction_group", "args": {"band": "A1", "metric": "absolute", "field": "rows"}, "format": "int"}, "v2": {"compute": "prediction_group", "args": {"band": "A1", "metric": "absolute", "field": "fixed_right"}, "format": "int"}, "v3": {"compute": "prediction_group", "args": {"band": "A1", "metric": "absolute", "field": "commits"}, "format": "int"}, "v4": {"compute": "prediction_group", "args": {"band": "A1", "metric": "relative", "field": "fixed_right"}, "format": "int"}, "v5": {"compute": "prediction_group", "args": {"band": "A1", "metric": "relative", "field": "commits"}, "format": "int"}, "v6": {"compute": "prediction_group", "args": {"band": "A2", "metric": "absolute", "field": "fixed_right"}, "format": "int"}, "v7": {"compute": "prediction_group", "args": {"band": "A2", "metric": "absolute", "field": "commits"}, "format": "int"}, "v8": {"compute": "prediction_group", "args": {"band": "A2", "metric": "relative", "field": "commits"}, "format": "int"}, "v9": {"compute": "prediction_group", "args": {"band": "A2", "metric": "relative", "field": "fixed_right"}, "format": "int"}}
+======== group-commits | main.tex | Section 5, model commitments in the four groups
+QUOTE: 'the model 13, 10, 24 and 20'
+TEMPLATE: 'the model {v1}, {v2}, {v3} and {v4}'
+VALUES: {"v1": {"compute": "prediction_group", "args": {"band": "A1", "metric": "absolute", "field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_group", "args": {"band": "A1", "metric": "relative", "field": "commits"}, "format": "int"}, "v3": {"compute": "prediction_group", "args": {"band": "A2", "metric": "absolute", "field": "commits"}, "format": "int"}, "v4": {"compute": "prediction_group", "args": {"band": "A2", "metric": "relative", "field": "commits"}, "format": "int"}}
+======== below-theta0 | main.tex | Section 5, commitments whose winning cell lies below the first threshold
+QUOTE: 'At 14 of the 67 commitments the measured winning cell lies below _0; recomputing both measured winners over x _0 alone, on the same kernel build, changes none of the 67, and the score stays at 67 commitments and 67 right'
+TEMPLATE: 'At {v1} of the {v2} commitments the measured winning cell lies below _0; recomputing both measured winners over x _0 alone, on the same kernel build, changes {w3} of the {v4}, and the score stays at {v5} commitments and {v6} right'
+VALUES: {"v1": {"compute": "prediction_below_theta0", "args": {"field": "count"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "w3": {"compute": "prediction_recomputed", "args": {"field": "changes"}, "format": "zero_phrase:none"}, "v4": {"compute": "prediction_recomputed", "args": {"field": "commits"}, "format": "int"}, "v5": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v6": {"compute": "prediction_totals", "args": {"field": "right"}, "format": "int"}}
+======== surrogate-replay | main.tex | Section 5, monotone-surrogate replay and matched-margin advantage
+QUOTE: "It commits at 21 of the 132 and is right at all 21; retuned to the model's 67 commitments it would be error-free up to 68, against 74 for the true model, so at matched margins the non-monotone shape is worth six error-free decisions"
+TEMPLATE: "It commits at {v1} of the {v2} and is right at all {v3}; retuned to the model's {v4} commitments it would be error-free up to {v5}, against {v6} for the true model, so at matched margins the non-monotone shape is worth {w1} error-free decisions"
+VALUES: {"v1": {"compute": "surrogate", "args": {"field": "commit_replay"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "rows"}, "format": "int"}, "v3": {"compute": "surrogate", "args": {"field": "right_replay"}, "format": "int"}, "v4": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v5": {"compute": "surrogate", "args": {"field": "retuned_surrogate"}, "format": "int"}, "v6": {"compute": "surrogate", "args": {"field": "retuned_true"}, "format": "int"}, "w1": {"compute": "surrogate", "args": {"field": "advantage"}, "format": "en"}}
+======== surrogate-frozen-a1 | main.tex | Section 5, surrogate with A_n frozen at the minimum
+QUOTE: 'makes the model commit at 74 and wrong at 20'
+TEMPLATE: 'makes the model commit at {v1} and wrong at {v2}'
+VALUES: {"v1": {"compute": "surrogate", "args": {"field": "a1_commits"}, "format": "int"}, "v2": {"compute": "surrogate", "args": {"field": "a1_wrong"}, "format": "int"}}
+======== surrogate-an-one | main.tex | Section 5, surrogate with A_n set to one
+QUOTE: 'makes it commit at 98 and wrong at 27'
+TEMPLATE: 'makes it commit at {v1} and wrong at {v2}'
+VALUES: {"v1": {"compute": "surrogate", "args": {"field": "an_commits"}, "format": "int"}, "v2": {"compute": "surrogate", "args": {"field": "an_wrong"}, "format": "int"}}
+======== surrogate-rise | main.tex | Section 5, commitments supplied by the rise after the minimum
+QUOTE: 'The rise after the minimum supplies 46 of the 67 commitments'
+TEMPLATE: 'The rise after the minimum supplies {v1} of the {v2} commitments'
+VALUES: {"v1": {"compute": "surrogate_lost", "args": {}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== b1-abstentions | main.tex | Section 5, same-fit abstentions among the B1 abstentions
+QUOTE: 'those 16 orders are 16 of its 20 B1 abstentions by absolute error and 16 of its 23 by relative'
+TEMPLATE: 'those {v1} orders are {v2} of its {v3} B1 abstentions by absolute error and {v4} of its {v5} by relative'
+VALUES: {"v1": {"compute": "prediction_served", "args": {"field": "samefit_abstain_abs"}, "format": "int"}, "v2": {"compute": "prediction_served", "args": {"field": "samefit_abstain_abs"}, "format": "int"}, "v3": {"compute": "prediction_group", "args": {"band": "A1", "metric": "absolute", "field": "abstains"}, "format": "int"}, "v4": {"compute": "prediction_served", "args": {"field": "samefit_abstain_rel"}, "format": "int"}, "v5": {"compute": "prediction_group", "args": {"band": "A1", "metric": "relative", "field": "abstains"}, "format": "int"}}
+======== frontier-half | main.tex | Section 5, frontier at half the arithmetic term
+QUOTE: 'through 93 with ten wrong and two ties at half the term'
+TEMPLATE: 'through {v1} with {w1} wrong and {w2} ties at half the term'
+VALUES: {"v1": {"compute": "frontier", "args": {"which": "absolute", "margin": "0.5", "field": "commits"}, "format": "int"}, "w1": {"compute": "frontier", "args": {"which": "absolute", "margin": "0.5", "field": "wrong"}, "format": "en"}, "w2": {"compute": "frontier", "args": {"which": "absolute", "margin": "0.5", "field": "ties"}, "format": "en"}}
+======== frontier-term | main.tex | Section 5, frontier at the model's margin
+QUOTE: 'to 67, all right, at the term'
+TEMPLATE: 'to {v1}, all right, at the term'
+VALUES: {"v1": {"compute": "frontier", "args": {"which": "absolute", "margin": "1", "field": "commits"}, "format": "int"}}
+======== frontier-tail | main.tex | Section 5, frontier beyond the model's margin
+QUOTE: 'to five and then four with none at two, four and eight times the term'
+TEMPLATE: 'to {w1} and then {w2} with {w3} at two, four and eight times the term'
+VALUES: {"w1": {"compute": "frontier", "args": {"which": "absolute", "margin": "2", "field": "commits"}, "format": "en"}, "w2": {"compute": "frontier", "args": {"which": "absolute", "margin": "4", "field": "commits"}, "format": "en"}, "w3": {"compute": "frontier", "args": {"which": "absolute", "margin": "8", "field": "wrong"}, "format": "zero_phrase:none"}}
+======== interval-cp | main.tex | Section 5, Clopper-Pearson lower bound
+QUOTE: "At the model's margin, 67 of 67 has a Clopper-Pearson 95 per cent lower bound of 0.946"
+TEMPLATE: "At the model's margin, {v1} of {v2} has a Clopper-Pearson 95 per cent lower bound of {v3}"
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "right"}, "format": "int"}, "v3": {"compute": "intervals", "args": {"field": "cp_lower"}, "format": "dp:3"}}
+======== interval-lost | main.tex | Section 5, surrogate lost-commitment interval
+QUOTE: "the monotone surrogate's 46 misses of 67 lie in 52 to 84 per cent by the order-block bootstrap"
+TEMPLATE: "the monotone surrogate's {v1} misses of {v2} lie in {v3} to {v4} per cent by the order-block bootstrap"
+VALUES: {"v1": {"compute": "intervals", "args": {"field": "lost_count"}, "format": "int"}, "v2": {"compute": "intervals", "args": {"field": "lost_total"}, "format": "int"}, "v3": {"compute": "intervals_pct", "args": {"field": "lost_low"}, "format": "int"}, "v4": {"compute": "intervals_pct", "args": {"field": "lost_high"}, "format": "int"}}
+======== interval-shape | main.tex | Section 5, shape-advantage interval
+QUOTE: 'the six-decision shape advantage has a block interval of 2 to 10'
+TEMPLATE: 'the six-decision shape advantage has a block interval of {v1} to {v2}'
+VALUES: {"v1": {"compute": "intervals", "args": {"field": "difference_low"}, "format": "int"}, "v2": {"compute": "intervals", "args": {"field": "difference_high"}, "format": "int"}}
+======== interval-first | main.tex | Section 5, first-sweep replication score
+QUOTE: "The first sweep's 68 of 69 is consistent with the same underlying rate"
+TEMPLATE: "The first sweep's {v1} of {v2} is consistent with the same underlying rate"
+VALUES: {"v1": {"compute": "intervals", "args": {"field": "first_right"}, "format": "int"}, "v2": {"compute": "intervals", "args": {"field": "first_total"}, "format": "int"}}
+======== e2e-fallback | main.tex | Section 6, commitments and fallbacks
+QUOTE: 'names its committed route at the 67 and the fallback at the 65'
+TEMPLATE: 'names its committed route at the {v1} and the fallback at the {v2}'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "abstains"}, "format": "int"}}
+======== conclusion-e2e | main.tex | Conclusions, end-to-end count and absolute reduction
+QUOTE: 'over all 132 comparisons with a named fallback at the abstentions, the model reduces the worst absolute error by 3.43 per cent against the better fixed route'
+TEMPLATE: 'over all {v1} comparisons with a named fallback at the abstentions, the model reduces the worst absolute error by {v2} per cent against the better fixed route'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "rows"}, "format": "int"}, "v2": {"compute": "e2e", "args": {"field": "reduction_direct_abs"}, "format": "dp:2"}}
+======== bound-full | main.tex | Section 6, full bound against the measured worsts
+QUOTE: "At the second experiment's band worst the full bound is 1.57e-14 in B1 and 1.78e-14 in B2, against measured worsts of 3.22e-15 and 2.27e-15: 4.9 times the measured figure in B1 and 7.9 times in B2"
+TEMPLATE: "At the second experiment's band worst the full bound is {v1} in B1 and {v2} in B2, against measured worsts of {v3} and {v4}: {v5} times the measured figure in B1 and {v6} times in B2"
+VALUES: {"v1": {"compute": "bound", "args": {"field": "full_a1"}, "format": "sci:2"}, "v2": {"compute": "bound", "args": {"field": "full_a2"}, "format": "sci:2"}, "v3": {"compute": "bound", "args": {"field": "measured_a1"}, "format": "sci:2"}, "v4": {"compute": "bound", "args": {"field": "measured_a2"}, "format": "sci:2"}, "v5": {"compute": "bound", "args": {"field": "ratio_a1"}, "format": "sf:2"}, "v6": {"compute": "bound", "args": {"field": "ratio_a2"}, "format": "sf:2"}}
+======== s8-commits-right | supplement/main.tex | Supplement S8, surrogate commits and right count
+QUOTE: 'The model then commits at 21 of the 132 comparisons and is right at all 21'
+TEMPLATE: 'The model then commits at {v1} of the {v2} comparisons and is right at all {v3}'
+VALUES: {"v1": {"compute": "surrogate", "args": {"field": "commit_replay"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "rows"}, "format": "int"}, "v3": {"compute": "surrogate", "args": {"field": "right_replay"}, "format": "int"}}
+======== s8-lost | supplement/main.tex | Supplement S8, true commitments lost to abstention
+QUOTE: '46 of its 67 commitments become abstentions'
+TEMPLATE: '{v1} of its {v2} commitments become abstentions'
+VALUES: {"v1": {"compute": "surrogate", "args": {"field": "lost"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== s8-retuned-margin | supplement/main.tex | Supplement S8, retuned surrogate margin and commits
+QUOTE: 'retuned to a margin of 0.9467 of its own accumulated-arithmetic term it reaches 67 commitments, all right'
+TEMPLATE: 'retuned to a margin of {v1} of its own accumulated-arithmetic term it reaches {v2} commitments, all right'
+VALUES: {"v1": {"compute": "surrogate_frontier", "args": {"field": "target_upper"}, "format": "dp:4"}, "v2": {"compute": "surrogate_frontier", "args": {"field": "target_commits"}, "format": "int"}}
+======== s8-ceiling-first-wrong | supplement/main.tex | Supplement S8, surrogate error-free ceiling and first wrong commitment
+QUOTE: 'with an error-free ceiling of 68 and its first wrong commitment at 69'
+TEMPLATE: 'with an error-free ceiling of {v1} and its first wrong commitment at {v2}'
+VALUES: {"v1": {"compute": "surrogate_frontier", "args": {"field": "ceiling_commits"}, "format": "int"}, "v2": {"compute": "surrogate_frontier", "args": {"field": "first_wrong_commits"}, "format": "int"}}
+======== s8-true-range | supplement/main.tex | Supplement S8, true model error-free commit range
+QUOTE: 'the true model, retuned the same way, is error-free from 4 to 74 commitments'
+TEMPLATE: 'the true model, retuned the same way, is error-free from {v1} to {v2} commitments'
+VALUES: {"v1": {"compute": "true_frontier", "args": {"field": "error_free_min"}, "format": "int"}, "v2": {"compute": "true_frontier", "args": {"field": "error_free_max"}, "format": "int"}}
+======== s8-six-decisions | supplement/main.tex | Supplement S8, advantage over the retuned surrogate
+QUOTE: 'worth six error-free decisions'
+TEMPLATE: 'worth {w1} error-free decisions'
+VALUES: {"w1": {"compute": "surrogate", "args": {"field": "advantage"}, "format": "en"}}
+======== s8-a1 | supplement/main.tex | Supplement S8, A_1 = 1/(2x) surrogate commits and wrong count
+QUOTE: 'the model then commits at 74 and is wrong at 20'
+TEMPLATE: 'the model then commits at {v1} and is wrong at {v2}'
+VALUES: {"v1": {"compute": "surrogate", "args": {"field": "a1_commits"}, "format": "int"}, "v2": {"compute": "surrogate", "args": {"field": "a1_wrong"}, "format": "int"}}
+======== s8-an | supplement/main.tex | Supplement S8, A_n = 1 surrogate commits and wrong count
+QUOTE: 'the model commits at 98 and is wrong at 27'
+TEMPLATE: 'the model commits at {v1} and is wrong at {v2}'
+VALUES: {"v1": {"compute": "surrogate", "args": {"field": "an_commits"}, "format": "int"}, "v2": {"compute": "surrogate", "args": {"field": "an_wrong"}, "format": "int"}}
+======== s8-rise-supplies | supplement/main.tex | Supplement S8, commitments supplied by the rise
+QUOTE: 'the rise after the minimum supplies 46 of the 67 commitments'
+TEMPLATE: 'the rise after the minimum supplies {v1} of the {v2} commitments'
+VALUES: {"v1": {"compute": "surrogate", "args": {"field": "lost"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== s8-a1-breakdown | supplement/main.tex | Supplement S8, A_1 = 1/(2x) commitment changes
+QUOTE: '20 of the 67 commitments change, five to the wrong winner and fifteen to abstentions'
+TEMPLATE: None
+VALUES: null
+======== s8-an-breakdown | supplement/main.tex | Supplement S8, A_n = 1 commitment changes
+QUOTE: 'eight of the 67 commitments change, six to a wrong winner, and all eight are relative-error commitments'
+TEMPLATE: None
+VALUES: null
+======== s12-first-commits | supplement/main.tex | Supplement S12, first-sweep commits
+QUOTE: 'the first sweep commits at 69 of the 132 band-metric comparisons'
+TEMPLATE: 'the first sweep commits at {v1} of the {v2} band-metric comparisons'
+VALUES: {"v1": {"compute": "first_prediction", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "first_prediction", "args": {"field": "rows"}, "format": "int"}}
+======== s12-first-population-right | supplement/main.tex | Supplement S12, first-sweep population right count
+QUOTE: 'it is right at all 69'
+TEMPLATE: 'it is right at all {v1}'
+VALUES: {"v1": {"compute": "population_winners", "args": {"field": "margin1_pop_right"}, "format": "int"}}
+======== s12-first-whole-right | supplement/main.tex | Supplement S12, first-sweep whole-band right count
+QUOTE: 'Scored against the whole-band winner a caller meets, it is right at 68'
+TEMPLATE: 'Scored against the whole-band winner a caller meets, it is right at {v1}'
+VALUES: {"v1": {"compute": "population_winners", "args": {"field": "margin1_whole_right"}, "format": "int"}}
+======== s12-second-scores | supplement/main.tex | Supplement S12, second-sweep commits and right count
+QUOTE: "The second sweep's whole-band and population scores coincide at 67 of 67"
+TEMPLATE: "The second sweep's whole-band and population scores coincide at {v1} of {v2}"
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "right"}, "format": "int"}}
+======== s12-direct-right | supplement/main.tex | Supplement S12, always-direct right counts
+QUOTE: 'always-direct is right at 60 of the 69 on the first sweep and 59 of the 67 on the second'
+TEMPLATE: 'always-direct is right at {v1} of the {v2} on the first sweep and {v3} of the {v4} on the second'
+VALUES: {"v1": {"compute": "first_direct_in_committed", "args": {"sweep": "first"}, "format": "int"}, "v2": {"compute": "first_prediction", "args": {"field": "commits"}, "format": "int"}, "v3": {"compute": "first_direct_in_committed", "args": {"sweep": "second"}, "format": "int"}, "v4": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== cover-commits | cover-letter.md | Cover letter, commits and comparison count
+QUOTE: 'commits at 67 of the 132 band-metric order comparisons'
+TEMPLATE: 'commits at {v1} of the {v2} band-metric order comparisons'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "rows"}, "format": "int"}}
+======== cover-abstains | cover-letter.md | Cover letter, abstention count
+QUOTE: 'abstaining at the other 65'
+TEMPLATE: 'abstaining at the other {v1}'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "abstains"}, "format": "int"}}
+======== cover-lost | cover-letter.md | Cover letter, commitments lost to the surrogate
+QUOTE: 'turns 46 of those 67 commitments into abstentions'
+TEMPLATE: 'turns {v1} of those {v2} commitments into abstentions'
+VALUES: {"v1": {"compute": "surrogate", "args": {"field": "lost"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== cover-apriori-certifies | cover-letter.md | Cover letter, oracle certifications
+QUOTE: 'certifies none of the 67 commitments'
+TEMPLATE: 'certifies {w1} of the {v2} commitments'
+VALUES: {"w1": {"compute": "apriori", "args": {"field": "certifies"}, "format": "zero_phrase:none"}, "v2": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== abstract-reference-precision | main.tex | abstract, reference precision
+QUOTE: 'both errors are measured against a 60-digit reference'
+TEMPLATE: 'both errors are measured against a {v1}-digit reference'
+VALUES: {"v1": {"compute": "sweep_reference_digits", "args": {}, "format": "int"}}
+======== abstract-abstains-fallback | main.tex | abstract, abstention count in the end-to-end sentence
+QUOTE: 'with a fallback at the 65 abstentions'
+TEMPLATE: 'with a fallback at the {v1} abstentions'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "abstains"}, "format": "int"}}
+======== intro-abstains-fallback | main.tex | introduction, abstention count in the end-to-end sentence
+QUOTE: 'fallback at the 65 abstentions'
+TEMPLATE: 'fallback at the {v1} abstentions'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "abstains"}, "format": "int"}}
+======== intro-report-arguments | main.tex | introduction, pre-release report argument count
+QUOTE: 'maxima lower-bound the 9354-argument ones'
+TEMPLATE: 'maxima lower-bound the {v1}-argument ones'
+VALUES: {"v1": {"compute": "summary", "args": {"sweep": "first", "field": "report_total"}, "format": "int"}}
+======== results-truncation-16 | main.tex | Section 5, comparisons whose order truncation reverses
+QUOTE: 'leaves 16 of the 67 comparisons ordered the other way by truncation'
+TEMPLATE: 'leaves {v1} of the {v2} comparisons ordered the other way by truncation'
+VALUES: {"v1": {"compute": "apriori", "args": {"field": "trunc_other"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== results-remaining-51 | main.tex | Section 5, comparisons left after the truncation reordering
+QUOTE: 'At the remaining 51 the arithmetic charge'
+TEMPLATE: 'At the remaining {v1} the arithmetic charge'
+VALUES: {"v1": {"compute": "apriori", "args": {"field": "remaining"}, "format": "int"}}
+======== results-charge-92 | main.tex | Section 5, median charge factor on the remaining comparisons
+QUOTE: 'to be smaller by a median factor of 92'
+TEMPLATE: 'to be smaller by a median factor of {v1}'
+VALUES: {"v1": {"compute": "apriori", "args": {"field": "remaining_median"}, "format": "int"}}
+======== results-67-of-67 | main.tex | Section 5, error-free commitments at the model's margin
+QUOTE: 'the error-free 67 of 67 is conditional on that scale'
+TEMPLATE: 'the error-free {v1} of {v2} is conditional on that scale'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "right"}, "format": "int"}}
+======== results-caption-totals | main.tex | Section 6, end-to-end caption totals
+QUOTE: 'End to end over all 132 band-metric order comparisons: the worst error each choice delivers, with the model at the margin of Table tab:frontier and a named fallback at its 65 abstentions'
+TEMPLATE: 'End to end over all {v1} band-metric order comparisons: the worst error each choice delivers, with the model at the margin of Table tab:frontier and a named fallback at its {v2} abstentions'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "rows"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "abstains"}, "format": "int"}}
+======== results-model-score | main.tex | Section 6, model commitments and comparisons
+QUOTE: 'it commits at 67 of the 132 comparisons and names the measured winner at every one'
+TEMPLATE: 'it commits at {v1} of the {v2} comparisons and names the measured winner at every one'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "rows"}, "format": "int"}}
+======== limitations-certifies | main.tex | Limitations, exact oracle certifications
+QUOTE: 'charge certifies none of the 67 commitments'
+TEMPLATE: 'charge certifies {w1} of the {v2} commitments'
+VALUES: {"w1": {"compute": "apriori", "args": {"field": "certifies"}, "format": "zero_phrase:none"}, "v2": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}}
+======== cover-reference-precision | cover-letter.md | Cover letter, reference precision
+QUOTE: 'with a 60-digit reference'
+TEMPLATE: 'with a {v1}-digit reference'
+VALUES: {"v1": {"compute": "sweep_reference_digits", "args": {}, "format": "int"}}
+======== main-first-right-68 | main.tex | Section 5, first-sweep right commitments against the whole-band winner
+QUOTE: 'it is right at 68'
+TEMPLATE: 'it is right at {v1}'
+VALUES: {"v1": {"compute": "intervals", "args": {"field": "first_right"}, "format": "int"}}
+======== s12-67-of-67 | supplement/main.tex | Supplement S12, commitments at the model's margin
+QUOTE: 'A 67 of 67 has no block variance'
+TEMPLATE: 'A {v1} of {v2} has no block variance'
+VALUES: {"v1": {"compute": "prediction_totals", "args": {"field": "commits"}, "format": "int"}, "v2": {"compute": "prediction_totals", "args": {"field": "right"}, "format": "int"}}

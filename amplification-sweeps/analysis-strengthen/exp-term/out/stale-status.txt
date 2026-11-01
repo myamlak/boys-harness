@@ -1,0 +1,366 @@
+abstract-sweep-arguments     main.tex             occ=0 matches=1 OK | On a 9353-argument sweep of two fitted bands
+abstract-band-ratios         main.tex             occ=0 matches=0 GONE | 27.9 and 63.2 in absolute error, 323.2 and
+abstract-relative-b2         main.tex             occ=0 matches=2 OK | 3.865e4 in relative
+abstract-second-size         main.tex             occ=0 matches=0 GONE | In a second 836-argument experiment, 832
+abstract-commits             main.tex             occ=0 matches=0 GONE | it commits at 67 of 132 band-metric comparisons
+abstract-abstains            main.tex             occ=0 matches=0 GONE | abstaining at 65
+abstract-first-commits       main.tex             occ=0 matches=0 GONE | the first sweep replicates at 69
+abstract-first-right         main.tex             occ=0 matches=0 GONE | 68 right against the whole-band winner
+abstract-median              main.tex             occ=0 matches=2 OK | is a median 9.6 times its truncation error
+abstract-oracle              main.tex             occ=0 matches=0 GONE | certifies none of the 67
+abstract-e2e                 main.tex             occ=0 matches=2 OK | the worst absolute error falls 3.43 per cent against always-direct
+abstract-report-arguments    main.tex             occ=0 matches=1 OK | B2's maxima lower-bound the 9354-argument ones
+abstract-bases               main.tex             occ=0 matches=1 OK | on water in three bases
+abstract-cell-win            main.tex             occ=0 matches=1 OK | does not beat always-direct on any base except one order-0
+abstract-sto-margin          main.tex             occ=0 matches=1 OK | a 4.607 per cent STO-3G win
+intro-sweep-arguments        main.tex             occ=0 matches=1 OK | On the 9353-argument sweep of two fitted bands
+intro-band-ratios            main.tex             occ=0 matches=0 GONE | by 27.9 and 63.2 in worst absolute error and 323.2 and
+intro-relative-b2            main.tex             occ=1 matches=2 OK | 3.865e4 in relative
+intro-second-size            main.tex             occ=0 matches=1 OK | In the second 836-argument experiment, 832
+intro-commits                main.tex             occ=0 matches=0 GONE | commits at 67 of the 132 band-metric
+intro-abstains               main.tex             occ=1 matches=0 GONE | abstaining at 65
+intro-first-commits          main.tex             occ=1 matches=0 GONE | first sweep replicates at 69 commitments
+intro-first-right            main.tex             occ=1 matches=0 GONE | 68 right against the whole-band
+intro-median                 main.tex             occ=1 matches=2 OK | is a median 9.6 times its truncation error
+intro-oracle                 main.tex             occ=1 matches=0 GONE | certifies none of the 67
+intro-e2e                    main.tex             occ=1 matches=2 OK | the worst absolute error falls 3.43 per cent
+intro-bases                  main.tex             occ=1 matches=1 SHIFT | on water in three bases
+intro-cell-win               main.tex             occ=1 matches=1 SHIFT | does not beat always-direct on any base except one order-0
+intro-sto-margin             main.tex             occ=1 matches=1 SHIFT | a 4.607 per cent STO-3G win
+design-closed                main.tex             occ=0 matches=1 OK | agree to a relative 3.5e-71 over the 27483 measured cells
+design-args                  main.tex             occ=0 matches=1 OK | contains 9353 arguments, not the 9354 of the pre-release sweep
+design-recovered-x           main.tex             occ=0 matches=1 OK | x = 5.949924076054243
+design-bound-end             main.tex             occ=0 matches=1 OK | [0, 11.899848152108484)
+design-band-b1               main.tex             occ=0 matches=1 OK | B1 &= [0, 5.949924076054242) && Chebyshev degree 20
+design-band-b2               main.tex             occ=0 matches=1 OK | B2 &= [5.949924076054242, 11.899848152108484) && Chebyshev degree 18
+design-hex                   main.tex             occ=0 matches=1 OK | In C99 hexadecimal form the boundaries are
+design-sweep-args            main.tex             occ=0 matches=1 OK | contains 9353 arguments, 4812 in B1 and 4541 in B2
+design-sweep-cells           main.tex             occ=0 matches=1 OK | at all 33 orders n = 0 to 32: 308649 measured cells
+design-theta0                main.tex             occ=0 matches=1 OK | _0 = 1.0855252345349333
+design-theta5                main.tex             occ=0 matches=1 OK | _5 = 2.015297705335114
+design-theta9                main.tex             occ=0 matches=1 OK | _9 = 4.897870299825657
+design-theta17               main.tex             occ=0 matches=1 OK | _17 = 10.783587858916762
+design-grid-tags             main.tex             occ=0 matches=1 OK | contributes 646 arguments inside the two bands, 459 in B1 and 187 in B
+design-band-pairs            main.tex             occ=0 matches=1 OK | all 66 band-order pairs
+design-r3-args               main.tex             occ=0 matches=1 OK | 73 arguments and 2409 cells
+design-r3-cells              main.tex             occ=0 matches=1 OK | 73 arguments and 2409 cells
+design-r4-cells              main.tex             occ=0 matches=1 OK | the same 2409
+design-up-recursion          main.tex             occ=0 matches=1 OK | 8040 of 8040 in the upward window and 1312 of 1312 in the downward
+second-args                  main.tex             occ=0 matches=1 OK | over 836 distinct arguments
+second-cells                 main.tex             occ=0 matches=1 OK | Of the 27588 cells produced, 27483 have a measurable
+second-r2                    main.tex             occ=0 matches=1 OK | 3.0e-62
+second-r4                    main.tex             occ=0 matches=1 OK | over 2409 cells to 4.98e-46
+second-r7                    main.tex             occ=0 matches=1 OK | at the 646 arguments it supplies inside the two bands and all orders, 
+second-admission             main.tex             occ=0 matches=1 OK | 9200 upward-prefix cells, 8679 downward cells and the 33 exact cells
+band-ratios-abs              main.tex             occ=0 matches=1 OK | by a factor of 27.9 in B1 and 63.2 in B2
+band-ratios-rel              main.tex             occ=0 matches=1 OK | In relative error the same comparison gives 323.2 and 3.865e4
+band-metric-factor           main.tex             occ=0 matches=1 OK | by a factor of 12 in B1 and 612 in B2
+second-band-ratios           main.tex             occ=0 matches=1 OK | gives 19.6 in B1 and 33.2 in B2, against 27.9 and 63.2 here
+band-worst-direct            main.tex             occ=0 matches=1 OK | from 2.20797e-16 and 8.10411e-17 to 1.63733e-16 and 6.83814e-17
+band-worst-recursed          main.tex             occ=0 matches=1 OK | from 6.14967e-15 and 5.11869e-15 to 3.21615e-15 and 2.26802e-15
+per-cell-b1                  main.tex             occ=0 matches=1 OK | The largest per-cell ratio in B1 is 219994, at n = 15, x = 5.85226
+per-cell-b2                  main.tex             occ=0 matches=1 OK | in B2 it is 1.3277e6, at n = 32, x = 11.4124
+wins-b1-abs                  main.tex             occ=0 matches=1 OK | more accurate by absolute error at 4 of the 17 orders
+wins-b1-rel                  main.tex             occ=0 matches=1 OK | relative error at 5 of those 17
+wins-b2-abs                  main.tex             occ=0 matches=1 OK | wins at 2 of the 33 orders by absolute error
+wins-b2-rel                  main.tex             occ=0 matches=1 OK | and at 15 by relative error
+wins-b2-both                 main.tex             occ=0 matches=1 OK | in B2 the counts are 2 and 15
+prediction-b1-abs-commits    main.tex             occ=0 matches=1 OK | commits at 13 of these 17 orders
+prediction-b1-abstain-list   main.tex             occ=0 matches=1 OK | abstaining at n = 1, 9, 10 and 11
+order0-b1-abs                main.tex             occ=0 matches=1 OK | 1.66109e-16 against the direct 2.20797e-16, better by 1.33
+order0-b2-abs                main.tex             occ=0 matches=1 OK | 9.4668e-17 against 8.10411e-17, worse by 1.17
+order0-ratios-rel            main.tex             occ=0 matches=1 OK | relative ratios are 0.6471 and 1.23
+order0-factor                main.tex             occ=0 matches=1 OK | All four lie within a factor of 2
+decomposition-b1             main.tex             occ=0 matches=1 OK | total factor of 219994.07 is the product of 2.996297
+decomposition-b1-seed        main.tex             occ=0 matches=1 OK | and 73421.98, the seed's error against the fit
+decomposition-b1-errors      main.tex             occ=0 matches=1 OK | recursed order-0 error, 1.79115e-17, with the direct error at that cel
+decomposition-b1-gain        main.tex             occ=0 matches=1 OK | the modelled contribution is 0.58399
+decomposition-b2             main.tex             occ=0 matches=1 OK | gives 131.7893 x 10074.61, whose product is the record's 1327725.58
+decomposition-b2-ratio       main.tex             occ=0 matches=1 OK | the seed-versus-fit factor 76
+decomposition-b2-gain        main.tex             occ=0 matches=1 OK | exceeds the modelled gain of 3.81258
+amplification-27483          main.tex             occ=0 matches=1 OK | The 27483 measurable cells
+amplification-closed         main.tex             occ=0 matches=1 OK | in the same class as the 3.5e-71 comparison
+amplification-worst          main.tex             occ=0 matches=1 OK | amplification from the closed form is 2.93e-14, at n = 10 and x = 9.02
+amplification-resolved       main.tex             occ=0 matches=1 OK | Over the 832 arguments
+documented-peak              main.tex             occ=0 matches=1 OK | peaking at 1.04e5 at n = 12
+documented-constant          main.tex             occ=0 matches=1 OK | reciprocal at that end, 104435.518021 at order 12
+documented-measured-gain     main.tex             occ=0 matches=1 OK | the measured gain peaks at 29.1008 in B1 and 23.3830 in B2
+prediction-b1-abs            main.tex             occ=0 matches=1 OK | commits to 13 of the 33 orders, 12 of them to the direct entry and one
+prediction-b1-rel            main.tex             occ=0 matches=0 GONE | it commits to 10, eight to the direct entry and two to the recursed, a
+prediction-b2-abs            main.tex             occ=0 matches=1 OK | commits to 24 orders by absolute error
+prediction-b2-rel            main.tex             occ=0 matches=0 GONE | 20 by relative, 15 of them to the direct entry and five to the recurse
+prediction-total             main.tex             occ=0 matches=0 GONE | commits at 67 of the 132 band-metric order comparisons
+replication-shared           main.tex             occ=0 matches=1 OK | 648 of the 9353 arguments (6.9 per cent) are also in the 836-argument 
+replication-commits          main.tex             occ=0 matches=0 GONE | commits at 69 of the 132 comparisons
+replication-pop-right        main.tex             occ=0 matches=0 GONE | it is right at all 69
+replication-whole-right      main.tex             occ=0 matches=0 GONE | it is right at 68
+replication-direct           main.tex             occ=0 matches=0 GONE | right at 60 of the 69 here and at 59 of the 67 above
+replication-ladder           main.tex             occ=0 matches=0 GONE | 99 against 100 at zero margin, 96 against 95 at a quarter of the term,
+replication-cells            main.tex             occ=0 matches=1 OK | 648 of the second sweep's 836 arguments are shared with the first, and
+direct-wins                  main.tex             occ=0 matches=1 OK | The direct entry is the measured winner at 85 of the 132 comparisons, 
+samefit-count                main.tex             occ=0 matches=1 OK | Thirty-two of the 132 comparisons - B1 orders 17 to 32 in both metrics
+samefit-coverage             main.tex             occ=0 matches=0 GONE | Over the remaining 100 its coverage is 67 per cent, where the always-d
+group-wins                   main.tex             occ=0 matches=0 GONE | the better fixed route is right at more of the 33 orders than the mode
+group-commits                main.tex             occ=0 matches=0 GONE | the model 13, 10, 24 and 20
+below-theta0                 main.tex             occ=0 matches=0 GONE | At 14 of the 67 commitments the measured winning cell lies below _0; r
+below-theta0-display         main.tex             occ=0 matches=1 OK | The fourteen are A1 absolute orders 0, 2-8 and 12-16 and A1 relative o
+population-log-count         main.tex             occ=0 matches=1 OK | the deposit's 14 of 132 in population_winners.log
+surrogate-replay             main.tex             occ=0 matches=0 GONE | It commits at 21 of the 132 and is right at all 21; retuned to the mod
+surrogate-frozen-a1          main.tex             occ=0 matches=0 GONE | makes the model commit at 74 and wrong at 20
+surrogate-an-one             main.tex             occ=0 matches=0 GONE | makes it commit at 98 and wrong at 27
+surrogate-rise               main.tex             occ=0 matches=0 GONE | The rise after the minimum supplies 46 of the 67 commitments
+b1-served-stop               main.tex             occ=0 matches=1 OK | In band B1 the served orders stop at 16
+b1-threshold                 main.tex             occ=0 matches=1 OK | the smallest threshold that serves any order above 16 is _17, above B1
+b1-abstentions               main.tex             occ=0 matches=0 GONE | those 16 orders are 16 of its 20 B1 abstentions by absolute error and 
+same-band-absolute           main.tex             occ=0 matches=1 OK | the first experiment's whole-band ratio of recursed to direct worst is
+same-band-order32            main.tex             occ=0 matches=1 OK | order 32 being 0.95, and 1.24 to 2.86 in relative error at all 16
+same-band-population         main.tex             occ=0 matches=1 OK | reverses the absolute sign at 12 of the 16, ratios 1.05 to 1.55
+same-band-rel-x              main.tex             occ=0 matches=1 OK | their maxima sitting inside the population at x about 5.9
+same-band-second             main.tex             occ=0 matches=1 OK | on the second sweep orders 17 and 32 reverse
+frontier-b1-absolute         main.tex             occ=0 matches=1 OK | the only improvement over the better fixed route is B1 absolute, by 3.
+frontier-margin-max          main.tex             occ=0 matches=1 OK | The margin itself ranges from zero to 4.62e-8 over the 132 comparisons
+frontier-zero                main.tex             occ=0 matches=1 OK | Coverage falls from 100 commitments at zero margin - 83 right and 17 n
+frontier-half                main.tex             occ=0 matches=0 GONE | through 93 with ten wrong and two ties at half the term
+frontier-term                main.tex             occ=0 matches=0 GONE | to 67, all right, at the term
+frontier-tail                main.tex             occ=0 matches=0 GONE | to five and then four with none at two, four and eight times the term
+frontier-relative-tail       main.tex             occ=0 matches=1 OK | it is 10.4 per cent lower in relative error
+interval-cp                  main.tex             occ=0 matches=0 GONE | At the model's margin, 67 of 67 has a Clopper-Pearson 95 per cent lowe
+interval-wrong               main.tex             occ=0 matches=1 OK | at zero margin the 14 genuine wrong choices of 100 lie in an order-blo
+interval-lost                main.tex             occ=0 matches=0 GONE | the monotone surrogate's 46 misses of 67 lie in 52 to 84 per cent by t
+interval-shape               main.tex             occ=0 matches=0 GONE | the six-decision shape advantage has a block interval of 2 to 10
+interval-first               main.tex             occ=0 matches=0 GONE | The first sweep's 68 of 69 is consistent with the same underlying rate
+e2e-total                    main.tex             occ=0 matches=1 OK | scores the three choices that result over all 132 band-metric order co
+e2e-fallback                 main.tex             occ=0 matches=0 GONE | names its committed route at the 67 and the fallback at the 65
+e2e-absolute                 main.tex             occ=0 matches=1 OK | In absolute error the worst over the 66 comparisons of that metric is 
+e2e-absolute-reduction       main.tex             occ=0 matches=1 OK | a reduction of 3.43 per cent against always-direct and 95.1 per cent a
+e2e-relative                 main.tex             occ=0 matches=1 OK | In relative error the same three are 2.8537e-13, 5.24364e-9 and 2.8537
+e2e-location                 main.tex             occ=0 matches=1 OK | B1 order 0 absolute, B2 order 30 relative
+e2e-order0-pair              main.tex             occ=0 matches=1 OK | always-direct's worst is that same B1 order-0 cell, 1.63733e-16, where
+conclusion-e2e               main.tex             occ=0 matches=0 GONE | over all 132 comparisons with a named fallback at the abstentions, the
+bound-seed-range             main.tex             occ=0 matches=1 OK | between 0.0012 and 1411 times the measured error over the 8628 upward 
+bound-seed-below             main.tex             occ=0 matches=1 OK | it is below the measured error at 6425 of those cells, with a median o
+bound-full                   main.tex             occ=0 matches=0 GONE | At the second experiment's band worst the full bound is 1.57e-14 in B1
+chemistry-sto-win            main.tex             occ=0 matches=1 OK | the B1 order-0 comparison is a full-metric absolute win on STO-3G, +4.
+chemistry-sto-relative       main.tex             occ=0 matches=1 OK | leaves the relative metric 3.891 per cent behind
+chemistry-larger-bases       main.tex             occ=0 matches=1 OK | On the two larger bases the same comparison is worse than always-direc
+chemistry-cell-wins          main.tex             occ=0 matches=1 OK | by up to 48.22 per cent on STO-3G, 88.55 on 6-31G^* and 90.86 on cc-pV
+bridge-max                   main.tex             occ=0 matches=1 OK | The largest per-value difference is 3.219647e-15, at order 0
+bridge-contract              main.tex             occ=0 matches=1 OK | that difference uses 3.28 per cent of the published 10^-13F_0 contract
+bridge-contract-ccpvtz       main.tex             occ=0 matches=1 OK | and 3.22 in the other two bases at its own cell
+bridge-largest-fraction      main.tex             occ=0 matches=1 OK | the largest fraction anywhere is 5.03 per cent, at a smaller differenc
+bridge-energy                main.tex             occ=0 matches=1 OK | The total energy changes by at most 4.3e-14 hartree under either conve
+conclusion-bridge            main.tex             occ=0 matches=1 OK | The second pair, the host's unqualified all-orders route against the n
+nextafter-stored             main.tex             occ=0 matches=1 OK | the top threshold's stored double spells as 10.783587858916762, while 
+availability-rows            main.tex             occ=0 matches=1 OK | is the complete 132-row per-order record
+availability-recovered       main.tex             occ=0 matches=1 OK | print the recovered B2 argument's 33 reference values and cells
+availability-deposit         main.tex             occ=0 matches=1 OK | The deposited sweep's 9352 arguments
+availability-paper           main.tex             occ=0 matches=1 OK | The paper's 9353-argument tables
+sizing-values                main.tex             occ=0 matches=1 OK | Each is 58^4 = 11316496 double-precision values, 90.5 MB, so the pair 
+sizing-text                  main.tex             occ=0 matches=1 OK | the probe's 17-digit text dump is about 271 MB (258 MiB) per tensor
+sizing-seconds               main.tex             occ=0 matches=1 OK | the arm that builds the tensor took 69 s (default arm) and 70 s (paper
+s5-measurable-cells          supplement/main.tex  occ=0 matches=1 OK | The 27483 measurable cells of Section 4.6
+s5-closed-comparison         supplement/main.tex  occ=0 matches=1 OK | the 3.5e-71 comparison of
+Section 2
+s5-worst-b2                  supplement/main.tex  occ=0 matches=1 OK | is 2.93e-14, at n = 10 and
+x = 9.02325 in band B2
+s5-band-worsts               supplement/main.tex  occ=0 matches=1 OK | worst is 4.07e-15
+across 18177 measurable cells; over B2 it is 2.93e-1
+s5-rms-b1                    supplement/main.tex  occ=0 matches=1 OK | an rms of
+5.7e-16 and a maximum of 4.1e-15 in B1
+s5-rms-b2                    supplement/main.tex  occ=0 matches=1 OK | an rms of 4.5e-15 and a maximum of 2.9e-14
+s5-resolved-832              supplement/main.tex  occ=0 matches=1 OK | Over the 832
+arguments at which the amplification curve is measurably
+
+s5-four-fail                 supplement/main.tex  occ=0 matches=1 OK | Four of the 836 fail
+s5-cutoff-invariance         supplement/main.tex  occ=0 matches=1 OK | 832 resolved and 832 matches, 550
+in B1 and 282 in B2
+s5-all-matches               supplement/main.tex  occ=0 matches=1 OK | matches Eq. (9) of the main text at all 832 of them
+s5-matches-verify            supplement/main.tex  occ=0 matches=1 OK | the 832 matches verify the replica's floating-point ordering
+s5-gaps                      supplement/main.tex  occ=0 matches=1 OK | minimum by a median of 0.19 relative in B1 and 0.029 in B2, with maxim
+s5-transfer-floor            supplement/main.tex  occ=0 matches=1 OK | at worst 2.9e-14. One of
+s5-half-tie                  supplement/main.tex  occ=0 matches=1 OK | One of
+those 832, x = 1.5 in B1
+s7-documented-peak           supplement/main.tex  occ=0 matches=1 OK | peaks at
+1.04e5 at n = 12 at the band's right end
+s7-documented-value          supplement/main.tex  occ=0 matches=1 OK | the closed form gives
+104435.51802055083, the correct value
+s7-gated-peaks               supplement/main.tex  occ=0 matches=1 OK | peaks at 29.1008, at n = 8 and x = 2.01530 in B1, and at 23.3830, at
+n
+s7-gain-ratio                supplement/main.tex  occ=0 matches=1 OK | about 3600 times the largest gain measured
+s7-downward-window           supplement/main.tex  occ=0 matches=1 OK | the measured gain is at most 0.0344611,
+at n = 31 and x = 1.08553
+s7-ungated                   supplement/main.tex  occ=0 matches=1 OK | the gain would reach 1.89168e33 at n = 32 and
+s7-right-end                 supplement/main.tex  occ=0 matches=1 OK | end x = 11.899848152108484 it is maximised at N = 12
+s7-closed-value              supplement/main.tex  occ=0 matches=1 OK | at N = 12 with the value
+104435.518021
+s7-argmin-universe           supplement/main.tex  occ=0 matches=1 OK | the 143 arguments of the second experiment's grid at x 10
+s7-argmin-counts             supplement/main.tex  occ=0 matches=1 OK | places it at order 12 for 47, at order 11 for 78
+and at order 10 for 1
+s7-window-values             supplement/main.tex  occ=0 matches=1 OK | and 25 to 32 has w 444.228, and order 3, the first excluded order, has
+s7-window-threshold          supplement/main.tex  occ=0 matches=1 OK | Any threshold T with 444.228 T < 898.717 reproduces
+s7-seed-bound                supplement/main.tex  occ=0 matches=1 OK | corresponds to a constant seed error of at most 2.2511e-18
+s7-alternative-window        supplement/main.tex  occ=0 matches=1 OK | the orders that stay inside
+the budget are 0 to 4 and 20 to 32, agains
+s8-comparisons               supplement/main.tex  occ=0 matches=1 OK | The 132 comparisons were rerun on the same kernel build
+s8-commits-right             supplement/main.tex  occ=0 matches=0 GONE | The model then commits at 21 of the 132 comparisons and is right at al
+s8-lost                      supplement/main.tex  occ=0 matches=0 GONE | 46 of its 67 commitments become abstentions
+s8-retuned-margin            supplement/main.tex  occ=0 matches=0 GONE | retuned to a margin of 0.9467 of its own accumulated-arithmetic term i
+s8-ceiling-first-wrong       supplement/main.tex  occ=0 matches=0 GONE | with an error-free ceiling of 68 and its first wrong commitment at 69
+s8-true-range                supplement/main.tex  occ=0 matches=0 GONE | the true model, retuned the same way, is error-free from 4 to 74 commi
+s8-six-decisions             supplement/main.tex  occ=0 matches=0 GONE | worth six error-free decisions
+s8-a1                        supplement/main.tex  occ=0 matches=0 GONE | the model then commits at 74 and is wrong at 20
+s8-an                        supplement/main.tex  occ=0 matches=0 GONE | the model commits at 98 and is wrong at 27
+s8-rise-supplies             supplement/main.tex  occ=0 matches=0 GONE | the rise after the minimum supplies 46 of the 67 commitments
+s8-a1-breakdown              supplement/main.tex  occ=0 matches=0 GONE | 20 of the 67 commitments change, five to the wrong winner and fifteen 
+s8-an-breakdown              supplement/main.tex  occ=0 matches=0 GONE | eight of the 67 commitments change, six to a wrong winner, and all eig
+s12-first-size               supplement/main.tex  occ=0 matches=1 OK | 9353 arguments and 308649 measured cells
+s12-shared-arguments         supplement/main.tex  occ=0 matches=1 OK | 648 of the 9353 arguments (6.9 per cent) are also in the 836-argument 
+s12-first-commits            supplement/main.tex  occ=0 matches=0 GONE | the first sweep commits at 69 of the 132 band-metric comparisons
+s12-first-population-right   supplement/main.tex  occ=0 matches=0 GONE | it is right at all 69
+s12-first-whole-right        supplement/main.tex  occ=0 matches=0 GONE | Scored against the whole-band winner a caller meets, it is right at 68
+s12-miss-arguments           supplement/main.tex  occ=0 matches=1 OK | x = 0.6623 and x = 0.0603, against _0 = 1.08553
+s12-second-scores            supplement/main.tex  occ=0 matches=0 GONE | The second sweep's whole-band and population scores coincide at 67 of 
+s12-direct-right             supplement/main.tex  occ=0 matches=0 GONE | always-direct is right at 60 of the 69 on the first sweep and 59 of th
+s12-shared-second            supplement/main.tex  occ=0 matches=1 OK | 648 of the second sweep's 836 arguments are shared with the first
+s12-identical-cells          supplement/main.tex  occ=0 matches=1 OK | the returned values are bit-identical on all 21384 shared cells
+s12-reference-drift          supplement/main.tex  occ=0 matches=1 OK | 289 of the 648 shared arguments carry reference values that differ in 
+s12-block-interval           supplement/main.tex  occ=0 matches=1 OK | the 14 genuine wrong choices of 100 lie in 9 to 26 per cent by the blo
+s9-sizes                     supplement/main.tex  occ=0 matches=1 OK | 90.5 MB each (181 MB the pair; about 271 MB (258 MiB) per tensor as th
+s9-commit-deposit            supplement/main.tex  occ=0 matches=1 OK | records commit 482fd33
+s9-commit-v511               supplement/main.tex  occ=0 matches=2 OK | commit 834bdbb
+s9-identical-streams         supplement/main.tex  occ=0 matches=1 OK | the six bridge argument streams are byte-identical
+s9-one-recovered             supplement/main.tex  occ=1 matches=2 OK | the one recovered B2 argument's rows
+s10-advantage                supplement/main.tex  occ=0 matches=1 OK | The only full-metric advantage is the B1 order-0 comparison, +4.607 pe
+s10-loo                      supplement/main.tex  occ=0 matches=1 OK | deleting it leaves an exact tie under the absolute metric and a 3.891 
+s10-other-bases              supplement/main.tex  occ=0 matches=1 OK | On 6-31G^* and cc-pVTZ the same comparison is 10.464 and 2.541 per cen
+s10-basis-n                  supplement/main.tex  occ=0 matches=1 OK | with n = 7, 18 and 58 orbitals and highest Boys order 4, 8 and 12
+s10-share-sto                supplement/main.tex  occ=0 matches=1 OK | 97.61 per cent of the 10935 STO-3G calls
+s10-share-631                supplement/main.tex  occ=0 matches=1 OK | 83.88 per cent of the 51570 6-31G^* calls
+s10-share-ccp                supplement/main.tex  occ=0 matches=1 OK | 85.58 per cent of the 262484 cc-pVTZ calls
+s10-above-b2                 supplement/main.tex  occ=0 matches=1 OK | The remainder lie above B2, where the two routes share the region-B an
+s10-max-df                   supplement/main.tex  occ=0 matches=1 OK | The largest per-value difference is 3.219647e-15 in all three bases, a
+s10-contract-at-max          supplement/main.tex  occ=0 matches=1 OK | at those cells it is 3.282, 3.220 and 3.220 per cent of the published 
+s10-largest-fraction         supplement/main.tex  occ=0 matches=1 OK | The largest fraction is 3.282 per cent in STO-3G at x = 0.0581331, 3.2
+s10-b2                       supplement/main.tex  occ=0 matches=1 OK | in B2 the largest is 1.11e-16, at order 0
+s10-eri                      supplement/main.tex  occ=0 matches=1 OK | The two ERI tensors differ by at most 6.661338e-16 at (0,0,0,0) for ST
+s10-e2e                      supplement/main.tex  occ=0 matches=1 OK | The fixed-density two-electron energy differs by 1.981313e-15, 3.92927
+s10-scf                      supplement/main.tex  occ=0 matches=1 OK | Converging the SCF under the default thresholds gives total energies t
+s10-achieved                 supplement/main.tex  occ=0 matches=1 OK | between 8.7e-11 and 1.0e-8 hartree under the default thresholds and be
+s10-contract-summary         supplement/main.tex  occ=0 matches=1 OK | uses 3.28 per cent of it in STO-3G and 3.22 in the other two bases, an
+s10-geometry                 supplement/main.tex  occ=0 matches=1 OK | with r(OH) = 0.9572 and H-O-H = 104.52
+s10-reference-digits         supplement/main.tex  occ=0 matches=2 OK | reference is an 80-digit evaluation of F_n
+s13-exact-pert               supplement/main.tex  occ=0 matches=1 OK | The exact-perturbation transfer of 5.5706
+s13-closed                   supplement/main.tex  occ=0 matches=2 OK | converges to the closed form 0.428043 as the step grows
+s13-positive-control         supplement/main.tex  occ=0 matches=1 OK | the positive control, the transfer at a usable step, sits at 2.9e-14
+s13-start-indep              supplement/main.tex  occ=0 matches=1 OK | The start-independence entry of 1.3986e183
+s13-start-x                  supplement/main.tex  occ=0 matches=2 OK | at x = 3.16e-6
+s13-start-ratio              supplement/main.tex  occ=0 matches=1 OK | the expected numerator is 2.8e-186 of the 16 floor
+s13-worst-measurable         supplement/main.tex  occ=0 matches=1 OK | the worst measurable start-independence deviation is 264.029
+s13-charge                   supplement/main.tex  occ=0 matches=1 OK | whose numerator is 6.9 per cent of the paper's own rounding charge
+s13-delivered                supplement/main.tex  occ=0 matches=1 OK | whose delivered relative error is 4.25e-12
+s13-seed-cells               supplement/main.tex  occ=0 matches=1 OK | the seed-only template holds at all 61666 seed-dominated population ce
+s13-npqn                     supplement/main.tex  occ=0 matches=1 OK | The n^p q^n residual of 687.05
+s13-derived                  supplement/main.tex  occ=0 matches=1 OK | the record's derived form reaches 2.930e-14 on the same cells
+s13-floor                    supplement/main.tex  occ=0 matches=2 OK | the residual floor 4.12561 is the missing n n term
+s13-canonical                supplement/main.tex  occ=0 matches=1 OK | the canonical transfer 4.07e-15 in B1 and 2.93e-14 in B2
+s13-admission                supplement/main.tex  occ=0 matches=1 OK | in which 17912 cells (9200 upward-prefix, 8679 downward and 33 exact)
+s13-replica                  supplement/main.tex  occ=0 matches=1 OK | reproduced 9353 arguments (8040 upward, 1312 downward and one exact)
+s14-rows                     supplement/main.tex  occ=0 matches=1 OK | prints the 132 rows behind the model's score
+s15-ordinal-x                supplement/main.tex  occ=0 matches=1 OK | The first sweep's 9353rd argument is x = 5.949924076054243
+s15-boundary                 supplement/main.tex  occ=0 matches=1 OK | the double next after the B1/B2 boundary 5.949924076054242
+s15-orders                   supplement/main.tex  occ=0 matches=1 OK | cells for orders 0 to 32
+s15-cells                    supplement/main.tex  occ=0 matches=1 OK | The reference row and the 33 cells are the appended rows
+s15-deposit-count            supplement/main.tex  occ=0 matches=1 OK | The public deposit at tag v1.0.9 is the v5.0.0 9352-argument run
+s15-rerun-count              supplement/main.tex  occ=0 matches=1 OK | The v5.1.1 9353-argument re-run and its comparison with the deposit
+s15-tree                     supplement/main.tex  occ=0 matches=1 OK | 62 of 62 include/boys headers and 14 of 14 src files match
+s15-six-runs                 supplement/main.tex  occ=0 matches=1 OK | compares the six integral-engine runs
+s4-decomp-seed               supplement/main.tex  occ=0 matches=1 OK | the seed-against-fit factor falls from 73422 to 28.375
+s4-decomp-errors             supplement/main.tex  occ=0 matches=1 OK | (the recursed order-0 relative error, 4.89238e-17, against the direct 
+s4-decomp-growth             supplement/main.tex  occ=0 matches=1 OK | while the growth rises from 2.99630 to 7753.1 because F_0/F_15 = 2587.
+s4-decomp-b2-seed            supplement/main.tex  occ=0 matches=1 OK | the normalised seed-against-fit factor is 9.8371e-3
+s4-decomp-b2                 supplement/main.tex  occ=0 matches=1 OK | the relative advantage of 1.3277e6 is a relative growth of 1.3497e8 re
+cover-commits                cover-letter.md      occ=0 matches=0 GONE | commits at 67 of the 132 band-metric order comparisons
+cover-abstains               cover-letter.md      occ=0 matches=0 GONE | abstaining at the other 65
+cover-lost                   cover-letter.md      occ=0 matches=0 GONE | turns 46 of those 67 commitments into abstentions
+cover-apriori-median         cover-letter.md      occ=0 matches=1 OK | a median 9.6 times its truncation error
+cover-apriori-certifies      cover-letter.md      occ=0 matches=0 GONE | certifies none of the 67 commitments
+cover-advantage              cover-letter.md      occ=0 matches=1 OK | a full-metric win of 4.607 per cent on STO-3G
+cover-deposit                cover-letter.md      occ=0 matches=1 OK | The deposited sweep's 9352 arguments
+cover-cells                  cover-letter.md      occ=0 matches=1 OK | with its reference row and 33 cells
+cover-sizes                  cover-letter.md      occ=0 matches=1 OK | 90.5 MB each (181 MB the pair, or about 271 MB each as the probe's 17-
+cover-seconds                cover-letter.md      occ=0 matches=1 OK | regenerates each in about 70 s on the run host
+cover-commit                 cover-letter.md      occ=1 matches=2 OK | commit `834bdbb`
+cover-pages                  cover-letter.md      occ=0 matches=1 OK | 25 typeset pages and a 23-page supplement
+cover-abstract-words         cover-letter.md      occ=0 matches=1 OK | abstract 247 words
+abstract-reference-precision main.tex             occ=0 matches=0 GONE | both errors are measured against a 60-digit reference
+abstract-abstains-fallback   main.tex             occ=0 matches=0 GONE | with a fallback at the 65 abstentions
+intro-reference-precision    main.tex             occ=0 matches=1 OK | compares are measured against a 60-digit reference
+intro-abstains-fallback      main.tex             occ=1 matches=0 GONE | fallback at the 65 abstentions
+intro-132-comparisons        main.tex             occ=0 matches=1 OK | the second experiment's 132 band-metric comparisons against a 60-digit
+intro-report-arguments       main.tex             occ=1 matches=1 SHIFT | maxima lower-bound the 9354-argument ones
+design-gain-orders           main.tex             occ=0 matches=1 OK | at fourteen orders (n = 1, 2, 3, 5, 6 and 8-16)
+design-9354-lower-bound      main.tex             occ=0 matches=2 OK | lower bound on the corresponding 9354-argument worst
+design-9354-lower-bound-b2   main.tex             occ=1 matches=2 OK | the corresponding 9354-argument worst
+design-reference-digits      main.tex             occ=0 matches=1 OK | evaluated with mpmath at 60 decimal digits
+design-exact-cells           main.tex             occ=0 matches=1 OK | the 33 exact cells at x=0 use this value
+design-degrees               main.tex             occ=0 matches=1 OK | degrees 20 and 18 over B1 and B2
+design-working-precision     main.tex             occ=0 matches=1 OK | The reference is mpmath at 70 working digits, printed to 60
+design-fit-bars              main.tex             occ=0 matches=1 OK | 10^-15 on the per-order fits and 3e-14 on the extended band
+design-accuracy-grid         main.tex             occ=0 matches=1 OK | 45-digit grid over 2409 cells
+results-tie-15               main.tex             occ=0 matches=1 OK | the tie at x = 1.5
+results-cutoffs              main.tex             occ=0 matches=1 OK | the resolved counts at the 10^-12 and 10^-9 cutoffs
+results-documented-peak      main.tex             occ=0 matches=1 OK | documented 1.04e5 is not what a call on the named policy pays
+results-median-ratio         main.tex             occ=2 matches=3 OK | a median 9.6 times its truncation error
+results-truncation-16        main.tex             occ=0 matches=0 GONE | leaves 16 of the 67 comparisons ordered the other way by truncation
+results-remaining-51         main.tex             occ=0 matches=0 GONE | At the remaining 51 the arithmetic charge
+results-charge-92            main.tex             occ=0 matches=0 GONE | to be smaller by a median factor of 92
+results-threshold-9          main.tex             occ=0 matches=1 OK | it is the threshold _9=4.897870299825657
+results-first-worst-x        main.tex             occ=0 matches=1 OK | which at that order sits at x=4.9439
+results-direct-wins-33       main.tex             occ=0 matches=1 OK | the number of these 33 comparisons
+results-sweep-sizes          main.tex             occ=0 matches=1 OK | the second experiment's 836 arguments. The first experiment's 9353 arg
+results-132-rerun            main.tex             occ=0 matches=1 OK | The 132 comparisons were rerun
+results-132-recompute        main.tex             occ=0 matches=1 OK | recomputes the model's choice at all 132 band-metric order comparisons
+results-34-percent           main.tex             occ=0 matches=1 OK | at the model's margin it is 3.4 per cent
+results-67-of-67             main.tex             occ=0 matches=0 GONE | the error-free 67 of 67 is conditional on that scale
+results-33-orders            main.tex             occ=0 matches=1 OK | 33 orders, four band-metric groups
+results-caption-totals       main.tex             occ=0 matches=0 GONE | End to end over all 132 band-metric order comparisons: the worst error
+results-caption-66           main.tex             occ=0 matches=1 OK | over the 66 comparisons of the metric
+results-e2e-132-343          main.tex             occ=0 matches=1 OK | Over all 132 comparisons with either fallback the model reduces the wo
+results-model-score          main.tex             occ=0 matches=0 GONE | it commits at 67 of the 132 comparisons and names the measured winner 
+results-fixed-routes         main.tex             occ=0 matches=1 OK | where always-direct is right at 85, wrong at 44 and tied at three, and
+limitations-shared           main.tex             occ=0 matches=1 OK | the two sweeps share 648 of the second's 836 arguments
+limitations-certifies        main.tex             occ=0 matches=0 GONE | charge certifies none of the 67 commitments
+conclusion-sto-win           main.tex             occ=0 matches=1 OK | of 4.607 per cent on STO-3G, gone on its deletion
+conclusion-deposit           main.tex             occ=0 matches=1 OK | v5.0.0 9352-argument tables
+conclusion-recovered-cells   main.tex             occ=0 matches=1 OK | its reference row and 33 cells are in the paper
+cover-reference-precision    cover-letter.md      occ=0 matches=0 GONE | with a 60-digit reference
+cover-reference-values       cover-letter.md      occ=0 matches=1 OK | the 60-digit references
+cover-deposit-tables         cover-letter.md      occ=0 matches=1 OK | regenerates the v5.0.0 9352-argument tables
+cover-paper-tables           cover-letter.md      occ=0 matches=1 OK | 9353-argument tables additionally require
+main-60-reference-r2         main.tex             occ=0 matches=1 OK | compared with the 60-digit reference
+main-60-reference-crossing   main.tex             occ=0 matches=1 OK | against the 60-digit reference at the sweep's own arguments
+main-60-reference-deposit    main.tex             occ=0 matches=1 OK | their 60-digit reference values
+main-first-right-68          main.tex             occ=0 matches=0 GONE | it is right at 68
+main-836-caption             main.tex             occ=0 matches=1 OK | the second experiment's 836-argument sweep
+main-9353-rerun              main.tex             occ=0 matches=1 OK | 9353-argument re-run's provenance
+design-70-decimal            main.tex             occ=0 matches=1 OK | Computed independently at 70 decimal digits
+results-truncation-accuracy  main.tex             occ=0 matches=1 OK | computed from eq:recurrence to 3e-23
+results-b1-range-orders      main.tex             occ=0 matches=1 OK | at every one of the 16 orders
+s1-deposit-count             supplement/main.tex  occ=0 matches=2 OK | the v5.0.0 9352-argument run
+s1-recovered-cells           supplement/main.tex  occ=0 matches=2 OK | reference values and 33 cells are printed
+s2-reference-digits          supplement/main.tex  occ=0 matches=1 OK | evaluated at 60 decimal digits
+s2-reference-caption         supplement/main.tex  occ=0 matches=1 OK | Agreement of the 60-digit reference
+s3-argument-caption          supplement/main.tex  occ=0 matches=1 OK | over the 9353-argument sweep
+s5-resolved-832-curve        supplement/main.tex  occ=0 matches=1 OK | Over the 832 arguments
+s5-pre-release-688           supplement/main.tex  occ=0 matches=1 OK | The pre-release 688 has no preserved criterion
+s5-orders-33                 supplement/main.tex  occ=0 matches=1 OK | all 33 transfers are measurable
+s5-resolved-832-neighbour    supplement/main.tex  occ=0 matches=1 OK | Over the same 832 arguments
+s4-caption-9353              supplement/main.tex  occ=0 matches=1 OK | on the first experiment's 9353-argument sweep
+s7-documented-peak-repeat    supplement/main.tex  occ=0 matches=1 OK | The documented 1.04e5 is therefore about 3600 times
+s9-recovered-cells           supplement/main.tex  occ=1 matches=2 OK | and 33 cells are printed in
+s12-second-size              supplement/main.tex  occ=0 matches=2 OK | the second experiment's 836 arguments
+s12-orders-33                supplement/main.tex  occ=0 matches=1 OK | 33 orders, four band-metric groups
+s12-67-of-67                 supplement/main.tex  occ=0 matches=0 GONE | A 67 of 67 has no block variance
+s12-recovered-cells          supplement/main.tex  occ=0 matches=1 OK | argument's 33 cells
+abstract-e2e-zero            main.tex             occ=0 matches=2 OK | the relative error not at all
+e2e-relative-zero            main.tex             occ=0 matches=1 OK | and the worst relative error not at all

@@ -1,0 +1,44 @@
+﻿=== second sweep
+  A1 absolute commits 13 right 13 abstains 20 | rec  1 (won  1) dir 12 (won 12) lost 0 | direct wins 13 ties 0
+  A1 relative commits  9 right  9 abstains 24 | rec  1 (won  1) dir  8 (won  8) lost 0 | direct wins 26 ties 0
+  A2 absolute commits 24 right 24 abstains  9 | rec  0 (won  0) dir 24 (won 24) lost 0 | direct wins 29 ties 3
+  A2 relative commits 19 right 19 abstains 14 | rec  4 (won  4) dir 15 (won 15) lost 0 | direct wins 17 ties 0
+  all: commits 65 right 65 abstains 67
+  same-fit block: 32 keys, commits 0
+  remaining 100: commits 65 right 65; always-direct right 71 wrong 26 tied 3
+  all 132: always-direct right 85, tied 3
+  always-direct right on the model's committed set: 59
+  changed rows from the previous model:
+    A1 relative n= 1 ship/ship -> abstain/-
+    A2 relative n= 9 ship/ship -> abstain/-
+
+=== first sweep
+  A1 absolute commits 14 right 13 abstains 19 | rec  0 (won  0) dir 14 (won 13) lost 1 | direct wins 13 ties 0
+  A1 relative commits 10 right 10 abstains 23 | rec  1 (won  1) dir  9 (won  9) lost 0 | direct wins 28 ties 0
+  A2 absolute commits 23 right 23 abstains 10 | rec  0 (won  0) dir 23 (won 23) lost 0 | direct wins 30 ties 1
+  A2 relative commits 21 right 21 abstains 12 | rec  6 (won  6) dir 15 (won 15) lost 0 | direct wins 18 ties 0
+  all: commits 68 right 67 abstains 64
+  same-fit block: 32 keys, commits 0
+  remaining 100: commits 68 right 67; always-direct right 73 wrong 26 tied 1
+  all 132: always-direct right 89, tied 1
+  always-direct right on the model's committed set: 60
+  changed rows from the previous model:
+    A1 relative n= 1 ship/ship -> abstain/-
+
+=== ladder (aggregate commits/right/wrong/abstains)
+  second:
+    margin 0.0  100 commits  83 right  17 wrong  32 abstains
+    margin 0.25  96 commits  82 right  14 wrong  36 abstains
+    margin 0.5   93 commits  80 right  13 wrong  39 abstains
+    margin 1.0   65 commits  65 right   0 wrong  67 abstains
+    margin 2.0    4 commits   4 right   0 wrong 128 abstains
+    margin 4.0    4 commits   4 right   0 wrong 128 abstains
+    margin 8.0    4 commits   4 right   0 wrong 128 abstains
+  first:
+    margin 0.0   99 commits  84 right  15 wrong  33 abstains
+    margin 0.25  95 commits  83 right  12 wrong  37 abstains
+    margin 0.5   92 commits  81 right  11 wrong  40 abstains
+    margin 1.0   68 commits  67 right   1 wrong  64 abstains
+    margin 2.0    6 commits   5 right   1 wrong 126 abstains
+    margin 4.0    4 commits   3 right   1 wrong 128 abstains
+    margin 8.0    4 commits   3 right   1 wrong 128 abstains
