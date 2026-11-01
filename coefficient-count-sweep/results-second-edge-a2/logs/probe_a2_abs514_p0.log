@@ -1,0 +1,18 @@
+[A2_abs514_p0] S=3 [1/1] conv=True brut_rel=5.23e-07 d_rel=5.23e-07 d_abs=9.13e-08 den=9.4e-01 meet=False 0.36s
+[A2_abs514_p0] S=4 [2/1] conv=True brut_rel=4.40e-09 d_rel=4.40e-09 d_abs=7.68e-10 den=9.3e-01 meet=False 0.37s
+[A2_abs514_p0] S=4 [1/2] conv=True brut_rel=2.64e-09 d_rel=2.64e-09 d_abs=4.61e-10 den=9.2e-01 meet=False 0.509s
+[A2_abs514_p0] S=5 [3/1] conv=True brut_rel=4.66e-11 d_rel=4.66e-11 d_abs=8.13e-12 den=9.3e-01 meet=False 0.368s
+[A2_abs514_p0] S=5 [2/2] conv=True brut_rel=1.33e-11 d_rel=1.33e-11 d_abs=2.32e-12 den=9.0e-01 meet=False 0.325s
+[A2_abs514_p0] S=5 [1/3] conv=True brut_rel=2.00e-11 d_rel=2.00e-11 d_abs=3.48e-12 den=9.1e-01 meet=False 0.323s
+warning: BRASIL did not converge; dev=0.00113, err=9.85e-14
+[A2_abs514_p0] S=6 [4/1] conv=False brut_rel=5.64e-13 d_rel=5.64e-13 d_abs=9.85e-14 den=9.3e-01 meet=False 2.446s
+[A2_abs514_p0] S=6 [3/2] conv=True brut_rel=9.42e-14 d_rel=9.45e-14 d_abs=1.65e-14 den=8.9e-01 meet=True 1.461s
+[A2_abs514_p0] S=6 [2/3] conv=True brut_rel=6.73e-14 d_rel=6.74e-14 d_abs=1.18e-14 den=8.9e-01 meet=True 0.446s
+warning: BRASIL did not converge; dev=0.00424, err=3.29e-14
+[A2_abs514_p0] S=6 [1/4] conv=False brut_rel=1.88e-13 d_rel=1.89e-13 d_abs=3.29e-14 den=9.1e-01 meet=True 2.183s
+[A2_abs514_p0] RETRY S=5 [3/1] conv=True d_rel=4.66e-11 d_abs=8.13e-12 den=9.3e-01 meet=False 1.14s
+warning: equioscillation property not satisfied, deviation=1.2e-05
+[A2_abs514_p0] RETRY S=5 [2/2] conv=True d_rel=1.33e-11 d_abs=2.32e-12 den=9.0e-01 meet=False 1.724s
+[A2_abs514_p0] RETRY S=5 [1/3] conv=True d_rel=2.00e-11 d_abs=3.48e-12 den=9.1e-01 meet=False 1.942s
+DONE 1/1 A2_abs514_p0 count=6 pair=[2, 3] route=default below_ratio=46.450621127291924
+ALLDONE cells=1 errors=0 wall=14.5s

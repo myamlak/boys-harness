@@ -1,0 +1,4 @@
+x0 = 11.899848152108484; a2 = 23.799696304216968
+ rel:1e-13: x0 0.165+-0.014 (n=13), a2 0.148+-0.011, diff -0.016 (unpaired se 0.018, z -0.90; paired se 0.0037, z -4.32); counts differ 6/15, sum -7, max |d| 2
+ abs:5e-14: x0 0.158+-0.013 (n=13), a2 0.141+-0.010, diff -0.017 (unpaired se 0.016, z -1.06; paired se 0.0039, z -4.33); counts differ 6/15, sum -7, max |d| 2
+ rel:1e-14: x0 0.181+-0.016 (n=13), a2 0.155+-0.008, diff -0.026 (unpaired se 0.018, z -1.46; paired se 0.0106, z -2.41); counts differ 9/15, sum -12, max |d| 4

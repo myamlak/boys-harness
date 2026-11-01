@@ -1,0 +1,36 @@
+{
+ "source": "C:/Users/myaml/dev/_q330-verify/grid/A_abs514_p1.final.json",
+ "rerun": "checks/A_abs514_p1.final.json",
+ "purpose": "the adapted driver run at x0 must reproduce the verification harness record",
+ "fields_compared": 29,
+ "fields_differing": 0,
+ "differences": [],
+ "added_by_adapted_driver": [
+  "edge",
+  "a",
+  "x0_count_used_for_bound"
+ ],
+ "witness_fields_identical": {
+  "P": true,
+  "Q": true,
+  "rel_2001": true,
+  "abs_2001": true,
+  "den_2001": true,
+  "rel_4001": true,
+  "abs_4001": true,
+  "den_4001": true,
+  "m": true,
+  "k": true,
+  "stored": true,
+  "route": true,
+  "converged": true
+ },
+ "count": 7,
+ "pair": [
+  5,
+  1
+ ],
+ "delivered_2001": 1.659783421814609e-14,
+ "guard_2001": 0.8687076198449832,
+ "route": "default"
+}

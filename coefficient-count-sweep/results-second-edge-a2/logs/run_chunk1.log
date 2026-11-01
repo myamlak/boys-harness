@@ -1,0 +1,412 @@
+[A2_rel13_m3] S=3 [1/1] conv=True brut_rel=1.12e-09 d_rel=1.12e-09 d_abs=2.02e-10 den=9.9e-01 meet=False 0.707s
+[A2_rel13_m6] S=3 [1/1] conv=True brut_rel=2.21e-12 d_rel=2.21e-12 d_abs=4.01e-13 den=1.0e+00 meet=False 0.669s
+[A2_rel13_m2] S=3 [1/1] conv=True brut_rel=8.82e-09 d_rel=8.82e-09 d_abs=1.59e-09 den=9.8e-01 meet=False 0.69s
+[A2_rel13_m5] S=3 [1/1] conv=True brut_rel=1.76e-11 d_rel=1.76e-11 d_abs=3.20e-12 den=1.0e+00 meet=False 0.737s
+[A2_rel13_m4] S=3 [1/1] conv=True brut_rel=1.41e-10 d_rel=1.41e-10 d_abs=2.55e-11 den=1.0e+00 meet=False 0.721s
+C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\baryrat.py:931: RuntimeWarning: divide by zero encountered in scalar divide
+  deviation = max_err / local_max.min() - 1
+warning: equioscillation property not satisfied, deviation=0.000126
+[A2_rel13_m3] S=4 [2/1] conv=True brut_rel=1.22e-12 d_rel=1.22e-12 d_abs=2.20e-13 den=9.9e-01 meet=False 0.661s
+[A2_rel13_m2] S=4 [2/1] conv=True brut_rel=1.91e-11 d_rel=1.91e-11 d_abs=3.44e-12 den=9.8e-01 meet=False 0.746s
+warning: equioscillation property not satisfied, deviation=0.25
+[A2_rel13_m6] S=4 [2/1] conv=True brut_rel=7.64e-16 d_rel=6.12e-16 d_abs=1.11e-16 den=1.0e+00 meet=True 0.825s
+[A2_rel13_m2] S=4 [1/2] conv=True brut_rel=1.15e-11 d_rel=1.15e-11 d_abs=2.06e-12 den=9.8e-01 meet=False 0.64s
+warning: equioscillation property not satisfied, deviation=0.00199
+[A2_rel13_m4] S=4 [2/1] conv=True brut_rel=7.69e-14 d_rel=7.71e-14 d_abs=1.40e-14 den=1.0e+00 meet=True 2.252s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel13_m6] S=4 [1/2] conv=True brut_rel=6.11e-16 d_rel=4.59e-16 d_abs=8.33e-17 den=1.0e+00 meet=True 1.576s
+warning: equioscillation property not satisfied, deviation=0.00021
+[A2_rel13_m3] S=4 [1/2] conv=True brut_rel=7.30e-13 d_rel=7.30e-13 d_abs=1.32e-13 den=9.9e-01 meet=False 1.784s
+warning: equioscillation property not satisfied, deviation=0.0303
+[A2_rel13_m5] S=4 [2/1] conv=True brut_rel=5.20e-15 d_rel=5.35e-15 d_abs=9.71e-16 den=1.0e+00 meet=True 2.523s
+[A2_rel13_m2] S=5 [3/1] conv=True brut_rel=5.23e-14 d_rel=5.23e-14 d_abs=9.41e-15 den=9.8e-01 meet=True 1.563s
+warning: equioscillation property not satisfied, deviation=0.00997
+[A2_rel13_m4] S=4 [1/2] conv=True brut_rel=4.64e-14 d_rel=4.63e-14 d_abs=8.41e-15 den=9.9e-01 meet=True 0.923s
+warning: BRASIL did not converge; dev=0.00111, err=5.02e-14
+[A2_rel13_m7] S=3 [1/1] conv=False brut_rel=2.76e-13 d_rel=2.76e-13 d_abs=5.02e-14 den=1.0e+00 meet=False 4.755s
+[A2_rel13_m3] S=5 [3/1] conv=True brut_rel=2.00e-15 d_rel=2.00e-15 d_abs=3.61e-16 den=9.9e-01 meet=True 1.621s
+warning: equioscillation property not satisfied, deviation=0.05
+[A2_rel13_m5] S=4 [1/2] conv=True brut_rel=3.21e-15 d_rel=3.52e-15 d_abs=6.38e-16 den=1.0e+00 meet=True 1.5s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel13_m7] S=4 [2/1] conv=True brut_rel=4.59e-16 d_rel=4.59e-16 d_abs=8.33e-17 den=1.0e+00 meet=True 0.498s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel13_m7] S=4 [1/2] conv=True brut_rel=6.11e-16 d_rel=3.06e-16 d_abs=5.55e-17 den=1.0e+00 meet=True 0.054s
+[A2_rel13_m2] S=5 [2/2] conv=True brut_rel=1.52e-14 d_rel=1.51e-14 d_abs=2.72e-15 den=9.7e-01 meet=True 1.824s
+warning: equioscillation property not satisfied, deviation=0.25
+[A2_rel13_m3] S=5 [2/2] conv=True brut_rel=7.68e-16 d_rel=7.68e-16 d_abs=1.39e-16 den=9.9e-01 meet=True 0.938s
+warning: equioscillation property not satisfied, deviation=6.93e-05
+[A2_rel13_m6] RETRY S=3 [1/1] conv=True d_rel=2.21e-12 d_abs=4.01e-13 den=1.0e+00 meet=False 2.114s
+warning: equioscillation property not satisfied, deviation=1.09e-06
+[A2_rel13_m4] RETRY S=3 [1/1] conv=True d_rel=1.41e-10 d_abs=2.55e-11 den=1.0e+00 meet=False 1.945s
+DONE 1/27 A2_rel13_m6 count=4 pair=[1, 2] route=default below_ratio=22.071040884014913
+warning: equioscillation property not satisfied, deviation=0.00685
+[A2_rel13_m2] S=5 [1/3] conv=True brut_rel=2.26e-14 d_rel=2.27e-14 d_abs=4.08e-15 den=9.8e-01 meet=True 1.152s
+[A2_rel13_m5] RETRY S=3 [1/1] conv=True d_rel=1.76e-11 d_abs=3.20e-12 den=1.0e+00 meet=False 1.572s
+[A2_rel13_m7] RETRY S=3 [1/1] conv=True d_rel=2.76e-13 d_abs=5.02e-14 den=1.0e+00 meet=False 1.498s
+DONE 2/27 A2_rel13_m4 count=4 pair=[1, 2] route=default below_ratio=1405.602477671509
+[A2_rel13_m1] S=3 [1/1] conv=True brut_rel=6.88e-08 d_rel=6.88e-08 d_abs=1.22e-08 den=9.7e-01 meet=False 0.701s
+DONE 3/27 A2_rel13_m5 count=4 pair=[1, 2] route=default below_ratio=176.27557703553765
+DONE 4/27 A2_rel13_m7 count=4 pair=[1, 2] route=default below_ratio=2.7630968822563733
+[A2_rel13_m1] S=4 [2/1] conv=True brut_rel=2.95e-10 d_rel=2.95e-10 d_abs=5.25e-11 den=9.7e-01 meet=False 0.767s
+[A2_rel13_p0] S=3 [1/1] conv=True brut_rel=5.23e-07 d_rel=5.23e-07 d_abs=9.13e-08 den=9.4e-01 meet=False 0.779s
+[A2_rel13_m3] S=5 [1/3] conv=True brut_rel=1.07e-15 d_rel=9.22e-16 d_abs=1.67e-16 den=9.9e-01 meet=True 2.659s
+[A2_rel13_p1] S=3 [1/1] conv=True brut_rel=3.80e-06 d_rel=3.80e-06 d_abs=6.40e-07 den=8.9e-01 meet=False 0.821s
+[A2_rel13_m1] S=4 [1/2] conv=True brut_rel=1.77e-10 d_rel=1.77e-10 d_abs=3.15e-11 den=9.6e-01 meet=False 0.766s
+[A2_rel13_p0] S=4 [2/1] conv=True brut_rel=4.40e-09 d_rel=4.40e-09 d_abs=7.68e-10 den=9.3e-01 meet=False 0.78s
+[A2_rel13_p1] S=4 [2/1] conv=True brut_rel=6.16e-08 d_rel=6.16e-08 d_abs=1.03e-08 den=8.8e-01 meet=False 0.53s
+warning: equioscillation property not satisfied, deviation=1.62e-05
+[A2_rel13_m2] RETRY S=4 [2/1] conv=True d_rel=1.91e-11 d_abs=3.44e-12 den=9.8e-01 meet=False 2.453s
+[A2_rel13_m1] S=5 [3/1] conv=True brut_rel=1.59e-12 d_rel=1.59e-12 d_abs=2.84e-13 den=9.6e-01 meet=False 0.525s
+[A2_rel13_p0] S=4 [1/2] conv=True brut_rel=2.64e-09 d_rel=2.64e-09 d_abs=4.61e-10 den=9.2e-01 meet=False 0.518s
+[A2_rel13_p1] S=4 [1/2] conv=True brut_rel=3.69e-08 d_rel=3.69e-08 d_abs=6.21e-09 den=8.6e-01 meet=False 0.533s
+[A2_rel13_p0] S=5 [3/1] conv=True brut_rel=4.66e-11 d_rel=4.66e-11 d_abs=8.13e-12 den=9.3e-01 meet=False 0.57s
+warning: equioscillation property not satisfied, deviation=0.000253
+[A2_rel13_m3] RETRY S=4 [2/1] conv=True d_rel=1.22e-12 d_abs=2.20e-13 den=9.9e-01 meet=False 1.493s
+[A2_rel13_p1] S=5 [3/1] conv=True brut_rel=1.26e-09 d_rel=1.26e-09 d_abs=2.11e-10 den=8.7e-01 meet=False 0.536s
+[A2_rel13_p0] S=5 [2/2] conv=True brut_rel=1.33e-11 d_rel=1.33e-11 d_abs=2.32e-12 den=9.0e-01 meet=False 0.567s
+[A2_rel13_p1] S=5 [2/2] conv=True brut_rel=3.59e-10 d_rel=3.59e-10 d_abs=6.03e-11 den=8.2e-01 meet=False 0.469s
+warning: equioscillation property not satisfied, deviation=1.35e-05
+[A2_rel13_m2] RETRY S=4 [1/2] conv=True d_rel=1.15e-11 d_abs=2.06e-12 den=9.8e-01 meet=False 1.527s
+[A2_rel13_p0] S=5 [1/3] conv=True brut_rel=2.00e-11 d_rel=2.00e-11 d_abs=3.48e-12 den=9.1e-01 meet=False 0.561s
+[A2_rel13_p1] S=5 [1/3] conv=True brut_rel=5.38e-10 d_rel=5.38e-10 d_abs=9.04e-11 den=8.4e-01 meet=False 0.539s
+DONE 5/27 A2_rel13_m2 count=5 pair=[2, 2] route=default below_ratio=114.64337659467373
+warning: BRASIL did not converge; dev=0.00111, err=5.02e-14
+[A2_abs514_m7] S=3 [1/1] conv=False brut_rel=2.76e-13 d_rel=2.76e-13 d_abs=5.02e-14 den=1.0e+00 meet=False 3.17s
+warning: equioscillation property not satisfied, deviation=0.00021
+[A2_rel13_m3] RETRY S=4 [1/2] conv=True d_rel=7.30e-13 d_abs=1.32e-13 den=9.9e-01 meet=False 1.656s
+[A2_rel13_p1] S=6 [4/1] conv=True brut_rel=2.92e-11 d_rel=2.92e-11 d_abs=4.92e-12 den=8.7e-01 meet=False 0.577s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_abs514_m7] S=4 [2/1] conv=True brut_rel=4.59e-16 d_rel=4.59e-16 d_abs=8.33e-17 den=1.0e+00 meet=True 0.381s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_abs514_m7] S=4 [1/2] conv=True brut_rel=6.11e-16 d_rel=3.06e-16 d_abs=5.55e-17 den=1.0e+00 meet=True 0.046s
+[A2_abs514_m6] S=3 [1/1] conv=True brut_rel=2.21e-12 d_rel=2.21e-12 d_abs=4.01e-13 den=1.0e+00 meet=False 0.535s
+DONE 6/27 A2_rel13_m3 count=5 pair=[2, 2] route=default below_ratio=7.298548999470865
+[A2_rel13_p1] S=6 [3/2] conv=True brut_rel=4.87e-12 d_rel=4.87e-12 d_abs=8.19e-13 den=8.0e-01 meet=False 0.615s
+warning: BRASIL did not converge; dev=0.00103, err=8.11e-14
+[A2_rel13_m1] S=5 [2/2] conv=False brut_rel=4.56e-13 d_rel=4.55e-13 d_abs=8.10e-14 den=9.5e-01 meet=False 3.197s
+C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\baryrat.py:931: RuntimeWarning: divide by zero encountered in scalar divide
+  deviation = max_err / local_max.min() - 1
+warning: equioscillation property not satisfied, deviation=0.25
+[A2_abs514_m6] S=4 [2/1] conv=True brut_rel=7.64e-16 d_rel=6.12e-16 d_abs=1.11e-16 den=1.0e+00 meet=True 0.756s
+[A2_rel13_p1] S=6 [2/3] conv=True brut_rel=3.48e-12 d_rel=3.48e-12 d_abs=5.85e-13 den=7.9e-01 meet=False 0.761s
+[A2_abs514_m5] S=3 [1/1] conv=True brut_rel=1.76e-11 d_rel=1.76e-11 d_abs=3.20e-12 den=1.0e+00 meet=False 0.715s
+[A2_abs514_m7] RETRY S=3 [1/1] conv=True d_rel=2.76e-13 d_abs=5.02e-14 den=1.0e+00 meet=False 1.885s
+[A2_rel13_p1] S=6 [1/4] conv=True brut_rel=9.75e-12 d_rel=9.75e-12 d_abs=1.64e-12 den=8.3e-01 meet=False 0.899s
+DONE 7/27 A2_abs514_m7 count=4 pair=[1, 2] route=default below_ratio=1.0036416142611415
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_abs514_m6] S=4 [1/2] conv=True brut_rel=6.11e-16 d_rel=4.59e-16 d_abs=8.33e-17 den=1.0e+00 meet=True 1.578s
+[A2_abs514_m4] S=3 [1/1] conv=True brut_rel=1.41e-10 d_rel=1.41e-10 d_abs=2.55e-11 den=1.0e+00 meet=False 0.859s
+warning: BRASIL did not converge; dev=0.00113, err=9.85e-14
+[A2_rel13_p0] S=6 [4/1] conv=False brut_rel=5.64e-13 d_rel=5.64e-13 d_abs=9.85e-14 den=9.3e-01 meet=False 4.559s
+warning: equioscillation property not satisfied, deviation=0.0303
+[A2_abs514_m5] S=4 [2/1] conv=True brut_rel=5.20e-15 d_rel=5.35e-15 d_abs=9.71e-16 den=1.0e+00 meet=True 2.586s
+[A2_rel13_m1] S=5 [1/3] conv=True brut_rel=6.83e-13 d_rel=6.83e-13 d_abs=1.22e-13 den=9.5e-01 meet=False 4.354s
+warning: equioscillation property not satisfied, deviation=0.05
+[A2_abs514_m5] S=4 [1/2] conv=True brut_rel=3.21e-15 d_rel=3.52e-15 d_abs=6.38e-16 den=1.0e+00 meet=True 1.083s
+warning: equioscillation property not satisfied, deviation=6.93e-05
+[A2_abs514_m6] RETRY S=3 [1/1] conv=True d_rel=2.21e-12 d_abs=4.01e-13 den=1.0e+00 meet=False 2.147s
+warning: equioscillation property not satisfied, deviation=0.00199
+[A2_abs514_m4] S=4 [2/1] conv=True brut_rel=7.69e-14 d_rel=7.71e-14 d_abs=1.40e-14 den=1.0e+00 meet=True 2.211s
+[A2_rel13_p0] S=6 [3/2] conv=True brut_rel=9.42e-14 d_rel=9.45e-14 d_abs=1.65e-14 den=8.9e-01 meet=True 2.573s
+DONE 8/27 A2_abs514_m6 count=4 pair=[1, 2] route=default below_ratio=8.014144903256692
+warning: equioscillation property not satisfied, deviation=0.00997
+[A2_abs514_m4] S=4 [1/2] conv=True brut_rel=4.64e-14 d_rel=4.63e-14 d_abs=8.41e-15 den=9.9e-01 meet=True 0.593s
+[A2_rel13_p0] S=6 [2/3] conv=True brut_rel=6.73e-14 d_rel=6.74e-14 d_abs=1.18e-14 den=8.9e-01 meet=True 0.625s
+warning: BRASIL did not converge; dev=0.000667, err=1.25e-13
+[A2_rel13_p1] S=7 [5/1] conv=False brut_rel=7.43e-13 d_rel=7.43e-13 d_abs=1.25e-13 den=8.7e-01 meet=False 4.712s
+[A2_abs514_m3] S=3 [1/1] conv=True brut_rel=1.12e-09 d_rel=1.12e-09 d_abs=2.02e-10 den=9.9e-01 meet=False 0.489s
+[A2_abs514_m5] RETRY S=3 [1/1] conv=True d_rel=1.76e-11 d_abs=3.20e-12 den=1.0e+00 meet=False 1.637s
+warning: equioscillation property not satisfied, deviation=0.000126
+[A2_abs514_m3] S=4 [2/1] conv=True brut_rel=1.22e-12 d_rel=1.22e-12 d_abs=2.20e-13 den=9.9e-01 meet=False 0.845s
+warning: equioscillation property not satisfied, deviation=0.0154
+[A2_rel13_m1] S=6 [4/1] conv=True brut_rel=1.01e-14 d_rel=1.03e-14 d_abs=1.83e-15 den=9.6e-01 meet=True 3.106s
+DONE 9/27 A2_abs514_m5 count=4 pair=[1, 2] route=default below_ratio=63.96216889470452
+warning: equioscillation property not satisfied, deviation=1.09e-06
+[A2_abs514_m4] RETRY S=3 [1/1] conv=True d_rel=1.41e-10 d_abs=2.55e-11 den=1.0e+00 meet=False 2.051s
+[A2_abs514_m2] S=3 [1/1] conv=True brut_rel=8.82e-09 d_rel=8.82e-09 d_abs=1.59e-09 den=9.8e-01 meet=False 0.829s
+warning: equioscillation property not satisfied, deviation=0.00021
+[A2_abs514_m3] S=4 [1/2] conv=True brut_rel=7.30e-13 d_rel=7.30e-13 d_abs=1.32e-13 den=9.9e-01 meet=False 1.49s
+DONE 10/27 A2_abs514_m4 count=4 pair=[1, 2] route=default below_ratio=509.35755613323863
+[A2_abs514_m2] S=4 [2/1] conv=True brut_rel=1.91e-11 d_rel=1.91e-11 d_abs=3.44e-12 den=9.8e-01 meet=False 0.605s
+[A2_abs514_m3] S=5 [3/1] conv=True brut_rel=2.00e-15 d_rel=2.00e-15 d_abs=3.61e-16 den=9.9e-01 meet=True 1.026s
+[A2_abs514_m1] S=3 [1/1] conv=True brut_rel=6.88e-08 d_rel=6.88e-08 d_abs=1.22e-08 den=9.7e-01 meet=False 0.486s
+[A2_abs514_m2] S=4 [1/2] conv=True brut_rel=1.15e-11 d_rel=1.15e-11 d_abs=2.06e-12 den=9.8e-01 meet=False 0.571s
+warning: equioscillation property not satisfied, deviation=0.0833
+[A2_rel13_m1] S=6 [3/2] conv=True brut_rel=2.02e-15 d_rel=2.03e-15 d_abs=3.61e-16 den=9.4e-01 meet=True 3.201s
+[A2_abs514_m1] S=4 [2/1] conv=True brut_rel=2.95e-10 d_rel=2.95e-10 d_abs=5.25e-11 den=9.7e-01 meet=False 0.825s
+warning: BRASIL did not converge; dev=0.00424, err=3.29e-14
+[A2_rel13_p0] S=6 [1/4] conv=False brut_rel=1.88e-13 d_rel=1.89e-13 d_abs=3.29e-14 den=9.1e-01 meet=False 4.49s
+warning: BRASIL did not converge; dev=0.00612, err=1.37e-14
+[A2_rel13_p1] S=7 [4/2] conv=False brut_rel=8.11e-14 d_rel=8.11e-14 d_abs=1.37e-14 den=7.9e-01 meet=True 4.496s
+warning: equioscillation property not satisfied, deviation=0.25
+[A2_abs514_m3] S=5 [2/2] conv=True brut_rel=7.68e-16 d_rel=7.68e-16 d_abs=1.39e-16 den=9.9e-01 meet=True 1.248s
+[A2_abs514_m2] S=5 [3/1] conv=True brut_rel=5.23e-14 d_rel=5.23e-14 d_abs=9.41e-15 den=9.8e-01 meet=True 1.183s
+[A2_abs514_m1] S=4 [1/2] conv=True brut_rel=1.77e-10 d_rel=1.77e-10 d_abs=3.15e-11 den=9.6e-01 meet=False 0.862s
+[A2_abs514_m1] S=5 [3/1] conv=True brut_rel=1.59e-12 d_rel=1.59e-12 d_abs=2.84e-13 den=9.6e-01 meet=False 0.831s
+[A2_abs514_m2] S=5 [2/2] conv=True brut_rel=1.52e-14 d_rel=1.51e-14 d_abs=2.72e-15 den=9.7e-01 meet=True 2.161s
+warning: equioscillation property not satisfied, deviation=0.111
+[A2_rel13_m1] S=6 [2/3] conv=True brut_rel=1.87e-15 d_rel=1.72e-15 d_abs=3.05e-16 den=9.4e-01 meet=True 2.798s
+[A2_rel13_p0] RETRY S=5 [3/1] conv=True d_rel=4.66e-11 d_abs=8.13e-12 den=9.3e-01 meet=False 2.368s
+[A2_abs514_m3] S=5 [1/3] conv=True brut_rel=1.07e-15 d_rel=9.22e-16 d_abs=1.67e-16 den=9.9e-01 meet=True 2.95s
+warning: equioscillation property not satisfied, deviation=0.00685
+[A2_abs514_m2] S=5 [1/3] conv=True brut_rel=2.26e-14 d_rel=2.27e-14 d_abs=4.08e-15 den=9.8e-01 meet=True 0.971s
+warning: BRASIL did not converge; dev=0.0296, err=5.8e-15
+[A2_rel13_p1] S=7 [3/3] conv=False brut_rel=3.42e-14 d_rel=3.39e-14 d_abs=5.77e-15 den=7.6e-01 meet=True 4.319s
+warning: BRASIL did not converge; dev=0.00103, err=8.11e-14
+[A2_abs514_m1] S=5 [2/2] conv=False brut_rel=4.56e-13 d_rel=4.55e-13 d_abs=8.10e-14 den=9.5e-01 meet=False 3.795s
+warning: equioscillation property not satisfied, deviation=0.000253
+[A2_abs514_m3] RETRY S=4 [2/1] conv=True d_rel=1.22e-12 d_abs=2.20e-13 den=9.9e-01 meet=False 1.818s
+[A2_rel13_p1] S=7 [2/4] conv=True brut_rel=4.52e-14 d_rel=4.51e-14 d_abs=7.61e-15 den=7.7e-01 meet=True 1.507s
+warning: equioscillation property not satisfied, deviation=1.2e-05
+[A2_rel13_p0] RETRY S=5 [2/2] conv=True d_rel=1.33e-11 d_abs=2.32e-12 den=9.0e-01 meet=False 2.989s
+warning: equioscillation property not satisfied, deviation=1.62e-05
+[A2_abs514_m2] RETRY S=4 [2/1] conv=True d_rel=1.91e-11 d_abs=3.44e-12 den=9.8e-01 meet=False 2.439s
+warning: BRASIL did not converge; dev=0.19, err=6.94e-16
+[A2_rel13_m1] S=6 [1/4] conv=False brut_rel=3.90e-15 d_rel=4.06e-15 d_abs=7.22e-16 den=9.5e-01 meet=True 4.434s
+warning: equioscillation property not satisfied, deviation=0.00021
+[A2_abs514_m3] RETRY S=4 [1/2] conv=True d_rel=7.30e-13 d_abs=1.32e-13 den=9.9e-01 meet=False 2.605s
+warning: equioscillation property not satisfied, deviation=1.35e-05
+[A2_abs514_m2] RETRY S=4 [1/2] conv=True d_rel=1.15e-11 d_abs=2.06e-12 den=9.8e-01 meet=False 2.377s
+DONE 11/27 A2_abs514_m3 count=5 pair=[2, 2] route=default below_ratio=2.637889906509372
+DONE 12/27 A2_abs514_m2 count=5 pair=[2, 2] route=default below_ratio=41.22202579281975
+[A2_abs514_m1] S=5 [1/3] conv=True brut_rel=6.83e-13 d_rel=6.83e-13 d_abs=1.22e-13 den=9.5e-01 meet=False 4.049s
+[A2_abs514_p0] S=3 [1/1] conv=True brut_rel=5.23e-07 d_rel=5.23e-07 d_abs=9.13e-08 den=9.4e-01 meet=False 0.544s
+[A2_rel13_p0] RETRY S=5 [1/3] conv=True d_rel=2.00e-11 d_abs=3.48e-12 den=9.1e-01 meet=False 4.127s
+warning: equioscillation property not satisfied, deviation=9.79e-05
+[A2_rel13_m1] RETRY S=5 [3/1] conv=True d_rel=1.59e-12 d_abs=2.84e-13 den=9.6e-01 meet=False 2.752s
+[A2_abs514_p1] S=3 [1/1] conv=True brut_rel=3.80e-06 d_rel=3.80e-06 d_abs=6.40e-07 den=8.9e-01 meet=False 0.841s
+[A2_abs514_p0] S=4 [2/1] conv=True brut_rel=4.40e-09 d_rel=4.40e-09 d_abs=7.68e-10 den=9.3e-01 meet=False 0.892s
+warning: BRASIL did not converge; dev=0.00244, err=3.41e-14
+[A2_rel13_p1] S=7 [1/5] conv=False brut_rel=2.03e-13 d_rel=2.03e-13 d_abs=3.41e-14 den=8.2e-01 meet=False 4.933s
+DONE 13/27 A2_rel13_p0 count=6 pair=[2, 3] route=default below_ratio=133.1124558822189
+[A2_abs514_p1] S=4 [2/1] conv=True brut_rel=6.16e-08 d_rel=6.16e-08 d_abs=1.03e-08 den=8.8e-01 meet=False 0.603s
+[A2_abs514_p0] S=4 [1/2] conv=True brut_rel=2.64e-09 d_rel=2.64e-09 d_abs=4.61e-10 den=9.2e-01 meet=False 0.686s
+[A2_abs514_p1] S=4 [1/2] conv=True brut_rel=3.69e-08 d_rel=3.69e-08 d_abs=6.21e-09 den=8.6e-01 meet=False 0.546s
+[A2_abs514_p0] S=5 [3/1] conv=True brut_rel=4.66e-11 d_rel=4.66e-11 d_abs=8.13e-12 den=9.3e-01 meet=False 0.598s
+[A2_abs514_p1] S=5 [3/1] conv=True brut_rel=1.26e-09 d_rel=1.26e-09 d_abs=2.11e-10 den=8.7e-01 meet=False 0.547s
+[A2_abs514_p0] S=5 [2/2] conv=True brut_rel=1.33e-11 d_rel=1.33e-11 d_abs=2.32e-12 den=9.0e-01 meet=False 0.49s
+warning: equioscillation property not satisfied, deviation=0.0154
+[A2_abs514_m1] S=6 [4/1] conv=True brut_rel=1.01e-14 d_rel=1.03e-14 d_abs=1.83e-15 den=9.6e-01 meet=True 3.2s
+[A2_abs514_p1] S=5 [2/2] conv=True brut_rel=3.59e-10 d_rel=3.59e-10 d_abs=6.03e-11 den=8.2e-01 meet=False 0.519s
+[A2_rel13_m1] RETRY S=5 [2/2] conv=True d_rel=4.55e-13 d_abs=8.10e-14 den=9.5e-01 meet=False 2.403s
+[A2_abs514_p0] S=5 [1/3] conv=True brut_rel=2.00e-11 d_rel=2.00e-11 d_abs=3.48e-12 den=9.1e-01 meet=False 0.559s
+[A2_abs514_p1] S=5 [1/3] conv=True brut_rel=5.38e-10 d_rel=5.38e-10 d_abs=9.04e-11 den=8.4e-01 meet=False 0.579s
+warning: equioscillation property not satisfied, deviation=5.65e-06
+[A2_rel13_p1] RETRY S=6 [4/1] conv=True d_rel=2.92e-11 d_abs=4.92e-12 den=8.7e-01 meet=False 2.393s
+[A2_abs514_p1] S=6 [4/1] conv=True brut_rel=2.92e-11 d_rel=2.92e-11 d_abs=4.92e-12 den=8.7e-01 meet=False 0.89s
+[A2_abs514_p1] S=6 [3/2] conv=True brut_rel=4.87e-12 d_rel=4.87e-12 d_abs=8.19e-13 den=8.0e-01 meet=False 0.562s
+warning: BRASIL did not converge; dev=0.00111, err=5.02e-14
+[A2_rel14_m7] S=3 [1/1] conv=False brut_rel=2.76e-13 d_rel=2.76e-13 d_abs=5.02e-14 den=1.0e+00 meet=False 3.432s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel14_m7] S=4 [2/1] conv=True brut_rel=4.59e-16 d_rel=4.59e-16 d_abs=8.33e-17 den=1.0e+00 meet=True 0.417s
+[A2_abs514_p1] S=6 [2/3] conv=True brut_rel=3.48e-12 d_rel=3.48e-12 d_abs=5.85e-13 den=7.9e-01 meet=False 0.6s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel14_m7] S=4 [1/2] conv=True brut_rel=6.11e-16 d_rel=3.06e-16 d_abs=5.55e-17 den=1.0e+00 meet=True 0.035s
+warning: equioscillation property not satisfied, deviation=0.0833
+[A2_abs514_m1] S=6 [3/2] conv=True brut_rel=2.02e-15 d_rel=2.03e-15 d_abs=3.61e-16 den=9.4e-01 meet=True 3.087s
+warning: equioscillation property not satisfied, deviation=0.000228
+[A2_rel13_m1] RETRY S=5 [1/3] conv=True d_rel=6.83e-13 d_abs=1.22e-13 den=9.5e-01 meet=False 2.972s
+[A2_abs514_p1] S=6 [1/4] conv=True brut_rel=9.75e-12 d_rel=9.75e-12 d_abs=1.64e-12 den=8.3e-01 meet=False 0.779s
+[A2_rel13_p1] RETRY S=6 [3/2] conv=True d_rel=4.87e-12 d_abs=8.19e-13 den=8.0e-01 meet=False 3.069s
+DONE 14/27 A2_rel13_m1 count=6 pair=[2, 3] route=default below_ratio=4.552632286856963
+warning: BRASIL did not converge; dev=0.00113, err=9.85e-14
+[A2_abs514_p0] S=6 [4/1] conv=False brut_rel=5.64e-13 d_rel=5.64e-13 d_abs=9.85e-14 den=9.3e-01 meet=False 4.358s
+[A2_rel14_m7] RETRY S=3 [1/1] conv=True d_rel=2.76e-13 d_abs=5.02e-14 den=1.0e+00 meet=False 1.808s
+warning: equioscillation property not satisfied, deviation=0.111
+[A2_abs514_m1] S=6 [2/3] conv=True brut_rel=1.87e-15 d_rel=1.72e-15 d_abs=3.05e-16 den=9.4e-01 meet=True 2.161s
+[A2_rel14_m6] S=3 [1/1] conv=True brut_rel=2.21e-12 d_rel=2.21e-12 d_abs=4.01e-13 den=1.0e+00 meet=False 0.636s
+DONE 15/27 A2_rel14_m7 count=4 pair=[1, 2] route=default below_ratio=27.630968822563737
+warning: equioscillation property not satisfied, deviation=0.25
+[A2_rel14_m6] S=4 [2/1] conv=True brut_rel=7.64e-16 d_rel=6.12e-16 d_abs=1.11e-16 den=1.0e+00 meet=True 1.26s
+[A2_rel14_m5] S=3 [1/1] conv=True brut_rel=1.76e-11 d_rel=1.76e-11 d_abs=3.20e-12 den=1.0e+00 meet=False 0.671s
+[A2_abs514_p0] S=6 [3/2] conv=True brut_rel=9.42e-14 d_rel=9.45e-14 d_abs=1.65e-14 den=8.9e-01 meet=True 2.616s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel14_m6] S=4 [1/2] conv=True brut_rel=6.11e-16 d_rel=4.59e-16 d_abs=8.33e-17 den=1.0e+00 meet=True 0.988s
+[A2_abs514_p0] S=6 [2/3] conv=True brut_rel=6.73e-14 d_rel=6.74e-14 d_abs=1.18e-14 den=8.9e-01 meet=True 0.594s
+warning: BRASIL did not converge; dev=0.000667, err=1.25e-13
+[A2_abs514_p1] S=7 [5/1] conv=False brut_rel=7.43e-13 d_rel=7.43e-13 d_abs=1.25e-13 den=8.7e-01 meet=False 4.549s
+warning: equioscillation property not satisfied, deviation=0.0303
+[A2_rel14_m5] S=4 [2/1] conv=True brut_rel=5.20e-15 d_rel=5.35e-15 d_abs=9.71e-16 den=1.0e+00 meet=True 1.774s
+warning: equioscillation property not satisfied, deviation=6.93e-05
+[A2_rel14_m6] RETRY S=3 [1/1] conv=True d_rel=2.21e-12 d_abs=4.01e-13 den=1.0e+00 meet=False 1.593s
+warning: BRASIL did not converge; dev=0.19, err=6.94e-16
+[A2_abs514_m1] S=6 [1/4] conv=False brut_rel=3.90e-15 d_rel=4.06e-15 d_abs=7.22e-16 den=9.5e-01 meet=True 4.269s
+DONE 16/27 A2_rel14_m6 count=4 pair=[1, 2] route=default below_ratio=220.7104088401491
+warning: equioscillation property not satisfied, deviation=0.05
+[A2_rel14_m5] S=4 [1/2] conv=True brut_rel=3.21e-15 d_rel=3.52e-15 d_abs=6.38e-16 den=1.0e+00 meet=True 0.997s
+[A2_rel14_m4] S=3 [1/1] conv=True brut_rel=1.41e-10 d_rel=1.41e-10 d_abs=2.55e-11 den=1.0e+00 meet=False 0.562s
+warning: BRASIL did not converge; dev=0.00424, err=3.29e-14
+[A2_abs514_p0] S=6 [1/4] conv=False brut_rel=1.88e-13 d_rel=1.89e-13 d_abs=3.29e-14 den=9.1e-01 meet=True 3.958s
+warning: BRASIL did not converge; dev=0.00612, err=1.37e-14
+[A2_abs514_p1] S=7 [4/2] conv=False brut_rel=8.11e-14 d_rel=8.11e-14 d_abs=1.37e-14 den=7.9e-01 meet=True 4.484s
+[A2_rel14_m5] RETRY S=3 [1/1] conv=True d_rel=1.76e-11 d_abs=3.20e-12 den=1.0e+00 meet=False 2.321s
+warning: equioscillation property not satisfied, deviation=9.79e-05
+[A2_abs514_m1] RETRY S=5 [3/1] conv=True d_rel=1.59e-12 d_abs=2.84e-13 den=9.6e-01 meet=False 3.186s
+warning: equioscillation property not satisfied, deviation=0.00199
+[A2_rel14_m4] S=4 [2/1] conv=True brut_rel=7.69e-14 d_rel=7.71e-14 d_abs=1.40e-14 den=1.0e+00 meet=False 2.898s
+DONE 17/27 A2_rel14_m5 count=4 pair=[1, 2] route=default below_ratio=1762.7557703553766
+warning: equioscillation property not satisfied, deviation=0.00997
+[A2_rel14_m4] S=4 [1/2] conv=True brut_rel=4.64e-14 d_rel=4.63e-14 d_abs=8.41e-15 den=9.9e-01 meet=False 0.648s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel14_m4] S=5 [3/1] conv=True brut_rel=6.12e-16 d_rel=4.58e-16 d_abs=8.33e-17 den=1.0e+00 meet=True 0.533s
+[A2_rel14_m3] S=3 [1/1] conv=True brut_rel=1.12e-09 d_rel=1.12e-09 d_abs=2.02e-10 den=9.9e-01 meet=False 0.626s
+[A2_abs514_p0] RETRY S=5 [3/1] conv=True d_rel=4.66e-11 d_abs=8.13e-12 den=9.3e-01 meet=False 2.518s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel14_m4] S=5 [2/2] conv=True brut_rel=6.11e-16 d_rel=3.06e-16 d_abs=5.55e-17 den=9.9e-01 meet=True 0.697s
+warning: equioscillation property not satisfied, deviation=0.000126
+[A2_rel14_m3] S=4 [2/1] conv=True brut_rel=1.22e-12 d_rel=1.22e-12 d_abs=2.20e-13 den=9.9e-01 meet=False 0.727s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel14_m4] S=5 [1/3] conv=True brut_rel=7.66e-16 d_rel=4.60e-16 d_abs=8.33e-17 den=9.9e-01 meet=True 0.664s
+[A2_abs514_m1] RETRY S=5 [2/2] conv=True d_rel=4.55e-13 d_abs=8.10e-14 den=9.5e-01 meet=False 2.884s
+warning: BRASIL did not converge; dev=0.0296, err=5.8e-15
+[A2_abs514_p1] S=7 [3/3] conv=False brut_rel=3.42e-14 d_rel=3.39e-14 d_abs=5.77e-15 den=7.6e-01 meet=True 4.674s
+warning: equioscillation property not satisfied, deviation=0.00021
+[A2_rel14_m3] S=4 [1/2] conv=True brut_rel=7.30e-13 d_rel=7.30e-13 d_abs=1.32e-13 den=9.9e-01 meet=False 1.708s
+warning: equioscillation property not satisfied, deviation=1.2e-05
+[A2_abs514_p0] RETRY S=5 [2/2] conv=True d_rel=1.33e-11 d_abs=2.32e-12 den=9.0e-01 meet=False 3.837s
+warning: equioscillation property not satisfied, deviation=0.00598
+[A2_rel14_m4] RETRY S=4 [2/1] conv=True d_rel=7.71e-14 d_abs=1.40e-14 den=1.0e+00 meet=False 2.654s
+[A2_rel14_m3] S=5 [3/1] conv=True brut_rel=2.00e-15 d_rel=2.00e-15 d_abs=3.61e-16 den=9.9e-01 meet=True 1.833s
+[A2_abs514_p1] S=7 [2/4] conv=True brut_rel=4.52e-14 d_rel=4.51e-14 d_abs=7.61e-15 den=7.7e-01 meet=True 2.258s
+warning: equioscillation property not satisfied, deviation=0.000228
+[A2_abs514_m1] RETRY S=5 [1/3] conv=True d_rel=6.83e-13 d_abs=1.22e-13 den=9.5e-01 meet=False 4.538s
+warning: equioscillation property not satisfied, deviation=0.25
+[A2_rel14_m3] S=5 [2/2] conv=True brut_rel=7.68e-16 d_rel=7.68e-16 d_abs=1.39e-16 den=9.9e-01 meet=True 1.429s
+[A2_rel14_m4] RETRY S=4 [1/2] conv=True d_rel=4.63e-14 d_abs=8.38e-15 den=9.9e-01 meet=False 2.363s
+DONE 18/27 A2_abs514_m1 count=6 pair=[2, 3] route=default below_ratio=1.6209256159527285
+DONE 19/27 A2_rel14_m4 count=5 pair=[2, 2] route=default below_ratio=4.6263177436742025
+[A2_rel13_p1] RETRY S=6 [2/3] conv=True d_rel=3.48e-12 d_abs=5.85e-13 den=7.9e-01 meet=False 18.628s
+[A2_rel14_m2] S=3 [1/1] conv=True brut_rel=8.82e-09 d_rel=8.82e-09 d_abs=1.59e-09 den=9.8e-01 meet=False 0.707s
+[A2_abs514_p0] RETRY S=5 [1/3] conv=True d_rel=2.00e-11 d_abs=3.48e-12 den=9.1e-01 meet=False 4.738s
+[A2_rel14_m1] S=3 [1/1] conv=True brut_rel=6.88e-08 d_rel=6.88e-08 d_abs=1.22e-08 den=9.7e-01 meet=False 0.684s
+[A2_rel14_m2] S=4 [2/1] conv=True brut_rel=1.91e-11 d_rel=1.91e-11 d_abs=3.44e-12 den=9.8e-01 meet=False 0.766s
+[A2_rel14_m3] S=5 [1/3] conv=True brut_rel=1.07e-15 d_rel=9.22e-16 d_abs=1.67e-16 den=9.9e-01 meet=True 3.472s
+[A2_rel14_m1] S=4 [2/1] conv=True brut_rel=2.95e-10 d_rel=2.95e-10 d_abs=5.25e-11 den=9.7e-01 meet=False 0.743s
+[A2_rel14_m2] S=4 [1/2] conv=True brut_rel=1.15e-11 d_rel=1.15e-11 d_abs=2.06e-12 den=9.8e-01 meet=False 0.778s
+DONE 20/27 A2_abs514_p0 count=6 pair=[2, 3] route=default below_ratio=46.450621127291924
+warning: BRASIL did not converge; dev=0.00244, err=3.41e-14
+[A2_abs514_p1] S=7 [1/5] conv=False brut_rel=2.03e-13 d_rel=2.03e-13 d_abs=3.41e-14 den=8.2e-01 meet=True 5.407s
+[A2_rel14_m1] S=4 [1/2] conv=True brut_rel=1.77e-10 d_rel=1.77e-10 d_abs=3.15e-11 den=9.6e-01 meet=False 0.832s
+[A2_rel14_m2] S=5 [3/1] conv=True brut_rel=5.23e-14 d_rel=5.23e-14 d_abs=9.41e-15 den=9.8e-01 meet=False 1.102s
+[A2_rel14_p0] S=3 [1/1] conv=True brut_rel=5.23e-07 d_rel=5.23e-07 d_abs=9.13e-08 den=9.4e-01 meet=False 0.698s
+[A2_rel14_m1] S=5 [3/1] conv=True brut_rel=1.59e-12 d_rel=1.59e-12 d_abs=2.84e-13 den=9.6e-01 meet=False 0.769s
+[A2_rel14_p0] S=4 [2/1] conv=True brut_rel=4.40e-09 d_rel=4.40e-09 d_abs=7.68e-10 den=9.3e-01 meet=False 0.947s
+warning: equioscillation property not satisfied, deviation=1.69e-05
+[A2_rel13_p1] RETRY S=6 [1/4] conv=True d_rel=9.75e-12 d_abs=1.64e-12 den=8.3e-01 meet=False 4.166s
+warning: equioscillation property not satisfied, deviation=0.000253
+[A2_rel14_m3] RETRY S=4 [2/1] conv=True d_rel=1.22e-12 d_abs=2.20e-13 den=9.9e-01 meet=False 2.381s
+[A2_rel14_p0] S=4 [1/2] conv=True brut_rel=2.64e-09 d_rel=2.64e-09 d_abs=4.61e-10 den=9.2e-01 meet=False 0.856s
+[A2_rel14_m2] S=5 [2/2] conv=True brut_rel=1.52e-14 d_rel=1.51e-14 d_abs=2.72e-15 den=9.7e-01 meet=False 2.156s
+DONE 21/27 A2_rel13_p1 count=7 pair=[2, 4] route=default below_ratio=34.80604871823333
+[A2_rel14_p0] S=5 [3/1] conv=True brut_rel=4.66e-11 d_rel=4.66e-11 d_abs=8.13e-12 den=9.3e-01 meet=False 0.648s
+warning: equioscillation property not satisfied, deviation=5.65e-06
+[A2_abs514_p1] RETRY S=6 [4/1] conv=True d_rel=2.92e-11 d_abs=4.92e-12 den=8.7e-01 meet=False 3.039s
+[A2_rel14_p0] S=5 [2/2] conv=True brut_rel=1.33e-11 d_rel=1.33e-11 d_abs=2.32e-12 den=9.0e-01 meet=False 0.487s
+warning: equioscillation property not satisfied, deviation=0.00021
+[A2_rel14_m3] RETRY S=4 [1/2] conv=True d_rel=7.30e-13 d_abs=1.32e-13 den=9.9e-01 meet=False 1.856s
+[A2_rel14_p1] S=3 [1/1] conv=True brut_rel=3.80e-06 d_rel=3.80e-06 d_abs=6.40e-07 den=8.9e-01 meet=False 0.573s
+warning: equioscillation property not satisfied, deviation=0.00685
+[A2_rel14_m2] S=5 [1/3] conv=True brut_rel=2.26e-14 d_rel=2.27e-14 d_abs=4.08e-15 den=9.8e-01 meet=False 1.227s
+[A2_rel14_p0] S=5 [1/3] conv=True brut_rel=2.00e-11 d_rel=2.00e-11 d_abs=3.48e-12 den=9.1e-01 meet=False 0.85s
+[A2_rel14_p1] S=4 [2/1] conv=True brut_rel=6.16e-08 d_rel=6.16e-08 d_abs=1.03e-08 den=8.8e-01 meet=False 0.871s
+DONE 22/27 A2_rel14_m3 count=5 pair=[2, 2] route=default below_ratio=72.98548999470866
+warning: BRASIL did not converge; dev=0.00103, err=8.11e-14
+[A2_rel14_m1] S=5 [2/2] conv=False brut_rel=4.56e-13 d_rel=4.55e-13 d_abs=8.10e-14 den=9.5e-01 meet=False 4.268s
+[A2_rel14_p1] S=4 [1/2] conv=True brut_rel=3.69e-08 d_rel=3.69e-08 d_abs=6.21e-09 den=8.6e-01 meet=False 0.693s
+warning: equioscillation property not satisfied, deviation=0.667
+[A2_rel14_m2] S=6 [4/1] conv=True brut_rel=6.16e-16 d_rel=4.63e-16 d_abs=8.33e-17 den=9.8e-01 meet=True 1.411s
+[A2_rel14_p1] S=5 [3/1] conv=True brut_rel=1.26e-09 d_rel=1.26e-09 d_abs=2.11e-10 den=8.7e-01 meet=False 0.527s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel14_m2] S=6 [3/2] conv=True brut_rel=6.17e-16 d_rel=3.09e-16 d_abs=5.55e-17 den=9.7e-01 meet=True 0.554s
+[A2_rel14_p1] S=5 [2/2] conv=True brut_rel=3.59e-10 d_rel=3.59e-10 d_abs=6.03e-11 den=8.2e-01 meet=False 0.492s
+[A2_abs514_p1] RETRY S=6 [3/2] conv=True d_rel=4.87e-12 d_abs=8.19e-13 den=8.0e-01 meet=False 3.051s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel14_m2] S=6 [2/3] conv=True brut_rel=6.18e-16 d_rel=7.72e-16 d_abs=1.39e-16 den=9.7e-01 meet=True 0.587s
+[A2_rel14_p1] S=5 [1/3] conv=True brut_rel=5.38e-10 d_rel=5.38e-10 d_abs=9.04e-11 den=8.4e-01 meet=False 1.218s
+warning: equioscillation property not satisfied, deviation=2.0
+[A2_rel14_m2] S=6 [1/4] conv=True brut_rel=7.72e-16 d_rel=4.63e-16 d_abs=8.33e-17 den=9.8e-01 meet=True 1.232s
+[A2_rel14_p1] S=6 [4/1] conv=True brut_rel=2.92e-11 d_rel=2.92e-11 d_abs=4.92e-12 den=8.7e-01 meet=False 0.997s
+[A2_rel14_m1] S=5 [1/3] conv=True brut_rel=6.83e-13 d_rel=6.83e-13 d_abs=1.22e-13 den=9.5e-01 meet=False 4.051s
+[A2_rel14_p1] S=6 [3/2] conv=True brut_rel=4.87e-12 d_rel=4.87e-12 d_abs=8.19e-13 den=8.0e-01 meet=False 0.613s
+warning: BRASIL did not converge; dev=0.00113, err=9.85e-14
+[A2_rel14_p0] S=6 [4/1] conv=False brut_rel=5.64e-13 d_rel=5.64e-13 d_abs=9.85e-14 den=9.3e-01 meet=False 4.957s
+[A2_rel14_p1] S=6 [2/3] conv=True brut_rel=3.48e-12 d_rel=3.48e-12 d_abs=5.85e-13 den=7.9e-01 meet=False 0.59s
+[A2_rel14_m2] RETRY S=5 [3/1] conv=True d_rel=5.23e-14 d_abs=9.41e-15 den=9.8e-01 meet=False 1.954s
+[A2_rel14_p1] S=6 [1/4] conv=True brut_rel=9.75e-12 d_rel=9.75e-12 d_abs=1.64e-12 den=8.3e-01 meet=False 0.69s
+[A2_rel14_p0] S=6 [3/2] conv=True brut_rel=9.42e-14 d_rel=9.45e-14 d_abs=1.65e-14 den=8.9e-01 meet=False 2.809s
+warning: equioscillation property not satisfied, deviation=0.0154
+[A2_rel14_m1] S=6 [4/1] conv=True brut_rel=1.01e-14 d_rel=1.03e-14 d_abs=1.83e-15 den=9.6e-01 meet=False 3.637s
+[A2_rel14_p0] S=6 [2/3] conv=True brut_rel=6.73e-14 d_rel=6.74e-14 d_abs=1.18e-14 den=8.9e-01 meet=False 0.883s
+[A2_rel14_m2] RETRY S=5 [2/2] conv=True d_rel=1.51e-14 d_abs=2.72e-15 den=9.7e-01 meet=False 3.381s
+warning: BRASIL did not converge; dev=0.000667, err=1.25e-13
+[A2_rel14_p1] S=7 [5/1] conv=False brut_rel=7.43e-13 d_rel=7.43e-13 d_abs=1.25e-13 den=8.7e-01 meet=False 5.515s
+warning: equioscillation property not satisfied, deviation=0.0833
+[A2_rel14_m1] S=6 [3/2] conv=True brut_rel=2.02e-15 d_rel=2.03e-15 d_abs=3.61e-16 den=9.4e-01 meet=True 3.738s
+warning: equioscillation property not satisfied, deviation=0.00685
+[A2_rel14_m2] RETRY S=5 [1/3] conv=True d_rel=2.27e-14 d_abs=4.08e-15 den=9.8e-01 meet=False 4.188s
+warning: BRASIL did not converge; dev=0.00424, err=3.29e-14
+[A2_rel14_p0] S=6 [1/4] conv=False brut_rel=1.88e-13 d_rel=1.89e-13 d_abs=3.29e-14 den=9.1e-01 meet=False 5.094s
+DONE 23/27 A2_rel14_m2 count=6 pair=[3, 2] route=default below_ratio=1.5115190536864256
+warning: equioscillation property not satisfied, deviation=0.111
+[A2_rel14_m1] S=6 [2/3] conv=True brut_rel=1.87e-15 d_rel=1.72e-15 d_abs=3.05e-16 den=9.4e-01 meet=True 2.768s
+warning: BRASIL did not converge; dev=0.00612, err=1.37e-14
+[A2_rel14_p1] S=7 [4/2] conv=False brut_rel=8.11e-14 d_rel=8.11e-14 d_abs=1.37e-14 den=7.9e-01 meet=False 4.765s
+warning: BRASIL did not converge; dev=0.0638, err=1.39e-15
+[A2_rel14_p0] S=7 [5/1] conv=False brut_rel=7.85e-15 d_rel=7.64e-15 d_abs=1.36e-15 den=9.3e-01 meet=True 4.038s
+warning: BRASIL did not converge; dev=0.19, err=6.94e-16
+[A2_rel14_m1] S=6 [1/4] conv=False brut_rel=3.90e-15 d_rel=4.06e-15 d_abs=7.22e-16 den=9.5e-01 meet=True 3.675s
+[A2_abs514_p1] RETRY S=6 [2/3] conv=True d_rel=3.48e-12 d_abs=5.85e-13 den=7.9e-01 meet=False 17.705s
+warning: BRASIL did not converge; dev=0.0296, err=5.8e-15
+[A2_rel14_p1] S=7 [3/3] conv=False brut_rel=3.42e-14 d_rel=3.39e-14 d_abs=5.77e-15 den=7.6e-01 meet=False 3.399s
+[A2_rel14_p1] S=7 [2/4] conv=True brut_rel=4.52e-14 d_rel=4.51e-14 d_abs=7.61e-15 den=7.7e-01 meet=False 1.246s
+warning: equioscillation property not satisfied, deviation=9.79e-05
+[A2_rel14_m1] RETRY S=5 [3/1] conv=True d_rel=1.59e-12 d_abs=2.84e-13 den=9.6e-01 meet=False 2.151s
+warning: BRASIL did not converge; dev=0.143, err=2.22e-16
+[A2_rel14_p0] S=7 [4/2] conv=False brut_rel=1.38e-15 d_rel=1.22e-15 d_abs=2.22e-16 den=8.9e-01 meet=True 3.67s
+warning: equioscillation property not satisfied, deviation=1.69e-05
+[A2_abs514_p1] RETRY S=6 [1/4] conv=True d_rel=9.75e-12 d_abs=1.64e-12 den=8.3e-01 meet=False 2.694s
+DONE 24/27 A2_abs514_p1 count=7 pair=[2, 4] route=default below_ratio=11.700640456524525
+[A2_rel14_m1] RETRY S=5 [2/2] conv=True d_rel=4.55e-13 d_abs=8.10e-14 den=9.5e-01 meet=False 1.952s
+warning: BRASIL did not converge; dev=0.00244, err=3.41e-14
+[A2_rel14_p1] S=7 [1/5] conv=False brut_rel=2.03e-13 d_rel=2.03e-13 d_abs=3.41e-14 den=8.2e-01 meet=False 3.144s
+warning: BRASIL did not converge; dev=0.667, err=1.39e-16
+[A2_rel14_p0] S=7 [3/3] conv=False brut_rel=7.95e-16 d_rel=6.36e-16 d_abs=1.11e-16 den=8.7e-01 meet=True 2.992s
+warning: equioscillation property not satisfied, deviation=0.000228
+[A2_rel14_m1] RETRY S=5 [1/3] conv=True d_rel=6.83e-13 d_abs=1.22e-13 den=9.5e-01 meet=False 2.874s
+DONE 25/27 A2_rel14_m1 count=6 pair=[2, 3] route=default below_ratio=45.526322868569636
+warning: equioscillation property not satisfied, deviation=0.2
+[A2_rel14_p0] S=7 [2/4] conv=True brut_rel=9.23e-16 d_rel=7.94e-16 d_abs=1.39e-16 den=8.7e-01 meet=True 2.788s
+warning: BRASIL did not converge; dev=0.0331, err=3.47e-15
+[A2_rel14_p1] S=8 [6/1] conv=False brut_rel=2.01e-14 d_rel=2.03e-14 d_abs=3.47e-15 den=8.7e-01 meet=False 5.083s
+warning: BRASIL did not converge; dev=0.308, err=4.72e-16
+[A2_rel14_p0] S=7 [1/5] conv=False brut_rel=2.70e-15 d_rel=2.38e-15 d_abs=4.16e-16 den=9.0e-01 meet=True 3.853s
+warning: BRASIL did not converge; dev=0.5, err=3.33e-16
+[A2_rel14_p1] S=8 [5/2] conv=False brut_rel=1.88e-15 d_rel=2.15e-15 d_abs=3.61e-16 den=7.8e-01 meet=True 3.587s
+warning: equioscillation property not satisfied, deviation=0.000282
+[A2_rel14_p0] RETRY S=6 [4/1] conv=True d_rel=5.65e-13 d_abs=9.85e-14 den=9.3e-01 meet=False 1.527s
+C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\baryrat.py:931: RuntimeWarning: divide by zero encountered in scalar divide
+  deviation = max_err / local_max.min() - 1
+warning: BRASIL did not converge; dev=1.0, err=1.67e-16
+[A2_rel14_p1] S=8 [4/3] conv=False brut_rel=1.16e-15 d_rel=1.16e-15 d_abs=1.94e-16 den=7.4e-01 meet=True 2.942s
+warning: equioscillation property not satisfied, deviation=0.00169
+[A2_rel14_p0] RETRY S=6 [3/2] conv=True d_rel=9.45e-14 d_abs=1.65e-14 den=8.9e-01 meet=False 2.809s
+warning: BRASIL did not converge; dev=1.0, err=1.11e-16
+[A2_rel14_p1] S=8 [3/4] conv=False brut_rel=9.39e-16 d_rel=8.26e-16 d_abs=1.39e-16 den=7.3e-01 meet=True 3.973s
+warning: BRASIL did not converge; dev=0.4, err=1.94e-16
+[A2_rel14_p1] S=8 [2/5] conv=False brut_rel=1.16e-15 d_rel=1.16e-15 d_abs=1.94e-16 den=7.6e-01 meet=True 3.692s
+[A2_rel14_p0] RETRY S=6 [2/3] conv=True d_rel=6.74e-14 d_abs=1.18e-14 den=8.9e-01 meet=False 9.685s
+warning: BRASIL did not converge; dev=0.143, err=8.88e-16
+[A2_rel14_p1] S=8 [1/6] conv=False brut_rel=5.12e-15 d_rel=5.45e-15 d_abs=9.16e-16 den=8.2e-01 meet=True 3.294s
+[A2_rel14_p0] RETRY S=6 [1/4] conv=True d_rel=1.89e-13 d_abs=3.29e-14 den=9.1e-01 meet=False 1.791s
+DONE 26/27 A2_rel14_p0 count=7 pair=[2, 4] route=default below_ratio=6.7449455996344065
+warning: equioscillation property not satisfied, deviation=0.000444
+[A2_rel14_p1] RETRY S=7 [5/1] conv=True d_rel=7.43e-13 d_abs=1.25e-13 den=8.7e-01 meet=False 4.596s
+[A2_rel14_p1] RETRY S=7 [4/2] conv=True d_rel=8.12e-14 d_abs=1.37e-14 den=7.9e-01 meet=False 2.412s
+warning: BRASIL did not converge; dev=0.0147, err=5.75e-15
+[A2_rel14_p1] RETRY S=7 [3/3] conv=False d_rel=3.39e-14 d_abs=5.72e-15 den=7.6e-01 meet=False 16.745s
+warning: BRASIL did not converge; dev=0.00366, err=7.61e-15
+[A2_rel14_p1] RETRY S=7 [2/4] conv=False d_rel=4.51e-14 d_abs=7.61e-15 den=7.7e-01 meet=False 18.763s
+warning: equioscillation property not satisfied, deviation=0.000814
+[A2_rel14_p1] RETRY S=7 [1/5] conv=True d_rel=2.03e-13 d_abs=3.41e-14 den=8.2e-01 meet=False 12.585s
+DONE 27/27 A2_rel14_p1 count=8 pair=[3, 4] route=default below_ratio=3.385159876287044
+ALLDONE cells=27 errors=0 wall=169.8s

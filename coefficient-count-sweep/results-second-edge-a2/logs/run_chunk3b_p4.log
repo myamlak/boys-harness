@@ -1,0 +1,238 @@
+[A2_rel13_p4] S=3 [1/1] conv=True brut_rel=7.39e-04 d_rel=7.39e-04 d_abs=8.77e-05 den=5.3e-01 meet=False 0.314s
+[A2_abs514_p4] S=3 [1/1] conv=True brut_rel=7.39e-04 d_rel=7.39e-04 d_abs=8.77e-05 den=5.3e-01 meet=False 0.407s
+[A2_rel14_p4] S=3 [1/1] conv=True brut_rel=7.39e-04 d_rel=7.39e-04 d_abs=8.77e-05 den=5.3e-01 meet=False 0.403s
+[A2_rel13_p4] S=4 [2/1] conv=True brut_rel=6.55e-05 d_rel=6.55e-05 d_abs=7.77e-06 den=4.9e-01 meet=False 0.348s
+[A2_abs514_p4] S=4 [2/1] conv=True brut_rel=6.55e-05 d_rel=6.55e-05 d_abs=7.77e-06 den=4.9e-01 meet=False 0.396s
+[A2_rel14_p4] S=4 [2/1] conv=True brut_rel=6.55e-05 d_rel=6.55e-05 d_abs=7.77e-06 den=4.9e-01 meet=False 0.398s
+[A2_rel13_p4] S=4 [1/2] conv=True brut_rel=3.92e-05 d_rel=3.92e-05 d_abs=4.65e-06 den=4.3e-01 meet=False 0.465s
+[A2_rel14_p4] S=4 [1/2] conv=True brut_rel=3.92e-05 d_rel=3.92e-05 d_abs=4.65e-06 den=4.3e-01 meet=False 0.415s
+[A2_abs514_p4] S=4 [1/2] conv=True brut_rel=3.92e-05 d_rel=3.92e-05 d_abs=4.65e-06 den=4.3e-01 meet=False 0.432s
+[A2_rel13_p4] S=5 [3/1] conv=True brut_rel=7.30e-06 d_rel=7.30e-06 d_abs=8.66e-07 den=4.7e-01 meet=False 0.459s
+[A2_rel14_p4] S=5 [3/1] conv=True brut_rel=7.30e-06 d_rel=7.30e-06 d_abs=8.66e-07 den=4.7e-01 meet=False 0.564s
+[A2_abs514_p4] S=5 [3/1] conv=True brut_rel=7.30e-06 d_rel=7.30e-06 d_abs=8.66e-07 den=4.7e-01 meet=False 0.568s
+[A2_rel13_p4] S=5 [2/2] conv=True brut_rel=2.08e-06 d_rel=2.08e-06 d_abs=2.47e-07 den=3.4e-01 meet=False 0.583s
+[A2_abs514_p4] S=5 [2/2] conv=True brut_rel=2.08e-06 d_rel=2.08e-06 d_abs=2.47e-07 den=3.4e-01 meet=False 0.45s
+[A2_rel14_p4] S=5 [2/2] conv=True brut_rel=2.08e-06 d_rel=2.08e-06 d_abs=2.47e-07 den=3.4e-01 meet=False 0.468s
+[A2_rel13_p4] S=5 [1/3] conv=True brut_rel=3.13e-06 d_rel=3.13e-06 d_abs=3.71e-07 den=3.8e-01 meet=False 0.432s
+[A2_abs514_p4] S=5 [1/3] conv=True brut_rel=3.13e-06 d_rel=3.13e-06 d_abs=3.71e-07 den=3.8e-01 meet=False 0.43s
+[A2_rel14_p4] S=5 [1/3] conv=True brut_rel=3.13e-06 d_rel=3.13e-06 d_abs=3.71e-07 den=3.8e-01 meet=False 0.435s
+[A2_rel13_p4] S=6 [4/1] conv=True brut_rel=9.27e-07 d_rel=9.27e-07 d_abs=1.10e-07 den=4.6e-01 meet=False 0.428s
+[A2_abs514_p4] S=6 [4/1] conv=True brut_rel=9.27e-07 d_rel=9.27e-07 d_abs=1.10e-07 den=4.6e-01 meet=False 0.445s
+[A2_rel14_p4] S=6 [4/1] conv=True brut_rel=9.27e-07 d_rel=9.27e-07 d_abs=1.10e-07 den=4.6e-01 meet=False 0.436s
+[A2_rel13_p4] S=6 [3/2] conv=True brut_rel=1.55e-07 d_rel=1.55e-07 d_abs=1.84e-08 den=3.0e-01 meet=False 0.382s
+[A2_abs514_p4] S=6 [3/2] conv=True brut_rel=1.55e-07 d_rel=1.55e-07 d_abs=1.84e-08 den=3.0e-01 meet=False 0.362s
+[A2_rel14_p4] S=6 [3/2] conv=True brut_rel=1.55e-07 d_rel=1.55e-07 d_abs=1.84e-08 den=3.0e-01 meet=False 0.372s
+[A2_rel13_p4] S=6 [2/3] conv=True brut_rel=1.10e-07 d_rel=1.10e-07 d_abs=1.31e-08 den=2.8e-01 meet=False 0.358s
+[A2_abs514_p4] S=6 [2/3] conv=True brut_rel=1.10e-07 d_rel=1.10e-07 d_abs=1.31e-08 den=2.8e-01 meet=False 0.363s
+[A2_rel14_p4] S=6 [2/3] conv=True brut_rel=1.10e-07 d_rel=1.10e-07 d_abs=1.31e-08 den=2.8e-01 meet=False 0.366s
+[A2_rel13_p4] S=6 [1/4] conv=True brut_rel=3.10e-07 d_rel=3.10e-07 d_abs=3.67e-08 den=3.6e-01 meet=False 0.376s
+[A2_rel14_p4] S=6 [1/4] conv=True brut_rel=3.10e-07 d_rel=3.10e-07 d_abs=3.67e-08 den=3.6e-01 meet=False 0.37s
+[A2_abs514_p4] S=6 [1/4] conv=True brut_rel=3.10e-07 d_rel=3.10e-07 d_abs=3.67e-08 den=3.6e-01 meet=False 0.387s
+[A2_rel13_p4] S=7 [5/1] conv=True brut_rel=1.28e-07 d_rel=1.28e-07 d_abs=1.52e-08 den=4.6e-01 meet=False 0.37s
+[A2_rel14_p4] S=7 [5/1] conv=True brut_rel=1.28e-07 d_rel=1.28e-07 d_abs=1.52e-08 den=4.6e-01 meet=False 0.366s
+[A2_abs514_p4] S=7 [5/1] conv=True brut_rel=1.28e-07 d_rel=1.28e-07 d_abs=1.52e-08 den=4.6e-01 meet=False 0.371s
+[A2_rel13_p4] S=7 [4/2] conv=True brut_rel=1.41e-08 d_rel=1.41e-08 d_abs=1.67e-09 den=2.8e-01 meet=False 0.381s
+[A2_rel14_p4] S=7 [4/2] conv=True brut_rel=1.41e-08 d_rel=1.41e-08 d_abs=1.67e-09 den=2.8e-01 meet=False 0.417s
+[A2_abs514_p4] S=7 [4/2] conv=True brut_rel=1.41e-08 d_rel=1.41e-08 d_abs=1.67e-09 den=2.8e-01 meet=False 0.424s
+[A2_rel13_p4] S=7 [3/3] conv=True brut_rel=5.86e-09 d_rel=5.86e-09 d_abs=6.95e-10 den=2.2e-01 meet=False 0.541s
+[A2_rel14_p4] S=7 [3/3] conv=True brut_rel=5.86e-09 d_rel=5.86e-09 d_abs=6.95e-10 den=2.2e-01 meet=False 0.543s
+[A2_abs514_p4] S=7 [3/3] conv=True brut_rel=5.86e-09 d_rel=5.86e-09 d_abs=6.95e-10 den=2.2e-01 meet=False 0.541s
+[A2_rel13_p4] S=7 [2/4] conv=True brut_rel=7.82e-09 d_rel=7.82e-09 d_abs=9.27e-10 den=2.4e-01 meet=False 0.488s
+[A2_rel14_p4] S=7 [2/4] conv=True brut_rel=7.82e-09 d_rel=7.82e-09 d_abs=9.27e-10 den=2.4e-01 meet=False 0.637s
+[A2_abs514_p4] S=7 [2/4] conv=True brut_rel=7.82e-09 d_rel=7.82e-09 d_abs=9.27e-10 den=2.4e-01 meet=False 0.659s
+[A2_rel13_p4] S=7 [1/5] conv=True brut_rel=3.52e-08 d_rel=3.52e-08 d_abs=4.17e-09 den=3.4e-01 meet=False 0.622s
+[A2_rel14_p4] S=7 [1/5] conv=True brut_rel=3.52e-08 d_rel=3.52e-08 d_abs=4.17e-09 den=3.4e-01 meet=False 0.496s
+[A2_abs514_p4] S=7 [1/5] conv=True brut_rel=3.52e-08 d_rel=3.52e-08 d_abs=4.17e-09 den=3.4e-01 meet=False 0.505s
+[A2_rel13_p4] S=8 [6/1] conv=True brut_rel=1.89e-08 d_rel=1.89e-08 d_abs=2.24e-09 den=4.5e-01 meet=False 0.489s
+[A2_rel14_p4] S=8 [6/1] conv=True brut_rel=1.89e-08 d_rel=1.89e-08 d_abs=2.24e-09 den=4.5e-01 meet=False 0.461s
+[A2_abs514_p4] S=8 [6/1] conv=True brut_rel=1.89e-08 d_rel=1.89e-08 d_abs=2.24e-09 den=4.5e-01 meet=False 0.473s
+[A2_rel13_p4] S=8 [5/2] conv=True brut_rel=1.47e-09 d_rel=1.47e-09 d_abs=1.74e-10 den=2.6e-01 meet=False 0.455s
+[A2_rel14_p4] S=8 [5/2] conv=True brut_rel=1.47e-09 d_rel=1.47e-09 d_abs=1.74e-10 den=2.6e-01 meet=False 0.452s
+[A2_abs514_p4] S=8 [5/2] conv=True brut_rel=1.47e-09 d_rel=1.47e-09 d_abs=1.74e-10 den=2.6e-01 meet=False 0.462s
+[A2_rel13_p4] S=8 [4/3] conv=True brut_rel=4.00e-10 d_rel=4.00e-10 d_abs=4.74e-11 den=1.9e-01 meet=False 0.4s
+[A2_rel14_p4] S=8 [4/3] conv=True brut_rel=4.00e-10 d_rel=4.00e-10 d_abs=4.74e-11 den=1.9e-01 meet=False 0.381s
+[A2_abs514_p4] S=8 [4/3] conv=True brut_rel=4.00e-10 d_rel=4.00e-10 d_abs=4.74e-11 den=1.9e-01 meet=False 0.38s
+[A2_rel13_p4] S=8 [3/4] conv=True brut_rel=3.11e-10 d_rel=3.11e-10 d_abs=3.69e-11 den=1.8e-01 meet=False 0.386s
+[A2_rel14_p4] S=8 [3/4] conv=True brut_rel=3.11e-10 d_rel=3.11e-10 d_abs=3.69e-11 den=1.8e-01 meet=False 0.384s
+[A2_abs514_p4] S=8 [3/4] conv=True brut_rel=3.11e-10 d_rel=3.11e-10 d_abs=3.69e-11 den=1.8e-01 meet=False 0.389s
+[A2_rel13_p4] S=8 [2/5] conv=True brut_rel=6.67e-10 d_rel=6.67e-10 d_abs=7.91e-11 den=2.2e-01 meet=False 0.399s
+[A2_rel14_p4] S=8 [2/5] conv=True brut_rel=6.67e-10 d_rel=6.67e-10 d_abs=7.91e-11 den=2.2e-01 meet=False 0.384s
+[A2_abs514_p4] S=8 [2/5] conv=True brut_rel=6.67e-10 d_rel=6.67e-10 d_abs=7.91e-11 den=2.2e-01 meet=False 0.394s
+[A2_rel13_p4] S=8 [1/6] conv=True brut_rel=4.39e-09 d_rel=4.39e-09 d_abs=5.21e-10 den=3.3e-01 meet=False 0.387s
+[A2_rel14_p4] S=8 [1/6] conv=True brut_rel=4.39e-09 d_rel=4.39e-09 d_abs=5.21e-10 den=3.3e-01 meet=False 0.394s
+[A2_abs514_p4] S=8 [1/6] conv=True brut_rel=4.39e-09 d_rel=4.39e-09 d_abs=5.21e-10 den=3.3e-01 meet=False 0.412s
+[A2_rel13_p4] S=9 [7/1] conv=True brut_rel=2.90e-09 d_rel=2.90e-09 d_abs=3.44e-10 den=4.5e-01 meet=False 0.398s
+[A2_rel14_p4] S=9 [7/1] conv=True brut_rel=2.90e-09 d_rel=2.90e-09 d_abs=3.44e-10 den=4.5e-01 meet=False 0.405s
+[A2_abs514_p4] S=9 [7/1] conv=True brut_rel=2.90e-09 d_rel=2.90e-09 d_abs=3.44e-10 den=4.5e-01 meet=False 0.401s
+[A2_rel13_p4] S=9 [6/2] conv=True brut_rel=1.68e-10 d_rel=1.68e-10 d_abs=2.00e-11 den=2.5e-01 meet=False 0.408s
+[A2_rel14_p4] S=9 [6/2] conv=True brut_rel=1.68e-10 d_rel=1.68e-10 d_abs=2.00e-11 den=2.5e-01 meet=False 0.569s
+[A2_abs514_p4] S=9 [6/2] conv=True brut_rel=1.68e-10 d_rel=1.68e-10 d_abs=2.00e-11 den=2.5e-01 meet=False 0.603s
+[A2_rel13_p4] S=9 [5/3] conv=True brut_rel=3.24e-11 d_rel=3.24e-11 d_abs=3.84e-12 den=1.7e-01 meet=False 0.614s
+[A2_rel14_p4] S=9 [5/3] conv=True brut_rel=3.24e-11 d_rel=3.24e-11 d_abs=3.84e-12 den=1.7e-01 meet=False 0.525s
+[A2_abs514_p4] S=9 [5/3] conv=True brut_rel=3.24e-11 d_rel=3.24e-11 d_abs=3.84e-12 den=1.7e-01 meet=False 0.53s
+[A2_rel13_p4] S=9 [4/4] conv=True brut_rel=1.65e-11 d_rel=1.65e-11 d_abs=1.95e-12 den=1.5e-01 meet=False 0.442s
+[A2_rel14_p4] S=9 [4/4] conv=True brut_rel=1.65e-11 d_rel=1.65e-11 d_abs=1.95e-12 den=1.5e-01 meet=False 0.391s
+[A2_abs514_p4] S=9 [4/4] conv=True brut_rel=1.65e-11 d_rel=1.65e-11 d_abs=1.95e-12 den=1.5e-01 meet=False 0.421s
+[A2_rel13_p4] S=9 [3/5] conv=True brut_rel=2.06e-11 d_rel=2.06e-11 d_abs=2.44e-12 den=1.5e-01 meet=False 0.439s
+[A2_rel14_p4] S=9 [3/5] conv=True brut_rel=2.06e-11 d_rel=2.06e-11 d_abs=2.44e-12 den=1.5e-01 meet=False 0.448s
+[A2_abs514_p4] S=9 [3/5] conv=True brut_rel=2.06e-11 d_rel=2.06e-11 d_abs=2.44e-12 den=1.5e-01 meet=False 0.448s
+[A2_rel13_p4] S=9 [2/6] conv=True brut_rel=6.48e-11 d_rel=6.48e-11 d_abs=7.69e-12 den=2.0e-01 meet=False 0.443s
+[A2_rel14_p4] S=9 [2/6] conv=True brut_rel=6.48e-11 d_rel=6.48e-11 d_abs=7.69e-12 den=2.0e-01 meet=False 0.445s
+[A2_abs514_p4] S=9 [2/6] conv=True brut_rel=6.48e-11 d_rel=6.48e-11 d_abs=7.69e-12 den=2.0e-01 meet=False 0.453s
+[A2_rel13_p4] S=9 [1/7] conv=True brut_rel=5.86e-10 d_rel=5.86e-10 d_abs=6.95e-11 den=3.3e-01 meet=False 0.484s
+[A2_rel14_p4] S=9 [1/7] conv=True brut_rel=5.86e-10 d_rel=5.86e-10 d_abs=6.95e-11 den=3.3e-01 meet=False 0.435s
+[A2_rel14_p4] S=10 [8/1] conv=True brut_rel=4.62e-10 d_rel=4.62e-10 d_abs=5.48e-11 den=4.5e-01 meet=False 0.385s
+[A2_abs514_p4] S=9 [1/7] conv=True brut_rel=5.86e-10 d_rel=5.86e-10 d_abs=6.95e-11 den=3.3e-01 meet=False 0.673s
+[A2_rel13_p4] S=10 [8/1] conv=True brut_rel=4.62e-10 d_rel=4.62e-10 d_abs=5.48e-11 den=4.5e-01 meet=False 0.671s
+[A2_rel14_p4] S=10 [7/2] conv=True brut_rel=2.08e-11 d_rel=2.08e-11 d_abs=2.46e-12 den=2.4e-01 meet=False 0.388s
+[A2_abs514_p4] S=10 [8/1] conv=True brut_rel=4.62e-10 d_rel=4.62e-10 d_abs=5.48e-11 den=4.5e-01 meet=False 0.471s
+[A2_rel13_p4] S=10 [7/2] conv=True brut_rel=2.08e-11 d_rel=2.08e-11 d_abs=2.46e-12 den=2.4e-01 meet=False 0.421s
+[A2_rel14_p4] S=10 [6/3] conv=True brut_rel=2.96e-12 d_rel=2.96e-12 d_abs=3.52e-13 den=1.6e-01 meet=False 0.46s
+[A2_abs514_p4] S=10 [7/2] conv=True brut_rel=2.08e-11 d_rel=2.08e-11 d_abs=2.46e-12 den=2.4e-01 meet=False 0.388s
+[A2_rel13_p4] S=10 [6/3] conv=True brut_rel=2.96e-12 d_rel=2.96e-12 d_abs=3.52e-13 den=1.6e-01 meet=False 0.646s
+[A2_abs514_p4] S=10 [6/3] conv=True brut_rel=2.96e-12 d_rel=2.96e-12 d_abs=3.52e-13 den=1.6e-01 meet=False 0.734s
+warning: BRASIL did not converge; dev=0.000887, err=1.25e-13
+[A2_rel14_p4] S=10 [5/4] conv=False brut_rel=1.06e-12 d_rel=1.06e-12 d_abs=1.25e-13 den=1.2e-01 meet=False 2.829s
+warning: BRASIL did not converge; dev=0.000887, err=1.25e-13
+[A2_rel13_p4] S=10 [5/4] conv=False brut_rel=1.06e-12 d_rel=1.06e-12 d_abs=1.25e-13 den=1.2e-01 meet=False 2.655s
+warning: BRASIL did not converge; dev=0.000887, err=1.25e-13
+[A2_abs514_p4] S=10 [5/4] conv=False brut_rel=1.06e-12 d_rel=1.06e-12 d_abs=1.25e-13 den=1.2e-01 meet=False 2.912s
+warning: BRASIL did not converge; dev=0.00109, err=1.02e-13
+[A2_rel14_p4] S=10 [4/5] conv=False brut_rel=8.62e-13 d_rel=8.61e-13 d_abs=1.02e-13 den=1.2e-01 meet=False 3.013s
+warning: BRASIL did not converge; dev=0.00109, err=1.02e-13
+[A2_rel13_p4] S=10 [4/5] conv=False brut_rel=8.62e-13 d_rel=8.61e-13 d_abs=1.02e-13 den=1.2e-01 meet=False 3.149s
+warning: BRASIL did not converge; dev=0.00109, err=1.02e-13
+[A2_abs514_p4] S=10 [4/5] conv=False brut_rel=8.62e-13 d_rel=8.61e-13 d_abs=1.02e-13 den=1.2e-01 meet=False 3.01s
+warning: BRASIL did not converge; dev=0.000589, err=1.89e-13
+[A2_rel14_p4] S=10 [3/6] conv=False brut_rel=1.59e-12 d_rel=1.59e-12 d_abs=1.89e-13 den=1.4e-01 meet=False 3.08s
+[A2_rel14_p4] S=10 [2/7] conv=True brut_rel=6.93e-12 d_rel=6.93e-12 d_abs=8.22e-13 den=1.9e-01 meet=False 0.669s
+warning: BRASIL did not converge; dev=0.000589, err=1.89e-13
+[A2_rel13_p4] S=10 [3/6] conv=False brut_rel=1.59e-12 d_rel=1.59e-12 d_abs=1.89e-13 den=1.4e-01 meet=False 3.414s
+[A2_rel13_p4] S=10 [2/7] conv=True brut_rel=6.93e-12 d_rel=6.93e-12 d_abs=8.22e-13 den=1.9e-01 meet=False 0.559s
+[A2_rel14_p4] S=10 [1/8] conv=True brut_rel=8.25e-11 d_rel=8.25e-11 d_abs=9.79e-12 den=3.2e-01 meet=False 0.578s
+warning: BRASIL did not converge; dev=0.000589, err=1.89e-13
+[A2_abs514_p4] S=10 [3/6] conv=False brut_rel=1.59e-12 d_rel=1.59e-12 d_abs=1.89e-13 den=1.4e-01 meet=False 3.605s
+[A2_rel13_p4] S=10 [1/8] conv=True brut_rel=8.25e-11 d_rel=8.25e-11 d_abs=9.79e-12 den=3.2e-01 meet=False 0.457s
+[A2_rel14_p4] S=11 [9/1] conv=True brut_rel=7.56e-11 d_rel=7.56e-11 d_abs=8.97e-12 den=4.5e-01 meet=False 0.472s
+[A2_abs514_p4] S=10 [2/7] conv=True brut_rel=6.93e-12 d_rel=6.93e-12 d_abs=8.22e-13 den=1.9e-01 meet=False 0.465s
+[A2_rel13_p4] S=11 [9/1] conv=True brut_rel=7.56e-11 d_rel=7.56e-11 d_abs=8.97e-12 den=4.5e-01 meet=False 0.518s
+warning: equioscillation property not satisfied, deviation=0.000216
+[A2_rel14_p4] S=11 [8/2] conv=True brut_rel=2.70e-12 d_rel=2.70e-12 d_abs=3.21e-13 den=2.4e-01 meet=False 0.524s
+[A2_abs514_p4] S=10 [1/8] conv=True brut_rel=8.25e-11 d_rel=8.25e-11 d_abs=9.79e-12 den=3.2e-01 meet=False 0.491s
+warning: equioscillation property not satisfied, deviation=0.000216
+[A2_rel13_p4] S=11 [8/2] conv=True brut_rel=2.70e-12 d_rel=2.70e-12 d_abs=3.21e-13 den=2.4e-01 meet=False 0.449s
+[A2_abs514_p4] S=11 [9/1] conv=True brut_rel=7.56e-11 d_rel=7.56e-11 d_abs=8.97e-12 den=4.5e-01 meet=False 0.406s
+warning: equioscillation property not satisfied, deviation=0.000216
+[A2_abs514_p4] S=11 [8/2] conv=True brut_rel=2.70e-12 d_rel=2.70e-12 d_abs=3.21e-13 den=2.4e-01 meet=False 0.439s
+warning: BRASIL did not converge; dev=0.00478, err=3.5e-14
+[A2_rel14_p4] S=11 [7/3] conv=False brut_rel=2.94e-13 d_rel=2.95e-13 d_abs=3.50e-14 den=1.5e-01 meet=False 2.686s
+warning: BRASIL did not converge; dev=0.00478, err=3.5e-14
+[A2_rel13_p4] S=11 [7/3] conv=False brut_rel=2.94e-13 d_rel=2.95e-13 d_abs=3.50e-14 den=1.5e-01 meet=False 3.409s
+warning: BRASIL did not converge; dev=0.00478, err=3.5e-14
+[A2_abs514_p4] S=11 [7/3] conv=False brut_rel=2.94e-13 d_rel=2.95e-13 d_abs=3.50e-14 den=1.5e-01 meet=True 3.607s
+warning: BRASIL did not converge; dev=0.00623, err=8.97e-15
+[A2_rel14_p4] S=11 [6/4] conv=False brut_rel=7.54e-14 d_rel=7.53e-14 d_abs=8.99e-15 den=1.1e-01 meet=False 3.006s
+warning: BRASIL did not converge; dev=0.00623, err=8.97e-15
+[A2_rel13_p4] S=11 [6/4] conv=False brut_rel=7.54e-14 d_rel=7.53e-14 d_abs=8.99e-15 den=1.1e-01 meet=True 2.797s
+warning: BRASIL did not converge; dev=0.00623, err=8.97e-15
+[A2_abs514_p4] S=11 [6/4] conv=False brut_rel=7.54e-14 d_rel=7.53e-14 d_abs=8.99e-15 den=1.1e-01 meet=True 2.533s
+warning: BRASIL did not converge; dev=0.0169, err=5e-15
+[A2_rel14_p4] S=11 [5/5] conv=False brut_rel=4.19e-14 d_rel=4.16e-14 d_abs=5.00e-15 den=9.6e-02 meet=False 2.252s
+warning: BRASIL did not converge; dev=0.0169, err=5e-15
+[A2_rel13_p4] S=11 [5/5] conv=False brut_rel=4.19e-14 d_rel=4.16e-14 d_abs=5.00e-15 den=9.6e-02 meet=True 3.388s
+warning: BRASIL did not converge; dev=0.0169, err=5e-15
+[A2_abs514_p4] S=11 [5/5] conv=False brut_rel=4.19e-14 d_rel=4.16e-14 d_abs=5.00e-15 den=9.6e-02 meet=True 3.51s
+warning: BRASIL did not converge; dev=0.0186, err=6.08e-15
+[A2_rel14_p4] S=11 [4/6] conv=False brut_rel=5.11e-14 d_rel=5.08e-14 d_abs=6.16e-15 den=1.0e-01 meet=False 2.959s
+warning: BRASIL did not converge; dev=0.0186, err=6.08e-15
+[A2_rel13_p4] S=11 [4/6] conv=False brut_rel=5.11e-14 d_rel=5.08e-14 d_abs=6.16e-15 den=1.0e-01 meet=True 2.854s
+warning: BRASIL did not converge; dev=0.0186, err=6.08e-15
+[A2_abs514_p4] S=11 [4/6] conv=False brut_rel=5.11e-14 d_rel=5.08e-14 d_abs=6.16e-15 den=1.0e-01 meet=True 2.988s
+warning: BRASIL did not converge; dev=0.00522, err=1.6e-14
+[A2_rel14_p4] S=11 [3/7] conv=False brut_rel=1.35e-13 d_rel=1.35e-13 d_abs=1.60e-14 den=1.2e-01 meet=False 3.017s
+warning: BRASIL did not converge; dev=0.00522, err=1.6e-14
+[A2_rel13_p4] S=11 [3/7] conv=False brut_rel=1.35e-13 d_rel=1.35e-13 d_abs=1.60e-14 den=1.2e-01 meet=False 3.066s
+warning: BRASIL did not converge; dev=0.00522, err=1.6e-14
+[A2_abs514_p4] S=11 [3/7] conv=False brut_rel=1.35e-13 d_rel=1.35e-13 d_abs=1.60e-14 den=1.2e-01 meet=True 2.921s
+warning: BRASIL did not converge; dev=0.00177, err=9.43e-14
+[A2_rel14_p4] S=11 [2/8] conv=False brut_rel=7.94e-13 d_rel=7.94e-13 d_abs=9.43e-14 den=1.8e-01 meet=False 2.971s
+[A2_rel14_p4] S=11 [1/9] conv=True brut_rel=1.21e-11 d_rel=1.21e-11 d_abs=1.43e-12 den=3.2e-01 meet=False 0.502s
+warning: equioscillation property not satisfied, deviation=0.00013
+[A2_rel14_p4] S=12 [10/1] conv=True brut_rel=1.26e-11 d_rel=1.26e-11 d_abs=1.50e-12 den=4.4e-01 meet=False 0.493s
+warning: BRASIL did not converge; dev=0.00177, err=9.43e-14
+[A2_rel13_p4] S=11 [2/8] conv=False brut_rel=7.94e-13 d_rel=7.94e-13 d_abs=9.43e-14 den=1.8e-01 meet=False 2.834s
+[A2_rel13_p4] S=11 [1/9] conv=True brut_rel=1.21e-11 d_rel=1.21e-11 d_abs=1.43e-12 den=3.2e-01 meet=False 0.492s
+warning: BRASIL did not converge; dev=0.00177, err=9.43e-14
+[A2_abs514_p4] S=11 [2/8] conv=False brut_rel=7.94e-13 d_rel=7.94e-13 d_abs=9.43e-14 den=1.8e-01 meet=False 2.832s
+[A2_abs514_p4] S=11 [1/9] conv=True brut_rel=1.21e-11 d_rel=1.21e-11 d_abs=1.43e-12 den=3.2e-01 meet=False 0.472s
+warning: BRASIL did not converge; dev=0.00128, err=4.35e-14
+[A2_rel14_p4] S=12 [9/2] conv=False brut_rel=3.66e-13 d_rel=3.66e-13 d_abs=4.35e-14 den=2.3e-01 meet=False 2.914s
+warning: BRASIL did not converge; dev=0.0234, err=3.64e-15
+[A2_rel14_p4] S=12 [8/3] conv=False brut_rel=3.01e-14 d_rel=3.04e-14 d_abs=3.66e-15 den=1.4e-01 meet=False 3.068s
+warning: BRASIL did not converge; dev=0.175, err=6.52e-16
+[A2_rel14_p4] S=12 [7/4] conv=False brut_rel=5.01e-15 d_rel=5.38e-15 d_abs=6.66e-16 den=9.9e-02 meet=True 2.849s
+warning: BRASIL did not converge; dev=0.286, err=2.5e-16
+[A2_rel14_p4] S=12 [6/5] conv=False brut_rel=1.91e-15 d_rel=1.99e-15 d_abs=3.61e-16 den=8.2e-02 meet=True 2.801s
+warning: BRASIL did not converge; dev=0.6, err=2.22e-16
+[A2_rel14_p4] S=12 [5/6] conv=False brut_rel=1.54e-15 d_rel=1.52e-15 d_abs=2.22e-16 den=7.9e-02 meet=True 2.586s
+warning: BRASIL did not converge; dev=0.3, err=3.61e-16
+[A2_rel14_p4] S=12 [4/7] conv=False brut_rel=2.73e-15 d_rel=2.62e-15 d_abs=3.89e-16 den=8.8e-02 meet=True 2.738s
+warning: BRASIL did not converge; dev=1.52e-06, err=5.48e-11
+[A2_rel13_p4] RETRY S=10 [8/1] conv=False d_rel=4.62e-10 d_abs=5.48e-11 den=4.5e-01 meet=False 16.774s
+warning: BRASIL did not converge; dev=1.52e-06, err=5.48e-11
+[A2_abs514_p4] RETRY S=10 [8/1] conv=False d_rel=4.62e-10 d_abs=5.48e-11 den=4.5e-01 meet=False 16.819s
+warning: BRASIL did not converge; dev=0.0638, err=1.39e-15
+[A2_rel14_p4] S=12 [3/8] conv=False brut_rel=1.17e-14 d_rel=1.18e-14 d_abs=1.42e-15 den=1.1e-01 meet=False 2.801s
+warning: BRASIL did not converge; dev=0.00746, err=1.12e-14
+[A2_rel14_p4] S=12 [2/9] conv=False brut_rel=9.49e-14 d_rel=9.49e-14 d_abs=1.13e-14 den=1.8e-01 meet=False 3.431s
+warning: BRASIL did not converge; dev=0.000384, err=2.17e-13
+[A2_rel14_p4] S=12 [1/10] conv=False brut_rel=1.83e-12 d_rel=1.83e-12 d_abs=2.17e-13 den=3.1e-01 meet=False 4.509s
+warning: equioscillation property not satisfied, deviation=5.64e-06
+[A2_rel13_p4] RETRY S=10 [7/2] conv=True d_rel=2.08e-11 d_abs=2.46e-12 den=2.4e-01 meet=False 15.722s
+warning: equioscillation property not satisfied, deviation=5.64e-06
+[A2_abs514_p4] RETRY S=10 [7/2] conv=True d_rel=2.08e-11 d_abs=2.46e-12 den=2.4e-01 meet=False 15.918s
+warning: BRASIL did not converge; dev=9.29e-06, err=8.96e-12
+[A2_rel14_p4] RETRY S=11 [9/1] conv=False d_rel=7.56e-11 d_abs=8.96e-12 den=4.5e-01 meet=False 22.307s
+warning: BRASIL did not converge; dev=0.000237, err=3.52e-13
+[A2_rel13_p4] RETRY S=10 [6/3] conv=False d_rel=2.96e-12 d_abs=3.52e-13 den=1.6e-01 meet=False 21.802s
+warning: BRASIL did not converge; dev=0.000237, err=3.52e-13
+[A2_abs514_p4] RETRY S=10 [6/3] conv=False d_rel=2.96e-12 d_abs=3.52e-13 den=1.6e-01 meet=False 22.129s
+warning: BRASIL did not converge; dev=0.000433, err=3.21e-13
+[A2_rel14_p4] RETRY S=11 [8/2] conv=False d_rel=2.70e-12 d_abs=3.21e-13 den=2.4e-01 meet=False 24.587s
+warning: BRASIL did not converge; dev=0.000887, err=1.25e-13
+[A2_rel13_p4] RETRY S=10 [5/4] conv=False d_rel=1.06e-12 d_abs=1.25e-13 den=1.2e-01 meet=False 25.323s
+warning: BRASIL did not converge; dev=0.000887, err=1.25e-13
+[A2_abs514_p4] RETRY S=10 [5/4] conv=False d_rel=1.06e-12 d_abs=1.25e-13 den=1.2e-01 meet=False 25.005s
+warning: BRASIL did not converge; dev=0.00239, err=3.5e-14
+[A2_rel14_p4] RETRY S=11 [7/3] conv=False d_rel=2.95e-13 d_abs=3.50e-14 den=1.5e-01 meet=False 24.52s
+warning: BRASIL did not converge; dev=0.00109, err=1.02e-13
+[A2_rel13_p4] RETRY S=10 [4/5] conv=False d_rel=8.62e-13 d_abs=1.02e-13 den=1.2e-01 meet=False 21.362s
+warning: BRASIL did not converge; dev=0.00109, err=1.02e-13
+[A2_abs514_p4] RETRY S=10 [4/5] conv=False d_rel=8.62e-13 d_abs=1.02e-13 den=1.2e-01 meet=False 21.889s
+warning: BRASIL did not converge; dev=0.00623, err=8.97e-15
+[A2_rel14_p4] RETRY S=11 [6/4] conv=False d_rel=7.53e-14 d_abs=8.94e-15 den=1.1e-01 meet=False 20.361s
+warning: BRASIL did not converge; dev=0.000442, err=1.89e-13
+[A2_rel13_p4] RETRY S=10 [3/6] conv=False d_rel=1.59e-12 d_abs=1.89e-13 den=1.4e-01 meet=False 20.348s
+warning: BRASIL did not converge; dev=0.000442, err=1.89e-13
+[A2_abs514_p4] RETRY S=10 [3/6] conv=False d_rel=1.59e-12 d_abs=1.89e-13 den=1.4e-01 meet=False 19.887s
+warning: BRASIL did not converge; dev=0.0112, err=5e-15
+[A2_rel14_p4] RETRY S=11 [5/5] conv=False d_rel=4.19e-14 d_abs=5.00e-15 den=9.6e-02 meet=False 18.53s
+warning: BRASIL did not converge; dev=0.000101, err=8.22e-13
+[A2_rel13_p4] RETRY S=10 [2/7] conv=False d_rel=6.93e-12 d_abs=8.22e-13 den=1.9e-01 meet=False 19.913s
+warning: BRASIL did not converge; dev=0.000101, err=8.22e-13
+[A2_abs514_p4] RETRY S=10 [2/7] conv=False d_rel=6.93e-12 d_abs=8.22e-13 den=1.9e-01 meet=False 20.168s
+warning: BRASIL did not converge; dev=0.00922, err=6.08e-15
+[A2_rel14_p4] RETRY S=11 [4/6] conv=False d_rel=5.10e-14 d_abs=6.11e-15 den=1.0e-01 meet=False 21.571s
+warning: BRASIL did not converge; dev=8.51e-06, err=9.79e-12
+[A2_rel13_p4] RETRY S=10 [1/8] conv=False d_rel=8.25e-11 d_abs=9.79e-12 den=3.2e-01 meet=False 22.27s
+DONE 1/3 A2_rel13_p4 count=11 pair=[5, 5] route=default below_ratio=8.614002621411158
+warning: BRASIL did not converge; dev=8.51e-06, err=9.79e-12
+[A2_abs514_p4] RETRY S=10 [1/8] conv=False d_rel=8.25e-11 d_abs=9.79e-12 den=3.2e-01 meet=False 22.709s
+DONE 2/3 A2_abs514_p4 count=11 pair=[5, 5] route=default below_ratio=2.045585922871851
+warning: BRASIL did not converge; dev=0.00348, err=1.6e-14
+[A2_rel14_p4] RETRY S=11 [3/7] conv=False d_rel=1.35e-13 d_abs=1.61e-14 den=1.2e-01 meet=False 21.873s
+warning: BRASIL did not converge; dev=0.000885, err=9.42e-14
+[A2_rel14_p4] RETRY S=11 [2/8] conv=False d_rel=7.93e-13 d_abs=9.41e-14 den=1.8e-01 meet=False 24.736s
+[A2_rel14_p4] RETRY S=11 [1/9] conv=True d_rel=1.21e-11 d_abs=1.43e-12 den=3.2e-01 meet=False 19.005s
+DONE 3/3 A2_rel14_p4 count=12 pair=[5, 6] route=default below_ratio=4.164292413392684
+ALLDONE cells=3 errors=0 wall=270.8s

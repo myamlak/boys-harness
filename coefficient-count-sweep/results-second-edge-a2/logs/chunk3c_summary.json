@@ -1,0 +1,543 @@
+{
+ "generated_utc": "2026-11-01T15:25:25Z",
+ "edge": "a2",
+ "a": 23.79969630421697,
+ "wall_seconds": 405.9,
+ "workers": 6,
+ "cells": [
+  {
+   "cell_id": "A2_abs514_paper",
+   "edge": "a2",
+   "group": "A",
+   "kind": "abs",
+   "target": 5e-14,
+   "W": 34.17897917342451,
+   "a": 23.79969630421697,
+   "width_name": "paper",
+   "target_tag": "abs514",
+   "x0_count_used_for_bound": 12,
+   "max_stored": 15,
+   "levels_complete": 11,
+   "first_meet_default": 11,
+   "tightened_levels": [
+    10
+   ],
+   "default_settings": {
+    "name": "default",
+    "tol": 0.0001,
+    "maxiter": 1000,
+    "npi": -30,
+    "init_steps": 100,
+    "max_step_size": 0.1
+   },
+   "tightened_settings": {
+    "name": "tightened",
+    "tol": 1e-08,
+    "maxiter": 5000,
+    "npi": -40,
+    "init_steps": 300,
+    "max_step_size": 0.05
+   },
+   "corrected_count": 11,
+   "pair": [
+    5,
+    5
+   ],
+   "witness": {
+    "m": 5,
+    "k": 5,
+    "stored": 11,
+    "route": "default",
+    "converged": false,
+    "deviation": 0.006849315068493178,
+    "rel_2001": 6.963415247016035e-14,
+    "abs_2001": 8.271161533457416e-15,
+    "den_2001": 0.08644322394684165,
+    "rel_4001": 6.963415247016035e-14,
+    "abs_4001": 8.298917109073045e-15,
+    "den_4001": 0.08644322394684165,
+    "P": [
+     "0.13859281271876697",
+     "0.1341073183552517",
+     "0.04512729367642868",
+     "0.006150268280288593",
+     "0.00029051255600295484",
+     "2.1655358620535754e-6"
+    ],
+    "Q": [
+     "1.0",
+     "1.1766086663868209",
+     "0.5059856254930392",
+     "0.095855117354395299",
+     "0.0074833147928455787",
+     "0.0001658164704684631"
+    ]
+   },
+   "witness_selection": "both",
+   "delivered_2001": 8.271161533457416e-15,
+   "delivered_4001": 8.298917109073045e-15,
+   "guard_2001": 0.08644322394684165,
+   "guard_4001": 0.08644322394684165,
+   "best_below": 1.5712431356007528e-13,
+   "best_below_pair": [
+    4,
+    5
+   ],
+   "best_below_any": 1.5712431356007528e-13,
+   "below_ratio": 3.1424862712015056,
+   "route": "default",
+   "count_lowered_by_tightened": false,
+   "meets_4001": true,
+   "guard_4001_ok": true,
+   "witness_converged": false,
+   "margin_limited": true,
+   "solid": false
+  },
+  {
+   "cell_id": "A2_abs514_ship",
+   "edge": "a2",
+   "group": "A",
+   "kind": "abs",
+   "target": 5e-14,
+   "W": 38.200303695783035,
+   "a": 23.79969630421697,
+   "width_name": "ship",
+   "target_tag": "abs514",
+   "x0_count_used_for_bound": 12,
+   "max_stored": 15,
+   "levels_complete": 11,
+   "first_meet_default": 11,
+   "tightened_levels": [
+    10
+   ],
+   "default_settings": {
+    "name": "default",
+    "tol": 0.0001,
+    "maxiter": 1000,
+    "npi": -30,
+    "init_steps": 100,
+    "max_step_size": 0.1
+   },
+   "tightened_settings": {
+    "name": "tightened",
+    "tol": 1e-08,
+    "maxiter": 5000,
+    "npi": -40,
+    "init_steps": 300,
+    "max_step_size": 0.05
+   },
+   "corrected_count": 11,
+   "pair": [
+    5,
+    5
+   ],
+   "witness": {
+    "m": 5,
+    "k": 5,
+    "stored": 11,
+    "route": "default",
+    "converged": false,
+    "deviation": 0.006144393241167334,
+    "rel_2001": 1.61402699241565e-13,
+    "abs_2001": 1.8179902028236938e-14,
+    "den_2001": 0.07177426695247384,
+    "rel_4001": 1.61402699241565e-13,
+    "abs_4001": 1.8179902028236938e-14,
+    "den_4001": 0.07177426695247384,
+    "P": [
+     "0.13530600244639193",
+     "0.14016292705743884",
+     "0.050544133497420999",
+     "0.0073923022252450476",
+     "0.00037544066421990323",
+     "3.0171067135140263e-6"
+    ],
+    "Q": [
+     "1.0",
+     "1.2585091351085706",
+     "0.5793800971476311",
+     "0.11764030620399203",
+     "0.0098600166003405476",
+     "0.00023513430037198459"
+    ]
+   },
+   "witness_selection": "both",
+   "delivered_2001": 1.8179902028236938e-14,
+   "delivered_4001": 1.8179902028236938e-14,
+   "guard_2001": 0.07177426695247384,
+   "guard_4001": 0.07177426695247384,
+   "best_below": 3.186895192186512e-13,
+   "best_below_pair": [
+    4,
+    5
+   ],
+   "best_below_any": 3.186895192186512e-13,
+   "below_ratio": 6.373790384373024,
+   "route": "default",
+   "count_lowered_by_tightened": false,
+   "meets_4001": true,
+   "guard_4001_ok": true,
+   "witness_converged": false,
+   "margin_limited": true,
+   "solid": false
+  },
+  {
+   "cell_id": "A2_rel13_paper",
+   "edge": "a2",
+   "group": "A",
+   "kind": "rel",
+   "target": 1e-13,
+   "W": 34.17897917342451,
+   "a": 23.79969630421697,
+   "width_name": "paper",
+   "target_tag": "rel13",
+   "x0_count_used_for_bound": 12,
+   "max_stored": 15,
+   "levels_complete": 11,
+   "first_meet_default": 11,
+   "tightened_levels": [
+    10
+   ],
+   "default_settings": {
+    "name": "default",
+    "tol": 0.0001,
+    "maxiter": 1000,
+    "npi": -30,
+    "init_steps": 100,
+    "max_step_size": 0.1
+   },
+   "tightened_settings": {
+    "name": "tightened",
+    "tol": 1e-08,
+    "maxiter": 5000,
+    "npi": -40,
+    "init_steps": 300,
+    "max_step_size": 0.05
+   },
+   "corrected_count": 11,
+   "pair": [
+    5,
+    5
+   ],
+   "witness": {
+    "m": 5,
+    "k": 5,
+    "stored": 11,
+    "route": "default",
+    "converged": false,
+    "deviation": 0.006849315068493178,
+    "rel_2001": 6.963415247016035e-14,
+    "abs_2001": 8.271161533457416e-15,
+    "den_2001": 0.08644322394684165,
+    "rel_4001": 6.963415247016035e-14,
+    "abs_4001": 8.298917109073045e-15,
+    "den_4001": 0.08644322394684165,
+    "P": [
+     "0.13859281271876697",
+     "0.1341073183552517",
+     "0.04512729367642868",
+     "0.006150268280288593",
+     "0.00029051255600295484",
+     "2.1655358620535754e-6"
+    ],
+    "Q": [
+     "1.0",
+     "1.1766086663868209",
+     "0.5059856254930392",
+     "0.095855117354395299",
+     "0.0074833147928455787",
+     "0.0001658164704684631"
+    ]
+   },
+   "witness_selection": "both",
+   "delivered_2001": 6.963415247016035e-14,
+   "delivered_4001": 6.963415247016035e-14,
+   "guard_2001": 0.08644322394684165,
+   "guard_4001": 0.08644322394684165,
+   "best_below": 1.3499963600464991e-12,
+   "best_below_pair": [
+    4,
+    5
+   ],
+   "best_below_any": 1.3499963600464991e-12,
+   "below_ratio": 13.49996360046499,
+   "route": "default",
+   "count_lowered_by_tightened": false,
+   "meets_4001": true,
+   "guard_4001_ok": true,
+   "witness_converged": false,
+   "margin_limited": true,
+   "solid": false
+  },
+  {
+   "cell_id": "A2_rel13_ship",
+   "edge": "a2",
+   "group": "A",
+   "kind": "rel",
+   "target": 1e-13,
+   "W": 38.200303695783035,
+   "a": 23.79969630421697,
+   "width_name": "ship",
+   "target_tag": "rel13",
+   "x0_count_used_for_bound": 13,
+   "max_stored": 16,
+   "levels_complete": 12,
+   "first_meet_default": 12,
+   "tightened_levels": [
+    11
+   ],
+   "default_settings": {
+    "name": "default",
+    "tol": 0.0001,
+    "maxiter": 1000,
+    "npi": -30,
+    "init_steps": 100,
+    "max_step_size": 0.1
+   },
+   "tightened_settings": {
+    "name": "tightened",
+    "tol": 1e-08,
+    "maxiter": 5000,
+    "npi": -40,
+    "init_steps": 300,
+    "max_step_size": 0.05
+   },
+   "corrected_count": 12,
+   "pair": [
+    5,
+    6
+   ],
+   "witness": {
+    "m": 5,
+    "k": 6,
+    "stored": 12,
+    "route": "default",
+    "converged": false,
+    "deviation": 0.18518518518518512,
+    "rel_2001": 7.398137474785257e-15,
+    "abs_2001": 9.159339953157541e-16,
+    "den_2001": 0.057175156050515985,
+    "rel_4001": 7.398137474785257e-15,
+    "abs_4001": 9.159339953157541e-16,
+    "den_4001": 0.057175156050515985,
+    "P": [
+     "0.13530600244639916",
+     "0.15488552779669984",
+     "0.064161800534418068",
+     "0.011562797250951324",
+     "0.00084468414288660051",
+     "1.7121987697796758e-5",
+     "4.7551244886546357e-16"
+    ],
+    "Q": [
+     "1.0",
+     "1.3673187996706413",
+     "0.70424605414965382",
+     "0.16817144951741563",
+     "0.018295988147652346",
+     "0.00073580481348283923",
+     "4.8642572292046047e-6"
+    ]
+   },
+   "witness_selection": "both",
+   "delivered_2001": 7.398137474785257e-15,
+   "delivered_4001": 7.398137474785257e-15,
+   "guard_2001": 0.057175156050515985,
+   "guard_4001": 0.057175156050515985,
+   "best_below": 1.6103279236782574e-13,
+   "best_below_pair": [
+    5,
+    5
+   ],
+   "best_below_any": 1.6103279236782574e-13,
+   "below_ratio": 1.6103279236782575,
+   "route": "default",
+   "count_lowered_by_tightened": false,
+   "meets_4001": true,
+   "guard_4001_ok": true,
+   "witness_converged": false,
+   "margin_limited": true,
+   "solid": false
+  },
+  {
+   "cell_id": "A2_rel14_paper",
+   "edge": "a2",
+   "group": "A",
+   "kind": "rel",
+   "target": 1e-14,
+   "W": 34.17897917342451,
+   "a": 23.79969630421697,
+   "width_name": "paper",
+   "target_tag": "rel14",
+   "x0_count_used_for_bound": 14,
+   "max_stored": 17,
+   "levels_complete": 12,
+   "first_meet_default": 12,
+   "tightened_levels": [
+    11
+   ],
+   "default_settings": {
+    "name": "default",
+    "tol": 0.0001,
+    "maxiter": 1000,
+    "npi": -30,
+    "init_steps": 100,
+    "max_step_size": 0.1
+   },
+   "tightened_settings": {
+    "name": "tightened",
+    "tol": 1e-08,
+    "maxiter": 5000,
+    "npi": -40,
+    "init_steps": 300,
+    "max_step_size": 0.05
+   },
+   "corrected_count": 12,
+   "pair": [
+    5,
+    6
+   ],
+   "witness": {
+    "m": 5,
+    "k": 6,
+    "stored": 12,
+    "route": "default",
+    "converged": false,
+    "deviation": 0.19999999999999996,
+    "rel_2001": 2.861677498773713e-15,
+    "abs_2001": 3.3306690738754696e-16,
+    "den_2001": 0.07032264037544604,
+    "rel_4001": 2.861677498773713e-15,
+    "abs_4001": 3.3306690738754696e-16,
+    "den_4001": 0.07032264037544604,
+    "P": [
+     "0.13859281271877155",
+     "0.1478808794759857",
+     "0.057026231920369308",
+     "0.0095497777468836538",
+     "0.00064673193712208185",
+     "1.211325633294131e-5",
+     "1.1966170316114793e-16"
+    ],
+    "Q": [
+     "1.0",
+     "1.2759901628050217",
+     "0.61260907412185973",
+     "0.13615536388064622",
+     "0.01375825179925878",
+     "0.00051242209848060315",
+     "3.124038667381115e-6"
+    ]
+   },
+   "witness_selection": "both",
+   "delivered_2001": 2.861677498773713e-15,
+   "delivered_4001": 2.861677498773713e-15,
+   "guard_2001": 0.07032264037544604,
+   "guard_4001": 0.07032264037544604,
+   "best_below": 6.963415247016035e-14,
+   "best_below_pair": [
+    5,
+    5
+   ],
+   "best_below_any": 6.963415247016035e-14,
+   "below_ratio": 6.9634152470160355,
+   "route": "default",
+   "count_lowered_by_tightened": false,
+   "meets_4001": true,
+   "guard_4001_ok": true,
+   "witness_converged": false,
+   "margin_limited": true,
+   "solid": false
+  },
+  {
+   "cell_id": "A2_rel14_ship",
+   "edge": "a2",
+   "group": "A",
+   "kind": "rel",
+   "target": 1e-14,
+   "W": 38.200303695783035,
+   "a": 23.79969630421697,
+   "width_name": "ship",
+   "target_tag": "rel14",
+   "x0_count_used_for_bound": 15,
+   "max_stored": 18,
+   "levels_complete": 12,
+   "first_meet_default": 12,
+   "tightened_levels": [
+    11
+   ],
+   "default_settings": {
+    "name": "default",
+    "tol": 0.0001,
+    "maxiter": 1000,
+    "npi": -30,
+    "init_steps": 100,
+    "max_step_size": 0.1
+   },
+   "tightened_settings": {
+    "name": "tightened",
+    "tol": 1e-08,
+    "maxiter": 5000,
+    "npi": -40,
+    "init_steps": 300,
+    "max_step_size": 0.05
+   },
+   "corrected_count": 12,
+   "pair": [
+    5,
+    6
+   ],
+   "witness": {
+    "m": 5,
+    "k": 6,
+    "stored": 12,
+    "route": "default",
+    "converged": false,
+    "deviation": 0.18518518518518512,
+    "rel_2001": 7.398137474785257e-15,
+    "abs_2001": 9.159339953157541e-16,
+    "den_2001": 0.057175156050515985,
+    "rel_4001": 7.398137474785257e-15,
+    "abs_4001": 9.159339953157541e-16,
+    "den_4001": 0.057175156050515985,
+    "P": [
+     "0.13530600244639916",
+     "0.15488552779669984",
+     "0.064161800534418068",
+     "0.011562797250951324",
+     "0.00084468414288660051",
+     "1.7121987697796758e-5",
+     "4.7551244886546357e-16"
+    ],
+    "Q": [
+     "1.0",
+     "1.3673187996706413",
+     "0.70424605414965382",
+     "0.16817144951741563",
+     "0.018295988147652346",
+     "0.00073580481348283923",
+     "4.8642572292046047e-6"
+    ]
+   },
+   "witness_selection": "both",
+   "delivered_2001": 7.398137474785257e-15,
+   "delivered_4001": 7.398137474785257e-15,
+   "guard_2001": 0.057175156050515985,
+   "guard_4001": 0.057175156050515985,
+   "best_below": 1.6103279236782574e-13,
+   "best_below_pair": [
+    5,
+    5
+   ],
+   "best_below_any": 1.6103279236782574e-13,
+   "below_ratio": 16.103279236782573,
+   "route": "default",
+   "count_lowered_by_tightened": false,
+   "meets_4001": true,
+   "guard_4001_ok": true,
+   "witness_converged": false,
+   "margin_limited": true,
+   "solid": false
+  }
+ ]
+}

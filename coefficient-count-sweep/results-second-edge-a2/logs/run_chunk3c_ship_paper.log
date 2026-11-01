@@ -1,0 +1,490 @@
+[A2_rel13_paper] S=3 [1/1] conv=True brut_rel=8.51e-04 d_rel=8.51e-04 d_abs=9.90e-05 den=5.1e-01 meet=False 0.649s
+[A2_rel13_ship] S=3 [1/1] conv=True brut_rel=1.07e-03 d_rel=1.07e-03 d_abs=1.21e-04 den=4.9e-01 meet=False 0.703s
+[A2_abs514_ship] S=3 [1/1] conv=True brut_rel=1.07e-03 d_rel=1.07e-03 d_abs=1.21e-04 den=4.9e-01 meet=False 0.688s
+[A2_abs514_paper] S=3 [1/1] conv=True brut_rel=8.51e-04 d_rel=8.51e-04 d_abs=9.90e-05 den=5.1e-01 meet=False 0.718s
+[A2_rel14_paper] S=3 [1/1] conv=True brut_rel=8.51e-04 d_rel=8.51e-04 d_abs=9.90e-05 den=5.1e-01 meet=False 0.709s
+[A2_rel14_ship] S=3 [1/1] conv=True brut_rel=1.07e-03 d_rel=1.07e-03 d_abs=1.21e-04 den=4.9e-01 meet=False 0.783s
+[A2_rel13_paper] S=4 [2/1] conv=True brut_rel=7.88e-05 d_rel=7.88e-05 d_abs=9.17e-06 den=4.8e-01 meet=False 0.957s
+[A2_rel13_ship] S=4 [2/1] conv=True brut_rel=1.07e-04 d_rel=1.07e-04 d_abs=1.20e-05 den=4.5e-01 meet=False 0.97s
+[A2_abs514_ship] S=4 [2/1] conv=True brut_rel=1.07e-04 d_rel=1.07e-04 d_abs=1.20e-05 den=4.5e-01 meet=False 0.972s
+[A2_rel14_paper] S=4 [2/1] conv=True brut_rel=7.88e-05 d_rel=7.88e-05 d_abs=9.17e-06 den=4.8e-01 meet=False 0.966s
+[A2_abs514_paper] S=4 [2/1] conv=True brut_rel=7.88e-05 d_rel=7.88e-05 d_abs=9.17e-06 den=4.8e-01 meet=False 0.993s
+[A2_rel14_ship] S=4 [2/1] conv=True brut_rel=1.07e-04 d_rel=1.07e-04 d_abs=1.20e-05 den=4.5e-01 meet=False 1.021s
+[A2_rel13_paper] S=4 [1/2] conv=True brut_rel=4.72e-05 d_rel=4.72e-05 d_abs=5.49e-06 den=4.1e-01 meet=False 0.862s
+[A2_rel13_ship] S=4 [1/2] conv=True brut_rel=6.39e-05 d_rel=6.39e-05 d_abs=7.20e-06 den=3.8e-01 meet=False 0.856s
+[A2_abs514_ship] S=4 [1/2] conv=True brut_rel=6.39e-05 d_rel=6.39e-05 d_abs=7.20e-06 den=3.8e-01 meet=False 0.871s
+[A2_rel14_paper] S=4 [1/2] conv=True brut_rel=4.72e-05 d_rel=4.72e-05 d_abs=5.49e-06 den=4.1e-01 meet=False 0.865s
+[A2_abs514_paper] S=4 [1/2] conv=True brut_rel=4.72e-05 d_rel=4.72e-05 d_abs=5.49e-06 den=4.1e-01 meet=False 0.891s
+[A2_rel14_ship] S=4 [1/2] conv=True brut_rel=6.39e-05 d_rel=6.39e-05 d_abs=7.20e-06 den=3.8e-01 meet=False 0.775s
+[A2_rel13_paper] S=5 [3/1] conv=True brut_rel=9.17e-06 d_rel=9.17e-06 d_abs=1.07e-06 den=4.6e-01 meet=False 0.964s
+[A2_abs514_ship] S=5 [3/1] conv=True brut_rel=1.34e-05 d_rel=1.34e-05 d_abs=1.50e-06 den=4.3e-01 meet=False 0.992s
+[A2_rel14_paper] S=5 [3/1] conv=True brut_rel=9.17e-06 d_rel=9.17e-06 d_abs=1.07e-06 den=4.6e-01 meet=False 1.046s
+[A2_rel14_ship] S=5 [3/1] conv=True brut_rel=1.34e-05 d_rel=1.34e-05 d_abs=1.50e-06 den=4.3e-01 meet=False 0.947s
+[A2_abs514_paper] S=5 [3/1] conv=True brut_rel=9.17e-06 d_rel=9.17e-06 d_abs=1.07e-06 den=4.6e-01 meet=False 1.023s
+[A2_rel13_ship] S=5 [3/1] conv=True brut_rel=1.34e-05 d_rel=1.34e-05 d_abs=1.50e-06 den=4.3e-01 meet=False 1.189s
+[A2_rel13_paper] S=5 [2/2] conv=True brut_rel=2.61e-06 d_rel=2.61e-06 d_abs=3.04e-07 den=3.3e-01 meet=False 0.838s
+[A2_abs514_ship] S=5 [2/2] conv=True brut_rel=3.81e-06 d_rel=3.81e-06 d_abs=4.29e-07 den=3.0e-01 meet=False 0.817s
+[A2_rel14_ship] S=5 [2/2] conv=True brut_rel=3.81e-06 d_rel=3.81e-06 d_abs=4.29e-07 den=3.0e-01 meet=False 0.858s
+[A2_rel14_paper] S=5 [2/2] conv=True brut_rel=2.61e-06 d_rel=2.61e-06 d_abs=3.04e-07 den=3.3e-01 meet=False 0.872s
+[A2_rel13_ship] S=5 [2/2] conv=True brut_rel=3.81e-06 d_rel=3.81e-06 d_abs=4.29e-07 den=3.0e-01 meet=False 0.839s
+[A2_abs514_paper] S=5 [2/2] conv=True brut_rel=2.61e-06 d_rel=2.61e-06 d_abs=3.04e-07 den=3.3e-01 meet=False 0.963s
+[A2_rel13_paper] S=5 [1/3] conv=True brut_rel=3.93e-06 d_rel=3.93e-06 d_abs=4.57e-07 den=3.7e-01 meet=False 0.855s
+[A2_abs514_ship] S=5 [1/3] conv=True brut_rel=5.72e-06 d_rel=5.72e-06 d_abs=6.44e-07 den=3.4e-01 meet=False 0.856s
+[A2_rel14_paper] S=5 [1/3] conv=True brut_rel=3.93e-06 d_rel=3.93e-06 d_abs=4.57e-07 den=3.7e-01 meet=False 0.787s
+[A2_rel14_ship] S=5 [1/3] conv=True brut_rel=5.72e-06 d_rel=5.72e-06 d_abs=6.44e-07 den=3.4e-01 meet=False 0.94s
+[A2_rel13_ship] S=5 [1/3] conv=True brut_rel=5.72e-06 d_rel=5.72e-06 d_abs=6.44e-07 den=3.4e-01 meet=False 0.938s
+[A2_abs514_paper] S=5 [1/3] conv=True brut_rel=3.93e-06 d_rel=3.93e-06 d_abs=4.57e-07 den=3.7e-01 meet=False 0.932s
+[A2_rel13_paper] S=6 [4/1] conv=True brut_rel=1.22e-06 d_rel=1.22e-06 d_abs=1.42e-07 den=4.5e-01 meet=False 1.408s
+[A2_rel14_paper] S=6 [4/1] conv=True brut_rel=1.22e-06 d_rel=1.22e-06 d_abs=1.42e-07 den=4.5e-01 meet=False 1.344s
+[A2_abs514_ship] S=6 [4/1] conv=True brut_rel=1.90e-06 d_rel=1.90e-06 d_abs=2.14e-07 den=4.2e-01 meet=False 1.434s
+[A2_rel13_ship] S=6 [4/1] conv=True brut_rel=1.90e-06 d_rel=1.90e-06 d_abs=2.14e-07 den=4.2e-01 meet=False 1.267s
+[A2_abs514_paper] S=6 [4/1] conv=True brut_rel=1.22e-06 d_rel=1.22e-06 d_abs=1.42e-07 den=4.5e-01 meet=False 1.317s
+[A2_rel14_ship] S=6 [4/1] conv=True brut_rel=1.90e-06 d_rel=1.90e-06 d_abs=2.14e-07 den=4.2e-01 meet=False 1.52s
+[A2_rel13_paper] S=6 [3/2] conv=True brut_rel=2.03e-07 d_rel=2.03e-07 d_abs=2.36e-08 den=2.9e-01 meet=False 1.027s
+[A2_rel14_paper] S=6 [3/2] conv=True brut_rel=2.03e-07 d_rel=2.03e-07 d_abs=2.36e-08 den=2.9e-01 meet=False 0.993s
+[A2_abs514_ship] S=6 [3/2] conv=True brut_rel=3.18e-07 d_rel=3.18e-07 d_abs=3.58e-08 den=2.6e-01 meet=False 0.985s
+[A2_rel13_ship] S=6 [3/2] conv=True brut_rel=3.18e-07 d_rel=3.18e-07 d_abs=3.58e-08 den=2.6e-01 meet=False 0.972s
+[A2_abs514_paper] S=6 [3/2] conv=True brut_rel=2.03e-07 d_rel=2.03e-07 d_abs=2.36e-08 den=2.9e-01 meet=False 0.927s
+[A2_rel14_ship] S=6 [3/2] conv=True brut_rel=3.18e-07 d_rel=3.18e-07 d_abs=3.58e-08 den=2.6e-01 meet=False 0.929s
+[A2_rel14_paper] S=6 [2/3] conv=True brut_rel=1.45e-07 d_rel=1.45e-07 d_abs=1.69e-08 den=2.6e-01 meet=False 0.7s
+[A2_rel13_paper] S=6 [2/3] conv=True brut_rel=1.45e-07 d_rel=1.45e-07 d_abs=1.69e-08 den=2.6e-01 meet=False 0.818s
+[A2_abs514_ship] S=6 [2/3] conv=True brut_rel=2.27e-07 d_rel=2.27e-07 d_abs=2.55e-08 den=2.4e-01 meet=False 0.719s
+[A2_rel13_ship] S=6 [2/3] conv=True brut_rel=2.27e-07 d_rel=2.27e-07 d_abs=2.55e-08 den=2.4e-01 meet=False 0.706s
+[A2_abs514_paper] S=6 [2/3] conv=True brut_rel=1.45e-07 d_rel=1.45e-07 d_abs=1.69e-08 den=2.6e-01 meet=False 0.749s
+[A2_rel14_ship] S=6 [2/3] conv=True brut_rel=2.27e-07 d_rel=2.27e-07 d_abs=2.55e-08 den=2.4e-01 meet=False 0.829s
+[A2_rel13_paper] S=6 [1/4] conv=True brut_rel=4.06e-07 d_rel=4.06e-07 d_abs=4.73e-08 den=3.4e-01 meet=False 0.896s
+[A2_rel14_paper] S=6 [1/4] conv=True brut_rel=4.06e-07 d_rel=4.06e-07 d_abs=4.73e-08 den=3.4e-01 meet=False 0.951s
+[A2_abs514_ship] S=6 [1/4] conv=True brut_rel=6.37e-07 d_rel=6.37e-07 d_abs=7.17e-08 den=3.2e-01 meet=False 0.953s
+[A2_rel13_ship] S=6 [1/4] conv=True brut_rel=6.37e-07 d_rel=6.37e-07 d_abs=7.17e-08 den=3.2e-01 meet=False 0.975s
+[A2_abs514_paper] S=6 [1/4] conv=True brut_rel=4.06e-07 d_rel=4.06e-07 d_abs=4.73e-08 den=3.4e-01 meet=False 1.036s
+[A2_rel14_ship] S=6 [1/4] conv=True brut_rel=6.37e-07 d_rel=6.37e-07 d_abs=7.17e-08 den=3.2e-01 meet=False 0.926s
+[A2_rel13_paper] S=7 [5/1] conv=True brut_rel=1.76e-07 d_rel=1.76e-07 d_abs=2.05e-08 den=4.4e-01 meet=False 0.904s
+[A2_rel14_paper] S=7 [5/1] conv=True brut_rel=1.76e-07 d_rel=1.76e-07 d_abs=2.05e-08 den=4.4e-01 meet=False 0.927s
+[A2_abs514_ship] S=7 [5/1] conv=True brut_rel=2.96e-07 d_rel=2.96e-07 d_abs=3.33e-08 den=4.2e-01 meet=False 0.887s
+[A2_rel13_ship] S=7 [5/1] conv=True brut_rel=2.96e-07 d_rel=2.96e-07 d_abs=3.33e-08 den=4.2e-01 meet=False 0.912s
+[A2_abs514_paper] S=7 [5/1] conv=True brut_rel=1.76e-07 d_rel=1.76e-07 d_abs=2.05e-08 den=4.4e-01 meet=False 0.884s
+[A2_rel14_ship] S=7 [5/1] conv=True brut_rel=2.96e-07 d_rel=2.96e-07 d_abs=3.33e-08 den=4.2e-01 meet=False 0.891s
+[A2_rel13_paper] S=7 [4/2] conv=True brut_rel=1.93e-08 d_rel=1.93e-08 d_abs=2.25e-09 den=2.6e-01 meet=False 0.879s
+[A2_rel14_paper] S=7 [4/2] conv=True brut_rel=1.93e-08 d_rel=1.93e-08 d_abs=2.25e-09 den=2.6e-01 meet=False 0.896s
+[A2_abs514_ship] S=7 [4/2] conv=True brut_rel=3.25e-08 d_rel=3.25e-08 d_abs=3.66e-09 den=2.4e-01 meet=False 0.914s
+[A2_rel13_ship] S=7 [4/2] conv=True brut_rel=3.25e-08 d_rel=3.25e-08 d_abs=3.66e-09 den=2.4e-01 meet=False 0.868s
+[A2_abs514_paper] S=7 [4/2] conv=True brut_rel=1.93e-08 d_rel=1.93e-08 d_abs=2.25e-09 den=2.6e-01 meet=False 0.823s
+[A2_rel14_ship] S=7 [4/2] conv=True brut_rel=3.25e-08 d_rel=3.25e-08 d_abs=3.66e-09 den=2.4e-01 meet=False 0.888s
+[A2_rel14_paper] S=7 [3/3] conv=True brut_rel=8.03e-09 d_rel=8.03e-09 d_abs=9.34e-10 den=2.1e-01 meet=False 0.722s
+[A2_rel13_paper] S=7 [3/3] conv=True brut_rel=8.03e-09 d_rel=8.03e-09 d_abs=9.34e-10 den=2.1e-01 meet=False 0.832s
+[A2_abs514_ship] S=7 [3/3] conv=True brut_rel=1.35e-08 d_rel=1.35e-08 d_abs=1.52e-09 den=1.9e-01 meet=False 0.747s
+[A2_rel13_ship] S=7 [3/3] conv=True brut_rel=1.35e-08 d_rel=1.35e-08 d_abs=1.52e-09 den=1.9e-01 meet=False 0.726s
+[A2_abs514_paper] S=7 [3/3] conv=True brut_rel=8.03e-09 d_rel=8.03e-09 d_abs=9.34e-10 den=2.1e-01 meet=False 0.838s
+[A2_rel14_ship] S=7 [3/3] conv=True brut_rel=1.35e-08 d_rel=1.35e-08 d_abs=1.52e-09 den=1.9e-01 meet=False 0.83s
+[A2_rel14_paper] S=7 [2/4] conv=True brut_rel=1.07e-08 d_rel=1.07e-08 d_abs=1.25e-09 den=2.3e-01 meet=False 0.804s
+[A2_rel13_paper] S=7 [2/4] conv=True brut_rel=1.07e-08 d_rel=1.07e-08 d_abs=1.25e-09 den=2.3e-01 meet=False 0.838s
+[A2_abs514_ship] S=7 [2/4] conv=True brut_rel=1.80e-08 d_rel=1.80e-08 d_abs=2.03e-09 den=2.0e-01 meet=False 0.878s
+[A2_rel13_ship] S=7 [2/4] conv=True brut_rel=1.80e-08 d_rel=1.80e-08 d_abs=2.03e-09 den=2.0e-01 meet=False 0.874s
+[A2_abs514_paper] S=7 [2/4] conv=True brut_rel=1.07e-08 d_rel=1.07e-08 d_abs=1.25e-09 den=2.3e-01 meet=False 0.847s
+[A2_rel14_ship] S=7 [2/4] conv=True brut_rel=1.80e-08 d_rel=1.80e-08 d_abs=2.03e-09 den=2.0e-01 meet=False 0.84s
+[A2_rel14_paper] S=7 [1/5] conv=True brut_rel=4.82e-08 d_rel=4.82e-08 d_abs=5.61e-09 den=3.3e-01 meet=False 0.875s
+[A2_rel13_paper] S=7 [1/5] conv=True brut_rel=4.82e-08 d_rel=4.82e-08 d_abs=5.61e-09 den=3.3e-01 meet=False 0.823s
+[A2_abs514_ship] S=7 [1/5] conv=True brut_rel=8.11e-08 d_rel=8.11e-08 d_abs=9.13e-09 den=3.0e-01 meet=False 0.891s
+[A2_rel13_ship] S=7 [1/5] conv=True brut_rel=8.11e-08 d_rel=8.11e-08 d_abs=9.13e-09 den=3.0e-01 meet=False 0.864s
+[A2_rel14_ship] S=7 [1/5] conv=True brut_rel=8.11e-08 d_rel=8.11e-08 d_abs=9.13e-09 den=3.0e-01 meet=False 0.694s
+[A2_abs514_paper] S=7 [1/5] conv=True brut_rel=4.82e-08 d_rel=4.82e-08 d_abs=5.61e-09 den=3.3e-01 meet=False 0.833s
+[A2_rel14_paper] S=8 [6/1] conv=True brut_rel=2.70e-08 d_rel=2.70e-08 d_abs=3.14e-09 den=4.4e-01 meet=False 0.913s
+[A2_rel13_paper] S=8 [6/1] conv=True brut_rel=2.70e-08 d_rel=2.70e-08 d_abs=3.14e-09 den=4.4e-01 meet=False 1.015s
+[A2_abs514_ship] S=8 [6/1] conv=True brut_rel=4.87e-08 d_rel=4.87e-08 d_abs=5.48e-09 den=4.1e-01 meet=False 0.984s
+[A2_rel13_ship] S=8 [6/1] conv=True brut_rel=4.87e-08 d_rel=4.87e-08 d_abs=5.48e-09 den=4.1e-01 meet=False 1.113s
+[A2_rel14_ship] S=8 [6/1] conv=True brut_rel=4.87e-08 d_rel=4.87e-08 d_abs=5.48e-09 den=4.1e-01 meet=False 1.014s
+[A2_abs514_paper] S=8 [6/1] conv=True brut_rel=2.70e-08 d_rel=2.70e-08 d_abs=3.14e-09 den=4.4e-01 meet=False 1.024s
+[A2_rel14_paper] S=8 [5/2] conv=True brut_rel=2.10e-09 d_rel=2.10e-09 d_abs=2.44e-10 den=2.5e-01 meet=False 0.827s
+[A2_rel13_paper] S=8 [5/2] conv=True brut_rel=2.10e-09 d_rel=2.10e-09 d_abs=2.44e-10 den=2.5e-01 meet=False 0.862s
+[A2_abs514_ship] S=8 [5/2] conv=True brut_rel=3.80e-09 d_rel=3.80e-09 d_abs=4.27e-10 den=2.2e-01 meet=False 0.917s
+[A2_rel14_ship] S=8 [5/2] conv=True brut_rel=3.80e-09 d_rel=3.80e-09 d_abs=4.27e-10 den=2.2e-01 meet=False 0.784s
+[A2_rel13_ship] S=8 [5/2] conv=True brut_rel=3.80e-09 d_rel=3.80e-09 d_abs=4.27e-10 den=2.2e-01 meet=False 0.812s
+[A2_abs514_paper] S=8 [5/2] conv=True brut_rel=2.10e-09 d_rel=2.10e-09 d_abs=2.44e-10 den=2.5e-01 meet=False 0.776s
+[A2_rel14_paper] S=8 [4/3] conv=True brut_rel=5.72e-10 d_rel=5.72e-10 d_abs=6.66e-11 den=1.8e-01 meet=False 0.735s
+[A2_rel13_paper] S=8 [4/3] conv=True brut_rel=5.72e-10 d_rel=5.72e-10 d_abs=6.66e-11 den=1.8e-01 meet=False 0.767s
+[A2_rel13_ship] S=8 [4/3] conv=True brut_rel=1.04e-09 d_rel=1.04e-09 d_abs=1.17e-10 den=1.6e-01 meet=False 0.611s
+[A2_abs514_ship] S=8 [4/3] conv=True brut_rel=1.04e-09 d_rel=1.04e-09 d_abs=1.17e-10 den=1.6e-01 meet=False 0.738s
+[A2_rel14_ship] S=8 [4/3] conv=True brut_rel=1.04e-09 d_rel=1.04e-09 d_abs=1.17e-10 den=1.6e-01 meet=False 0.713s
+[A2_abs514_paper] S=8 [4/3] conv=True brut_rel=5.72e-10 d_rel=5.72e-10 d_abs=6.66e-11 den=1.8e-01 meet=False 0.721s
+[A2_rel14_paper] S=8 [3/4] conv=True brut_rel=4.45e-10 d_rel=4.45e-10 d_abs=5.18e-11 den=1.7e-01 meet=False 0.636s
+[A2_rel13_paper] S=8 [3/4] conv=True brut_rel=4.45e-10 d_rel=4.45e-10 d_abs=5.18e-11 den=1.7e-01 meet=False 0.718s
+[A2_rel13_ship] S=8 [3/4] conv=True brut_rel=8.05e-10 d_rel=8.05e-10 d_abs=9.06e-11 den=1.5e-01 meet=False 0.686s
+[A2_abs514_ship] S=8 [3/4] conv=True brut_rel=8.05e-10 d_rel=8.05e-10 d_abs=9.06e-11 den=1.5e-01 meet=False 0.621s
+[A2_rel14_ship] S=8 [3/4] conv=True brut_rel=8.05e-10 d_rel=8.05e-10 d_abs=9.06e-11 den=1.5e-01 meet=False 0.764s
+[A2_abs514_paper] S=8 [3/4] conv=True brut_rel=4.45e-10 d_rel=4.45e-10 d_abs=5.18e-11 den=1.7e-01 meet=False 0.799s
+[A2_rel14_paper] S=8 [2/5] conv=True brut_rel=9.55e-10 d_rel=9.55e-10 d_abs=1.11e-10 den=2.0e-01 meet=False 0.689s
+[A2_abs514_ship] S=8 [2/5] conv=True brut_rel=1.73e-09 d_rel=1.73e-09 d_abs=1.94e-10 den=1.8e-01 meet=False 0.726s
+[A2_rel13_ship] S=8 [2/5] conv=True brut_rel=1.73e-09 d_rel=1.73e-09 d_abs=1.94e-10 den=1.8e-01 meet=False 0.786s
+[A2_rel14_ship] S=8 [2/5] conv=True brut_rel=1.73e-09 d_rel=1.73e-09 d_abs=1.94e-10 den=1.8e-01 meet=False 0.832s
+[A2_rel13_paper] S=8 [2/5] conv=True brut_rel=9.55e-10 d_rel=9.55e-10 d_abs=1.11e-10 den=2.0e-01 meet=False 1.011s
+[A2_abs514_paper] S=8 [2/5] conv=True brut_rel=9.55e-10 d_rel=9.55e-10 d_abs=1.11e-10 den=2.0e-01 meet=False 0.928s
+[A2_rel14_paper] S=8 [1/6] conv=True brut_rel=6.28e-09 d_rel=6.28e-09 d_abs=7.31e-10 den=3.2e-01 meet=False 0.837s
+[A2_abs514_ship] S=8 [1/6] conv=True brut_rel=1.14e-08 d_rel=1.14e-08 d_abs=1.28e-09 den=2.9e-01 meet=False 1.074s
+[A2_rel13_ship] S=8 [1/6] conv=True brut_rel=1.14e-08 d_rel=1.14e-08 d_abs=1.28e-09 den=2.9e-01 meet=False 1.139s
+[A2_rel14_ship] S=8 [1/6] conv=True brut_rel=1.14e-08 d_rel=1.14e-08 d_abs=1.28e-09 den=2.9e-01 meet=False 1.136s
+[A2_rel13_paper] S=8 [1/6] conv=True brut_rel=6.28e-09 d_rel=6.28e-09 d_abs=7.31e-10 den=3.2e-01 meet=False 1.149s
+[A2_abs514_paper] S=8 [1/6] conv=True brut_rel=6.28e-09 d_rel=6.28e-09 d_abs=7.31e-10 den=3.2e-01 meet=False 1.197s
+[A2_rel14_paper] S=9 [7/1] conv=True brut_rel=4.33e-09 d_rel=4.33e-09 d_abs=5.04e-10 den=4.3e-01 meet=False 1.157s
+[A2_abs514_ship] S=9 [7/1] conv=True brut_rel=8.40e-09 d_rel=8.40e-09 d_abs=9.45e-10 den=4.1e-01 meet=False 1.097s
+[A2_rel13_ship] S=9 [7/1] conv=True brut_rel=8.40e-09 d_rel=8.40e-09 d_abs=9.45e-10 den=4.1e-01 meet=False 1.055s
+[A2_rel13_paper] S=9 [7/1] conv=True brut_rel=4.33e-09 d_rel=4.33e-09 d_abs=5.04e-10 den=4.3e-01 meet=False 0.995s
+[A2_rel14_ship] S=9 [7/1] conv=True brut_rel=8.40e-09 d_rel=8.40e-09 d_abs=9.45e-10 den=4.1e-01 meet=False 1.036s
+[A2_rel14_paper] S=9 [6/2] conv=True brut_rel=2.52e-10 d_rel=2.52e-10 d_abs=2.93e-11 den=2.4e-01 meet=False 0.89s
+[A2_abs514_paper] S=9 [7/1] conv=True brut_rel=4.33e-09 d_rel=4.33e-09 d_abs=5.04e-10 den=4.3e-01 meet=False 1.008s
+[A2_abs514_ship] S=9 [6/2] conv=True brut_rel=4.89e-10 d_rel=4.89e-10 d_abs=5.50e-11 den=2.1e-01 meet=False 0.779s
+[A2_rel13_ship] S=9 [6/2] conv=True brut_rel=4.89e-10 d_rel=4.89e-10 d_abs=5.50e-11 den=2.1e-01 meet=False 0.802s
+[A2_rel13_paper] S=9 [6/2] conv=True brut_rel=2.52e-10 d_rel=2.52e-10 d_abs=2.93e-11 den=2.4e-01 meet=False 0.796s
+[A2_rel14_ship] S=9 [6/2] conv=True brut_rel=4.89e-10 d_rel=4.89e-10 d_abs=5.50e-11 den=2.1e-01 meet=False 0.803s
+[A2_rel14_paper] S=9 [5/3] conv=True brut_rel=4.84e-11 d_rel=4.84e-11 d_abs=5.64e-12 den=1.6e-01 meet=False 0.716s
+[A2_abs514_paper] S=9 [6/2] conv=True brut_rel=2.52e-10 d_rel=2.52e-10 d_abs=2.93e-11 den=2.4e-01 meet=False 0.817s
+[A2_abs514_ship] S=9 [5/3] conv=True brut_rel=9.42e-11 d_rel=9.42e-11 d_abs=1.06e-11 den=1.4e-01 meet=False 0.827s
+[A2_rel13_ship] S=9 [5/3] conv=True brut_rel=9.42e-11 d_rel=9.42e-11 d_abs=1.06e-11 den=1.4e-01 meet=False 0.905s
+[A2_rel14_ship] S=9 [5/3] conv=True brut_rel=9.42e-11 d_rel=9.42e-11 d_abs=1.06e-11 den=1.4e-01 meet=False 0.854s
+[A2_rel13_paper] S=9 [5/3] conv=True brut_rel=4.84e-11 d_rel=4.84e-11 d_abs=5.64e-12 den=1.6e-01 meet=False 0.923s
+[A2_rel14_paper] S=9 [4/4] conv=True brut_rel=2.46e-11 d_rel=2.46e-11 d_abs=2.86e-12 den=1.3e-01 meet=False 0.87s
+[A2_abs514_paper] S=9 [5/3] conv=True brut_rel=4.84e-11 d_rel=4.84e-11 d_abs=5.64e-12 den=1.6e-01 meet=False 0.904s
+[A2_abs514_ship] S=9 [4/4] conv=True brut_rel=4.79e-11 d_rel=4.79e-11 d_abs=5.39e-12 den=1.2e-01 meet=False 0.975s
+[A2_rel13_ship] S=9 [4/4] conv=True brut_rel=4.79e-11 d_rel=4.79e-11 d_abs=5.39e-12 den=1.2e-01 meet=False 1.019s
+[A2_rel14_ship] S=9 [4/4] conv=True brut_rel=4.79e-11 d_rel=4.79e-11 d_abs=5.39e-12 den=1.2e-01 meet=False 0.977s
+[A2_rel13_paper] S=9 [4/4] conv=True brut_rel=2.46e-11 d_rel=2.46e-11 d_abs=2.86e-12 den=1.3e-01 meet=False 1.001s
+[A2_rel14_paper] S=9 [3/5] conv=True brut_rel=3.08e-11 d_rel=3.08e-11 d_abs=3.58e-12 den=1.4e-01 meet=False 1.091s
+[A2_abs514_paper] S=9 [4/4] conv=True brut_rel=2.46e-11 d_rel=2.46e-11 d_abs=2.86e-12 den=1.3e-01 meet=False 0.944s
+[A2_abs514_ship] S=9 [3/5] conv=True brut_rel=5.99e-11 d_rel=5.99e-11 d_abs=6.74e-12 den=1.2e-01 meet=False 0.893s
+[A2_rel13_ship] S=9 [3/5] conv=True brut_rel=5.99e-11 d_rel=5.99e-11 d_abs=6.74e-12 den=1.2e-01 meet=False 0.82s
+[A2_rel14_ship] S=9 [3/5] conv=True brut_rel=5.99e-11 d_rel=5.99e-11 d_abs=6.74e-12 den=1.2e-01 meet=False 0.979s
+[A2_rel13_paper] S=9 [3/5] conv=True brut_rel=3.08e-11 d_rel=3.08e-11 d_abs=3.58e-12 den=1.4e-01 meet=False 0.987s
+warning: equioscillation property not satisfied, deviation=0.000101
+[A2_rel14_paper] S=9 [2/6] conv=True brut_rel=9.69e-11 d_rel=9.69e-11 d_abs=1.13e-11 den=1.9e-01 meet=False 1.052s
+[A2_abs514_paper] S=9 [3/5] conv=True brut_rel=3.08e-11 d_rel=3.08e-11 d_abs=3.58e-12 den=1.4e-01 meet=False 1.024s
+[A2_abs514_ship] S=9 [2/6] conv=True brut_rel=1.88e-10 d_rel=1.88e-10 d_abs=2.12e-11 den=1.7e-01 meet=False 1.063s
+[A2_rel13_ship] S=9 [2/6] conv=True brut_rel=1.88e-10 d_rel=1.88e-10 d_abs=2.12e-11 den=1.7e-01 meet=False 1.049s
+[A2_rel14_ship] S=9 [2/6] conv=True brut_rel=1.88e-10 d_rel=1.88e-10 d_abs=2.12e-11 den=1.7e-01 meet=False 1.015s
+warning: equioscillation property not satisfied, deviation=0.000101
+[A2_rel13_paper] S=9 [2/6] conv=True brut_rel=9.69e-11 d_rel=9.69e-11 d_abs=1.13e-11 den=1.9e-01 meet=False 0.983s
+warning: equioscillation property not satisfied, deviation=0.000101
+[A2_abs514_paper] S=9 [2/6] conv=True brut_rel=9.69e-11 d_rel=9.69e-11 d_abs=1.13e-11 den=1.9e-01 meet=False 0.878s
+[A2_rel14_paper] S=9 [1/7] conv=True brut_rel=8.76e-10 d_rel=8.76e-10 d_abs=1.02e-10 den=3.1e-01 meet=False 0.917s
+[A2_abs514_ship] S=9 [1/7] conv=True brut_rel=1.70e-09 d_rel=1.70e-09 d_abs=1.91e-10 den=2.9e-01 meet=False 0.981s
+[A2_rel13_ship] S=9 [1/7] conv=True brut_rel=1.70e-09 d_rel=1.70e-09 d_abs=1.91e-10 den=2.9e-01 meet=False 0.936s
+[A2_rel13_paper] S=9 [1/7] conv=True brut_rel=8.76e-10 d_rel=8.76e-10 d_abs=1.02e-10 den=3.1e-01 meet=False 1.049s
+[A2_rel14_ship] S=9 [1/7] conv=True brut_rel=1.70e-09 d_rel=1.70e-09 d_abs=1.91e-10 den=2.9e-01 meet=False 1.118s
+[A2_rel14_paper] S=10 [8/1] conv=True brut_rel=7.20e-10 d_rel=7.20e-10 d_abs=8.38e-11 den=4.3e-01 meet=False 1.205s
+[A2_abs514_paper] S=9 [1/7] conv=True brut_rel=8.76e-10 d_rel=8.76e-10 d_abs=1.02e-10 den=3.1e-01 meet=False 1.243s
+[A2_abs514_ship] S=10 [8/1] conv=True brut_rel=1.50e-09 d_rel=1.50e-09 d_abs=1.69e-10 den=4.1e-01 meet=False 1.288s
+[A2_rel13_ship] S=10 [8/1] conv=True brut_rel=1.50e-09 d_rel=1.50e-09 d_abs=1.69e-10 den=4.1e-01 meet=False 1.228s
+[A2_rel14_ship] S=10 [8/1] conv=True brut_rel=1.50e-09 d_rel=1.50e-09 d_abs=1.69e-10 den=4.1e-01 meet=False 1.149s
+[A2_rel13_paper] S=10 [8/1] conv=True brut_rel=7.20e-10 d_rel=7.20e-10 d_abs=8.38e-11 den=4.3e-01 meet=False 1.19s
+[A2_rel14_paper] S=10 [7/2] conv=True brut_rel=3.24e-11 d_rel=3.24e-11 d_abs=3.77e-12 den=2.3e-01 meet=False 1.094s
+[A2_abs514_paper] S=10 [8/1] conv=True brut_rel=7.20e-10 d_rel=7.20e-10 d_abs=8.38e-11 den=4.3e-01 meet=False 1.121s
+[A2_rel13_ship] S=10 [7/2] conv=True brut_rel=6.77e-11 d_rel=6.77e-11 d_abs=7.62e-12 den=2.0e-01 meet=False 0.95s
+[A2_abs514_ship] S=10 [7/2] conv=True brut_rel=6.77e-11 d_rel=6.77e-11 d_abs=7.62e-12 den=2.0e-01 meet=False 0.992s
+[A2_rel14_ship] S=10 [7/2] conv=True brut_rel=6.77e-11 d_rel=6.77e-11 d_abs=7.62e-12 den=2.0e-01 meet=False 0.914s
+[A2_rel13_paper] S=10 [7/2] conv=True brut_rel=3.24e-11 d_rel=3.24e-11 d_abs=3.77e-12 den=2.3e-01 meet=False 0.938s
+[A2_rel14_paper] S=10 [6/3] conv=True brut_rel=4.64e-12 d_rel=4.64e-12 d_abs=5.40e-13 den=1.5e-01 meet=False 0.961s
+[A2_abs514_paper] S=10 [7/2] conv=True brut_rel=3.24e-11 d_rel=3.24e-11 d_abs=3.77e-12 den=2.3e-01 meet=False 0.913s
+[A2_rel13_ship] S=10 [6/3] conv=True brut_rel=9.70e-12 d_rel=9.70e-12 d_abs=1.09e-12 den=1.3e-01 meet=False 0.897s
+[A2_abs514_ship] S=10 [6/3] conv=True brut_rel=9.70e-12 d_rel=9.70e-12 d_abs=1.09e-12 den=1.3e-01 meet=False 0.965s
+[A2_rel14_ship] S=10 [6/3] conv=True brut_rel=9.70e-12 d_rel=9.70e-12 d_abs=1.09e-12 den=1.3e-01 meet=False 0.859s
+[A2_rel13_paper] S=10 [6/3] conv=True brut_rel=4.64e-12 d_rel=4.64e-12 d_abs=5.40e-13 den=1.5e-01 meet=False 0.968s
+[A2_abs514_paper] S=10 [6/3] conv=True brut_rel=4.64e-12 d_rel=4.64e-12 d_abs=5.40e-13 den=1.5e-01 meet=False 1.046s
+[A2_rel13_ship] S=10 [5/4] conv=True brut_rel=3.47e-12 d_rel=3.47e-12 d_abs=3.90e-13 den=9.6e-02 meet=False 1.273s
+[A2_abs514_ship] S=10 [5/4] conv=True brut_rel=3.47e-12 d_rel=3.47e-12 d_abs=3.90e-13 den=9.6e-02 meet=False 1.203s
+[A2_rel14_ship] S=10 [5/4] conv=True brut_rel=3.47e-12 d_rel=3.47e-12 d_abs=3.90e-13 den=9.6e-02 meet=False 1.283s
+warning: equioscillation property not satisfied, deviation=0.000174
+[A2_rel13_ship] S=10 [4/5] conv=True brut_rel=2.83e-12 d_rel=2.83e-12 d_abs=3.19e-13 den=9.1e-02 meet=False 1.536s
+warning: equioscillation property not satisfied, deviation=0.000174
+[A2_abs514_ship] S=10 [4/5] conv=True brut_rel=2.83e-12 d_rel=2.83e-12 d_abs=3.19e-13 den=9.1e-02 meet=False 1.581s
+warning: equioscillation property not satisfied, deviation=0.000174
+[A2_rel14_ship] S=10 [4/5] conv=True brut_rel=2.83e-12 d_rel=2.83e-12 d_abs=3.19e-13 den=9.1e-02 meet=False 1.568s
+[A2_rel13_ship] S=10 [3/6] conv=True brut_rel=5.21e-12 d_rel=5.21e-12 d_abs=5.87e-13 den=1.1e-01 meet=False 1.204s
+[A2_abs514_ship] S=10 [3/6] conv=True brut_rel=5.21e-12 d_rel=5.21e-12 d_abs=5.87e-13 den=1.1e-01 meet=False 1.232s
+[A2_rel14_ship] S=10 [3/6] conv=True brut_rel=5.21e-12 d_rel=5.21e-12 d_abs=5.87e-13 den=1.1e-01 meet=False 1.216s
+[A2_rel13_ship] S=10 [2/7] conv=True brut_rel=2.26e-11 d_rel=2.26e-11 d_abs=2.55e-12 den=1.6e-01 meet=False 0.905s
+[A2_abs514_ship] S=10 [2/7] conv=True brut_rel=2.26e-11 d_rel=2.26e-11 d_abs=2.55e-12 den=1.6e-01 meet=False 0.914s
+[A2_rel14_ship] S=10 [2/7] conv=True brut_rel=2.26e-11 d_rel=2.26e-11 d_abs=2.55e-12 den=1.6e-01 meet=False 0.94s
+[A2_rel13_ship] S=10 [1/8] conv=True brut_rel=2.68e-10 d_rel=2.68e-10 d_abs=3.02e-11 den=2.8e-01 meet=False 0.932s
+warning: BRASIL did not converge; dev=0.000433, err=1.92e-13
+[A2_rel14_paper] S=10 [5/4] conv=False brut_rel=1.65e-12 d_rel=1.65e-12 d_abs=1.92e-13 den=1.1e-01 meet=False 6.271s
+[A2_abs514_ship] S=10 [1/8] conv=True brut_rel=2.68e-10 d_rel=2.68e-10 d_abs=3.02e-11 den=2.8e-01 meet=False 0.899s
+[A2_rel14_ship] S=10 [1/8] conv=True brut_rel=2.68e-10 d_rel=2.68e-10 d_abs=3.02e-11 den=2.8e-01 meet=False 0.966s
+warning: BRASIL did not converge; dev=0.000433, err=1.92e-13
+[A2_rel13_paper] S=10 [5/4] conv=False brut_rel=1.65e-12 d_rel=1.65e-12 d_abs=1.92e-13 den=1.1e-01 meet=False 6.193s
+[A2_rel13_ship] S=11 [9/1] conv=True brut_rel=2.75e-10 d_rel=2.75e-10 d_abs=3.09e-11 den=4.0e-01 meet=False 0.936s
+[A2_abs514_ship] S=11 [9/1] conv=True brut_rel=2.75e-10 d_rel=2.75e-10 d_abs=3.09e-11 den=4.0e-01 meet=False 0.945s
+warning: BRASIL did not converge; dev=0.000433, err=1.92e-13
+[A2_abs514_paper] S=10 [5/4] conv=False brut_rel=1.65e-12 d_rel=1.65e-12 d_abs=1.92e-13 den=1.1e-01 meet=False 6.434s
+[A2_rel14_ship] S=11 [9/1] conv=True brut_rel=2.75e-10 d_rel=2.75e-10 d_abs=3.09e-11 den=4.0e-01 meet=False 1.008s
+[A2_rel13_ship] S=11 [8/2] conv=True brut_rel=9.90e-12 d_rel=9.90e-12 d_abs=1.11e-12 den=2.0e-01 meet=False 1.178s
+[A2_abs514_ship] S=11 [8/2] conv=True brut_rel=9.90e-12 d_rel=9.90e-12 d_abs=1.11e-12 den=2.0e-01 meet=False 1.229s
+[A2_rel14_ship] S=11 [8/2] conv=True brut_rel=9.90e-12 d_rel=9.90e-12 d_abs=1.11e-12 den=2.0e-01 meet=False 1.25s
+warning: BRASIL did not converge; dev=0.000177, err=1.57e-13
+[A2_rel14_paper] S=10 [4/5] conv=False brut_rel=1.35e-12 d_rel=1.35e-12 d_abs=1.57e-13 den=1.1e-01 meet=False 6.563s
+warning: BRASIL did not converge; dev=0.000177, err=1.57e-13
+[A2_rel13_paper] S=10 [4/5] conv=False brut_rel=1.35e-12 d_rel=1.35e-12 d_abs=1.57e-13 den=1.1e-01 meet=False 6.828s
+warning: equioscillation property not satisfied, deviation=0.000192
+[A2_rel14_paper] S=10 [3/6] conv=True brut_rel=2.49e-12 d_rel=2.49e-12 d_abs=2.90e-13 den=1.3e-01 meet=False 1.622s
+warning: BRASIL did not converge; dev=0.000177, err=1.57e-13
+[A2_abs514_paper] S=10 [4/5] conv=False brut_rel=1.35e-12 d_rel=1.35e-12 d_abs=1.57e-13 den=1.1e-01 meet=False 7.205s
+warning: equioscillation property not satisfied, deviation=0.000192
+[A2_rel13_paper] S=10 [3/6] conv=True brut_rel=2.49e-12 d_rel=2.49e-12 d_abs=2.90e-13 den=1.3e-01 meet=False 2.115s
+[A2_rel14_paper] S=10 [2/7] conv=True brut_rel=1.08e-11 d_rel=1.08e-11 d_abs=1.26e-12 den=1.8e-01 meet=False 1.509s
+warning: BRASIL did not converge; dev=0.000565, err=1.23e-13
+[A2_rel13_ship] S=11 [7/3] conv=False brut_rel=1.09e-12 d_rel=1.09e-12 d_abs=1.23e-13 den=1.2e-01 meet=False 7.747s
+warning: BRASIL did not converge; dev=0.000565, err=1.23e-13
+[A2_rel14_ship] S=11 [7/3] conv=False brut_rel=1.09e-12 d_rel=1.09e-12 d_abs=1.23e-13 den=1.2e-01 meet=False 7.602s
+warning: equioscillation property not satisfied, deviation=0.000192
+[A2_abs514_paper] S=10 [3/6] conv=True brut_rel=2.49e-12 d_rel=2.49e-12 d_abs=2.90e-13 den=1.3e-01 meet=False 1.841s
+warning: BRASIL did not converge; dev=0.000565, err=1.23e-13
+[A2_abs514_ship] S=11 [7/3] conv=False brut_rel=1.09e-12 d_rel=1.09e-12 d_abs=1.23e-13 den=1.2e-01 meet=False 8.291s
+[A2_rel13_paper] S=10 [2/7] conv=True brut_rel=1.08e-11 d_rel=1.08e-11 d_abs=1.26e-12 den=1.8e-01 meet=False 1.074s
+[A2_rel14_paper] S=10 [1/8] conv=True brut_rel=1.29e-10 d_rel=1.29e-10 d_abs=1.50e-11 den=3.1e-01 meet=False 1.132s
+[A2_abs514_paper] S=10 [2/7] conv=True brut_rel=1.08e-11 d_rel=1.08e-11 d_abs=1.26e-12 den=1.8e-01 meet=False 0.975s
+[A2_rel13_paper] S=10 [1/8] conv=True brut_rel=1.29e-10 d_rel=1.29e-10 d_abs=1.50e-11 den=3.1e-01 meet=False 0.955s
+[A2_rel14_paper] S=11 [9/1] conv=True brut_rel=1.23e-10 d_rel=1.23e-10 d_abs=1.43e-11 den=4.3e-01 meet=False 0.979s
+[A2_abs514_paper] S=10 [1/8] conv=True brut_rel=1.29e-10 d_rel=1.29e-10 d_abs=1.50e-11 den=3.1e-01 meet=False 0.995s
+[A2_rel13_paper] S=11 [9/1] conv=True brut_rel=1.23e-10 d_rel=1.23e-10 d_abs=1.43e-11 den=4.3e-01 meet=False 1.074s
+warning: equioscillation property not satisfied, deviation=0.000108
+[A2_rel14_paper] S=11 [8/2] conv=True brut_rel=4.41e-12 d_rel=4.41e-12 d_abs=5.14e-13 den=2.2e-01 meet=False 1.535s
+[A2_abs514_paper] S=11 [9/1] conv=True brut_rel=1.23e-10 d_rel=1.23e-10 d_abs=1.43e-11 den=4.3e-01 meet=False 1.676s
+warning: equioscillation property not satisfied, deviation=0.000108
+[A2_rel13_paper] S=11 [8/2] conv=True brut_rel=4.41e-12 d_rel=4.41e-12 d_abs=5.14e-13 den=2.2e-01 meet=False 1.8s
+warning: equioscillation property not satisfied, deviation=0.000108
+[A2_abs514_paper] S=11 [8/2] conv=True brut_rel=4.41e-12 d_rel=4.41e-12 d_abs=5.14e-13 den=2.2e-01 meet=False 1.663s
+warning: BRASIL did not converge; dev=0.0039, err=3.21e-14
+[A2_rel13_ship] S=11 [6/4] conv=False brut_rel=2.85e-13 d_rel=2.85e-13 d_abs=3.21e-14 den=8.3e-02 meet=False 7.529s
+warning: BRASIL did not converge; dev=0.0039, err=3.21e-14
+[A2_rel14_ship] S=11 [6/4] conv=False brut_rel=2.85e-13 d_rel=2.85e-13 d_abs=3.21e-14 den=8.3e-02 meet=False 7.27s
+warning: BRASIL did not converge; dev=0.0039, err=3.21e-14
+[A2_abs514_ship] S=11 [6/4] conv=False brut_rel=2.85e-13 d_rel=2.85e-13 d_abs=3.21e-14 den=8.3e-02 meet=True 7.501s
+warning: BRASIL did not converge; dev=0.00148, err=5.63e-14
+[A2_rel14_paper] S=11 [7/3] conv=False brut_rel=4.83e-13 d_rel=4.83e-13 d_abs=5.62e-14 den=1.4e-01 meet=False 7.649s
+warning: BRASIL did not converge; dev=0.00148, err=5.63e-14
+[A2_rel13_paper] S=11 [7/3] conv=False brut_rel=4.83e-13 d_rel=4.83e-13 d_abs=5.62e-14 den=1.4e-01 meet=False 7.067s
+warning: BRASIL did not converge; dev=0.00148, err=5.63e-14
+[A2_abs514_paper] S=11 [7/3] conv=False brut_rel=4.83e-13 d_rel=4.83e-13 d_abs=5.62e-14 den=1.4e-01 meet=False 7.158s
+warning: BRASIL did not converge; dev=0.00614, err=1.82e-14
+[A2_rel13_ship] S=11 [5/5] conv=False brut_rel=1.62e-13 d_rel=1.61e-13 d_abs=1.82e-14 den=7.2e-02 meet=False 6.248s
+warning: BRASIL did not converge; dev=0.00614, err=1.82e-14
+[A2_rel14_ship] S=11 [5/5] conv=False brut_rel=1.62e-13 d_rel=1.61e-13 d_abs=1.82e-14 den=7.2e-02 meet=False 6.637s
+warning: BRASIL did not converge; dev=0.00614, err=1.82e-14
+[A2_abs514_ship] S=11 [5/5] conv=False brut_rel=1.62e-13 d_rel=1.61e-13 d_abs=1.82e-14 den=7.2e-02 meet=True 6.195s
+warning: BRASIL did not converge; dev=0.00384, err=1.45e-14
+[A2_rel14_paper] S=11 [6/4] conv=False brut_rel=1.25e-13 d_rel=1.25e-13 d_abs=1.46e-14 den=9.9e-02 meet=False 5.913s
+warning: BRASIL did not converge; dev=0.00384, err=1.45e-14
+[A2_rel13_paper] S=11 [6/4] conv=False brut_rel=1.25e-13 d_rel=1.25e-13 d_abs=1.46e-14 den=9.9e-02 meet=False 6.213s
+warning: BRASIL did not converge; dev=0.00384, err=1.45e-14
+[A2_abs514_paper] S=11 [6/4] conv=False brut_rel=1.25e-13 d_rel=1.25e-13 d_abs=1.46e-14 den=9.9e-02 meet=True 6.396s
+warning: BRASIL did not converge; dev=0.00381, err=2.2e-14
+[A2_rel13_ship] S=11 [4/6] conv=False brut_rel=1.95e-13 d_rel=1.95e-13 d_abs=2.20e-14 den=7.5e-02 meet=False 6.544s
+warning: BRASIL did not converge; dev=0.00381, err=2.2e-14
+[A2_rel14_ship] S=11 [4/6] conv=False brut_rel=1.95e-13 d_rel=1.95e-13 d_abs=2.20e-14 den=7.5e-02 meet=False 6.504s
+warning: BRASIL did not converge; dev=0.00381, err=2.2e-14
+[A2_abs514_ship] S=11 [4/6] conv=False brut_rel=1.95e-13 d_rel=1.95e-13 d_abs=2.20e-14 den=7.5e-02 meet=True 6.498s
+warning: BRASIL did not converge; dev=0.00685, err=8.16e-15
+[A2_rel14_paper] S=11 [5/5] conv=False brut_rel=6.98e-14 d_rel=6.96e-14 d_abs=8.27e-15 den=8.6e-02 meet=False 7.146s
+warning: BRASIL did not converge; dev=0.00685, err=8.16e-15
+[A2_rel13_paper] S=11 [5/5] conv=False brut_rel=6.98e-14 d_rel=6.96e-14 d_abs=8.27e-15 den=8.6e-02 meet=True 7.28s
+warning: BRASIL did not converge; dev=0.00685, err=8.16e-15
+[A2_abs514_paper] S=11 [5/5] conv=False brut_rel=6.98e-14 d_rel=6.96e-14 d_abs=8.27e-15 den=8.6e-02 meet=True 6.772s
+warning: BRASIL did not converge; dev=0.00196, err=5.69e-14
+[A2_rel13_ship] S=11 [3/7] conv=False brut_rel=5.05e-13 d_rel=5.05e-13 d_abs=5.69e-14 den=9.6e-02 meet=False 6.793s
+warning: BRASIL did not converge; dev=0.00196, err=5.69e-14
+[A2_rel14_ship] S=11 [3/7] conv=False brut_rel=5.05e-13 d_rel=5.05e-13 d_abs=5.69e-14 den=9.6e-02 meet=False 6.567s
+warning: BRASIL did not converge; dev=0.00196, err=5.69e-14
+[A2_abs514_ship] S=11 [3/7] conv=False brut_rel=5.05e-13 d_rel=5.05e-13 d_abs=5.69e-14 den=9.6e-02 meet=False 6.76s
+warning: equioscillation property not satisfied, deviation=0.000253
+[A2_rel13_ship] S=11 [2/8] conv=True brut_rel=2.92e-12 d_rel=2.92e-12 d_abs=3.29e-13 den=1.5e-01 meet=False 2.35s
+warning: equioscillation property not satisfied, deviation=0.000253
+[A2_rel14_ship] S=11 [2/8] conv=True brut_rel=2.92e-12 d_rel=2.92e-12 d_abs=3.29e-13 den=1.5e-01 meet=False 2.473s
+warning: equioscillation property not satisfied, deviation=0.000253
+[A2_abs514_ship] S=11 [2/8] conv=True brut_rel=2.92e-12 d_rel=2.92e-12 d_abs=3.29e-13 den=1.5e-01 meet=False 2.676s
+[A2_rel13_ship] S=11 [1/9] conv=True brut_rel=4.41e-11 d_rel=4.41e-11 d_abs=4.97e-12 den=2.8e-01 meet=False 1.481s
+warning: BRASIL did not converge; dev=0.00847, err=9.91e-15
+[A2_rel14_paper] S=11 [4/6] conv=False brut_rel=8.45e-14 d_rel=8.47e-14 d_abs=9.96e-15 den=9.0e-02 meet=False 6.9s
+[A2_rel14_ship] S=11 [1/9] conv=True brut_rel=4.41e-11 d_rel=4.41e-11 d_abs=4.97e-12 den=2.8e-01 meet=False 1.367s
+[A2_abs514_ship] S=11 [1/9] conv=True brut_rel=4.41e-11 d_rel=4.41e-11 d_abs=4.97e-12 den=2.8e-01 meet=False 1.245s
+[A2_rel13_ship] S=12 [10/1] conv=True brut_rel=5.15e-11 d_rel=5.15e-11 d_abs=5.79e-12 den=4.0e-01 meet=False 1.18s
+[A2_rel14_ship] S=12 [10/1] conv=True brut_rel=5.15e-11 d_rel=5.15e-11 d_abs=5.79e-12 den=4.0e-01 meet=False 1.195s
+warning: BRASIL did not converge; dev=0.00847, err=9.91e-15
+[A2_rel13_paper] S=11 [4/6] conv=False brut_rel=8.45e-14 d_rel=8.47e-14 d_abs=9.96e-15 den=9.0e-02 meet=True 7.208s
+warning: BRASIL did not converge; dev=0.00847, err=9.91e-15
+[A2_abs514_paper] S=11 [4/6] conv=False brut_rel=8.45e-14 d_rel=8.47e-14 d_abs=9.96e-15 den=9.0e-02 meet=True 7.475s
+warning: BRASIL did not converge; dev=0.00269, err=2.59e-14
+[A2_rel14_paper] S=11 [3/7] conv=False brut_rel=2.22e-13 d_rel=2.22e-13 d_abs=2.59e-14 den=1.1e-01 meet=False 7.281s
+warning: BRASIL did not converge; dev=0.00269, err=2.59e-14
+[A2_rel13_paper] S=11 [3/7] conv=False brut_rel=2.22e-13 d_rel=2.22e-13 d_abs=2.59e-14 den=1.1e-01 meet=False 7.569s
+warning: equioscillation property not satisfied, deviation=0.000459
+[A2_rel14_paper] S=11 [2/8] conv=True brut_rel=1.30e-12 d_rel=1.30e-12 d_abs=1.51e-13 den=1.7e-01 meet=False 1.989s
+warning: BRASIL did not converge; dev=0.000245, err=1.7e-13
+[A2_rel14_ship] S=12 [9/2] conv=False brut_rel=1.51e-12 d_rel=1.51e-12 d_abs=1.70e-13 den=1.9e-01 meet=False 8.193s
+warning: BRASIL did not converge; dev=0.000245, err=1.7e-13
+[A2_rel13_ship] S=12 [9/2] conv=False brut_rel=1.51e-12 d_rel=1.51e-12 d_abs=1.70e-13 den=1.9e-01 meet=False 8.559s
+warning: BRASIL did not converge; dev=0.00269, err=2.59e-14
+[A2_abs514_paper] S=11 [3/7] conv=False brut_rel=2.22e-13 d_rel=2.22e-13 d_abs=2.59e-14 den=1.1e-01 meet=True 8.001s
+[A2_rel14_paper] S=11 [1/9] conv=True brut_rel=1.97e-11 d_rel=1.97e-11 d_abs=2.29e-12 den=3.0e-01 meet=False 1.245s
+warning: equioscillation property not satisfied, deviation=0.000459
+[A2_rel13_paper] S=11 [2/8] conv=True brut_rel=1.30e-12 d_rel=1.30e-12 d_abs=1.51e-13 den=1.7e-01 meet=False 2.058s
+[A2_rel14_paper] S=12 [10/1] conv=True brut_rel=2.15e-11 d_rel=2.15e-11 d_abs=2.50e-12 den=4.3e-01 meet=False 1.318s
+[A2_rel13_paper] S=11 [1/9] conv=True brut_rel=1.97e-11 d_rel=1.97e-11 d_abs=2.29e-12 den=3.0e-01 meet=False 1.198s
+warning: equioscillation property not satisfied, deviation=0.000459
+[A2_abs514_paper] S=11 [2/8] conv=True brut_rel=1.30e-12 d_rel=1.30e-12 d_abs=1.51e-13 den=1.7e-01 meet=False 1.816s
+[A2_abs514_paper] S=11 [1/9] conv=True brut_rel=1.97e-11 d_rel=1.97e-11 d_abs=2.29e-12 den=3.0e-01 meet=False 1.218s
+warning: BRASIL did not converge; dev=0.00765, err=1.46e-14
+[A2_rel14_ship] S=12 [8/3] conv=False brut_rel=1.29e-13 d_rel=1.29e-13 d_abs=1.46e-14 den=1.1e-01 meet=False 7.399s
+warning: BRASIL did not converge; dev=0.00765, err=1.46e-14
+[A2_rel13_ship] S=12 [8/3] conv=False brut_rel=1.29e-13 d_rel=1.29e-13 d_abs=1.46e-14 den=1.1e-01 meet=False 7.452s
+warning: BRASIL did not converge; dev=0.00191, err=7.29e-14
+[A2_rel14_paper] S=12 [9/2] conv=False brut_rel=6.26e-13 d_rel=6.26e-13 d_abs=7.28e-14 den=2.2e-01 meet=False 6.704s
+warning: BRASIL did not converge; dev=0.0417, err=2.78e-15
+[A2_rel14_ship] S=12 [7/4] conv=False brut_rel=2.43e-14 d_rel=2.43e-14 d_abs=2.78e-15 den=7.4e-02 meet=False 6.612s
+warning: BRASIL did not converge; dev=0.0417, err=2.78e-15
+[A2_rel13_ship] S=12 [7/4] conv=False brut_rel=2.43e-14 d_rel=2.43e-14 d_abs=2.78e-15 den=7.4e-02 meet=True 6.71s
+warning: BRASIL did not converge; dev=0.0138, err=6.13e-15
+[A2_rel14_paper] S=12 [8/3] conv=False brut_rel=5.25e-14 d_rel=5.25e-14 d_abs=6.13e-15 den=1.3e-01 meet=False 7.287s
+warning: BRASIL did not converge; dev=0.118, err=1.05e-15
+[A2_rel14_ship] S=12 [6/5] conv=False brut_rel=9.05e-15 d_rel=9.00e-15 d_abs=1.14e-15 den=6.0e-02 meet=True 7.462s
+warning: BRASIL did not converge; dev=0.118, err=1.05e-15
+[A2_rel13_ship] S=12 [6/5] conv=False brut_rel=9.05e-15 d_rel=9.00e-15 d_abs=1.14e-15 den=6.0e-02 meet=True 7.382s
+warning: BRASIL did not converge; dev=0.108, err=1.14e-15
+[A2_rel14_paper] S=12 [7/4] conv=False brut_rel=9.42e-15 d_rel=9.30e-15 d_abs=1.11e-15 den=8.9e-02 meet=True 7.222s
+warning: BRASIL did not converge; dev=0.185, err=8.88e-16
+[A2_rel14_ship] S=12 [5/6] conv=False brut_rel=7.27e-15 d_rel=7.40e-15 d_abs=9.16e-16 den=5.7e-02 meet=True 6.82s
+warning: BRASIL did not converge; dev=0.185, err=8.88e-16
+[A2_rel13_ship] S=12 [5/6] conv=False brut_rel=7.27e-15 d_rel=7.40e-15 d_abs=9.16e-16 den=5.7e-02 meet=True 6.768s
+warning: BRASIL did not converge; dev=0.154, err=4.16e-16
+[A2_rel14_paper] S=12 [6/5] conv=False brut_rel=3.34e-15 d_rel=3.46e-15 d_abs=4.16e-16 den=7.3e-02 meet=True 6.491s
+warning: BRASIL did not converge; dev=0.0943, err=1.61e-15
+[A2_rel14_ship] S=12 [4/7] conv=False brut_rel=1.37e-14 d_rel=1.36e-14 d_abs=1.58e-15 den=6.5e-02 meet=False 6.961s
+warning: BRASIL did not converge; dev=6.59e-07, err=1.69e-10
+[A2_abs514_ship] RETRY S=10 [8/1] conv=False d_rel=1.50e-09 d_abs=1.69e-10 den=4.1e-01 meet=False 43.579s
+warning: BRASIL did not converge; dev=0.0943, err=1.61e-15
+[A2_rel13_ship] S=12 [4/7] conv=False brut_rel=1.37e-14 d_rel=1.36e-14 d_abs=1.58e-15 den=6.5e-02 meet=True 7.147s
+warning: BRASIL did not converge; dev=0.2, err=3.33e-16
+[A2_rel14_paper] S=12 [5/6] conv=False brut_rel=2.74e-15 d_rel=2.86e-15 d_abs=3.33e-16 den=7.0e-02 meet=True 7.366s
+warning: BRASIL did not converge; dev=0.0146, err=5.8e-15
+[A2_rel14_ship] S=12 [3/8] conv=False brut_rel=5.12e-14 d_rel=5.13e-14 d_abs=5.86e-15 den=8.8e-02 meet=False 7.698s
+warning: BRASIL did not converge; dev=0.0146, err=5.8e-15
+[A2_rel13_ship] S=12 [3/8] conv=False brut_rel=5.12e-14 d_rel=5.13e-14 d_abs=5.86e-15 den=8.8e-02 meet=True 7.768s
+warning: BRASIL did not converge; dev=0.278, err=6.38e-16
+[A2_rel14_paper] S=12 [4/7] conv=False brut_rel=4.97e-15 d_rel=5.01e-15 d_abs=6.38e-16 den=7.9e-02 meet=True 7.655s
+warning: BRASIL did not converge; dev=2.32e-06, err=8.38e-11
+[A2_rel13_paper] RETRY S=10 [8/1] conv=False d_rel=7.20e-10 d_abs=8.38e-11 den=4.3e-01 meet=False 44.094s
+warning: BRASIL did not converge; dev=2.32e-06, err=8.38e-11
+[A2_abs514_paper] RETRY S=10 [8/1] conv=False d_rel=7.20e-10 d_abs=8.38e-11 den=4.3e-01 meet=False 44.263s
+warning: BRASIL did not converge; dev=0.00187, err=4.46e-14
+[A2_rel14_ship] S=12 [2/9] conv=False brut_rel=3.97e-13 d_rel=3.97e-13 d_abs=4.46e-14 den=1.4e-01 meet=False 7.06s
+warning: BRASIL did not converge; dev=0.00187, err=4.46e-14
+[A2_rel13_ship] S=12 [2/9] conv=False brut_rel=3.97e-13 d_rel=3.97e-13 d_abs=4.46e-14 den=1.4e-01 meet=False 7.169s
+warning: equioscillation property not satisfied, deviation=0.000132
+[A2_rel14_ship] S=12 [1/10] conv=True brut_rel=7.50e-12 d_rel=7.50e-12 d_abs=8.44e-13 den=2.7e-01 meet=False 1.134s
+warning: equioscillation property not satisfied, deviation=0.000132
+[A2_rel13_ship] S=12 [1/10] conv=True brut_rel=7.50e-12 d_rel=7.50e-12 d_abs=8.44e-13 den=2.7e-01 meet=False 1.138s
+warning: BRASIL did not converge; dev=0.0482, err=2.41e-15
+[A2_rel14_paper] S=12 [3/8] conv=False brut_rel=2.04e-14 d_rel=2.05e-14 d_abs=2.47e-15 den=1.0e-01 meet=False 6.979s
+warning: BRASIL did not converge; dev=0.00514, err=1.9e-14
+[A2_rel14_paper] S=12 [2/9] conv=False brut_rel=1.63e-13 d_rel=1.63e-13 d_abs=1.90e-14 den=1.6e-01 meet=False 7.651s
+warning: equioscillation property not satisfied, deviation=0.000153
+[A2_rel14_paper] S=12 [1/10] conv=True brut_rel=3.12e-12 d_rel=3.12e-12 d_abs=3.63e-13 den=3.0e-01 meet=False 3.323s
+warning: BRASIL did not converge; dev=9.11e-06, err=7.62e-12
+[A2_abs514_ship] RETRY S=10 [7/2] conv=False d_rel=6.77e-11 d_abs=7.62e-12 den=2.0e-01 meet=False 40.102s
+warning: BRASIL did not converge; dev=1.47e-05, err=3.77e-12
+[A2_rel13_paper] RETRY S=10 [7/2] conv=False d_rel=3.24e-11 d_abs=3.77e-12 den=2.3e-01 meet=False 36.309s
+warning: BRASIL did not converge; dev=1.47e-05, err=3.77e-12
+[A2_abs514_paper] RETRY S=10 [7/2] conv=False d_rel=3.24e-11 d_abs=3.77e-12 den=2.3e-01 meet=False 37.164s
+warning: BRASIL did not converge; dev=4.49e-06, err=3.09e-11
+[A2_rel14_ship] RETRY S=11 [9/1] conv=False d_rel=2.75e-10 d_abs=3.09e-11 den=4.0e-01 meet=False 37.304s
+warning: BRASIL did not converge; dev=4.49e-06, err=3.09e-11
+[A2_rel13_ship] RETRY S=11 [9/1] conv=False d_rel=2.75e-10 d_abs=3.09e-11 den=4.0e-01 meet=False 37.751s
+warning: BRASIL did not converge; dev=3.88e-06, err=1.43e-11
+[A2_rel14_paper] RETRY S=11 [9/1] conv=False d_rel=1.23e-10 d_abs=1.43e-11 den=4.3e-01 meet=False 36.672s
+warning: BRASIL did not converge; dev=0.000102, err=1.09e-12
+[A2_abs514_ship] RETRY S=10 [6/3] conv=False d_rel=9.70e-12 d_abs=1.09e-12 den=1.3e-01 meet=False 33.271s
+warning: BRASIL did not converge; dev=0.000206, err=5.4e-13
+[A2_rel13_paper] RETRY S=10 [6/3] conv=False d_rel=4.64e-12 d_abs=5.40e-13 den=1.5e-01 meet=False 34.082s
+warning: BRASIL did not converge; dev=0.000206, err=5.4e-13
+[A2_abs514_paper] RETRY S=10 [6/3] conv=False d_rel=4.64e-12 d_abs=5.40e-13 den=1.5e-01 meet=False 34.342s
+warning: BRASIL did not converge; dev=4.98e-05, err=1.11e-12
+[A2_rel14_ship] RETRY S=11 [8/2] conv=False d_rel=9.90e-12 d_abs=1.11e-12 den=2.0e-01 meet=False 33.815s
+warning: BRASIL did not converge; dev=4.98e-05, err=1.11e-12
+[A2_rel13_ship] RETRY S=11 [8/2] conv=False d_rel=9.90e-12 d_abs=1.11e-12 den=2.0e-01 meet=False 33.561s
+warning: BRASIL did not converge; dev=0.000162, err=5.14e-13
+[A2_rel14_paper] RETRY S=11 [8/2] conv=False d_rel=4.41e-12 d_abs=5.14e-13 den=2.2e-01 meet=False 32.68s
+warning: BRASIL did not converge; dev=0.00032, err=3.9e-13
+[A2_abs514_ship] RETRY S=10 [5/4] conv=False d_rel=3.47e-12 d_abs=3.90e-13 den=9.6e-02 meet=False 32.646s
+warning: BRASIL did not converge; dev=0.000288, err=1.92e-13
+[A2_rel13_paper] RETRY S=10 [5/4] conv=False d_rel=1.65e-12 d_abs=1.92e-13 den=1.1e-01 meet=False 35.03s
+warning: BRASIL did not converge; dev=0.000288, err=1.92e-13
+[A2_abs514_paper] RETRY S=10 [5/4] conv=False d_rel=1.65e-12 d_abs=1.92e-13 den=1.1e-01 meet=False 35.747s
+warning: BRASIL did not converge; dev=0.000452, err=1.23e-13
+[A2_rel14_ship] RETRY S=11 [7/3] conv=False d_rel=1.09e-12 d_abs=1.23e-13 den=1.2e-01 meet=False 35.411s
+warning: BRASIL did not converge; dev=0.000452, err=1.23e-13
+[A2_rel13_ship] RETRY S=11 [7/3] conv=False d_rel=1.09e-12 d_abs=1.23e-13 den=1.2e-01 meet=False 35.949s
+warning: BRASIL did not converge; dev=0.000988, err=5.62e-14
+[A2_rel14_paper] RETRY S=11 [7/3] conv=False d_rel=4.83e-13 d_abs=5.62e-14 den=1.4e-01 meet=False 35.561s
+warning: BRASIL did not converge; dev=0.000174, err=3.19e-13
+[A2_abs514_ship] RETRY S=10 [4/5] conv=False d_rel=2.83e-12 d_abs=3.19e-13 den=9.1e-02 meet=False 34.7s
+warning: BRASIL did not converge; dev=0.000353, err=1.57e-13
+[A2_rel13_paper] RETRY S=10 [4/5] conv=False d_rel=1.35e-12 d_abs=1.57e-13 den=1.1e-01 meet=False 30.073s
+warning: BRASIL did not converge; dev=0.000353, err=1.57e-13
+[A2_abs514_paper] RETRY S=10 [4/5] conv=False d_rel=1.35e-12 d_abs=1.57e-13 den=1.1e-01 meet=False 29.606s
+warning: BRASIL did not converge; dev=0.00173, err=3.21e-14
+[A2_rel14_ship] RETRY S=11 [6/4] conv=False d_rel=2.85e-13 d_abs=3.21e-14 den=8.3e-02 meet=False 28.871s
+warning: BRASIL did not converge; dev=0.00173, err=3.21e-14
+[A2_rel13_ship] RETRY S=11 [6/4] conv=False d_rel=2.85e-13 d_abs=3.21e-14 den=8.3e-02 meet=False 28.597s
+warning: equioscillation property not satisfied, deviation=7.1e-05
+[A2_abs514_ship] RETRY S=10 [3/6] conv=True d_rel=5.21e-12 d_abs=5.87e-13 den=1.1e-01 meet=False 16.612s
+warning: BRASIL did not converge; dev=0.00672, err=1.46e-14
+[A2_rel14_paper] RETRY S=11 [6/4] conv=False d_rel=1.24e-13 d_abs=1.45e-14 den=9.9e-02 meet=False 26.027s
+warning: BRASIL did not converge; dev=0.000192, err=2.9e-13
+[A2_rel13_paper] RETRY S=10 [3/6] conv=False d_rel=2.49e-12 d_abs=2.90e-13 den=1.3e-01 meet=False 25.232s
+warning: BRASIL did not converge; dev=0.000192, err=2.9e-13
+[A2_abs514_paper] RETRY S=10 [3/6] conv=False d_rel=2.49e-12 d_abs=2.90e-13 den=1.3e-01 meet=False 26.076s
+warning: BRASIL did not converge; dev=0.0046, err=1.82e-14
+[A2_rel14_ship] RETRY S=11 [5/5] conv=False d_rel=1.61e-13 d_abs=1.83e-14 den=7.2e-02 meet=False 24.912s
+warning: BRASIL did not converge; dev=0.0046, err=1.82e-14
+[A2_rel13_ship] RETRY S=11 [5/5] conv=False d_rel=1.61e-13 d_abs=1.83e-14 den=7.2e-02 meet=False 25.154s
+warning: BRASIL did not converge; dev=3.81e-05, err=2.55e-12
+[A2_abs514_ship] RETRY S=10 [2/7] conv=False d_rel=2.26e-11 d_abs=2.55e-12 den=1.6e-01 meet=False 26.985s
+warning: BRASIL did not converge; dev=0.0208, err=8.16e-15
+[A2_rel14_paper] RETRY S=11 [5/5] conv=False d_rel=6.99e-14 d_abs=8.22e-15 den=8.6e-02 meet=False 25.257s
+warning: BRASIL did not converge; dev=8.81e-05, err=1.26e-12
+[A2_rel13_paper] RETRY S=10 [2/7] conv=False d_rel=1.08e-11 d_abs=1.26e-12 den=1.8e-01 meet=False 31.924s
+warning: BRASIL did not converge; dev=0.0038, err=2.2e-14
+[A2_rel14_ship] RETRY S=11 [4/6] conv=False d_rel=1.94e-13 d_abs=2.20e-14 den=7.5e-02 meet=False 32.91s
+warning: BRASIL did not converge; dev=8.81e-05, err=1.26e-12
+[A2_abs514_paper] RETRY S=10 [2/7] conv=False d_rel=1.08e-11 d_abs=1.26e-12 den=1.8e-01 meet=False 34.135s
+warning: BRASIL did not converge; dev=0.0038, err=2.2e-14
+[A2_rel13_ship] RETRY S=11 [4/6] conv=False d_rel=1.94e-13 d_abs=2.20e-14 den=7.5e-02 meet=False 34.248s
+warning: BRASIL did not converge; dev=0.00706, err=9.89e-15
+[A2_rel14_paper] RETRY S=11 [4/6] conv=False d_rel=8.45e-14 d_abs=9.91e-15 den=9.0e-02 meet=False 35.006s
+warning: BRASIL did not converge; dev=2.76e-06, err=3.02e-11
+[A2_abs514_ship] RETRY S=10 [1/8] conv=False d_rel=2.68e-10 d_abs=3.02e-11 den=2.8e-01 meet=False 35.529s
+DONE 1/6 A2_abs514_ship count=11 pair=[5, 5] route=default below_ratio=6.373790384373024
+warning: BRASIL did not converge; dev=5.56e-06, err=1.5e-11
+[A2_rel13_paper] RETRY S=10 [1/8] conv=False d_rel=1.29e-10 d_abs=1.50e-11 den=3.1e-01 meet=False 29.063s
+DONE 2/6 A2_rel13_paper count=11 pair=[5, 5] route=default below_ratio=13.49996360046499
+warning: BRASIL did not converge; dev=0.00196, err=5.68e-14
+[A2_rel14_ship] RETRY S=11 [3/7] conv=False d_rel=5.05e-13 d_abs=5.69e-14 den=9.6e-02 meet=False 26.608s
+warning: BRASIL did not converge; dev=5.56e-06, err=1.5e-11
+[A2_abs514_paper] RETRY S=10 [1/8] conv=False d_rel=1.29e-10 d_abs=1.50e-11 den=3.1e-01 meet=False 27.25s
+warning: BRASIL did not converge; dev=0.00196, err=5.68e-14
+[A2_rel13_ship] RETRY S=11 [3/7] conv=False d_rel=5.05e-13 d_abs=5.69e-14 den=9.6e-02 meet=False 25.654s
+DONE 3/6 A2_abs514_paper count=11 pair=[5, 5] route=default below_ratio=3.1424862712015056
+warning: BRASIL did not converge; dev=0.00215, err=2.59e-14
+[A2_rel14_paper] RETRY S=11 [3/7] conv=False d_rel=2.22e-13 d_abs=2.59e-14 den=1.1e-01 meet=False 23.383s
+warning: BRASIL did not converge; dev=0.000169, err=3.29e-13
+[A2_rel14_ship] RETRY S=11 [2/8] conv=False d_rel=2.92e-12 d_abs=3.29e-13 den=1.5e-01 meet=False 20.718s
+warning: BRASIL did not converge; dev=0.000169, err=3.29e-13
+[A2_rel13_ship] RETRY S=11 [2/8] conv=False d_rel=2.92e-12 d_abs=3.29e-13 den=1.5e-01 meet=False 20.716s
+warning: BRASIL did not converge; dev=0.000184, err=1.51e-13
+[A2_rel14_paper] RETRY S=11 [2/8] conv=False d_rel=1.30e-12 d_abs=1.51e-13 den=1.7e-01 meet=False 20.134s
+warning: BRASIL did not converge; dev=1.4e-05, err=4.97e-12
+[A2_rel14_ship] RETRY S=11 [1/9] conv=False d_rel=4.41e-11 d_abs=4.97e-12 den=2.8e-01 meet=False 20.584s
+DONE 4/6 A2_rel14_ship count=12 pair=[5, 6] route=default below_ratio=16.103279236782573
+warning: BRASIL did not converge; dev=1.4e-05, err=4.97e-12
+[A2_rel13_ship] RETRY S=11 [1/9] conv=False d_rel=4.41e-11 d_abs=4.97e-12 den=2.8e-01 meet=False 20.456s
+DONE 5/6 A2_rel13_ship count=12 pair=[5, 6] route=default below_ratio=1.6103279236782575
+warning: BRASIL did not converge; dev=6.05e-05, err=2.29e-12
+[A2_rel14_paper] RETRY S=11 [1/9] conv=False d_rel=1.97e-11 d_abs=2.29e-12 den=3.0e-01 meet=False 19.278s
+DONE 6/6 A2_rel14_paper count=12 pair=[5, 6] route=default below_ratio=6.9634152470160355
+ALLDONE cells=6 errors=0 wall=405.9s
