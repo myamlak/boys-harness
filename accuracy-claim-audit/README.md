@@ -23,10 +23,13 @@ against an independent MPFR reference.
   `claims_registry.tsv` is the claim classification.
 - `records/` — the captured cell summary `summarize_cells.txt`, the per-row
   judged and degenerate cell counts behind the audit's sixth headline number,
-  and `documented-claims-v5.tsv`, the coverage enumeration of the five
-  documents that state the Boys kernel's accuracy: one documented claim per
-  line, with the document, location, figure, scope and the gate row or book
-  that registers it (or none).
+  and `documented-claims-v5.tsv`, the coverage enumeration of the five prose
+  documents that state the Boys kernel's accuracy (the readme, the manual
+  page, the contract page, the consumer page and the contributing guide),
+  together with the source comments in `src/boys_simd.cpp` and the claim in
+  the shipped public header `include/boys/boys_decl.hpp`: one documented
+  claim per line, with the document, location, figure, scope and the gate
+  row or book that registers it (or none).
 
 ## Headline numbers
 
