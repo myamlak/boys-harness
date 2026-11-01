@@ -1,0 +1,30 @@
+==== knee walk start 2026-10-28T19:15:43 ====
+Traceback (most recent call last):
+  File "C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\_knee-f1\knee_walk_f1.py", line 227, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\_knee-f1\knee_walk_f1.py", line 91, in main
+    g = cs.load_generator(BOYS)
+  File "C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\count_sweep.py", line 821, in load_generator
+    spec.loader.exec_module(mod)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 755, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 892, in get_code
+  File "<frozen importlib._bootstrap_external>", line 950, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\myaml\\dev\\boys\\tools\\gen_boys_coefficients.py'
+EXIT_A=1
+Traceback (most recent call last):
+  File "C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\_knee-f1\knee_walk_f1.py", line 227, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\_knee-f1\knee_walk_f1.py", line 91, in main
+    g = cs.load_generator(BOYS)
+  File "C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\count_sweep.py", line 821, in load_generator
+    spec.loader.exec_module(mod)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 755, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 892, in get_code
+  File "<frozen importlib._bootstrap_external>", line 950, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\myaml\\dev\\boys\\tools\\gen_boys_coefficients.py'
+EXIT_B=1
+==== knee walk end 2026-10-28T19:15:44 ====

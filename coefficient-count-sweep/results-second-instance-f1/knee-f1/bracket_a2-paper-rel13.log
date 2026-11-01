@@ -1,0 +1,10 @@
+cell a2-paper-rel13: target rel:1e-13; a=23.799696304216968 b=57.97867547764148; accepted 12, below 11
+base level 12: MEETS; best [5/6] remez rel=9.8135199887375673e-14 (714.5 s)
+base level 11: misses; best [4/6] remez rel=4.4194001848832721e-13 (667.8 s)
+seed level 12: MEETS; best [5/6] remez rel=9.8135199887375673e-14 (767.5 s)
+seed level 11: misses; best [4/6] remez rel=4.4194001848832721e-13 (576.8 s)
+doubled level 12: MEETS; best [5/6] remez rel=9.8656992176905803e-14 (4513.8 s)
+doubled level 11: misses; best [4/6] remez rel=4.4854778160915337e-13 (4683.5 s)
+doubled-seed level 12: MEETS; best [5/6] remez rel=9.8656992176905803e-14 (3284.3 s)
+doubled-seed level 11: misses; best [4/6] remez rel=4.4854778160915337e-13 (2531.9 s)
+wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\_knee-f1\bracket_a2-paper-rel13.json

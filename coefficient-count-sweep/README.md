@@ -156,7 +156,25 @@ Lawson solve.
 | `results-second-instance-f1/` | `results-second-instance-f1/` | `analysis/second_instance_f1_sweep.py` and `analysis/analyze_second_instance_f1.py`, with `analysis/f1_reference.py` |
 | `results-second-instance-f1-control/` | `results-second-instance-f1-control/` | `analysis/second_instance_f1_sweep.py` with `--function F0` |
 | `recertification/cell_5.json` | `_recert/cell_5.json` | `recertify_ladder.py --cell 5`, over the recorded harness |
-| `analysis/` | the paper's record set, top level | the drivers, analysers and reference named above, with `ladder_analysis.py` |
+| `results-second-instance-f1/knee-f1/` | `_knee-f1/` | `knee_walk_f1.py`, `make_corrected_record.py` and the F1 analysis scripts |
+| `analysis/` | the paper's record set, top level | the drivers, analysers and reference named above, with `ladder_analysis.py` and `validate_tail_instance.py` |
+
+`results-second-instance-f1/knee-f1/` is the paper's `_knee-f1/` block, copied
+verbatim. `knee_walk_f1.py` produced the two walk records with
+`count_sweep.refine_pairs` at the F1 sweep's recorded settings (2,001 nodes,
+Remez 60, Lawson 300, `k <= 8`); `make_corrected_record.py` built
+`corrected/sweep_all.json` from the delivered record and the two walks;
+`bracket_f1.py` produced the paper-width bracket record. `model_table_f1.py`,
+`class_diff_f1.py`, `drift_like_for_like.py`, `verify_record_f1.py` and
+`make_report_tables.py` produced the remaining top-level records and logs.
+`corrected/analysis/`, `corrected/model_table.json`, `corrected/class_diff.json`
+and `corrected/tables.txt` are the same analyses run on the corrected record.
+The scripts hardcode the paper tree's paths; `verify_record_f1.py` also
+hardcodes this repository's `records/` path on the measurement machine.
+
+`analysis/validate_tail_instance.py` is the pure tail's validator named in
+section S1 of the supplement. It was at the top level of the paper's record
+set and is deposited beside the tail driver and analyser.
 
 `recertification/cell_5.json` is the later re-certification of the
 paper-width `rel:1e-15` cell: the record stores 18, the 17-to-19 walk finds no
@@ -176,7 +194,8 @@ also import `f1_reference`. Run them from a directory that holds both.
 
 SHA-256 of every deposited file, with paths relative to this directory. The
 two `results-second-instance-f1/sweep_all*.json` files hold the same bytes and
-hash the same.
+hash the same, as do the knee block's `model_table.json` and
+`model_table_recheck.json`.
 
 **`results-corrected/`**
 
@@ -263,6 +282,49 @@ hash the same.
 | `results-second-instance-f1/sweep_x0_rel_1e-14.csv` | `7b840149a5194cf1a8bd1d87e59549ae430597d6a9709695fb6e32c2f02011a8` |
 | `results-second-instance-f1/sweep_x0_rel_1e-14.json` | `7487f342c6bf8822f835bb6ff11fc58ae79674d30a13fb035509b94389e55269` |
 
+**`results-second-instance-f1/knee-f1/`**
+
+| File | SHA-256 |
+| --- | --- |
+| `results-second-instance-f1/knee-f1/bracket_a2-paper-rel13.json` | `56d9a53136728d9bffa917e38b1863948dec2594752dad68673d8455c2356f5a` |
+| `results-second-instance-f1/knee-f1/bracket_a2-paper-rel13.log` | `d64c3277b84a725d00f36ab8f4918372cfe60a8c1920306a4c1532da9cdf92fa` |
+| `results-second-instance-f1/knee-f1/bracket_f1.py` | `0167525f275a9ddbb9b21a3f1517fd32e8d1f28f07e71cd4b23debfb2fd83377` |
+| `results-second-instance-f1/knee-f1/class_diff.json` | `4ee6ce89541145b60a2e169e454e9fccade08dd5451cba17a7faf135629466b5` |
+| `results-second-instance-f1/knee-f1/class_diff.log` | `e90fb8b4c82d979ff772f6455c0bcf6e21365ea18dde9d1bb0f3f57e6713c3bf` |
+| `results-second-instance-f1/knee-f1/class_diff_f1.py` | `93ade6aa5573b1e66d761fd6261245492700e9c6c0d2f00de0543c1d4e5429ff` |
+| `results-second-instance-f1/knee-f1/compare_f0_control.log` | `49ef0f3d80409e3dfd4abb898a3e46776bc703d9fc111b899723611469ce9611` |
+| `results-second-instance-f1/knee-f1/corrected/analysis/analysis.json` | `c85c485c2d8ab77229408bc1a78d6ecc2683aa442a514a2a4a95a0f7395b01ad` |
+| `results-second-instance-f1/knee-f1/corrected/analysis/comparison.csv` | `a9221e4c51b68ae717c88308251d5cabf4e0c9e3004766a4970677a57a2f733d` |
+| `results-second-instance-f1/knee-f1/corrected/analysis/counts_by_width_target.csv` | `054bc69ae67f90cac2c6a1f244581865fd7b1ea54e206131a5693e4acd6360e4` |
+| `results-second-instance-f1/knee-f1/corrected/analysis/model.csv` | `1ac7cfc67676a6fdb461bbc94649b38084f9d8897783bec6ac48fb737246e2b6` |
+| `results-second-instance-f1/knee-f1/corrected/class_diff.json` | `ff2c72b5e3466658f89d8ce6890b7c975ab87b97cb9ce41ecf6b9490f52b3f86` |
+| `results-second-instance-f1/knee-f1/corrected/model_table.json` | `0701cb75ba6523d35da11e461eece440bd95d1847b20bf21ab728fb85068b914` |
+| `results-second-instance-f1/knee-f1/corrected/sweep_all.json` | `42b8f689ddb4f20fa6a6a5e60c171641f9a6fb7bd6edcbcda92d484e88d0a173` |
+| `results-second-instance-f1/knee-f1/corrected/tables.txt` | `d633ab41b6d8a333ed669e0413fa7de7e64bf6ee754151c2338b15167c91e5a6` |
+| `results-second-instance-f1/knee-f1/corrected_analysis.log` | `af8341a23a5d7b10b636f0020e2ee1ddcf5c380530530970d9dbd5d333a42ebd` |
+| `results-second-instance-f1/knee-f1/corrected_class_diff.log` | `b8458bee5d51d06a3cb1c8d418130db396c89a6e8b02bbe7206c3ba292eefcaf` |
+| `results-second-instance-f1/knee-f1/corrected_model_table.log` | `9401f70452e247b76ead400739692bae0b90a7b876e8735abef989fa09612171` |
+| `results-second-instance-f1/knee-f1/corrected_record.log` | `f15f074f9d8bb4e6008d9bd8405d53cea85df141044004631076e32770929dac` |
+| `results-second-instance-f1/knee-f1/drift_corrected.json` | `5df5c8c4a950717b979ebe722aca3aac1d83c8d5d6b0aa1b965edbe3132aa967` |
+| `results-second-instance-f1/knee-f1/drift_delivered.json` | `ae3b1eb285836ab16b6a9dfcadd4872536482344fe2f3e3e6fd44c3717dfd8bd` |
+| `results-second-instance-f1/knee-f1/drift_like_for_like.py` | `0f2c7831c6a2e1f8273a2dd7db3f9ed13326ee982fc0ed4d374f4ee1d666cd68` |
+| `results-second-instance-f1/knee-f1/knee_walk.log` | `3ba84ca3850a87b9945ce3e481d7aadd47d3f9ab70155c3cbe3e97ce707f1150` |
+| `results-second-instance-f1/knee-f1/knee_walk_a2-2^5-rel14.json` | `9561b6ca6053d3c4e287548e0043fdbe8c96d1db7878a092b63901ae3f65b1f2` |
+| `results-second-instance-f1/knee-f1/knee_walk_a2-paper-rel13.json` | `3c50e25c243029ee81b783ce3235d764eb008261702cf09887cec59368b8ca24` |
+| `results-second-instance-f1/knee-f1/knee_walk_attempt1_badroot.log` | `91422f3bf268829a82d1ac95f3297c0a457444a44d19fe40035e1f8a7e1af402` |
+| `results-second-instance-f1/knee-f1/knee_walk_f1.py` | `e5750e23c77cf619a4665e08b4d62ff681c2c5bf72c659bd9ebdbf4b872f3510` |
+| `results-second-instance-f1/knee-f1/make_corrected_record.py` | `137ccec9d1e553322a5e4de858e79872225f4be497621ca3a62435a04ab13085` |
+| `results-second-instance-f1/knee-f1/make_report_tables.py` | `ac7332c441c7d287b770b6f81026a85be49d39d9414d562f8341c59e8965c757` |
+| `results-second-instance-f1/knee-f1/model_table.json` | `257073d19b99a9785e6fe63648a4e271ec48dedab39e48984da8327d76860174` |
+| `results-second-instance-f1/knee-f1/model_table.log` | `1446e578d8ed348bf880598be165e9f74b790510077f3fedf1cc067351703132` |
+| `results-second-instance-f1/knee-f1/model_table_f1.py` | `97081c42d63cfe46256e0e074f76c6a771e8ce767f3d87213a82a508a79fc0bc` |
+| `results-second-instance-f1/knee-f1/model_table_recheck.json` | `257073d19b99a9785e6fe63648a4e271ec48dedab39e48984da8327d76860174` |
+| `results-second-instance-f1/knee-f1/model_table_recheck.log` | `5705d41d7331190a9363cc8f6b8dcbd3ec55f05fe12eddaf140a838115ebe737` |
+| `results-second-instance-f1/knee-f1/tables_delivered.txt` | `15e5fa65ec5bca2e5562ae4d201874b9d5fcc27e47cd839ae9b61c63007283a8` |
+| `results-second-instance-f1/knee-f1/verify_record.json` | `8f3351d40936a733aa7b7db0df65527826b02da7537d65ea6530183e0b8a6a5f` |
+| `results-second-instance-f1/knee-f1/verify_record.log` | `28946404f33e79047cc2e11b724e940369ccb52a96e5b2a23fd5ed67d819a01f` |
+| `results-second-instance-f1/knee-f1/verify_record_f1.py` | `855b4630a30d2418c698a183f798c9173e5edc06a9303f9ba7df8d38a35a874f` |
+
 **`results-second-instance-f1-control/`**
 
 | File | SHA-256 |
@@ -287,6 +349,7 @@ hash the same.
 | `analysis/ladder_analysis.py` | `b10917ccd8bf96b6810279d185fdf964b7e201408d46220bd019b17b3427a3a0` |
 | `analysis/second_instance_f1_sweep.py` | `7f682420e74bd6cd85fb1cfc57b7b235edeebc258c493ef24562ca184d471ff4` |
 | `analysis/tail_instance_sweep.py` | `a966005882646cf81f25b33d3bf200bd25d819c0fdc6347ec9f1db11955f8e76` |
+| `analysis/validate_tail_instance.py` | `06a224e7ef82a6672e15f0131a388998c4a0d0f77be1836c45a1bca3c7f429bd` |
 
 ## Not deposited
 

@@ -1,0 +1,101 @@
+{
+ "cell": "a2-2^5-rel14",
+ "script_digest": "e5750e23c77cf619a4665e08b4d62ff681c2c5bf72c659bd9ebdbf4b872f3510",
+ "count_sweep_digest": "a5def761c8f18d585396210b28864dc6c4a108d2cfda4f3788d87a7f6c854f10",
+ "f1_reference_digest": "711d02e580d7b4fc5d258f21304ea02d37c2fff6bb1b6ba6c208d18da914e56e",
+ "record": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\results-second-instance-f1\\sweep_all.json",
+ "record_digest": "a08cef0933d08d656e8ff46a23d4b9bd5c5f0b54fa42b688dee56407da462fb3",
+ "boys_root": "C:\\Users\\myaml\\dev\\_mainonly",
+ "generator_digest": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180",
+ "generator_digest_matches_record": true,
+ "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+ "platform": "Windows-11-10.0.26200-SP0",
+ "kernel_version": null,
+ "function": "F1",
+ "edge": "a2",
+ "a": "23.799696304216968",
+ "b": "87.799696304216968",
+ "width": "64.0",
+ "target": "rel:1e-14",
+ "settings": {
+  "nodes": 2001,
+  "refine_outer": 300,
+  "remez_iters": 60,
+  "k_max": 8,
+  "workers": 4,
+  "acceptance": "worse of fused and separate binary64 evaluation; count_sweep.meets inside refine_pairs"
+ },
+ "recorded": {
+  "stored": 21,
+  "m": 17,
+  "k": 3,
+  "solver": "remez",
+  "delivered_rel": "2.5814192085743496e-15",
+  "delivered_abs": "9.2485533949586376e-18",
+  "below_meets": true
+ },
+ "levels": [
+  {
+   "stored": 20,
+   "pairs": [
+    "[18/1]",
+    "[17/2]",
+    "[16/3]",
+    "[15/4]",
+    "[14/5]",
+    "[13/6]",
+    "[12/7]",
+    "[11/8]"
+   ],
+   "n_hits": 1,
+   "meets": true,
+   "seconds": 2157.368,
+   "hits": [
+    {
+     "m": 16,
+     "k": 3,
+     "solver": "remez",
+     "rel": "7.6654044836520552e-15",
+     "abs": "2.7463149892715112e-17",
+     "at_x_rel": "24.823696304216968",
+     "at_x_abs": "24.823696304216968"
+    }
+   ]
+  },
+  {
+   "stored": 19,
+   "pairs": [
+    "[17/1]",
+    "[16/2]",
+    "[15/3]",
+    "[14/4]",
+    "[13/5]",
+    "[12/6]",
+    "[11/7]",
+    "[10/8]"
+   ],
+   "n_hits": 0,
+   "meets": false,
+   "seconds": 1878.525,
+   "hits": []
+  }
+ ],
+ "started_utc": "2026-10-28T18:43:06Z",
+ "walk_seconds": 4035.897,
+ "corrected": {
+  "stored": 20,
+  "first_missing_level": 19,
+  "floor": 3,
+  "truncated_at_floor": false,
+  "moved": 1,
+  "best": {
+   "m": 16,
+   "k": 3,
+   "solver": "remez",
+   "rel": "7.6654044836520552e-15",
+   "abs": "2.7463149892715112e-17",
+   "at_x_rel": "24.823696304216968",
+   "at_x_abs": "24.823696304216968"
+  }
+ }
+}
