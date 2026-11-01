@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Print the six headline numbers of the paper from the deposited records.
+"""Print the headline numbers of the paper from the deposited records.
 
 Run from this directory, or point it at a copy of the audit material:
 
     python headline_numbers.py
     python headline_numbers.py --root /path/to/boys-harness/accuracy-claim-audit
 
-The first five numbers come from the two claim registries, and the sixth
+The first six numbers come from the two claim registries, and the seventh
 from the captured cell summary. The registries and the cell summary,
-records/summarize_cells.txt, are in the boys-harness repository, so all six
-print from that repository alone; when the cell summary is absent the script
-says so rather than guessing.
+records/summarize_cells.txt, are in the boys-harness repository, so all of
+them print from that repository alone; when the cell summary is absent the
+script says so rather than guessing.
 
 Only the Python standard library is used.
 """
@@ -27,24 +27,32 @@ def read_tsv(path):
 
 
 def boost_counts(path):
-    """Total documented statements, and the strictly row-shaped count."""
+    """Total documented statements, and the row-shaped count.
+
+    The registry's row_shaped marker records the Airy sentence as row-shaped
+    only when its stated figure is read as a bound. That is the paper's
+    interpreted reading, not its strict one: the paper counts no Boost
+    statement as strictly row-shaped.
+    """
     rows = read_tsv(path)
     total = sum(int(row["count"]) for row in rows)
-    row_shaped = sum(
+    interpreted = sum(
         int(row["count"])
         for row in rows
         if row["row_shaped"].strip().lower() == "yes"
     )
-    return total, row_shaped
+    return total, interpreted
 
 
 def crlibm_counts(path):
-    """Documented claims, and the strictly row-shaped count.
+    """Documented claims, the strict count and the interpreted count.
 
     A documented claim is a tier-A or tier-B entry for a named function. The
     tier-B entry for "all functions" is a global bound over the library, not
     a claim about one entry point, and is excluded by the paper's counting
-    rule. A strictly row-shaped entry is class ROW.
+    rule. A strictly row-shaped entry is class ROW. The interpreted count adds
+    class INTERP, which the paper counts as row-shaped when the stated figure
+    is read as a bound.
     """
     rows = read_tsv(path)
     claims = [
@@ -53,8 +61,11 @@ def crlibm_counts(path):
         if row["tier"] in ("A", "B")
         and row["function"].strip() != "all functions"
     ]
-    strict = sum(1 for row in rows if row["class"].strip() == "ROW")
-    return len(claims), strict
+    strict = sum(1 for row in claims if row["class"].strip() == "ROW")
+    interpreted = sum(
+        1 for row in claims if row["class"].strip() in ("ROW", "INTERP")
+    )
+    return len(claims), strict, interpreted
 
 
 def boost_false_claims(cells_path, rows_path):
@@ -114,9 +125,9 @@ def main():
             print(f"missing: {path}", file=sys.stderr)
         return 2
 
-    boost_total, boost_strict = boost_counts(boost_tsv)
-    crlibm_claims, crlibm_strict = crlibm_counts(crlibm_tsv)
-    together = boost_strict + crlibm_strict
+    boost_total, boost_interpreted = boost_counts(boost_tsv)
+    crlibm_claims, crlibm_strict, crlibm_interpreted = crlibm_counts(crlibm_tsv)
+    together = boost_interpreted + crlibm_strict
 
     if cells_txt.is_file():
         false_total = boost_false_claims(cells_txt, rows_csv) + crlibm_false_claims(
@@ -131,10 +142,14 @@ def main():
         )
 
     print(f"{boost_total:>3}  documented accuracy statements in Boost.Math")
-    print(f"{boost_strict:>3}  strictly row-shaped among them")
+    print(f"{boost_interpreted:>3}  row-shaped under interpretation among them")
     print(f"{crlibm_claims:>3}  documented accuracy claims in crlibm")
     print(f"{crlibm_strict:>3}  strictly row-shaped among them")
-    print(f"{together:>3}  strictly row-shaped across the two")
+    print(f"{crlibm_interpreted:>3}  row-shaped if interpreted accepted among them")
+    print(
+        f"{together:>3}  row-shaped across the two under the paper's reading "
+        "(Boost interpreted, crlibm strict)"
+    )
     if false_total is None:
         print(f"  ?  row-shaped claims measured false{false_note}")
     else:
