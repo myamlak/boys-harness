@@ -1,0 +1,2 @@
+paper {'counts': {'abstain': 65}, 'ratio': {'min': 8.81003935436083e-05, 'median': 0.007362120699913551, 'max': 1.0230776052398032}, 'trunc_over_charge': 1}
+worst {'counts': {'abstain': 65}, 'ratio': {'min': 6.803054558904265e-06, 'median': 0.001769951818097929, 'max': 0.43846183081705853}, 'trunc_over_charge': 0}

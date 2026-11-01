@@ -1,0 +1,9 @@
+===== A (boys-crossover) NON-GIT GATE CHECKS
+placeholders: main.tex owner inputs pending at lines [43, 57, 1451, 1454, 1459, 1511, 1523]
+placeholders: supplement/main.tex owner inputs pending at lines [23, 50, 51]
+placeholders: cover-letter.md owner inputs pending at lines [3, 13, 16, 17, 25, 82, 94, 98, 101, 109]
+abstract: 250 words (limit 250) ok
+build: main.log overfull 0, warnings 0
+build: supplement/main.log overfull 0, warnings 0
+SKIPPED: tags and deposits (they invoke git in the boys and harness repositories; the user instruction forbids git)
+PASS

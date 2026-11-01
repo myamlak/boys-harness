@@ -1,0 +1,22 @@
+wrote tables/frontier.tex and figures/per-order-ratio.dat
+margin 0    commits 100 right  83 not right 17 abstains  32
+  abs selected 1.5811e-16 fixed 1.63733e-16 ratio 0.9657
+  rel selected 2.8537e-13 fixed 2.8537e-13 ratio 1.0000
+margin 0.25 commits  96 right  82 not right 14 abstains  36
+  abs selected 1.5811e-16 fixed 1.63733e-16 ratio 0.9657
+  rel selected 2.8537e-13 fixed 2.8537e-13 ratio 1.0000
+margin 0.5  commits  93 right  80 not right 13 abstains  39
+  abs selected 1.5811e-16 fixed 1.63733e-16 ratio 0.9657
+  rel selected 2.8537e-13 fixed 2.8537e-13 ratio 1.0000
+margin 1    commits  65 right  65 not right  0 abstains  67
+  abs selected 1.5811e-16 fixed 1.63733e-16 ratio 0.9657
+  rel selected 2.8537e-13 fixed 2.8537e-13 ratio 1.0000
+margin 2    commits   4 right   4 not right  0 abstains 128
+  abs selected 1.5811e-16 fixed 1.5811e-16 ratio 1.0000
+  rel selected 2.48075e-16 fixed 2.7686e-16 ratio 0.8960
+margin 4    commits   4 right   4 not right  0 abstains 128
+  abs selected 1.5811e-16 fixed 1.5811e-16 ratio 1.0000
+  rel selected 2.48075e-16 fixed 2.7686e-16 ratio 0.8960
+margin 8    commits   4 right   4 not right  0 abstains 128
+  abs selected 1.5811e-16 fixed 1.5811e-16 ratio 1.0000
+  rel selected 2.48075e-16 fixed 2.7686e-16 ratio 0.8960

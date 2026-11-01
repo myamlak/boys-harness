@@ -1,0 +1,49 @@
+closed form vs the kernel product form: worst relative deviation 3.2021e-71 at n=16 x=11.20230505
+
+=== second experiment
+cells: 27588, model arguments: 572
+validation at eta=0: 0 of 132 states differ from prediction.csv
+score at margin 1.0, eta=0   : commits 67, right 67, abstains 65
+score at margin 1.0, eta=2^-52: commits 65, right 65, abstains 67
+per band-metric at margin 1.0 (eta=0 -> eta=2^-52):
+  A1 absolute 13/13/20 -> 13/13/20; changed rows 0 []
+  A1 relative 10/10/23 ->  9/ 9/24; changed rows 1 [(1, 'ship', 'abstain')]
+  A2 absolute 24/24/ 9 -> 24/24/ 9; changed rows 0 []
+  A2 relative 20/20/13 -> 19/19/14; changed rows 1 [(9, 'ship', 'abstain')]
+margin ladder, aggregate commits/right/abstains (eta=0 -> eta=2^-52):
+  margin 0.0  100/ 83/ 32 -> 100/ 83/ 32
+  margin 0.25  95/ 82/ 37 ->  96/ 82/ 36
+  margin 0.5   93/ 81/ 39 ->  93/ 80/ 39
+  margin 1.0   67/ 67/ 65 ->  65/ 65/ 67
+  margin 2.0    5/  5/127 ->   4/  4/128
+  margin 4.0    4/  4/128 ->   4/  4/128
+  margin 8.0    4/  4/128 ->   4/  4/128
+arithmetic widening sigma_new/sigma_old over the 33 orders:
+  A1 absolute min 1.145880992 at n=9, max 1.808516628 at n=4
+  A1 relative min 1.145880992 at n=9, max 1.808516628 at n=4
+  A2 absolute min 1.004817362 at n=1, max 1.122205700 at n=16
+  A2 relative min 1.004817362 at n=1, max 1.122205700 at n=16
+
+=== first experiment
+cells: 308649, model arguments: 8040
+validation at eta=0: 0 of 132 states differ from prediction.csv
+score at margin 1.0, eta=0   : commits 69, right 68, abstains 63
+score at margin 1.0, eta=2^-52: commits 68, right 67, abstains 64
+per band-metric at margin 1.0 (eta=0 -> eta=2^-52):
+  A1 absolute 14/13/19 -> 14/13/19; changed rows 0 []
+  A1 relative 11/11/22 -> 10/10/23; changed rows 1 [(1, 'ship', 'abstain')]
+  A2 absolute 23/23/10 -> 23/23/10; changed rows 0 []
+  A2 relative 21/21/12 -> 21/21/12; changed rows 0 []
+margin ladder, aggregate commits/right/abstains (eta=0 -> eta=2^-52):
+  margin 0.0   99/ 85/ 33 ->  99/ 84/ 33
+  margin 0.25  96/ 84/ 36 ->  95/ 83/ 37
+  margin 0.5   93/ 83/ 39 ->  92/ 81/ 40
+  margin 1.0   69/ 68/ 63 ->  68/ 67/ 64
+  margin 2.0    7/  6/125 ->   6/  5/126
+  margin 4.0    4/  3/128 ->   4/  3/128
+  margin 8.0    4/  3/128 ->   4/  3/128
+arithmetic widening sigma_new/sigma_old over the 33 orders:
+  A1 absolute min 1.145880992 at n=9, max 1.808516628 at n=4
+  A1 relative min 1.145880992 at n=9, max 1.808516628 at n=4
+  A2 absolute min 1.004819171 at n=1, max 1.122214805 at n=16
+  A2 relative min 1.004819171 at n=1, max 1.122214805 at n=16
