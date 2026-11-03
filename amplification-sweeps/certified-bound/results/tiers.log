@@ -1,0 +1,15 @@
+primary_sampled400_paper all: deposit {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0}
+   committed: deposit {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0}
+sampled100_paper all: deposit {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0}
+   committed: deposit {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0}
+sampled1600_paper all: deposit {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0}
+   committed: deposit {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0}
+sampled400_paper_strictsize all: deposit {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0}
+   committed: deposit {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0}
+sampled400_worstcharge all: deposit {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0}
+   committed: deposit {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0}
+coef_paper all: deposit {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0}
+   committed: deposit {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0}
+crude_paper all: deposit {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 132, 'agree': 0, 'opposite': 0}
+   committed: deposit {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0} our C {'certified': 0, 'overlap': 65, 'agree': 0, 'opposite': 0}
+EXIT 0

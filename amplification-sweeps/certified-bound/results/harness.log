@@ -1,0 +1,9 @@
+counts {'committed': 65, 'cert_overlap': 65, 'trunc_agree': 49, 'trunc_opposite': 16}
+trunc agree 49 opposite 16
+paper charge/loser |t|: median 50.22395288436263  cert charge/loser |t|: median 83.27064776166068
+over the 49 agreeing cells:
+  paper combined charge / gap: median 57.39355678540945810858241147609504865797833781438984184293493687202482   certified combined charge / gap: median 85.2258201558907970820178541308166437117987970223987467417424174409452
+loser delivered/truncation over all cells: signed median 9.57302184326235 sign-blind median 9.57302184326235
+loser delivered/truncation over agreeing cells: signed median 6.273856942285998 sign-blind median 6.273856942285998
+charge violations: cert 0 paper 5
+exact CSV cross-check: 65 max 1.1671903103190006e-24
