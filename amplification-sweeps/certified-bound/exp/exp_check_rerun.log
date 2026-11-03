@@ -1,0 +1,7 @@
+arguments 9541
+worst |delta|/ref in 2^-53 units: 0.999662996081 at x = 11.084208097312864
+worst relative: 1.10984887511e-16
+arguments above 0.5 unit: 2585 above 1 unit: 0
+python math.exp mismatches: 0
+half-scaling mismatches: 0
+conditional eta_E <= 2^-52 supported: True

@@ -3,6 +3,7 @@ __pycache__/
 build/
 build-*/
 results/
+!amplification-sweeps/certified-bound/results/
 results-*/
 data/
 sweep1

@@ -1,0 +1,12 @@
+cells 55176 modes {'exact': 33, 'product': 27588, 'downward': 8679, 'seed': 572, 'recursed': 8628, 'same-fit': 9676}
+validation: violations 0 worst |r|/C 0.71875 at ('A1', 0.0, 24, 'ship') population band inside 264 / 264
+model-cell counts {'all_overlap': 132, 'committed': 65, 'committed_overlap': 65, 'trunc_agree': 50, 'abstain': 67, 'abstain_overlap': 67, 'trunc_opposite': 15}
+band counts {'all_overlap': 132, 'committed': 65, 'committed_overlap': 65, 'trunc_agree': 53, 'abstain': 67, 'abstain_overlap': 67, 'trunc_opposite': 12}
+committed 65 trunc agree/opposite 50 / 15 loser zero 65 |r|>|t| 51 need median 84.97303508718458 C/|t| median 81.50948656848152
+smallest need factors:
+  A2 relative 8 ship product t_l=2.659e-14 C_l=2.241e-13 r_l=3.926e-16 t_w=1.924e-16 gap=2.639e-14 need=9.0
+  A2 relative 7 ship product t_l=1.455e-14 C_l=1.347e-13 r_l=2.623e-15 t_w=1.191e-16 gap=1.443e-14 need=9.9
+  A2 relative 6 ship product t_l=8.569e-15 C_l=9.105e-14 r_l=1.599e-15 t_w=8.044e-17 gap=8.488e-15 need=11.3
+  A2 relative 5 ship product t_l=4.373e-15 C_l=6.993e-14 r_l=8.212e-16 t_w=5.940e-17 gap=4.313e-15 need=17.0
+  A1 relative 0 ship product t_l=9.295e-17 C_l=3.406e-15 r_l=1.839e-16 t_w=8.880e-18 gap=8.407e-17 need=47.0
+EXIT 0
