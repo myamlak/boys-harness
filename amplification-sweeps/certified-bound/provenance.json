@@ -1,0 +1,348 @@
+{
+ "record": "certified per-call rounding bound for the two region-A Boys entries, Paper A (Boys route comparison)",
+ "generated_utc": "2026-11-03T20:52:52.098862+00:00",
+ "kernel": {
+  "tag": "v5.2.4",
+  "commit": "762c65fa1526fc34833dfd0d1e6118e20cb4097f",
+  "tree": "C:/Users/myaml/dev/_boys-tags",
+  "headers": {
+   "boys_coefficients.hpp": {
+    "bytes": 143213,
+    "sha256": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204"
+   },
+   "boys_coefficients_d_coarse_cheb.hpp": {
+    "bytes": 36494,
+    "sha256": "7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e"
+   },
+   "boys_impl.hpp": {
+    "bytes": 149207,
+    "sha256": "4a384f8d3303953a65379b4b83707c17b6d36aac0044a7feb0bbc33867a7391b"
+   }
+  },
+  "generator": {
+   "gen_boys_coefficients.py": {
+    "bytes": 440274,
+    "sha256": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180"
+   }
+  },
+  "coefficient_identity_with_sweep": "the sweep's provenance.json records boys_coefficients.hpp sha256 8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204 in its v5.1.1 tree; the v5.2.4 header has the same digest, so the stored fits and thresholds the sweep evaluated are the ones this record bounds"
+ },
+ "sweep": {
+  "path": "C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/sweeps/amplification_form",
+  "provenance": {
+   "provenance.json": {
+    "bytes": 24538,
+    "sha256": "a1ed6ea36dacb67163392eba46556ed2504b2eaa65e3f2122114bf9f83ff38d7"
+   }
+  },
+  "boys_commit": "834bdbb18a30ac8538b519436429f78d41f187ce",
+  "boys_describe": "v5.1.1",
+  "compiler": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\cl.EXE",
+  "flags": "/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I C:\\Users\\myaml\\dev\\_boys-v511\\include C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\amplification_form\\sweep2.cpp C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\amplification_form\\build\\sweep2.obj C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\amplification_form\\build\\sweep2.exe",
+  "machine": {
+   "logical_processors": 12,
+   "machine": "AMD64",
+   "node": "trompek",
+   "platform": "Windows-11-10.0.26200-SP0",
+   "processor": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+   "python": "3.14.7"
+  },
+  "files": {
+   "cells.csv": {
+    "bytes": 1914945,
+    "sha256": "2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6"
+   },
+   "per_order.csv": {
+    "bytes": 12816,
+    "sha256": "e1ea8f51e37367ddf1f5814e3538164fba691d6b6c6a5fb73f700463f8d1b656"
+   },
+   "prediction.csv": {
+    "bytes": 13346,
+    "sha256": "305b2a28392c48a6eae355a9e8cca04289c214899b165464ced917d4243702eb"
+   },
+   "prediction_record.csv": {
+    "bytes": 18381,
+    "sha256": "d146ab20bfe0bbcded9f241129359dfd0414c022f437d164c59c05ed03c8b218"
+   },
+   "band_summary.csv": {
+    "bytes": 581,
+    "sha256": "ef8a89da0b33a92ca1b652f4683660f2aebfb5c9449d299652a556f17f443f10"
+   },
+   "summary.txt": {
+    "bytes": 15593,
+    "sha256": "1a848d5eac72d8c167d58a3d3f838beaed9e1a67165d33cc6db93f1c1d8a9216"
+   }
+  },
+  "reference": {
+   "reference.csv": {
+    "bytes": 1825960,
+    "sha256": "514411570e902bc2320932a8ae6200d46e11d950471994c80c2775871f9a528d"
+   }
+  },
+  "model_code": {
+   "analyze.py": {
+    "bytes": 45141,
+    "sha256": "75745b378424098cb597e653a972040489a71bdc7c8195991fde89bc28dd994e"
+   }
+  },
+  "model_functions_used": [
+   "prediction.csv / prediction_record.csv: the 132 comparisons and the model's 65 commitments",
+   "per_order.csv: each entry's worst absolute and relative cells",
+   "cells.csv: the delivered recursed and direct doubles",
+   "reference.csv: 60-digit F_n at 836 arguments"
+  ]
+ },
+ "deposit": {
+  "path": "C:/Users/myaml/dev/_harness-v1023/amplification-sweeps/apriori-bound",
+  "files": {
+   "bounds.py": {
+    "bytes": 19808,
+    "sha256": "9b14510955f3fc577b2f1e4019d0422826d4f311f439378b30f202e02366345d"
+   },
+   "exact.py": {
+    "bytes": 2410,
+    "sha256": "509a4f22e8d6c1630f8d01cdf458b6521616ff526810e30cff0d459c5ee8a89e"
+   },
+   "run_all.py": {
+    "bytes": 16889,
+    "sha256": "9837f96171d8416b84bfd34d99f0a8d6b52aab4c5d09628163e0d1d47f07a7af"
+   },
+   "exact_trunc_cert.py": {
+    "bytes": 4167,
+    "sha256": "85b4c612e9d0ec159c4a0d5b34f2efd8fdc422efa08520e41135e584ee2b37d8"
+   },
+   "exact_amplification_form.csv": {
+    "bytes": 40312,
+    "sha256": "2416cee86e8924d7d58b40deffbc9698a2ea7d5c0d4f738852678332ae0bc46c"
+   },
+   "README.md": {
+    "bytes": 7531,
+    "sha256": "988fee1acaab08bdd348ef742f7509810ba11ff3379c1962ad452595ab5bd0b5"
+   }
+  },
+  "role": "the existing a priori-bound method's certified truncation intervals and its seven variants; this record keeps them and replaces the heuristic charge with the per-call running-error radius",
+  "not_modified": true
+ },
+ "manuscript": {
+  "path": "C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/main.tex",
+  "sha256": "1467d5dc9b18fcce04c8769894d0b5840abcfbc99a3677bdfc590cd51149e9d9",
+  "read_only": true,
+  "section_read": "5.6 (lines 786-814), the a priori failure paragraph whose 16/49, 9.6 and 93 are checked"
+ },
+ "exponential": {
+  "probe_source": {
+   "exp_probe.cpp": {
+    "bytes": 1163,
+    "sha256": "a393f786d9456cf17a613959c084ceeeba69e288e004c2f990bc75e2505a2233"
+   },
+   "exp_check.py": {
+    "bytes": 1639,
+    "sha256": "534ffaf150c2d3dbc7a0c8c5b645a46a04d45584994ca310141d28bed209c7ca"
+   }
+  },
+  "probe_binary": {
+   "exp_probe.exe": {
+    "bytes": 178176,
+    "sha256": "8a65b3650a06ef5b6fd5c2d84ef5a24fe3f0cc383274d90b74c0a615a4873f0e"
+   }
+  },
+  "bit_file": {
+   "exp_bits.txt": {
+    "bytes": 496132,
+    "sha256": "493afdc2e62ac94c3a38cdf994bd3b587ffa649ac95c32eda90c60542febd95d"
+   }
+  },
+  "bit_input": {
+   "xbits_in.txt": {
+    "bytes": 162197,
+    "sha256": "38b52c6f99d4425dca39b3d40ca3609bdcb4ee97ba0ee78bf9909fc51a99e741"
+   }
+  },
+  "reproduced_output": {
+   "exp_bits_reproduced.txt": {
+    "bytes": 496132,
+    "sha256": "493afdc2e62ac94c3a38cdf994bd3b587ffa649ac95c32eda90c60542febd95d"
+   }
+  },
+  "analysis_log": {
+   "exp_check.log": {
+    "bytes": 278,
+    "sha256": "5a0f51fd44d641d4be05704aca75ee6588da67e4f8903b160fc94fc42a1dbcad"
+   }
+  },
+  "reproduction": "the deposited probe binary rerun on the input bits recovered from exp_bits.txt reproduces the file byte for byte (cmp exit 0, 2026-11-03); the build flags above are the measuring session's",
+  "arguments": 9541,
+  "compiler": "MSVC 14.51.36231, host x64",
+  "flags": "/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2",
+  "worst_relative_over_2^-53": 0.999662996081,
+  "worst_argument": 11.084208097312864,
+  "arguments_above_half_unit": 2585,
+  "arguments_above_one_unit": 0,
+  "python_math_exp_bit_mismatches": 0,
+  "half_scaling_mismatches": 0,
+  "conditional_eta_E": "2^-52",
+  "evidence": "the probe prints std::exp(-x) bits at every argument; the worst relative departure is 0.999662996081 * 2^-53 (0.4998 ulp), so eta_E <= 2^-52 holds with a 2x margin; Python math.exp matches bit for bit at all 9541 arguments and 0.5*exp(-x) is exact",
+  "assumption": "the bound is conditional on eta_E <= 2^-52, which the probe supports on this machine and toolchain; a different libm is outside the evidence"
+ },
+ "oracle_cross_check": {
+  "files": {
+   "oracle_check.csv": {
+    "bytes": 5517,
+    "sha256": "a1c32aaa96b82d57fb4102908f3dd4547dfa8754637735b4568b62a9f207418e"
+   },
+   "oracle_check.log": {
+    "bytes": 2982,
+    "sha256": "9faa2cb8f74a5d6d10d4cb4a933a39fd60ad1963985beacdc261940746b12a83"
+   },
+   "dps_check.log": {
+    "bytes": 435,
+    "sha256": "cfe9beca11bcec02ed9e103a4694944f0ed37a28d5269708baa196f40585f125"
+   }
+  },
+  "scripts": {
+   "oracle_check.py": {
+    "bytes": 2117,
+    "sha256": "9b25d3be24d8ba3330ffa6f19bf9ec303e90e8ba47eb7f24493b47d03df6f488"
+   },
+   "dps_check.py": {
+    "bytes": 1365,
+    "sha256": "8fd1dadd8a91ac4e03fbc2ca47c5729663857643d5b1d145c25d95d88f3316ab"
+   }
+  },
+  "cells": 60,
+  "findings": "59 of 60 cells agree with the deposit's independent identity oracle to 8.2e-50 or better; one small-x product cell (A1, x=4.0666245819265257e-4, n=24) differs by 7.99e-24 because the oracle's dps-70 quadrature is inaccurate there.  Our route's truncation is stable at dps 70/100/140 and agrees with an independent hyp1f1 evaluation of F_n to 4.4e-65; the oracle converges to our value at dps 140.  The record's truncation values are unaffected.",
+  "relevance": "evidence that the exact-real route evaluates the same truncation the deposit certifies; the outlier is an oracle quadrature limit, not a route error"
+ },
+ "results": {
+  "per_cell": {
+   "cells_cert.csv": {
+    "bytes": 11044412,
+    "sha256": "8041c727ac90c6d0ff9bc5552738e91ca9fd7abe09973ea0fad43756ba62fa6a"
+   },
+   "band_cert.csv": {
+    "bytes": 24365,
+    "sha256": "1ecc53f44a18b1acf867812cf00bf74e0f4842abcbc2d925991d09a734d2e368"
+   },
+   "model_cells.csv": {
+    "bytes": 47602,
+    "sha256": "d76f2737c80e9922e7e22432134ded5a1dd0eca33f925c2853fca3de25426efb"
+   },
+   "harness_cells.csv": {
+    "bytes": 27317,
+    "sha256": "4237590c13b1e62f293572564406aab49539eead2ff335d4f4e83fa2a386aec0"
+   },
+   "tiers_cells.csv": {
+    "bytes": 156072,
+    "sha256": "cf286c667e64fed05d5580850243bc2e4b7f104c58047a52b8e64ea2e71f74cd"
+   }
+  },
+  "summaries": {
+   "summary.json": {
+    "bytes": 156248,
+    "sha256": "75c165fed51c91cdbb4a9546a98b5d526304a40114ba37424b1c0469fae0509a"
+   },
+   "tiers_summary.json": {
+    "bytes": 3210,
+    "sha256": "5ddf14fa699a8e59858c22cf6c34911f730fe286547d524f03a737425121dcd2"
+   },
+   "commands.md": {
+    "bytes": 4317,
+    "sha256": "31b60a02a8ecb3d0219c27af7e39a9e059cd085c2f3e9d9d54f4277444bac3eb"
+   }
+  },
+  "logs": {
+   "certify.log": {
+    "bytes": 1248,
+    "sha256": "461cbb84463c2ac71de8855f76eaef94004fe76201e915ecd2d8d9f9f6217a04"
+   },
+   "harness.log": {
+    "bytes": 783,
+    "sha256": "4a99d94154c2d091b059c975d535aea3d67a1d8c117c864210ca59c69bfba09c"
+   },
+   "replay.log": {
+    "bytes": 261,
+    "sha256": "8ab142b8ee1161a33a9422151b97beef568a53e5cc420b7cd584b04a987f611f"
+   },
+   "tiers.log": {
+    "bytes": 2150,
+    "sha256": "0f3db024f37b6f644405d4e446cf38bdf10e5ccd5bcbb4970959eb4ded3b6fbf"
+   },
+   "oracle_check.log": {
+    "bytes": 2982,
+    "sha256": "9faa2cb8f74a5d6d10d4cb4a933a39fd60ad1963985beacdc261940746b12a83"
+   },
+   "dps_check.log": {
+    "bytes": 435,
+    "sha256": "cfe9beca11bcec02ed9e103a4694944f0ed37a28d5269708baa196f40585f125"
+   },
+   "paper93.log": {
+    "bytes": 406,
+    "sha256": "aa088bcb10eb39dca3641c284dd229d545d24cdcebbf4d7690e377f254ca2ab9"
+   }
+  }
+ },
+ "assumptions": {
+  "rounding": "round-to-nearest, IEEE-754 binary64, no flush-to-zero",
+  "evaluation": "the kernel's exact operation sequence at EvalScheme::kSplitClenshaw, DivisionForm::kRefinedReciprocal, with the hoisted exp(-x)/2 shared by the recurrence",
+  "overflow": "no overflow at the tested cells; the largest delivered magnitude is recorded in results/summary.json",
+  "underflow": "the reference grid includes x=0 and the subnormal x=5e-324; the x=0 branch is one correctly rounded division per order, and at the subnormal argument no term carrying the result underflows (the delivered value is inside the interval, as validation shows)",
+  "radius": "first-order running-error sums with SAFETY=1+2^-40; every rounding at u=2^-53, accumulation in double",
+  "truncation": "the exact-real route value at 70-digit mpmath minus the 60-digit reference, with EPS_BASE=1e-45 and 2^-51|t| for the delivered comparison; the deposit's independent identity oracle agrees on the checked cells"
+ },
+ "record_files": {
+  "code": {
+   "model.py": {
+    "bytes": 15472,
+    "sha256": "e6050e4ceffac8b432f61332b8df54fd3a14613f15be612f640599d2afc1c81f"
+   },
+   "exactroute.py": {
+    "bytes": 4465,
+    "sha256": "417db8e48c4de8f2a14a22347fc6da6eb8bbde9d8b7ea689773f7e05ce706a9d"
+   },
+   "certify.py": {
+    "bytes": 18954,
+    "sha256": "5060d8bd9a0980cb9e5503481f3079b6c762e72ae71945fe03849825b9e3849e"
+   },
+   "tiers.py": {
+    "bytes": 7843,
+    "sha256": "ecc17416ea88eb3222da883158ea6c93c64518a644d10a86a67a61f5f6ba1090"
+   },
+   "replay.py": {
+    "bytes": 2863,
+    "sha256": "872d74f7b56be4799ed35fe29a97a15f343a1fc6d57fc6d7ec111d81bfbec82c"
+   },
+   "oracle_check.py": {
+    "bytes": 2117,
+    "sha256": "9b25d3be24d8ba3330ffa6f19bf9ec303e90e8ba47eb7f24493b47d03df6f488"
+   },
+   "make_provenance.py": {
+    "bytes": 10125,
+    "sha256": "71538fa3725e11c2224d4d89e92fcdb5ad139cc915f64798905a5fca79a4184a"
+   }
+  },
+  "explore": {
+   "harnesscells.py": {
+    "bytes": 9561,
+    "sha256": "4fab0caf7c84656340b417dd6b7bb41eeadc72d0214c9924cd424a9a93c9fc86"
+   },
+   "dps_check.py": {
+    "bytes": 1365,
+    "sha256": "8fd1dadd8a91ac4e03fbc2ca47c5729663857643d5b1d145c25d95d88f3316ab"
+   },
+   "paper93.py": {
+    "bytes": 5292,
+    "sha256": "f72d52690956fbca1e1afbeada426c208546cef46557632f1bf55beafb21fd0e"
+   }
+  },
+  "exp": {
+   "exp_probe.cpp": {
+    "bytes": 1163,
+    "sha256": "a393f786d9456cf17a613959c084ceeeba69e288e004c2f990bc75e2505a2233"
+   },
+   "exp_check.py": {
+    "bytes": 1639,
+    "sha256": "534ffaf150c2d3dbc7a0c8c5b645a46a04d45584994ca310141d28bed209c7ca"
+   }
+  }
+ }
+}
