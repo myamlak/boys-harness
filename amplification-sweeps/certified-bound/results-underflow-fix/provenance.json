@@ -1,0 +1,396 @@
+{
+ "record": "certified per-call rounding bound for the two region-A Boys entries, Paper A (Boys route comparison), repaired underflow radius",
+ "generated_utc": "2026-11-06T19:53:11.180303+00:00",
+ "runtime": {
+  "python": "3.14.7",
+  "mpmath": "1.4.1",
+  "platform": "Windows-11-10.0.26200-SP0"
+ },
+ "model_constants": {
+  "u": 1.1102230246251565e-16,
+  "u_add": 1.1102230246251568e-16,
+  "min_normal": 2.2250738585072014e-308,
+  "underflow_allowance": 4e-323,
+  "safety": 1.0000000000009095
+ },
+ "paths": {
+  "resolution": "record_paths.py: command line, then environment, then a default relative to the record",
+  "kernel": "C:\\Users\\myaml\\dev\\_boys-tags",
+  "sweep": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form",
+  "model_record": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\inputs\\model-record",
+  "deposit": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\apriori-bound",
+  "exp_bits": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\exp\\exp_bits.txt",
+  "run_directory": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\results-underflow-fix"
+ },
+ "kernel": {
+  "tag": "v5.2.5",
+  "commit": "8b7a289dfce7558c8498e89c17c05f20fa7bb7c8",
+  "release": "v5.2.5",
+  "parsed_table_digest": "74fe52545be4540cfd7abea1b19e6bd5d4e681b656a1be6603585bb97dafa99c",
+  "headers": {
+   "boys_coefficients.hpp": {
+    "bytes": 143213,
+    "sha256": "d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00"
+   },
+   "boys_coefficients_d_coarse_cheb.hpp": {
+    "bytes": 36494,
+    "sha256": "7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e"
+   },
+   "boys_impl.hpp": {
+    "bytes": 149207,
+    "sha256": "4a384f8d3303953a65379b4b83707c17b6d36aac0044a7feb0bbc33867a7391b"
+   }
+  },
+  "generator": {
+   "gen_boys_coefficients.py": {
+    "bytes": 444888,
+    "sha256": "1d8b88ac30c757138a4c87219d68b56756c175c36230818b2360dc0bf7bdd373"
+   }
+  },
+  "coefficient_identity": "the model parses kPieces, kPieceStart, kTierThresholds, kExtendedBcoeffs, kExtendedBX0 and kX0 from boys_coefficients.hpp and the Chebyshev table from boys_coefficients_d_coarse_cheb.hpp; the parsed content digest is the same in the v5.1.1 sweep tree and the v5.2.5 release, and the coarse table's whole-file digest is unchanged, so the fits, thresholds and extended seed the sweep evaluated are the ones this record bounds.  The v5.2.5 header differs only in the rational region-B seed, which the named policy does not read."
+ },
+ "sweep": {
+  "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form",
+  "files": {
+   "results/cells.csv": {
+    "bytes": 1914945,
+    "sha256": "2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6"
+   },
+   "results/per_order.csv": {
+    "bytes": 12816,
+    "sha256": "e1ea8f51e37367ddf1f5814e3538164fba691d6b6c6a5fb73f700463f8d1b656"
+   },
+   "results/provenance.json": {
+    "bytes": 24567,
+    "sha256": "64df907efb091793d2ad7ac0a771d52fb41629230d11b5fe76d91e8949faabea"
+   },
+   "data/reference.csv": {
+    "bytes": 1825960,
+    "sha256": "514411570e902bc2320932a8ae6200d46e11d950471994c80c2775871f9a528d"
+   }
+  },
+  "optional_files": {
+   "results/prediction.csv": {
+    "bytes": 13356,
+    "sha256": "597963241019d087d62b293ccee70585e7cf99f0cd4043675b6415f06dd3e371"
+   },
+   "results/band_summary.csv": {
+    "bytes": 581,
+    "sha256": "ef8a89da0b33a92ca1b652f4683660f2aebfb5c9449d299652a556f17f443f10"
+   },
+   "results/summary.txt": {
+    "bytes": 15406,
+    "sha256": "9b174d344c0d9430c727dcd5e0abc9fbe15a94d11c827647e1a3c5a28c14c568"
+   },
+   "analyze.py": {
+    "bytes": 41015,
+    "sha256": "4e7454492a53cef13b7ce2b98ff10bde0529ac406c105a570193499a69077f20"
+   }
+  },
+  "boys_commit": "482fd3388c276091834a6c12a642d9de2481c9f2",
+  "boys_describe": "v5.0.0",
+  "compiler": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\cl.EXE",
+  "flags": "/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I C:\\Users\\myaml\\dev\\bladawiec\\external\\boys\\include C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\amplification_form\\sweep2.cpp C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\amplification_form\\build\\sweep2.obj C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\amplification_form\\build\\sweep2.exe",
+  "machine": {
+   "logical_processors": 12,
+   "machine": "AMD64",
+   "node": "trompek",
+   "platform": "Windows-11-10.0.26200-SP0",
+   "processor": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+   "python": "3.14.7"
+  },
+  "model_functions_used": [
+   "cells.csv: the delivered recursed and direct doubles",
+   "per_order.csv: each entry's worst absolute and relative cells",
+   "reference.csv: 60-digit F_n at 836 arguments"
+  ]
+ },
+ "model_record": {
+  "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\inputs\\model-record",
+  "files": {
+   "prediction.csv": {
+    "bytes": 13346,
+    "sha256": "305b2a28392c48a6eae355a9e8cca04289c214899b165464ced917d4243702eb"
+   },
+   "prediction_record.csv": {
+    "bytes": 18381,
+    "sha256": "d146ab20bfe0bbcded9f241129359dfd0414c022f437d164c59c05ed03c8b218"
+   }
+  },
+  "role": "the paper model's 132 comparisons, its 65 commitments and the band-max arguments of each entry; the deposited sweep's prediction.csv is a different model revision (67 commitments), so the certificate reads the paper's record deposited here"
+ },
+ "deposit": {
+  "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\apriori-bound",
+  "files": {
+   "bounds.py": {
+    "bytes": 20358,
+    "sha256": "6e695d33d69c74e2200cff4ff2415a18fa7cd6b47d3f87866d562e32e9d1b3af"
+   },
+   "exact.py": {
+    "bytes": 2483,
+    "sha256": "e181786797443570d8ffc6cf6eaf9336588f068dc8a3d636bb2894295eec2bc6"
+   },
+   "coeffs.py": {
+    "bytes": 4614,
+    "sha256": "d61c6deb7f9fe0b61e08f7fb1a06db2d2651c99b792447cef85eea22ab91c3a8"
+   },
+   "core.py": {
+    "bytes": 5344,
+    "sha256": "bb4ae95db03163dffb8463fa0a1b4c973255e2537a8629c531047b4d83412778"
+   }
+  },
+  "optional_files": {
+   "run_all.py": {
+    "bytes": 17294,
+    "sha256": "4957c511e726dbf230c6312024b467586116fea086eafdbe132a311162944ff6"
+   },
+   "exact_trunc_cert.py": {
+    "bytes": 4266,
+    "sha256": "57c4898c3a6340443b7b4eb44d3ec6100fa87e5fd314872f45ce6c3845f05676"
+   },
+   "exact_amplification_form.csv": {
+    "bytes": 40577,
+    "sha256": "873393dab56ee668fe5e0da7ae0ada9c131fa33a2136248a2b4bbf88eb689aa9"
+   },
+   "README.md": {
+    "bytes": 7628,
+    "sha256": "3f9c715425c875cad7181818e4eb388d504ba0a0ae18bbe9c41d0d64f10c3064"
+   }
+  },
+  "role": "the existing a priori-bound method's certified truncation intervals and its seven variants; this record keeps them and replaces the heuristic charge with the per-call running-error radius",
+  "not_modified": true
+ },
+ "exponential": {
+  "bit_file": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\exp\\exp_bits.txt",
+  "files": {
+   "exp_bits.txt": {
+    "bytes": 496132,
+    "sha256": "493afdc2e62ac94c3a38cdf994bd3b587ffa649ac95c32eda90c60542febd95d"
+   }
+  },
+  "probe_files": {
+   "exp_probe.cpp": {
+    "bytes": 1163,
+    "sha256": "a393f786d9456cf17a613959c084ceeeba69e288e004c2f990bc75e2505a2233"
+   },
+   "exp_check.py": {
+    "bytes": 2298,
+    "sha256": "c3ea1338060708d254adb0870a8af4deb317e73512b40423f20cee10e2cdb01f"
+   },
+   "exp_bits.txt": {
+    "bytes": 496132,
+    "sha256": "493afdc2e62ac94c3a38cdf994bd3b587ffa649ac95c32eda90c60542febd95d"
+   },
+   "exp_bits_reproduced.txt": {
+    "bytes": 496132,
+    "sha256": "493afdc2e62ac94c3a38cdf994bd3b587ffa649ac95c32eda90c60542febd95d"
+   },
+   "exp_check.log": {
+    "bytes": 278,
+    "sha256": "5a0f51fd44d641d4be05704aca75ee6588da67e4f8903b160fc94fc42a1dbcad"
+   }
+  },
+  "bit_input": {
+   "x_bits.txt": {
+    "bytes": 162197,
+    "sha256": "38b52c6f99d4425dca39b3d40ca3609bdcb4ee97ba0ee78bf9909fc51a99e741"
+   }
+  },
+  "arguments": 9541,
+  "compiler": "MSVC 14.51.36231, host x64",
+  "flags": "/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2",
+  "worst_relative_over_2^-53": 0.999662996081,
+  "worst_argument": 11.084208097312864,
+  "arguments_above_half_unit": 2585,
+  "arguments_above_one_unit": 0,
+  "python_math_exp_bit_mismatches": 0,
+  "half_scaling_mismatches": 0,
+  "conditional_eta_E": "2^-52",
+  "evidence": "the deposited probe output prints std::exp(-x) bits at every argument; the worst relative departure is 0.999662996081 * 2^-53 (0.4998 ulp), so eta_E <= 2^-52 holds with a 2x margin; Python math.exp matches bit for bit at all 9541 arguments and 0.5*exp(-x) is exact",
+  "assumption": "the bound is conditional on eta_E <= 2^-52, which the probe supports on this machine and toolchain; a different libm is outside the evidence"
+ },
+ "assumptions": {
+  "rounding": "round-to-nearest, IEEE-754 binary64, no flush-to-zero",
+  "evaluation": "the kernel's exact operation sequence at EvalScheme::kSplitClenshaw, DivisionForm::kRefinedReciprocal, with the hoisted exp(-x)/2 shared by the recurrence",
+  "overflow": "no overflow at the tested cells; the largest delivered magnitude is recorded in the run's summary.json",
+  "underflow": "the grid includes the least positive subnormal x=2**-1074. In the downward chain the product x*F_32 has an exact value about 7.60e-326, which rounds to zero, so the multiplication loses a nonzero exact result below the subnormal range.  The repaired primitive rule carries the absolute allowance 2**-1071 = 16*2**-1075 whenever the computed result or the radius bracket is below 2**-1022: one half-ulp for the IEEE-754 round-to-nearest underflow bound 2**-1075, which is not itself a binary64 number, and fifteen for the absolute roundings of the radius arithmetic in the subnormal range.  The allowance propagates through the chain and the regression test records the exact product, the computed zero and the radius at the affected step.",
+  "radius": "first-order running-error sums with the absolute underflow allowance above and SAFETY=1+2^-40; every rounding at u=2^-53, accumulation in double",
+  "truncation": "the exact-real route value at 70-digit mpmath minus the 60-digit reference, with EPS_BASE=1e-45 and 2^-51|t| for the delivered comparison; the deposit's independent identity oracle is cross-checked on 60 cells"
+ },
+ "manuscript": {
+  "path": "C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\supplement\\main.tex",
+  "sha256": "71567b39098a796096b470bc7b339439ff138068c5260f63a922622a496a3268",
+  "read_only": true,
+  "section_read": "S18, the certified enclosure derived"
+ },
+ "record_files": {
+  "code": {
+   "certify.py": {
+    "bytes": 19627,
+    "sha256": "8e849340a0d6eb2d8e999ca592f34c3d23dc5d1c1f6deab094b5e72548fb2f20"
+   },
+   "exactroute.py": {
+    "bytes": 5099,
+    "sha256": "7c487be177779afe9bf5a1829b2f1dbeac52a2c95fec4ad6c55d2a2c4d79efd9"
+   },
+   "make_inputs.py": {
+    "bytes": 2712,
+    "sha256": "6ac5151ea3903b5033d00a468095bf3a2530ff18268ae4108af4f8cd51bea0f9"
+   },
+   "make_provenance.py": {
+    "bytes": 11877,
+    "sha256": "3b11978b0898b9f49045ac34a451a80abb2491b0b8069e89d24bd8427b7c2758"
+   },
+   "model.py": {
+    "bytes": 22188,
+    "sha256": "459e76ed05f9455a2c6ff569abd518ef8cb7f698181dcd7247531a6c23f76669"
+   },
+   "oracle_check.py": {
+    "bytes": 2610,
+    "sha256": "5e9c1a58b1e515295c97dacbffb7f05a66e10827df29708d71cffb09316dc5db"
+   },
+   "record_paths.py": {
+    "bytes": 5838,
+    "sha256": "e7d61825e98bb8351f0fac4321cfbdee7baec6421fc1029e57e234002ae56667"
+   },
+   "replay.py": {
+    "bytes": 3970,
+    "sha256": "cc0f2b360cd8fcfdc2b8f182f8ce2e87b9af7b8bb9dff4593ed424652362e6dc"
+   },
+   "test_underflow.py": {
+    "bytes": 7187,
+    "sha256": "fd352da8167e5bce2b462e21c0539d2fd645c2e6e4285c7ee4c1b62403d177df"
+   },
+   "tiers.py": {
+    "bytes": 8389,
+    "sha256": "7866eb82ff19845f67546766418eb2b2178673fdf30582279370018b03317871"
+   }
+  },
+  "explore": {
+   "candidates.py": {
+    "bytes": 2810,
+    "sha256": "e3e10025798c2b2710d9c2beec2902c6fa334ad05d85b1b73c001d1b9807bece"
+   },
+   "dps_check.py": {
+    "bytes": 1750,
+    "sha256": "bccbee8f1cee434c630c60b299bfd9319eadb805dce2f6ac6e87e4319997eb9b"
+   },
+   "harnesscells.py": {
+    "bytes": 10059,
+    "sha256": "a6d0c8254f7858a1c79fff0ca16decd29e58bcc39212eb29be1f6d3ffc0e1eb5"
+   },
+   "modelcells.py": {
+    "bytes": 7325,
+    "sha256": "3f2df9a8c49c63f578aabd1dab2fd9034d35ada0460954e4544805d7d3b67b28"
+   },
+   "paper93.py": {
+    "bytes": 5742,
+    "sha256": "27b415bcaddd8bc030991dc935bb213beab857ab4763a65fb5dd0822da100cf7"
+   },
+   "stats.py": {
+    "bytes": 5223,
+    "sha256": "10614e69b49aee4c9876b9f6d149e960ae5ac848bfb64e81432705be2ec0a399"
+   },
+   "structural.py": {
+    "bytes": 3550,
+    "sha256": "bc8c876cf6342962c68adcbbc39ac58230713dbf05e26f144a3994e4849671c6"
+   },
+   "trunc_bench.py": {
+    "bytes": 1210,
+    "sha256": "7e663816628c936d95b11fe426b629ad0867b9da9fcde47beacf18a47b6b0778"
+   }
+  },
+  "exp": {
+   "exp_probe.cpp": {
+    "bytes": 1163,
+    "sha256": "a393f786d9456cf17a613959c084ceeeba69e288e004c2f990bc75e2505a2233"
+   },
+   "exp_check.py": {
+    "bytes": 2298,
+    "sha256": "c3ea1338060708d254adb0870a8af4deb317e73512b40423f20cee10e2cdb01f"
+   },
+   "exp_bits.txt": {
+    "bytes": 496132,
+    "sha256": "493afdc2e62ac94c3a38cdf994bd3b587ffa649ac95c32eda90c60542febd95d"
+   },
+   "exp_bits_reproduced.txt": {
+    "bytes": 496132,
+    "sha256": "493afdc2e62ac94c3a38cdf994bd3b587ffa649ac95c32eda90c60542febd95d"
+   },
+   "exp_check.log": {
+    "bytes": 278,
+    "sha256": "5a0f51fd44d641d4be05704aca75ee6588da67e4f8903b160fc94fc42a1dbcad"
+   }
+  }
+ },
+ "results": {
+  "band_cert.csv": {
+   "bytes": 24365,
+   "sha256": "1ecc53f44a18b1acf867812cf00bf74e0f4842abcbc2d925991d09a734d2e368"
+  },
+  "cells_cert.csv": {
+   "bytes": 11044412,
+   "sha256": "8041c727ac90c6d0ff9bc5552738e91ca9fd7abe09973ea0fad43756ba62fa6a"
+  },
+  "certify.log": {
+   "bytes": 1241,
+   "sha256": "b91fa7e0ce8e0705aaec9667b47aebea8c9d2ebc837829152012b3d4694f1ec3"
+  },
+  "commands.md": {
+   "bytes": 6149,
+   "sha256": "bf3b7b1ea9345be46e3296b068c4873b210761aa699a695956a1ee4b0ba7377b"
+  },
+  "dps_check.log": {
+   "bytes": 437,
+   "sha256": "55671b363e8fdd65c2a93237455305087fdc16cd4557d05f37d7870dd70b5ebf"
+  },
+  "exp_check.log": {
+   "bytes": 278,
+   "sha256": "5a0f51fd44d641d4be05704aca75ee6588da67e4f8903b160fc94fc42a1dbcad"
+  },
+  "harness.log": {
+   "bytes": 764,
+   "sha256": "3e9f834e69bf87e3dbca3e5187d7bfbbdc1af30eb088db16cf06515fe29d95a8"
+  },
+  "harness_cells.csv": {
+   "bytes": 26337,
+   "sha256": "59fd3052b2d0939fb51edbdd5b9c04280f99d76fb5a72fde2b28ca132a009e72"
+  },
+  "model_cells.csv": {
+   "bytes": 47602,
+   "sha256": "d76f2737c80e9922e7e22432134ded5a1dd0eca33f925c2853fca3de25426efb"
+  },
+  "oracle_check.csv": {
+   "bytes": 5517,
+   "sha256": "a1c32aaa96b82d57fb4102908f3dd4547dfa8754637735b4568b62a9f207418e"
+  },
+  "oracle_check.log": {
+   "bytes": 2975,
+   "sha256": "1f718cda5b4e96942616863d2327f37d2214f7543c7839d1de690b3e84915278"
+  },
+  "paper93.log": {
+   "bytes": 406,
+   "sha256": "aa088bcb10eb39dca3641c284dd229d545d24cdcebbf4d7690e377f254ca2ab9"
+  },
+  "README.md": {
+   "bytes": 1998,
+   "sha256": "c9ab54db2193af1f7c6b067f66ffdf4077eb9a98c400ad54530aed9a5190cb74"
+  },
+  "replay.log": {
+   "bytes": 261,
+   "sha256": "8ab142b8ee1161a33a9422151b97beef568a53e5cc420b7cd584b04a987f611f"
+  },
+  "summary.json": {
+   "bytes": 156248,
+   "sha256": "75c165fed51c91cdbb4a9546a98b5d526304a40114ba37424b1c0469fae0509a"
+  },
+  "underflow_test.csv": {
+   "bytes": 2127,
+   "sha256": "dd4cf0b20b7fa18fed26c4091ce551e0cdca75060644128167b17982a5785de8"
+  },
+  "underflow_test.log": {
+   "bytes": 976,
+   "sha256": "45336af8817b37e72725e84f76300f3dfe5877354c1f375fddd852f334d57631"
+  }
+ }
+}

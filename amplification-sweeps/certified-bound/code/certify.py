@@ -2,53 +2,58 @@
 
 Tier T: the truncation is the exact-real route value minus the 60-digit
 reference, with a computed error bound of 1e-45 absolute (70-digit mpmath on
-60-digit references; the deposit's independent oracle agrees to 4e-56).  The
-arithmetic is the running-error radius of model.py.  The total interval at a
-cell is [t - eps - C, t + eps + C].
+60-digit references).  The deposit's independent identity-based oracle
+cross-check agrees to 8e-50 on the non-outlier checked cells; one cell,
+recorded in oracle_check.log, resolves at 7.99e-24 and sits inside the tier's
+bound.  The arithmetic is the running-error radius of model.py.  The total
+interval at a cell is [t - eps - C, t + eps + C].
 
-Outputs, all under _a-cert-run/results:
+Outputs, all beneath the run directory selected with --out:
   cells_cert.csv      one row per (band, x, order, method), 55 176 rows
   model_cells.csv     the 132 comparisons at the model's band-max arguments
   band_cert.csv       the 132 comparisons on the population-band intervals
   summary.json        counts, validation, obstruction statistics
 
-No paper or deposit file is written.
+No paper or deposit file is written.  The sweep, the model record, the
+kernel and the exponential bits are selected with --sweep, --model-record,
+--kernel and --exp-bits (record_paths.py).
 """
+import argparse
 import csv
 import json
 import math
 import os
 import sys
 from collections import Counter, defaultdict
+from pathlib import Path
 
 from mpmath import mp, mpf
 
-sys.path.insert(0, r"C:/Users/myaml/dev/_a-cert-run/code")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import exactroute as er
 import model
+import record_paths
 
 mp.dps = 70
-ROOT = r"C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/sweeps/amplification_form"
-OUT = r"C:/Users/myaml/dev/_a-cert-run/results"
 EPS_BASE = mpf("1e-45")
 F_REL = mpf("1e-55")
-THETA0 = model.THETA0
-B1 = model.piece(0, 0)[1]
 
 
-def load():
-    ref = er.load_reference(ROOT)
+def load(root, model_record):
+    root = Path(root)
+    model_record = Path(model_record)
+    ref = er.load_reference(root)
     cells = {}
-    with open(ROOT + "/results/cells.csv", newline="") as h:
+    with open(root / "results" / "cells.csv", newline="") as h:
         for r in csv.DictReader(h):
             cells[(r["band"], float(r["x"]), int(r["n"]))] = (
                 float(r["recursed"]), float(r["direct"]))
     pred = {}
-    with open(ROOT + "/results/prediction_record.csv", newline="") as h:
+    with open(model_record / "prediction_record.csv", newline="") as h:
         for r in csv.DictReader(h):
             pred[(r["band"], r["metric"], int(r["order"]))] = r
     order = {}
-    with open(ROOT + "/results/per_order.csv", newline="") as h:
+    with open(root / "results" / "per_order.csv", newline="") as h:
         for r in csv.DictReader(h):
             order[(r["band"], int(r["n"]), r["method"])] = r
     exp = model.load_exp()
@@ -59,8 +64,19 @@ def sub(a, b):
     return a - b
 
 
-def main():
-    ref, cells, pred, order, exp = load()
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    record_paths.add_kernel(parser)
+    record_paths.add_inputs(parser, model_record_arg=True)
+    record_paths.add_out(parser)
+    args = parser.parse_args(argv)
+    model.configure(kernel=args.kernel, exp_bits=args.exp_bits)
+    root = record_paths.sweep(args.sweep)
+    model_record = record_paths.model_record(args.model_record)
+    out = record_paths.out_dir(args.out)
+    theta0 = model.theta0()
+
+    ref, cells, pred, order, exp = load(root, model_record)
 
     # ---- the per-cell pass ------------------------------------------------
     rec = {}          # (band, x, n, method) -> dict
@@ -125,7 +141,7 @@ def main():
                     max_C = max(max_C, mpf(c))
                     n_cells += 1
                 # population band intervals
-                if mpf(x) < THETA0:
+                if mpf(x) < theta0:
                     continue
                 for met in ("absolute", "relative"):
                     Flo = F * (1 - F_REL)
@@ -150,7 +166,7 @@ def main():
                             row[ph] = hi
 
     # ---- write the per-cell table -----------------------------------------
-    with open(OUT + "/cells_cert.csv", "w", newline="") as h:
+    with open(out / "cells_cert.csv", "w", newline="") as h:
         w = csv.writer(h)
         w.writerow(["band", "x", "n", "method", "t", "eps", "C", "e", "r",
                     "F", "mode", "inside", "c_seed", "c_rec", "c_exp"])
@@ -238,9 +254,9 @@ def main():
             d = rec[(b, x, n, meth)]
             return abs(d["t"]) / d["F"] if met == "relative" else abs(d["t"])
         ts = max(trunc_at(x, "ship") for x in
-                 {xx for bb, xx in ref if bb == b and xx >= THETA0})
+                 {xx for bb, xx in ref if bb == b and xx >= theta0})
         tp = max(trunc_at(x, "product") for x in
-                 {xx for bb, xx in ref if bb == b and xx >= THETA0})
+                 {xx for bb, xx in ref if bb == b and xx >= theta0})
         band_rows.append(dict(band=b, metric=met, n=n, state=pr["state"],
                               measured=pr["measured_winner"], cert=cert,
                               sLo=ws_lo, sHi=ws_hi, pLo=wp_lo, pHi=wp_hi,
@@ -248,7 +264,7 @@ def main():
                               trunc_order=("ship" if ts < tp else "product"),
                               sTrunc=float(ts), pTrunc=float(tp)))
 
-    with open(OUT + "/model_cells.csv", "w", newline="") as h:
+    with open(out / "model_cells.csv", "w", newline="") as h:
         w = csv.writer(h)
         w.writerow(["band", "metric", "n", "state", "measured", "cert",
                     "x_ship", "x_prod", "t_ship", "C_ship", "e_ship", "r_ship",
@@ -264,7 +280,7 @@ def main():
                         mp.nstr(p["r"], 17), mp.nstr(p["F"], 17),
                         r["ls"], r["hs"], r["lp"], r["hp"], r["trunc_order"]])
 
-    with open(OUT + "/band_cert.csv", "w", newline="") as h:
+    with open(out / "band_cert.csv", "w", newline="") as h:
         w = csv.writer(h)
         w.writerow(["band", "metric", "n", "state", "measured", "cert",
                     "sLo", "sHi", "pLo", "pHi", "sAt", "pAt",
@@ -354,7 +370,7 @@ def main():
                 for meth in ("ship", "product"):
                     vals = []
                     for bb, x in ref:
-                        if bb != b or mpf(x) < THETA0:
+                        if bb != b or mpf(x) < theta0:
                             continue
                         d = rec[(b, x, n, meth)]
                         if met == "absolute":
@@ -401,7 +417,7 @@ def main():
         model_rows=[{k: (v if k not in ("s", "p") else None)
                      for k, v in r.items()} for r in model_rows],
     )
-    with open(OUT + "/summary.json", "w") as h:
+    with open(out / "summary.json", "w") as h:
         json.dump(summary, h, indent=1)
 
     print("cells", n_cells, "modes", dict(modes))
@@ -430,7 +446,8 @@ def main():
               "t_l=%.3e C_l=%.3e r_l=%.3e t_w=%.3e gap=%.3e need=%.1f"
               % (o["t_l"], o["C_l"], o["r_l"], o["t_w"], o["gap"],
                  o["need_factor"]))
+    return 1 if viol else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

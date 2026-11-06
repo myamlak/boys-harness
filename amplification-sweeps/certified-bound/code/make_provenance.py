@@ -1,18 +1,37 @@
-"""Write _a-cert-run/provenance.json: every input this record reads, its
+"""Write <run-dir>/provenance.json: every input this record reads, its
 digest, and the evidence behind each assumption.
+
+All paths are resolved by record_paths.py from the command line, the
+environment, or defaults relative to the record.  The results section lists
+what the selected run directory actually contains, so a provenance written
+after the certificate, the replay, the oracle check and the diagnostics
+covers those files.
 """
+import argparse
 import hashlib
 import json
 import os
+import platform
 import subprocess
 import sys
 from datetime import datetime, timezone
+from pathlib import Path
 
-ROOT = r"C:/Users/myaml/dev"
-CERT = ROOT + "/_a-cert-run"
-BOYS = ROOT + "/_boys-tags"
-SWEEP = ROOT + "/papers-a-v5/papers/boys-crossover/sweeps/amplification_form"
-DEPOSIT = ROOT + "/_harness-v1023/amplification-sweeps/apriori-bound"
+import mpmath
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import model
+import record_paths
+
+CORE_SWEEP = ["results/cells.csv", "results/per_order.csv",
+              "results/provenance.json", "data/reference.csv"]
+OPTIONAL_SWEEP = ["results/prediction.csv", "results/band_summary.csv",
+                  "results/summary.txt", "analyze.py"]
+CORE_DEPOSIT = ["bounds.py", "exact.py", "coeffs.py", "core.py"]
+OPTIONAL_DEPOSIT = ["run_all.py", "exact_trunc_cert.py",
+                    "exact_amplification_form.csv", "README.md"]
+EXP_NAMES = ["exp_probe.cpp", "exp_check.py", "exp_bits.txt",
+             "exp_bits_reproduced.txt", "exp_check.log"]
 
 
 def sha(path):
@@ -23,97 +42,142 @@ def sha(path):
 def files(base, names):
     out = {}
     for name in names:
-        p = base + "/" + name
-        out[name] = {"bytes": os.path.getsize(p), "sha256": sha(p)}
+        p = Path(base) / name
+        out[name] = {"bytes": p.stat().st_size, "sha256": sha(p)}
     return out
 
 
-def main():
-    tag = subprocess.run(["git", "-C", BOYS, "rev-parse", "HEAD"],
-                         capture_output=True, text=True, check=True).stdout.strip()
-    describe = subprocess.run(["git", "-C", BOYS, "describe", "--tags"],
-                              capture_output=True, text=True, check=True).stdout.strip()
-    sweep_prov = json.load(open(SWEEP + "/results/provenance.json"))
+def files_present(base, names):
+    out = {}
+    for name in names:
+        p = Path(base) / name
+        if p.is_file():
+            out[name] = {"bytes": p.stat().st_size, "sha256": sha(p)}
+        else:
+            out[name] = None
+    return out
+
+
+def git(root, *args):
+    return subprocess.run(["git", "-C", str(root), *args],
+                          capture_output=True, text=True,
+                          check=True).stdout.strip()
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    record_paths.add_kernel(parser)
+    record_paths.add_inputs(parser, model_record_arg=True, deposit_arg=True)
+    record_paths.add_out(parser)
+    parser.add_argument("--manuscript", metavar="FILE",
+                        help="manuscript file read for the derivation (optional)")
+    args = parser.parse_args(argv)
+
+    kernel = record_paths.kernel(args.kernel)
+    sweep = record_paths.sweep(args.sweep)
+    model_record = record_paths.model_record(args.model_record)
+    deposit = record_paths.deposit(args.deposit)
+    exp_bits = record_paths.exp_bits(args.exp_bits)
+    out = record_paths.out_dir(args.out)
+
+    model.configure(kernel=args.kernel, exp_bits=args.exp_bits)
+    tables = model.table()
+
+    sweep_prov = {}
+    sweep_prov_path = Path(sweep) / "results" / "provenance.json"
+    if sweep_prov_path.is_file():
+        sweep_prov = json.load(open(sweep_prov_path))
+
     record = {
         "record": "certified per-call rounding bound for the two region-A Boys "
-                  "entries, Paper A (Boys route comparison)",
+                  "entries, Paper A (Boys route comparison), repaired "
+                  "underflow radius",
         "generated_utc": datetime.now(timezone.utc).isoformat(),
+        "runtime": {
+            "python": sys.version.split()[0],
+            "mpmath": mpmath.__version__,
+            "platform": platform.platform(),
+        },
+        "model_constants": {
+            "u": 2.0 ** -53,
+            "u_add": 2.0 ** -53 / (1.0 - 2.0 ** -53),
+            "min_normal": model.MIN_NORMAL,
+            "underflow_allowance": model.UNDERFLOW,
+            "safety": model.SAFETY,
+        },
+        "paths": {
+            "resolution": "record_paths.py: command line, then environment, "
+                          "then a default relative to the record",
+            "kernel": str(kernel),
+            "sweep": str(sweep),
+            "model_record": str(model_record),
+            "deposit": str(deposit),
+            "exp_bits": str(exp_bits),
+            "run_directory": str(out),
+        },
         "kernel": {
-            "tag": describe,
-            "commit": tag,
-            "tree": BOYS,
-            "headers": files(BOYS + "/include/boys", [
+            "tag": git(kernel, "describe", "--tags"),
+            "commit": git(kernel, "rev-parse", "HEAD"),
+            "release": tables["release"],
+            "parsed_table_digest": model.FIT_CONTENT_DIGEST,
+            "headers": files(kernel / "include" / "boys", [
                 "boys_coefficients.hpp",
                 "boys_coefficients_d_coarse_cheb.hpp",
                 "boys_impl.hpp"]),
-            "generator": files(BOYS + "/tools", ["gen_boys_coefficients.py"]),
-            "coefficient_identity_with_sweep": (
-                "the sweep's provenance.json records boys_coefficients.hpp "
-                "sha256 8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204 "
-                "in its v5.1.1 tree; the v5.2.5 header's digest is "
-                "d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00, "
-                "the difference being the rational region-B seed re-fit "
-                "(kRatBnum, kRatBden and kRegionBFitRatDelivered; the degrees "
-                "4/8 and the stored 13 unchanged), and the coarse Chebyshev "
-                "table this record evaluates, "
-                "boys_coefficients_d_coarse_cheb.hpp, has digest 7af73817 in "
-                "both trees. The modelled policy is the named one (Chebyshev "
-                "route, SplitClenshaw, RefinedReciprocal), which reads no "
-                "rational seed, so the stored fits and thresholds the sweep "
-                "evaluated are the ones this record bounds"),
+            "generator": files(kernel / "tools", ["gen_boys_coefficients.py"]),
+            "coefficient_identity": (
+                "the model parses kPieces, kPieceStart, kTierThresholds, "
+                "kExtendedBcoeffs, kExtendedBX0 and kX0 from "
+                "boys_coefficients.hpp and the Chebyshev table from "
+                "boys_coefficients_d_coarse_cheb.hpp; the parsed content "
+                "digest is the same in the v5.1.1 sweep tree and the v5.2.5 "
+                "release, and the coarse table's whole-file digest is "
+                "unchanged, so the fits, thresholds and extended seed the "
+                "sweep evaluated are the ones this record bounds.  The "
+                "v5.2.5 header differs only in the rational region-B seed, "
+                "which the named policy does not read."),
         },
         "sweep": {
-            "path": SWEEP,
-            "provenance": files(SWEEP + "/results", ["provenance.json"]),
-            "boys_commit": sweep_prov["boys"]["commit"],
-            "boys_describe": sweep_prov["boys"]["describe"],
-            "compiler": sweep_prov["compiler"]["path"],
-            "flags": sweep_prov["flags"],
-            "machine": sweep_prov["machine"],
-            "files": files(SWEEP + "/results", [
-                "cells.csv", "per_order.csv", "prediction.csv",
-                "prediction_record.csv", "band_summary.csv", "summary.txt"]),
-            "reference": files(SWEEP + "/data", ["reference.csv"]),
-            "model_code": files(SWEEP, ["analyze.py"]),
+            "path": str(sweep),
+            "files": files(sweep, CORE_SWEEP),
+            "optional_files": files_present(sweep, OPTIONAL_SWEEP),
+            "boys_commit": sweep_prov.get("boys", {}).get("commit"),
+            "boys_describe": sweep_prov.get("boys", {}).get("describe"),
+            "compiler": sweep_prov.get("compiler", {}).get("path"),
+            "flags": sweep_prov.get("flags"),
+            "machine": sweep_prov.get("machine"),
             "model_functions_used": [
-                "prediction.csv / prediction_record.csv: the 132 comparisons "
-                "and the model's 65 commitments",
-                "per_order.csv: each entry's worst absolute and relative cells",
                 "cells.csv: the delivered recursed and direct doubles",
+                "per_order.csv: each entry's worst absolute and relative cells",
                 "reference.csv: 60-digit F_n at 836 arguments",
             ],
         },
+        "model_record": {
+            "path": str(model_record),
+            "files": files(model_record, ["prediction.csv",
+                                          "prediction_record.csv"]),
+            "role": "the paper model's 132 comparisons, its 65 commitments "
+                    "and the band-max arguments of each entry; the deposited "
+                    "sweep's prediction.csv is a different model revision "
+                    "(67 commitments), so the certificate reads the paper's "
+                    "record deposited here",
+        },
         "deposit": {
-            "path": DEPOSIT,
-            "files": files(DEPOSIT, ["bounds.py", "exact.py", "run_all.py",
-                                     "exact_trunc_cert.py",
-                                     "exact_amplification_form.csv",
-                                     "README.md"]),
+            "path": str(deposit),
+            "files": files(deposit, CORE_DEPOSIT),
+            "optional_files": files_present(deposit, OPTIONAL_DEPOSIT),
             "role": "the existing a priori-bound method's certified truncation "
                     "intervals and its seven variants; this record keeps them "
                     "and replaces the heuristic charge with the per-call "
                     "running-error radius",
             "not_modified": True,
         },
-        "manuscript": {
-            "path": SWEEP.rsplit("/sweeps/", 1)[0] + "/main.tex",
-            "sha256": sha(SWEEP.rsplit("/sweeps/", 1)[0] + "/main.tex"),
-            "read_only": True,
-            "section_read": "5.6 (lines 826-853), the a priori failure "
-                            "paragraph whose 16/49, 9.6 and 93 are checked",
-        },
         "exponential": {
-            "probe_source": files(CERT + "/exp", ["exp_probe.cpp", "exp_check.py"]),
-            "probe_binary": files(CERT + "/exp", ["exp_probe.exe"]),
-            "bit_file": files(CERT + "/exp", ["exp_bits.txt"]),
-            "bit_input": files(CERT + "/exp", ["xbits_in.txt"]),
-            "reproduced_output": files(CERT + "/exp",
-                                       ["exp_bits_reproduced.txt"]),
-            "analysis_log": files(CERT + "/exp", ["exp_check.log"]),
-            "reproduction": "the deposited probe binary rerun on the input bits "
-                            "recovered from exp_bits.txt reproduces the file "
-                            "byte for byte (cmp exit 0, 2026-11-03); the "
-                            "build flags above are the measuring session's",
+            "bit_file": str(exp_bits),
+            "files": files(Path(exp_bits).parent, [Path(exp_bits).name]),
+            "probe_files": files_present(Path(exp_bits).parent, EXP_NAMES),
+            "bit_input": files(record_paths.RECORD_DIR / "inputs",
+                               ["x_bits.txt"]),
             "arguments": 9541,
             "compiler": "MSVC 14.51.36231, host x64",
             "flags": "/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2",
@@ -124,80 +188,76 @@ def main():
             "python_math_exp_bit_mismatches": 0,
             "half_scaling_mismatches": 0,
             "conditional_eta_E": "2^-52",
-            "evidence": "the probe prints std::exp(-x) bits at every argument; "
-                        "the worst relative departure is 0.999662996081 * 2^-53 "
-                        "(0.4998 ulp), so eta_E <= 2^-52 holds with a 2x margin; "
-                        "Python math.exp matches bit for bit at all 9541 "
-                        "arguments and 0.5*exp(-x) is exact",
+            "evidence": "the deposited probe output prints std::exp(-x) bits "
+                        "at every argument; the worst relative departure is "
+                        "0.999662996081 * 2^-53 (0.4998 ulp), so eta_E <= "
+                        "2^-52 holds with a 2x margin; Python math.exp matches "
+                        "bit for bit at all 9541 arguments and 0.5*exp(-x) is "
+                        "exact",
             "assumption": "the bound is conditional on eta_E <= 2^-52, which "
                           "the probe supports on this machine and toolchain; a "
                           "different libm is outside the evidence",
         },
-        "oracle_cross_check": {
-            "files": files(CERT + "/results",
-                           ["oracle_check.csv", "oracle_check.log",
-                            "dps_check.log"]),
-            "scripts": files(CERT + "/code", ["oracle_check.py"]) | files(
-                CERT + "/explore", ["dps_check.py"]),
-            "cells": 60,
-            "findings": "59 of 60 cells agree with the deposit's independent "
-                        "identity oracle to 8.2e-50 or better; one small-x "
-                        "product cell (A1, x=4.0666245819265257e-4, n=24) "
-                        "differs by 7.99e-24 because the oracle's dps-70 "
-                        "quadrature is inaccurate there.  Our route's "
-                        "truncation is stable at dps 70/100/140 and agrees "
-                        "with an independent hyp1f1 evaluation of F_n to "
-                        "4.4e-65; the oracle converges to our value at dps "
-                        "140.  The record's truncation values are unaffected.",
-            "relevance": "evidence that the exact-real route evaluates the "
-                         "same truncation the deposit certifies; the outlier "
-                         "is an oracle quadrature limit, not a route error",
-        },
-        "results": {
-            "per_cell": files(CERT + "/results",
-                              ["cells_cert.csv", "band_cert.csv",
-                               "model_cells.csv", "harness_cells.csv",
-                               "tiers_cells.csv"]),
-            "summaries": files(CERT + "/results",
-                               ["summary.json", "tiers_summary.json",
-                                "commands.md"]),
-            "logs": files(CERT + "/results",
-                          ["certify.log", "harness.log", "replay.log",
-                           "tiers.log", "oracle_check.log", "dps_check.log",
-                           "paper93.log"]),
-        },
         "assumptions": {
             "rounding": "round-to-nearest, IEEE-754 binary64, no flush-to-zero",
             "evaluation": "the kernel's exact operation sequence at "
-                          "EvalScheme::kSplitClenshaw, DivisionForm::kRefinedReciprocal, "
-                          "with the hoisted exp(-x)/2 shared by the recurrence",
+                          "EvalScheme::kSplitClenshaw, "
+                          "DivisionForm::kRefinedReciprocal, with the hoisted "
+                          "exp(-x)/2 shared by the recurrence",
             "overflow": "no overflow at the tested cells; the largest delivered "
-                        "magnitude is recorded in results/summary.json",
-            "underflow": "the reference grid includes x=0 and the subnormal "
-                         "x=5e-324; the x=0 branch is one correctly rounded "
-                         "division per order, and at the subnormal argument no "
-                         "term carrying the result underflows (the delivered "
-                         "value is inside the interval, as validation shows)",
-            "radius": "first-order running-error sums with SAFETY=1+2^-40; "
-                      "every rounding at u=2^-53, accumulation in double",
+                        "magnitude is recorded in the run's summary.json",
+            "underflow": (
+                "the grid includes the least positive subnormal x=2**-1074. "
+                "In the downward chain the product x*F_32 has an exact value "
+                "about 7.60e-326, which rounds to zero, so the multiplication "
+                "loses a nonzero exact result below the subnormal range.  The "
+                "repaired primitive rule carries the absolute allowance "
+                "2**-1071 = 16*2**-1075 whenever the computed result or the "
+                "radius bracket is below 2**-1022: one half-ulp for the "
+                "IEEE-754 round-to-nearest underflow bound 2**-1075, which is "
+                "not itself a binary64 number, and fifteen for the absolute "
+                "roundings of the radius arithmetic in the subnormal range.  "
+                "The allowance propagates through the chain and the regression "
+                "test records the exact product, the computed zero and the "
+                "radius at the affected step."),
+            "radius": "first-order running-error sums with the absolute "
+                      "underflow allowance above and SAFETY=1+2^-40; every "
+                      "rounding at u=2^-53, accumulation in double",
             "truncation": "the exact-real route value at 70-digit mpmath minus "
                           "the 60-digit reference, with EPS_BASE=1e-45 and "
                           "2^-51|t| for the delivered comparison; the deposit's "
-                          "independent identity oracle agrees on the checked cells",
-        },
-        "record_files": {
-            "code": files(CERT + "/code", [
-                "model.py", "exactroute.py", "certify.py", "tiers.py",
-                "replay.py", "oracle_check.py", "make_provenance.py"]),
-            "explore": files(CERT + "/explore", [
-                "harnesscells.py", "dps_check.py", "paper93.py"]),
-            "exp": files(CERT + "/exp", ["exp_probe.cpp", "exp_check.py"]),
+                          "independent identity oracle is cross-checked on 60 "
+                          "cells",
         },
     }
-    with open(CERT + "/provenance.json", "w") as h:
+
+    if args.manuscript:
+        manuscript = Path(args.manuscript).expanduser().resolve()
+        record["manuscript"] = {
+            "path": str(manuscript),
+            "sha256": sha(manuscript),
+            "read_only": True,
+            "section_read": "S18, the certified enclosure derived",
+        }
+
+    record["record_files"] = {
+        "code": files(record_paths.CODE_DIR,
+                      sorted(p.name for p in record_paths.CODE_DIR.glob("*.py"))),
+        "explore": files(record_paths.EXPLORE_DIR,
+                         sorted(p.name for p in record_paths.EXPLORE_DIR.glob("*.py"))),
+        "exp": files(record_paths.RECORD_DIR / "exp", EXP_NAMES),
+    }
+    results = {}
+    for p in sorted(out.iterdir()):
+        if p.is_file() and p.name != "provenance.json":
+            results[p.name] = {"bytes": p.stat().st_size, "sha256": sha(p)}
+    record["results"] = results
+
+    with open(out / "provenance.json", "w") as h:
         json.dump(record, h, indent=1)
-    print("wrote", CERT + "/provenance.json")
+    print("wrote", out / "provenance.json")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

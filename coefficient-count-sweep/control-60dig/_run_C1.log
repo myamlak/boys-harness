@@ -1,0 +1,258 @@
+[C1] p5 rel:1e-15 (W=32.0, record 25 [22, 2], delivered 6.645812668009123e-16)
+C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\baryrat.py:931: RuntimeWarning: divide by zero encountered in scalar divide
+  deviation = max_err / local_max.min() - 1
+warning: BRASIL did not converge; dev=1.33, err=1.94e-16
+  reproduction: e64=6.645812668009123e-16 record=6.645812668009123e-16 match=True
+warning: BRASIL did not converge; dev=0.6, err=6.66e-16
+    default   S=24 [22/1] conv=False e60=3.5221909409249233e-15 e64=3.632325505950557e-15 guard=0.33775441915308884 meet=False 8.63s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    default   S=24 [21/2] conv=False e60=1.1445255550545904e-15 e64=1.245053625325551e-15 guard=0.10648897390905961 meet=False 8.16s
+warning: BRASIL did not converge; dev=3.0, err=2.22e-16
+    default   S=24 [20/3] conv=False e60=3.0114891723009922e-16 e64=3.055415786822623e-15 guard=0.027329309985540469 meet=True 7.78s
+warning: BRASIL did not converge; dev=1.5, err=2.78e-16
+    default   S=24 [19/4] conv=False e60=7.6059662485901006e-16 e64=2.002983261860435e-12 guard=4.5443344726844187e-6 meet=False 7.1s
+warning: BRASIL did not converge; dev=3.0, err=2.22e-16
+    default   S=24 [18/5] conv=False e60=3.0369617154570667e-16 e64=1.6837809121885933e-10 guard=5.5658231572723884e-7 meet=False 7.02s
+warning: BRASIL did not converge; dev=7.0, err=2.22e-16
+    default   S=24 [17/6] conv=False e60=3.6255334766071447e-15 e64=2.1155711687269736e-14 guard=2.3209359498162748e-5 meet=False 6.83s
+warning: BRASIL did not converge; dev=2.65e+02, err=1.48e-14
+    default   S=24 [16/7] conv=False e60=2.9377964090496762e-13 e64=3.087537680304336e-10 guard=5.0689383495209194e-8 meet=False 6.44s
+warning: BRASIL did not converge; dev=2.33, err=2.78e-16
+    default   S=24 [15/8] conv=False e60=4.554434767221342e-16 e64=9.788845942753926e-10 guard=1.5337075674235248e-8 meet=False 5.36s
+warning: BRASIL did not converge; dev=5.07e+05, err=2.81e-11
+    default   S=24 [14/9] conv=False e60=7.100038201032764e-15 e64=4.067090566965758e-06 guard=9.0998733934816305e-12 meet=False 5.99s
+warning: BRASIL did not converge; dev=3.5, err=2.5e-16
+    default   S=24 [13/10] conv=False e60=9.0637648117194504e-16 e64=0.026432008566018062 guard=4.974497474657963e-16 meet=False 5.31s
+warning: BRASIL did not converge; dev=6.96e+06, err=3.86e-10
+    default   S=24 [12/11] conv=False e60=1.0624370304989676e-15 e64=1.3463463689749351e-06 guard=8.741023752561786e-12 meet=False 5.59s
+warning: BRASIL did not converge; dev=2.0, err=1.67e-16
+    default   S=24 [11/12] conv=False e60=2.856693020981154e-15 e64=1.862088157835361e-06 guard=4.4495161807588171e-12 meet=False 7.94s
+  level 24 (default): meets60=True best=3.0114891723009922e-16 (82.2 s)
+warning: BRASIL did not converge; dev=0.173, err=1.69e-15
+    default   S=23 [21/1] conv=False e60=1.2139345765575323e-14 e64=1.2035518378146993e-14 guard=0.33005111502979057 meet=False 10.3s
+warning: BRASIL did not converge; dev=1.0, err=2.22e-16
+    default   S=23 [20/2] conv=False e60=1.1133762484960862e-15 e64=1.245053625325551e-15 guard=0.098556006746655357 meet=False 9.6s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    default   S=23 [19/3] conv=False e60=3.5705188633550713e-16 e64=1.54671732038997e-15 guard=0.028943327087621317 meet=True 6.82s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    default   S=23 [18/4] conv=False e60=8.003818478101928e-16 e64=2.173793715576322e-14 guard=0.004982918817612899 meet=True 8.14s
+warning: BRASIL did not converge; dev=3.0, err=2.22e-16
+    default   S=23 [17/5] conv=False e60=4.2011821209380475e-16 e64=8.238439826230382e-15 guard=0.0061246043978533356 meet=True 6.72s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    default   S=23 [16/6] conv=False e60=2.0239190196426866e-15 e64=1.1725471871971616e-10 guard=2.8781633944273126e-7 meet=False 5.7s
+warning: BRASIL did not converge; dev=1.91e+04, err=1.06e-12
+    default   S=23 [15/7] conv=False e60=5.402072639671531e-16 e64=6.350890600912796e-10 guard=3.3407549341976504e-8 meet=False 5.9s
+warning: BRASIL did not converge; dev=39.5, err=2.25e-15
+    default   S=23 [14/8] conv=False e60=9.9884896531144719e-16 e64=3.5495598740086766e-08 guard=3.8618605103842934e-10 meet=False 4.24s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    default   S=23 [13/9] conv=False e60=9.6670639103380553e-16 e64=3.8666545599827696e-07 guard=5.7167122724482093e-11 meet=False 5.74s
+warning: BRASIL did not converge; dev=1.02e+09, err=1.13e-07
+    default   S=23 [12/10] conv=False e60=2.1974999478274002e-12 e64=1.9465541008864268e-07 guard=1.6008978514137739e-10 meet=False 5.72s
+warning: BRASIL did not converge; dev=2.5, err=3.89e-16
+    default   S=23 [11/11] conv=False e60=1.3666120938071869e-15 e64=0.0028649419065375405 guard=1.6083331825318851e-14 meet=False 6.12s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    default   S=23 [10/12] conv=False e60=4.4855109121615587e-16 e64=2.2587955473627657e-08 guard=5.5112588272180097e-10 meet=False 6.3s
+  level 23 (default): meets60=True best=3.5705188633550713e-16 (81.3 s)
+warning: BRASIL did not converge; dev=0.0255, err=5.58e-15
+    default   S=22 [20/1] conv=False e60=4.10468413776544e-14 e64=4.095424552301799e-14 guard=0.32283479464571964 meet=False 6.83s
+warning: BRASIL did not converge; dev=0.727, err=5.27e-16
+    default   S=22 [19/2] conv=False e60=3.563196750997808e-15 e64=3.7351608759766536e-15 guard=0.091944807363684887 meet=False 6.36s
+warning: BRASIL did not converge; dev=0.5, err=1.67e-16
+    default   S=22 [18/3] conv=False e60=7.6795266043002883e-16 e64=3.4664996175843563e-15 guard=0.027229344540449269 meet=True 5.07s
+warning: BRASIL did not converge; dev=1.75, err=3.05e-16
+    default   S=22 [17/4] conv=False e60=1.4574094757263995e-15 e64=5.062430349304552e-15 guard=0.0097759962428367934 meet=False 5.96s
+warning: BRASIL did not converge; dev=2.67, err=3.05e-16
+    default   S=22 [16/5] conv=False e60=1.0149935893023068e-15 e64=1.1462875126449317e-14 guard=0.0035725672989791501 meet=False 5.02s
+warning: BRASIL did not converge; dev=98.3, err=8.27e-15
+    default   S=22 [15/6] conv=False e60=9.2880198140240637e-16 e64=2.2144520482766796e-12 guard=7.6739046632862616e-6 meet=False 5.08s
+warning: BRASIL did not converge; dev=9.0, err=2.78e-16
+    default   S=22 [14/7] conv=False e60=4.7250333280816661e-16 e64=1.3655198761272235e-10 guard=2.500462412058798e-7 meet=False 4.42s
+warning: BRASIL did not converge; dev=2.0, err=1.67e-16
+    default   S=22 [13/8] conv=False e60=1.0105920015827201e-15 e64=2.113839529016918e-11 guard=5.5720950231006839e-7 meet=False 5.15s
+warning: BRASIL did not converge; dev=3.5, err=2.5e-16
+    default   S=22 [12/9] conv=False e60=1.8767703805640377e-15 e64=4.4847862199811494e-08 guard=6.2896198757228655e-10 meet=False 4.22s
+warning: BRASIL did not converge; dev=1.0, err=1.67e-16
+    default   S=22 [11/10] conv=False e60=3.6880298933300496e-16 e64=1.0145018838955056e-07 guard=3.309238657310252e-10 meet=False 3.72s
+warning: BRASIL did not converge; dev=6.0, err=1.94e-16
+    default   S=22 [10/11] conv=False e60=1.3386192339551739e-15 e64=3.1768410247963405e-10 guard=1.0983411172382644e-7 meet=False 4.67s
+warning: BRASIL did not converge; dev=2.0, err=1.67e-16
+    default   S=22 [9/12] conv=False e60=4.5923664440867099e-15 e64=1.13016099812142e-10 guard=2.1093367929399746e-8 meet=False 4.3s
+  level 22 (default): meets60=True best=7.6795266043002883e-16 (60.8 s)
+warning: BRASIL did not converge; dev=0.0119, err=1.89e-14
+    default   S=21 [19/1] conv=False e60=1.4117334125673844e-13 e64=1.4131358647445006e-13 guard=0.31618281956401708 meet=False 6.68s
+warning: BRASIL did not converge; dev=0.152, err=1.47e-15
+    default   S=21 [18/2] conv=False e60=1.0386350245805805e-14 e64=1.0474399490329406e-14 guard=0.085087665763180089 meet=False 5.06s
+warning: BRASIL did not converge; dev=1.0, err=2.78e-16
+    default   S=21 [17/3] conv=False e60=1.1872241276319525e-15 e64=2.3024840211167063e-15 guard=0.024577371425585068 meet=False 5.04s
+warning: BRASIL did not converge; dev=2.0, err=1.67e-16
+    default   S=21 [16/4] conv=False e60=5.1458889344207925e-16 e64=1.556663588522307e-14 guard=0.0038928728992986466 meet=True 5.18s
+warning: BRASIL did not converge; dev=1.33, err=1.94e-16
+    default   S=21 [15/5] conv=False e60=5.3764825174308606e-16 e64=1.6122441990163703e-14 guard=0.0026046646603283371 meet=True 4.18s
+warning: BRASIL did not converge; dev=7.0, err=2.22e-16
+    default   S=21 [14/6] conv=False e60=5.2583180353856595e-16 e64=4.679861083733268e-14 guard=0.0015823947343316463 meet=True 3.89s
+warning: BRASIL did not converge; dev=3.0, err=2.22e-16
+    default   S=21 [13/7] conv=False e60=9.0337703575989535e-16 e64=1.949771967957647e-09 guard=2.1299752817430586e-8 meet=False 3.78s
+warning: BRASIL did not converge; dev=3.0, err=2.22e-16
+    default   S=21 [12/8] conv=False e60=5.2878180373061958e-16 e64=3.7264985308113824e-10 guard=1.3047277545864608e-7 meet=False 4.47s
+warning: BRASIL did not converge; dev=8.67, err=8.05e-16
+    default   S=21 [11/9] conv=False e60=4.474962905324374e-15 e64=3.328591338931697e-13 guard=1.3186782310030402e-5 meet=False 3.73s
+warning: BRASIL did not converge; dev=3.07e+07, err=2.56e-09
+    default   S=21 [10/10] conv=False e60=3.2471578717994751e-13 e64=1.1320167697054009e-10 guard=1.3608965326102249e-7 meet=False 2.98s
+warning: BRASIL did not converge; dev=4.88e+06, err=2.71e-10
+    default   S=21 [9/11] conv=False e60=3.6241227663971854e-16 e64=1.0863190870440388e-11 guard=5.3629970680151092e-7 meet=False 4.28s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    default   S=21 [8/12] conv=False e60=5.1437596688771668e-15 e64=6.491918780653925e-13 guard=5.2986844497703792e-6 meet=False 3.77s
+  level 21 (default): meets60=True best=5.1458889344207925e-16 (53.0 s)
+warning: BRASIL did not converge; dev=0.00445, err=6.26e-14
+    default   S=20 [18/1] conv=False e60=4.6690905386199934e-13 e64=4.666876005595274e-13 guard=0.31015348964677936 meet=False 4.35s
+warning: BRASIL did not converge; dev=0.0943, err=4.83e-15
+    default   S=20 [17/2] conv=False e60=3.5552363884813187e-14 e64=3.569153725933247e-14 guard=0.078121908490662071 meet=False 4.8s
+warning: BRASIL did not converge; dev=0.636, err=5e-16
+    default   S=20 [16/3] conv=False e60=2.7795736564731219e-15 e64=3.269342419282803e-15 guard=0.022931722603962179 meet=False 4.65s
+warning: BRASIL did not converge; dev=1.7, err=7.49e-16
+    default   S=20 [15/4] conv=False e60=4.0857789260813105e-15 e64=1.3517180153480742e-13 guard=0.0003921270623699823 meet=False 4.4s
+warning: BRASIL did not converge; dev=3.0, err=3.33e-16
+    default   S=20 [14/5] conv=False e60=2.0968652884789878e-15 e64=1.0048026346655999e-14 guard=0.0029955994346552222 meet=False 3.5s
+warning: BRASIL did not converge; dev=3.5, err=2.5e-16
+    default   S=20 [13/6] conv=False e60=1.4396564431305663e-15 e64=3.5267705519062575e-14 guard=0.0014887859898216966 meet=False 4.42s
+warning: BRASIL did not converge; dev=1.67, err=2.22e-16
+    default   S=20 [12/7] conv=False e60=6.8049396964901361e-16 e64=2.4248997936021597e-13 guard=0.0001627520116767979 meet=False 3.71s
+warning: BRASIL did not converge; dev=2.72e+02, err=2.27e-14
+    default   S=20 [11/8] conv=False e60=1.0246966050596377e-15 e64=2.052327072045364e-13 guard=1.282524940929574e-6 meet=False 3.92s
+warning: BRASIL did not converge; dev=4.89e+02, err=2.72e-14
+    default   S=20 [10/9] conv=False e60=3.0873975832069342e-16 e64=1.4402700232151904e-10 guard=1.7106306493444352e-7 meet=False 3.85s
+warning: BRASIL did not converge; dev=44.3, err=3.77e-15
+    default   S=20 [9/10] conv=False e60=7.3785571129198696e-16 e64=1.4949274230880186e-10 guard=2.0493732827644924e-7 meet=False 3.2s
+warning: BRASIL did not converge; dev=3.0, err=2.22e-16
+    default   S=20 [8/11] conv=False e60=8.5236979491571684e-16 e64=4.1586600275339464e-10 guard=1.4379445929548097e-7 meet=False 4.77s
+warning: BRASIL did not converge; dev=1.67, err=2.22e-16
+    default   S=20 [7/12] conv=False e60=8.4275220211751414e-16 e64=2.800212832980765e-10 guard=2.5670453727795702e-7 meet=False 4.01s
+  level 20 (default): meets60=False best=None (49.6 s)
+warning: BRASIL did not converge; dev=0.00267, err=6.25e-14
+    tightened S=20 [18/1] conv=False e60=4.6664019569656861e-13 e64=4.666876005595274e-13 guard=0.31015317517398531 meet=False 21.36s
+warning: BRASIL did not converge; dev=0.0476, err=4.88e-15
+    tightened S=20 [17/2] conv=False e60=3.5844009454431556e-14 e64=3.5899046196886724e-14 guard=0.078130351403056615 meet=False 18.86s
+warning: BRASIL did not converge; dev=0.357, err=5.27e-16
+    tightened S=20 [16/3] conv=False e60=3.0094554674405729e-15 e64=3.3058602723021525e-15 guard=0.02294056642622356 meet=False 18.48s
+warning: BRASIL did not converge; dev=1.75, err=1.22e-15
+    tightened S=20 [15/4] conv=False e60=4.940045871058479e-15 e64=2.8387257448472454e-13 guard=0.00014481079131175657 meet=False 19.8s
+warning: BRASIL did not converge; dev=1.33, err=1.94e-16
+    tightened S=20 [14/5] conv=False e60=1.1488788652452651e-15 e64=1.5187291047913655e-14 guard=0.0032625253360675732 meet=False 20.37s
+warning: BRASIL did not converge; dev=4.0, err=2.78e-16
+    tightened S=20 [13/6] conv=False e60=7.9545354515315049e-16 e64=2.5499152536697017e-14 guard=0.0016128267982927521 meet=True 21.49s
+warning: BRASIL did not converge; dev=2.13e+09, err=2.36e-07
+    tightened S=20 [12/7] conv=False e60=1.146467504794725e-11 e64=1.159052769263141e-11 guard=0.00040912535957356857 meet=False 20.44s
+warning: BRASIL did not converge; dev=24.0, err=1.39e-15
+    tightened S=20 [11/8] conv=False e60=1.0195076210140369e-15 e64=1.8411935794161936e-10 guard=2.3099336728983835e-7 meet=False 20.43s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    tightened S=20 [10/9] conv=False e60=1.2089050675025221e-15 e64=2.193462866983822e-10 guard=1.4695908156910371e-7 meet=False 19.86s
+warning: BRASIL did not converge; dev=7.35e+03, err=6.12e-13
+    tightened S=20 [9/10] conv=False e60=8.5149214995417784e-16 e64=7.289892415204486e-10 guard=8.5710411975350038e-8 meet=False 21.06s
+warning: BRASIL did not converge; dev=3.0, err=2.22e-16
+    tightened S=20 [8/11] conv=False e60=1.0469631222029147e-15 e64=3.230883950580151e-10 guard=1.4440044712244235e-7 meet=False 22.64s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    tightened S=20 [7/12] conv=False e60=1.4247033306584919e-15 e64=2.6207317807410717e-08 guard=1.5097401242545353e-9 meet=False 24.58s
+  level 20 (tightened): meets60=True best=7.9545354515315049e-16 (249.4 s)
+warning: BRASIL did not converge; dev=0.0007, err=1.98e-13
+    default   S=19 [17/1] conv=False e60=1.4824844436921201e-12 e64=1.4824438498876229e-12 guard=0.3048241308880427 meet=False 4.21s
+warning: BRASIL did not converge; dev=0.0101, err=1.66e-14
+    default   S=19 [16/2] conv=False e60=1.2314229652004002e-13 e64=1.230527999696753e-13 guard=0.07083344417538801 meet=False 4.77s
+warning: BRASIL did not converge; dev=0.655, err=1.33e-15
+    default   S=19 [15/3] conv=False e60=6.7969946629231241e-15 e64=6.847794939290531e-15 guard=0.021908664352935113 meet=False 4.56s
+warning: BRASIL did not converge; dev=0.161, err=9.99e-16
+    default   S=19 [14/4] conv=False e60=7.3928469528492974e-15 e64=7.470321751953307e-15 guard=0.028961472799596738 meet=False 4.52s
+warning: BRASIL did not converge; dev=0.75, err=1.94e-16
+    default   S=19 [13/5] conv=False e60=1.0574225369988853e-15 e64=2.171975893419941e-14 guard=0.0025638465504177398 meet=False 3.88s
+warning: BRASIL did not converge; dev=1.33, err=1.94e-16
+    default   S=19 [12/6] conv=False e60=4.3215451509988422e-16 e64=3.5224151064067286e-14 guard=0.0014261301347092701 meet=True 4.47s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    default   S=19 [11/7] conv=False e60=4.1562613741809072e-16 e64=6.793901553978925e-14 guard=0.00077283883948041363 meet=False 4.24s
+warning: BRASIL did not converge; dev=91.5, err=5.13e-15
+    default   S=19 [10/8] conv=False e60=1.172665272713667e-12 e64=1.3587243714183453e-12 guard=0.0011734469294394811 meet=False 4.42s
+warning: BRASIL did not converge; dev=1.48e+08, err=1.24e-08
+    default   S=19 [9/9] conv=False e60=1.2365326707063594e-12 e64=1.3497332250379429e-12 guard=2.8839336185430277e-6 meet=False 3.84s
+warning: BRASIL did not converge; dev=1.67, err=2.22e-16
+    default   S=19 [8/10] conv=False e60=1.5474581584419951e-15 e64=2.693713193381336e-14 guard=0.0028349001888221622 meet=False 3.87s
+warning: BRASIL did not converge; dev=2.0, err=1.67e-16
+    default   S=19 [7/11] conv=False e60=4.6720093389887716e-16 e64=6.977877826999994e-14 guard=0.00086479540728937828 meet=False 5.01s
+warning: BRASIL did not converge; dev=2.5, err=1.94e-16
+    default   S=19 [6/12] conv=False e60=6.1666812785178158e-16 e64=5.418281238491879e-14 guard=0.0011043894785761417 meet=True 4.21s
+  level 19 (default): meets60=True best=4.3215451509988422e-16 (52.0 s)
+warning: BRASIL did not converge; dev=0.000231, err=6e-13
+    default   S=18 [16/1] conv=False e60=4.4874653057700715e-12 e64=4.4873807746108405e-12 guard=0.30026805348766075 meet=False 4.41s
+warning: BRASIL did not converge; dev=0.00189, err=5.89e-14
+    default   S=18 [15/2] conv=False e60=4.4021465073162333e-13 e64=4.401264565525823e-13 guard=0.062729861461752077 meet=False 4.32s
+warning: BRASIL did not converge; dev=5.57, err=1.28e-15
+    default   S=18 [14/3] conv=False e60=5.648557828922587e-15 e64=6.325061236452513e-15 guard=0.021747815023806163 meet=False 4.23s
+warning: BRASIL did not converge; dev=0.161, err=1.8e-15
+    default   S=18 [13/4] conv=False e60=1.2976163586994282e-14 e64=1.2865554128364027e-14 guard=0.013072456462211092 meet=False 4.17s
+warning: BRASIL did not converge; dev=0.158, err=6.11e-16
+    default   S=18 [12/5] conv=False e60=4.4547026253349309e-15 e64=3.6977752116659336e-14 guard=0.0015802749935300195 meet=False 3.99s
+warning: BRASIL did not converge; dev=1.33, err=1.94e-16
+    default   S=18 [11/6] conv=False e60=1.1603219167322376e-15 e64=3.3587418555046796e-14 guard=0.0014683079206107844 meet=False 3.86s
+warning: BRASIL did not converge; dev=2.0, err=1.67e-16
+    default   S=18 [10/7] conv=False e60=1.1145174469002441e-15 e64=6.835536710517617e-14 guard=0.00090918039031971203 meet=False 6.38s
+warning: BRASIL did not converge; dev=1.33, err=1.94e-16
+    default   S=18 [9/8] conv=False e60=1.1915620425621636e-15 e64=9.477712989468833e-14 guard=0.00076160339963120001 meet=False 4.64s
+warning: BRASIL did not converge; dev=2.0, err=1.67e-16
+    default   S=18 [8/9] conv=False e60=5.0306516004014619e-16 e64=7.045955586812515e-14 guard=0.00069956967077893449 meet=False 4.97s
+warning: BRASIL did not converge; dev=1.5, err=1.39e-16
+    default   S=18 [7/10] conv=False e60=4.2638216413684626e-16 e64=5.604635350021027e-14 guard=0.00078952979718110936 meet=False 4.88s
+warning: BRASIL did not converge; dev=2.0, err=1.67e-16
+    default   S=18 [6/11] conv=False e60=7.5298738556386665e-16 e64=7.364509168873253e-14 guard=0.0011530139440634941 meet=True 5.39s
+warning: BRASIL did not converge; dev=0.833, err=3.05e-16
+    default   S=18 [5/12] conv=False e60=2.0753822758442452e-15 e64=3.3798371271447475e-14 guard=0.0017233191509675525 meet=False 4.58s
+  level 18 (default): meets60=True best=7.5298738556386665e-16 (55.8 s)
+    default   S=17 [15/1] conv=True e60=1.2864243173748849e-11 e64=1.2864309074738703e-11 guard=0.29653601883744308 meet=False 2.21s
+warning: BRASIL did not converge; dev=0.00112, err=2.23e-13
+    default   S=17 [14/2] conv=False e60=1.6685846647210746e-12 e64=1.6685793668737928e-12 guard=0.052803440632544599 meet=False 7.05s
+warning: BRASIL did not converge; dev=0.0219, err=7.77e-15
+    default   S=17 [13/3] conv=False e60=5.7427636965713641e-14 e64=5.74799757025296e-14 guard=0.022376513292645819 meet=False 4.36s
+warning: BRASIL did not converge; dev=0.0342, err=4.19e-15
+    default   S=17 [12/4] conv=False e60=3.0685060046587237e-14 e64=3.071132275803026e-14 guard=0.0098269358543399974 meet=False 4.28s
+warning: BRASIL did not converge; dev=0.869, err=1.27e-14
+    default   S=17 [11/5] conv=False e60=5.085838910287337e-14 e64=1.537931600180962e-12 guard=1.8196627886720801e-5 meet=False 3.85s
+warning: BRASIL did not converge; dev=0.238, err=7.22e-16
+    default   S=17 [10/6] conv=False e60=4.7683898617353104e-15 e64=7.484629182030919e-14 guard=0.0011647429956551173 meet=False 4.46s
+warning: BRASIL did not converge; dev=0.75, err=3.89e-16
+    default   S=17 [9/7] conv=False e60=1.9403953044933857e-15 e64=5.0811976954184616e-14 guard=0.0010081858928699159 meet=False 4.51s
+warning: BRASIL did not converge; dev=1.25, err=2.5e-16
+    default   S=17 [8/8] conv=False e60=1.4383391598920241e-15 e64=6.932999235168712e-14 guard=0.000884634468422033 meet=False 4.43s
+warning: BRASIL did not converge; dev=0.833, err=3.05e-16
+    default   S=17 [7/9] conv=False e60=1.7604883447824539e-15 e64=3.916229876656642e-14 guard=0.00092733151092325434 meet=False 5.15s
+warning: BRASIL did not converge; dev=0.333, err=4.44e-16
+    default   S=17 [6/10] conv=False e60=2.9707638289079775e-15 e64=3.870547677002123e-14 guard=0.0011099873076968329 meet=False 4.22s
+warning: BRASIL did not converge; dev=0.08, err=1.5e-15
+    default   S=17 [5/11] conv=False e60=1.0447377804498282e-14 e64=5.513903946660915e-14 guard=0.00096918766146052944 meet=False 4.1s
+warning: BRASIL did not converge; dev=0.0267, err=4.27e-15
+    default   S=17 [4/12] conv=False e60=3.1817755123533033e-14 e64=3.195637638335581e-14 guard=0.012551622635236166 meet=False 4.77s
+  level 17 (default): meets60=False best=None (53.4 s)
+warning: BRASIL did not converge; dev=9.68e-05, err=1.72e-12
+    tightened S=17 [15/1] conv=False e60=1.2863526991856795e-11 e64=1.286368654792604e-11 guard=0.29653601622066279 meet=False 24.19s
+warning: BRASIL did not converge; dev=0.000995, err=2.23e-13
+    tightened S=17 [14/2] conv=False e60=1.6688285724610053e-12 e64=1.6687868758113469e-12 guard=0.05280374572501476 meet=False 47.76s
+warning: BRASIL did not converge; dev=0.0145, err=7.74e-15
+    tightened S=17 [13/3] conv=False e60=5.7812490040971105e-14 e64=5.768748464008386e-14 guard=0.022376370319691018 meet=False 39.47s
+warning: BRASIL did not converge; dev=0.0272, err=4.19e-15
+    tightened S=17 [12/4] conv=False e60=3.0776745625201789e-14 e64=3.091883169558452e-14 guard=0.0098223763571424187 meet=False 22.87s
+warning: BRASIL did not converge; dev=6.95e+10, err=9.65e-06
+    tightened S=17 [11/5] conv=False e60=4.7078917455827605e-13 e64=3.5025032999351243e-13 guard=0.00061577205402634189 meet=False 21.22s
+warning: BRASIL did not converge; dev=0.182, err=7.22e-16
+    tightened S=17 [10/6] conv=False e60=4.9201252526279593e-15 e64=4.050794946170123e-14 guard=0.0011664786296866374 meet=False 21.77s
+warning: BRASIL did not converge; dev=0.75, err=3.89e-16
+    tightened S=17 [9/7] conv=False e60=2.1439604071590247e-15 e64=4.967179870206338e-14 guard=0.0010045559623821746 meet=False 24.95s
+warning: BRASIL did not converge; dev=1.25, err=2.5e-16
+    tightened S=17 [8/8] conv=False e60=1.3200576322984688e-15 e64=5.116504734185185e-14 guard=0.00088482229109428859 meet=False 20.82s
+warning: BRASIL did not converge; dev=1.75, err=3.05e-16
+    tightened S=17 [7/9] conv=False e60=1.7232072429273808e-15 e64=5.220569095325839e-14 guard=0.00092835708007456954 meet=False 21.88s
+warning: BRASIL did not converge; dev=0.231, err=4.44e-16
+    tightened S=17 [6/10] conv=False e60=2.8827632407387681e-15 e64=3.707250621765479e-14 guard=0.0011084608910523024 meet=False 20.96s
+warning: BRASIL did not converge; dev=0.08, err=1.5e-15
+    tightened S=17 [5/11] conv=False e60=1.0682522268541316e-14 e64=5.142234667394227e-14 guard=0.00096971901535930158 meet=False 19.91s
+warning: BRASIL did not converge; dev=0.0473, err=4.3e-15
+    tightened S=17 [4/12] conv=False e60=3.1594314208670733e-14 e64=3.1541358508247297e-14 guard=0.012530046663221437 meet=False 20.88s
+  level 17 (tightened): meets60=False best=None (306.7 s)
+  COUNT60 18 (down); accepted [6/11] default e60=7.5298738556386665e-16 e64r=4.225607213136467e-14 e64=7.364509168873253e-14
+  wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-control-60dig\cell_C1.json
+wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-control-60dig\summary.json
+EXIT 0

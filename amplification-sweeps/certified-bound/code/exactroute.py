@@ -9,24 +9,37 @@ differs from it by the route's arithmetic, which model.py bounds.
 This evaluation is a computation, not a bound; the record states its error
 bound (70-digit working precision on 60-digit references, so <= 1e-45 in the
 record's tier T) and it is cross-checked against the deposit's identity-based
-oracle, which agrees to 4e-56 on the checked cells.
+oracle, which agrees to 8e-50 on the non-outlier checked cells.
+
+The sweep root is selected with --sweep / CERT_SWEEP (record_paths.py); the
+kernel is model.py's --kernel / BOYS_ROOT.
 """
+import argparse
 import csv
+import os
 import sys
+from pathlib import Path
 
 from mpmath import mp, mpf
 
-sys.path.insert(0, r"C:/Users/myaml/dev/_a-cert-run/code")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import model
+import record_paths
 
 mp.dps = 70
 
-THETA0 = model.THETA0
-B1 = model.piece(0, 0)[1]
 _EMPTY = object()
 
 _pieces = {}
 _ext = None
+
+
+def _theta0():
+    return model.theta0()
+
+
+def _b1():
+    return model.piece(0, 0)[1]
 
 
 def _piece(order, band_index):
@@ -75,8 +88,9 @@ def ext_value(x):
 
 
 def served_count(x):
+    thresholds = model.table()["thresholds"]
     served = 0
-    while served < 32 and x >= model.TABLE["thresholds"][served + 1]:
+    while served < 32 and x >= thresholds[served + 1]:
         served += 1
     return served
 
@@ -84,7 +98,7 @@ def served_count(x):
 def product_values(x):
     """Exact-real values of the direct entry's 33 orders at x."""
     xm = mpf(x)
-    bi = 0 if xm < B1 else 1
+    bi = 0 if xm < _b1() else 1
     a, b, c0 = _piece(0, bi)
     t = _map(xm, a, b)
     return [_cheb(_piece(n, bi)[2], t) for n in range(33)]
@@ -102,14 +116,14 @@ def ship_values(x, exp_half):
     if xm == 0:
         return [mpf(1) / (2 * n + 1) for n in range(33)]
     eh = mpf(exp_half)
-    if xm < THETA0:
+    if xm < _theta0():
         f = [None] * 33
         f[32] = fit_value(32, 0, xm)
         for l in range(31, -1, -1):
             f[l] = (xm * f[l + 1] + eh) / (l + mpf("0.5"))
         return f
     served = served_count(xm)
-    bi = 0 if xm < B1 else 1
+    bi = 0 if xm < _b1() else 1
     out = [None] * 33
     f = ext_value(xm)
     out[0] = f
@@ -123,16 +137,23 @@ def ship_values(x, exp_half):
 
 def load_reference(root):
     ref = {}
-    with open(root + "/data/reference.csv", newline="") as handle:
+    with open(Path(root) / "data" / "reference.csv", newline="") as handle:
         for row in csv.DictReader(handle):
             ref[(row["band"], float(row["x"]))] = [
                 mpf(row[c]) for c in list(row)[2:]]
     return ref
 
 
-if __name__ == "__main__":
-    import exact
-    root = r"C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/sweeps/amplification_form"
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    record_paths.add_kernel(parser)
+    record_paths.add_inputs(parser, deposit_arg=True)
+    args = parser.parse_args(argv)
+    model.configure(kernel=args.kernel, exp_bits=args.exp_bits)
+    root = record_paths.sweep(args.sweep)
+    dep = record_paths.deposit(args.deposit)
+    with record_paths.deposit_on_path(dep):
+        import exact
     ref = load_reference(root)
     cases = [("A1", 1.2141318994825876, 5, "product"),
              ("A2", 5.953583371143639, 5, "product"),
@@ -149,3 +170,7 @@ if __name__ == "__main__":
         orc = exact.entry_truncation_exact(band, n, method, x)
         print(band, x, n, method, "route", mp.nstr(tr, 12),
               "oracle", mp.nstr(orc, 12), "diff", mp.nstr(tr - orc, 6))
+
+
+if __name__ == "__main__":
+    main()

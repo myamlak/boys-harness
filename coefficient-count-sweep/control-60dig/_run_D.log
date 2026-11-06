@@ -1,0 +1,29 @@
+[D] p0 rel:1e-15 (W=1.0, record 8 [6, 1], delivered 4.493761148520244e-16)
+C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\baryrat.py:931: RuntimeWarning: divide by zero encountered in scalar divide
+  deviation = max_err / local_max.min() - 1
+warning: equioscillation property not satisfied, deviation=2.0
+  reproduction: e64=4.493761148520244e-16 record=4.493761148520244e-16 match=True
+    default   S=7 [5/1] conv=True e60=1.0970407294044959e-15 e64=1.2266266576947662e-15 guard=0.92973831677436437 meet=False 1.41s
+warning: BRASIL did not converge; dev=0.0714, err=8.33e-16
+    default   S=7 [4/2] conv=False e60=3.1266258004682047e-15 e64=3.3240352049129065e-15 guard=0.90271289663878672 meet=False 5.34s
+warning: BRASIL did not converge; dev=0.143, err=8.88e-16
+    default   S=7 [3/3] conv=False e60=3.546874335237037e-15 e64=3.7120319126153604e-15 guard=0.92041764400510829 meet=False 5.63s
+warning: BRASIL did not converge; dev=0.185, err=8.88e-16
+    default   S=7 [2/4] conv=False e60=3.2955009701526865e-15 e64=3.3745744660139642e-15 guard=0.90886631474863833 meet=False 6.21s
+warning: BRASIL did not converge; dev=0.231, err=8.88e-16
+    default   S=7 [1/5] conv=False e60=3.4201838854979961e-15 e64=3.599546097081562e-15 guard=0.90974107628241082 meet=False 5.24s
+  level 7 (default): meets60=False best=None (23.8 s)
+warning: equioscillation property not satisfied, deviation=0.4
+    tightened S=7 [5/1] conv=True e60=1.111932232525521e-15 e64=1.2373199910656927e-15 guard=0.92973808260080421 meet=False 8.0s
+warning: BRASIL did not converge; dev=0.192, err=8.6e-16
+    tightened S=7 [4/2] conv=False e60=3.3848305936219332e-15 e64=3.599546097081562e-15 guard=0.9027135238701853 meet=False 45.42s
+warning: equioscillation property not satisfied, deviation=0.0667
+    tightened S=7 [3/3] conv=True e60=3.4623917879158451e-15 e64=3.5440791895256133e-15 guard=0.92038901532651373 meet=False 4.31s
+warning: equioscillation property not satisfied, deviation=0.133
+    tightened S=7 [2/4] conv=True e60=3.1756002859642345e-15 e64=3.323703223845247e-15 guard=0.90886129829100266 meet=False 24.6s
+warning: equioscillation property not satisfied, deviation=0.0667
+    tightened S=7 [1/5] conv=True e60=3.2363080204977298e-15 e64=3.3498942748838364e-15 guard=0.90973898073722537 meet=False 12.71s
+  level 7 (tightened): meets60=False best=None (95.1 s)
+  COUNT60 8 (equal); accepted [6/1] default e60=2.8499005022108707e-16 e64r=3.6017079915113592e-16 e64=4.493761148520244e-16
+  wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-control-60dig\cell_D.json
+wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-control-60dig\summary.json

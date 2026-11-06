@@ -11,22 +11,24 @@ arithmetic charge and the certified radius, and reports
   - the loser's rounding-to-truncation ratio at these cells; the paper's
     9.6 is a per_order-cell quantity and is checked by harnesscells.py.
 """
+import argparse
 import csv
 import math
+import os
 import statistics as st
 import sys
+from pathlib import Path
 
 from mpmath import mp, mpf
 
-sys.path.insert(0, r"C:/Users/myaml/dev/_a-cert-run/code")
-sys.path.insert(0, r"C:/Users/myaml/dev/_a-cert-run/explore")
-sys.path.insert(0, r"C:/Users/myaml/dev/_harness-v1023/amplification-sweeps/apriori-bound")
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "code"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import exactroute as er
 import model
+import record_paths
 import harnesscells as hc
 
 mp.dps = 70
-ROOT = r"C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/sweeps/amplification_form"
 
 
 def med(vals):
@@ -34,20 +36,32 @@ def med(vals):
     return st.median(vals) if vals else None
 
 
-def main():
-    ref = er.load_reference(ROOT)
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    record_paths.add_kernel(parser)
+    record_paths.add_inputs(parser, model_record_arg=True, deposit_arg=True)
+    args = parser.parse_args(argv)
+    model.configure(kernel=args.kernel, exp_bits=args.exp_bits)
+    root = record_paths.sweep(args.sweep)
+    model_record = record_paths.model_record(args.model_record)
+    dep = record_paths.deposit(args.deposit)
+    with record_paths.deposit_on_path(dep):
+        import bounds
+    hc.bounds = bounds
+
+    ref = er.load_reference(root)
     exp = model.load_exp()
     cells = {}
-    with open(ROOT + "/results/cells.csv", newline="") as h:
+    with open(root / "results" / "cells.csv", newline="") as h:
         for r in csv.DictReader(h):
             cells[(r["band"], float(r["x"]), int(r["n"]))] = (
                 float(r["recursed"]), float(r["direct"]))
     pred = {}
-    with open(ROOT + "/results/prediction_record.csv", newline="") as h:
+    with open(model_record / "prediction_record.csv", newline="") as h:
         for r in csv.DictReader(h):
             pred[(r["band"], r["metric"], int(r["order"]))] = r
     order = {}
-    with open(ROOT + "/results/per_order.csv", newline="") as h:
+    with open(root / "results" / "per_order.csv", newline="") as h:
         for r in csv.DictReader(h):
             order[(r["band"], int(r["n"]), r["method"])] = r
 
@@ -114,4 +128,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

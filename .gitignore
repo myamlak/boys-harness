@@ -3,8 +3,10 @@ __pycache__/
 build/
 build-*/
 results/
-!amplification-sweeps/certified-bound/results/
 results-*/
+!amplification-sweeps/certified-bound/results/
+!amplification-sweeps/certified-bound/results-underflow-fix/
+!amplification-sweeps/certified-bound/results-underflow-fix/**
 data/
 sweep1
 sweep2
@@ -16,10 +18,10 @@ sweep2
 !amplification-sweeps/product-amplification/data/
 !amplification-sweeps/product-amplification/results/
 !amplification-sweeps/product-amplification/analysis/results/
-!amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/data/
-!amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/product_amplification/results/
-!amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/data/
-!amplification-sweeps/product-amplification/v5.1.1-9353/sweeps/amplification_form/results/
+!amplification-sweeps/product-amplification/first-sweep-9353/sweeps/product_amplification/data/
+!amplification-sweeps/product-amplification/first-sweep-9353/sweeps/product_amplification/results/
+!amplification-sweeps/product-amplification/first-sweep-9353/sweeps/amplification_form/data/
+!amplification-sweeps/product-amplification/first-sweep-9353/sweeps/amplification_form/results/
 !amplification-sweeps/product-amplification/v5.2.0-check/run/sweeps/product_amplification/results/
 !amplification-sweeps/product-amplification/v5.2.0-check/run/sweeps/amplification_form/results/
 !amplification-sweeps/seed-spliced/data/
