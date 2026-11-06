@@ -110,17 +110,24 @@ coefficient header
 five records it was re-solved from (`paper_records`), and the generator the
 earlier counts came from
 (`ccc8b011f4170ce0b530bc4781b09670f42839fa18caaa38ea7d3a9ea9ba9bb4`).
-Neither generator is in this deposit; the earlier one is the Boys
-repository's `tools/gen_boys_coefficients.py`. The five `paper_records`
-digests are of the measurement-tree originals. The deposited copies parse to
-the same content but are re-serialised, so their bytes hash differently.
+Both generators are deposited under
+`records/chebyshev_recount/generators/`: the v5.1.1 revision the recount was
+measured with and the v5.0.0 revision the earlier counts came from, with their
+tags, commits and digests in the README there. The five `paper_records`
+digests are of the measurement-tree originals.
+`records/chebyshev_recount/paper-record-digests.tsv` maps each to the
+re-serialised copy deposited at the recount and to the file in this deposit:
+the `ladder` copy is still a re-serialisation of the original, while the four
+core-side records were re-measured at v5.2.5 and carry the recount's corrected
+counts.
 
 The five records hold 135 rows: 40 in `records/core/sweep_all.json`, 20 in
 `records/core/sweep_rel_1e-13.json`, 20 in
 `records/core/sweep_abs_5e-14.json`, 15 in
 `records/core/sweep_rel_1e-14.json`, and 40 in
-`records/ladder/sweep_all.json`. The deposit does not re-run them and does not
-claim that the deposited harness reproduces them.
+`records/ladder/sweep_all.json`. The four core-side records were re-measured
+at Boys v5.2.5 (commit `6681f9d`); the `ladder` record was not. The deposited
+harness is not the one the records identify and does not reproduce them.
 
 ## Ladder records
 
