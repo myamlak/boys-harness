@@ -1,12 +1,21 @@
 """Timing and width check of the certified truncation interval."""
+import argparse
 import sys
 import time
+from pathlib import Path
 
-sys.path.insert(0, r"C:/Users/myaml/dev/_harness-v1023/amplification-sweeps/apriori-bound")
 from mpmath import mp, mpf
 
-import bounds
-import exact
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "code"))
+import record_paths
+
+_parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+record_paths.add_inputs(_parser, deposit_arg=True)
+_args = _parser.parse_args()
+HERE = record_paths.deposit(_args.deposit)
+with record_paths.deposit_on_path(HERE):
+    import bounds
+    import exact
 
 mp.dps = 60
 

@@ -2,29 +2,42 @@
 
 Reads the deposited sweep records and the exact-truncation CSV. Writes stdout.
 """
+import argparse
 import csv
+import sys
 from collections import Counter
+from pathlib import Path
+
 from mpmath import mp, mpf
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "code"))
+import record_paths
+
 mp.dps = 60
-ROOT = r"C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/sweeps/amplification_form"
-HERE = r"C:/Users/myaml/dev/_harness-v1023/amplification-sweeps/apriori-bound"
+
+_parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+record_paths.add_kernel(_parser)
+record_paths.add_inputs(_parser, model_record_arg=True, deposit_arg=True)
+_args = _parser.parse_args()
+ROOT = record_paths.sweep(_args.sweep)
+MODEL = record_paths.model_record(_args.model_record)
+HERE = record_paths.deposit(_args.deposit)
 
 pred = {}
-for r in csv.DictReader(open(ROOT + "/results/prediction.csv")):
+for r in csv.DictReader(open(MODEL / "prediction.csv")):
     pred[(r["band"], r["metric"], int(r["order"]))] = r
 order = {}
-for r in csv.DictReader(open(ROOT + "/results/per_order.csv")):
+for r in csv.DictReader(open(ROOT / "results" / "per_order.csv")):
     order[(r["band"], int(r["n"]), r["method"])] = r
 exact = {}
-for r in csv.DictReader(open(HERE + "/exact_amplification_form.csv")):
+for r in csv.DictReader(open(HERE / "exact_amplification_form.csv")):
     exact[(r["band"], int(r["n"]), r["metric"], r["method"])] = (
         mpf(r["route_error"]), float(r["x"]))
 ref = {}
-for r in csv.DictReader(open(ROOT + "/data/reference.csv")):
+for r in csv.DictReader(open(ROOT / "data" / "reference.csv")):
     ref[(r["band"], float(r["x"]))] = [mpf(r[c]) for c in list(r)[2:]]
 cells = {}
-for r in csv.DictReader(open(ROOT + "/results/cells.csv")):
+for r in csv.DictReader(open(ROOT / "results" / "cells.csv")):
     cells[(r["band"], float(r["x"]), int(r["n"]))] = (
         float(r["recursed"]), float(r["direct"]))
 

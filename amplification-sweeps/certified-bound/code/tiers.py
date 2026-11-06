@@ -15,21 +15,21 @@ reproduction of its 0-certified count can be checked beside ours.
 
 Outputs results/tiers_cells.csv, one row per (comparison, variant).
 """
+import argparse
 import csv
 import itertools
 import json
+import os
 import sys
+from pathlib import Path
 
 from mpmath import mp, mpf
 
-sys.path.insert(0, r"C:/Users/myaml/dev/_a-cert-run/code")
-sys.path.insert(0, r"C:/Users/myaml/dev/_harness-v1023/amplification-sweeps/apriori-bound")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import model
-import bounds
+import record_paths
 
 mp.dps = 60
-ROOT = r"C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/sweeps/amplification_form"
-OUT = r"C:/Users/myaml/dev/_a-cert-run/results"
 F_REL = mpf("1e-55")
 
 VARIANTS = {
@@ -50,17 +50,19 @@ VARIANTS = {
 }
 
 
-def load():
+def load(root, model_record):
+    root = Path(root)
+    model_record = Path(model_record)
     pred = {}
-    with open(ROOT + "/results/prediction.csv", newline="") as h:
+    with open(model_record / "prediction.csv", newline="") as h:
         for r in csv.DictReader(h):
             pred[(r["band"], r["metric"], int(r["order"]))] = r
     order = {}
-    with open(ROOT + "/results/per_order.csv", newline="") as h:
+    with open(root / "results" / "per_order.csv", newline="") as h:
         for r in csv.DictReader(h):
             order[(r["band"], int(r["n"]), r["method"])] = r
     ref = {}
-    with open(ROOT + "/data/reference.csv", newline="") as h:
+    with open(root / "data" / "reference.csv", newline="") as h:
         for r in csv.DictReader(h):
             ref[(r["band"], float(r["x"]))] = [mpf(r[c]) for c in list(r)[2:]]
     exp = model.load_exp()
@@ -73,8 +75,22 @@ def magnitude(lo, hi):
     return min(abs(lo), abs(hi)), max(abs(lo), abs(hi))
 
 
-def main():
-    pred, order, ref, exp = load()
+def main(argv=None):
+    global bounds
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    record_paths.add_kernel(parser)
+    record_paths.add_inputs(parser, model_record_arg=True, deposit_arg=True)
+    record_paths.add_out(parser)
+    args = parser.parse_args(argv)
+    model.configure(kernel=args.kernel, exp_bits=args.exp_bits)
+    root = record_paths.sweep(args.sweep)
+    model_record = record_paths.model_record(args.model_record)
+    dep = record_paths.deposit(args.deposit)
+    out = record_paths.out_dir(args.out)
+    with record_paths.deposit_on_path(dep):
+        import bounds
+
+    pred, order, ref, exp = load(root, model_record)
     cache = {}
     c_cache = {}
 
@@ -142,7 +158,7 @@ def main():
                              cs=float(cs), cp=float(cp),
                              dch_s=float(es["arith"]), dch_p=float(ep["arith"])))
 
-    with open(OUT + "/tiers_cells.csv", "w", newline="") as h:
+    with open(out / "tiers_cells.csv", "w", newline="") as h:
         w = csv.writer(h)
         w.writerow(["band", "metric", "n", "state", "variant", "dep_cert",
                     "cert", "ship_lo", "ship_hi", "prod_lo", "prod_hi",
@@ -177,9 +193,9 @@ def main():
         print("   committed: deposit",
               summary[variant]["committed_deposit"],
               "our C", summary[variant]["committed_certified_charge"])
-    with open(OUT + "/tiers_summary.json", "w") as h:
+    with open(out / "tiers_summary.json", "w") as h:
         json.dump(summary, h, indent=1)
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

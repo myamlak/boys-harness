@@ -4,34 +4,38 @@ Uses the exact-real route value (truncation) with the record's tier-T
 precision bound, plus the model's running-error radius.  Reports the
 certified direction, the loser's interval, and the structural split.
 """
+import argparse
 import csv
 import math
 import sys
+from pathlib import Path
 
-sys.path.insert(0, r"C:/Users/myaml/dev/_a-cert-run/code")
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "code"))
 import exactroute as er
 import model
+import record_paths
 
 from mpmath import mp, mpf
 
 mp.dps = 70
-ROOT = r"C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/sweeps/amplification_form"
 EPS_BASE = mpf("1e-45")
 
 
-def load():
-    ref = er.load_reference(ROOT)
+def load(root, model_record):
+    root = Path(root)
+    model_record = Path(model_record)
+    ref = er.load_reference(root)
     cells = {}
-    with open(ROOT + "/results/cells.csv", newline="") as h:
+    with open(root / "results" / "cells.csv", newline="") as h:
         for r in csv.DictReader(h):
             cells[(r["band"], float(r["x"]), int(r["n"]))] = (
                 float(r["recursed"]), float(r["direct"]))
     pred = {}
-    with open(ROOT + "/results/prediction_record.csv", newline="") as h:
+    with open(model_record / "prediction_record.csv", newline="") as h:
         for r in csv.DictReader(h):
             pred[(r["band"], r["metric"], int(r["order"]))] = r
     order = {}
-    with open(ROOT + "/results/per_order.csv", newline="") as h:
+    with open(root / "results" / "per_order.csv", newline="") as h:
         for r in csv.DictReader(h):
             order[(r["band"], int(r["n"]), r["method"])] = r
     exp = model.load_exp()
@@ -96,8 +100,17 @@ def compare(s, p, metric):
     return "", (ls, hs), (lp, hp)
 
 
-def main():
-    ref, cells, pred, order, exp = load()
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    record_paths.add_kernel(parser)
+    record_paths.add_inputs(parser, model_record_arg=True)
+    record_paths.add_out(parser)
+    args = parser.parse_args(argv)
+    model.configure(kernel=args.kernel, exp_bits=args.exp_bits)
+    root = record_paths.sweep(args.sweep)
+    model_record = record_paths.model_record(args.model_record)
+    out = record_paths.out_dir(args.out)
+    ref, cells, pred, order, exp = load(root, model_record)
     cache = {}
     rows = []
     for (band, metric, n), r in sorted(pred.items()):
@@ -160,8 +173,7 @@ def main():
                 default=mpf(0))
     print("worst |r|/C:", mp.nstr(worst, 6))
 
-    with open(r"C:/Users/myaml/dev/_a-cert-run/results/model_cells.csv", "w",
-              newline="") as h:
+    with open(out / "model_cells.csv", "w", newline="") as h:
         w = csv.writer(h)
         w.writerow(["band", "metric", "n", "state", "cert", "x_ship", "x_prod",
                     "t_ship", "C_ship", "e_ship", "r_ship", "F_ship",
@@ -179,4 +191,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

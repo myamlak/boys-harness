@@ -10,48 +10,49 @@ its own convention: 3u per upward step with the reference F_l carried by
 A_n/A_l, plus eta_E = 2^-52 times the exponential sensitivity; the direct
 entry is charged 3u times the coefficient l1 mass.
 """
+import argparse
 import csv
 import math
+import os
 import sys
+from pathlib import Path
 
 from mpmath import mp, mpf
 
-sys.path.insert(0, r"C:/Users/myaml/dev/_a-cert-run/code")
-sys.path.insert(0, r"C:/Users/myaml/dev/_harness-v1023/amplification-sweeps/apriori-bound")
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "code"))
 import exactroute as er
 import model
-import bounds
+import record_paths
 
 mp.dps = 70
-ROOT = r"C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/sweeps/amplification_form"
-EXACT_CSV = r"C:/Users/myaml/dev/_harness-v1023/amplification-sweeps/apriori-bound/exact_amplification_form.csv"
 EPS = mpf("1e-45")
 U = mpf(2) ** -53
 
 
-def load():
-    ref = er.load_reference(ROOT)
+def load(root, model_record, deposit):
+    root = Path(root)
+    model_record = Path(model_record)
+    ref = er.load_reference(root)
     cells = {}
-    with open(ROOT + "/results/cells.csv", newline="") as h:
+    with open(root / "results" / "cells.csv", newline="") as h:
         for r in csv.DictReader(h):
             cells[(r["band"], float(r["x"]), int(r["n"]))] = (
                 float(r["recursed"]), float(r["direct"]))
     pred = {}
-    with open(ROOT + "/results/prediction.csv", newline="") as h:
+    with open(model_record / "prediction.csv", newline="") as h:
         for r in csv.DictReader(h):
             pred[(r["band"], r["metric"], int(r["order"]))] = r
     order = {}
-    with open(ROOT + "/results/per_order.csv", newline="") as h:
+    with open(root / "results" / "per_order.csv", newline="") as h:
         for r in csv.DictReader(h):
             order[(r["band"], int(r["n"]), r["method"])] = r
     exact = {}
-    try:
-        with open(EXACT_CSV, newline="") as h:
+    exact_csv = Path(deposit) / "exact_amplification_form.csv"
+    if exact_csv.is_file():
+        with open(exact_csv, newline="") as h:
             for r in csv.DictReader(h):
                 exact[(r["band"], int(r["n"]), r["metric"], r["method"])] = (
                     mpf(r["route_error"]), float(r["x"]))
-    except FileNotFoundError:
-        pass
     exp = model.load_exp()
     return ref, cells, pred, order, exact, exp
 
@@ -85,8 +86,22 @@ def median(vals):
     return vals[len(vals) // 2]
 
 
-def main():
-    ref, cells, pred, order, exact, exp = load()
+def main(argv=None):
+    global bounds
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    record_paths.add_kernel(parser)
+    record_paths.add_inputs(parser, model_record_arg=True, deposit_arg=True)
+    record_paths.add_out(parser)
+    args = parser.parse_args(argv)
+    model.configure(kernel=args.kernel, exp_bits=args.exp_bits)
+    root = record_paths.sweep(args.sweep)
+    model_record = record_paths.model_record(args.model_record)
+    dep = record_paths.deposit(args.deposit)
+    out = record_paths.out_dir(args.out)
+    with record_paths.deposit_on_path(dep):
+        import bounds
+
+    ref, cells, pred, order, exact, exp = load(root, model_record, dep)
     rows = []
     for (band, metric, n), pr in sorted(pred.items()):
         if pr["state"] not in ("ship", "product"):
@@ -201,8 +216,7 @@ def main():
     print("exact CSV cross-check:", len(xchecks),
           "max", max(xchecks) if xchecks else None)
 
-    with open(r"C:/Users/myaml/dev/_a-cert-run/results/harness_cells.csv", "w",
-              newline="") as h:
+    with open(out / "harness_cells.csv", "w", newline="") as h:
         w = csv.writer(h)
         w.writerow(["band", "metric", "n", "state", "loser", "cert",
                     "trunc_order", "x_ship", "x_prod", "t_ship", "t_prod",
@@ -222,4 +236,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

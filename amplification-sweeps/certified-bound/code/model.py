@@ -1,4 +1,4 @@
-"""The evaluated arithmetic of the v5.2.4 region-A entries, nominal values
+"""The evaluated arithmetic of the v5.2.5 region-A entries, nominal values
 and running-error radii.
 
 Every nominal operation is the IEEE-754 double operation the kernel performs,
@@ -8,42 +8,111 @@ real value of the same expression at the exact input lies in
 [nominal - e, nominal + e].  The radius rules are stated in the record.
 
 The model is validated bit for bit against the sweep's cells.csv by replay.py.
+
+The kernel checkout and the exponential bit file are selected with
+configure(), from the command line or the environment (record_paths.py).  The
+stored tables are read when first needed, so importing this module does not
+require a checkout.
 """
 import hashlib
 import math
+import os
 import re
 import struct
-
 import sys
-sys.path.insert(0, r"C:/Users/myaml/dev/_harness-v1023/amplification-sweeps/apriori-bound")
 
-BOYS = r"C:/Users/myaml/dev/_boys-tags/include/boys"
-EXP_BITS = r"C:/Users/myaml/dev/_a-cert-run/exp/exp_bits.txt"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import record_paths
 
 U = 2.0 ** -53
 U_ADD = U / (1.0 - U)
+MIN_NORMAL = 2.0 ** -1022
 
-# Contraction of the bare recurrence expressions, as measured by replay.py.
-UPWARD_FUSED = False      # (l - 0.5) * f - expx
-DOWNWARD_FUSED = None     # x * f + expx: decided by the replay
-PRODUCT_PASS_FUSED = False  # pass[k] = c * basis folded into the pairwise sum
+# IEEE-754 round-to-nearest bounds the error of an underflowed result by half
+# the least positive subnormal, 2**-1075.  That value is not a binary64
+# number: it rounds to zero at ties-to-even, so a radius cannot carry it
+# literally.  The rules below carry 2**-1071 = 16 * 2**-1075 instead: one
+# half-ulp for the operation's own rounding and fifteen for the absolute
+# errors of the radius arithmetic when its terms are themselves subnormal.
+# The longest rule performs at most nine roundings (four products, four sums
+# and the SAFETY multiply), so sixteen half-ulps cover the operation and its
+# radius with a margin of seven.
+#
+# The term is added when the computed result or the radius bracket lies below
+# the normal range, 2**-1022.  Above it, the relative u_+|z| term and SAFETY
+# cover the same invariant half-ulp: SAFETY's inflation of a normal-range
+# bracket is at least 2**-1022 * 2**-40 = 2**-1062, thirteen binary orders
+# above 2**-1075.  A computed result in the subnormal range with a large
+# bracket (a large propagated radius) is likewise covered by SAFETY.
+UNDERFLOW = 2.0 ** -1071
 
 # Conservative expansion of every accumulated radius: the radius arithmetic
 # itself runs in double, and this covers its rounding and the small quadratic
 # terms dropped by inspection.
 SAFETY = 1.0 + 2.0 ** -40
 
-FIT_DIGEST = "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204"
+# Contraction of the bare recurrence expressions, as measured by replay.py.
+UPWARD_FUSED = False      # (l - 0.5) * f - expx
+DOWNWARD_FUSED = None     # x * f + expx: decided by the replay
+PRODUCT_PASS_FUSED = False  # pass[k] = c * basis folded into the pairwise sum
+
+# boys_coefficients.hpp differs between v5.1.1/v5.2.4 and v5.2.5 in the
+# rational region-B seed, which the named policy does not read.  The model
+# therefore identifies the file by a digest of exactly the fields it parses,
+# which is identical in both trees, rather than by the whole-file digest.
+KNOWN_FIT_DIGESTS = {
+    "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204":
+        "v5.1.1 / v5.2.4",
+    "d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00":
+        "v5.2.5",
+}
+FIT_CONTENT_DIGEST = (
+    "74fe52545be4540cfd7abea1b19e6bd5d4e681b656a1be6603585bb97dafa99c")
 FIT_D_DIGEST = "7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e"
+
+_KERNEL = None
+_EXP_BITS = None
+_TABLE = None
+
+
+def configure(kernel=None, exp_bits=None):
+    """Select the kernel checkout and the exponential bit file.
+
+    ``kernel`` is the checkout root; the headers are read from its
+    include/boys.  Paths are resolved by record_paths.kernel/exp_bits, so
+    None means the documented environment variable or default.
+    """
+    global _KERNEL, _EXP_BITS, _TABLE
+    _KERNEL = record_paths.kernel(kernel)
+    _EXP_BITS = record_paths.exp_bits(exp_bits)
+    _TABLE = None
+
+
+def _kernel_root():
+    global _KERNEL
+    if _KERNEL is None:
+        _KERNEL = record_paths.kernel()
+    return _KERNEL
+
+
+def _exp_bits_path():
+    global _EXP_BITS
+    if _EXP_BITS is None:
+        _EXP_BITS = record_paths.exp_bits()
+    return _EXP_BITS
+
+
+def _boys_dir():
+    return _kernel_root() / "include" / "boys"
 
 
 def _read(name):
-    with open(f"{BOYS}/{name}", "r", encoding="utf-8") as handle:
+    with open(_boys_dir() / name, "r", encoding="utf-8") as handle:
         return handle.read()
 
 
 def _digest(name):
-    with open(f"{BOYS}/{name}", "rb") as handle:
+    with open(_boys_dir() / name, "rb") as handle:
         return hashlib.sha256(handle.read()).hexdigest()
 
 
@@ -70,11 +139,37 @@ def _ints(body):
     return [int(tok) for tok in re.findall(r"-?\d+", body)]
 
 
+def _content_digest(pieces, piece_start, thresholds, ext_coeffs, ext_lo, x0):
+    """Digest of exactly the stored tables the model reads, in a canonical
+    form (float.hex, so the digest does not depend on Python's float repr)."""
+    h = hashlib.sha256()
+
+    def line(text):
+        h.update(text.encode())
+        h.update(b"\n")
+
+    line("pieces")
+    for p in pieces:
+        line(f"{p['a'].hex()} {p['b'].hex()} {p['deg']} {p['off']}")
+    line("piece_start")
+    line(" ".join(str(v) for v in piece_start))
+    line("thresholds")
+    line(" ".join(v.hex() for v in thresholds))
+    line("ext_coeffs")
+    line(" ".join(v.hex() for v in ext_coeffs))
+    line("ext_lo")
+    line(ext_lo.hex())
+    line("x0")
+    line(x0.hex())
+    return h.hexdigest()
+
+
 def load_tables():
     master = _read("boys_coefficients.hpp")
     cheb = _read("boys_coefficients_d_coarse_cheb.hpp")
-    assert _digest("boys_coefficients.hpp") == FIT_DIGEST
-    assert _digest("boys_coefficients_d_coarse_cheb.hpp") == FIT_D_DIGEST
+    assert _digest("boys_coefficients_d_coarse_cheb.hpp") == FIT_D_DIGEST, (
+        "the coarse Chebyshev table is not the sweep's; expected "
+        f"{FIT_D_DIGEST}")
 
     pieces_text = _array_body(master, "inline constexpr auto kPieces")
     rows = re.findall(
@@ -93,56 +188,98 @@ def load_tables():
     assert len(pieces) == 66 and len(piece_start) == 34
     assert len(coeffs) == 1320 and len(thresholds) == 33
     assert len(ext_coeffs) == 25
+
+    digest = _content_digest(pieces, piece_start, thresholds, ext_coeffs,
+                             ext_lo, x0)
+    assert digest == FIT_CONTENT_DIGEST, (
+        "the parsed stored tables are not the sweep's: content digest "
+        f"{digest}, expected {FIT_CONTENT_DIGEST}")
+    whole = _digest("boys_coefficients.hpp")
+    assert whole in KNOWN_FIT_DIGESTS, (
+        f"boys_coefficients.hpp digest {whole} is not a known release")
     return dict(pieces=pieces, piece_start=piece_start, thresholds=thresholds,
                 coeffs=coeffs, ext_coeffs=ext_coeffs, ext_lo=ext_lo, ext_hi=x0,
-                ext_deg=24)
+                ext_deg=24, fit_digest=whole,
+                release=KNOWN_FIT_DIGESTS[whole])
 
 
-TABLE = load_tables()
-THETA0 = TABLE["thresholds"][0]
-X0 = TABLE["ext_hi"]
-EXT_LO = TABLE["ext_lo"]
+def table():
+    """The stored tables, read on first use."""
+    global _TABLE
+    if _TABLE is None:
+        _TABLE = load_tables()
+    return _TABLE
+
+
+def theta0():
+    return table()["thresholds"][0]
 
 
 def piece_index(order, band_index):
-    return TABLE["piece_start"][order] + band_index
+    return table()["piece_start"][order] + band_index
 
 
 def piece(order, band_index):
-    p = TABLE["pieces"][piece_index(order, band_index)]
-    return p["a"], p["b"], TABLE["coeffs"][p["off"]: p["off"] + p["deg"] + 1]
+    p = table()["pieces"][piece_index(order, band_index)]
+    return p["a"], p["b"], table()["coeffs"][p["off"]: p["off"] + p["deg"] + 1]
 
 
 def ext_piece():
-    return EXT_LO, X0, TABLE["ext_coeffs"]
+    t = table()
+    return t["ext_lo"], t["ext_hi"], t["ext_coeffs"]
 
 
 # ---------------------------------------------------------------------------
 # primitive operations with radii
 # ---------------------------------------------------------------------------
 
+def _allowance(z, bracket):
+    """The absolute underflow allowance of the rule's comment.
+
+    Added when the computed result or the radius bracket is below the normal
+    range; zero otherwise, which leaves every normal-range radius unchanged.
+    """
+    if abs(z) < MIN_NORMAL or bracket < MIN_NORMAL:
+        return UNDERFLOW
+    return 0.0
+
+
 def add(a, ea, b, eb):
+    """Addition.  The exact sum of two binary64 values is a multiple of
+    2**-1074; when it lies below 2**-1022 it is therefore exactly
+    representable, so the operation itself never loses a subnormal result.
+    The allowance covers the radius arithmetic's own subnormal roundings."""
     z = a + b
-    return z, (U_ADD * abs(z) + ea + eb) * SAFETY
+    bracket = U_ADD * abs(z) + ea + eb
+    return z, (bracket + _allowance(z, bracket)) * SAFETY
 
 
 def sub(a, ea, b, eb):
+    """Subtraction, with add's exactness property."""
     z = a - b
-    return z, (U_ADD * abs(z) + ea + eb) * SAFETY
+    bracket = U_ADD * abs(z) + ea + eb
+    return z, (bracket + _allowance(z, bracket)) * SAFETY
 
 
 def mul(a, ea, b, eb):
+    """Multiplication.  |RN(ab) - ab| <= max(u|ab|, 2**-1075); the first term
+    is u_+|z| for a normal z and the allowance carries the second below the
+    normal range, where u_+|z| no longer dominates it."""
     z = a * b
-    return z, (U_ADD * abs(z) + abs(b) * ea + abs(a) * eb + ea * eb) * SAFETY
+    bracket = U_ADD * abs(z) + abs(b) * ea + abs(a) * eb + ea * eb
+    return z, (bracket + _allowance(z, bracket)) * SAFETY
 
 
 def fma(a, ea, b, eb, c, ec):
+    """Fused multiply-add, with mul's underflow bound applied to ab + c."""
     z = math.fma(a, b, c)
-    return z, (U_ADD * abs(z) + abs(b) * ea + abs(a) * eb + ec + ea * eb) * SAFETY
+    bracket = U_ADD * abs(z) + abs(b) * ea + abs(a) * eb + ec + ea * eb
+    return z, (bracket + _allowance(z, bracket)) * SAFETY
 
 
 def scale2(a, ea):
-    """2*a, exact for normal a and no overflow."""
+    """2*a, exact for every finite a without overflow: it changes only the
+    exponent, so the radius doubles exactly."""
     return 2.0 * a, 2.0 * ea
 
 
@@ -153,10 +290,26 @@ def refined_div(a, ea, x, invx):
     errors, so the result is the correctly rounded quotient up to a second
     order term (derived in the record): for exact numerator A,
     |q - A/x| <= u(1+8u)|A/x| + ea/|x|.
+
+    The derivation assumes every rounding it charges is relative, which
+    requires the denominator and the quotient (and the two intermediates) to
+    be normal or exactly zero.  The model's calls satisfy this: the downward
+    denominator is l + 1/2 in [1/2, 63/2] and the upward one is x >= theta0,
+    and the delivered values never approach the subnormal range.  The check
+    below refuses a call outside that domain rather than undercharge it.
     """
     q0 = a * invx
     r = math.fma(-q0, x, a)
     q = math.fma(r, invx, q0)
+    if (abs(x) < MIN_NORMAL
+            or (q != 0.0 and abs(q) < MIN_NORMAL)
+            or (q0 != 0.0 and abs(q0) < MIN_NORMAL)
+            or (r != 0.0 and abs(r) < MIN_NORMAL)
+            or (q == 0.0 and a != 0.0)):
+        raise ArithmeticError(
+            "refined division outside its derived range: the quotient and "
+            "its intermediates must be normal or exactly zero; got "
+            f"a={a!r} x={x!r} q0={q0!r} r={r!r} q={q!r}")
     ud = U * (1.0 + 8.0 * U) / (1.0 - U * (1.0 + 8.0 * U))
     return q, (ud * (abs(q) + ea / abs(x)) + ea / abs(x)) * SAFETY
 
@@ -172,9 +325,10 @@ def mapping(x, a, b):
     e2 = 2.0 * e1
     den, ed = sub(b, 0.0, a, 0.0)
     q = t2 / den
-    # |q - T2/DEN| <= u|q| + e2/|den| + |t2| ed/|den|^2
-    eq = (U_ADD * abs(q) + e2 / abs(den)
-          + abs(t2) * ed / (den * den)) * SAFETY
+    # |q - T2/DEN| <= u|q| + e2/|den| + |t2| ed/|den|^2, with the division's
+    # own underflow bound carried as for mul.
+    bracket = U_ADD * abs(q) + e2 / abs(den) + abs(t2) * ed / (den * den)
+    eq = (bracket + _allowance(q, bracket)) * SAFETY
     t, et = sub(q, eq, 1.0, 0.0)
     return t, et
 
@@ -333,7 +487,7 @@ def ship_batch(x, expx):
                             seed_amp=0.0, min_abs=v))
         return out
 
-    if x < THETA0:
+    if x < theta0():
         seed_v, seed_e = eval_fit_split(32, 0, x)
         # the seed's amplified contribution at order n = (A_n/A_32) * seed_e.
         # A_n/A_32 = prod_{l=n+1..32} (l-0.5)/x.
@@ -367,8 +521,9 @@ def ship_batch(x, expx):
     invx = 1.0 / x
     # served orders, exactly the kernel's prefix
     nmax = 32
+    thresholds = table()["thresholds"]
     served = 0
-    while served < nmax and x >= TABLE["thresholds"][served + 1]:
+    while served < nmax and x >= thresholds[served + 1]:
         served += 1
     # ladder with radii (exp not in the radii; added analytically)
     vals = [0.0] * (served + 1)
@@ -391,7 +546,7 @@ def ship_batch(x, expx):
                             c_exp=ce, seed_amp=source_e * _amp_up(n, x),
                             min_abs=mins[n]))
         else:
-            v, e = eval_fit_split(n, 0 if x < TABLE["pieces"][0]["b"] else 1, x)
+            v, e = eval_fit_split(n, 0 if x < table()["pieces"][0]["b"] else 1, x)
             out.append(dict(value=v, radius=e, mode="same-fit",
                             c_seed=0.0, c_rec=e, c_exp=0.0, seed_amp=0.0,
                             min_abs=abs(v)))
@@ -423,7 +578,7 @@ def product_batch(x, band_index):
 
 def load_exp():
     exp = {}
-    with open(EXP_BITS, "r") as handle:
+    with open(_exp_bits_path(), "r") as handle:
         for line in handle:
             xb_s, eb_s, hb_s = line.split()
             xb = int(xb_s, 16)
@@ -434,9 +589,16 @@ def load_exp():
 
 
 if __name__ == "__main__":
-    print("tables", len(TABLE["pieces"]), TABLE["ext_lo"], TABLE["ext_hi"])
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    record_paths.add_kernel(parser)
+    parser.add_argument("--exp-bits", metavar="FILE", help="probe output file")
+    args = parser.parse_args()
+    configure(kernel=args.kernel, exp_bits=args.exp_bits)
+    print("tables", len(table()["pieces"]), table()["ext_lo"], table()["ext_hi"],
+          "release", table()["release"])
     e = load_exp()
     print("exp table", len(e))
     x = 0.88881931955209315
-    print("mapping", mapping(x, 0.0, TABLE["pieces"][0]["b"]))
+    print("mapping", mapping(x, 0.0, table()["pieces"][0]["b"]))
     print("ship x<theta", ship_batch(x, e[x][1])[0])
