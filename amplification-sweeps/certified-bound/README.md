@@ -42,7 +42,10 @@ positive subnormal and the invariant absolute floor below the normal range.
 rule therefore carries the representable `2^-1071 = 16*2^-1075`: one half-ulp
 for the operation's own rounding and fifteen for the absolute roundings of
 the radius arithmetic when its terms are subnormal (the longest rule performs
-nine roundings: four products, four sums and the `SAFETY` multiply). The term
+at most eleven roundings: four products, four bracket sums, the allowance
+addition, the operation and the `SAFETY` multiply; below the normal range the
+allowance addition is exact, so at most ten, and sixteen half-ulps leave a
+margin of at least five). The term
 is added only when the computed result or the bracket is below the normal
 range `2^-1022`; above it, the existing `u_+|z|` term and `SAFETY` cover the
 same floor, because `SAFETY` inflates a normal-range bracket by at least
