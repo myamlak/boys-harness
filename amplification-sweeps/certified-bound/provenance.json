@@ -1,14 +1,14 @@
 {
  "record": "certified per-call rounding bound for the two region-A Boys entries, Paper A (Boys route comparison)",
- "generated_utc": "2026-11-03T20:52:52.098862+00:00",
+ "generated_utc": "2026-11-06T00:56:53.519239+00:00",
  "kernel": {
-  "tag": "v5.2.4",
-  "commit": "762c65fa1526fc34833dfd0d1e6118e20cb4097f",
+  "tag": "v5.2.5",
+  "commit": "8b7a289dfce7558c8498e89c17c05f20fa7bb7c8",
   "tree": "C:/Users/myaml/dev/_boys-tags",
   "headers": {
    "boys_coefficients.hpp": {
     "bytes": 143213,
-    "sha256": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204"
+    "sha256": "d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00"
    },
    "boys_coefficients_d_coarse_cheb.hpp": {
     "bytes": 36494,
@@ -21,11 +21,11 @@
   },
   "generator": {
    "gen_boys_coefficients.py": {
-    "bytes": 440274,
-    "sha256": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180"
+    "bytes": 444888,
+    "sha256": "1d8b88ac30c757138a4c87219d68b56756c175c36230818b2360dc0bf7bdd373"
    }
   },
-  "coefficient_identity_with_sweep": "the sweep's provenance.json records boys_coefficients.hpp sha256 8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204 in its v5.1.1 tree; the v5.2.4 header has the same digest, so the stored fits and thresholds the sweep evaluated are the ones this record bounds"
+  "coefficient_identity_with_sweep": "the sweep's provenance.json records boys_coefficients.hpp sha256 8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204 in its v5.1.1 tree; the v5.2.5 header's digest is d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00, the difference being the rational region-B seed re-fit (kRatBnum, kRatBden and kRegionBFitRatDelivered; the degrees 4/8 and the stored 13 unchanged), and the coarse Chebyshev table this record evaluates, boys_coefficients_d_coarse_cheb.hpp, has digest 7af73817 in both trees. The modelled policy is the named one (Chebyshev route, SplitClenshaw, RefinedReciprocal), which reads no rational seed, so the stored fits and thresholds the sweep evaluated are the ones this record bounds"
  },
  "sweep": {
   "path": "C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/sweeps/amplification_form",
@@ -125,9 +125,9 @@
  },
  "manuscript": {
   "path": "C:/Users/myaml/dev/papers-a-v5/papers/boys-crossover/main.tex",
-  "sha256": "1467d5dc9b18fcce04c8769894d0b5840abcfbc99a3677bdfc590cd51149e9d9",
+  "sha256": "91a9bbc23484f37b3f2cc41b7e93831dae87c99879bf64f97e440353de233a81",
   "read_only": true,
-  "section_read": "5.6 (lines 786-814), the a priori failure paragraph whose 16/49, 9.6 and 93 are checked"
+  "section_read": "5.6 (lines 826-853), the a priori failure paragraph whose 16/49, 9.6 and 93 are checked"
  },
  "exponential": {
   "probe_source": {
@@ -316,8 +316,8 @@
     "sha256": "9b25d3be24d8ba3330ffa6f19bf9ec303e90e8ba47eb7f24493b47d03df6f488"
    },
    "make_provenance.py": {
-    "bytes": 10125,
-    "sha256": "71538fa3725e11c2224d4d89e92fcdb5ad139cc915f64798905a5fca79a4184a"
+    "bytes": 10730,
+    "sha256": "5b23fa9fbf31622cf8b42f3157c35af30d5ec9c2f53d38a0e63c14e1d5915cad"
    }
   },
   "explore": {

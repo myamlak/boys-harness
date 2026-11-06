@@ -50,9 +50,17 @@ def main():
             "coefficient_identity_with_sweep": (
                 "the sweep's provenance.json records boys_coefficients.hpp "
                 "sha256 8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204 "
-                "in its v5.1.1 tree; the v5.2.4 header has the same digest, so "
-                "the stored fits and thresholds the sweep evaluated are the "
-                "ones this record bounds"),
+                "in its v5.1.1 tree; the v5.2.5 header's digest is "
+                "d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00, "
+                "the difference being the rational region-B seed re-fit "
+                "(kRatBnum, kRatBden and kRegionBFitRatDelivered; the degrees "
+                "4/8 and the stored 13 unchanged), and the coarse Chebyshev "
+                "table this record evaluates, "
+                "boys_coefficients_d_coarse_cheb.hpp, has digest 7af73817 in "
+                "both trees. The modelled policy is the named one (Chebyshev "
+                "route, SplitClenshaw, RefinedReciprocal), which reads no "
+                "rational seed, so the stored fits and thresholds the sweep "
+                "evaluated are the ones this record bounds"),
         },
         "sweep": {
             "path": SWEEP,
@@ -91,7 +99,7 @@ def main():
             "path": SWEEP.rsplit("/sweeps/", 1)[0] + "/main.tex",
             "sha256": sha(SWEEP.rsplit("/sweeps/", 1)[0] + "/main.tex"),
             "read_only": True,
-            "section_read": "5.6 (lines 786-814), the a priori failure "
+            "section_read": "5.6 (lines 826-853), the a priori failure "
                             "paragraph whose 16/49, 9.6 and 93 are checked",
         },
         "exponential": {
