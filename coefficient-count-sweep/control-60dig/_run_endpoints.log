@@ -1,0 +1,35 @@
+[E-paper] reused from cell_E-paper.json (count60=7)
+[E-ship] ship rel:1e-08 (W=19.100151847891517, record 7 [3, 3], delivered 6.4417613663785954e-09)
+  reproduction: e64=6.4417613663785954e-09 record=6.4417613663785954e-09 match=True
+    default   S=6 [4/1] conv=True e60=1.8640519586940358e-6 e64=1.8640519586331913e-06 guard=0.42281522758185562 meet=False 0.93s
+    default   S=6 [3/2] conv=True e60=2.9235387734618322e-7 e64=2.9235387742367103e-07 guard=0.26195301335738 meet=False 0.68s
+    default   S=6 [2/3] conv=True e60=2.035680030705142e-7 e64=2.0356800302340508e-07 guard=0.23804115343168335 meet=False 0.58s
+    default   S=6 [1/4] conv=True e60=6.056330618343572e-7 e64=6.056330618614506e-07 guard=0.3172817154224199 meet=False 0.67s
+  level 6 (default): meets60=False best=None (2.9 s)
+    tightened S=6 [4/1] conv=True e60=1.8638881682857689e-6 e64=1.863888168167536e-06 guard=0.4228152450988101 meet=False 1.83s
+    tightened S=6 [3/2] conv=True e60=2.9232945493746758e-7 e64=2.9232945505047046e-07 guard=0.26195305438902996 meet=False 2.74s
+    tightened S=6 [2/3] conv=True e60=2.0355032733503752e-7 e64=2.0355032724884456e-07 guard=0.23804120073569226 meet=False 2.12s
+    tightened S=6 [1/4] conv=True e60=6.0557965763719515e-7 e64=6.055796577117245e-07 guard=0.31728174864635733 meet=False 1.96s
+  level 6 (tightened): meets60=False best=None (8.7 s)
+  COUNT60 7 (equal); accepted [3/3] default e60=6.4417613644231688e-9 e64r=6.4417613049245998e-9 e64=6.4417613663785954e-09
+  wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-control-60dig\cell_E-ship.json
+[E-p5] p5 rel:1e-08 (W=32.0, record 8 [3, 4], delivered 3.2773556954891358e-09)
+warning: equioscillation property not satisfied, deviation=2.0
+  reproduction: e64=3.2773556954891358e-09 record=3.2773556954891358e-09 match=True
+    default   S=7 [5/1] conv=True e60=2.6784496578248816e-6 e64=2.6784496577670647e-06 guard=0.30293703880350189 meet=False 0.7s
+    default   S=7 [4/2] conv=True e60=2.7219770076876049e-7 e64=2.7219770070427707e-07 guard=0.14159962304952814 meet=False 0.74s
+    default   S=7 [3/3] conv=True e60=1.0275113603258345e-7 e64=1.0275113608789254e-07 guard=0.10229794279276882 meet=False 0.58s
+    default   S=7 [2/4] conv=True e60=1.4261880550310493e-7 e64=1.4261880544863902e-07 guard=0.11397065286959366 meet=False 0.74s
+    default   S=7 [1/5] conv=True e60=7.1491611670324904e-7 e64=7.149161165343481e-07 guard=0.1962285024184926 meet=False 0.62s
+  level 7 (default): meets60=False best=None (3.4 s)
+    tightened S=7 [5/1] conv=True e60=2.6782290559667888e-6 e64=2.6782290558455867e-06 guard=0.30293705079268923 meet=False 2.03s
+    tightened S=7 [4/2] conv=True e60=2.7217370423134727e-7 e64=2.7217370395572037e-07 guard=0.14159965019756766 meet=False 2.39s
+    tightened S=7 [3/3] conv=True e60=1.0274223891194957e-7 e64=1.0274223872717702e-07 guard=0.10229797212454853 meet=False 1.99s
+warning: equioscillation property not satisfied, deviation=1.02e-08
+    tightened S=7 [2/4] conv=True e60=1.4260684978400839e-7 e64=1.426068496136929e-07 guard=0.11397068067414583 meet=False 3.09s
+    tightened S=7 [1/5] conv=True e60=7.1485303975145381e-7 e64=7.148530396275819e-07 guard=0.19622852457673045 meet=False 2.51s
+  level 7 (tightened): meets60=False best=None (12.0 s)
+  COUNT60 8 (equal); accepted [3/4] default e60=3.2773557391748863e-9 e64r=3.2773557086059786e-9 e64=3.2773556954891358e-09
+  wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-control-60dig\cell_E-p5.json
+wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-control-60dig\summary.json
+EXIT 0

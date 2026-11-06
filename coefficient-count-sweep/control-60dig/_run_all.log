@@ -1,0 +1,9 @@
+[A] reused from cell_A.json (count60=15)
+[B] reused from cell_B.json (count60=16)
+[C1] reused from cell_C1.json (count60=18)
+[C2] reused from cell_C2.json (count60=17)
+[E-paper] reused from cell_E-paper.json (count60=7)
+[E-ship] reused from cell_E-ship.json (count60=7)
+[E-p5] reused from cell_E-p5.json (count60=8)
+wrote C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-control-60dig\summary.json
+EXIT 0
