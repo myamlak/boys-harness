@@ -45,7 +45,7 @@ The run directory mirrors the measurement tree, so the deposited scripts
 resolve the relative paths they were written with:
 
 ```text
-v5.1.1-9353/
+first-sweep-9353/
   make_tables.py  make_endtoend.py  make_frontier.py
   sweeps/
     common/                 boysprovenance.py, reference.py, replica.hpp

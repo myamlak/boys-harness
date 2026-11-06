@@ -2,9 +2,11 @@
 
 Tier T: the truncation is the exact-real route value minus the 60-digit
 reference, with a computed error bound of 1e-45 absolute (70-digit mpmath on
-60-digit references; the deposit's independent oracle agrees to 4e-56).  The
-arithmetic is the running-error radius of model.py.  The total interval at a
-cell is [t - eps - C, t + eps + C].
+60-digit references).  The deposit's independent identity-based oracle
+cross-check agrees to 8e-50 on the non-outlier checked cells; one cell,
+recorded in oracle_check.log, resolves at 7.99e-24 and sits inside the tier's
+bound.  The arithmetic is the running-error radius of model.py.  The total
+interval at a cell is [t - eps - C, t + eps + C].
 
 Outputs, all beneath the run directory selected with --out:
   cells_cert.csv      one row per (band, x, order, method), 55 176 rows

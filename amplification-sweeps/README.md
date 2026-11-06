@@ -57,7 +57,7 @@ directories: the grids, the 60-digit references, the per-cell delivered values o
 per-order and band summaries, the prediction records and the provenances. They were produced at
 Boys v5.0.0 (commit `482fd33`, recorded in each `results/provenance.json`). The 9,353-argument
 record is the Boys v5.1.1 run (commit `834bdbb`, recorded in
-`product-amplification/v5.1.1-9353/sweeps/*/results/provenance.json`); it appends one recovered
+`product-amplification/first-sweep-9353/sweeps/*/results/provenance.json`); it appends one recovered
 argument to the designed grid, and it is the record the published tables use. The
 `product-amplification/v5.2.0-check/` source and execution check and the
 `product-amplification/v5.2.5-check/` source-identity check compare later releases against that
@@ -83,8 +83,8 @@ two sweeps at Boys tag v5.2.0, with the v5.2.1 source-identity note
 (`v5.2.1-note.md`) beside its `README.md`. It carries the tag, commit and tree
 identity, the file-by-file source comparisons against v5.1.1 and v5.2.1, the
 compiler and flag line, and the comparisons of the re-run sweep, table and
-integral-engine records against the v5.1.1 run's own output. The v5.1.1 sweep
-records are deposited in `product-amplification/v5.1.1-9353/`.
+integral-engine records against the v5.1.1 run's own output. The first sweep's
+9353-argument records are deposited in `product-amplification/first-sweep-9353/`.
 
 Read its `README.md` first; it is the check's own record. The
 `*-compare-*.txt`, `*-diff-*.txt` and `source-diff-*.txt` files are the

@@ -503,6 +503,26 @@ is deposited under `analysis/`, but no record or record metadata names it by
 digest either: `recertify_ladder.py` calls it by path and records only its own
 digest, so the digest above cannot be checked against a record.
 
+## The 60-digit evaluation control
+
+`control-60dig/` is the evaluation-precision control of the corrected BRASIL
+ladder. Five deep cells are re-solved at 60-digit evaluation — the paper width
+at `1e-15`, the ship width at `1e-15`, `2^5` at `1e-15` and at `1e-14`, and
+`W=1` at `1e-15` — with the record's solver, settings, denominator cap,
+2,001-node certifying grid, target semantics and reference, changing one
+thing: a fit is accepted at 60-digit evaluation with its coefficients held at
+60 significant digits. Each cell first reproduces the record digit for digit,
+then walks the counts below the record's; a count is an existence bound under
+this solver, in the same sense as the records it controls.
+
+`control_60dig_brasil.py` is the driver; `cell_*.json` are the per-cell
+records, `summary.json` the assembled record, `freeline_effect.json` the
+free-line test's effect, and the `_run_*.log` and `_verify_*.log` files the
+run and verification transcripts. `README.md` there gives the commands, the
+reproduction checks and the measured counts — 15, 16, 18, 17 and 8 against
+the record's 18, 18, 25, 18 and 8 — and `verify_cells.py` and
+`verify_freeline.py` reproduce them.
+
 ## Requirements
 
 Python 3.10 or newer with `mpmath`. The portable `count_sweep.py` takes the

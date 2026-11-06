@@ -9,8 +9,8 @@ The kernel is the Boys library at <https://github.com/myamlak/boys>.
 ## Layout
 
 - `amplification-sweeps/` — the per-order accuracy sweeps, two C++ drivers and their analysis.
-- `coefficient-count-sweep/` — the stored-coefficient counts, with the stability pass and its
-  cold ladder.
+- `coefficient-count-sweep/` — the stored-coefficient counts, with the stability pass, its cold
+  ladder and the 60-digit evaluation control.
 - `composition-audit/` — the full-factorial audit of composed accuracy figures.
 - `accuracy-claim-audit/` — the documentation-claim audit against two external libraries.
 

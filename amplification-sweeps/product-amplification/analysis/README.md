@@ -49,11 +49,11 @@ From this directory:
       sweeps/amplification_form/analyze.py  from here
       sweeps/amplification_form/seed_fit_ratio.py   from here
       sweeps/product_amplification/analyze.py       from here
-      sweeps/common/                        from ../v5.1.1-9353/sweeps/common/
+      sweeps/common/                        from ../first-sweep-9353/sweeps/common/
       sweeps/amplification_form/{data,results}
-                                            from ../v5.1.1-9353/sweeps/amplification_form/
+                                            from ../first-sweep-9353/sweeps/amplification_form/
       sweeps/product_amplification/{data,results}
-                                            from ../v5.1.1-9353/sweeps/product_amplification/
+                                            from ../first-sweep-9353/sweeps/product_amplification/
       sweeps/seed-spliced/                  from ../../seed-spliced/
       sweeps/held-out/                      from ../../held-out/
       tables/  figures/                     empty
