@@ -1,0 +1,44 @@
+The v5.2.5 source identity
+
+What this records: the sources the paper's measurements were taken on (the
+v5.1.1 tree) against the release the paper cites (v5.2.5), every evaluated file
+compared by content.
+
+The tag
+  tag object  3be52d50bf7e0988d1baf0b7662bd584c32a33be
+  commit      8b7a289dfce7558c8498e89c17c05f20fa7bb7c8
+  tree        6cd73e10f7b9ca69b722144fffeef7b5081f3836
+  tagger Marcin Makowski <myamlak@gmail.com> 1793924853 +0100
+  tag date    2026-11-06T01:27:33+01:00
+  message     boys 5.2.5: the region-B seed re-fitted and the measured defaults published
+
+The comparison
+  include/boys  62 files, 59 identical, 3 differing
+  src           14 files, 14 identical, 0 differing
+  evaluated     76 files, 73 identical, 3 differing
+
+The differing files, and why the measurements are not affected
+  include/boys/boys_build_defaults.hpp
+    v5.1.1 blob 1271db69e022b64dee0cdfc5f99a37fdbcdb18e2
+    v5.2.5 blob 72be576d3df465c5cc087472a6b76b0ab98e1a21
+    the build-defaults table: the twenty host default rows re-measured on 2026-11-05 and the row list rewritten. The sweeps and the bridge name every axis of their policy at the call site (their ReplicaPolicy / paper-a policy), so no unnamed call in either reads this table.
+  include/boys/boys_coefficients.hpp
+    v5.1.1 blob 35c9826de2f64f57fe89ff767c6ceeaca1f7b748
+    v5.2.5 blob bc66cd702b060d19b0b122b7df310fae8c8f2626
+    the rational region-B seed: kRatBnum, kRatBden and kRegionBFitRatDelivered (1.69145631228896759e-14 -> 6.04405276991530667e-15), the degrees (4, 8) and the stored count (13) unchanged. Every policy these records name is the Chebyshev route, which reads no rational seed.
+  include/boys/version.hpp
+    v5.1.1 blob 01bc5b7d06abca6c7758dca9de6826682e3ab883
+    v5.2.5 blob 406a9c9ebb96c0be1aab6275316dc40846f0c8eb
+    the version constant only: 5.1.1 -> 5.2.5.
+
+Every file read by the sweeps and the bridge is the same file in both trees
+except as named above, and no named difference is read by a policy either
+record states: the sweeps name every axis of their policy and evaluate the
+Chebyshev route, and the bridge's paper-a policy is the same route. The
+release therefore compiles the evaluation code the figures were measured on.
+
+Files in this directory
+  evaluated-sources-compare-v525.txt   the per-file comparison
+  evaluation-sources-v525.sha256   the evaluated files' digests at v5.2.5
+  version-hpp.diff                     the version header's diff, v5.1.1 to v5.2.5
+  make_check_525.py                    the generator that wrote them

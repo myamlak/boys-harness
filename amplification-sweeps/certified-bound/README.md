@@ -1,9 +1,12 @@
 # Certified per-call rounding bounds for the two region-A Boys entries
 
 This directory is the record for the certified-bound section of the crossover
-paper. It bounds both region-A entries of `boys` at tag `v5.2.4` operation by
+paper. It bounds both region-A entries of `boys` at tag `v5.2.5` operation by
 operation, validates the bound on every measured cell, and records what it can
-certify.
+certify. The validation itself was run at v5.2.4; the provenance was re-stamped
+at v5.2.5, whose only change to a file this record reads is the rational
+region-B seed (the modelled named policy reads no rational seed; the coarse
+Chebyshev table it evaluates is unchanged).
 
 The direct entry is `BoysRegionAProduct<ProductMode::kFp64>`; the recursed
 entry is `BoysAllOrders`. The bound models the map, the Chebyshev basis
