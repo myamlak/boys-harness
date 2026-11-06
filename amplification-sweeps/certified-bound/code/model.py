@@ -34,9 +34,10 @@ MIN_NORMAL = 2.0 ** -1022
 # literally.  The rules below carry 2**-1071 = 16 * 2**-1075 instead: one
 # half-ulp for the operation's own rounding and fifteen for the absolute
 # errors of the radius arithmetic when its terms are themselves subnormal.
-# The longest rule performs at most nine roundings (four products, four sums
-# and the SAFETY multiply), so sixteen half-ulps cover the operation and its
-# radius with a margin of seven.
+# The longest rule performs at most eleven roundings (four products, four
+# bracket sums, the allowance addition, the operation and the SAFETY
+# multiply); below the normal range the allowance addition is exact, so at
+# most ten, and sixteen half-ulps leave a margin of at least five.
 #
 # The term is added when the computed result or the radius bracket lies below
 # the normal range, 2**-1022.  Above it, the relative u_+|z| term and SAFETY
