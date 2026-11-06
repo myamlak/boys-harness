@@ -1,0 +1,9 @@
+cell sets differ at 102 of 132 comparisons
+committed 65 trunc agree 50 opposite 15
+median loser |r|/t over all 65 at the model cells: 3.2679993240833323
+median paper charge/loser t: 50.77807412869251
+median cert charge/loser t: 83.24063580090967
+over the 50 agreeing cells:
+  median paper combined/gap: 57.30090179062915
+  median cert combined/gap: 84.96085481278541
+  min paper 1.359575256455425

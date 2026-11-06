@@ -3,8 +3,10 @@ __pycache__/
 build/
 build-*/
 results/
-!amplification-sweeps/certified-bound/results/
 results-*/
+!amplification-sweeps/certified-bound/results/
+!amplification-sweeps/certified-bound/results-underflow-fix/
+!amplification-sweeps/certified-bound/results-underflow-fix/**
 data/
 sweep1
 sweep2

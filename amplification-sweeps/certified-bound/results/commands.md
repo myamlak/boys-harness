@@ -1,8 +1,32 @@
 # Commands and exit codes
 
+## The repaired rerun (2026-11-06)
+
+The repaired record was rerun with the portable command set below, from this
+directory, with a boys checkout at v5.2.5 (`--kernel`, elsewhere
+`$BOYS_ROOT`, default `<repo>/../boys`).  Every output is written beneath the
+run directory.  The exact commands, exit codes and outputs of that run are in
+`../results-underflow-fix/commands.md`; the 2026-11-03 table further down is
+preserved as the historical record of the first run.
+
+    python -I code/certify.py --out results-underflow-fix
+    python -I explore/harnesscells.py --out results-underflow-fix
+    python -I code/replay.py --both-downward > results-underflow-fix/replay.log 2>&1
+    python -I code/oracle_check.py --out results-underflow-fix
+    python -I explore/dps_check.py > results-underflow-fix/dps_check.log 2>&1
+    python -I explore/paper93.py > results-underflow-fix/paper93.log 2>&1
+    python -I code/tiers.py --out results-underflow-fix
+    python -I code/test_underflow.py --out results-underflow-fix
+    python -I exp/exp_check.py > results-underflow-fix/exp_check.log 2>&1
+    python -I code/make_provenance.py --out results-underflow-fix
+
+## The archived run (2026-11-03)
+
 Run on 2026-11-03.  All Python runs use `-I` (isolated mode) and the working
 directory shown.  The record's own scripts are under `_a-cert-run`; nothing in
-the deposited harness or the paper was modified.
+the deposited harness or the paper was modified.  The paths below are
+historical: the repaired scripts resolve them with `record_paths.py` and do
+not hard-code them.
 
 | # | Command (working directory) | Exit | Key output |
 | --- | --- | --- | --- |
