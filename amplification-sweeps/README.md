@@ -52,10 +52,16 @@ python analyze.py --tree .
 
 ## Deposited records
 
-The measured records behind the published tables are in each sweep's `data/` and `results/`
+The original designed-grid records are in each sweep's `data/` and `results/`
 directories: the grids, the 60-digit references, the per-cell delivered values of both entries, the
 per-order and band summaries, the prediction records and the provenances. They were produced at
-Boys v5.0.0 (commit `482fd33`, recorded in `results/provenance.json`).
+Boys v5.0.0 (commit `482fd33`, recorded in each `results/provenance.json`). The 9,353-argument
+record is the Boys v5.1.1 run (commit `834bdbb`, recorded in
+`product-amplification/v5.1.1-9353/sweeps/*/results/provenance.json`); it appends one recovered
+argument to the designed grid, and it is the record the published tables use. The
+`product-amplification/v5.2.0-check/` source and execution check and the
+`product-amplification/v5.2.5-check/` source-identity check compare later releases against that
+run; they are checks, not new measurements.
 
 Four files are stored xz-compressed because of their size. Decompress them in place before running
 the analysis:
