@@ -1,10 +1,8 @@
 # Taxonomy demonstration
 
-A synthetic testbed that reproduces the two demonstrations in the paper's
-section on what a row can and cannot carry, and its Table S11. It is
-constructed, not found: it models two evaluation paths and the row types that
-judge them, then plants a small drift in one path to show which rows can see
-it.
+A synthetic testbed for the claim-row taxonomy: it models two evaluation
+paths and the row types that judge them, then plants a small drift in one path
+to show which rows can see it. It is constructed, not found.
 
 ## The model
 
@@ -58,5 +56,5 @@ Python version, the command and the exit status.
 The testbed is a construction, not a measurement of the released library. It
 shows that the property type decides which defects a row can see; it says
 nothing about how often a real codebase contains such a defect. The audit's
-original scripts were not preserved, and this testbed reproduces the
-construction the paper describes rather than the audit's original run.
+original scripts were not preserved, and this testbed reconstructs the
+construction rather than the audit's original run.
