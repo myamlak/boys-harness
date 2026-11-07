@@ -60,8 +60,7 @@ PRODUCT_PASS_FUSED = False  # pass[k] = c * basis folded into the pairwise sum
 # boys_coefficients.hpp differs between v5.1.1/v5.2.4 and v5.2.5 in the
 # rational region-B seed, which the named policy does not read.  The model
 # therefore identifies the file by a digest of exactly the fields it parses,
-# which is identical in those trees, rather than by the whole-file digest.
-# v5.2.6 carries the same header as v5.2.5, whole file and parsed fields.
+# which is identical in those trees and in v5.2.6, not the whole-file digest.
 KNOWN_FIT_DIGESTS = {
     "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204":
         "v5.1.1 / v5.2.4",

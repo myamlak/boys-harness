@@ -1,6 +1,6 @@
 {
  "record": "certified per-call rounding bound for the two region-A Boys entries, Paper A (Boys route comparison), repaired underflow radius",
- "generated_utc": "2026-11-07T20:12:15.363705+00:00",
+ "generated_utc": "2026-11-07T20:14:24.877705+00:00",
  "runtime": {
   "python": "3.14.7",
   "mpmath": "1.4.1",
@@ -242,8 +242,8 @@
     "sha256": "8ebbe10ecc9c623d3b6577f9e10f83b2190b1958d1f61a326a9b3f0e8d121b4e"
    },
    "model.py": {
-    "bytes": 22379,
-    "sha256": "b6cd8c4a89821cf009a9acb9bc098f4e787e61e7641dcd1fdc5f8bd242f25693"
+    "bytes": 22308,
+    "sha256": "a5a9b199d6cd4e4489bb08cfb8c75dda8a41e2284e674dc972114de5f3bfc132"
    },
    "oracle_check.py": {
     "bytes": 2610,
