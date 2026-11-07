@@ -1,6 +1,6 @@
 {
  "record": "certified per-call rounding bound for the two region-A Boys entries, Paper A (Boys route comparison), repaired underflow radius",
- "generated_utc": "2026-11-06T19:53:11.180303+00:00",
+ "generated_utc": "2026-11-07T20:12:15.363705+00:00",
  "runtime": {
   "python": "3.14.7",
   "mpmath": "1.4.1",
@@ -25,7 +25,7 @@
  "kernel": {
   "tag": "v5.2.5",
   "commit": "8b7a289dfce7558c8498e89c17c05f20fa7bb7c8",
-  "release": "v5.2.5",
+  "release": "v5.2.5 / v5.2.6",
   "parsed_table_digest": "74fe52545be4540cfd7abea1b19e6bd5d4e681b656a1be6603585bb97dafa99c",
   "headers": {
    "boys_coefficients.hpp": {
@@ -47,7 +47,7 @@
     "sha256": "1d8b88ac30c757138a4c87219d68b56756c175c36230818b2360dc0bf7bdd373"
    }
   },
-  "coefficient_identity": "the model parses kPieces, kPieceStart, kTierThresholds, kExtendedBcoeffs, kExtendedBX0 and kX0 from boys_coefficients.hpp and the Chebyshev table from boys_coefficients_d_coarse_cheb.hpp; the parsed content digest is the same in the v5.1.1 sweep tree and the v5.2.5 release, and the coarse table's whole-file digest is unchanged, so the fits, thresholds and extended seed the sweep evaluated are the ones this record bounds.  The v5.2.5 header differs only in the rational region-B seed, which the named policy does not read."
+  "coefficient_identity": "the model parses kPieces, kPieceStart, kTierThresholds, kExtendedBcoeffs, kExtendedBX0 and kX0 from boys_coefficients.hpp and the Chebyshev table from boys_coefficients_d_coarse_cheb.hpp; the parsed content digest is the same in the v5.1.1 sweep tree and the v5.2.5 and v5.2.6 releases, and the coarse table's whole-file digest is unchanged, so the fits, thresholds and extended seed the sweep evaluated are the ones this record bounds.  The v5.2.5 header differs from v5.1.1 only in the rational region-B seed, which the named policy does not read; the v5.2.6 header is byte-identical to the v5.2.5 header."
  },
  "sweep": {
   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form",
@@ -219,15 +219,15 @@
  },
  "manuscript": {
   "path": "C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\supplement\\main.tex",
-  "sha256": "71567b39098a796096b470bc7b339439ff138068c5260f63a922622a496a3268",
+  "sha256": "e4eed9ebe1629e180d2d77a7556941de7e866df8afcca62190b52b0847aca2ae",
   "read_only": true,
   "section_read": "S18, the certified enclosure derived"
  },
  "record_files": {
   "code": {
    "certify.py": {
-    "bytes": 19627,
-    "sha256": "8e849340a0d6eb2d8e999ca592f34c3d23dc5d1c1f6deab094b5e72548fb2f20"
+    "bytes": 19783,
+    "sha256": "ca6917792e4936ec14a929b7fbc53897fdee5eb95934b1cec099afa86215ec9a"
    },
    "exactroute.py": {
     "bytes": 5099,
@@ -238,20 +238,20 @@
     "sha256": "6ac5151ea3903b5033d00a468095bf3a2530ff18268ae4108af4f8cd51bea0f9"
    },
    "make_provenance.py": {
-    "bytes": 11877,
-    "sha256": "3b11978b0898b9f49045ac34a451a80abb2491b0b8069e89d24bd8427b7c2758"
+    "bytes": 11978,
+    "sha256": "8ebbe10ecc9c623d3b6577f9e10f83b2190b1958d1f61a326a9b3f0e8d121b4e"
    },
    "model.py": {
-    "bytes": 22188,
-    "sha256": "459e76ed05f9455a2c6ff569abd518ef8cb7f698181dcd7247531a6c23f76669"
+    "bytes": 22379,
+    "sha256": "b6cd8c4a89821cf009a9acb9bc098f4e787e61e7641dcd1fdc5f8bd242f25693"
    },
    "oracle_check.py": {
     "bytes": 2610,
     "sha256": "5e9c1a58b1e515295c97dacbffb7f05a66e10827df29708d71cffb09316dc5db"
    },
    "record_paths.py": {
-    "bytes": 5838,
-    "sha256": "e7d61825e98bb8351f0fac4321cfbdee7baec6421fc1029e57e234002ae56667"
+    "bytes": 5892,
+    "sha256": "4c7ee293ceaedc3446b303e01f541952b06376e2f6ab0d342a2bd9e90bcc07e6"
    },
    "replay.py": {
     "bytes": 3970,

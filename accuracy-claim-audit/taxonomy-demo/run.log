@@ -1,0 +1,15 @@
+﻿grid: 4103 points on [0, 11.899848152108484]
+drift: 5.000e-15 * F0 on (2.0, 3.0); lane bound 1.000e-13; band bound 1.000e-15; consistency allowance 2.000e-15
+before lane.accuracy      bound=1.000e-13 worst=9.009803e-14 PASS
+before band.bound         bound=1.000e-15 worst=0.000000e+00 PASS
+before path.consistency   bound=2.000e-15 worst=0.000000e+00 PASS
+before exact.zero         bound=0.000e+00 worst=0.000000e+00 PASS
+before ordinary.test      bound=1.000e-13 worst=9.009803e-14 PASS
+
+after  lane.accuracy      bound=1.000e-13 worst=9.009803e-14 PASS
+after  band.bound         bound=1.000e-15 worst=5.104755e-15 FAIL
+after  path.consistency   bound=2.000e-15 worst=5.104755e-15 FAIL
+after  exact.zero         bound=0.000e+00 worst=0.000000e+00 PASS
+after  ordinary.test      bound=1.000e-13 worst=9.009803e-14 PASS
+
+VERDICTS MATCH THE TWO DEMONSTRATIONS

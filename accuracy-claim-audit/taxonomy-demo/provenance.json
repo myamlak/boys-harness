@@ -1,0 +1,14 @@
+{
+ "schema": "taxonomy-demo-provenance-1",
+ "generated_utc": "2026-11-07T20:10:49Z",
+ "command": "python -I taxonomy_demo.py --json taxonomy_demo.json",
+ "exit_status": 0,
+ "python": "3.14.7",
+ "platform": "Windows-11-10.0.26200-SP0",
+ "final_line": "VERDICTS MATCH THE TWO DEMONSTRATIONS",
+ "digests": {
+  "taxonomy_demo.py": "1de6c5661475c86d33ed5c00bfb6189b110275eeaca693c20fe379c70e94c03e",
+  "run.log": "6b5e1c342a19a113b645e5a749e0659911e289b7b579d305720cc556b49c42fc",
+  "taxonomy_demo.json": "8f10c624780d15507a8de9c8e4e652b43cab40735f09a8be07afbf8e19846b57"
+ }
+}

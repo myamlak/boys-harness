@@ -1,0 +1,32 @@
+v5.2.6 identity check, 2026-11-07
+
+Coefficient header, working-tree bytes as the model reads them
+  v5.2.5 checkout: d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00
+  v5.2.6 checkout: d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00
+
+Coefficient header, git blob (LF)
+  git show v5.2.5:include/boys/boys_coefficients.hpp | sha256sum
+    60ee36d33d76aac31b19fb59c610195e1a35e48930a15989da66c8f5bd50b01e
+  git show v5.2.6:include/boys/boys_coefficients.hpp | sha256sum
+    60ee36d33d76aac31b19fb59c610195e1a35e48930a15989da66c8f5bd50b01e
+
+Parsed content digest (model.FIT_CONTENT_DIGEST), both tags
+  74fe52545be4540cfd7abea1b19e6bd5d4e681b656a1be6603585bb97dafa99c
+
+Coarse Chebyshev table, both tags
+  7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e
+
+Table load against a v5.2.6 checkout, from the record directory:
+  python -I -c "import sys; sys.path.insert(0,'code'); import model;
+    model.configure(kernel='<v5.2.6 checkout>'); model.load_tables()"
+  exit 0: the parsed digest and the known-release assertion both pass.
+
+Replay against a v5.2.6 checkout:
+  python -I code/replay.py --kernel <v5.2.6 checkout>
+      --sweep ../amplification-form --exp-bits exp/exp_bits.txt --both-downward
+  exit 0. Separate downward step: 27,588 ship and 27,588 product values,
+  0 mismatches. Fused downward step: 208 ship mismatches, first at
+  (A1, 0.029916890803630927, 0), 1 ulp. Captured in replay-v526.log.
+
+Checkouts: _boys-tags at v5.2.5 (commit 8b7a289dfce7558c8498e89c17c05f20fa7bb7c8);
+_boys-v526-check at v5.2.6 (commit 937890693777762c1d36a2fdc3a3afa0652d7935).

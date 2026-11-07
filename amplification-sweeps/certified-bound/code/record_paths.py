@@ -37,8 +37,9 @@ DEFAULT_EXP_BITS = RECORD_DIR / "exp" / "exp_bits.txt"
 DEFAULT_DEPOSIT = RECORD_DIR.parent / "apriori-bound"
 
 _KERNEL_HINT = (
-    "pass --kernel PATH or set BOYS_ROOT to a boys checkout at v5.2.5 "
-    "(git clone --branch v5.2.5 https://github.com/myamlak/boys.git ../boys)")
+    "pass --kernel PATH or set BOYS_ROOT to a boys checkout at v5.2.5 or "
+    "v5.2.6; the coefficient header is identical "
+    "(git clone --branch v5.2.6 https://github.com/myamlak/boys.git ../boys)")
 
 
 def _select(value, env, default):

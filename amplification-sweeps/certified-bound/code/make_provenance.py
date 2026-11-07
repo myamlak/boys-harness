@@ -131,11 +131,12 @@ def main(argv=None):
                 "boys_coefficients.hpp and the Chebyshev table from "
                 "boys_coefficients_d_coarse_cheb.hpp; the parsed content "
                 "digest is the same in the v5.1.1 sweep tree and the v5.2.5 "
-                "release, and the coarse table's whole-file digest is "
-                "unchanged, so the fits, thresholds and extended seed the "
-                "sweep evaluated are the ones this record bounds.  The "
-                "v5.2.5 header differs only in the rational region-B seed, "
-                "which the named policy does not read."),
+                "and v5.2.6 releases, and the coarse table's whole-file "
+                "digest is unchanged, so the fits, thresholds and extended "
+                "seed the sweep evaluated are the ones this record bounds.  "
+                "The v5.2.5 header differs from v5.1.1 only in the rational "
+                "region-B seed, which the named policy does not read; the "
+                "v5.2.6 header is byte-identical to the v5.2.5 header."),
         },
         "sweep": {
             "path": str(sweep),

@@ -21,6 +21,11 @@ against an independent MPFR reference.
   `m2_claims.py` and `m3_defects.py` are the three measurements;
   `verify_findings.py` checks the two measured defects against mpmath.
   `claims_registry.tsv` is the claim classification.
+- `taxonomy-demo/` — the synthetic testbed behind the paper's row-taxonomy
+  demonstration. `taxonomy_demo.py` models two paths and four row types plus
+  an ordinary test, plants a drift inside the lane accuracy bound, and prints
+  the before and after verdicts. `run.log` and `taxonomy_demo.json` are the
+  captured output, and `provenance.json` records the command and the digests.
 - `records/` — the captured cell summary `summarize_cells.txt`, the per-row
   judged and degenerate cell counts behind the audit's sixth headline number,
   and `documented-claims-v5.tsv`, the coverage enumeration of the five prose

@@ -1,5 +1,5 @@
-"""The evaluated arithmetic of the v5.2.5 region-A entries, nominal values
-and running-error radii.
+"""The evaluated arithmetic of the v5.2.5 / v5.2.6 region-A entries, nominal
+values and running-error radii.
 
 Every nominal operation is the IEEE-754 double operation the kernel performs,
 in the kernel's order; math.fma is the correctly rounded fused operation the
@@ -60,12 +60,13 @@ PRODUCT_PASS_FUSED = False  # pass[k] = c * basis folded into the pairwise sum
 # boys_coefficients.hpp differs between v5.1.1/v5.2.4 and v5.2.5 in the
 # rational region-B seed, which the named policy does not read.  The model
 # therefore identifies the file by a digest of exactly the fields it parses,
-# which is identical in both trees, rather than by the whole-file digest.
+# which is identical in those trees, rather than by the whole-file digest.
+# v5.2.6 carries the same header as v5.2.5, whole file and parsed fields.
 KNOWN_FIT_DIGESTS = {
     "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204":
         "v5.1.1 / v5.2.4",
     "d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00":
-        "v5.2.5",
+        "v5.2.5 / v5.2.6",
 }
 FIT_CONTENT_DIGEST = (
     "74fe52545be4540cfd7abea1b19e6bd5d4e681b656a1be6603585bb97dafa99c")
