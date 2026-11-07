@@ -1,0 +1,89 @@
+{
+ "schema": "taxonomy-demo-1",
+ "result": {
+  "constants": {
+   "right": 11.899848152108484,
+   "lane_bound": 1e-13,
+   "band_bound": 1e-15,
+   "half_lane_bound": 1e-15,
+   "allowance": 2e-15,
+   "base_error": 9e-14,
+   "base_region": [
+    9.0,
+    10.0
+   ],
+   "defect_region": [
+    2.0,
+    3.0
+   ],
+   "drift": 5e-15,
+   "grid_points": 4103
+  },
+  "before": {
+   "planted": false,
+   "lane": {
+    "row": "lane.accuracy",
+    "bound": 1e-13,
+    "worst": 9.009802624163451e-14,
+    "verdict": "pass"
+   },
+   "band": {
+    "row": "band.bound",
+    "bound": 1e-15,
+    "worst": 0.0,
+    "verdict": "pass"
+   },
+   "consistency": {
+    "row": "path.consistency",
+    "bound": 2e-15,
+    "worst": 0.0,
+    "verdict": "pass"
+   },
+   "exactness": {
+    "row": "exact.zero",
+    "bound": 0.0,
+    "worst": 0.0,
+    "verdict": "pass"
+   },
+   "ordinary": {
+    "row": "ordinary.test",
+    "bound": 1e-13,
+    "worst": 9.009802624163451e-14,
+    "verdict": "pass"
+   }
+  },
+  "after": {
+   "planted": true,
+   "lane": {
+    "row": "lane.accuracy",
+    "bound": 1e-13,
+    "worst": 9.009802624163451e-14,
+    "verdict": "pass"
+   },
+   "band": {
+    "row": "band.bound",
+    "bound": 1e-15,
+    "worst": 5.104755144922628e-15,
+    "verdict": "fail"
+   },
+   "consistency": {
+    "row": "path.consistency",
+    "bound": 2e-15,
+    "worst": 5.104755144922628e-15,
+    "verdict": "fail"
+   },
+   "exactness": {
+    "row": "exact.zero",
+    "bound": 0.0,
+    "worst": 0.0,
+    "verdict": "pass"
+   },
+   "ordinary": {
+    "row": "ordinary.test",
+    "bound": 1e-13,
+    "worst": 9.009802624163451e-14,
+    "verdict": "pass"
+   }
+  }
+ }
+}

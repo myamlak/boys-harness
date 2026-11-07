@@ -3,7 +3,9 @@
 This directory is the record for the certified-bound section of the crossover
 paper. It bounds both region-A entries of `boys` at tag `v5.2.5` operation by
 operation, validates the bound on every measured cell, and records what it can
-certify.
+certify. The stored tables the model parses are byte-identical at `v5.2.6`,
+so the certificate applies at that tag as well; `v526-identity/` carries the
+identity check and the replay.
 
 The direct entry is `BoysRegionAProduct<ProductMode::kFp64>`; the recursed
 entry is `BoysAllOrders`. The bound models the map, the Chebyshev basis
@@ -99,9 +101,11 @@ The kernel is identified by a canonical digest of exactly the parsed tables
 (`kPieces`, `kPieceStart`, `kTierThresholds`, `kExtendedBcoeffs`,
 `kExtendedBX0`, `kX0`) rather than by the whole-file digest of
 `boys_coefficients.hpp`. The parsed content is identical in the v5.1.1 sweep
-tree and the v5.2.5 release; the two headers differ only in the rational
-region-B seed, which the named policy does not read. `provenance.json` in the
-run directory records both whole-file digests and the parsed digest.
+tree and the v5.2.5 and v5.2.6 releases; the v5.2.5 header differs from the
+v5.1.1 one only in the rational region-B seed, which the named policy does
+not read, and the v5.2.6 header is byte-identical to the v5.2.5 header.
+`provenance.json` in the run directory records both whole-file digests and
+the parsed digest.
 
 ## What is here
 
@@ -117,6 +121,9 @@ run directory records both whole-file digests and the parsed digest.
   the per-cell and band CSVs, the logs, the underflow record and `commands.md`.
 - `exp/`: the libm exponential probe source and the measured and reproduced
   bit files.
+- `v526-identity/`: the coefficient-header identity between v5.2.5 and
+  v5.2.6, with the replay that reproduces the recorded values from the
+  v5.2.6 headers.
 - `provenance.json`: the kernel, sweep, compiler flags and file digests of
   the 2026-11-03 run; the repaired run's provenance is
   `results-underflow-fix/provenance.json`.
@@ -124,11 +131,11 @@ run directory records both whole-file digests and the parsed digest.
 ## How to reproduce
 
 Run from this directory with Python 3.14 and mpmath. The only external input
-is a boys checkout at v5.2.5. The default is `<repository>/../boys`, i.e. a
-clone beside the harness checkout (else pass `--kernel` or set `BOYS_ROOT`).
-From the repository root:
+is a boys checkout at v5.2.5 or v5.2.6; the coefficient header is identical.
+The default is `<repository>/../boys`, i.e. a clone beside the harness
+checkout (else pass `--kernel` or set `BOYS_ROOT`). From the repository root:
 
-    git clone --branch v5.2.5 https://github.com/myamlak/boys.git ../boys
+    git clone --branch v5.2.6 https://github.com/myamlak/boys.git ../boys
 
 The full record, with every output beneath `results-underflow-fix/`:
 
