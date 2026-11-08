@@ -2,10 +2,12 @@
 
 `count_sweep.py` measures the smallest stored coefficient count each fit
 family needs on `[x0, x0+W)` at a target. It imports the library's generator
-rather than reimplementing the fits. The deposited `count_sweep.py` is
-portable: it takes the library from `BOYS_SOURCE` or a `boys` directory beside
-this repository. It is not the harness the records identify; see
-"Recorded harness" below.
+rather than reimplementing the fits. The deposit carries one harness in two
+revisions: the portable `count_sweep.py`, the documented default for new runs,
+which takes the library from `BOYS_SOURCE` or a `boys` directory beside this
+repository; and `count_sweep_recorded.py`, the exact revision the records
+name, deposited so they can be regenerated and verified against it. See
+"Harness revisions" below.
 
 ## Commands
 
@@ -48,7 +50,7 @@ five coarse widths in the core records (`2.8567491415463806`,
 `cold_ladder.py` re-solves the one row whose verdict moved, `rel:1e-13|2^5`.
 Its record is `records/stability/followup_cold_ladder_2026-10-20.json`.
 
-## Recorded harness
+## Harness revisions
 
 The records identify the harness as `count_sweep.py` with SHA-256
 `a5def761c8f18d585396210b28864dc6c4a108d2cfda4f3788d87a7f6c854f10`
@@ -63,11 +65,12 @@ The deposited `count_sweep.py` is a different revision, SHA-256
 `fcb45a434fd973446c5bdf50c4fa8348d9a54146fa16f72e129d8ab7a36f1887`. It has
 no `cheb_degree_mode`, no `--cheb-degrees` and no `--rat-k-max` option, and
 its Chebyshev ladder starts at degree 4 (`CHEB_MIN_DEG`). The recorded
-harness's `all` mode also tries degrees 0, 1 and 2; the recount records four
-cells with `new_m` 2, all in mode `all`. The portable harness also cannot
+revision's `all` mode also tries degrees 0, 1 and 2; the recount records four
+cells with `new_m` 2, all in mode `all`. The portable revision also cannot
 reproduce the ladder's rational cells with `k` above the generator's
 `RAT_K_MAX` of 8 (the ladder records `rat_k_max: 12`). The records that name
-a harness name the recorded revision, not this one.
+a harness name the recorded revision; the portable revision is the documented
+default for new runs.
 
 The deposited `stability_save_verify.py` is the revision named by
 `records/ladder/rational_control_symmetric.json`
@@ -78,9 +81,9 @@ Five drivers import `count_sweep` by name: `cold_ladder.py`,
 `rational_control_symmetric.py` and `rational_unrounded_control.py`. To run
 them as recorded, place `count_sweep_recorded.py` beside them as
 `count_sweep.py`. `rational_control_symmetric.py` also calls
-`cs.cheb_degrees`, which only the recorded harness defines.
+`cs.cheb_degrees`, which only the recorded revision defines.
 
-The recorded harness's default library root is the measurement machine's.
+The recorded revision's default library root is the measurement machine's.
 `count_sweep_recorded.py` and `recertify_ladder.py` take `--boys-root`;
 `cold_ladder.py` and `stability_save_verify.py` use `count_sweep.DEFAULT_BOYS`
 and have no override; `rational_control_symmetric.py` uses its own `RAT_BOYS`
@@ -126,8 +129,9 @@ The five records hold 135 rows: 40 in `records/core/sweep_all.json`, 20 in
 `records/core/sweep_abs_5e-14.json`, 15 in
 `records/core/sweep_rel_1e-14.json`, and 40 in
 `records/ladder/sweep_all.json`. The four core-side records were re-measured
-at Boys v5.2.5 (commit `6681f9d`); the `ladder` record was not. The deposited
-harness is not the one the records identify and does not reproduce them.
+at Boys v5.2.5 (commit `6681f9d`); the `ladder` record was not. The ladder
+record regenerates only with `count_sweep_recorded.py`; the portable revision
+does not reproduce its `k > 8` rational cells.
 
 ## Ladder records
 
@@ -152,10 +156,10 @@ and no file was edited. `baryrat` 2.1.2,
 the BRASIL rational minimax solver, produced `results-corrected/` and
 `results-second-edge-a2/`; it is independent of the kernel's Remez and Lawson
 implementations. The remaining
-records were produced by the kernel's own recorded harness: their drivers
-import `count_sweep.py`, the recorded revision described above, and the
-kernel's generator, and every rational count in them is a kernel Remez or
-Lawson solve.
+records were produced by the harness revision deposited as
+`count_sweep_recorded.py`: their drivers import `count_sweep.py`, the recorded
+revision described above, and the kernel's generator, and every rational count
+in them is a kernel Remez or Lawson solve.
 
 | Block | Source in the paper's record set | Produced by |
 | --- | --- | --- |
@@ -164,7 +168,7 @@ Lawson solve.
 | `results-second-instance-f1/` | `results-second-instance-f1/` | `analysis/second_instance_f1_sweep.py` and `analysis/analyze_second_instance_f1.py`, with `analysis/f1_reference.py` |
 | `results-second-instance-f1-control/` | `results-second-instance-f1-control/` | `analysis/second_instance_f1_sweep.py` with `--function F0` |
 | `results-second-edge-a2/` | `results-second-edge-a2/` | `second_edge_a2_solver.py`, `analyze_second_edge_a2.py` and `verify_witnesses.py`, with `baryrat` 2.1.2 |
-| `recertification/cell_5.json` | `_recert/cell_5.json` | `recertify_ladder.py --cell 5`, over the recorded harness |
+| `recertification/cell_5.json` | `_recert/cell_5.json` | `recertify_ladder.py --cell 5`, over the recorded revision |
 | `results-second-instance-f1/knee-f1/` | `_knee-f1/` | `knee_walk_f1.py`, `make_corrected_record.py` and the F1 analysis scripts |
 | `analysis/` | the paper's record set, top level | the drivers, analysers and reference named above, with `ladder_analysis.py` and `validate_tail_instance.py` |
 
@@ -528,6 +532,6 @@ the record's 18, 18, 25, 18 and 8 — and `verify_cells.py` and
 Python 3.10 or newer with `mpmath`. The portable `count_sweep.py` takes the
 library from `BOYS_SOURCE` or a `boys` directory beside this repository. The
 recorded scripts hardcode the measurement machine's library paths, and several
-read the measurement tree's `results*/` layout; "Recorded harness" names their
+read the measurement tree's `results*/` layout; "Harness revisions" names their
 options, and the stability command above passes the deposited records with
 `--source`. Do not run the scripts with `python -I`.

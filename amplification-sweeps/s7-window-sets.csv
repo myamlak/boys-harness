@@ -1,0 +1,5 @@
+set,window,order_start,order_end,evidence
+derived,lower,0,4,stored-coefficient truncation error carried up by w stays inside the 1e-15 fit budget
+derived,upper,20,32,stored-coefficient truncation error carried up by w stays inside the 1e-15 fit budget
+documented,lower,0,2,kernel documentation; w <= 444.228 at these orders
+documented,upper,25,32,kernel documentation; w <= 444.228 at these orders

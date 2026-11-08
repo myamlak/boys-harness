@@ -2,7 +2,8 @@
 
 The certificate bounds the two region-A entries through the coefficient
 tables. `boys_coefficients.hpp` is byte-identical at `v5.2.5` and `v5.2.6`:
-the same working-tree digest and the same git blob digest. The parsed
+the same working-tree digest, which is the git blob's SHA-256, and the
+same blob object id (both recorded in `digests.txt`). The parsed
 content digest the model checks is the same at both tags, and the coarse
 Chebyshev table is unchanged.
 

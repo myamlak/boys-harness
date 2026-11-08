@@ -3,12 +3,21 @@ v5.2.6 identity check, 2026-11-07
 Coefficient header, working-tree bytes as the model reads them
   v5.2.5 checkout: d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00
   v5.2.6 checkout: d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00
+  The working tree is LF, so these bytes are also the stored blob's content.
 
-Coefficient header, git blob (LF)
+Coefficient header, git blob object id, both tags
+  bc66cd702b060d19b0b122b7df310fae8c8f2626
+
+Coefficient header, git blob SHA-256 (LF bytes), both tags
+  d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00
+
+Pipe artefact, not a blob digest
   git show v5.2.5:include/boys/boys_coefficients.hpp | sha256sum
     60ee36d33d76aac31b19fb59c610195e1a35e48930a15989da66c8f5bd50b01e
   git show v5.2.6:include/boys/boys_coefficients.hpp | sha256sum
     60ee36d33d76aac31b19fb59c610195e1a35e48930a15989da66c8f5bd50b01e
+  This 60ee36... digest is of the BOM + CRLF bytes the pipe produced on this
+  host, not of the stored blob; the blob is LF and hashes to d978... above.
 
 Parsed content digest (model.FIT_CONTENT_DIGEST), both tags
   74fe52545be4540cfd7abea1b19e6bd5d4e681b656a1be6603585bb97dafa99c

@@ -53,11 +53,12 @@ build tool from inside the extracted trees.
 | Source | URL | SHA-256 | Size |
 | --- | --- | --- | --- |
 | Boost 1.92.0 | `https://archives.boost.io/release/1.92.0/source/boost_1_92_0.tar.gz` | `c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce` | 235,384,471 |
-| crlibm 1.0beta5, commit `eb3063791aa75bc9705b49283bf14250465220a7` | `https://github.com/taschini/crlibm/archive/eb3063791aa75bc9705b49283bf14250465220a7.tar.gz` | `79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5` | 2,432,556 |
+| crlibm 1.0beta5 | the archive URL in `logs/environment.txt` | `79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5` | 2,432,556 |
 
 Version stamps: `BOOST_VERSION 109200` and `BOOST_LIB_VERSION "1_92"`;
 crlibm's `VERSION` file reads `1.0beta5`. The Boost hash also matches the
-release site's own `.json` descriptor for 1.92.0.
+release site's own `.json` descriptor for 1.92.0. The crlibm archive URL and
+its raw commit are kept in `logs/environment.txt`.
 
 ## Requirements
 
@@ -87,12 +88,12 @@ curl -L -o downloads/boost_1_92_0.tar.gz \
 echo "c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce  downloads/boost_1_92_0.tar.gz" | sha256sum -c -
 tar -xzf downloads/boost_1_92_0.tar.gz -C third_party
 
-curl -L -o downloads/crlibm-eb306379.tar.gz \
-  https://github.com/taschini/crlibm/archive/eb3063791aa75bc9705b49283bf14250465220a7.tar.gz
-echo "79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5  downloads/crlibm-eb306379.tar.gz" | sha256sum -c -
-tar -xzf downloads/crlibm-eb306379.tar.gz -C third_party
-mv third_party/crlibm-eb3063791aa75bc9705b49283bf14250465220a7 \
-   third_party/crlibm-1.0beta5
+curl -L -o downloads/crlibm-1.0beta5.tar.gz \
+  "$(sed -n '/crlibm/ s/^Archive: //p' logs/environment.txt)"
+echo "79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5  downloads/crlibm-1.0beta5.tar.gz" | sha256sum -c -
+mkdir -p third_party/crlibm-1.0beta5
+tar -xzf downloads/crlibm-1.0beta5.tar.gz -C third_party/crlibm-1.0beta5 \
+  --strip-components=1
 ```
 
 (`sha256sum` on macOS is `shasum -a 256`; the three hashes are the same.)

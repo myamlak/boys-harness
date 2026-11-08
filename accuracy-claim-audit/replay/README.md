@@ -11,9 +11,10 @@ that the supplement previously read from the session record `counts.json`.
   `c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce`
   (235,384,471 bytes). The tree's `boost/version.hpp` is
   `cf992d9d2c4f2294b69d8819e334927644a48b978bfea3c525e3f9c6dbc7cb9f`.
-- crlibm 1.0beta5, commit `eb3063791aa75bc9705b49283bf14250465220a7`,
-  archive SHA-256 `79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5`
-  (2,432,556 bytes). The WSL working tree carries CRLF line endings; after
+- crlibm 1.0beta5, archive SHA-256
+  `79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5`
+  (2,432,556 bytes); the archive URL and raw commit are in
+  `../witness-rerun/logs/environment.txt`. The WSL working tree carries CRLF line endings; after
   removing the carriage returns its `csh_fast.h` hashes to
   `0917e43ed1c539176c3a8e09e55980320ee3a705ee0f9221970ae873417f3de0`,
   identical to the archive, so the only difference is the line ending.

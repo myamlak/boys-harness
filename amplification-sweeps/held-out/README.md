@@ -1,5 +1,10 @@
 # Held-out test
 
+**Historical record.** This sweep was measured at boys `v5.1.1` (commit
+`834bdbb18a30ac8538b519436429f78d41f187ce`). It records that run and is not
+the current kernel reference, which is tag `v5.3.0`; the `_boys-v511` paths in
+the commands below name the historical checkout the run used.
+
 The decision rule and its abstention margin were introduced and scored on the
 first two sweeps, and a rule scored on the data that suggested it proves
 little.  This sweep freezes the rule and the margin exactly as
@@ -89,7 +94,7 @@ The steps it runs, in order:
 
 ## Results
 
-Kernel provenance: v5.1.1 at 834bdbb18a30ac8538b519436429f78d41f187ce, proved
+Kernel provenance (historical): v5.1.1 at 834bdbb18a30ac8538b519436429f78d41f187ce, proved
 by content with `git_used = false`.  All 15 kernel files the second sweep's
 record names match digest for digest; 62 kernel files and the reference chain
 are digested, and none differs.

@@ -31,11 +31,12 @@ midpoint; the paper's wording does not claim otherwise.
 | Source | Pin | SHA-256 | Version stamp |
 | --- | --- | --- | --- |
 | Boost 1.92.0 | `https://archives.boost.io/release/1.92.0/source/boost_1_92_0.tar.gz` | `c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce` | `BOOST_VERSION 109200`, `BOOST_LIB_VERSION "1_92"` |
-| crlibm | `https://github.com/taschini/crlibm/archive/eb3063791aa75bc9705b49283bf14250465220a7.tar.gz` | `79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5` | commit `eb3063791aa75bc9705b49283bf14250465220a7`, `VERSION` 1.0beta5 |
+| crlibm 1.0beta5 | the archive URL in `logs/environment.txt` | `79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5` | `VERSION` 1.0beta5 |
 
 The Boost hash matches the release site's own `.json` descriptor for 1.92.0.
-The crlibm archive is the GitHub mirror of the INRIA Forge release, at the
-commit the audit used. The archives and extracted trees are not redistributed;
+The crlibm archive is the GitHub mirror of the INRIA Forge release; its URL
+and raw commit are recorded in `logs/environment.txt`. The archives and
+extracted trees are not redistributed;
 the pins fix their bytes. The documented sentences were quoted from the
 pinned sources at run time; the excerpts and their locations are in
 `raw/doc_excerpts.txt`.
