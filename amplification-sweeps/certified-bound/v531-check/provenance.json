@@ -1,0 +1,59 @@
+{
+ "record": "v531-check",
+ "role": "the release replay that carries the measurements to the submission release",
+ "harness": {
+  "tag": "v1.0.34",
+  "status": "to be cut"
+ },
+ "kernel": {
+  "version": "5.3.1",
+  "tag": "v5.3.1",
+  "tag_status": "not cut when the replay ran",
+  "tree_used": "the v5.3.0 tag tree with include/boys/version.hpp at 5.3.1; no other file under include/ or src/ differs",
+  "version_header_sha256": "02e6312dfa1a91b07abe98843c484f2331abb8f3f48b313fb6a15722c9067da9",
+  "v5.3.0_tag_object": "7f4eb49f008ffb00e9f287e333abcb8e2f4ec1e3",
+  "v5.3.0_commit": "8c9476e51ecd67f406862f2d353ae12db8e4774d",
+  "v5.3.0_tree": "6e36819ce5c6fd31aee5ea76c507a4a6eb90a6ea"
+ },
+ "measurement_provenance": {
+  "measured_tree_tag": "v5.1.1",
+  "measured_tree_tag_object": "1391604720058d3ebe6f935a5370b1ca94b84992",
+  "measured_tree_commit": "834bdbb18a30ac8538b519436429f78d41f187ce",
+  "measured_tree_tree": "042f44ee074c9afc0e29194e2bd8251db55bbbc7",
+  "note": "the measured cells are the deposited ones; this record replays them at the submission release"
+ },
+ "inputs": {
+  "form_grid": {
+   "path": "amplification-sweeps/amplification-form/data/grid.csv",
+   "sha256": "5fee3f7930f52e1b982c421e84d2b6e36d97af450b8512508cd9ea5dc7b9f507"
+  },
+  "form_fits": {
+   "path": "amplification-sweeps/amplification-form/data/fits.csv",
+   "sha256": "ed9d8ea3cebef5bd734962fcb307a36a8729b752feb6eb0fc1a966a397d835e5"
+  },
+  "first_sweep_grid": {
+   "path": "amplification-sweeps/product-amplification/data/grid.csv",
+   "sha256": "da7a6c12090b0367054f561fdce749fb8147879dbae3a2544902d5b51667414c"
+  }
+ },
+ "replay": {
+  "sweep1_build_exit": 0,
+  "sweep1_run_exit": 0,
+  "sweep2_build_exit": 0,
+  "sweep2_run_exit": 0,
+  "first_sweep_cells_sha256": "dd26d0b2a4352113d9f15433ec991adfacc211607ae9586c0bb51cd12b3f3369",
+  "second_sweep_cells_sha256": "2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6",
+  "cells_mismatches": 0,
+  "model_replay": "27,588 recursed and 27,588 direct values bit for bit; the fused downward variant mismatches 208 recursed values",
+  "bound_validation": "55,176 entry-cells, 0 violations, worst |r|/C 0.71875 at (A1, 0, 24, ship)",
+  "certificate_outputs": "byte-identical to the deposited results-underflow-fix/"
+ },
+ "compiler": "MSVC 14.51.36231 (19.51.36260), /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2",
+ "files": [
+  "README.md",
+  "digests.txt",
+  "identity-v531.txt",
+  "replay-v531.log",
+  "sweep-replay-v531.log"
+ ]
+}

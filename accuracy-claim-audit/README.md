@@ -28,13 +28,15 @@ against an independent MPFR reference.
   output, and `provenance.json` records the command and the digests.
 - `records/` — the captured cell summary `summarize_cells.txt`, the per-row
   judged and degenerate cell counts behind the audit's sixth headline number,
-  and `documented-claims-v5.tsv`, the coverage enumeration of the five prose
-  documents that state the Boys kernel's accuracy (the readme, the manual
+  and `documented-claims-v531.tsv`, the coverage enumeration of the five prose
+  documents that state the Boys kernel's accuracy at tag `v5.3.1` (the readme, the manual
   page, the contract page, the consumer page and the contributing guide),
   together with the source comments in `src/boys_simd.cpp` and the claim in
   the shipped public header `include/boys/boys_decl.hpp`: one documented
   claim per line, with the document, location, figure, scope and the gate
-  row or book that registers it (or none).
+  row or book that registers it (or none). The earlier enumerations are kept
+  in `records/archive/` as provenance; each front page states the revision it
+  records.
 
 ## Headline numbers
 
@@ -53,8 +55,8 @@ unavailable rather than guessing.
 
 ## Dependencies
 
-- Python 3.10 or newer with gmpy2 2.3.1 linked to MPFR 4.2.2 and GMP 6.3.0,
-  and mpmath 1.4.1. Check the versions with:
+- Python 3.10 or newer with gmpy2 2.3.1 linked to MPFR 4.2.2, and mpmath
+  1.4.1. Check the versions with:
 
   ```sh
   python -c "import gmpy2, mpmath; print(gmpy2.version(), gmpy2.mpfr_version(), mpmath.__version__)"

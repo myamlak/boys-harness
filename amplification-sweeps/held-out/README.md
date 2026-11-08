@@ -1,9 +1,10 @@
 # Held-out test
 
-**Historical record.** This sweep was measured at boys `v5.1.1` (commit
-`834bdbb18a30ac8538b519436429f78d41f187ce`). It records that run and is not
-the current kernel reference, which is tag `v5.3.0`; the `_boys-v511` paths in
-the commands below name the historical checkout the run used.
+The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`. This
+sweep is a deposited record measured against an earlier kernel revision;
+`results/provenance.json` names the revision, the commit and the checkout path
+the run used, and that name is this record's provenance, not a current
+reference.
 
 The decision rule and its abstention margin were introduced and scored on the
 first two sweeps, and a rule scored on the data that suggested it proves
@@ -27,7 +28,7 @@ The margin is one unit of `T`.  It is hard-coded in `analyze.py` as
 margin ladder, so nothing in this sweep can tune it on the new data.
 
 The model that forms B, D and T is a line-for-line copy of
-`../amplification_form/analyze.py`: the same amplified seed term, the same
+`../amplification-form/analyze.py`: the same amplified seed term, the same
 accumulated-arithmetic term, the same population (arguments at or above
 `kTierThresholds[0]`), the same unserved-order rule (both entries read the same
 stored fit there, so the model abstains by construction), and the same band
@@ -35,7 +36,7 @@ maxima.
 
 The run proves the copy before it scores anything.  `analyze.py` first applies
 it to the second sweep's own cells and reference and requires it to reproduce
-`../amplification_form/results/prediction_record.csv` field for field, all 132
+`../amplification-form/results/prediction_record.csv` field for field, all 132
 rows at 17 digits, and then `../../tables/prediction-record.tex` through the
 table's own two format steps (six significant figures for a measured value,
 the shortest spelling of its argument) and in the same words.  That
@@ -63,8 +64,8 @@ pinned tree (`kRegionA1Edge`, `kRegionAEnd`):
 650 points per band, 1300 arguments.  None of the rules uses the committed gate
 grid, so the held-out set is independent of the arguments both earlier sweeps
 share.  The density, the offsets (one-third and two-thirds of a step) and the edge
-coverage (base-2, not base-10) all differ from `product_amplification/grid.py`
-and `amplification_form/grid.py`.  `grid.py` asserts exact-double disjointness
+coverage (base-2, not base-10) all differ from `product-amplification/grid.py`
+and `amplification-form/grid.py`.  `grid.py` asserts exact-double disjointness
 against both earlier grids and fails the run on a single collision; this run
 checked 9541 distinct earlier arguments and found none.  The rule is stated in
 full above and in the script's docstring, so it is regenerable.
@@ -78,15 +79,15 @@ the user site).  The pipeline does not run git.
 
 The steps it runs, in order:
 
-    python grid.py --boys-tree C:\Users\myaml\dev\_boys-v511 --out data\grid.csv
-    python provenance.py --boys-tree C:\Users\myaml\dev\_boys-v511 \
+    python grid.py --boys-tree <recorded-boys-tree> --out data\grid.csv
+    python provenance.py --boys-tree <recorded-boys-tree> \
         --harness sweep_heldout --harness-dir . --flags "<compile line>" \
         --out results\provenance.json
-    python ..\common\reference.py --boys-tree C:\Users\myaml\dev\_boys-v511 \
+    python ..\common\reference.py --boys-tree <recorded-boys-tree> \
         --grid data\grid.csv --out data\reference.csv \
         --validation data\reference_validation.txt --dps 70 --digits 60
     cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 \
-        /I C:\Users\myaml\dev\_boys-v511\include \
+        /I <recorded-boys-tree>\include \
         /Fo build\sweep_heldout.obj /Fe build\sweep_heldout.exe sweep_heldout.cpp
     build\sweep_heldout.exe --grid data\grid.csv --cells results\cells.csv \
         --admission results\admission.csv
@@ -94,8 +95,8 @@ The steps it runs, in order:
 
 ## Results
 
-Kernel provenance (historical): v5.1.1 at 834bdbb18a30ac8538b519436429f78d41f187ce, proved
-by content with `git_used = false`.  All 15 kernel files the second sweep's
+Kernel provenance: the revision `results/provenance.json` names, proved by
+content with `git_used = false`.  All 15 kernel files the second sweep's
 record names match digest for digest; 62 kernel files and the reference chain
 are digested, and none differs.
 
@@ -141,8 +142,8 @@ commitment is still right.  The second sweep has the same structure.
 
 ## What this establishes and what it does not
 
-Establishes, on the pinned v5.1.1 kernel, its own 60-digit reference, and an
-argument set disjoint from both earlier sweeps:
+Establishes, on the kernel `results/provenance.json` pins, its own 60-digit
+reference, and an argument set disjoint from both earlier sweeps:
 
 * the implementation this sweep scores is the frozen rule: the model
   reproduces the 132-row table field for field and at its printed
@@ -188,5 +189,5 @@ Does not establish:
     results/per_order.csv       measured band maxima and winners per order
     results/band_summary.csv    measured band worsts and the score per band
     results/summary.txt         the self-check, the score, every commitment
-    results/provenance.json     kernel v5.1.1 at 834bdbb, every recorded file
-                                digest matched; git_used = false
+    results/provenance.json     the measured kernel revision and commit, every
+                                recorded file digest matched; git_used = false

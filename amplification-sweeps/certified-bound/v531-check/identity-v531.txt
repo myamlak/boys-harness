@@ -1,0 +1,24 @@
+v5.3.1 identity of the evaluated sources
+=======================================
+
+The evaluated set is the 62 include/boys headers and the 14 src files of the
+measured tree.
+
+v5.2.5:
+  include/boys headers: 59 of 62 identical
+  src files: 14 of 14 identical
+  evaluated files: 73 of 76 identical
+
+v5.3.0:
+  include/boys headers: 45 of 62 identical
+  src files: 10 of 14 identical
+  evaluated files: 55 of 76 identical
+
+v5.3.1:
+  include/boys headers: 45 of 62 identical
+  src files: 10 of 14 identical
+  evaluated files: 55 of 76 identical
+
+v5.3.1 is the pending tag. Its include/ and src/ content is the v5.3.0 tree
+with include/boys/version.hpp replaced by the v5.3.1 version header; no other
+file under include/ or src/ differs between the two.

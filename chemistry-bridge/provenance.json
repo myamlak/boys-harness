@@ -1,0 +1,12 @@
+{
+  "water": {
+    "boys_version": "5.0.0",
+    "boys_content_hash": "482fd33",
+    "note": "read from the copied header; the scratch copy carries no git metadata, which is why BoysBuildRecord prints submodule revision unknown"
+  },
+  "benzene": {
+    "host_framework_version": "0.2.0",
+    "boys_version": "5.2.0",
+    "note": "the scratch tree carried this boys revision; the probe and its edits are described in benzene-pvdz/commands.md"
+  }
+}
