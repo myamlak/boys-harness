@@ -1,0 +1,55 @@
+v5.3.1 release replay: both sweeps, compiled against the release
+=================================================================
+
+Compiler: MSVC 14.51.36231, banner
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64
+  C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe
+
+The v5.3.1 tag was not yet cut when this replay ran. The tree used
+is the release tree whose include/ and src/ content differs from the
+v5.3.1 versioned tree only in include/boys/version.hpp; digests.txt
+records that file at both identities.
+
+Compile commands (runbook form, SWEEP.md), exit 0 for both:
+
+  cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I <release>/include \
+     /Fobuild\sweep1.obj /Febuild\sweep1.exe sweep1.cpp
+  cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I <release>/include \
+     /Fobuild\sweep2.obj /Febuild\sweep2.exe sweep2.cpp
+
+Run commands, exit 0 for both:
+
+  build\sweep1.exe --grid data/grid.csv --cells results/cells.csv \
+      --admission results/admission.csv --gain results/replica_gain.csv \
+      --batch full
+    exit 0, 2.3 s
+
+  build\sweep2.exe --grid data/grid.csv --fits data/fits.csv \
+      --paths results/paths.csv --cells results/cells.csv \
+      --admission results/admission.csv
+    exit 0, 21.1 s
+
+Inputs: the deposited grids and fits, byte-identical to the paper
+tree's copies (form grid 5fee3f7930f52e1b..., fits
+ed9d8ea3cebef5bd...; the first-sweep deposit grid has 9352 arguments,
+exactly the first 9352 rows of the paper tree's 9353-row grid).
+
+Comparison with the deposited records, raw bytes, decompressing
+the deposited .xz files:
+
+  record                            bytes       sha256  result
+  first sweep cells              21670457  dd26d0b2a4352113  byte-identical
+  first sweep admission            335120  19f2c6d9b993f4eb  byte-identical
+  first sweep replica gain        7819330  d0401a0f133ae9ca  byte-identical
+  second sweep cells              1914945  2888ea9a76e9582b  byte-identical
+  second sweep admission            30166  d57b3bf925ae3740  byte-identical
+  second sweep paths            291827555  81001a06d80c88e5  byte-identical
+
+Cell counts: first sweep 308,616 rows (617,232 entry values);
+second sweep 27,588 rows (55,176 entry values). Zero mismatches.
+
+The certificate's model replay and its full bound validation
+against the same release tree are in replay-v531.log: 27,588
+recursed and 27,588 direct values bit for bit with the separate
+downward step, and 0 violations at all 55,176 entry-cells (worst
+measured-to-certified ratio 0.71875 at (A1, 0, 24, ship)).

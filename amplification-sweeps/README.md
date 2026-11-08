@@ -52,18 +52,18 @@ python analyze.py --tree .
 
 ## Deposited records
 
-The current kernel reference is tag `v5.3.0`. The records below name the tag
-each was measured at as provenance, not as a current reference. The original
-designed-grid records are in each sweep's `data/` and `results/`
-directories: the grids, the 60-digit references, the per-cell delivered values of both entries, the
-per-order and band summaries, the prediction records and the provenances. They were produced at
-Boys v5.0.0 (commit `482fd33`, recorded in each `results/provenance.json`). The 9,353-argument
-record is the Boys v5.1.1 run (commit `834bdbb`, recorded in
-`product-amplification/first-sweep-9353/sweeps/*/results/provenance.json`); it appends one recovered
-argument to the designed grid, and it is the record the published tables use. The
-`product-amplification/v5.2.0-check/` source and execution check and the
-`product-amplification/v5.2.5-check/` source-identity check compare later releases against that
-run; they are checks, not new measurements.
+The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`. The
+original designed-grid records are in each sweep's `data/` and `results/`
+directories: the grids, the 60-digit references, the per-cell delivered values
+of both entries, the per-order and band summaries, the prediction records and
+the provenances. Each record's `results/provenance.json` names the revision it
+was measured at; that name is the record's provenance, not a current reference.
+The 9,353-argument
+record appends one recovered argument to the designed grid, and it is the
+record the published tables use; its provenance is in its own
+`results/provenance.json`. The earlier source and execution checks are
+deposited beside these records as provenance; they are checks, not new
+measurements.
 
 Four files are stored xz-compressed because of their size. Decompress them in place before running
 the analysis:
@@ -78,24 +78,12 @@ xz -dk amplification-form/results/paths.csv.xz \
 Every other record is plain CSV. Each analysis reads only the records above; the remaining files in
 `results/` are its outputs, deposited as the tables.
 
-## The v5.2.0 execution check
+## The release replay
 
-`product-amplification/v5.2.0-check/` is the source and execution check of the
-two sweeps at Boys tag v5.2.0, with the v5.2.1 source-identity note
-(`v5.2.1-note.md`) beside its `README.md`. It carries the tag, commit and tree
-identity, the file-by-file source comparisons against v5.1.1 and v5.2.1, the
-compiler and flag line, and the comparisons of the re-run sweep, table and
-integral-engine records against the v5.1.1 run's own output. The first sweep's
-9353-argument records are deposited in `product-amplification/first-sweep-9353/`.
-
-Read its `README.md` first; it is the check's own record. The
-`*-compare-*.txt`, `*-diff-*.txt` and `source-diff-*.txt` files are the
-evidence, each naming the files and lines that differ. `run/run_execution_check.ps1`
-holds the thirteen steps verbatim, and the other scripts under `run/`
-regenerate the comparison records from the trees they name; `make_check.py`
-regenerates the source manifests. The check's console logs, scratch sweep
-trees, build products and Python byte-code are not carried; the two provenance
-records its run wrote are in `run/sweeps/*/results/`.
+`certified-bound/v531-check/` is the check that carries Paper A's measurements
+to the submission release. It records the release identity, the replay of both
+sweeps and of the certificate, and the digest comparison against every
+deposited record. Read its `README.md` first; it is the check's own record.
 
 ## The analysis and the two later experiments
 

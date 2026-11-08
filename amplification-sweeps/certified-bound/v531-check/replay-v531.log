@@ -1,0 +1,37 @@
+v5.3.1 release replay: the certificate record, re-derived
+=======================================================
+
+Kernel tree: the release tree (see digests.txt for the version header
+column). Sweep: the deposited amplification-form cells. Model record:
+inputs/model-record. Exponential bits: exp/exp_bits.txt.
+
+1. Model replay (code/replay.py --both-downward), exit 0:
+   downward fused = False
+     total {'ship': 27588, 'product': 27588} mismatches {}
+   downward fused = True
+     total {'ship': 27588, 'product': 27588} mismatches {'ship': 208}
+     first ship ('A1', 0.029916890803630927, 0, 0.9901165712623343, 0.9901165712623344, 1)
+   
+   real	0m5.504s
+   user	0m0.031s
+   sys	0m0.030s
+
+2. Full bound validation (code/certify.py), exit 0, 27.4 s:
+   cells 55176 modes {'exact': 33, 'product': 27588, 'downward': 8679, 'seed': 572, 'recursed': 8628, 'same-fit': 9676}
+   validation: violations 0 worst |r|/C 0.71875 at ('A1', 0.0, 24, 'ship') population band inside 264 / 264
+   model-cell counts {'all_overlap': 132, 'committed': 65, 'committed_overlap': 65, 'trunc_agree': 50, 'abstain': 67, 'abstain_overlap': 67, 'trunc_opposite': 15}
+   band counts {'all_overlap': 132, 'committed': 65, 'committed_overlap': 65, 'trunc_agree': 53, 'abstain': 67, 'abstain_overlap': 67, 'trunc_opposite': 12}
+   committed 65 trunc agree/opposite 50 / 15 loser zero 65 |r|>|t| 51 need median 84.97303508718458 C/|t| median 81.50948656848152
+
+3. The run directory against the deposited results-underflow-fix/:
+   cells_cert.csv   sha256 8041c727ac90c6d0 byte-identical
+   band_cert.csv    sha256 1ecc53f44a18b1ac byte-identical
+   model_cells.csv  sha256 d76f2737c80e9922 byte-identical
+   summary.json     sha256 75c165fed51c91cd byte-identical
+
+The replay reproduces the record: 27,588 recursed and 27,588 direct
+values bit for bit with the separate downward step; the fused variant
+mismatches the same 208 recursed values, first at (A1,
+0.029916890803630927, 0), one ulp. The bound validation reports
+0 violations at 55,176 entry-cells and the recorded worst ratio
+0.71875. Every certificate output is byte-identical to the deposit.

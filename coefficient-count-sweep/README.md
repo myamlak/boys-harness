@@ -9,6 +9,10 @@ repository; and `count_sweep_recorded.py`, the exact revision the records
 name, deposited so they can be regenerated and verified against it. See
 "Harness revisions" below.
 
+The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`; the
+kernel and harness revisions the records name are provenance, not current
+references.
+
 ## Commands
 
 ```sh
@@ -105,8 +109,9 @@ narrow-B count `kNarrowRatBStored` in `records/core/static_counts.json` is
 also 39. The recount record does not reconcile the group-B rational sums
 (46 and 44) with 39.
 
-The file states the library revision (`boys.version` 5.1.1, `describe`
-v5.1.0-1-g3b187d5) and the digests of the generator it was measured with
+The file states the library revision it was measured at in its own `boys`
+block (`boys.version` and `describe`) and the digests of the generator it was
+measured with
 (`11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180`), the
 coefficient header
 (`8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204`), the
@@ -114,24 +119,24 @@ five records it was re-solved from (`paper_records`), and the generator the
 earlier counts came from
 (`ccc8b011f4170ce0b530bc4781b09670f42839fa18caaa38ea7d3a9ea9ba9bb4`).
 Both generators are deposited under
-`records/chebyshev_recount/generators/`: the v5.1.1 revision the recount was
-measured with and the v5.0.0 revision the earlier counts came from, with their
-tags, commits and digests in the README there. The five `paper_records`
-digests are of the measurement-tree originals.
+`records/chebyshev_recount/generators/`: the revision the recount was measured
+with and the revision the earlier counts came from, with their tags, commits
+and digests in the README there. The five `paper_records` digests are of the
+measurement-tree originals.
 `records/chebyshev_recount/paper-record-digests.tsv` maps each to the
 re-serialised copy deposited at the recount and to the file in this deposit:
 the `ladder` copy is still a re-serialisation of the original, while the four
-core-side records were re-measured at v5.2.5 and carry the recount's corrected
-counts.
+core-side records were re-measured at the revision their own `boys` blocks
+name and carry the recount's corrected counts.
 
 The five records hold 135 rows: 40 in `records/core/sweep_all.json`, 20 in
 `records/core/sweep_rel_1e-13.json`, 20 in
 `records/core/sweep_abs_5e-14.json`, 15 in
 `records/core/sweep_rel_1e-14.json`, and 40 in
 `records/ladder/sweep_all.json`. The four core-side records were re-measured
-at Boys v5.2.5 (commit `6681f9d`); the `ladder` record was not. The ladder
-record regenerates only with `count_sweep_recorded.py`; the portable revision
-does not reproduce its `k > 8` rational cells.
+at the revision their own `boys` blocks name; the `ladder` record was not. The
+ladder record regenerates only with `count_sweep_recorded.py`; the portable
+revision does not reproduce its `k > 8` rational cells.
 
 ## Ladder records
 

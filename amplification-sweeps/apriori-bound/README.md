@@ -68,9 +68,9 @@ other's lower edge.
 
 ## Provenance
 
-Kernel boys 5.1.0 headers (the CHANGELOG states the tables/entries/contract are those of 5.0.0:
-commit 482fd33): boys_coefficients.hpp sha256 8ce5e171… (same as the paper's), boys_fit_core.hpp
-40b8273a…, boys_fit_rational.hpp b1e79eed…, boys_impl.hpp 4a384f8d…, version.hpp 0e2bc8b0…. Sweeps
+Kernel headers identified by content: boys_coefficients.hpp sha256 8ce5e171… (same as the
+paper's), boys_fit_core.hpp 40b8273a…, boys_fit_rational.hpp b1e79eed…, boys_impl.hpp 4a384f8d…,
+version.hpp 0e2bc8b0…. Sweeps
 read from sweeps/amplification_form and sweeps/product_amplification. The harness is deposited at
 github.com/myamlak/boys-harness, amplification-sweeps/apriori-bound/ (scripts, logs and the two
 exact-truncation CSVs); all arithmetic is mpmath at 60 digits, stored doubles parsed exactly.

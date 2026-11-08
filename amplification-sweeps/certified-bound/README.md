@@ -3,10 +3,12 @@
 This directory is the record for the certified-bound section of the crossover
 paper. It bounds both region-A entries of `boys` operation by operation,
 validates the bound on every measured cell, and records what it can certify.
-The current kernel reference is tag `v5.3.0`. The record was measured at
-`v5.2.5`; the stored tables the model parses are byte-identical at `v5.2.6`,
-so the certificate applies at that tag as well, and `v526-identity/` carries
-the identity check and the replay.
+The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`;
+`v531-check/` is the release replay that re-runs this record's model and its
+full bound validation at the release and compares every output with the
+deposited run. `provenance.json` records the revision the record was measured
+at, the file digests and the coefficient identity that carries the bound
+between releases.
 
 The direct entry is `BoysRegionAProduct<ProductMode::kFp64>`; the recursed
 entry is `BoysAllOrders`. The bound models the map, the Chebyshev basis
@@ -101,12 +103,10 @@ record deposited here.
 The kernel is identified by a canonical digest of exactly the parsed tables
 (`kPieces`, `kPieceStart`, `kTierThresholds`, `kExtendedBcoeffs`,
 `kExtendedBX0`, `kX0`) rather than by the whole-file digest of
-`boys_coefficients.hpp`. The parsed content is identical in the v5.1.1 sweep
-tree and the v5.2.5 and v5.2.6 releases; the v5.2.5 header differs from the
-v5.1.1 one only in the rational region-B seed, which the named policy does
-not read, and the v5.2.6 header is byte-identical to the v5.2.5 header.
-`provenance.json` in the run directory records both whole-file digests and
-the parsed digest.
+`boys_coefficients.hpp`. `provenance.json` in the run directory records both
+whole-file digests and the parsed digest, together with the coefficient
+identity that carries the parsed tables across the releases the record spans;
+`v531-check/` carries that identity to the current release.
 
 ## What is here
 
@@ -122,9 +122,6 @@ the parsed digest.
   the per-cell and band CSVs, the logs, the underflow record and `commands.md`.
 - `exp/`: the libm exponential probe source and the measured and reproduced
   bit files.
-- `v526-identity/`: the coefficient-header identity between v5.2.5 and
-  v5.2.6, with the replay that reproduces the recorded values from the
-  v5.2.6 headers.
 - `provenance.json`: the kernel, sweep, compiler flags and file digests of
   the 2026-11-03 run; the repaired run's provenance is
   `results-underflow-fix/provenance.json`.
@@ -132,13 +129,12 @@ the parsed digest.
 ## How to reproduce
 
 Run from this directory with Python 3.14 and mpmath. The external input is a
-boys checkout; the commands select the current release, tag `v5.3.0`. The
-record's identity conclusion is the `v5.2.5`/`v5.2.6` coefficient-header
-comparison in `v526-identity/`. The default kernel is `<repository>/../boys`,
-i.e. a clone beside the harness checkout (else pass `--kernel` or set
-`BOYS_ROOT`). From the repository root:
+boys checkout of the current release, tag `v5.3.1`; the record's applicability
+to the release is carried by the replay in `v531-check/`. The default kernel is
+`<repository>/../boys`, i.e. a clone beside the harness checkout (else pass
+`--kernel` or set `BOYS_ROOT`). From the repository root:
 
-    git clone --branch v5.3.0 https://github.com/myamlak/boys.git ../boys
+    git clone --branch v5.3.1 https://github.com/myamlak/boys.git ../boys
 
 The full record, with every output beneath `results-underflow-fix/`:
 

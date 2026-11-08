@@ -29,14 +29,17 @@ produce the five experiment tables.
 `make_tables.py` and consumed by `merge_per_order.py`, and are carried here
 because the generation chain writes them into the same directory.
 
-## The v5.2.0 check
+## The table step and the release replay
 
-The table step recorded in `../v5.2.0-check/tables-after-deposited.sha256` was
-run with the scripts of that check's own date. The scripts here are the ones
-that generate the tables carried here. Three tables (`endtoend.tex`, `frontier.tex`,
-`prediction-record.tex`) changed after the check, when `analyze.py` gained the
-exponential term in the accumulated-arithmetic model. The check's own record
-is not altered.
+The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`. The
+table step recorded in the deposited check's `tables-after-deposited.sha256`
+was run with the scripts of that check's own date. The scripts here are the
+ones that generate the tables carried here. Three tables (`endtoend.tex`,
+`frontier.tex`, `prediction-record.tex`) changed after the check, when
+`analyze.py` gained the exponential term in the accumulated-arithmetic model.
+The check's own record is kept as provenance and is not altered.
+`../../certified-bound/v531-check/` is the release replay for the deposited
+sweep records.
 
 ## Regenerating from the deposit
 
@@ -59,9 +62,9 @@ From this directory:
       tables/  figures/                     empty
 
 Decompress `sweeps/amplification_form/results/paths.csv.xz` in place before
-running anything; the other records in the v5.1.1 tree are plain CSV. (The four
-xz archives named in the top-level README belong to the top-level v5.0.0
-records, not to this tree.) Then, from `scratch/`:
+running anything; the other records in the deposited tree are plain CSV. (The
+four xz archives named in the top-level README belong to the top-level records
+of the earlier measured revision, not to this tree.) Then, from `scratch/`:
 
     python sweeps/amplification_form/analyze.py --tree sweeps/amplification_form
     python sweeps/amplification_form/seed_fit_ratio.py

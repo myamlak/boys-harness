@@ -4,7 +4,7 @@
     python accuracy-claim-audit/tools/check_registration.py --boys <boys-checkout>
 
 The gate source is read at <boys-checkout>/tests/boys_accuracy_gate.cpp and
-the enumeration defaults to records/documented-claims-v5.tsv beside this
+the enumeration defaults to records/documented-claims-v531.tsv beside this
 directory; --tsv names another copy.
 
 The checker parses the claims book's add() call sites in printed order (the
@@ -39,7 +39,7 @@ import sys
 from pathlib import Path
 
 GATE_RELATIVE = Path("tests") / "boys_accuracy_gate.cpp"
-DEFAULT_TSV = Path(__file__).resolve().parent.parent / "records" / "documented-claims-v5.tsv"
+DEFAULT_TSV = Path(__file__).resolve().parent.parent / "records" / "documented-claims-v531.tsv"
 
 # The configuration the published claims-book numbering was made in.
 DEFINES = {
@@ -392,7 +392,7 @@ def main():
         "--tsv",
         type=Path,
         default=DEFAULT_TSV,
-        help="the documented-claims enumeration (default: records/documented-claims-v5.tsv)",
+        help="the documented-claims enumeration (default: records/documented-claims-v531.tsv)",
     )
     parser.add_argument(
         "--strict",

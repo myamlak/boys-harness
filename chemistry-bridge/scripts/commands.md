@@ -3,10 +3,10 @@
 Lane: Paper-A chemistry bridge.
 Scratch tree: `C:\Users\myaml\dev\bladawiec-bridge`, a copy of
 `C:\Users\myaml\dev\bladawiec` at branch `myamlak/phase2-pr3`, HEAD `ac8540b7` or
-later, with no `.git` and no build directories. The boys content is v5.0.0
-(`boys::kVersionString = "5.0.0"` read from the copied header; the content hash
-`482fd33` is the pin stated in the lane brief, and the copy carries no git
-metadata, which is why `BoysBuildRecord` prints `submodule revision unknown`).
+later, with no `.git` and no build directories. The boys content is the
+revision recorded in `../provenance.json`, read from the copied header; the
+copy carries no git metadata, which is why `BoysBuildRecord` prints
+`submodule revision unknown`.
 
 No source file in `C:\Users\myaml\dev\bladawiec` was edited and no git command was
 run there. The only writes into the real tree are the files under this

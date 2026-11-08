@@ -9,6 +9,12 @@ recurrence with the direct entry's own order-0 value and repeats the band-level
 comparison.  The seed error and the direct error then come from the same fit
 family, and what remains is amplification and accumulated arithmetic.
 
+The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`. This
+sweep is a deposited record measured against an earlier kernel revision;
+`results/provenance.json` names the revision, the commit and the checkout path
+the run used, and that name is this record's provenance, not a current
+reference.
+
 ## Design
 
 The grid is the second sweep's 836 arguments, copied unchanged in
@@ -68,14 +74,14 @@ the user site).  The pipeline does not run git.
 
 The steps it runs, in order:
 
-    python provenance.py --boys-tree C:\Users\myaml\dev\_boys-v511 \
+    python provenance.py --boys-tree <recorded-boys-tree> \
         --harness sweep_seed --harness-dir . --flags "<compile line>" \
         --out results/provenance.json
-    python ../common/reference.py --boys-tree C:\Users\myaml\dev\_boys-v511 \
+    python ../common/reference.py --boys-tree <recorded-boys-tree> \
         --grid data/grid.csv --out data/reference.csv \
         --validation data/reference_validation.txt --dps 70 --digits 60
     cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 \
-        /I C:\Users\myaml\dev\_boys-v511\include \
+        /I <recorded-boys-tree>\include \
         /Fo build\sweep_seed.obj /Fe build\sweep_seed.exe sweep_seed.cpp
     build\sweep_seed.exe --grid data/grid.csv --cells results/cells.csv \
         --admission results/admission.csv --steps results/replica_steps.csv
@@ -127,8 +133,8 @@ sign still agrees at cell level in 16,637 of 18,304 cells (90.9 per cent).
 
 ## What this establishes and what it does not
 
-Establishes, on the pinned v5.1.1 kernel and its own 60-digit reference,
-with the seed error taken from the direct entry's own fit family:
+Establishes, on the kernel `results/provenance.json` pins and its own 60-digit
+reference, with the seed error taken from the direct entry's own fit family:
 
 * the seed-term crossing predicts the direction of the band-level comparison
   at every order 1-32 in both metrics, 128 of 128;
@@ -168,5 +174,5 @@ Does not establish:
     results/seed_term_cells.csv per-cell seed term, direct and spliced errors
     results/per_order.csv       the 132 band-metric rows and the score
     results/summary.txt         the run's own account
-    results/provenance.json     kernel v5.1.1 at 834bdbb: every kernel file
-                                digest matched against the second sweep's record
+    results/provenance.json     the measured kernel revision and commit: every
+                                kernel file digest matched against the second sweep's record

@@ -698,7 +698,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--tree", default=str(here))
     parser.add_argument("--provenance", default=None)
-    parser.add_argument("--second-sweep", default=str(here.parent / "amplification_form"))
+    parser.add_argument("--second-sweep", default=str(here.parent / "amplification-form"))
     parser.add_argument("--tex", default=str(here.parents[1] / "tables/prediction-record.tex"))
     args = parser.parse_args()
 

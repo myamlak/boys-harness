@@ -10,7 +10,8 @@ reduction that compares the two arms' dense dumps.
 ## Scratch tree and edits
 
 The runs were made in `C:\Users\myaml\dev\bladawiec-bridge`, a copy of the
-framework tree at version 0.2.0 carrying boys 5.2.0, with the bridge's own
+framework tree at version 0.2.0 carrying the boys revision recorded in
+`../provenance.json`, with the bridge's own
 `QCX_BRIDGE_BOYS_POLICY` (`default`/`paper-a`) and `QCX_BRIDGE_BOYS_CAPTURE`
 switches (see `../scripts/commands.md` for those edits). This record adds four:
 

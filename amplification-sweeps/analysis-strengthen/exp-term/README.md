@@ -12,17 +12,17 @@ exponential term.
 - `surrogate/` — the surrogate-control rerun.
 - `out/` — the run logs and the generated records the analyses read: `analyze-exp.log`,
   `apriori-*-exp.log`, `intervals-exp.log`, `make-*-exp.log`, `score-*-exp.log`, and the
-  `v5.2.0-exp0/` run directory.
+  previous model's run directory.
 - `../out/first/` and `../out/second/` — the new model's prediction, ladder and per-cell records
   (`prediction.csv`, `scan_all.csv`, `scan.csv`, `cell_scan.csv`, `per_order_ratio.csv`). They are
   the inputs `summarize.py` reads.
 - `canon_context.py`, `check_module.py`, `dump_stale.py` — the context and the checks the rerun
   scripts share.
 
-`out/v5.2.0-exp0/` is the previous model's record. `summarize.py` reads it only as the comparison
-baseline for the row-by-row changes; it is not a current record. The current model's records are
-`../out/first/` and `../out/second/`. Running `python summarize.py` from this directory reproduces
-`out/summarize.log`.
+The previous model's run directory under `out/` is its record. `summarize.py` reads it only as the
+comparison baseline for the row-by-row changes; it is not a current record. The current model's
+records are `../out/first/` and `../out/second/`. Running `python summarize.py` from this directory
+reproduces `out/summarize.log`.
 
 ## Provenance
 
