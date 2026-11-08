@@ -1,5 +1,11 @@
 # The v5.0.0 as-found claim verdicts
 
+**Historical record.** These are the as-found verdicts at boys `v5.0.0`
+(commit `482fd3388c276091834a6c12a642d9de2481c9f2`). The document records that
+release's claims book, not the current kernel state; the current kernel
+reference is tag `v5.3.0`. The latest deposited enumeration is
+`documented-claims-v525.md`, measured at `v5.2.5`.
+
 `documented-claims-v5-as-found.tsv` gives the as-found verdict for each of
 the 37 claims the v5.0.0 claims book registers. The current enumeration's
 `carried` column is the repaired reading; it is not the as-found data.

@@ -33,8 +33,10 @@ per-query output was never saved, as `../README.md` also states.
 
 - Boost.Math 1.92.0 release archive, SHA-256
   `c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce`.
-- crlibm commit `eb3063791aa75bc9705b49283bf14250465220a7`; its `VERSION` file
-  reads `1.0beta5`. The release tarball's top directory names the commit.
+- crlibm 1.0beta5, archive SHA-256
+  `79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5`; its
+  `VERSION` file reads `1.0beta5`. The archive URL and the raw commit are
+  recorded in `../witness-rerun/logs/environment.txt`.
 - The same two pins are recorded in `../witness-rerun/README.md`.
 
 The Boost witness tree in the audit record is headers-only: it has no
@@ -60,7 +62,7 @@ python -I recount.py \
   --boost-headers  C:/Users/myaml/dev/_witness/third_party/boost_1_92_0 \
   --boost-archive  C:/Users/myaml/dev/_witness/downloads/boost_1_92_0.tar.gz \
   --crlibm         C:/Users/myaml/dev/_witness/third_party/crlibm-1.0beta5 \
-  --crlibm-archive C:/Users/myaml/dev/_witness/downloads/crlibm-eb306379.tar.gz \
+  --crlibm-archive C:/Users/myaml/dev/_witness/downloads/crlibm-1.0beta5.tar.gz \
   --registry       registry/counts.json \
   --out            counts.json
 ```

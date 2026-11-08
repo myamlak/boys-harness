@@ -52,7 +52,9 @@ python analyze.py --tree .
 
 ## Deposited records
 
-The original designed-grid records are in each sweep's `data/` and `results/`
+The current kernel reference is tag `v5.3.0`. The records below name the tag
+each was measured at as provenance, not as a current reference. The original
+designed-grid records are in each sweep's `data/` and `results/`
 directories: the grids, the 60-digit references, the per-cell delivered values of both entries, the
 per-order and band summaries, the prediction records and the provenances. They were produced at
 Boys v5.0.0 (commit `482fd33`, recorded in each `results/provenance.json`). The 9,353-argument
@@ -106,6 +108,19 @@ records, analysis and provenance.
 
 `held-out/` holds the held-out test: the frozen decision rule scored on a disjoint
 1,300-argument grid, with its driver, grid, 60-digit reference, records, analysis and provenance.
+
+## Supplement records
+
+`s7-window-sets.csv` carries supplement S7's downward-seeding window sets: the
+coefficient-derived set (orders 0-4 and 20-32, from the stored coefficients at
+the band right end carried up by `w`) and the documented set (orders 0-2 and
+25-32). It is a transcription of the supplement's statement, not a
+re-derivation: the deposit carries the sets, not a generator for them.
+`amplification-form/cutoff-summary.csv` carries the resolved and
+matching counts at the 1e-12 and 1e-9 separation cutoffs, recomputed from the
+deposited per-cell amplification values in
+`amplification-form/results/transfer_cells.csv`; running
+`amplification-form/cutoff_summary.py` regenerates it.
 
 ## Requirements
 

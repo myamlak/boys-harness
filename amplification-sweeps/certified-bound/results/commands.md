@@ -3,7 +3,9 @@
 ## The repaired rerun (2026-11-06)
 
 The repaired record was rerun with the portable command set below, from this
-directory, with a boys checkout at v5.2.5 (`--kernel`, elsewhere
+directory, with a boys checkout at v5.3.0 (the current release; the deposited
+run used v5.2.5, recorded as provenance in
+`../results-underflow-fix/commands.md`) (`--kernel`, elsewhere
 `$BOYS_ROOT`, default `<repo>/../boys`).  Every output is written beneath the
 run directory.  The exact commands, exit codes and outputs of that run are in
 `../results-underflow-fix/commands.md`; the 2026-11-03 table further down is

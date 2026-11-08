@@ -72,7 +72,7 @@ Usage
       --boost-headers C:/Users/myaml/dev/_witness/third_party/boost_1_92_0 \\
       --boost-archive C:/Users/myaml/dev/_witness/downloads/boost_1_92_0.tar.gz \\
       --crlibm  C:/Users/myaml/dev/_witness/third_party/crlibm-1.0beta5 \\
-      --crlibm-archive C:/Users/myaml/dev/_witness/downloads/crlibm-eb306379.tar.gz \\
+      --crlibm-archive C:/Users/myaml/dev/_witness/downloads/crlibm-1.0beta5.tar.gz \\
       --registry <...>/claim-audit-crlibm/work/counts.json \\
       --out counts.json
 

@@ -1,11 +1,12 @@
 # Certified per-call rounding bounds for the two region-A Boys entries
 
 This directory is the record for the certified-bound section of the crossover
-paper. It bounds both region-A entries of `boys` at tag `v5.2.5` operation by
-operation, validates the bound on every measured cell, and records what it can
-certify. The stored tables the model parses are byte-identical at `v5.2.6`,
-so the certificate applies at that tag as well; `v526-identity/` carries the
-identity check and the replay.
+paper. It bounds both region-A entries of `boys` operation by operation,
+validates the bound on every measured cell, and records what it can certify.
+The current kernel reference is tag `v5.3.0`. The record was measured at
+`v5.2.5`; the stored tables the model parses are byte-identical at `v5.2.6`,
+so the certificate applies at that tag as well, and `v526-identity/` carries
+the identity check and the replay.
 
 The direct entry is `BoysRegionAProduct<ProductMode::kFp64>`; the recursed
 entry is `BoysAllOrders`. The bound models the map, the Chebyshev basis
@@ -130,12 +131,14 @@ the parsed digest.
 
 ## How to reproduce
 
-Run from this directory with Python 3.14 and mpmath. The only external input
-is a boys checkout at v5.2.5 or v5.2.6; the coefficient header is identical.
-The default is `<repository>/../boys`, i.e. a clone beside the harness
-checkout (else pass `--kernel` or set `BOYS_ROOT`). From the repository root:
+Run from this directory with Python 3.14 and mpmath. The external input is a
+boys checkout; the commands select the current release, tag `v5.3.0`. The
+record's identity conclusion is the `v5.2.5`/`v5.2.6` coefficient-header
+comparison in `v526-identity/`. The default kernel is `<repository>/../boys`,
+i.e. a clone beside the harness checkout (else pass `--kernel` or set
+`BOYS_ROOT`). From the repository root:
 
-    git clone --branch v5.2.6 https://github.com/myamlak/boys.git ../boys
+    git clone --branch v5.3.0 https://github.com/myamlak/boys.git ../boys
 
 The full record, with every output beneath `results-underflow-fix/`:
 

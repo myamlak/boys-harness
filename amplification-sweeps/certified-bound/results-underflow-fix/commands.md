@@ -3,8 +3,8 @@
 Working directory: `amplification-sweeps/certified-bound`.  All Python runs
 use `-I` (isolated mode).  Runtime: Python 3.14.7, mpmath 1.4.1, Windows 11
 (recorded in `provenance.json`).  Kernel: a boys checkout at
-`/c/Users/myaml/dev/_boys-tags`, tag `v5.2.5`, commit
-`8b7a289dfce7558c8498e89c17c05f20fa7bb7c8`; the checkout is selected with
+`/c/Users/myaml/dev/_boys-tags`, tag `v5.3.0` (the current release); the
+checkout is selected with
 `--kernel` (the default is `$BOYS_ROOT`, else `<repository>/../boys`).  The
 sweep is the deposited `../amplification-form`, the model record is
 `inputs/model-record`, the deposit is the in-repo `../apriori-bound`, and the
@@ -30,6 +30,14 @@ record: `summary.json`, `cells_cert.csv`, `band_cert.csv` and
 in the trailing digits of the long mpmath decimal expansions of `need_paper`
 and `need_cert`; `dps_check.log` differs only in the last printed digits of a
 1e-65 quantity.  The medians quoted by the record are unchanged.
+
+## Historical provenance
+
+The record as run used the `v5.2.5` checkout at commit
+`8b7a289dfce7558c8498e89c17c05f20fa7bb7c8`; the `provenance.json` and the
+logs in this directory are that run's. The kernel line above names the current
+release, `v5.3.0`, for a re-run: the v5.2.5 tag and commit are the provenance
+of the deposited measurement, not a current reference.
 
 `code/tiers.py` (the seven a priori variants) was not rerun in this session.
 Its only model-dependent input is the per-order cell radius `C`, and the full

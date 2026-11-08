@@ -1,8 +1,9 @@
 # The v5.2.5 source identity
 
-Paper A measures on the v5.1.1 tree and cites the v5.2.5 release. This check
-records the comparison of the two: every evaluated file (`include/boys` and
-`src`) compared by content, one line per file, and every difference named.
+The current kernel reference is tag `v5.3.0`. This check records the source
+identity at `v5.2.5`, the release the paper cites as provenance (its measured
+figures are the v5.1.1 run's): every evaluated file (`include/boys` and `src`)
+compared by content, one line per file, and every difference named.
 
 The result is 73 of the 76 evaluated files byte-identical; the three that
 differ are `include/boys/version.hpp` (the version constant), the

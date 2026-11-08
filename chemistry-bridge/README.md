@@ -19,6 +19,31 @@ The two dense cc-pVTZ integral tensors (about 260 MB each) are not deposited.
 `scripts/probe.cpp` regenerates them from the deposited argument streams and
 the library, and they are available from the author.
 
+## Above-B2 route difference
+
+The deposited argument streams in `outputs/` carry the class-row and paper-a
+values at every distinct `(nmax, x)`. Above B2 (`x >= 11.899848152108484`) the
+largest difference between the two routes is `5.5511151231257827e-17` at order
+0, the same in all three bases: at `x = 11.974444364155501` in STO-3G,
+`12.017923166818386` in 6-31G* and `11.90786820012136` in cc-pVTZ. For
+comparison, the largest difference over B2 is `1.1102230246251565e-16` at
+order 0, and over all arguments `3.219646771412954e-15` at order 0.
+`scripts/above_b2_max.py` prints these values from the deposited streams.
+
+## The water geometry
+
+The molecule is the host repository's fixture, `tests/fixtures/h2o_sto3g.cpp`
+in `bladawiec` (SHA-256
+`ef2262e4d008f8e96bc2b596dc35be8926f8a1d3a449cd09399b729713e2086c`): O at
+the origin and the two H at
+`(±1.430428808474167, 1.107157044080814, 0)` bohr, in the xy plane. With the
+CODATA 2018 conversion 1 bohr = 0.529177210903 A, the coordinates give
+r(OH) = 1.8088458464917874 bohr = 0.9572 A and H-O-H = 104.52 degrees: the
+gap to the documented geometry is 0.0 A and 0.0 degrees. The bridge record
+names the host tree at branch `myamlak/phase2-pr3`, HEAD `ac8540b7` or later,
+for the scratch copy that ran the probe; the fixture's own commit is not
+recorded in this deposit.
+
 ## Benzene/cc-pVDZ
 
 `benzene-pvdz/` is the second molecule: benzene, 12 atoms and 114 basis

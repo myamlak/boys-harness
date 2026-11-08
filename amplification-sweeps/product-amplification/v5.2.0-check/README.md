@@ -1,14 +1,14 @@
 # The v5.2.0 source and execution check
 
-The check described here was run at boys v5.2.0. The current release is
-v5.2.1; the source-identity confirmation against it is in
-`v5.2.1-note.md`. The identities and results below are the v5.2.0 check as
-run.
+The check described here was run at boys tag `v5.2.0`. The current release is
+`v5.3.0`; the v5.2.1 source-identity confirmation in `v5.2.1-note.md` is the
+later provenance of this check. The identities and results below are the
+v5.2.0 check as run.
 
-The annotated tag object
-`cb1ce4c79eb22a83bc2fa116c6647df9b08a0e2e` names `v5.2.0` and carries commit
-`55ca0e316ad2f9f776424bfee9f365dfc322058b` (short `55ca0e3`), whose tree is
-`312e72ab11f314d41834286143ce5549bafad72c`; the tag is dated
+The check is at tag `v5.2.0`. Its internal identity, kept as the record's
+evidence, is tag object `cb1ce4c79eb22a83bc2fa116c6647df9b08a0e2e`, carrying
+commit `55ca0e316ad2f9f776424bfee9f365dfc322058b` (short `55ca0e3`), whose
+tree is `312e72ab11f314d41834286143ce5549bafad72c`; the tag is dated
 2026-10-28T18:09:47Z and its message is "boys 5.2.0: the claim-book
 registration table, the measured rows and the exhaustive half sweeps". Its
 parent is the historical v5.1.1 commit

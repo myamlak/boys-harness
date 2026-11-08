@@ -26,5 +26,5 @@ that the `x0` edge dependence is the transient; it does not locate the crossover
 
 The Chebyshev counts agree with the `a2` record in all 42 cells that carry a count.
 
-The driver that produced the Chebyshev rows imports the recorded harness `count_sweep.py`; the
+The driver that produced the Chebyshev rows imports the recorded revision `count_sweep.py`; the
 records are deposited here so that the counts do not depend on a paper's local tree.
