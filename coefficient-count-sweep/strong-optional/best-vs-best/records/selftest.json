@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "name": "exp",
+      "degree": 5,
+      "note": null,
+      "minimax_abs": 4.5205511926115626e-05,
+      "equioscillation_spread": 0.0,
+      "dense_max_error": 4.5205511926105224e-05,
+      "dense_over_E": 0.9999999999997699,
+      "lp_minimax_abs": 4.5205269369286396e-05,
+      "lp_over_remez": 0.9999946343527837,
+      "ok": true
+    },
+    {
+      "name": "exp",
+      "degree": 12,
+      "note": "alternation failed",
+      "minimax_abs": 3.9912633564144015e-14,
+      "equioscillation_spread": 0.0,
+      "dense_max_error": 4.04121180963557e-14,
+      "dense_over_E": 1.0125144468707874,
+      "lp_minimax_abs": 0.0,
+      "lp_over_remez": 0.0,
+      "ok": true
+    },
+    {
+      "name": "F0-m7",
+      "degree": 3,
+      "note": "alternation failed",
+      "minimax_abs": 1.0133651504064052e-16,
+      "equioscillation_spread": 0.0,
+      "dense_max_error": 1.6653345369377348e-16,
+      "dense_over_E": 1.6433706411453566,
+      "lp_minimax_abs": 0.0,
+      "lp_over_remez": 0.0,
+      "ok": true
+    },
+    {
+      "name": "F0-p5",
+      "degree": 16,
+      "note": null,
+      "minimax_abs": 1.429171485134791e-10,
+      "equioscillation_spread": 0.0,
+      "dense_max_error": 1.4291717809200577e-10,
+      "dense_over_E": 1.000000206962754,
+      "lp_minimax_abs": 0.0,
+      "lp_over_remez": 0.0,
+      "ok": true
+    }
+  ],
+  "passed": 4,
+  "total": 4,
+  "all_pass": true
+}
