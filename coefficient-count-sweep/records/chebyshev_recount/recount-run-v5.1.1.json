@@ -1,0 +1,3467 @@
+{
+ "what": "Paper C Chebyshev re-count from the deposited records",
+ "driver": {
+  "path": "coefficient-count-sweep/records/chebyshev_recount/recount_cheb.py",
+  "sha256": "831277dee5137c926a1d6fdb5a1262ca5cd76fb20239b313acc87e527527cbc0"
+ },
+ "generator": {
+  "path": "coefficient-count-sweep/records/chebyshev_recount/generators/gen_boys_coefficients_v5.1.1.py",
+  "sha256": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180"
+ },
+ "count_sweep": {
+  "path": "coefficient-count-sweep/count_sweep_recorded.py",
+  "sha256": "a5def761c8f18d585396210b28864dc6c4a108d2cfda4f3788d87a7f6c854f10"
+ },
+ "x0": "11.899848152108484",
+ "node_convention": {
+  "source_record_field": "settings.nodes = 2001 is the number of grid points",
+  "sweep_api": "make_nodes(g, a, b, n) takes n intervals and returns n + 1 points",
+  "driver_parameter": "n = settings.nodes - 1 = 2000",
+  "public_record_field": "cells[].nodes stores the API parameter 2000, not the point count"
+ },
+ "source_records": [
+  {
+   "name": "core",
+   "path": "coefficient-count-sweep/records/core/sweep_all.json",
+   "sha256": "cb791ce5ae1440e84b5267face83135ea52cbba91d5b746f737fc18c4f74728e"
+  },
+  {
+   "name": "abs",
+   "path": "coefficient-count-sweep/records/core/sweep_abs_5e-14.json",
+   "sha256": "944338e539f413af50afd1f58d8ad8867a94b379401c48aff39c54e6e25aac85"
+  },
+  {
+   "name": "rel13",
+   "path": "coefficient-count-sweep/records/core/sweep_rel_1e-13.json",
+   "sha256": "fd268f0b5397788411f83cfe340d9edad0f4e44a47b83882e504cdd63d7009df"
+  },
+  {
+   "name": "rel14",
+   "path": "coefficient-count-sweep/records/core/sweep_rel_1e-14.json",
+   "sha256": "b7bf1b0ee0aba3049632963b656cb6ed22cf9a9cdcc812f411d1cca79cbf2dcc"
+  },
+  {
+   "name": "ladder",
+   "path": "coefficient-count-sweep/records/ladder/sweep_all.json",
+   "sha256": "a66a28484808d971622939eb2893c84bee932ad7c6486baa874cb2c4047b910e"
+  }
+ ],
+ "cells": [
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-7",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^-7",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "3.6525651318349605e-16",
+    "delivered_abs": "9.3817579212343487e-17",
+    "at_x_rel": "11.904645027108484",
+    "at_x_abs": "11.904645027108484",
+    "refined": true,
+    "seconds": 0.085
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.015625",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-6",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^-6",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "2.5441057769262818e-16",
+    "delivered_abs": "6.531998411321444e-17",
+    "at_x_rel": "11.914262214608484",
+    "at_x_abs": "11.914262214608484",
+    "refined": true,
+    "seconds": 0.109
+   },
+   "reference_seconds": 1.197,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.03125",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-5",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^-5",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "3.7653260997985928e-16",
+    "delivered_abs": "9.6652954660278391e-17",
+    "at_x_rel": "11.919660652108484",
+    "at_x_abs": "11.919660652108484",
+    "refined": true,
+    "seconds": 0.058
+   },
+   "reference_seconds": 1.124,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.0625",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-4",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^-4",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "2.1088855146362353e-15",
+    "delivered_abs": "5.4129314601494168e-16",
+    "at_x_rel": "11.921473152108484",
+    "at_x_abs": "11.921473152108484",
+    "refined": true,
+    "seconds": 0.058
+   },
+   "reference_seconds": 0.794,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.125",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-3",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^-3",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "5.9380992433611782e-14",
+    "delivered_abs": "1.5249133080083231e-14",
+    "at_x_rel": "11.942660652108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.095
+   },
+   "reference_seconds": 1.399,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.25",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-2",
+     "source_stored": 6,
+     "source_m": 5,
+     "old_stored": 7
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^-2",
+     "source_stored": 6,
+     "source_m": 5,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 6,
+    "m": 5,
+    "k": null,
+    "delivered_rel": "8.925046645997553e-15",
+    "delivered_abs": "2.2913796636683047e-15",
+    "at_x_rel": "11.915598152108484",
+    "at_x_abs": "11.915598152108484",
+    "refined": true,
+    "seconds": 0.14
+   },
+   "reference_seconds": 1.263,
+   "old_stored": 7,
+   "changed": true
+  },
+  {
+   "width": "0.5",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-1",
+     "source_stored": 7,
+     "source_m": 6,
+     "old_stored": 7
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^-1",
+     "source_stored": 7,
+     "source_m": 6,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 7,
+    "m": 6,
+    "k": null,
+    "delivered_rel": "5.0509797239510392e-15",
+    "delivered_abs": "1.2878825441411252e-15",
+    "at_x_rel": "12.093098152108484",
+    "at_x_abs": "11.923848152108484",
+    "refined": true,
+    "seconds": 0.133
+   },
+   "reference_seconds": 0.733,
+   "old_stored": 7,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^0",
+     "source_stored": 8,
+     "source_m": 7,
+     "old_stored": 9
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^0",
+     "source_stored": 8,
+     "source_m": 7,
+     "old_stored": 9
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 8,
+    "m": 7,
+    "k": null,
+    "delivered_rel": "1.0020512533600967e-14",
+    "delivered_abs": "2.5703342002603198e-15",
+    "at_x_rel": "11.936848152108484",
+    "at_x_abs": "11.936848152108484",
+    "refined": true,
+    "seconds": 0.181
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 9,
+   "changed": true
+  },
+  {
+   "width": "2.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^1",
+     "source_stored": 9,
+     "source_m": 8,
+     "old_stored": 9
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^1",
+     "source_stored": 9,
+     "source_m": 8,
+     "old_stored": 9
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 9,
+    "m": 8,
+    "k": null,
+    "delivered_rel": "6.5839203198359753e-14",
+    "delivered_abs": "1.6914467617020966e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.25
+   },
+   "reference_seconds": 0.7,
+   "old_stored": 9,
+   "changed": false
+  },
+  {
+   "width": "4.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^2",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^2",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 11,
+    "m": 10,
+    "k": null,
+    "delivered_rel": "7.6426925636551079e-14",
+    "delivered_abs": "1.96345140273526e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.66
+   },
+   "reference_seconds": 1.273,
+   "old_stored": 11,
+   "changed": false
+  },
+  {
+   "width": "8.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^3",
+     "source_stored": 14,
+     "source_m": 13,
+     "old_stored": 15
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^3",
+     "source_stored": 14,
+     "source_m": 13,
+     "old_stored": 15
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 14,
+    "m": 13,
+    "k": null,
+    "delivered_rel": "6.2728320496752699e-14",
+    "delivered_abs": "1.6081800348552099e-14",
+    "at_x_rel": "11.999848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.573
+   },
+   "reference_seconds": 0.995,
+   "old_stored": 15,
+   "changed": true
+  },
+  {
+   "width": "16.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^4",
+     "source_stored": 18,
+     "source_m": 17,
+     "old_stored": 19
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^4",
+     "source_stored": 18,
+     "source_m": 17,
+     "old_stored": 19
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 18,
+    "m": 17,
+    "k": null,
+    "delivered_rel": "9.4361230991038428e-14",
+    "delivered_abs": "2.4241939579546999e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.603
+   },
+   "reference_seconds": 1.269,
+   "old_stored": 19,
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^5",
+     "source_stored": 25,
+     "source_m": 24,
+     "old_stored": 25
+    },
+    {
+     "record": "rel13",
+     "width_name": "2^5",
+     "source_stored": 25,
+     "source_m": 24,
+     "old_stored": 25
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 25,
+    "m": 24,
+    "k": null,
+    "delivered_rel": "2.6297301031237046e-14",
+    "delivered_abs": "6.7559269417007838e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 2.812
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 25,
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "ship",
+     "source_stored": 20,
+     "source_m": 19,
+     "old_stored": 21
+    },
+    {
+     "record": "rel13",
+     "width_name": "ship",
+     "source_stored": 20,
+     "source_m": 19,
+     "old_stored": 21
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 20,
+    "m": 19,
+    "k": null,
+    "delivered_rel": "3.1483124266269532e-14",
+    "delivered_abs": "8.0881945712509716e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.665
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 21,
+   "changed": true
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "paper",
+     "source_stored": 19,
+     "source_m": 18,
+     "old_stored": 19
+    },
+    {
+     "record": "rel13",
+     "width_name": "paper",
+     "source_stored": 19,
+     "source_m": 18,
+     "old_stored": 19
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 19,
+    "m": 18,
+    "k": null,
+    "delivered_rel": "3.8613631214439201e-14",
+    "delivered_abs": "9.9200625618824799e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.351
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 19,
+   "changed": false
+  },
+  {
+   "width": "2.8567491415463806",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2.8567491415463806",
+     "source_stored": 10,
+     "source_m": 9,
+     "old_stored": 11
+    },
+    {
+     "record": "rel13",
+     "width_name": "2.8567491415463806",
+     "source_stored": 10,
+     "source_m": 9,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 10,
+    "m": 9,
+    "k": null,
+    "delivered_rel": "5.9574895679907903e-14",
+    "delivered_abs": "1.5304644231314489e-14",
+    "at_x_rel": "11.96983850607637",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.468
+   },
+   "reference_seconds": 2.445,
+   "old_stored": 11,
+   "changed": true
+  },
+  {
+   "width": "3.405194117991412",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "3.405194117991412",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    },
+    {
+     "record": "rel13",
+     "width_name": "3.405194117991412",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 11,
+    "m": 10,
+    "k": null,
+    "delivered_rel": "1.5801419755550699e-14",
+    "delivered_abs": "4.0476207078449328e-15",
+    "at_x_rel": "11.969654631527308",
+    "at_x_abs": "11.969654631527308",
+    "refined": true,
+    "seconds": 0.483
+   },
+   "reference_seconds": 1.923,
+   "old_stored": 11,
+   "changed": false
+  },
+  {
+   "width": "4.091271749574425",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "4.091271749574425",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    },
+    {
+     "record": "rel13",
+     "width_name": "4.091271749574425",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 11,
+    "m": 10,
+    "k": null,
+    "delivered_rel": "9.5225534863543842e-14",
+    "delivered_abs": "2.4463984184472031e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.705
+   },
+   "reference_seconds": 2.352,
+   "old_stored": 11,
+   "changed": false
+  },
+  {
+   "width": "4.947466945561672",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "4.947466945561672",
+     "source_stored": 12,
+     "source_m": 11,
+     "old_stored": 13
+    },
+    {
+     "record": "rel13",
+     "width_name": "4.947466945561672",
+     "source_stored": 12,
+     "source_m": 11,
+     "old_stored": 13
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 12,
+    "m": 11,
+    "k": null,
+    "delivered_rel": "4.3403987650881986e-14",
+    "delivered_abs": "1.1141307888970152e-14",
+    "at_x_rel": "11.983955090183032",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.794
+   },
+   "reference_seconds": 2.345,
+   "old_stored": 13,
+   "changed": true
+  },
+  {
+   "width": "3.7994698932176263",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "3.7994698932176263",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    },
+    {
+     "record": "rel13",
+     "width_name": "3.7994698932176263",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 11,
+    "m": 10,
+    "k": null,
+    "delivered_rel": "4.6215739652904694e-14",
+    "delivered_abs": "1.1862952854976504e-14",
+    "at_x_rel": "11.977737284919445",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.016
+   },
+   "reference_seconds": 3.132,
+   "old_stored": 11,
+   "changed": false
+  },
+  {
+   "width": "0.0078125",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-7",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    },
+    {
+     "record": "abs",
+     "width_name": "2^-7",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "3.6525651318349605e-16",
+    "delivered_abs": "9.3817579212343487e-17",
+    "at_x_rel": "11.904645027108484",
+    "at_x_abs": "11.904645027108484",
+    "refined": true,
+    "seconds": 0.095
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.015625",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-6",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    },
+    {
+     "record": "abs",
+     "width_name": "2^-6",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "2.5441057769262818e-16",
+    "delivered_abs": "6.531998411321444e-17",
+    "at_x_rel": "11.914262214608484",
+    "at_x_abs": "11.914262214608484",
+    "refined": true,
+    "seconds": 0.089
+   },
+   "reference_seconds": 1.197,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.03125",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-5",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    },
+    {
+     "record": "abs",
+     "width_name": "2^-5",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "3.7653260997985928e-16",
+    "delivered_abs": "9.6652954660278391e-17",
+    "at_x_rel": "11.919660652108484",
+    "at_x_abs": "11.919660652108484",
+    "refined": true,
+    "seconds": 0.08
+   },
+   "reference_seconds": 1.124,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.0625",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-4",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    },
+    {
+     "record": "abs",
+     "width_name": "2^-4",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "2.1088855146362353e-15",
+    "delivered_abs": "5.4129314601494168e-16",
+    "at_x_rel": "11.921473152108484",
+    "at_x_abs": "11.921473152108484",
+    "refined": true,
+    "seconds": 0.084
+   },
+   "reference_seconds": 0.794,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.125",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-3",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    },
+    {
+     "record": "abs",
+     "width_name": "2^-3",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "5.9380992433611782e-14",
+    "delivered_abs": "1.5249133080083231e-14",
+    "at_x_rel": "11.942660652108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.083
+   },
+   "reference_seconds": 1.399,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.25",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-2",
+     "source_stored": 6,
+     "source_m": 5,
+     "old_stored": 7
+    },
+    {
+     "record": "abs",
+     "width_name": "2^-2",
+     "source_stored": 6,
+     "source_m": 5,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 6,
+    "m": 5,
+    "k": null,
+    "delivered_rel": "8.925046645997553e-15",
+    "delivered_abs": "2.2913796636683047e-15",
+    "at_x_rel": "11.915598152108484",
+    "at_x_abs": "11.915598152108484",
+    "refined": true,
+    "seconds": 0.173
+   },
+   "reference_seconds": 1.263,
+   "old_stored": 7,
+   "changed": true
+  },
+  {
+   "width": "0.5",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^-1",
+     "source_stored": 7,
+     "source_m": 6,
+     "old_stored": 7
+    },
+    {
+     "record": "abs",
+     "width_name": "2^-1",
+     "source_stored": 7,
+     "source_m": 6,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 7,
+    "m": 6,
+    "k": null,
+    "delivered_rel": "5.0509797239510392e-15",
+    "delivered_abs": "1.2878825441411252e-15",
+    "at_x_rel": "12.093098152108484",
+    "at_x_abs": "11.923848152108484",
+    "refined": true,
+    "seconds": 0.249
+   },
+   "reference_seconds": 0.733,
+   "old_stored": 7,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^0",
+     "source_stored": 8,
+     "source_m": 7,
+     "old_stored": 9
+    },
+    {
+     "record": "abs",
+     "width_name": "2^0",
+     "source_stored": 8,
+     "source_m": 7,
+     "old_stored": 9
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 8,
+    "m": 7,
+    "k": null,
+    "delivered_rel": "1.0020512533600967e-14",
+    "delivered_abs": "2.5703342002603198e-15",
+    "at_x_rel": "11.936848152108484",
+    "at_x_abs": "11.936848152108484",
+    "refined": true,
+    "seconds": 0.288
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 9,
+   "changed": true
+  },
+  {
+   "width": "2.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^1",
+     "source_stored": 9,
+     "source_m": 8,
+     "old_stored": 9
+    },
+    {
+     "record": "abs",
+     "width_name": "2^1",
+     "source_stored": 9,
+     "source_m": 8,
+     "old_stored": 9
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 9,
+    "m": 8,
+    "k": null,
+    "delivered_rel": "6.5839203198359753e-14",
+    "delivered_abs": "1.6914467617020966e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.305
+   },
+   "reference_seconds": 0.7,
+   "old_stored": 9,
+   "changed": false
+  },
+  {
+   "width": "4.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^2",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    },
+    {
+     "record": "abs",
+     "width_name": "2^2",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 11,
+    "m": 10,
+    "k": null,
+    "delivered_rel": "7.6426925636551079e-14",
+    "delivered_abs": "1.96345140273526e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.394
+   },
+   "reference_seconds": 1.273,
+   "old_stored": 11,
+   "changed": false
+  },
+  {
+   "width": "8.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^3",
+     "source_stored": 14,
+     "source_m": 13,
+     "old_stored": 15
+    },
+    {
+     "record": "abs",
+     "width_name": "2^3",
+     "source_stored": 14,
+     "source_m": 13,
+     "old_stored": 15
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 14,
+    "m": 13,
+    "k": null,
+    "delivered_rel": "6.2728320496752699e-14",
+    "delivered_abs": "1.6081800348552099e-14",
+    "at_x_rel": "11.999848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.484
+   },
+   "reference_seconds": 0.995,
+   "old_stored": 15,
+   "changed": true
+  },
+  {
+   "width": "16.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^4",
+     "source_stored": 18,
+     "source_m": 17,
+     "old_stored": 19
+    },
+    {
+     "record": "abs",
+     "width_name": "2^4",
+     "source_stored": 18,
+     "source_m": 17,
+     "old_stored": 19
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 18,
+    "m": 17,
+    "k": null,
+    "delivered_rel": "9.4361230991038428e-14",
+    "delivered_abs": "2.4241939579546999e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.882
+   },
+   "reference_seconds": 1.269,
+   "old_stored": 19,
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2^5",
+     "source_stored": 24,
+     "source_m": 23,
+     "old_stored": 25
+    },
+    {
+     "record": "abs",
+     "width_name": "2^5",
+     "source_stored": 24,
+     "source_m": 23,
+     "old_stored": 25
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 24,
+    "m": 23,
+    "k": null,
+    "delivered_rel": "1.0386857358859799e-13",
+    "delivered_abs": "2.6684430233722344e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.376
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 25,
+   "changed": true
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "ship",
+     "source_stored": 19,
+     "source_m": 18,
+     "old_stored": 19
+    },
+    {
+     "record": "abs",
+     "width_name": "ship",
+     "source_stored": 19,
+     "source_m": 18,
+     "old_stored": 19
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 19,
+    "m": 18,
+    "k": null,
+    "delivered_rel": "1.6674668031336688e-13",
+    "delivered_abs": "4.2838175242018371e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.643
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 19,
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "paper",
+     "source_stored": 19,
+     "source_m": 18,
+     "old_stored": 19
+    },
+    {
+     "record": "abs",
+     "width_name": "paper",
+     "source_stored": 19,
+     "source_m": 18,
+     "old_stored": 19
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 19,
+    "m": 18,
+    "k": null,
+    "delivered_rel": "3.8613631214439201e-14",
+    "delivered_abs": "9.9200625618824799e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.055
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 19,
+   "changed": false
+  },
+  {
+   "width": "2.8567491415463806",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "2.8567491415463806",
+     "source_stored": 10,
+     "source_m": 9,
+     "old_stored": 11
+    },
+    {
+     "record": "abs",
+     "width_name": "2.8567491415463806",
+     "source_stored": 10,
+     "source_m": 9,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 10,
+    "m": 9,
+    "k": null,
+    "delivered_rel": "5.9574895679907903e-14",
+    "delivered_abs": "1.5304644231314489e-14",
+    "at_x_rel": "11.96983850607637",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.417
+   },
+   "reference_seconds": 2.445,
+   "old_stored": 11,
+   "changed": true
+  },
+  {
+   "width": "3.405194117991412",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "3.405194117991412",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    },
+    {
+     "record": "abs",
+     "width_name": "3.405194117991412",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 11,
+    "m": 10,
+    "k": null,
+    "delivered_rel": "1.5801419755550699e-14",
+    "delivered_abs": "4.0476207078449328e-15",
+    "at_x_rel": "11.969654631527308",
+    "at_x_abs": "11.969654631527308",
+    "refined": true,
+    "seconds": 0.588
+   },
+   "reference_seconds": 1.923,
+   "old_stored": 11,
+   "changed": false
+  },
+  {
+   "width": "4.091271749574425",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "4.091271749574425",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    },
+    {
+     "record": "abs",
+     "width_name": "4.091271749574425",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 11,
+    "m": 10,
+    "k": null,
+    "delivered_rel": "9.5225534863543842e-14",
+    "delivered_abs": "2.4463984184472031e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.669
+   },
+   "reference_seconds": 2.352,
+   "old_stored": 11,
+   "changed": false
+  },
+  {
+   "width": "4.947466945561672",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "4.947466945561672",
+     "source_stored": 12,
+     "source_m": 11,
+     "old_stored": 13
+    },
+    {
+     "record": "abs",
+     "width_name": "4.947466945561672",
+     "source_stored": 12,
+     "source_m": 11,
+     "old_stored": 13
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 12,
+    "m": 11,
+    "k": null,
+    "delivered_rel": "4.3403987650881986e-14",
+    "delivered_abs": "1.1141307888970152e-14",
+    "at_x_rel": "11.983955090183032",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.673
+   },
+   "reference_seconds": 2.345,
+   "old_stored": 13,
+   "changed": true
+  },
+  {
+   "width": "3.7994698932176263",
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "core",
+     "width_name": "3.7994698932176263",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    },
+    {
+     "record": "abs",
+     "width_name": "3.7994698932176263",
+     "source_stored": 11,
+     "source_m": 10,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 11,
+    "m": 10,
+    "k": null,
+    "delivered_rel": "4.6215739652904694e-14",
+    "delivered_abs": "1.1862952854976504e-14",
+    "at_x_rel": "11.977737284919445",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.531
+   },
+   "reference_seconds": 3.132,
+   "old_stored": 11,
+   "changed": false
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^-7",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "3.6525651318349605e-16",
+    "delivered_abs": "9.3817579212343487e-17",
+    "at_x_rel": "11.904645027108484",
+    "at_x_abs": "11.904645027108484",
+    "refined": true,
+    "seconds": 0.066
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.015625",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^-6",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "2.5441057769262818e-16",
+    "delivered_abs": "6.531998411321444e-17",
+    "at_x_rel": "11.914262214608484",
+    "at_x_abs": "11.914262214608484",
+    "refined": true,
+    "seconds": 0.057
+   },
+   "reference_seconds": 1.197,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.03125",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^-5",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "3.7653260997985928e-16",
+    "delivered_abs": "9.6652954660278391e-17",
+    "at_x_rel": "11.919660652108484",
+    "at_x_abs": "11.919660652108484",
+    "refined": true,
+    "seconds": 0.046
+   },
+   "reference_seconds": 1.124,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.0625",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^-4",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "2.1088855146362353e-15",
+    "delivered_abs": "5.4129314601494168e-16",
+    "at_x_rel": "11.921473152108484",
+    "at_x_abs": "11.921473152108484",
+    "refined": true,
+    "seconds": 0.078
+   },
+   "reference_seconds": 0.794,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "0.125",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^-3",
+     "source_stored": 6,
+     "source_m": 5,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 6,
+    "m": 5,
+    "k": null,
+    "delivered_rel": "3.5980751882029509e-16",
+    "delivered_abs": "9.2065760252656227e-17",
+    "at_x_rel": "11.995910652108484",
+    "at_x_abs": "11.995910652108484",
+    "refined": true,
+    "seconds": 0.149
+   },
+   "reference_seconds": 1.399,
+   "old_stored": 7,
+   "changed": true
+  },
+  {
+   "width": "0.25",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^-2",
+     "source_stored": 6,
+     "source_m": 5,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 6,
+    "m": 5,
+    "k": null,
+    "delivered_rel": "8.925046645997553e-15",
+    "delivered_abs": "2.2913796636683047e-15",
+    "at_x_rel": "11.915598152108484",
+    "at_x_abs": "11.915598152108484",
+    "refined": true,
+    "seconds": 0.129
+   },
+   "reference_seconds": 1.263,
+   "old_stored": 7,
+   "changed": true
+  },
+  {
+   "width": "0.5",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^-1",
+     "source_stored": 7,
+     "source_m": 6,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 7,
+    "m": 6,
+    "k": null,
+    "delivered_rel": "5.0509797239510392e-15",
+    "delivered_abs": "1.2878825441411252e-15",
+    "at_x_rel": "12.093098152108484",
+    "at_x_abs": "11.923848152108484",
+    "refined": true,
+    "seconds": 0.168
+   },
+   "reference_seconds": 0.733,
+   "old_stored": 7,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^0",
+     "source_stored": 9,
+     "source_m": 8,
+     "old_stored": 9
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 9,
+    "m": 8,
+    "k": null,
+    "delivered_rel": "4.4711178564911956e-16",
+    "delivered_abs": "1.129181773825032e-16",
+    "at_x_rel": "12.313848152108484",
+    "at_x_abs": "12.313848152108484",
+    "refined": true,
+    "seconds": 0.341
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 9,
+   "changed": false
+  },
+  {
+   "width": "2.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^1",
+     "source_stored": 10,
+     "source_m": 9,
+     "old_stored": 11
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 10,
+    "m": 9,
+    "k": null,
+    "delivered_rel": "2.3521413402011107e-15",
+    "delivered_abs": "6.0311401145446075e-16",
+    "at_x_rel": "11.945848152108484",
+    "at_x_abs": "11.945848152108484",
+    "refined": true,
+    "seconds": 0.399
+   },
+   "reference_seconds": 0.7,
+   "old_stored": 11,
+   "changed": true
+  },
+  {
+   "width": "4.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^2",
+     "source_stored": 12,
+     "source_m": 11,
+     "old_stored": 13
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 12,
+    "m": 11,
+    "k": null,
+    "delivered_rel": "4.7234632037725268e-15",
+    "delivered_abs": "1.2087008513970546e-15",
+    "at_x_rel": "12.171848152108484",
+    "at_x_abs": "11.967848152108484",
+    "refined": true,
+    "seconds": 0.46
+   },
+   "reference_seconds": 1.273,
+   "old_stored": 13,
+   "changed": true
+  },
+  {
+   "width": "8.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^3",
+     "source_stored": 15,
+     "source_m": 14,
+     "old_stored": 15
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 15,
+    "m": 14,
+    "k": null,
+    "delivered_rel": "6.5778429387412535e-15",
+    "delivered_abs": "1.6842337129711303e-15",
+    "at_x_rel": "11.979848152108484",
+    "at_x_abs": "11.979848152108484",
+    "refined": true,
+    "seconds": 0.943
+   },
+   "reference_seconds": 0.995,
+   "old_stored": 15,
+   "changed": false
+  },
+  {
+   "width": "16.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^4",
+     "source_stored": 20,
+     "source_m": 19,
+     "old_stored": 21
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 20,
+    "m": 19,
+    "k": null,
+    "delivered_rel": "2.6530354039354677e-15",
+    "delivered_abs": "6.7040586469321616e-16",
+    "at_x_rel": "12.299848152108484",
+    "at_x_abs": "12.299848152108484",
+    "refined": true,
+    "seconds": 1.512
+   },
+   "reference_seconds": 1.269,
+   "old_stored": 21,
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "2^5",
+     "source_stored": 26,
+     "source_m": 25,
+     "old_stored": 27
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 26,
+    "m": 25,
+    "k": null,
+    "delivered_rel": "6.6343879317388689e-15",
+    "delivered_abs": "1.7044121796563215e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 2.768
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 27,
+   "changed": true
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "ship",
+     "source_stored": 21,
+     "source_m": 20,
+     "old_stored": 21
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 21,
+    "m": 20,
+    "k": null,
+    "delivered_rel": "5.8115657010476147e-15",
+    "delivered_abs": "1.4823675747312902e-15",
+    "at_x_rel": "12.845305668579114",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.881
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 21,
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "records",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "rel14",
+     "width_name": "paper",
+     "source_stored": 20,
+     "source_m": 19,
+     "old_stored": 21
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 20,
+    "m": 19,
+    "k": null,
+    "delivered_rel": "6.6343879317388689e-15",
+    "delivered_abs": "1.7044121796563215e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 2.035
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 21,
+   "changed": true
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-08",
+   "target_kind": "rel",
+   "target_value": 1e-08,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^-7",
+     "source_stored": 3,
+     "source_m": 2,
+     "old_stored": 3
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 3,
+    "m": 2,
+    "k": null,
+    "delivered_rel": "2.7577136141164728e-12",
+    "delivered_abs": "7.0847238965603098e-13",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.247
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 3,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-08",
+   "target_kind": "rel",
+   "target_value": 1e-08,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^0",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "1.65341410843965e-9",
+    "delivered_abs": "4.247715348326813e-10",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.36
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-08",
+   "target_kind": "rel",
+   "target_value": 1e-08,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^5",
+     "source_stored": 16,
+     "source_m": 15,
+     "old_stored": 16
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 16,
+    "m": 15,
+    "k": null,
+    "delivered_rel": "3.1718998586258468e-9",
+    "delivered_abs": "8.148792032236634e-10",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.691
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 16,
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-08",
+   "target_kind": "rel",
+   "target_value": 1e-08,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "ship",
+     "source_stored": 13,
+     "source_m": 12,
+     "old_stored": 13
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 13,
+    "m": 12,
+    "k": null,
+    "delivered_rel": "2.289317687824688e-9",
+    "delivered_abs": "5.8813879899367753e-10",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.21
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 13,
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-08",
+   "target_kind": "rel",
+   "target_value": 1e-08,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "paper",
+     "source_stored": 13,
+     "source_m": 12,
+     "old_stored": 13
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 12,
+    "m": 11,
+    "k": null,
+    "delivered_rel": "4.4051655469612251e-9",
+    "delivered_abs": "1.1317122075005364e-9",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.078
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 13,
+   "changed": true
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-09",
+   "target_kind": "rel",
+   "target_value": 1e-09,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^-7",
+     "source_stored": 3,
+     "source_m": 2,
+     "old_stored": 3
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 3,
+    "m": 2,
+    "k": null,
+    "delivered_rel": "2.7577136141164728e-12",
+    "delivered_abs": "7.0847238965603098e-13",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.209
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 3,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-09",
+   "target_kind": "rel",
+   "target_value": 1e-09,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^0",
+     "source_stored": 7,
+     "source_m": 6,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 6,
+    "m": 5,
+    "k": null,
+    "delivered_rel": "3.0108825735518437e-11",
+    "delivered_abs": "7.735129423659878e-12",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.393
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 7,
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-09",
+   "target_kind": "rel",
+   "target_value": 1e-09,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^5",
+     "source_stored": 17,
+     "source_m": 16,
+     "old_stored": 17
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 17,
+    "m": 16,
+    "k": null,
+    "delivered_rel": "9.2230205559893752e-10",
+    "delivered_abs": "2.369446696604121e-10",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.77
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 17,
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-09",
+   "target_kind": "rel",
+   "target_value": 1e-09,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "ship",
+     "source_stored": 15,
+     "source_m": 14,
+     "old_stored": 15
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 14,
+    "m": 13,
+    "k": null,
+    "delivered_rel": "4.9089990295562878e-10",
+    "delivered_abs": "1.2611499089266891e-10",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.289
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 15,
+   "changed": true
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-09",
+   "target_kind": "rel",
+   "target_value": 1e-09,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "paper",
+     "source_stored": 13,
+     "source_m": 12,
+     "old_stored": 13
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 13,
+    "m": 12,
+    "k": null,
+    "delivered_rel": "8.8472730904563714e-10",
+    "delivered_abs": "2.2729150250590129e-10",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.051
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 13,
+   "changed": false
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-10",
+   "target_kind": "rel",
+   "target_value": 1e-10,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^-7",
+     "source_stored": 3,
+     "source_m": 2,
+     "old_stored": 3
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 3,
+    "m": 2,
+    "k": null,
+    "delivered_rel": "2.7577136141164728e-12",
+    "delivered_abs": "7.0847238965603098e-13",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.175
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 3,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-10",
+   "target_kind": "rel",
+   "target_value": 1e-10,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^0",
+     "source_stored": 7,
+     "source_m": 6,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 6,
+    "m": 5,
+    "k": null,
+    "delivered_rel": "3.0108825735518437e-11",
+    "delivered_abs": "7.735129423659878e-12",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.316
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 7,
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-10",
+   "target_kind": "rel",
+   "target_value": 1e-10,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^5",
+     "source_stored": 19,
+     "source_m": 18,
+     "old_stored": 19
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 19,
+    "m": 18,
+    "k": null,
+    "delivered_rel": "7.4951287476748725e-11",
+    "delivered_abs": "1.9255414149834046e-11",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 2.351
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 19,
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-10",
+   "target_kind": "rel",
+   "target_value": 1e-10,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "ship",
+     "source_stored": 16,
+     "source_m": 15,
+     "old_stored": 16
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 16,
+    "m": 15,
+    "k": null,
+    "delivered_rel": "2.1462113719006145e-11",
+    "delivered_abs": "5.5137396848386335e-12",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.546
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 16,
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-10",
+   "target_kind": "rel",
+   "target_value": 1e-10,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "paper",
+     "source_stored": 15,
+     "source_m": 14,
+     "old_stored": 15
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 15,
+    "m": 14,
+    "k": null,
+    "delivered_rel": "3.4013534555529773e-11",
+    "delivered_abs": "8.7382714375599382e-12",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.293
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 15,
+   "changed": false
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-11",
+   "target_kind": "rel",
+   "target_value": 1e-11,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^-7",
+     "source_stored": 3,
+     "source_m": 2,
+     "old_stored": 3
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 3,
+    "m": 2,
+    "k": null,
+    "delivered_rel": "2.7577136141164728e-12",
+    "delivered_abs": "7.0847238965603098e-13",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.279
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 3,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-11",
+   "target_kind": "rel",
+   "target_value": 1e-11,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^0",
+     "source_stored": 7,
+     "source_m": 6,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 7,
+    "m": 6,
+    "k": null,
+    "delivered_rel": "5.4725646018387556e-13",
+    "delivered_abs": "1.405933125602634e-13",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.482
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 7,
+   "changed": false
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-11",
+   "target_kind": "rel",
+   "target_value": 1e-11,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^5",
+     "source_stored": 21,
+     "source_m": 20,
+     "old_stored": 21
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 21,
+    "m": 20,
+    "k": null,
+    "delivered_rel": "5.709959566626842e-12",
+    "delivered_abs": "1.4669212489287067e-12",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.753
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 21,
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-11",
+   "target_kind": "rel",
+   "target_value": 1e-11,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "ship",
+     "source_stored": 17,
+     "source_m": 16,
+     "old_stored": 17
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 17,
+    "m": 16,
+    "k": null,
+    "delivered_rel": "4.352786410825215e-12",
+    "delivered_abs": "1.1182557080451763e-12",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.215
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 17,
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-11",
+   "target_kind": "rel",
+   "target_value": 1e-11,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "paper",
+     "source_stored": 17,
+     "source_m": 16,
+     "old_stored": 17
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 16,
+    "m": 15,
+    "k": null,
+    "delivered_rel": "6.471411278304112e-12",
+    "delivered_abs": "1.6625425458676592e-12",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.031
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 17,
+   "changed": true
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-12",
+   "target_kind": "rel",
+   "target_value": 1e-12,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^-7",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "3.6525651318349605e-16",
+    "delivered_abs": "9.3817579212343487e-17",
+    "at_x_rel": "11.904645027108484",
+    "at_x_abs": "11.904645027108484",
+    "refined": true,
+    "seconds": 0.335
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-12",
+   "target_kind": "rel",
+   "target_value": 1e-12,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^0",
+     "source_stored": 7,
+     "source_m": 6,
+     "old_stored": 7
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 7,
+    "m": 6,
+    "k": null,
+    "delivered_rel": "5.4725646018387556e-13",
+    "delivered_abs": "1.405933125602634e-13",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 0.338
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 7,
+   "changed": false
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-12",
+   "target_kind": "rel",
+   "target_value": 1e-12,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^5",
+     "source_stored": 23,
+     "source_m": 22,
+     "old_stored": 23
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 23,
+    "m": 22,
+    "k": null,
+    "delivered_rel": "4.0334986541172407e-13",
+    "delivered_abs": "1.0362288584024569e-13",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 2.244
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 23,
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-12",
+   "target_kind": "rel",
+   "target_value": 1e-12,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "ship",
+     "source_stored": 19,
+     "source_m": 18,
+     "old_stored": 19
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 18,
+    "m": 17,
+    "k": null,
+    "delivered_rel": "8.6251129768022545e-13",
+    "delivered_abs": "2.2158408220666857e-13",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 2.1
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 19,
+   "changed": true
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-12",
+   "target_kind": "rel",
+   "target_value": 1e-12,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "paper",
+     "source_stored": 19,
+     "source_m": 18,
+     "old_stored": 19
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 18,
+    "m": 17,
+    "k": null,
+    "delivered_rel": "2.1795668475931268e-13",
+    "delivered_abs": "5.5994318083826476e-14",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.974
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 19,
+   "changed": true
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^-7",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "3.6525651318349605e-16",
+    "delivered_abs": "9.3817579212343487e-17",
+    "at_x_rel": "11.904645027108484",
+    "at_x_abs": "11.904645027108484",
+    "refined": true,
+    "seconds": 0.306
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^0",
+     "source_stored": 9,
+     "source_m": 8,
+     "old_stored": 9
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 8,
+    "m": 7,
+    "k": null,
+    "delivered_rel": "1.0020512533600967e-14",
+    "delivered_abs": "2.5703342002603198e-15",
+    "at_x_rel": "11.936848152108484",
+    "at_x_abs": "11.936848152108484",
+    "refined": true,
+    "seconds": 0.565
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 9,
+   "changed": true
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^5",
+     "source_stored": 25,
+     "source_m": 24,
+     "old_stored": 25
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 25,
+    "m": 24,
+    "k": null,
+    "delivered_rel": "2.6297301031237046e-14",
+    "delivered_abs": "6.7559269417007838e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 3.687
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 25,
+   "changed": false
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "ship",
+     "source_stored": 21,
+     "source_m": 20,
+     "old_stored": 21
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 20,
+    "m": 19,
+    "k": null,
+    "delivered_rel": "3.1483124266269532e-14",
+    "delivered_abs": "8.0881945712509716e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 2.39
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 21,
+   "changed": true
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "paper",
+     "source_stored": 19,
+     "source_m": 18,
+     "old_stored": 19
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 19,
+    "m": 18,
+    "k": null,
+    "delivered_rel": "3.8613631214439201e-14",
+    "delivered_abs": "9.9200625618824799e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 1.946
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 19,
+   "changed": false
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^-7",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "3.6525651318349605e-16",
+    "delivered_abs": "9.3817579212343487e-17",
+    "at_x_rel": "11.904645027108484",
+    "at_x_abs": "11.904645027108484",
+    "refined": true,
+    "seconds": 0.323
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^0",
+     "source_stored": 9,
+     "source_m": 8,
+     "old_stored": 9
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 9,
+    "m": 8,
+    "k": null,
+    "delivered_rel": "4.4711178564911956e-16",
+    "delivered_abs": "1.129181773825032e-16",
+    "at_x_rel": "12.313848152108484",
+    "at_x_abs": "12.313848152108484",
+    "refined": true,
+    "seconds": 0.766
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 9,
+   "changed": false
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^5",
+     "source_stored": 27,
+     "source_m": 26,
+     "old_stored": 27
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 26,
+    "m": 25,
+    "k": null,
+    "delivered_rel": "6.6343879317388689e-15",
+    "delivered_abs": "1.7044121796563215e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 3.764
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 27,
+   "changed": true
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "ship",
+     "source_stored": 21,
+     "source_m": 20,
+     "old_stored": 21
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 21,
+    "m": 20,
+    "k": null,
+    "delivered_rel": "5.8115657010476147e-15",
+    "delivered_abs": "1.4823675747312902e-15",
+    "at_x_rel": "12.845305668579114",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 2.571
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 21,
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "paper",
+     "source_stored": 21,
+     "source_m": 20,
+     "old_stored": 21
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 20,
+    "m": 19,
+    "k": null,
+    "delivered_rel": "6.6343879317388689e-15",
+    "delivered_abs": "1.7044121796563215e-15",
+    "at_x_rel": "11.899848152108484",
+    "at_x_abs": "11.899848152108484",
+    "refined": true,
+    "seconds": 2.433
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 21,
+   "changed": true
+  },
+  {
+   "width": "0.0078125",
+   "target": "rel:1e-15",
+   "target_kind": "rel",
+   "target_value": 1e-15,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^-7",
+     "source_stored": 5,
+     "source_m": 4,
+     "old_stored": 5
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 5,
+    "m": 4,
+    "k": null,
+    "delivered_rel": "3.6525651318349605e-16",
+    "delivered_abs": "9.3817579212343487e-17",
+    "at_x_rel": "11.904645027108484",
+    "at_x_abs": "11.904645027108484",
+    "refined": true,
+    "seconds": 0.316
+   },
+   "reference_seconds": 2.106,
+   "old_stored": 5,
+   "changed": false
+  },
+  {
+   "width": "1.0",
+   "target": "rel:1e-15",
+   "target_kind": "rel",
+   "target_value": 1e-15,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^0",
+     "source_stored": 9,
+     "source_m": 8,
+     "old_stored": 9
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 9,
+    "m": 8,
+    "k": null,
+    "delivered_rel": "4.4711178564911956e-16",
+    "delivered_abs": "1.129181773825032e-16",
+    "at_x_rel": "12.313848152108484",
+    "at_x_abs": "12.313848152108484",
+    "refined": true,
+    "seconds": 0.637
+   },
+   "reference_seconds": 0.667,
+   "old_stored": 9,
+   "changed": false
+  },
+  {
+   "width": "32.0",
+   "target": "rel:1e-15",
+   "target_kind": "rel",
+   "target_value": 1e-15,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "2^5",
+     "source_stored": 29,
+     "source_m": 28,
+     "old_stored": 29
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 28,
+    "m": 27,
+    "k": null,
+    "delivered_rel": "6.2593394834357593e-16",
+    "delivered_abs": "1.4711115348582652e-16",
+    "at_x_rel": "31.355848152108484",
+    "at_x_abs": "12.219848152108484",
+    "refined": true,
+    "seconds": 4.063
+   },
+   "reference_seconds": 1.939,
+   "old_stored": 29,
+   "changed": true
+  },
+  {
+   "width": "19.100151847891516",
+   "target": "rel:1e-15",
+   "target_kind": "rel",
+   "target_value": 1e-15,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "ship",
+     "source_stored": 23,
+     "source_m": 22,
+     "old_stored": 23
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 23,
+    "m": 22,
+    "k": null,
+    "delivered_rel": "4.3423476073164529e-16",
+    "delivered_abs": "9.2311130341065157e-17",
+    "at_x_rel": "29.586588763256028",
+    "at_x_abs": "12.22455073352264",
+    "refined": true,
+    "seconds": 2.762
+   },
+   "reference_seconds": 2.509,
+   "old_stored": 23,
+   "changed": false
+  },
+  {
+   "width": "17.089489586712256",
+   "target": "rel:1e-15",
+   "target_kind": "rel",
+   "target_value": 1e-15,
+   "mode": "all",
+   "n_nodes": 2000,
+   "nodes_actual": 2001,
+   "rows": [
+    {
+     "record": "ladder",
+     "width_name": "paper",
+     "source_stored": 23,
+     "source_m": 22,
+     "old_stored": 23
+    }
+   ],
+   "new": {
+    "family": "chebyshev",
+    "stored": 22,
+    "m": 21,
+    "k": null,
+    "delivered_rel": "4.2337233128908174e-16",
+    "delivered_abs": "9.1203997384725912e-17",
+    "at_x_rel": "16.924158090601887",
+    "at_x_abs": "16.924158090601887",
+    "refined": true,
+    "seconds": 2.222
+   },
+   "reference_seconds": 2.351,
+   "old_stored": 23,
+   "changed": true
+  }
+ ],
+ "seconds": 123.772
+}
