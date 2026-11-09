@@ -15,7 +15,7 @@ jobs:
           python-version: "3.12"
       - run: pip install mpmath
       - name: Check out the library beside the harness
-        run: git clone --depth 1 --branch v5.0.0 https://github.com/myamlak/boys.git ../boys
+        run: git clone --depth 1 --branch v5.3.1 https://github.com/myamlak/boys.git ../boys
       - name: Compile every Python script
         run: |
           python -m py_compile coefficient-count-sweep/*.py
@@ -56,7 +56,7 @@ jobs:
           python-version: "3.12"
       - run: pip install mpmath
       - name: Check out the library beside the harness
-        run: git clone --depth 1 --branch v5.0.0 https://github.com/myamlak/boys.git ../boys
+        run: git clone --depth 1 --branch v5.3.1 https://github.com/myamlak/boys.git ../boys
       - name: Build the sweep drivers
         run: |
           g++ -std=c++23 -O2 -I../boys/include amplification-sweeps/product-amplification/sweep1.cpp -o "$RUNNER_TEMP/sweep1"
