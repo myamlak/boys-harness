@@ -1,0 +1,118 @@
+{
+ "record": {
+  "cells": 95,
+  "computed": 95
+ },
+ "expect": "new",
+ "missing": [],
+ "extra": [],
+ "fields": {
+  "new_stored": {
+   "checked": 95,
+   "matched": 95
+  },
+  "new_m": {
+   "checked": 95,
+   "matched": 95
+  },
+  "delivered_rel": {
+   "checked": 95,
+   "matched": 95
+  },
+  "delivered_abs": {
+   "checked": 95,
+   "matched": 95
+  },
+  "at_x_rel": {
+   "checked": 95,
+   "matched": 95
+  },
+  "at_x_abs": {
+   "checked": 95,
+   "matched": 95
+  }
+ },
+ "changed": {
+  "record": 34,
+  "computed": 34,
+  "checked": 95,
+  "matched": 95,
+  "mismatches": 0
+ },
+ "summary": {
+  "checked": [
+   "changed_cells",
+   "deltas",
+   "falsifier4_increments",
+   "group_a_parity",
+   "group_b_sums",
+   "ladder_parity",
+   "shipped_totals",
+   "unchanged_cells",
+   "unique_cells"
+  ],
+  "matched": 9,
+  "mismatches": [],
+  "result": "PASS"
+ },
+ "provenance": {
+  "paper_records": {
+   "core": {
+    "record": "76d18cb85eca813b3d4f14d9a366be6dbabf8ccbfe9028d44c145d4cccbbefff",
+    "original_sha256": "76d18cb85eca813b3d4f14d9a366be6dbabf8ccbfe9028d44c145d4cccbbefff",
+    "match": true
+   },
+   "rel13": {
+    "record": "c185bfc0434172d82f3e029fe37626e349e28a200df9fea457f317648e9c8464",
+    "original_sha256": "c185bfc0434172d82f3e029fe37626e349e28a200df9fea457f317648e9c8464",
+    "match": true
+   },
+   "abs": {
+    "record": "0316d35417afc24bc19999cf2b7c3a168078a562a348df40a3ca4a02c7ccac5b",
+    "original_sha256": "0316d35417afc24bc19999cf2b7c3a168078a562a348df40a3ca4a02c7ccac5b",
+    "match": true
+   },
+   "rel14": {
+    "record": "d199b35e47417cacd9ecf788445f320517be6e486f49dbadcbff0f3130f7ac76",
+    "original_sha256": "d199b35e47417cacd9ecf788445f320517be6e486f49dbadcbff0f3130f7ac76",
+    "match": true
+   },
+   "ladder": {
+    "record": "e21fc1fef88efbebf5db966bf5e7d968642e8a56906f7d5b6bbba4c2801ebb3e",
+    "original_sha256": "e21fc1fef88efbebf5db966bf5e7d968642e8a56906f7d5b6bbba4c2801ebb3e",
+    "match": true
+   }
+  },
+  "boys": {
+   "generator_sha256": {
+    "record": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180",
+    "deposit": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180",
+    "match": true
+   },
+   "previous_generator_sha256": {
+    "record": "ccc8b011f4170ce0b530bc4781b09670f42839fa18caaa38ea7d3a9ea9ba9bb4",
+    "deposit": "ccc8b011f4170ce0b530bc4781b09670f42839fa18caaa38ea7d3a9ea9ba9bb4",
+    "match": true
+   },
+   "coefficient_header_sha256": {
+    "record": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204",
+    "deposit": "8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204",
+    "match": true
+   },
+   "version": {
+    "record": "5.1.1",
+    "deposit": "5.1.1",
+    "match": true
+   },
+   "describe": {
+    "record": "v5.1.0-1-g3b187d5",
+    "deposit": "v5.1.0-1-g3b187d5",
+    "match": true
+   }
+  },
+  "mismatches": [],
+  "result": "PASS"
+ },
+ "mismatches": [],
+ "result": "PASS"
+}

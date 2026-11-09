@@ -54,6 +54,26 @@ five coarse widths in the core records (`2.8567491415463806`,
 `cold_ladder.py` re-solves the one row whose verdict moved, `rel:1e-13|2^5`.
 Its record is `records/stability/followup_cold_ladder_2026-10-20.json`.
 
+The Chebyshev recount is regenerated and checked from the deposited records:
+
+```sh
+python records/chebyshev_recount/recount_cheb.py \
+    --out records/chebyshev_recount/recount-run-v5.1.1.json \
+    --verify records/chebyshev_recount.json \
+    --report records/chebyshev_recount/verify-record-new.json \
+    --metadata records/chebyshev_recount/run-metadata-new.json
+
+python records/chebyshev_recount/recount_cheb.py \
+    --generator records/chebyshev_recount/generators/gen_boys_coefficients_v5.0.0.py \
+    --out records/chebyshev_recount/recount-control-v5.0.0.json \
+    --verify records/chebyshev_recount.json --expect old \
+    --report records/chebyshev_recount/verify-record-old.json \
+    --metadata records/chebyshev_recount/run-metadata-control.json
+```
+
+`records/chebyshev_recount/README.md` gives the inputs and the node
+convention.
+
 ## Harness revisions
 
 The records identify the harness as `count_sweep.py` with SHA-256
@@ -128,6 +148,20 @@ re-serialised copy deposited at the recount and to the file in this deposit:
 the `ladder` copy is still a re-serialisation of the original, while the four
 core-side records were re-measured at the revision their own `boys` blocks
 name and carry the recount's corrected counts.
+
+`records/chebyshev_recount/recount_cheb.py` regenerates the record and checks
+it cell by cell. The corrected run matches all 95 cells in stored count,
+degree and the four delivered-error fields; the pre-repair control matches
+`old_stored` in all 95 cells, which is all 135 source rows. Both runs, their
+verification reports and their metadata are in `records/chebyshev_recount/`;
+the metadata files name the script digest, the exact invocation, the input and
+output digests and the environment.
+
+The node convention is explicit in the driver and its metadata: the source
+records store `settings.nodes = 2001`, the number of points on the certifying
+grid; the sweep API takes `n` intervals and returns `n + 1` points, so the
+driver passes `2000`; the record's per-cell `nodes` field stores that API
+parameter, not the point count.
 
 The five records hold 135 rows: 40 in `records/core/sweep_all.json`, 20 in
 `records/core/sweep_rel_1e-13.json`, 20 in
@@ -505,12 +539,10 @@ hash the same, as do the knee block's `model_table.json` and
 
 ## Not deposited
 
-`recount_cheb.py` is absent. No record names it by digest, and
-`records/chebyshev_recount.json` does not name the script that produced it;
-it is also outside the measurement tree beside the records. `ladder_analysis.py`
-is deposited under `analysis/`, but no record or record metadata names it by
-digest either: `recertify_ladder.py` calls it by path and records only its own
-digest, so the digest above cannot be checked against a record.
+`ladder_analysis.py` is deposited under `analysis/`, but no record or record
+metadata names it by digest either: `recertify_ladder.py` calls it by path and
+records only its own digest, so the digest above cannot be checked against a
+record.
 
 ## The 60-digit evaluation control
 
