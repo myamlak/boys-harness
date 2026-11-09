@@ -1,6 +1,6 @@
 # Boys-function measurement harnesses
 
-This repository is one harness. The scripts behind four measurement campaigns
+This repository is one harness. The scripts behind the measurement campaigns
 on the Boys function kernel are here with their measured records, so that each
 record is regenerated from the deposit, verified against it, or named as a
 limitation. There is no current harness beside a historical one: records
@@ -24,6 +24,7 @@ is:
 | `composition-audit/` | the interaction records from the compressed deposited cell files (`signed_interaction.py`, `figure-ratio.json`); the measurement from the driver and the reference generator | the self-checks | a C++23 compiler and CMake 3.20 or newer are needed |
 | `accuracy-claim-audit/` | the claim census and the counts from the deposited tools; the crlibm and Boost audits from the pinned sources | `headline_numbers.py` and `recount.py` against the deposited counts and registry | Boost.Math 1.92.0 sources and documentation, and crlibm 1.0beta5 (`VERSION`; archive SHA-256 in `witness-rerun/`), are external; the crlibm driver needs Linux or WSL |
 | `chemistry-bridge/` | the probe regenerates the dense tensors from the deposited argument streams and the library; the summaries, matrices, traces and the above-B2 statistic (`scripts/above_b2_max.py`) from the deposited records | `compare_arms.py`, `analyze.py`, the probe's own captures | the dense ERI dumps and the benzene argument streams are not deposited; the probe regenerates them (about twenty minutes per benzene arm) |
+| `boys-crossover/` | the two Paper A input lists (`r4-and-9353/`) from the deposited grids and references | the exact-tag replay (`exact-tag-replay/`) at boys `v5.3.1`: both sweeps and the certificate, byte for byte against the deposited records | the two rebuilt sweep executables are build products and are not deposited (compiler, build line and SHA-256 are); the 291,827,555-byte path record is deposited as a digest only |
 
 ## Layout
 
@@ -32,8 +33,11 @@ is:
   ladder and the 60-digit evaluation control.
 - `composition-audit/` — the full-factorial audit of composed accuracy figures.
 - `accuracy-claim-audit/` — the documentation-claim audit against two external libraries.
+- `boys-crossover/` — the Paper A exact-tag replay at boys `v5.3.1` and the two
+  reconstructed input lists.
 
-Each directory has a README with its build and run commands.
+Each directory has a README with its build and run commands. The cross-paper
+reproduction manifest is `REPRODUCTION-MANIFEST.md`.
 
 ## Requirements
 

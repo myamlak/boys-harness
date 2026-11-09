@@ -1,0 +1,54 @@
+{
+  "record": "r4-and-9353",
+  "role": "the two Paper A input lists not carried as argument lists at harness v1.0.34: the 73-argument R4 committed-grid subset and the 9,353rd first-sweep argument",
+  "date": "2026-11-09",
+  "kernel": {
+    "version": "5.3.1",
+    "tag": "v5.3.1",
+    "commit": "2f83e40a6504368b7b2f13682e29b4f24ab2a40c",
+    "committed_grid": "tests/data/boys_reference.csv",
+    "committed_grid_sha256": "e25cf343be108c21842f5590aa98cf73d32faa6bf772862cd8afcf39772f17e8"
+  },
+  "r4": {
+    "arguments_total": 88,
+    "orders": 33,
+    "cells_total": 2904,
+    "subset_rule": "x < kRegionAEnd = 11.899848152108484",
+    "arguments": 73,
+    "cells": 2409,
+    "present_in_first_sweep_9353_grid": 73,
+    "present_in_second_sweep_836_grid": 73,
+    "verification": {
+      "worst_abs_difference": "4.975492884e-46",
+      "at": {"n": 2, "x": "3.162277660168379e-06"},
+      "deposited_summary_value": "4.975493e-46",
+      "deposited_summary_cell": "n=2 x=3.162277660168379e-06 over 2409 cells"
+    }
+  },
+  "first_sweep_9353": {
+    "designed_grid_rows": 9352,
+    "record_grid_rows": 9353,
+    "designed_record_is_prefix": true,
+    "argument": "5.949924076054243",
+    "hex": "0x1.7ccb8e5a1580ep+2",
+    "rule": "nextafter(kRegionA1Edge, +inf); kRegionA1Edge = 5.949924076054242",
+    "band": "A2",
+    "tag": "recovered",
+    "reference_values": 33,
+    "cells": 33
+  },
+  "inputs": {
+    "second_sweep_grid": {"sha256": "5fee3f7930f52e1b982c421e84d2b6e36d97af450b8512508cd9ea5dc7b9f507"},
+    "second_sweep_60_digit_reference": {"sha256": "514411570e902bc2320932a8ae6200d46e11d950471994c80c2775871f9a528d"},
+    "first_sweep_grid_9353": {"sha256": "780f75744e71f34da9e42b22ef359cc56424283e67a4faf7a16ea58847fae488"},
+    "first_sweep_designed_grid_9352": {"sha256": "da7a6c12090b0367054f561fdce749fb8147879dbae3a2544902d5b51667414c"}
+  },
+  "outputs": {
+    "r4_arguments_csv": {"sha256": "d8c1e1f431596bd2b8f5a311664ccbba1b0133be8ea1add203f539a5fde2e8fd", "rows": 73},
+    "r4_cells_csv": {"sha256": "bb25a9941c2db265b2d3b4dd0bb71c25506fa0d66560a1e29239b6cb5fb3b596", "rows": 2409},
+    "argument_9353_csv": {"sha256": "f4a8e10b1f3534a0142c6ea8950b004ee57c9e73a6747ebf7690480d0b0d8224", "rows": 1}
+  },
+  "invocation": "python extract_and_verify.py <boys-v5.3.1-tree> <paper-tree> <harness>/amplification-sweeps",
+  "exit": 0,
+  "result": "both lists reconstructed and verified"
+}

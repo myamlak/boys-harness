@@ -1,0 +1,113 @@
+{
+ "what": "Per-run metadata for the Paper C Chebyshev recount driver",
+ "driver": {
+  "path": "coefficient-count-sweep/records/chebyshev_recount/recount_cheb.py",
+  "sha256": "831277dee5137c926a1d6fdb5a1262ca5cd76fb20239b313acc87e527527cbc0"
+ },
+ "invocation": {
+  "argv": [
+   "python.exe",
+   "coefficient-count-sweep/records/chebyshev_recount/recount_cheb.py",
+   "--generator",
+   "coefficient-count-sweep/records/chebyshev_recount/generators/gen_boys_coefficients_v5.0.0.py",
+   "--out",
+   "coefficient-count-sweep/records/chebyshev_recount/recount-control-v5.0.0.json",
+   "--verify",
+   "coefficient-count-sweep/records/chebyshev_recount.json",
+   "--expect",
+   "old",
+   "--report",
+   "coefficient-count-sweep/records/chebyshev_recount/verify-record-old.json",
+   "--metadata",
+   "coefficient-count-sweep/records/chebyshev_recount/run-metadata-control.json",
+   "--progress"
+  ],
+  "cwd": "."
+ },
+ "node_convention": {
+  "source_record_field": "settings.nodes = 2001 is the number of grid points",
+  "sweep_api": "make_nodes(g, a, b, n) takes n intervals and returns n + 1 points",
+  "driver_parameter": "n = settings.nodes - 1 = 2000",
+  "public_record_field": "cells[].nodes stores the API parameter 2000, not the point count"
+ },
+ "generator": {
+  "path": "coefficient-count-sweep/records/chebyshev_recount/generators/gen_boys_coefficients_v5.0.0.py",
+  "sha256": "ccc8b011f4170ce0b530bc4781b09670f42839fa18caaa38ea7d3a9ea9ba9bb4"
+ },
+ "corrected_generator": {
+  "path": "coefficient-count-sweep/records/chebyshev_recount/generators/gen_boys_coefficients_v5.1.1.py",
+  "sha256": "11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180"
+ },
+ "count_sweep": {
+  "path": "coefficient-count-sweep/count_sweep_recorded.py",
+  "sha256": "a5def761c8f18d585396210b28864dc6c4a108d2cfda4f3788d87a7f6c854f10"
+ },
+ "source_records": [
+  {
+   "name": "core",
+   "path": "coefficient-count-sweep/records/core/sweep_all.json",
+   "sha256": "cb791ce5ae1440e84b5267face83135ea52cbba91d5b746f737fc18c4f74728e"
+  },
+  {
+   "name": "abs",
+   "path": "coefficient-count-sweep/records/core/sweep_abs_5e-14.json",
+   "sha256": "944338e539f413af50afd1f58d8ad8867a94b379401c48aff39c54e6e25aac85"
+  },
+  {
+   "name": "rel13",
+   "path": "coefficient-count-sweep/records/core/sweep_rel_1e-13.json",
+   "sha256": "fd268f0b5397788411f83cfe340d9edad0f4e44a47b83882e504cdd63d7009df"
+  },
+  {
+   "name": "rel14",
+   "path": "coefficient-count-sweep/records/core/sweep_rel_1e-14.json",
+   "sha256": "b7bf1b0ee0aba3049632963b656cb6ed22cf9a9cdcc812f411d1cca79cbf2dcc"
+  },
+  {
+   "name": "ladder",
+   "path": "coefficient-count-sweep/records/ladder/sweep_all.json",
+   "sha256": "a66a28484808d971622939eb2893c84bee932ad7c6486baa874cb2c4047b910e"
+  }
+ ],
+ "output": {
+  "path": "coefficient-count-sweep/records/chebyshev_recount/recount-control-v5.0.0.json",
+  "sha256": "6236d97fb6f1eb3e5a6c2eaa22c8e74a201a0c140e1a0709f5b4bbd3ab283ad7",
+  "bytes": 77285
+ },
+ "environment": {
+  "python": "3.14.7",
+  "mpmath": "1.4.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64"
+ },
+ "seconds": 122.27,
+ "cells": 95,
+ "x0": "11.899848152108484",
+ "record": {
+  "path": "coefficient-count-sweep/records/chebyshev_recount.json",
+  "sha256": "bb50cfb01b8c771ffa9e9a86131ca85ef59cf0f7b49c7a39ce64faf0a6153cee"
+ },
+ "report": {
+  "path": "coefficient-count-sweep/records/chebyshev_recount/verify-record-old.json",
+  "sha256": "4530fec9aa903844630bde6f5d4c7a7dac37fbe0aac377ed6146322391792f39"
+ },
+ "verification": {
+  "expect": "old",
+  "result": "PASS",
+  "record_cells": 95,
+  "computed_cells": 95,
+  "fields": {
+   "old_stored": {
+    "checked": 95,
+    "matched": 95
+   }
+  },
+  "changed": {},
+  "summary": {
+   "result": "PASS",
+   "checked": 0
+  },
+  "provenance": "PASS",
+  "mismatches": []
+ }
+}

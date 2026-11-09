@@ -1,0 +1,21 @@
+R4 committed-grid argument list
+--------------------------------
+source: tests/data/boys_reference.csv at boys v5.3.1
+arguments in the committed file: 88
+arguments below kRegionAEnd = 11.899848152108484: 73
+orders per argument: 33; cells: 2409
+present in the second sweep's 836-argument grid: 73 of 73
+worst |60-digit reference - committed value|: 4.975492884e-46
+at (n, x) = (2, 3.162277660168379e-06); deposited summary states 4.975493e-46
+
+The 9,353rd first-sweep argument
+---------------------------------
+deposited designed grid rows: 9352
+deposited 9,353-argument grid rows: 9353
+paper first-sweep grid rows: 9353
+the 9,352-argument designed record is the 9,353 grid's first 9,352 rows: verified
+last row: band A2, x = 5.949924076054243 = 0x1.7ccb8e5a1580ep+2, tag recovered
+nextafter(kRegionA1Edge, +inf) = 5.949924076054243: verified
+recovered reference row present: 33 orders; 33 cells in the deposited cells record
+
+Result: both lists reconstructed and verified.

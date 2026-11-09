@@ -30,6 +30,16 @@ to the measured tree. The applicability of the measurements to the release
 therefore rests on execution, not on source identity: the release executes the
 measured values at every deposited cell.
 
+## Digest correction at harness v1.0.35
+
+In the v1.0.34 deposit the measured column of `digests.txt` gave 47/10/57
+against the v5.3.1 column: the rows for `include/boys/boys_build_defaults.hpp`
+and `include/boys/boys_coefficients.hpp` carried the v5.3.1 digest instead of
+the measured-tree digest. Both rows are corrected, so the measured column now
+gives 45/10/55, the count this record's prose has always stated; the v5.3.1
+column is unchanged at 76/76. The correction is also recorded in
+`digests.txt` and in `boys-crossover/exact-tag-replay/`.
+
 ## Reproducing
 
 The tag was not cut when this replay ran. The build used the release tree

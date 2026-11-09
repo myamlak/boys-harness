@@ -1,0 +1,9 @@
+second experiment, 836 arguments (the certificate grid):
+  upward   calls   8628  zero    45  nonzero   8583  subnormal 0  min|a| 1.912658523e-06  min|r| 3.071622e-25
+  downward calls   8416  zero   744  nonzero   7672  subnormal 0  min|a| 1.746909982e-01  min|r| 4.336809e-19
+  largest recurrence radius 3.773921e-14
+first experiment, 9353 arguments:
+  upward   calls 125644  zero    45  nonzero 125599  subnormal 0  min|a| 1.912658521e-06  min|r| 5.190951e-27
+  downward calls  41984  zero  3596  nonzero  38388  subnormal 0  min|a| 1.746909982e-01  min|r| 4.336809e-19
+  largest recurrence radius 3.773921e-14
+Result: the lemma's premises hold
