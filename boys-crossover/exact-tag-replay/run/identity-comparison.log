@@ -1,0 +1,26 @@
+evaluated files: 76 (62 include/boys headers, 14 src)
+headers  62 files: measured column 45, v5.3.0 column 61, v5.3.1 column 62, v5.1.1 tag tree 45
+src      14 files: measured column 10, v5.3.0 column 14, v5.3.1 column 14, v5.1.1 tag tree 10
+all      76 files: measured column 55, v5.3.0 column 75, v5.3.1 column 76, v5.1.1 tag tree 55
+differing from the v5.1.1 tag tree: 21 files
+  include/boys/backend.hpp
+  include/boys/boys_arguments_lanes.hpp
+  include/boys/boys_backend_simd.hpp
+  include/boys/boys_build_defaults.hpp
+  include/boys/boys_coefficients.hpp
+  include/boys/boys_decl.hpp
+  include/boys/boys_fit32.hpp
+  include/boys/boys_fit_chebyshev.hpp
+  include/boys/boys_fit_core.hpp
+  include/boys/boys_fit_rational.hpp
+  include/boys/boys_fit_uniform.hpp
+  include/boys/boys_impl.hpp
+  include/boys/boys_orders_lanes.hpp
+  include/boys/isa_tiers.hpp
+  include/boys/kernels.hpp
+  include/boys/policy.hpp
+  include/boys/version.hpp
+  src/boys.cpp
+  src/boys_orders_simd.cpp
+  src/boys_orders_simd.hpp
+  src/boys_simd.cpp

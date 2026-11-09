@@ -1,0 +1,2 @@
+position,band,x,x_hex,sets,rule
+9353,A2,5.949924076054243,0x1.7ccb8e5a1580ep+2,recovered,"nextafter(kRegionA1Edge, +inf); kRegionA1Edge = 5.949924076054242"

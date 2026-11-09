@@ -1,0 +1,31 @@
+sha256 of the record's outputs and checks
+
+# Every file below is deposited. The two rebuilt executables are build products
+# and are not deposited; their digests from the replay run and the command that
+# rebuilds them are at the end of this file.
+
+first sweep, 9,353 arguments                   2a2c45d1d7f59b74f4d3aeca647b46e4e20e86c2fb1917767a21a725f86d7da6  run/cells-9353.csv
+first sweep admission, 9,353 arguments         3003115faf814830ca95948b9cc85e8880207caecbf208529e00a31f65e5dc91  run/admission-9353.csv
+first sweep replica gain, 9,353 arguments      e25ac559a3d5f23164340802c152bc9933b309a70b7ad09f4f5d7cc931e2855f  run/replica_gain-9353.csv
+first sweep, designed 9,352-argument record    dd26d0b2a4352113d9f15433ec991adfacc211607ae9586c0bb51cd12b3f3369  run/cells-9352.csv
+first sweep admission, designed record         19f2c6d9b993f4eb880ec124795f90ef4fc1a72f95dacfe6ddb990d5b111d143  run/admission-9352.csv
+first sweep replica gain, designed record      d0401a0f133ae9ca5ccc03b8f827caebf780cecee730f8bd3eff30026c6bdf29  run/replica_gain-9352.csv
+second sweep, 836 arguments                    2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6  run/cells-sweep2.csv
+second sweep admission                         d57b3bf925ae3740b28048139126ad0806fcab624e996e40586bc91503fb069f  run/admission-sweep2.csv
+second sweep path record (raw; removed after digest)  81001a06d80c88e5b3ddac1f3dd011cae6f8ce2e806c8bf1f7f26e85dd8c8219  run/paths.csv (removed after digest)
+certificate per-cell intervals                 8041c727ac90c6d0ff9bc5552738e91ca9fd7abe09973ea0fad43756ba62fa6a  run/certificates/cells_cert.csv
+certificate band comparisons                   1ecc53f44a18b1acf867812cf00bf74e0f4842abcbc2d925991d09a734d2e368  run/certificates/band_cert.csv
+certificate model cells                        d76f2737c80e9922e7e22432134ded5a1dd0eca33f925c2853fca3de25426efb  run/certificates/model_cells.csv
+certificate summary                            75c165fed51c91cdbb4a9546a98b5d526304a40114ba37424b1c0469fae0509a  run/certificates/summary.json
+residual lemma probe output                    a7bf251068e67e4e65998c6cd28d6a2e894cdb4bd2008ccf5eba175d9f3cb18f  run/residual-probe.log
+evaluated-file identity comparison output      0eabea63ee6287e5f768838c27f29f658894b72dc9df7c0bb3cb7d98480cebb4  run/identity-comparison.log
+build log                                      06a1c159ea26f406fb4ace614b1d752c83d914a180ce9ebc8f0f8b1c40003fe2  build-tag.log
+sweep run log                                  af7d3c04451ced79e6ab5bd4edcbc111d3d4861288acdd687213c8a7ab33a642  run-sweeps.log
+certificate model replay log                   8469e27e5b76b3526448eb5214bc0059302fb644cbbf6fd0e8d1fd3c44ec497e  run/replay-tag.log
+certificate bound validation log               19e0840ec8aff4fe01f36460642df8e523836f8101e106c63fc50430477e6c80  run/certify-tag.log
+identity comparison script                     74e7f18ce331212632f20521b26438545af431ab128032523fcb160a12532521  compare_identity.py
+residual lemma probe script                    79f9207917e7b3d8bc767e1a0ec6583b454d4b460a2165d34b7ebd458c27d293  residual_probe.py
+
+# rebuilt executables, not deposited (build products)
+sweep1 executable                              42f45ad1faba2cfa69b8fbbd7ee61af4f4376814f30ad8c6c9c52372498e4d79  build/sweep1.exe (not deposited)
+sweep2 executable                              3b6a92cbb845f31c4af1304257a4552d3285a6a658d9626e4e0f7698f9b8c201  build/sweep2.exe (not deposited)
