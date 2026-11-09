@@ -402,14 +402,12 @@ def main():
     parts.append("")
     parts.append(f"- Best-vs-best base scan of 45 cells: "
                  f"{bvb['summary']['seconds']} s.")
-    lines_bvb = []
-    if "recheck_seconds_total" in bvb["summary"]:
-        lines_bvb.append(
-            f"- High-precision recheck: 46 below-degree rows and 4 "
-            f"high-precision exchange runs; per-row timer "
-            f"{bvb['summary']['recheck_seconds_total']} s, observed wall "
-            f"about 95 s (the exchange time is outside the per-row timer).")
-    parts.extend(lines_bvb)
+    parts.append(f"- High-precision recheck: 46 below-degree rows; the five "
+                 f"marginal rows (delivered/target < 1.6) triggered the "
+                 f"high-precision exchange. Per-row timer "
+                 f"{bvb['summary'].get('recheck_seconds_total', 0.0)} s, "
+                 f"observed wall about 95 s (the exchange time is outside the "
+                 f"per-row timer).")
     parts.append(f"- Root isolation: {ri['summary']['seconds']} s for "
                  f"{ri['summary']['fits']} fits.")
     parts.append("- Selftests: 4/4 for the Remez solver (dense-grid error "

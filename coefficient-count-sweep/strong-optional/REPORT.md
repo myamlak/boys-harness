@@ -283,7 +283,7 @@ Record-integrity note: the strict mismatches are all non-converged BRASIL witnes
 ## 5. Effort
 
 - Best-vs-best base scan of 45 cells: 205.88 s.
-- High-precision recheck: 46 below-degree rows and 4 high-precision exchange runs; per-row timer 11.04 s, observed wall about 95 s (the exchange time is outside the per-row timer).
+- High-precision recheck: 46 below-degree rows; the five marginal rows (delivered/target < 1.6) triggered the high-precision exchange. Per-row timer 11.04 s, observed wall about 95 s (the exchange time is outside the per-row timer).
 - Root isolation: 28.08 s for 98 fits.
 - Selftests: 4/4 for the Remez solver (dense-grid error attainment, LP agreement where resolvable); 10/10 for the exact root isolator (known roots, multiplicities, endpoint and double roots, Bernstein ratios).
 - No heavy build was required; the work is Python arbitrary-precision arithmetic plus numpy/scipy.
