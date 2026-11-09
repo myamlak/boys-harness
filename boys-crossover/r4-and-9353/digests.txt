@@ -1,0 +1,11 @@
+sha256 digests of the inputs and the deposited lists
+
+kernel_committed_45_digit_grid           e25cf343be108c21842f5590aa98cf73d32faa6bf772862cd8afcf39772f17e8
+second_sweep_grid                        5fee3f7930f52e1b982c421e84d2b6e36d97af450b8512508cd9ea5dc7b9f507
+second_sweep_60_digit_reference          514411570e902bc2320932a8ae6200d46e11d950471994c80c2775871f9a528d
+first_sweep_9353_grid                    780f75744e71f34da9e42b22ef359cc56424283e67a4faf7a16ea58847fae488
+first_sweep_deposited_9353_grid          780f75744e71f34da9e42b22ef359cc56424283e67a4faf7a16ea58847fae488
+first_sweep_deposited_9352_grid          da7a6c12090b0367054f561fdce749fb8147879dbae3a2544902d5b51667414c
+r4_arguments                             d8c1e1f431596bd2b8f5a311664ccbba1b0133be8ea1add203f539a5fde2e8fd
+r4_cells                                 bb25a9941c2db265b2d3b4dd0bb71c25506fa0d66560a1e29239b6cb5fb3b596
+argument_9353                            f4a8e10b1f3534a0142c6ea8950b004ee57c9e73a6747ebf7690480d0b0d8224

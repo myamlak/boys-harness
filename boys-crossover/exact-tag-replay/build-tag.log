@@ -1,0 +1,13 @@
+﻿cl.exe : Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64
+At line:11 char:10
++ $log += (& cl 2>&1 | Select-Object -First 3)
++          ~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Microsoft (R) C...1.36260 for x64:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+sweep1.cpp
+sweep1_build_exit=0
+sweep2.cpp
+sweep2_build_exit=0
