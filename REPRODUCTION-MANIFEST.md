@@ -9,11 +9,9 @@ carry.
 The papers cite harness `v1.0.38` at submission; the tag is cut from the merge
 commit.
 The recorded values carried from `v1.0.37` are unchanged. This release adds the
-full-cube order-three decomposition at `composition-audit/fullcube/`, whose
-numbers Paper B reports. The previous release moved
+full-cube order-three decomposition at `composition-audit/fullcube/`. The previous release moved
 the kernel pin in `.github/workflows/harness.yml` from `v5.3.1` to `v5.3.2`,
-a documentation, version-string and test-only change, so that the papers'
-submission tags name one kernel. The `v1.0.36` release added the held-out
+a documentation, version-string and test-only change. The `v1.0.36` release added the held-out
 exact-tag replay at `amplification-sweeps/held-out-v531/` and its TeX fixture
 at `tables/prediction-record.tex`.
 

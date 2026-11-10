@@ -58,6 +58,6 @@ non-mean coefficients) strictly exceeds 10 per cent. The earlier note's
 
 ## Scope
 
-The analysis is read-only with respect to the record and the papers. It says
+The analysis is read-only with respect to the record. It says
 nothing about order-three structure outside the measured cube; it only fixes
 what the deposited cube supports.
