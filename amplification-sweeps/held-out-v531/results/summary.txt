@@ -1,5 +1,5 @@
 held-out summary
-reference: C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover\sweeps\held-out-v531\data\reference.csv
+reference: C:\path\to\sweeps\held-out-v531\data\reference.csv
 grid: 1300 arguments (A1 650, A2 650), rule H in grid.py
 model population: arguments at or above kTierThresholds[0] = 1.0855252345349333: A1 483, A2 650
 
@@ -88,7 +88,7 @@ every commitment:
 
 reference validation:
   reference validation
-  grid: C:\Users\myaml\dev\papers-a-v5\papers\boys-crossover\sweeps\held-out\data\grid.csv
+  grid: C:\path\to\sweeps\held-out\data\grid.csv
   arguments: 1300, orders: 33, dps: 70, digits: 60
   
   R2 series                        4.207543e-62 at A2 n=30 x=11.899848141025888 over 42900 cells

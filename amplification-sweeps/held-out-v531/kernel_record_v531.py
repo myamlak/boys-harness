@@ -4,7 +4,7 @@
 The held-out provenance proves its kernel by content: every file under
 ``include/boys`` and the three reference-chain files is hashed and compared
 with a record's digests.  The v5.1.1 run read the second sweep's record, which
-names 18 headers and the three reference files (the files that sweep read).
+names 12 headers, six harness files and three reference files (21 digests).
 This rerun reads the v5.3.1 digest column of the certified-bound
 ``v531-check`` record, the column the exact-tag replay proved against the tag
 tree at harness v1.0.35, so all 62 headers and 14 source files are compared.
@@ -16,7 +16,7 @@ The builder refuses to write the record unless every digest checks out in the
 tree it is pointed at.
 
 Usage:
-    python kernel_record_v531.py --tree C:\\Users\\myaml\\dev\\_a-exact-tag-replay \\
+    python kernel_record_v531.py --tree C:\\path\\to\\boys-v5.3.1 \\
         --v531-digests <harness>/amplification-sweeps/certified-bound/v531-check/digests.txt \\
         --previous <sweeps>/amplification_form/results/provenance.json \\
         --out results/kernel_record_v531.json

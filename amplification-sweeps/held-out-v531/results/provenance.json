@@ -9,10 +9,10 @@
       "not_in_record": []
     },
     "git_used": false,
-    "revision_source": "C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\held-out-v531\\results\\kernel_record_v531.json",
-    "revision_source_sha256": "34f87f348a2f47fa99a5ec8c4c0c9f91b91e7de4c357a677ba8965f827b06bf6",
+    "revision_source": "C:\\path\\to\\sweeps\\held-out-v531\\results\\kernel_record_v531.json",
+    "revision_source_sha256": "cf29599185894eeeea80d1465b6c3ebef7dc46a07e38c19d742113a1cc36346d",
     "tag": "v5.3.1",
-    "tree": "C:\\Users\\myaml\\dev\\_a-exact-tag-replay",
+    "tree": "C:\\path\\to\\boys-v5.3.1",
     "version_header": "5.3.1"
   },
   "build_defaults": {
@@ -846,7 +846,7 @@
       "sha256": "8d8b8bba633fb96f5d49aabf5cb6624788944a3de13606d040362e790a8ce247"
     }
   },
-  "flags": "/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I C:\\Users\\myaml\\dev\\_a-exact-tag-replay\\include sweep_heldout.cpp build\\sweep_heldout.obj build\\sweep_heldout.exe",
+  "flags": "/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I C:\\path\\to\\boys-v5.3.1\\include sweep_heldout.cpp build\\sweep_heldout.obj build\\sweep_heldout.exe",
   "generated_utc": "2026-11-10T12:56:11.919175+00:00",
   "harness": "sweep_heldout",
   "machine": {

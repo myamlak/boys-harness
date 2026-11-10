@@ -3,7 +3,7 @@
     "commit": "2f83e40a6504368b7b2f13682e29b4f24ab2a40c",
     "dirty": false,
     "note": "the 76 evaluated files are the v5.3.1 column of the certified-bound v531-check record, the column the exact-tag replay proved against the tag tree; the three reference-chain digests are the second sweep's record's, asserted here against this tree, so the reference chain is unchanged from v5.1.1",
-    "revision_source": "C:\\Users\\myaml\\dev\\papers-a-v5\\papers\\boys-crossover\\sweeps\\v5.3.1-check\\digests.txt",
+    "revision_source": "C:\\path\\to\\sweeps\\v5.3.1-check\\digests.txt",
     "revision_source_sha256": "99082bfdc78d16ba768b4de3cd3ab92f5f13adbd90ca91f41f429e39ccd9b914",
     "tag_at_head": "v5.3.1",
     "tag_object": "d1e63f71c6f2501aecc6340e31216a42c2a390b9",

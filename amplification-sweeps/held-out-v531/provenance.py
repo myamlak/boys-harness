@@ -25,7 +25,7 @@ The output is one JSON file beside the results.  No git argument is executed
 here or anywhere in this sweep's pipeline.
 
 Usage:
-    python provenance.py --boys-tree C:\\Users\\myaml\\dev\\_boys-v511 \\
+    python provenance.py --boys-tree C:\\path\\to\\boys-v5.1.1 \\
         --flags "<compile line>" --out results/provenance.json
 """
 
