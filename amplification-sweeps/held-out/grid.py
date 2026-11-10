@@ -44,7 +44,7 @@ main() asserts every one of these against the two earlier grids by exact
 double equality and fails the run if a single argument coincides.
 
 Usage:
-    python grid.py --boys-tree C:\\Users\\myaml\\dev\\_boys-v511 --out data/grid.csv
+    python grid.py --boys-tree C:\\path\\to\\boys-v5.1.1 --out data\\grid.csv
 """
 
 import argparse
@@ -59,8 +59,9 @@ import boysprovenance  # noqa: E402
 
 DEFAULT_TREE = boysprovenance.DEFAULT_TREE
 EARLIER_GRIDS = [
-    Path(__file__).resolve().parents[1] / "product_amplification/data/grid.csv",
-    Path(__file__).resolve().parents[1] / "amplification_form/data/grid.csv",
+    Path(__file__).resolve().parents[1]
+    / "product-amplification/first-sweep-9353/sweeps/product_amplification/data/grid.csv",
+    Path(__file__).resolve().parents[1] / "amplification-form/data/grid.csv",
 ]
 
 

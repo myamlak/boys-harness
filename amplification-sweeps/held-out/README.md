@@ -1,7 +1,6 @@
 # Held-out test
 
-The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`. This
-sweep is a deposited record measured against an earlier kernel revision;
+This sweep is a deposited record measured against an earlier kernel revision;
 `results/provenance.json` names the revision, the commit and the checkout path
 the run used, and that name is this record's provenance, not a current
 reference.
@@ -11,7 +10,10 @@ first two sweeps, and a rule scored on the data that suggested it proves
 little.  This sweep freezes the rule and the margin exactly as
 `../../tables/prediction-record.tex` records them, and applies them, with no
 adjustment, to a third argument set that is disjoint from both earlier
-sweeps.
+sweeps. That table is deposited at the repository root, with sha256
+`f1234cff92929a30821f075f70990354d046e2166871d4790c189e7c734e2251`; it is
+byte-identical to `../product-amplification/analysis/tables/prediction-record.tex`,
+the second sweep's generated table.
 
 ## The frozen rule
 
@@ -72,33 +74,34 @@ full above and in the script's docstring, so it is regenerable.
 
 ## Commands
 
-Run from a Visual Studio developer shell, without `python -I` (mpmath lives in
-the user site).  The pipeline does not run git.
+Run from a Visual Studio developer shell. Set `BOYS_TREE` to a checkout of the
+kernel revision `results/provenance.json` names, then run the pipeline from
+this directory. The pipeline does not run git.
 
+    $env:BOYS_TREE = "C:\path\to\the\kernel\checkout"
     powershell -ExecutionPolicy Bypass -File run.ps1
 
-The steps it runs, in order:
-
-    python grid.py --boys-tree <recorded-boys-tree> --out data\grid.csv
-    python provenance.py --boys-tree <recorded-boys-tree> \
-        --harness sweep_heldout --harness-dir . --flags "<compile line>" \
-        --out results\provenance.json
-    python ..\common\reference.py --boys-tree <recorded-boys-tree> \
-        --grid data\grid.csv --out data\reference.csv \
-        --validation data\reference_validation.txt --dps 70 --digits 60
-    cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 \
-        /I <recorded-boys-tree>\include \
-        /Fo build\sweep_heldout.obj /Fe build\sweep_heldout.exe sweep_heldout.cpp
-    build\sweep_heldout.exe --grid data\grid.csv --cells results\cells.csv \
-        --admission results\admission.csv
-    python analyze.py --tree . --provenance results\provenance.json
+`run.ps1` performs these steps in order: it regenerates the grid from the
+kernel's band edges (`grid.py`), records the kernel identity by content and the
+compile line (`provenance.py`), computes the 70-digit working reference
+(`../common/reference.py`, 60 printed digits), builds `sweep_heldout.cpp` with
+the flags recorded in `results/provenance.json`, runs it, and scores the frozen
+rule (`analyze.py`). The analyse step reads the second sweep's
+`../amplification-form/results/prediction_record.csv` and the deposited
+`../../tables/prediction-record.tex`; the run stops before writing a held-out
+number if either self-check differs.
 
 ## Results
 
 Kernel provenance: the revision `results/provenance.json` names, proved by
-content with `git_used = false`.  All 15 kernel files the second sweep's
-record names match digest for digest; 62 kernel files and the reference chain
-are digested, and none differs.
+content with `git_used = false`. The record it reads is the v5.1.1
+second-sweep provenance deposited at
+`../product-amplification/first-sweep-9353/sweeps/amplification_form/results/provenance.json`
+(sha256 `a1ed6ea36dacb67163392eba46556ed2504b2eaa65e3f2122114bf9f83ff38d7`);
+the second sweep's own `../amplification-form/results/provenance.json` is its
+earlier v5.0.0 measurement. All 15 kernel files the v5.1.1 record names match
+digest for digest; 62 kernel files and the reference chain are digested, and
+none differs.
 
 Reference: 1300 arguments, 33 orders, 70 working digits, 60 printed.  Every
 evaluated route is inside its stated bound: R2 series 4.21e-62, R2b imported
@@ -139,6 +142,12 @@ winner is decided by band maxima over the whole held-out grid, including the
 A1 arguments below `kTierThresholds[0]`.  At A1 absolute order 0 the measured
 direct worst is attained at x = 7.09e-07, outside the population; the
 commitment is still right.  The second sweep has the same structure.
+
+The `harness/` digests in `results/provenance.json` are those of the scripts
+as they ran in the paper tree. The deposited copies differ only where a
+repository path changed (`../amplification_form` to `../amplification-form`,
+the v5.1.1 second-sweep record path, and the driver's replica include). A run
+from this deposit reproduces the five value-bearing outputs byte for byte.
 
 ## What this establishes and what it does not
 
@@ -191,3 +200,9 @@ Does not establish:
     results/summary.txt         the self-check, the score, every commitment
     results/provenance.json     the measured kernel revision and commit, every
                                 recorded file digest matched; git_used = false
+    ../product-amplification/first-sweep-9353/sweeps/amplification_form/results/provenance.json
+                                the v5.1.1 second-sweep record the provenance reads
+    ../../tables/prediction-record.tex
+                                the self-check's TeX fixture, at the repository
+                                root; sha256
+                                f1234cff92929a30821f075f70990354d046e2166871d4790c189e7c734e2251

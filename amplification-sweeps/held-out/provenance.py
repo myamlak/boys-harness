@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Provenance for the held-out sweep, without invoking git.
 
-The revision this sweep ran at is the one the second sweep's record was taken
-from: boys v5.1.1, commit 834bdbb18a30ac8538b519436429f78d41f187ce.  That
-record, ../amplification_form/results/provenance.json, was written at the exact
-tag with a clean tree and carries a sha256 for every kernel and reference file
-it read.  This script does not run git.  It proves the same thing by content:
+The revision this sweep ran at is the one the second sweep's v5.1.1 record was
+taken from: boys v5.1.1, commit 834bdbb18a30ac8538b519436429f78d41f187ce.
+That record, deposited as
+../product-amplification/first-sweep-9353/sweeps/amplification_form/results/provenance.json,
+was written at the exact tag with a clean tree and carries a sha256 for every
+kernel and reference file it read.  (The second sweep's own
+amplification-form/results/provenance.json is its earlier v5.0.0 measurement.)
+This script does not run git.  It proves the same thing by content:
 
   * it reads the second sweep's record and names its tag and commit;
   * it digests every file under the kernel's include/ directory (the build
@@ -37,7 +40,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))
 import boysprovenance  # noqa: E402
 
 DEFAULT_TREE = boysprovenance.DEFAULT_TREE
-KERNEL_RECORD = Path(__file__).resolve().parents[1] / "amplification_form/results/provenance.json"
+KERNEL_RECORD = (Path(__file__).resolve().parents[1]
+                 / "product-amplification/first-sweep-9353/sweeps/amplification_form/results/provenance.json")
 
 
 def kernel_files(tree):

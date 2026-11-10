@@ -87,7 +87,11 @@ output.
 | `extract_and_verify.py` | `4add0ad6fc3c6130fde303b0664dfbeb91c47b4ddddb984385e9cdba3992de23` |
 
 `digests.txt` is the generated digest list; `provenance.json` is the
-machine-readable record.
+machine-readable record. The second-sweep grid and reference, and the designed
+9,352-row grid, are recorded here as the measurement tree's bytes, where the
+CSVs carry CRLF; the harness deposit stores those three copies with LF, so
+their SHA-256 in a fresh clone differs while the parsed content is unchanged.
+The reconstructed lists are byte-identical either way.
 
 ## Result
 

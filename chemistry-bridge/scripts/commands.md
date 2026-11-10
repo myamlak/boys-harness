@@ -2,7 +2,7 @@
 
 Lane: Paper-A chemistry bridge.
 Scratch tree: `C:\Users\myaml\dev\bladawiec-bridge`, a copy of
-`C:\Users\myaml\dev\bladawiec` at branch `myamlak/phase2-pr3`, HEAD `ac8540b7` or
+`C:\Users\myaml\dev\bladawiec` at HEAD `ac8540b7` or
 later, with no `.git` and no build directories. The boys content is the
 revision recorded in `../provenance.json`, read from the copied header; the
 copy carries no git metadata, which is why `BoysBuildRecord` prints

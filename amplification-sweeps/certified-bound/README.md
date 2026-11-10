@@ -3,7 +3,6 @@
 This directory is the record for the certified-bound section of the crossover
 paper. It bounds both region-A entries of `boys` operation by operation,
 validates the bound on every measured cell, and records what it can certify.
-The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`;
 `v531-check/` is the release replay that re-runs this record's model and its
 full bound validation at the release and compares every output with the
 deposited run. `provenance.json` records the revision the record was measured

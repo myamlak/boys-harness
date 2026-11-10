@@ -9,8 +9,7 @@ recurrence with the direct entry's own order-0 value and repeats the band-level
 comparison.  The seed error and the direct error then come from the same fit
 family, and what remains is amplification and accumulated arithmetic.
 
-The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`. This
-sweep is a deposited record measured against an earlier kernel revision;
+This sweep is a deposited record measured against an earlier kernel revision;
 `results/provenance.json` names the revision, the commit and the checkout path
 the run used, and that name is this record's provenance, not a current
 reference.

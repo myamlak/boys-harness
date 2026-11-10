@@ -5,7 +5,7 @@ accuracy claims the `boys` documents state at tag `v5.3.1`. It holds 155
 claims in 155 data rows. SHA-256:
 `09701aece411d1d9139ef6490522b2bc8a5a8cc76fdeec4385612b3997ebb114`.
 
-It is deposited with harness tag `v1.0.34`.
+It is deposited in this harness repository.
 
 ## What changed from the archived enumeration
 

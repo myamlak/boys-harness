@@ -1,0 +1,251 @@
+{
+  "boys": {
+    "commit": "2f83e40a6504368b7b2f13682e29b4f24ab2a40c",
+    "dirty": false,
+    "note": "the 76 evaluated files are the v5.3.1 column of the certified-bound v531-check record, the column the exact-tag replay proved against the tag tree; the three reference-chain digests are the second sweep's record's, asserted here against this tree, so the reference chain is unchanged from v5.1.1",
+    "revision_source": "C:\\path\\to\\sweeps\\v5.3.1-check\\digests.txt",
+    "revision_source_sha256": "99082bfdc78d16ba768b4de3cd3ab92f5f13adbd90ca91f41f429e39ccd9b914",
+    "tag_at_head": "v5.3.1",
+    "tag_object": "d1e63f71c6f2501aecc6340e31216a42c2a390b9",
+    "tree": "344df3ecc1c13122f59a8a98a78afbff3c34337b"
+  },
+  "digests": {
+    "boys/include/boys/accuracy.hpp": {
+      "sha256": "57c7b40c50cbbf71a4fd356bd62492672bb3b2eedc9e7693110ce7d0f819dfc5"
+    },
+    "boys/include/boys/backend.hpp": {
+      "sha256": "ae121250d918b5ad413030f205262ef6aed845d55688faab9dba231f1d50c762"
+    },
+    "boys/include/boys/boys.hpp": {
+      "sha256": "7df021b424c6dcdcc71a5698617d9c03c5de86188795041a64463a06a5bde4ac"
+    },
+    "boys/include/boys/boys_accuracy_here.hpp": {
+      "sha256": "ef0e63c63ad91ab34d9b44d2a815fb0be953a6b30f307943db451677f2e2eb97"
+    },
+    "boys/include/boys/boys_all.hpp": {
+      "sha256": "5be0d740b82868cecec305125c8dcd04e4824bd1a14d0b3b6f434c55759c9e87"
+    },
+    "boys/include/boys/boys_arguments_lanes.hpp": {
+      "sha256": "1d750e9d56485e057920a3da37cadbe59ebc326036fb8dbdfb8cedbda31d61df"
+    },
+    "boys/include/boys/boys_backend_simd.hpp": {
+      "sha256": "7ff344b7b68b32ab8030b99f9ff07b95a0293e4cf018709b03a6490f674643d4"
+    },
+    "boys/include/boys/boys_build_defaults.hpp": {
+      "sha256": "e372ef9020d53007659bc5fc11cc5a56882f2ce7ef53fd709828d09ed97b8701"
+    },
+    "boys/include/boys/boys_c.h": {
+      "sha256": "7c3ff99a07ddb4a9e8b41320632a1f6a0f9c63c4f4bdfe9f1778dda3f0e4014c"
+    },
+    "boys/include/boys/boys_coefficients.hpp": {
+      "sha256": "d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00"
+    },
+    "boys/include/boys/boys_coefficients_d_coarse_cheb.hpp": {
+      "sha256": "7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e"
+    },
+    "boys/include/boys/boys_coefficients_d_coarse_mono.hpp": {
+      "sha256": "97d33714d421d93fe50798aad49bcf05fc20fffbaae9de72c6037ff7778a2505"
+    },
+    "boys/include/boys/boys_coefficients_d_coarse_rat.hpp": {
+      "sha256": "4ba32e64ee9152de8ad4ed539b5cd3bfaa84164ee23820fb625e922bff363e4c"
+    },
+    "boys/include/boys/boys_coefficients_d_far.hpp": {
+      "sha256": "5af8ec47f5b133ec37b807c01ff769591afeaa55a5f04fa84c1b0cd37f7732b4"
+    },
+    "boys/include/boys/boys_coefficients_d_narrow_cheb.hpp": {
+      "sha256": "17713d76e1382d9bd5e46d326a55ed8d709deaa298e7026ad0dfa47c81a22ecc"
+    },
+    "boys/include/boys/boys_coefficients_d_narrow_mono.hpp": {
+      "sha256": "b7b90c5d00095786e3e127072a8bd1fd2f7591236471695afb3791dfe156d597"
+    },
+    "boys/include/boys/boys_coefficients_d_narrow_rat.hpp": {
+      "sha256": "24d7692131a068cfbe84fea480dd61cfb6ab74ea60fbe2b4af1d1d8ae49a5b4b"
+    },
+    "boys/include/boys/boys_coefficients_d_uniform_cheb.hpp": {
+      "sha256": "28f932bb8f1d7f4d2a693687d5ab685b4765f31a4eab447dbdd9df8698272185"
+    },
+    "boys/include/boys/boys_coefficients_d_uniform_cheb_transposed.hpp": {
+      "sha256": "fab92465088ebcc44e83f08cc161a688f699e42f924b264210c7fbaa8d0848b8"
+    },
+    "boys/include/boys/boys_coefficients_d_uniform_mono.hpp": {
+      "sha256": "35db563c1aeb28ecf55fee3c5a17209dd9a8a5497de10d5885f2166710393f89"
+    },
+    "boys/include/boys/boys_coefficients_d_uniform_mono_transposed.hpp": {
+      "sha256": "b97abda2adba952051e6a87af97c513f70ab25b43aa84772e71f4197aab5b975"
+    },
+    "boys/include/boys/boys_coefficients_d_uniform_rat.hpp": {
+      "sha256": "28cf0bbf05828f03a82b81670da1ddf566a1797052c33081b78e4fae49f379d5"
+    },
+    "boys/include/boys/boys_coefficients_f32_coarse_cheb.hpp": {
+      "sha256": "619740c19a0caaa905dcb16694dd898ead09e5dc0d2403d5a3939a17cfc8b693"
+    },
+    "boys/include/boys/boys_coefficients_f32_coarse_mono.hpp": {
+      "sha256": "dfb6e1634d76100470a86cd809ff620befecb9514a2543c43b9fcf9f3a6baaaa"
+    },
+    "boys/include/boys/boys_coefficients_f32_coarse_rat.hpp": {
+      "sha256": "1780b14f4382ccab07b469b192ae6868be14cdddf83615ab4c2422c022c56e3c"
+    },
+    "boys/include/boys/boys_coefficients_f32_narrow_cheb.hpp": {
+      "sha256": "06ac9c5ee5fe2bba3ae0ec5a228d412f4e3dccf5c6d41af5cb7e63b48901a6d8"
+    },
+    "boys/include/boys/boys_coefficients_f32_narrow_mono.hpp": {
+      "sha256": "fd227bc0ee723996381272d6ad26ae28622e1066c0d6284bf2f90ff66a7d8d83"
+    },
+    "boys/include/boys/boys_coefficients_f32_narrow_rat.hpp": {
+      "sha256": "09fff507f0907fe2836e551886497c6512e31a77986c8f18578ffd6e7c37c331"
+    },
+    "boys/include/boys/boys_coefficients_f32_uniform_cheb.hpp": {
+      "sha256": "731e119838f2ba6b9d6b91bb99f25164ad000573cebae4e65715fd2e6d5417e6"
+    },
+    "boys/include/boys/boys_coefficients_f32_uniform_mono.hpp": {
+      "sha256": "e59636a52a711b26dd1546f34fabac8d16e17ad50de7aa100664fa8fa549eaac"
+    },
+    "boys/include/boys/boys_coefficients_f32_uniform_rat.hpp": {
+      "sha256": "e5090fbe19893682ec7b9c7b983ab3c8090170c3626299e6cbd7e71874f1002d"
+    },
+    "boys/include/boys/boys_cuda.hpp": {
+      "sha256": "d4bc6709354248aa6bcc79a7a4d91545cdfcd4b75de8bdf6575934d803f4666b"
+    },
+    "boys/include/boys/boys_cuda_arithmetic.hpp": {
+      "sha256": "2ee24a318cbea459c24dc708da2a6d72ca81bc8a818f33ee35002ac88499284d"
+    },
+    "boys/include/boys/boys_cuda_device.hpp": {
+      "sha256": "78905861728a90ae632f52bcee0c2b071187cfb4be5cb84be05f268af4178c9e"
+    },
+    "boys/include/boys/boys_cuda_launch.hpp": {
+      "sha256": "664c716b422bf18185243e64832d39e8edd25ec2b754ee2f9d4916ca81271be4"
+    },
+    "boys/include/boys/boys_cuda_muladd.hpp": {
+      "sha256": "6fb0d300629adacda0fd51978cc4ca566521137d7dacf1edc8ff5e0f12a7a63d"
+    },
+    "boys/include/boys/boys_cuda_options.hpp": {
+      "sha256": "d16dce5a29d93eea6ce419d66d88528af64338e40d2b0ecde2cf9fd5c3e84bed"
+    },
+    "boys/include/boys/boys_cuda_policy.hpp": {
+      "sha256": "aad6d345788e824c60e637b335589fc11c5421656417825431e2812dc159b42c"
+    },
+    "boys/include/boys/boys_cuda_probe.hpp": {
+      "sha256": "6e3c0eb667e58980883f7e72f0a2729cda702cb4476c8d1a5a00736472827866"
+    },
+    "boys/include/boys/boys_decl.hpp": {
+      "sha256": "1c15d22a7cd09f2b52d4eeca4829fe09993766a6071862d4c5bd32464b56f862"
+    },
+    "boys/include/boys/boys_default_tables.hpp": {
+      "sha256": "74388aeabc3754d5506f7ff89134fe0da0dab3d5016f607b21f5ddef029b66b1"
+    },
+    "boys/include/boys/boys_device_tables.hpp": {
+      "sha256": "058e6b66cf68ed4412a163f8f6875e93da37bb7f98df3be373ea17eeb4f750ea"
+    },
+    "boys/include/boys/boys_effective_degrees.hpp": {
+      "sha256": "32eef040a83bd59c77e975f15d5f30f0c85dd68148842726f9f03f2e4e34d66b"
+    },
+    "boys/include/boys/boys_fit32.hpp": {
+      "sha256": "a38477d09fa892cccd59ab3b709870b5fcb1f4f5884b0d23a8e6b82f7c1a0a6e"
+    },
+    "boys/include/boys/boys_fit_chebyshev.hpp": {
+      "sha256": "1461322534274e1c1c8e82b7cec7deb956161a6e2c492f5d91a03881868fcce9"
+    },
+    "boys/include/boys/boys_fit_core.hpp": {
+      "sha256": "71861ec3f857acebe5257444ef4b0e49ec01645d3a9dfff034c82311ae90897e"
+    },
+    "boys/include/boys/boys_fit_rational.hpp": {
+      "sha256": "66ad9630f2362ee89c4c83129017f5e8d1fa8d133b2efddd096ad82fc3330773"
+    },
+    "boys/include/boys/boys_fit_uniform.hpp": {
+      "sha256": "4719e11f65c3c5bf09732c1df45bcd1ca676a1da3c7635b2e6f96c78f6b4e59f"
+    },
+    "boys/include/boys/boys_flat_grid.hpp": {
+      "sha256": "8ae70fbdc9b42d8a52bb19badacd3379155454036d5dd700f86ba59c64c0d43d"
+    },
+    "boys/include/boys/boys_impl.hpp": {
+      "sha256": "05ac06e00b33fdb019bb48940634c4aea9da8a162acfdc611645ba25ebb105b5"
+    },
+    "boys/include/boys/boys_orders_lanes.hpp": {
+      "sha256": "6e40fcd69797d398ff69b03c42d29727693e5ecd0d8dec2877f8542d45710a46"
+    },
+    "boys/include/boys/boys_probe.hpp": {
+      "sha256": "8141bb577ab12d58dd9e74f433e9422ab6143af47241ed4df2511822387cb467"
+    },
+    "boys/include/boys/boys_span.hpp": {
+      "sha256": "d0b05554d34dd695aaa3ae6dd500a623ae284429212c8b1a28de014e556194d4"
+    },
+    "boys/include/boys/boys_transform.hpp": {
+      "sha256": "d6351fcf238309cccf97780364acb7a09620fadda7a3830eafb344956a5de602"
+    },
+    "boys/include/boys/dependent_false.hpp": {
+      "sha256": "f30dfa5f9ba90ed0fb86d7ba9eaea61cf6d09e169a3d6901b99521c7745ed781"
+    },
+    "boys/include/boys/f16.hpp": {
+      "sha256": "e13fd05586aa73c8cb3da44d12ee55462dbfe5c3b1acaefd700185fba87fd3df"
+    },
+    "boys/include/boys/half2.hpp": {
+      "sha256": "ef8646b1b73a2e37e647beb2e4a3b0f43f3d636787e459fb4be75403d179ff91"
+    },
+    "boys/include/boys/isa_tiers.hpp": {
+      "sha256": "fb86c9e7ae793e32a8dee31ea4c48c8c93f2ede00df9ec62659506e7d47e4772"
+    },
+    "boys/include/boys/kernels.hpp": {
+      "sha256": "f3377544732eb39b30b4a98e4c3de006fb6f66d7aaadcde2c29b96df3603fccb"
+    },
+    "boys/include/boys/policy.hpp": {
+      "sha256": "7d2c49c10e01ad3b78c564cbb346a1b870ca64f351d2ba31df0de0d9a60e2f4b"
+    },
+    "boys/include/boys/status.hpp": {
+      "sha256": "2043500fdaa01f3ed411ce188d5ec89946108a4fe9e6fa0ed839e89e66759df7"
+    },
+    "boys/include/boys/version.hpp": {
+      "sha256": "02e6312dfa1a91b07abe98843c484f2331abb8f3f48b313fb6a15722c9067da9"
+    },
+    "boys/src/boys.cpp": {
+      "sha256": "e25ec03302ed831a384e19e8cda29af98e330f79f6dc5f7b82ae87c014a822b9"
+    },
+    "boys/src/boys_backend_registry.hpp": {
+      "sha256": "105ed219333bfad46b783a900e12d00e3568915e9c66e4b87870c360baed4997"
+    },
+    "boys/src/boys_backend_simd.hpp": {
+      "sha256": "498d7d34020c26a9e4e25a4153c861dc528ba1898a1067b73369c10e69b5f941"
+    },
+    "boys/src/boys_c.cpp": {
+      "sha256": "b341913156b5bf43480a3613e6c61e535f9fadd1d827264cd745592c887b95d2"
+    },
+    "boys/src/boys_cuda.cpp": {
+      "sha256": "28e90b5e57cfb1f09d3dca2b6745438d9adf08814bc96509e900549f3dc8f2d0"
+    },
+    "boys/src/boys_cuda.cu": {
+      "sha256": "87a809a344e4dc8a6be1e83c9e335c2763ea5f729420736260657e7e4b903d41"
+    },
+    "boys/src/boys_cuda_probe.cpp": {
+      "sha256": "f9a7334c2716a294f1f33d315497233a95abfbe19b54a8978de5274062a103e8"
+    },
+    "boys/src/boys_cuda_probe_entries.hpp": {
+      "sha256": "0769f883c56ae2e5012c5a362fdf80bd8a7c4026c9af1a7242aa311735355a39"
+    },
+    "boys/src/boys_cuda_probe_kernels.cu": {
+      "sha256": "306c19f21e83d4dfdc3d8c8dcb29b5a4084beaf860e5557de6ca43536f3efa7d"
+    },
+    "boys/src/boys_defaults.cpp": {
+      "sha256": "a7b5812bd34501d9d351882635ab93f5a6c5cc2262605450aae420e71b01f37e"
+    },
+    "boys/src/boys_orders_simd.cpp": {
+      "sha256": "84a24261efb5c812652e6270596b76d2fa6920041578f25391acbe2915f484e4"
+    },
+    "boys/src/boys_orders_simd.hpp": {
+      "sha256": "53491e27f58e10db31cf3dbc149b2ef62a904a696941153a4743f93c9bf05f95"
+    },
+    "boys/src/boys_probe.cpp": {
+      "sha256": "7e6f10a04eb7b525f757ba511c50f05f6b7ceea93fbe8abc3bf40d0463091bba"
+    },
+    "boys/src/boys_simd.cpp": {
+      "sha256": "7b71c4d416c8f5e0afa31827ed4439db8cf8f49a932f25b497c22792fe6b1ac8"
+    },
+    "boys/tests/data/boys_accuracy_gate_reference.csv": {
+      "sha256": "a2a667ce4d8bfdba12bd902d76e1e1bc1ee607965ca74d7da6a49aaf2ddcd678"
+    },
+    "boys/tests/data/boys_reference.csv": {
+      "sha256": "e25cf343be108c21842f5590aa98cf73d32faa6bf772862cd8afcf39772f17e8"
+    },
+    "boys/tools/gen_boys_accuracy_gate_reference.py": {
+      "sha256": "ba8a8547ac8286510fce60d30b006aa9490e62ea4229791d51ef94fe1bba1c50"
+    }
+  }
+}

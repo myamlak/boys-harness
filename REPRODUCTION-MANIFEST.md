@@ -1,33 +1,69 @@
 # Reproduction manifest
 
-Harness release `v1.0.35` (`VERSION`). Kernel release boys `v5.3.1`. This file
+Harness release `v1.0.36` (`VERSION`). Kernel release boys `v5.3.1`. This file
 names, for Papers A, B and C, the commands that reproduce or verify each
 deposited record, the environment each record was made in, which records are
 reproduced and which are only re-serialised, and what the deposit does not
-carry. Commands run from the repository root unless a working directory is
-stated. `<boys>` is a checkout of the kernel at the tag named; `<harness>` is
-this repository.
+carry.
 
-The papers cite harness `v1.0.34` today and re-pin to `v1.0.35` at submission.
-The records carried from `v1.0.34` are unchanged except two corrected digest
-rows in `amplification-sweeps/certified-bound/v531-check/`, recorded there and
-in `boys-crossover/exact-tag-replay/`.
+The papers cite harness `v1.0.36` at submission; the tag is cut from the merge
+commit.
+The recorded values carried from `v1.0.35` are unchanged. This release adds
+the held-out exact-tag replay at `amplification-sweeps/held-out-v531/` and the
+held-out self-check's TeX fixture at `tables/prediction-record.tex`.
+
+## Paths
+
+Every command below runs from the root of this repository (the `boys-harness`
+clone) unless its block names another working directory. The two clones and
+the tag checkouts:
+
+```sh
+git clone --branch v5.3.1 https://github.com/myamlak/boys.git boys
+git clone --branch v1.0.36 https://github.com/myamlak/boys-harness.git boys-harness  # (cut after this deposit merges)
+cd boys-harness
+git -C ../boys worktree add ../boys-v5.1.1 v5.1.1
+git -C ../boys worktree add ../boys-v5.2.5 v5.2.5
+git -C ../boys worktree add ../boys-v5.2.6 v5.2.6
+```
+
+The blocks use these names. In `sh` set them with `export`; in `cmd.exe` set
+the same names with `set NAME=value`.
+
+| Name | Value | What it is |
+| --- | --- | --- |
+| `BOYS` | `$PWD/../boys` | the `v5.3.1` tag checkout |
+| `BOYS_V511` | `$PWD/../boys-v5.1.1` | the `v5.1.1` tag worktree |
+| `BOYS_BUILD` | `$PWD/../boys-build` | a build directory outside the `boys` tree |
+| `HARNESS` | `$PWD` | this repository |
+| `BOOST_SRC` | path to the Boost.Math 1.92.0 source tree | external, pinned by archive SHA-256 |
+| `CRLIBM_SRC` | path to the crlibm 1.0beta5 source tree | external, pinned by archive SHA-256 |
+| `RUN` | a fresh directory for a run's outputs, e.g. `$PWD/run/certificates` | never reuse a deposited `results/` directory |
+
+The paper-tree inputs that `extract_and_verify.py` reads are three files, and
+all three are deposited; the stand-in is built from the deposit in the Paper A
+block below, so no manuscript checkout is needed. Commands that write into the
+deposit are a record's own regeneration commands; run them in a copy if the
+deposit must stay unchanged.
 
 ## Identity
 
 | Item | Value |
 | --- | --- |
-| Harness | tag `v1.0.35`, `VERSION` 1.0.35; the tag is the archival identifier and names the release commit |
+| Harness | tag `v1.0.36`, `VERSION` 1.0.36. The tag is annotated and names the release commit. A file inside that commit cannot carry the tag object that points to it: resolve the tag object, commit and tree with `git rev-parse v1.0.36`, `git rev-parse 'v1.0.36^{}'` and `git rev-parse 'v1.0.36^{tree}'`. The preceding release, `v1.0.35`, is tag object `ecf8a572f247663623e0ed7a924a3b549b128f41`, commit `b8081d3650799877a6f9f76c46e22fc4744fdcb4`, tree `35b8a38edf2fa2cd573b5803f176621a5e444d9a`. |
 | Kernel | boys `v5.3.1`, tag object `d1e63f71c6f2501aecc6340e31216a42c2a390b9`, commit `2f83e40a6504368b7b2f13682e29b4f24ab2a40c`, tree `344df3ecc1c13122f59a8a98a78afbff3c34337b` |
 | Earlier kernel revisions named by records | v5.0.0 (first and second sweeps, bridge provenance); v5.1.1 (9,353-argument record, seed-spliced, held-out, Chebyshev recount); v5.2.5 and v5.2.6 (certificate; Paper C core and sensitivity sweeps); v5.3.1 (exact-tag replay, accuracy gate, coefficient identity) |
 
-```sh
-git clone --branch v5.3.1 https://github.com/myamlak/boys.git boys
-git clone --branch v1.0.35 https://github.com/myamlak/boys-harness.git boys-harness
-```
-
 Each record's own `provenance.json` names the revision it was measured at. That
 name is the record's provenance, not a current reference.
+
+Recorded SHA-256 values are of the bytes the measurement machine read. Several
+deposited CSVs were committed with LF line endings while the measurement tree
+carried CRLF, so a fresh clone's copy of one of those files can hash
+differently while parsing identically. The checks that compare values parse
+the files; a digest comparison uses the record's own `digests.txt` list, which
+is the measurement bytes. The R4 record's README names the three input files
+this affects.
 
 ## Environments
 
@@ -37,66 +73,111 @@ name is the record's provenance, not a current reference.
 | B | MSVC 14.5 (Visual Studio 18) for the Boost gate, C++17; gcc 15.2 on WSL Ubuntu for crlibm; C++23 and CMake 3.20 or newer for the composition audit | Python 3.10 or newer; mpmath 1.4.1; gmpy2 2.3.1 linked to MPFR 4.2.2 | the CUDA source was inspected, not run on a named device; no GPU measurement |
 | C | none for the counts | Python 3.14.7 (MSC v.1944, 64-bit); mpmath 1.4.1; numpy 2.5.2; scipy 1.18.1; baryrat 2.1.2; gmpy2 2.3.1; `math.fma` present | none |
 
-The Python records run on Windows 11 (10.0.26200) on AMD64. Unless a record's
-own README says otherwise (the certificate's commands use `python -I`), run the
-scripts without `python -I`: isolated mode hides the user-site `mpmath`.
+The records were made with the packages above. Install the Python stack into
+the interpreter the commands use:
+
+```sh
+py -3 -m pip install mpmath==1.4.1 numpy==2.5.2 scipy==1.18.1 baryrat==2.1.2
+```
+
+`gmpy2` 2.3.1 is installed against MPFR 4.2.2. The Python records run on
+Windows 11 (10.0.26200) on AMD64.
+
+A command that uses `python -I` ignores the user site: its packages must be in
+the interpreter's own site-packages, so install without `--user`, or run the
+script without `-I`. The certificate commands and the Paper B recount use
+`python -I`; every other command here runs without it.
 
 ## Paper A
 
 Records: `amplification-sweeps/` (the two sweeps, certificate, strengthening,
-seed-spliced, held-out, surrogate-control, apriori-bound, workload-pair),
-`chemistry-bridge/`, and `boys-crossover/exact-tag-replay/` and
+seed-spliced, held-out, held-out-v531, surrogate-control, apriori-bound,
+workload-pair), `chemistry-bridge/`, and `boys-crossover/exact-tag-replay/` and
 `boys-crossover/r4-and-9353/`.
 
-Build and run a sweep from its directory (MSVC form):
+Build and run a sweep from its directory (MSVC form): `product-amplification/`
+holds `sweep1.cpp` and `amplification-form/` holds `sweep2.cpp`.
 
 ```bat
-cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I<boys>\include sweep1.cpp /Fe sweep1.exe
+cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I"%BOYS%\include" sweep1.cpp /Fesweep1.exe
 python grid.py --out data/grid.csv
 python ../common/reference.py --grid data/grid.csv --out data/reference.csv
 sweep1.exe
 python analyze.py --tree .
 ```
 
-The exact-tag replay rebuilds both drivers against the `v5.3.1` headers and
-compares every produced record with the deposited one. From
-`boys-crossover/exact-tag-replay`:
-
-```bat
-cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I<boys>\include /Fe build\sweep1.exe <harness>\amplification-sweeps\product-amplification\sweep1.cpp
-cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I<boys>\include /Fe build\sweep2.exe <harness>\amplification-sweeps\amplification-form\sweep2.cpp
-build\sweep1.exe --grid <harness>\amplification-sweeps\product-amplification\first-sweep-9353\sweeps\product_amplification\data\grid.csv --cells run\cells-9353.csv --admission run\admission-9353.csv --gain run\replica_gain-9353.csv --batch full
-build\sweep1.exe --grid <harness>\amplification-sweeps\product-amplification\data\grid.csv --cells run\cells-9352.csv --admission run\admission-9352.csv --gain run\replica_gain-9352.csv --batch full
-build\sweep2.exe --grid <harness>\amplification-sweeps\amplification-form\data\grid.csv --fits <harness>\amplification-sweeps\amplification-form\data\fits.csv --paths run\paths.csv --cells run\cells-sweep2.csv --admission run\admission-sweep2.csv
-```
-
-The certificate record's commands, from `amplification-sweeps/certified-bound`:
+Four amplification records are stored xz-compressed. From
+`amplification-sweeps/`, decompress them before running the analysis:
 
 ```sh
-python -I code/replay.py --kernel <boys> --both-downward
-python -I code/certify.py --kernel <boys> --sweep ../amplification-form \
-    --model-record inputs/model-record --exp-bits exp/exp_bits.txt --out <run>
+xz -dk amplification-form/results/paths.csv.xz \
+      product-amplification/data/reference.csv.xz \
+      product-amplification/results/cells.csv.xz \
+      product-amplification/results/replica_gain.csv.xz
+```
+
+The exact-tag replay rebuilds both drivers against the `v5.3.1` headers and
+compares every produced record with the deposited one. From
+`boys-crossover/exact-tag-replay`, create the two output directories first
+(the repository tracks no files beneath them):
+
+```bat
+mkdir build run
+cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I"%BOYS%\include" /Febuild\sweep1.exe "%HARNESS%\amplification-sweeps\product-amplification\sweep1.cpp"
+cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I"%BOYS%\include" /Febuild\sweep2.exe "%HARNESS%\amplification-sweeps\amplification-form\sweep2.cpp"
+build\sweep1.exe --grid "%HARNESS%\amplification-sweeps\product-amplification\first-sweep-9353\sweeps\product_amplification\data\grid.csv" --cells run\cells-9353.csv --admission run\admission-9353.csv --gain run\replica_gain-9353.csv --batch full
+build\sweep1.exe --grid "%HARNESS%\amplification-sweeps\product-amplification\data\grid.csv" --cells run\cells-9352.csv --admission run\admission-9352.csv --gain run\replica_gain-9352.csv --batch full
+build\sweep2.exe --grid "%HARNESS%\amplification-sweeps\amplification-form\data\grid.csv" --fits "%HARNESS%\amplification-sweeps\amplification-form\data\fits.csv" --paths run\paths.csv --cells run\cells-sweep2.csv --admission run\admission-sweep2.csv
+```
+
+The certificate record's commands, from `amplification-sweeps/certified-bound`.
+`RUN` must be a fresh directory:
+
+```sh
+mkdir -p "$RUN"
+python -I code/replay.py --kernel "$BOYS" --both-downward
+python -I code/certify.py --kernel "$BOYS" --sweep ../amplification-form \
+    --model-record inputs/model-record --exp-bits exp/exp_bits.txt --out "$RUN"
 ```
 
 Compare the produced digests with `boys-crossover/exact-tag-replay/digests.txt`.
 The identity check, from `boys-crossover/exact-tag-replay`:
 
 ```sh
-python compare_identity.py <v5.3.1-tree> <harness>/amplification-sweeps/certified-bound/v531-check/digests.txt <v5.1.1-tree>
+python compare_identity.py "$BOYS" "$HARNESS/amplification-sweeps/certified-bound/v531-check/digests.txt" "$BOYS_V511"
 ```
 
 Expected: measured column 45, v5.3.1 column 76, v5.1.1 tag tree 45. The two
-input lists, from `boys-crossover/r4-and-9353`:
+input lists, from `boys-crossover/r4-and-9353`: the script's second argument is
+the paper tree, and the three files it reads are deposited, so build the
+stand-in first.
 
 ```sh
-python extract_and_verify.py <boys-v5.3.1-tree> <paper-tree>/papers/boys-crossover <harness>/amplification-sweeps
+mkdir -p paper-inputs/sweeps/amplification_form/data paper-inputs/sweeps/product_amplification/data
+cp "$HARNESS/amplification-sweeps/amplification-form/data/grid.csv" \
+   "$HARNESS/amplification-sweeps/amplification-form/data/reference.csv" \
+   paper-inputs/sweeps/amplification_form/data/
+cp "$HARNESS/amplification-sweeps/product-amplification/first-sweep-9353/sweeps/product_amplification/data/grid.csv" \
+   paper-inputs/sweeps/product_amplification/data/grid.csv
+python extract_and_verify.py "$BOYS" paper-inputs "$HARNESS/amplification-sweeps"
 ```
 
 The three paper-tree inputs are the same bytes deposited as
 `amplification-sweeps/amplification-form/data/{grid,reference}.csv` and
 `amplification-sweeps/product-amplification/first-sweep-9353/sweeps/product_amplification/data/grid.csv`.
-The chemistry bridge rebuilds its probe inside the host framework tree (not
-deposited); `chemistry-bridge/scripts/commands.md` gives the exact commands, and
+The script writes its outputs beside itself; run it in a copy if the deposit
+must stay unchanged.
+
+The chemistry bridge rebuilds its probe inside the host framework tree, which
+is not deposited. The record names the host tree `bladawiec` at commit
+`ac8540b7c23d3818c9e67f8d59bf6cfbbef7fa0d` or
+later, and pins the water fixture by SHA-256
+`ef2262e4d008f8e96bc2b596dc35be8926f8a1d3a449cd09399b729713e2086c`.
+`chemistry-bridge/scripts/commands.md` gives the exact commands, including the
+cc-pVTZ arms (`qcx-bridge-probe.exe <out>/ccpvtz-default data/basis/cc-pvtz`,
+with `<out>` a fresh output directory) that regenerate the undeposited dense
+tensors and argument streams; `benzene-pvdz/commands.md` gives the benzene arm
+(`qcx-bridge-probe.exe <out-prefix> data/basis/cc-pvdz benzene`).
 `scripts/analyze.py`, `benzene-pvdz/compare_arms.py` and
 `scripts/above_b2_max.py` regenerate its summaries from the deposited streams.
 
@@ -104,8 +185,9 @@ Reproduced and re-serialised:
 
 - Reproduced byte for byte at `v5.3.1`: the three sweep records (9,353, the
   designed 9,352, and the second sweep), their admission and
-  replica-gain/path records, and the four certificate outputs (exact-tag
-  replay).
+  replica-gain records, and the four certificate outputs (exact-tag
+  replay). The second sweep's path record is compared by digest only: it is
+  291,827,555 bytes and is stored as a digest, not as a file.
 - Reconstructed and verified against the deposits: the 73-argument R4 list
   (2,409 cells, worst difference `4.975492884e-46` at the deposited cell) and
   the 9,353rd argument.
@@ -114,7 +196,9 @@ Reproduced and re-serialised:
   surrogate-control, apriori-bound and workload-pair records, and the
   chemistry-bridge water and benzene records. Their analysis tables and
   summaries are regenerated from the deposited records.
-- `run/paths.csv` (291,827,555 bytes) is stored as a digest only.
+- `run/paths.csv` (291,827,555 bytes) is stored as a digest only, so
+  byte-for-byte reproduction cannot be a comparison against a deposited file:
+  compare its SHA-256 with `boys-crossover/exact-tag-replay/digests.txt`.
 
 Missing artifacts:
 
@@ -123,9 +207,9 @@ Missing artifacts:
   be re-applied or checked.
 - The host-engine geometry: the water geometry is stated (O at the origin; the
   two H at `(±1.430428808474167, 1.107157044080814, 0)` bohr) and the host
-  fixture is identified by SHA-256 `ef2262e4d008f8e96bc2b596dc35be8926f8a1d3a449cd09399b729713e2086c`,
-  but the host framework tree that built the probe and the fixture's commit are
-  not deposited.
+  fixture is identified by SHA-256
+  `ef2262e4d008f8e96bc2b596dc35be8926f8a1d3a449cd09399b729713e2086c`,
+  but the host framework tree that built the probe is not deposited.
 - The cc-pVTZ and benzene dense tensors and argument streams: not deposited;
   the probe regenerates them (about twenty minutes per tensor).
 
@@ -148,8 +232,8 @@ Commands:
 ```sh
 cd accuracy-claim-audit
 python headline_numbers.py
-python tools/check_registration.py --boys <boys>
-cd recount && python -I recount.py --boost <boost-1.92.0> --crlibm <crlibm-1.0beta5> \
+python tools/check_registration.py --boys "$BOYS"
+cd recount && python -I recount.py --boost "$BOOST_SRC" --crlibm "$CRLIBM_SRC" \
     --registry registry/counts.json --out counts.json
 ```
 
@@ -165,8 +249,31 @@ powershell -File run_measurement.ps1 -QuietMachine
 
 On Linux or WSL use `bash run_measurement.sh --quiet-machine --reference results/reference.csv --arguments-reference results/arguments.csv`.
 `signed_interaction.py`, `synthetic_surface.py` and `figure-ratio.json`
-recompute from `records/cells/` and the deposited reference. The accuracy gate
-runs as part of the `boys` test invocation at `v5.3.1`.
+recompute from `records/cells/` and the deposited reference.
+
+The accuracy gate replay is separate from `check_registration.py`. From the
+`boys` checkout, configure, build and run the gate, then hold the committed
+run to the tree by content:
+
+```sh
+cmake -S "$BOYS" -B "$BOYS_BUILD" -DCMAKE_BUILD_TYPE=Release \
+    -DBOYS_BUILD_TESTS=ON -DBOYS_BUILD_C_API=ON -DBOYS_BUILD_PROBE=ON -DBOYS_FP16_SEAM=ON
+cmake --build "$BOYS_BUILD" --target boys-accuracy-gate --config Release
+ctest --test-dir "$BOYS_BUILD" -C Release -R '^boys-accuracy-gate$' --output-on-failure
+python "$BOYS/tools/check_recorded_run.py" --run "$BOYS/tests/data/boys_accuracy_gate_run.txt"
+```
+
+The four options are the top-level defaults; naming them makes the build the
+one the record describes. `--config Release` and `-C Release` name the
+configuration for a multi-config generator; a single-config generator ignores
+them after `-DCMAKE_BUILD_TYPE=Release`. The gate runs against the committed
+reference grids `tests/data/boys_accuracy_gate_reference.csv` (25 significant
+digits) and `tests/data/boys_reference.csv` (45 digits), both in the `boys`
+tree.
+`check_recorded_run.py` holds `tests/data/boys_accuracy_gate_run.txt` to the
+tree's version and input digests; it does not run the gate. The committed run
+is a CUDA build's, and a build without the device lanes certifies the host
+lanes alone: the gate prints its device-lane count and the shortfall.
 
 Reproduced and re-serialised:
 
@@ -204,11 +311,10 @@ Records: `coefficient-count-sweep/` (the core, ladder, stability,
 re-certification, second-edge, second-instance, F1, third-edge, shipped-seed,
 Chebyshev recount, 60-digit control and strong-optional records).
 
-Commands:
+Commands, from `coefficient-count-sweep`:
 
 ```sh
-cd coefficient-count-sweep
-python count_sweep.py --static --out static_counts.json
+python count_sweep.py --static --out "$RUN/static_counts.json"
 python records/chebyshev_recount/recount_cheb.py --out records/chebyshev_recount/recount-run-v5.1.1.json \
     --verify records/chebyshev_recount.json --report records/chebyshev_recount/verify-record-new.json \
     --metadata records/chebyshev_recount/run-metadata-new.json
@@ -218,12 +324,44 @@ cd ../strong-optional && python root-isolation/root_isolation.py --selftest \
 ```
 
 New measurements use the portable `count_sweep.py`; the recorded rows use
-`count_sweep_recorded.py`. To run a recorded driver, place
-`count_sweep_recorded.py` beside it as `count_sweep.py`; the recorded revision
-allows `k <= 12` and the degree modes the portable revision does not.
-`stability_save_verify.py --source records/core/sweep_rel_1e-13.json records/core/sweep_abs_5e-14.json`
-runs the stability pass against the deposited records. The 60-digit control
-README gives the per-cell invocations and the reproduction protocol.
+`count_sweep_recorded.py`. The recorded rows are 135: 40 in
+`records/core/sweep_all.json`, 20 in `records/core/sweep_rel_1e-13.json`, 20 in
+`records/core/sweep_abs_5e-14.json`, 15 in `records/core/sweep_rel_1e-14.json`
+and 40 in `records/ladder/sweep_all.json`. The four core-side files were
+re-measured at `v5.2.5`; the ladder file was not re-run.
+
+To run a recorded driver, place `count_sweep_recorded.py` beside it as
+`count_sweep.py`; the recorded revision allows `k <= 12` and the degree modes
+the portable revision does not. The drivers differ in how they take the kernel
+root: `count_sweep_recorded.py` and `recertify_ladder.py` take `--boys-root`;
+`rational_unrounded_control.py` takes `--boys`; `cold_ladder.py` and
+`stability_save_verify.py` use `count_sweep.DEFAULT_BOYS` and have no override;
+`rational_control_symmetric.py` uses its own `RAT_BOYS` and `CHEB_BOYS`
+constants. Several read the measurement tree's `results*/` layout; the deposit
+supplies the records and the `--source` options, and `coefficient-count-sweep/README.md`
+("Harness revisions") maps each driver.
+
+The stability pass runs against the deposited records:
+
+```sh
+python stability_save_verify.py --source records/core/sweep_rel_1e-13.json records/core/sweep_abs_5e-14.json
+```
+
+The 60-digit control README gives the per-cell invocations and the reproduction
+protocol. The Chebyshev recount's identities are in
+`records/chebyshev_recount/README.md`: the corrected generator
+`gen_boys_coefficients_v5.1.1.py` (SHA-256
+`11185fba03abe74d01b30f093818f48972eb8d88413d446b505198b869115180`), the
+pre-repair control `gen_boys_coefficients_v5.0.0.py` (SHA-256
+`ccc8b011f4170ce0b530bc4781b09670f42839fa18caaa38ea7d3a9ea9ba9bb4`), both
+deposited under `records/chebyshev_recount/generators/`, and the coefficient
+header the recount read (SHA-256
+`8ce5e17157a4be5f621d695f377094d212cb839732e278d47f23aa225b4d9204`). The four
+core-side records were re-measured at `v5.2.5`, whose header is
+`d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00` and whose
+generator (not deposited) is
+`1d8b88ac30c757138a4c87219d68b56756c175c36230818b2360dc0bf7bdd373`; each
+record's `meta` block names both.
 
 Reproduced and re-serialised:
 
@@ -234,9 +372,15 @@ Reproduced and re-serialised:
   name.
 - Re-serialised: the ladder record is the re-serialised original and is not
   re-run; the other historical records are content-equivalent after
-  re-serialisation. The `baryrat` 2.1.2 records are copied, not regenerated
-  (the solver is not deposited). The 135 original core and ladder rows are not
-  re-run by this deposit.
+  re-serialisation. The re-serialisation is enumerated file by file in
+  `records/chebyshev_recount/paper-record-digests.tsv`, with the comparison
+  method in the `.md` beside it: the measurement-tree originals use CRLF, the
+  deposit stores LF, and rewriting each LF as CRLF reproduces the original
+  digest exactly. The four core-side files were later re-measured at `v5.2.5`
+  and are not content-equivalent to the originals; the ladder file is still the
+  re-serialised original. The `baryrat` 2.1.2 records are copied, not
+  regenerated (the solver is not deposited). The 135 original core and ladder
+  rows are not re-run by this deposit.
 
 Missing artifacts:
 
@@ -260,7 +404,17 @@ certification beyond that is not claimed.
 
 ## Consumers
 
-The paper-side gates that consume these records are `python tools/check_paper_numbers.py`
-in Papers A and C, `python tools/build_ledger.py` in Paper C, and
-`python tools/check_source_facts.py --boys <boys>` in Paper B. They live in the
-manuscript workspaces and are not part of this deposit.
+The paper-side gates that consume these records are manuscript tools, not part
+of this deposit. Their paths and SHA-256 as of this release:
+
+| Paper | Tool | SHA-256 |
+| --- | --- | --- |
+| A | `tools/check_paper_numbers.py` | `25867469f6eb41e8cf824ec9f1d0ba6b466dafd892b162f764bb75bbb0079c39` |
+| B | `tools/check_source_facts.py --boys "$BOYS"` | `2cd153750ac5ad9340ee340cb9eae6ba4398453187ddd6be98f9ca51849b7a7b` |
+| C | `tools/check_paper_numbers.py` | `1e7bfe852e16b303921eb28b8dbb1b29d1efa1a672a3df886927308e07268e73` |
+| C | `tools/build_ledger.py` | `1b26b3a69abd62d955bb764b32aebaea226ed9595f7432df644f55388ac79644` |
+
+They read each paper's own tree and its `tools/ledger.json`; an outsider
+cannot run them without that workspace. The deposited records they check are
+named above. The digest names the revision this manifest was written against,
+not a file in this deposit.
