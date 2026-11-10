@@ -6,7 +6,8 @@ deposited record, the environment each record was made in, which records are
 reproduced and which are only re-serialised, and what the deposit does not
 carry.
 
-The papers cite harness `v1.0.36`.
+The papers cite harness `v1.0.36` at submission; the tag is cut from the merge
+commit.
 The recorded values carried from `v1.0.35` are unchanged. This release adds
 the held-out exact-tag replay at `amplification-sweeps/held-out-v531/` and the
 held-out self-check's TeX fixture at `tables/prediction-record.tex`.
@@ -19,7 +20,7 @@ the tag checkouts:
 
 ```sh
 git clone --branch v5.3.1 https://github.com/myamlak/boys.git boys
-git clone --branch v1.0.36 https://github.com/myamlak/boys-harness.git boys-harness
+git clone --branch v1.0.36 https://github.com/myamlak/boys-harness.git boys-harness  # (cut after this deposit merges)
 cd boys-harness
 git -C ../boys worktree add ../boys-v5.1.1 v5.1.1
 git -C ../boys worktree add ../boys-v5.2.5 v5.2.5
@@ -168,8 +169,8 @@ The script writes its outputs beside itself; run it in a copy if the deposit
 must stay unchanged.
 
 The chemistry bridge rebuilds its probe inside the host framework tree, which
-is not deposited. The record names the host tree `bladawiec` at branch
-`myamlak/phase2-pr3`, at commit `ac8540b7c23d3818c9e67f8d59bf6cfbbef7fa0d` or
+is not deposited. The record names the host tree `bladawiec` at commit
+`ac8540b7c23d3818c9e67f8d59bf6cfbbef7fa0d` or
 later, and pins the water fixture by SHA-256
 `ef2262e4d008f8e96bc2b596dc35be8926f8a1d3a449cd09399b729713e2086c`.
 `chemistry-bridge/scripts/commands.md` gives the exact commands, including the
