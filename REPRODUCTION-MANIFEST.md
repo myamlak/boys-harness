@@ -56,6 +56,14 @@ deposit must stay unchanged.
 Each record's own `provenance.json` names the revision it was measured at. That
 name is the record's provenance, not a current reference.
 
+Recorded SHA-256 values are of the bytes the measurement machine read. Several
+deposited CSVs were committed with LF line endings while the measurement tree
+carried CRLF, so a fresh clone's copy of one of those files can hash
+differently while parsing identically. The checks that compare values parse
+the files; a digest comparison uses the record's own `digests.txt` list, which
+is the measurement bytes. The R4 record's README names the three input files
+this affects.
+
 ## Environments
 
 | Paper | Compilers and toolchains | Python and numerical stack | CUDA |
