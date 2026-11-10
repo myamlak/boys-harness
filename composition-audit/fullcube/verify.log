@@ -1,0 +1,5 @@
+fused fp64: tensor 0/44 direct 1/44 exact 0/44 (summary 0/1), exact max order-3 share 0.040896863 at n=4, x=4; 8.0 s
+fused fp32: tensor 4/44 direct 5/44 exact 4/44 (summary 4/5), exact max order-3 share 0.39506974 at n=9, x=17.3; 13.3 s
+separate fp64: tensor 0/44 direct 1/44 exact 0/44 (summary 0/1), exact max order-3 share 0.041351465 at n=4, x=4; 8.4 s
+separate fp32: tensor 4/44 direct 6/44 exact 4/44 (summary 4/6), exact max order-3 share 0.3872549 at n=9, x=17.3; 12.2 s
+wrote C:\Users\myaml\dev\papers-harness-repo\composition-audit\fullcube\verification.json in 56.2 s
