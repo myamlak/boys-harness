@@ -1,6 +1,6 @@
 # The v5.2.5 source identity
 
-The current kernel reference is tag `v5.3.0`. This check records the source
+This check records the source
 identity at `v5.2.5`, the release the paper cites as provenance (its measured
 figures are the v5.1.1 run's): every evaluated file (`include/boys` and `src`)
 compared by content, one line per file, and every difference named.
