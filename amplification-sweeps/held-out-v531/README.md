@@ -21,8 +21,7 @@ earlier revision.
    between v5.1.1 and v5.3.1 change no held-out delivered value.
 4. The analysis outputs are byte-identical to the deposit, and the score is
    unchanged: 58 commitments, 58 right, 0 wrong, 74 abstentions, 53 direct and
-   5 recursed. `summary.txt` differs only in the line that names the
-   reference's own path.
+   5 recursed. `summary.txt` differs only in the two reference-path lines.
 
 ## Identity
 
@@ -34,7 +33,6 @@ earlier revision.
 | version header sha256 | `02e6312dfa1a91b07abe98843c484f2331abb8f3f48b313fb6a15722c9067da9` |
 | evaluated files | 76 (62 headers, 14 source); v5.3.1 column 76 of 76 |
 | reference chain | identical to the v5.1.1 record (3 files) |
-| compiler | MSVC 19.51.36260 for x64 (14.51.36231) |
 | flags | `/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2` |
 | python, mpmath | 3.14.7, 1.4.1 |
 | reference.csv sha256 | `cd8e16761db6e47563550d3f375d0747c1474d10d160ce77388656d097e7c09d` |
@@ -73,7 +71,7 @@ value-bearing outputs byte for byte.
 | `prediction_heldout.csv` | identical, `7cb9786ea255…` |
 | `band_summary.csv` | identical, `be25d4116928…` |
 | `per_order.csv` | identical, `29c1db32cfb2…` |
-| `summary.txt` | two lines differ: the reference path |
+| `summary.txt` | two lines differ: the two reference-path lines |
 
 ## Commands
 
