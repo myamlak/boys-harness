@@ -1,11 +1,11 @@
 # Chemistry bridge
 
-The integral-engine bridge of Paper B: the same host tensor built through two
-Boys evaluation routes and compared at the floating-point contract and in the
-total energy. `scripts/probe.cpp` builds the tensors through each route,
-`scripts/analyze.py` reduces the records, and `scripts/bridge-CMakeLists.txt`
-is the build stanza; `scripts/commands.md` holds the exact commands and the
-harness settings of each run.
+The integral-engine bridge, cited by Paper B: the same host tensor built
+through two Boys evaluation routes and compared at the floating-point contract
+and in the total energy. `scripts/probe.cpp` builds the tensors through each
+route, `scripts/analyze.py` reduces the records, and
+`scripts/bridge-CMakeLists.txt` is the build stanza; `scripts/commands.md`
+holds the exact commands and the harness settings of each run.
 
 ## Records
 
@@ -46,8 +46,8 @@ CODATA 2018 conversion 1 bohr = 0.529177210903 A, the coordinates give
 r(OH) = 1.8088458464917874 bohr = 0.9572 A and H-O-H = 104.52 degrees: the
 gap to the documented geometry is 0.0 A and 0.0 degrees.
 
-The bridge record names the host tree `bladawiec` at branch
-`myamlak/phase2-pr3`, at commit `ac8540b7c23d3818c9e67f8d59bf6cfbbef7fa0d` or
+The bridge record names the host tree `bladawiec` at commit
+`ac8540b7c23d3818c9e67f8d59bf6cfbbef7fa0d` or
 later, for the scratch copy that ran the probe; the host tree itself is not
 deposited. The fixture `tests/fixtures/h2o_sto3g.cpp` has SHA-256
 `ef2262e4d008f8e96bc2b596dc35be8926f8a1d3a449cd09399b729713e2086c`, is
