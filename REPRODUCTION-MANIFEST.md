@@ -1,6 +1,6 @@
 # Reproduction manifest
 
-Harness release `v1.0.35` (`VERSION`). Kernel release boys `v5.3.1`. This file
+Harness release `v1.0.36` (`VERSION`). Kernel release boys `v5.3.2`. This file
 names, for Papers A, B and C, the commands that reproduce or verify each
 deposited record, the environment each record was made in, which records are
 reproduced and which are only re-serialised, and what the deposit does not
@@ -8,22 +8,21 @@ carry. Commands run from the repository root unless a working directory is
 stated. `<boys>` is a checkout of the kernel at the tag named; `<harness>` is
 this repository.
 
-The papers cite harness `v1.0.34` today and re-pin to `v1.0.35` at submission.
-The records carried from `v1.0.34` are unchanged except two corrected digest
-rows in `amplification-sweeps/certified-bound/v531-check/`, recorded there and
-in `boys-crossover/exact-tag-replay/`.
+The papers cite harness `v1.0.36`. The records carried from `v1.0.35` are
+unchanged; this release adds `boys-crossover/exact-tag-replay-v532/`, the
+replay of Paper A's measurements at the kernel release `v5.3.2`.
 
 ## Identity
 
 | Item | Value |
 | --- | --- |
-| Harness | tag `v1.0.35`, `VERSION` 1.0.35; the tag is the archival identifier and names the release commit |
-| Kernel | boys `v5.3.1`, tag object `d1e63f71c6f2501aecc6340e31216a42c2a390b9`, commit `2f83e40a6504368b7b2f13682e29b4f24ab2a40c`, tree `344df3ecc1c13122f59a8a98a78afbff3c34337b` |
-| Earlier kernel revisions named by records | v5.0.0 (first and second sweeps, bridge provenance); v5.1.1 (9,353-argument record, seed-spliced, held-out, Chebyshev recount); v5.2.5 and v5.2.6 (certificate; Paper C core and sensitivity sweeps); v5.3.1 (exact-tag replay, accuracy gate, coefficient identity) |
+| Harness | tag `v1.0.36`, `VERSION` 1.0.36; the tag is the archival identifier and names the release commit |
+| Kernel | boys `v5.3.2`, tag object `246d5392c0255c469aa42ff518bd833cbaa1e721`, commit `bb9c5a143c5253313c15f37eac37562b2577033c`, tree `fc0fb26faeb7804c299bf11305b5e75aabb8f056` |
+| Earlier kernel revisions named by records | v5.0.0 (first and second sweeps, bridge provenance); v5.1.1 (9,353-argument record, seed-spliced, held-out, Chebyshev recount); v5.2.5 and v5.2.6 (certificate; Paper C core and sensitivity sweeps); v5.3.1 (first exact-tag replay, accuracy gate, coefficient identity); v5.3.2 (exact-tag replay) |
 
 ```sh
-git clone --branch v5.3.1 https://github.com/myamlak/boys.git boys
-git clone --branch v1.0.35 https://github.com/myamlak/boys-harness.git boys-harness
+git clone --branch v5.3.2 https://github.com/myamlak/boys.git boys
+git clone --branch v1.0.36 https://github.com/myamlak/boys-harness.git boys-harness
 ```
 
 Each record's own `provenance.json` names the revision it was measured at. That
@@ -45,8 +44,8 @@ scripts without `python -I`: isolated mode hides the user-site `mpmath`.
 
 Records: `amplification-sweeps/` (the two sweeps, certificate, strengthening,
 seed-spliced, held-out, surrogate-control, apriori-bound, workload-pair),
-`chemistry-bridge/`, and `boys-crossover/exact-tag-replay/` and
-`boys-crossover/r4-and-9353/`.
+`chemistry-bridge/`, and `boys-crossover/exact-tag-replay/`,
+`boys-crossover/exact-tag-replay-v532/` and `boys-crossover/r4-and-9353/`.
 
 Build and run a sweep from its directory (MSVC form):
 
@@ -58,9 +57,10 @@ sweep1.exe
 python analyze.py --tree .
 ```
 
-The exact-tag replay rebuilds both drivers against the `v5.3.1` headers and
-compares every produced record with the deposited one. From
-`boys-crossover/exact-tag-replay`:
+The exact-tag replays rebuild both drivers against the tagged headers and
+compare every produced record with the deposited one. The commands are the
+same for `boys-crossover/exact-tag-replay` (`v5.3.1`) and
+`boys-crossover/exact-tag-replay-v532` (`v5.3.2`):
 
 ```bat
 cl /nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2 /I<boys>\include /Fe build\sweep1.exe <harness>\amplification-sweeps\product-amplification\sweep1.cpp
@@ -78,18 +78,21 @@ python -I code/certify.py --kernel <boys> --sweep ../amplification-form \
     --model-record inputs/model-record --exp-bits exp/exp_bits.txt --out <run>
 ```
 
-Compare the produced digests with `boys-crossover/exact-tag-replay/digests.txt`.
-The identity check, from `boys-crossover/exact-tag-replay`:
+Compare the produced digests with the matching record's `digests.txt`. The
+identity check, from `boys-crossover/exact-tag-replay`:
 
 ```sh
 python compare_identity.py <v5.3.1-tree> <harness>/amplification-sweeps/certified-bound/v531-check/digests.txt <v5.1.1-tree>
+python compare_identity.py <v5.3.2-tree> <harness>/amplification-sweeps/certified-bound/v531-check/digests.txt <v5.1.1-tree>
 ```
 
-Expected: measured column 45, v5.3.1 column 76, v5.1.1 tag tree 45. The two
+Expected: measured column 45, v5.3.1 column 76, v5.1.1 tag tree 45, for either
+tree; the two tag trees are identical for all 76 evaluated files, which
+`boys-crossover/exact-tag-replay-v532/compare_tags.py` checks directly. The two
 input lists, from `boys-crossover/r4-and-9353`:
 
 ```sh
-python extract_and_verify.py <boys-v5.3.1-tree> <paper-tree>/papers/boys-crossover <harness>/amplification-sweeps
+python extract_and_verify.py <boys-v5.3.2-tree> <paper-tree>/papers/boys-crossover <harness>/amplification-sweeps
 ```
 
 The three paper-tree inputs are the same bytes deposited as
@@ -102,10 +105,10 @@ deposited); `chemistry-bridge/scripts/commands.md` gives the exact commands, and
 
 Reproduced and re-serialised:
 
-- Reproduced byte for byte at `v5.3.1`: the three sweep records (9,353, the
-  designed 9,352, and the second sweep), their admission and
-  replica-gain/path records, and the four certificate outputs (exact-tag
-  replay).
+- Reproduced byte for byte at `v5.3.1` and at `v5.3.2`: the three sweep
+  records (9,353, the designed 9,352, and the second sweep), their admission
+  and replica-gain/path records, and the four certificate outputs (exact-tag
+  replays).
 - Reconstructed and verified against the deposits: the 73-argument R4 list
   (2,409 cells, worst difference `4.975492884e-46` at the deposited cell) and
   the 9,353rd argument.
@@ -141,7 +144,7 @@ Records: `accuracy-claim-audit/` (the coverage enumeration, the captured cell
 summary, the Boost.Math and crlibm audits and the taxonomy testbed),
 `composition-audit/`, and `chemistry-bridge/` where the program paper cites the
 bridge. The accuracy gate's records and reference grids are in the `boys`
-repository at `v5.3.1`.
+repository at `v5.3.2`.
 
 Commands:
 
@@ -166,7 +169,7 @@ powershell -File run_measurement.ps1 -QuietMachine
 On Linux or WSL use `bash run_measurement.sh --quiet-machine --reference results/reference.csv --arguments-reference results/arguments.csv`.
 `signed_interaction.py`, `synthetic_surface.py` and `figure-ratio.json`
 recompute from `records/cells/` and the deposited reference. The accuracy gate
-runs as part of the `boys` test invocation at `v5.3.1`.
+runs as part of the `boys` test invocation at `v5.3.2`.
 
 Reproduced and re-serialised:
 
@@ -184,7 +187,7 @@ Missing artifacts:
 
 - The un-deposited kernel grid: the gate's 25-significant-digit and 45-digit
   reference grids, and the generators that reproduce them, are committed in the
-  `boys` repository at `v5.3.1`, not in this harness deposit. The 45-digit grid
+  `boys` repository at `v5.3.2`, not in this harness deposit. The 45-digit grid
   is also the R4 source used by Paper A and Paper C.
 - The external audit sources: Boost.Math 1.92.0 (archive SHA-256
   `c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce`)

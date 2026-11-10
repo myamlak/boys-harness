@@ -1,0 +1,35 @@
+sha256 of the record's outputs, logs and scripts
+
+# Every produced record below has the digest of the deposited record it
+# replaces; the deposited file of the same name is under
+# boys-crossover/exact-tag-replay/run/ in this repository. The produced files
+# themselves are not stored again. The two rebuilt executables are build
+# products and are not deposited; the commands that rebuild them are in
+# README.md.
+
+first sweep, 9,353 arguments                   2a2c45d1d7f59b74f4d3aeca647b46e4e20e86c2fb1917767a21a725f86d7da6  run/cells-9353.csv
+first sweep admission, 9,353 arguments         3003115faf814830ca95948b9cc85e8880207caecbf208529e00a31f65e5dc91  run/admission-9353.csv
+first sweep replica gain, 9,353 arguments      e25ac559a3d5f23164340802c152bc9933b309a70b7ad09f4f5d7cc931e2855f  run/replica_gain-9353.csv
+first sweep, designed 9,352-argument record    dd26d0b2a4352113d9f15433ec991adfacc211607ae9586c0bb51cd12b3f3369  run/cells-9352.csv
+first sweep admission, designed record         19f2c6d9b993f4eb880ec124795f90ef4fc1a72f95dacfe6ddb990d5b111d143  run/admission-9352.csv
+first sweep replica gain, designed record      d0401a0f133ae9ca5ccc03b8f827caebf780cecee730f8bd3eff30026c6bdf29  run/replica_gain-9352.csv
+second sweep, 836 arguments                    2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6  run/cells-sweep2.csv
+second sweep admission                         d57b3bf925ae3740b28048139126ad0806fcab624e996e40586bc91503fb069f  run/admission-sweep2.csv
+second sweep path record (raw; removed after digest)  81001a06d80c88e5b3ddac1f3dd011cae6f8ce2e806c8bf1f7f26e85dd8c8219  run/paths.csv (removed after digest)
+certificate per-cell intervals                 8041c727ac90c6d0ff9bc5552738e91ca9fd7abe09973ea0fad43756ba62fa6a  run/certificates/cells_cert.csv
+certificate band comparisons                   1ecc53f44a18b1acf867812cf00bf74e0f4842abcbc2d925991d09a734d2e368  run/certificates/band_cert.csv
+certificate model cells                        d76f2737c80e9922e7e22432134ded5a1dd0eca33f925c2853fca3de25426efb  run/certificates/model_cells.csv
+certificate summary                            75c165fed51c91cdbb4a9546a98b5d526304a40114ba37424b1c0469fae0509a  run/certificates/summary.json
+
+# rebuilt executables, not deposited (build products)
+sweep1 executable                              b3ffd173028a32df307fb99198aeca78a1494d16113915e0962924f3d535d530  build/sweep1.exe (not deposited)
+sweep2 executable                              b2b7e2a08ef867d1418e36b12fe1ab197ed16084ced5cc7962557d0ef5f5a49e  build/sweep2.exe (not deposited)
+
+# logs and scripts of this record
+build log                                      fe1e58b1420f9aee3f2f13adac48b795b6ba1d14c55fd1350218a61cea91a1de  build-tag.log
+sweep run log                                  10bfe6b5e5b8a11835d78dd2e2d3d7a33ba2422fd6052cdb4228aaf0deb80f8c  run-sweeps.log
+certificate model replay log                   8ab142b8ee1161a33a9422151b97beef568a53e5cc420b7cd584b04a987f611f  run/replay-tag.log
+certificate bound validation log               b91fa7e0ce8e0705aaec9667b47aebea8c9d2ebc837829152012b3d4694f1ec3  run/certify-tag.log
+evaluated-file identity comparison output      aa89ede0c783bc57de436a02b19759d268f9a6511fa360383ab42fc72ca58ef0  run/identity-comparison.log
+identity statement                             ad75ed9761719a16d886193232b5eb0ce89deed1b45663186f39f473c1ee8202  identity-v532.txt
+two-tag comparison script                      0e6951babe6da91b2357dd61f62dce889a8fe825123e92406bd6db903dec171a  compare_tags.py

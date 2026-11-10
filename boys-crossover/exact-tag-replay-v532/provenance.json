@@ -1,0 +1,92 @@
+{
+  "record": "exact-tag-replay-v532",
+  "role": "the exact-tag replay of Paper A's measurements at the boys submission release v5.3.2",
+  "date": "2026-11-10",
+  "kernel": {
+    "version": "5.3.2",
+    "tag": "v5.3.2",
+    "tag_object": "246d5392c0255c469aa42ff518bd833cbaa1e721",
+    "commit": "bb9c5a143c5253313c15f37eac37562b2577033c",
+    "tree": "fc0fb26faeb7804c299bf11305b5e75aabb8f056",
+    "version_header_sha256": "02e6312dfa1a91b07abe98843c484f2331abb8f3f48b313fb6a15722c9067da9"
+  },
+  "identity": {
+    "evaluated_files": 76,
+    "include_headers": 62,
+    "src_files": 14,
+    "identical_to_the_v5_3_1_tag": {"headers": 62, "src": 14, "all": 76},
+    "identical_to_measured_v5_1_1_tag": {"headers": 45, "src": 10, "all": 55},
+    "full_tree_difference_from_v5_3_1": [
+      "CMakeLists.txt",
+      "tests/boys_structural_invariants_test.cpp"
+    ],
+    "note": "CMakeLists.txt adds one test source inside the BOYS_BUILD_TESTS branch; no file under include/ or src/ differs between the two tags, and the version header is byte-identical"
+  },
+  "previous_replays": {
+    "pre_tag_record": "amplification-sweeps/certified-bound/v531-check/",
+    "first_exact_tag_replay": "boys-crossover/exact-tag-replay/",
+    "relation": "the same thirteen produced records, reproduced byte for byte here at the v5.3.2 tag"
+  },
+  "harness": {
+    "record_state": "deposited at harness v1.0.36",
+    "new_record_target_tag": "v1.0.36"
+  },
+  "environment": {
+    "compiler": "Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64",
+    "compile_flags": "/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2",
+    "python": "3.14.7",
+    "mpmath": "1.4.1"
+  },
+  "inputs": {
+    "first_sweep_grid_9353": {"path": "papers-a-v5/papers/boys-crossover/sweeps/product_amplification/data/grid.csv", "sha256": "780f75744e71f34da9e42b22ef359cc56424283e67a4faf7a16ea58847fae488"},
+    "first_sweep_grid_9352": {"path": "harness/amplification-sweeps/product-amplification/data/grid.csv", "sha256": "da7a6c12090b0367054f561fdce749fb8147879dbae3a2544902d5b51667414c"},
+    "second_sweep_grid": {"path": "harness/amplification-sweeps/amplification-form/data/grid.csv", "sha256": "5fee3f7930f52e1b982c421e84d2b6e36d97af450b8512508cd9ea5dc7b9f507"},
+    "second_sweep_fits": {"path": "harness/amplification-sweeps/amplification-form/data/fits.csv", "sha256": "ed9d8ea3cebef5bd734962fcb307a36a8729b752feb6eb0fc1a966a397d835e5"},
+    "second_sweep_reference": {"path": "harness/amplification-sweeps/amplification-form/data/reference.csv", "sha256": "514411570e902bc2320932a8ae6200d46e11d950471994c80c2775871f9a528d"},
+    "model_record_prediction": {"path": "harness/amplification-sweeps/certified-bound/inputs/model-record/prediction.csv", "sha256": "305b2a28392c48a6eae355a9e8cca04289c214899b165464ced917d4243702eb"},
+    "model_record_prediction_record": {"path": "harness/amplification-sweeps/certified-bound/inputs/model-record/prediction_record.csv", "sha256": "d146ab20bfe0bbcded9f241129359dfd0414c022f437d164c59c05ed03c8b218"},
+    "exp_bits": {"path": "harness/amplification-sweeps/certified-bound/exp/exp_bits.txt", "sha256": "493afdc2e62ac94c3a38cdf994bd3b587ffa649ac95c32eda90c60542febd95d"},
+    "sweep1_source": {"path": "papers-a-v5/papers/boys-crossover/sweeps/product_amplification/sweep1.cpp", "sha256": "309bcb71e29916512be479e2e51953f03f5d7d29cf4da5d74d6f3c53d1bede38"},
+    "sweep2_source": {"path": "papers-a-v5/papers/boys-crossover/sweeps/amplification_form/sweep2.cpp", "sha256": "57e91b7e019e62647154ff3a41128c21a594baee5312a564697c162efe9be76d"},
+    "replica_header": {"path": "papers-a-v5/papers/boys-crossover/sweeps/common/replica.hpp", "sha256": "e2ae9aaafc826059981b0435d629e09399a1bcbeecc3a64b9d77981d13456f69"},
+    "note": "every input digest equals the digest recorded in boys-crossover/exact-tag-replay/provenance.json for the v5.3.1 replay"
+  },
+  "builds": {
+    "sweep1_build_exit": 0,
+    "sweep2_build_exit": 0,
+    "sweep1_exe_sha256": "b3ffd173028a32df307fb99198aeca78a1494d16113915e0962924f3d535d530",
+    "sweep2_exe_sha256": "b2b7e2a08ef867d1418e36b12fe1ab197ed16084ced5cc7962557d0ef5f5a49e",
+    "binaries_deposited": false,
+    "exclusion_reason": "the two executables are build products; the compile command, compiler and flags are in README.md, and the SHA-256 values above are from the replay run"
+  },
+  "runs": {
+    "sweep1_9353_exit": 0,
+    "sweep1_9353_wall_span_seconds": 1.1,
+    "sweep1_9352_exit": 0,
+    "sweep1_9352_wall_span_seconds": 1.0,
+    "sweep2_exit": 0,
+    "sweep2_wall_span_seconds": 10.5,
+    "model_replay_exit": 0,
+    "model_replay_seconds": 2.8,
+    "model_replay": "27,588 recursed and 27,588 direct values bit for bit; the fused downward variant mismatches 208 recursed values, first at (A1, 0.029916890803630927, 0), one ulp",
+    "bound_validation_exit": 0,
+    "bound_validation_seconds": 17.9,
+    "bound_validation": "55,176 entry-cells, 0 violations, worst |r|/C 0.71875 at (A1, 0.0, 24, ship), population band inside 264/264; 132/132 band comparisons overlap, 65/65 commitments overlap, 67/67 abstentions overlap"
+  },
+  "outputs": {
+    "first_sweep_cells_9353": {"sha256": "2a2c45d1d7f59b74f4d3aeca647b46e4e20e86c2fb1917767a21a725f86d7da6", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/cells-9353.csv"},
+    "first_sweep_admission_9353": {"sha256": "3003115faf814830ca95948b9cc85e8880207caecbf208529e00a31f65e5dc91", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/admission-9353.csv"},
+    "first_sweep_replica_gain_9353": {"sha256": "e25ac559a3d5f23164340802c152bc9933b309a70b7ad09f4f5d7cc931e2855f", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/replica_gain-9353.csv"},
+    "first_sweep_cells_9352": {"sha256": "dd26d0b2a4352113d9f15433ec991adfacc211607ae9586c0bb51cd12b3f3369", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/cells-9352.csv"},
+    "first_sweep_admission_9352": {"sha256": "19f2c6d9b993f4eb880ec124795f90ef4fc1a72f95dacfe6ddb990d5b111d143", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/admission-9352.csv"},
+    "first_sweep_replica_gain_9352": {"sha256": "d0401a0f133ae9ca5ccc03b8f827caebf780cecee730f8bd3eff30026c6bdf29", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/replica_gain-9352.csv"},
+    "second_sweep_cells": {"sha256": "2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/cells-sweep2.csv"},
+    "second_sweep_admission": {"sha256": "d57b3bf925ae3740b28048139126ad0806fcab624e996e40586bc91503fb069f", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/admission-sweep2.csv"},
+    "second_sweep_paths": {"sha256": "81001a06d80c88e5b3ddac1f3dd011cae6f8ce2e806c8bf1f7f26e85dd8c8219", "matches_deposit": true, "stored": "digest only; the 291,827,555-byte raw file was removed after verification"},
+    "certificate_cells_cert": {"sha256": "8041c727ac90c6d0ff9bc5552738e91ca9fd7abe09973ea0fad43756ba62fa6a", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/certificates/cells_cert.csv"},
+    "certificate_band_cert": {"sha256": "1ecc53f44a18b1acf867812cf00bf74e0f4842abcbc2d925991d09a734d2e368", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/certificates/band_cert.csv"},
+    "certificate_model_cells": {"sha256": "d76f2737c80e9922e7e22432134ded5a1dd0eca33f925c2853fca3de25426efb", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/certificates/model_cells.csv"},
+    "certificate_summary": {"sha256": "75c165fed51c91cdbb4a9546a98b5d526304a40114ba37424b1c0469fae0509a", "matches_deposit": true, "deposited": "boys-crossover/exact-tag-replay/run/certificates/summary.json"}
+  },
+  "result": "all nine sweep records and all four certificate outputs byte-identical to the deposited records, reproduced at the v5.3.2 tag"
+}
