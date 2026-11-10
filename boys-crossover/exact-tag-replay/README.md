@@ -1,8 +1,7 @@
 # Exact-tag replay: Paper A at boys v5.3.1
 
 This is the replay of Paper A's measurements at the final boys tag `v5.3.1`.
-It was staged for the harness `v1.0.35` record that will carry the exact-tag
-replay beside the pre-tag `v531-check` record.
+It is carried in this deposit beside the pre-tag `v531-check` record.
 
 ## What it establishes
 

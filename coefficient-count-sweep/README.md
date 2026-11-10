@@ -9,9 +9,8 @@ repository; and `count_sweep_recorded.py`, the exact revision the records
 name, deposited so they can be regenerated and verified against it. See
 "Harness revisions" below.
 
-The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`; the
-kernel and harness revisions the records name are provenance, not current
-references.
+The kernel and harness revisions the records name are provenance, not current
+references; each record's own block names its revision.
 
 ## Commands
 
@@ -126,8 +125,22 @@ delivered error). No cell carries a rational count. The summary's
 and `rational` 46; at `abs:5e-14` it gives the same Chebyshev values and
 `rational` 44. `shipped_totals` gives Chebyshev 55 and rational 39. The static
 narrow-B count `kNarrowRatBStored` in `records/core/static_counts.json` is
-also 39. The recount record does not reconcile the group-B rational sums
-(46 and 44) with 39.
+also 39.
+
+The group-B rational sums are not an additive decomposition of the shipped 39.
+The five Group B widths are 2.8567491415463806, 3.405194117991412,
+4.091271749574425, 4.947466945561672 and 3.7994698932176263, all re-based to
+start at x0; their intervals overlap, so a sum over the five cells counts
+the shared near-x0 width more than once. The relative-target sum (55
+Chebyshev, 46 rational) and the absolute-target sum (55, 44) are therefore
+measurements of five overlapping cells at the two core targets by the
+independent solver, while the shipped 55/39 is a partition total over five
+disjoint narrow pieces at the published bar. The 39 is the total of the five
+disjoint pieces re-fitted at that bar: 9, 7, 8, 8 and 7. The coarse region-B
+seed is a separate piece and returns its shipped count 13. The 55/46, 55/44
+and 55/39 are different sums whose intervals overlap, not an additive
+decomposition: they differ in interval placement, target and solver at once,
+and the sums do not reconcile with one another and are not meant to.
 
 The file states the library revision it was measured at in its own `boys`
 block (`boys.version` and `describe`) and the digests of the generator it was

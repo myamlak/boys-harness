@@ -18,7 +18,7 @@
 #Requires -Version 5.1
 [CmdletBinding()]
 param(
-    [string]$BoysTree = $(if ($env:BOYS_TREE) { $env:BOYS_TREE } else { "C:\Users\myaml\dev\_boys-v511" }),
+    [string]$BoysTree = $env:BOYS_TREE,
     [string]$Python = "python"
 )
 
@@ -27,6 +27,8 @@ Set-StrictMode -Version Latest
 
 $Here = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $Here
+
+if (-not $BoysTree) { throw "set BOYS_TREE to the kernel checkout, or pass -BoysTree" }
 
 if (-not (Test-Path (Join-Path $BoysTree "include/boys/version.hpp"))) {
     throw "not a boys tree: $BoysTree"

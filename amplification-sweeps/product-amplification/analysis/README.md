@@ -31,8 +31,7 @@ because the generation chain writes them into the same directory.
 
 ## The table step and the release replay
 
-The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`. The
-table step recorded in the deposited check's `tables-after-deposited.sha256`
+The table step recorded in the deposited check's `tables-after-deposited.sha256`
 was run with the scripts of that check's own date. The scripts here are the
 ones that generate the tables carried here. Three tables (`endtoend.tex`,
 `frontier.tex`, `prediction-record.tex`) changed after the check, when

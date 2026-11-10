@@ -2,9 +2,10 @@
 r"""Re-run the paper's own free-line test on the record and the measured counts.
 
 The paper's pre-set free-line test is implemented by
-`../../ladder_analysis.py` (the paper tree's copy, cited in supplement section
-S10). It reads a kernel-format `sweep_all.json`: one row per (width, target)
-with a `rat` (and `cheb`) block carrying `stored`.
+`../analysis/ladder_analysis.py` (the paper tree's copy, byte-identical,
+cited in supplement section S10). It reads a kernel-format `sweep_all.json`:
+one row per (width, target) with a `rat` (and `cheb`) block carrying
+`stored`.
 
 This script builds that record from the corrected counts: rational counts from
 `../results-corrected/corrected-counts.json`, Chebyshev counts from the
@@ -30,9 +31,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 PAPER = HERE.parent
-SWEEP = PAPER / "results-ladder" / "sweep_all.json"
+SWEEP = PAPER / "records" / "ladder" / "sweep_all.json"
 CORRECTED = PAPER / "results-corrected" / "corrected-counts.json"
-LADDER_ANALYSIS = PAPER / "ladder_analysis.py"
+LADDER_ANALYSIS = PAPER / "analysis" / "ladder_analysis.py"
 SCRATCH = HERE / "_freeline-scratch"
 
 SHIP_WIDTH_F = 19.100151847891517

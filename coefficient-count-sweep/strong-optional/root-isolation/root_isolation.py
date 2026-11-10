@@ -561,8 +561,11 @@ def analyse_denominator(Q, label):
         out["n_roots_outside"] = total_real - len(roots_on)
 
         # --- off-grid pole test ---------------------------------------------
-        # A root is on-grid only if Q at that exact grid node is zero.  The
-        # grid nodes are rational, so this is an exact test.
+        # A root is on-grid only if Q at that exact grid node is zero, i.e.
+        # only if the exact root value is a node of one of the two grids.  The
+        # grid nodes are rational, so this is an exact test.  Each interval
+        # root is tested separately: with several roots, one can sit on a node
+        # while another lies between nodes, and the fit is then off-grid.
         on_grid = []
         if roots_on:
             for i in range(GRID_2001 + 1):
@@ -571,9 +574,22 @@ def analyse_denominator(Q, label):
             for i in range(GRID_4001 + 1):
                 if q_at_grid(Q, i, GRID_4001) == 0:
                     on_grid.append({"grid": 4001, "index": i})
+        off_grid = False
+        for rec in roots_on:
+            exact = rec.get("exact_value")
+            rec_on_grid = False
+            if exact is not None:
+                value = F(exact)
+                for n in (GRID_2001, GRID_4001):
+                    node_index = (value + 1) * n / 2
+                    if node_index.denominator == 1:
+                        rec_on_grid = True
+                        break
+            if not rec_on_grid:
+                off_grid = True
         out["on_grid_poles"] = on_grid
         out["on_grid_pole"] = bool(on_grid)
-        out["off_grid_pole"] = bool(roots_on) and not bool(on_grid)
+        out["off_grid_pole"] = off_grid
 
         # --- interval-wide bounds -------------------------------------------
         if roots_on:

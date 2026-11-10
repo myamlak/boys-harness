@@ -6,7 +6,8 @@ headers, runs them on the deposited grids and fits, and compares every
 produced record with the deposited one. It also re-runs the certified-bound
 record's model replay and its full bound validation at the release.
 
-The harness tag of the submission is `v1.0.34`.
+The check was made at harness `v1.0.34`; the digest correction below is
+carried at `v1.0.35`. Its `provenance.json` records both identities.
 
 ## What it proves
 

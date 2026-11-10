@@ -276,7 +276,7 @@ substituted is 0.7857142857142847 and 2, still false.
 | `make_summary_table.py` | the summary table and model-residual recomputation |
 | `freeline_effect.py` | the free-line test and model residuals with the measured counts substituted; writes `freeline_effect.json` |
 | `verify_cells.py` | rebuilds every accepted fit from its stored barycentric data and re-derives `e60`, `e64r` and `e64` |
-| `verify_freeline.py` | builds the paper-format record and runs the paper's own `../ladder_analysis.py` on the record and every substituted series |
+| `verify_freeline.py` | builds the paper-format record and runs the paper's own `../analysis/ladder_analysis.py` on the record and every substituted series |
 | `fix_margins.py` | recomputes a below-count margin from admissible (guard-passing) fits only |
 | `cell_<key>.json` | one cell record (reproduction, walk, accepted fit, below-count check, settings, versions) |
 | `summary.json` | the compact summary of every cell run |

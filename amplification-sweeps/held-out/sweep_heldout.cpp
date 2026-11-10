@@ -10,7 +10,7 @@
 //   cells.csv      band,x,n,recursed,direct
 //   admission.csv  band,x,direction,checked,matched
 
-#include "../common/replica.hpp"
+#include "../product-amplification/first-sweep-9353/sweeps/common/replica.hpp"
 
 #include "boys/boys_transform.hpp"
 

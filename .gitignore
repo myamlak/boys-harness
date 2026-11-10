@@ -4,6 +4,7 @@ build/
 build-*/
 results/
 results-*/
+_freeline-scratch/
 !amplification-sweeps/certified-bound/results/
 !amplification-sweeps/certified-bound/results-underflow-fix/
 !amplification-sweeps/certified-bound/results-underflow-fix/**
@@ -28,6 +29,8 @@ sweep2
 !amplification-sweeps/seed-spliced/results/
 !amplification-sweeps/held-out/data/
 !amplification-sweeps/held-out/results/
+!amplification-sweeps/held-out-v531/data/
+!amplification-sweeps/held-out-v531/results/
 !coefficient-count-sweep/records/
 !coefficient-count-sweep/results-corrected/
 !coefficient-count-sweep/results-second-edge-a2/

@@ -7,15 +7,20 @@ which the recurrence starts.
 
 ## Build
 
-The drivers are single translation units. From each sweep directory:
+The drivers are single translation units. Set `BOYS_SOURCE` to the kernel
+checkout (see the repository README), then run the build from the directory
+that holds the source file:
 
 ```sh
-g++ -std=c++23 -O2 -I<boys>/include sweep1.cpp -o sweep1
-g++ -std=c++23 -O2 -I<boys>/include sweep2.cpp -o sweep2
+# from product-amplification/
+g++ -std=c++23 -O2 -I"$BOYS_SOURCE/include" sweep1.cpp -o sweep1
+# from amplification-form/
+g++ -std=c++23 -O2 -I"$BOYS_SOURCE/include" sweep2.cpp -o sweep2
 ```
 
-On Windows with MSVC, use `cl /std:c++latest /O2 /EHsc /I<boys>\include` with
-the same source file.
+On Windows with MSVC, run the same commands from a developer shell with
+`cl /std:c++latest /O2 /EHsc /I"%BOYS_SOURCE%\include"` and the same source
+file; the output is `sweep1.exe` or `sweep2.exe` in that directory.
 
 ## First sweep
 
@@ -52,8 +57,7 @@ python analyze.py --tree .
 
 ## Deposited records
 
-The current releases are boys tag `v5.3.1` and harness tag `v1.0.34`. The
-original designed-grid records are in each sweep's `data/` and `results/`
+The original designed-grid records are in each sweep's `data/` and `results/`
 directories: the grids, the 60-digit references, the per-cell delivered values
 of both entries, the per-order and band summaries, the prediction records and
 the provenances. Each record's `results/provenance.json` names the revision it
@@ -65,8 +69,9 @@ record the published tables use; its provenance is in its own
 deposited beside these records as provenance; they are checks, not new
 measurements.
 
-Four files are stored xz-compressed because of their size. Decompress them in place before running
-the analysis:
+Four files are stored xz-compressed because of their size. From this directory
+(`amplification-sweeps/`), decompress them in place before running the
+analysis:
 
 ```sh
 xz -dk amplification-form/results/paths.csv.xz \
@@ -96,6 +101,9 @@ records, analysis and provenance.
 
 `held-out/` holds the held-out test: the frozen decision rule scored on a disjoint
 1,300-argument grid, with its driver, grid, 60-digit reference, records, analysis and provenance.
+`held-out-v531/` replays that record against the exact v5.3.1 tag tree: the grid is
+regenerated and compared, the kernel identity is proved by content, and every value-bearing
+output is byte-identical to the v5.1.1 record.
 
 ## Supplement records
 

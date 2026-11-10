@@ -1,9 +1,9 @@
 # Chemistry bridge
 
-The integral-engine bridge of the accuracy paper: the same host tensor built
-through two Boys evaluation routes and compared at the floating-point contract
-and in the total energy. `scripts/probe.cpp` builds the tensors through each
-route, `scripts/analyze.py` reduces the records, and `scripts/bridge-CMakeLists.txt`
+The integral-engine bridge of Paper B: the same host tensor built through two
+Boys evaluation routes and compared at the floating-point contract and in the
+total energy. `scripts/probe.cpp` builds the tensors through each route,
+`scripts/analyze.py` reduces the records, and `scripts/bridge-CMakeLists.txt`
 is the build stanza; `scripts/commands.md` holds the exact commands and the
 harness settings of each run.
 
@@ -17,7 +17,12 @@ analysis.
 
 The two dense cc-pVTZ integral tensors (about 260 MB each) are not deposited.
 `scripts/probe.cpp` regenerates them from the deposited argument streams and
-the library, and they are available from the author.
+the library. The probe commands are in `scripts/commands.md`; the cc-pVTZ arms
+are run from the host scratch tree as
+`qcx-bridge-probe.exe <out>/ccpvtz-default data/basis/cc-pvtz` and the same
+with `paper-a` for the second arm. The benzene arms are in
+`benzene-pvdz/commands.md` as
+`qcx-bridge-probe.exe <out-prefix> data/basis/cc-pvdz benzene`.
 
 ## Above-B2 route difference
 
@@ -39,10 +44,15 @@ the origin and the two H at
 `(±1.430428808474167, 1.107157044080814, 0)` bohr, in the xy plane. With the
 CODATA 2018 conversion 1 bohr = 0.529177210903 A, the coordinates give
 r(OH) = 1.8088458464917874 bohr = 0.9572 A and H-O-H = 104.52 degrees: the
-gap to the documented geometry is 0.0 A and 0.0 degrees. The bridge record
-names the host tree at branch `myamlak/phase2-pr3`, HEAD `ac8540b7` or later,
-for the scratch copy that ran the probe; the fixture's own commit is not
-recorded in this deposit.
+gap to the documented geometry is 0.0 A and 0.0 degrees.
+
+The bridge record names the host tree `bladawiec` at branch
+`myamlak/phase2-pr3`, at commit `ac8540b7c23d3818c9e67f8d59bf6cfbbef7fa0d` or
+later, for the scratch copy that ran the probe; the host tree itself is not
+deposited. The fixture `tests/fixtures/h2o_sto3g.cpp` has SHA-256
+`ef2262e4d008f8e96bc2b596dc35be8926f8a1d3a449cd09399b729713e2086c`, is
+byte-identical at `ac8540b7`, and its content last changed in commit
+`55b9a8251c155d19550d795c2298422b8279fe0f` (`v0.1.0`).
 
 ## Benzene/cc-pVDZ
 
