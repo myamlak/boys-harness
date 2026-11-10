@@ -1,16 +1,19 @@
 # Reproduction manifest
 
-Harness release `v1.0.36` (`VERSION`). Kernel release boys `v5.3.1`. This file
+Harness release `v1.0.37` (`VERSION`). Kernel release boys `v5.3.2`. This file
 names, for Papers A, B and C, the commands that reproduce or verify each
 deposited record, the environment each record was made in, which records are
 reproduced and which are only re-serialised, and what the deposit does not
 carry.
 
-The papers cite harness `v1.0.36` at submission; the tag is cut from the merge
+The papers cite harness `v1.0.37` at submission; the tag is cut from the merge
 commit.
-The recorded values carried from `v1.0.35` are unchanged. This release adds
-the held-out exact-tag replay at `amplification-sweeps/held-out-v531/` and the
-held-out self-check's TeX fixture at `tables/prediction-record.tex`.
+The recorded values carried from `v1.0.36` are unchanged. This release moves
+the kernel pin in `.github/workflows/harness.yml` from `v5.3.1` to `v5.3.2`,
+a documentation, version-string and test-only change, so that the papers'
+submission tags name one kernel. The `v1.0.36` release added the held-out
+exact-tag replay at `amplification-sweeps/held-out-v531/` and its TeX fixture
+at `tables/prediction-record.tex`.
 
 ## Paths
 
@@ -19,8 +22,8 @@ clone) unless its block names another working directory. The two clones and
 the tag checkouts:
 
 ```sh
-git clone --branch v5.3.1 https://github.com/myamlak/boys.git boys
-git clone --branch v1.0.36 https://github.com/myamlak/boys-harness.git boys-harness  # (cut after this deposit merges)
+git clone --branch v5.3.2 https://github.com/myamlak/boys.git boys
+git clone --branch v1.0.37 https://github.com/myamlak/boys-harness.git boys-harness  # (cut after this deposit merges)
 cd boys-harness
 git -C ../boys worktree add ../boys-v5.1.1 v5.1.1
 git -C ../boys worktree add ../boys-v5.2.5 v5.2.5
@@ -32,7 +35,7 @@ the same names with `set NAME=value`.
 
 | Name | Value | What it is |
 | --- | --- | --- |
-| `BOYS` | `$PWD/../boys` | the `v5.3.1` tag checkout |
+| `BOYS` | `$PWD/../boys` | the `v5.3.2` tag checkout |
 | `BOYS_V511` | `$PWD/../boys-v5.1.1` | the `v5.1.1` tag worktree |
 | `BOYS_BUILD` | `$PWD/../boys-build` | a build directory outside the `boys` tree |
 | `HARNESS` | `$PWD` | this repository |
@@ -50,9 +53,9 @@ deposit must stay unchanged.
 
 | Item | Value |
 | --- | --- |
-| Harness | tag `v1.0.36`, `VERSION` 1.0.36. The tag is annotated and names the release commit. A file inside that commit cannot carry the tag object that points to it: resolve the tag object, commit and tree with `git rev-parse v1.0.36`, `git rev-parse 'v1.0.36^{}'` and `git rev-parse 'v1.0.36^{tree}'`. The preceding release, `v1.0.35`, is tag object `ecf8a572f247663623e0ed7a924a3b549b128f41`, commit `b8081d3650799877a6f9f76c46e22fc4744fdcb4`, tree `35b8a38edf2fa2cd573b5803f176621a5e444d9a`. |
-| Kernel | boys `v5.3.1`, tag object `d1e63f71c6f2501aecc6340e31216a42c2a390b9`, commit `2f83e40a6504368b7b2f13682e29b4f24ab2a40c`, tree `344df3ecc1c13122f59a8a98a78afbff3c34337b` |
-| Earlier kernel revisions named by records | v5.0.0 (first and second sweeps, bridge provenance); v5.1.1 (9,353-argument record, seed-spliced, held-out, Chebyshev recount); v5.2.5 and v5.2.6 (certificate; Paper C core and sensitivity sweeps); v5.3.1 (exact-tag replay, accuracy gate, coefficient identity) |
+| Harness | tag `v1.0.37`, `VERSION` 1.0.37. The tag is annotated and names the release commit. A file inside that commit cannot carry the tag object that points to it: resolve the tag object, commit and tree with `git rev-parse v1.0.37`, `git rev-parse 'v1.0.37^{}'` and `git rev-parse 'v1.0.37^{tree}'`. The preceding release, `v1.0.36`, is tag object `cb2fa2de2cfc889e8c773fdbc89ca476591d37cf`, commit `42b236e726bb296afb4bce415c40a8a2397484e1`, tree `632ae93f1888f3d82ffd3b806abd284d4b39a8f3`. |
+| Kernel | boys `v5.3.2`, tag object `058f10f273f37ca3b5769e9f1173c218f38fce6c`, commit `6739447d82765ae5f7f68351a99f418cd018dd9a`, tree `71be8196d53c31c8ec5d9be2c9fb48453b297c4e` |
+| Earlier kernel revisions named by records | v5.0.0 (first and second sweeps, bridge provenance); v5.1.1 (9,353-argument record, seed-spliced, held-out, Chebyshev recount); v5.2.5 and v5.2.6 (certificate; Paper C core and sensitivity sweeps); v5.3.1 (exact-tag replay, accuracy gate, coefficient identity, and the release the earlier paper tags named) |
 
 Each record's own `provenance.json` names the revision it was measured at. That
 name is the record's provenance, not a current reference.
