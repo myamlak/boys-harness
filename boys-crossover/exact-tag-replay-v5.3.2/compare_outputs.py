@@ -5,10 +5,11 @@ record by SHA-256.
 usage: python -I compare_outputs.py
 
 The deposited record is `boys-crossover/exact-tag-replay`. Every deposited
-file that is still present is hashed directly; `run/paths.csv` was removed
-after its digest was taken, so that row compares the replay's digest with the
-digest in the deposited `digests.txt`. The exit code is 0 only when all 13
-measurement records are identical.
+file that is still present is hashed directly. `run/paths.csv` was removed
+from both records after its digest was taken, so that row compares the digest
+recorded in this record's own `digests.txt` with the digest in the deposited
+`digests.txt`; it is identical only when both recorded digests agree. The exit
+code is 0 only when all 13 measurement records are identical.
 """
 import hashlib
 import re
@@ -43,9 +44,9 @@ def sha256(path):
     return digest.hexdigest()
 
 
-def deposited_digests():
+def read_digests(path):
     table = {}
-    for line in (DEPOSIT / "digests.txt").read_text(encoding="utf-8-sig").splitlines():
+    for line in path.read_text(encoding="utf-8-sig").splitlines():
         if not line.strip() or line.lstrip().startswith("#"):
             continue
         match = re.search(r"\b([0-9a-f]{64})\b", line)
@@ -59,7 +60,8 @@ def deposited_digests():
 
 
 def main():
-    expected = deposited_digests()
+    expected = read_digests(DEPOSIT / "digests.txt")
+    recorded = read_digests(RECORD / "digests.txt")
     failures = 0
     print("%-34s %-12s %-64s %s" % ("record", "bytes", "sha256", "result"))
     for path in RECORDS:
@@ -69,8 +71,19 @@ def main():
             failures += 1
             continue
         if not produced.is_file():
-            print("%-34s %-12s %-64s %s" % (path, "-", "-", "PRODUCED FILE MISSING"))
-            failures += 1
+            if path not in recorded:
+                print("%-34s %-12s %-64s %s" % (
+                    path, "-", "-", "NO RECORDED DIGEST"))
+                failures += 1
+                continue
+            if recorded[path] != expected[path]:
+                print("%-34s %-12s %-64s %s" % (
+                    path, "-", "-", "RECORDED DIGESTS DIFFER"))
+                failures += 1
+                continue
+            print("%-34s %-12s %-64s %s" % (
+                path, "-", "-",
+                "identical (raw file not deposited; recorded digests agree)"))
             continue
         got = sha256(produced)
         deposited_file = DEPOSIT / path
