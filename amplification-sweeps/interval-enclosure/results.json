@@ -1,0 +1,4843 @@
+{
+ "checks": {
+  "first9353": {
+   "case": "first9353",
+   "counts": {
+    "deposited_whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 13,
+     "wrong": 1,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "state_agreement": 70,
+   "max_abs_U_minus_W": "0.0",
+   "deposited_split": {
+    "order0": {
+     "rows": 4,
+     "commits": 4,
+     "recursed": 1,
+     "direct": 3
+    },
+    "model": {
+     "rows": 128,
+     "commits": 64,
+     "recursed": 6,
+     "direct": 58
+    }
+   },
+   "deposited_by_state": {
+    "recursed": 7,
+    "direct": 61
+   },
+   "enclosure_by_state": {
+    "recursed": 11,
+    "direct": 3
+   },
+   "deposited_winner_whole": {
+    "committed_rows": 68,
+    "winner_direct": 60,
+    "winner_recursed": 8,
+    "winner_tie": 0
+   },
+   "justified": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A1",
+     "relative",
+     0,
+     "recursed"
+    ],
+    [
+     "A2",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     4,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     5,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     6,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     7,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     8,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     9,
+     "recursed"
+    ]
+   ],
+   "unjustified_count": 58,
+   "unjustified_by_state": {
+    "recursed": 0,
+    "direct": 58
+   },
+   "wrong_whole": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct",
+     "recursed"
+    ]
+   ],
+   "wrong_pop": [],
+   "enclosure_wrong_whole": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct",
+     "recursed"
+    ]
+   ],
+   "enclosure_extra": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     3,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "measured_whole": {
+    "direct": 89,
+    "recursed": 42,
+    "tie": 1
+   },
+   "measured_pop": {
+    "direct": 103,
+    "recursed": 28,
+    "tie": 1
+   },
+   "structural": {
+    "rows": 32,
+    "orders": [
+     [
+      "A1",
+      17
+     ],
+     [
+      "A1",
+      18
+     ],
+     [
+      "A1",
+      19
+     ],
+     [
+      "A1",
+      20
+     ],
+     [
+      "A1",
+      21
+     ],
+     [
+      "A1",
+      22
+     ],
+     [
+      "A1",
+      23
+     ],
+     [
+      "A1",
+      24
+     ],
+     [
+      "A1",
+      25
+     ],
+     [
+      "A1",
+      26
+     ],
+     [
+      "A1",
+      27
+     ],
+     [
+      "A1",
+      28
+     ],
+     [
+      "A1",
+      29
+     ],
+     [
+      "A1",
+      30
+     ],
+     [
+      "A1",
+      31
+     ],
+     [
+      "A1",
+      32
+     ]
+    ],
+    "all_abstain": true,
+    "W_equals_D": true
+   },
+   "W_minus_T_below_L": {
+    "rows": 12,
+    "max_relative_shortfall": 0.9248672601362736,
+    "worst": [
+     [
+      0.9248672601362736,
+      "A2",
+      "absolute",
+      17,
+      "1.0650489418898532e-20",
+      "1.4175563726567251e-19"
+     ],
+     [
+      0.8716270934210599,
+      "A2",
+      "absolute",
+      18,
+      "1.7247792476693281e-20",
+      "1.3435695222875652e-19"
+     ],
+     [
+      0.8394965255076665,
+      "A2",
+      "relative",
+      17,
+      "8.1491622109736935e-15",
+      "5.0772497210725118e-14"
+     ],
+     [
+      0.8332344847010769,
+      "A1",
+      "absolute",
+      9,
+      "1.7464240634275674e-18",
+      "1.0472333325610779e-17"
+     ],
+     [
+      0.7673823263962622,
+      "A2",
+      "absolute",
+      19,
+      "2.9589795622148201e-20",
+      "1.2720355751022667e-19"
+     ]
+    ]
+   },
+   "population_score_pair": {
+    "whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "restricted": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    }
+   }
+  },
+  "first9352": {
+   "case": "first9352",
+   "counts": {
+    "deposited_whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 13,
+     "wrong": 1,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "state_agreement": 70,
+   "max_abs_U_minus_W": "0.0",
+   "deposited_split": {
+    "order0": {
+     "rows": 4,
+     "commits": 4,
+     "recursed": 1,
+     "direct": 3
+    },
+    "model": {
+     "rows": 128,
+     "commits": 64,
+     "recursed": 6,
+     "direct": 58
+    }
+   },
+   "deposited_by_state": {
+    "recursed": 7,
+    "direct": 61
+   },
+   "enclosure_by_state": {
+    "recursed": 11,
+    "direct": 3
+   },
+   "deposited_winner_whole": {
+    "committed_rows": 68,
+    "winner_direct": 60,
+    "winner_recursed": 8,
+    "winner_tie": 0
+   },
+   "justified": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A1",
+     "relative",
+     0,
+     "recursed"
+    ],
+    [
+     "A2",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     4,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     5,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     6,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     7,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     8,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     9,
+     "recursed"
+    ]
+   ],
+   "unjustified_count": 58,
+   "unjustified_by_state": {
+    "recursed": 0,
+    "direct": 58
+   },
+   "wrong_whole": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct",
+     "recursed"
+    ]
+   ],
+   "wrong_pop": [],
+   "enclosure_wrong_whole": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct",
+     "recursed"
+    ]
+   ],
+   "enclosure_extra": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     3,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "measured_whole": {
+    "direct": 89,
+    "recursed": 42,
+    "tie": 1
+   },
+   "measured_pop": {
+    "direct": 103,
+    "recursed": 28,
+    "tie": 1
+   },
+   "structural": {
+    "rows": 32,
+    "orders": [
+     [
+      "A1",
+      17
+     ],
+     [
+      "A1",
+      18
+     ],
+     [
+      "A1",
+      19
+     ],
+     [
+      "A1",
+      20
+     ],
+     [
+      "A1",
+      21
+     ],
+     [
+      "A1",
+      22
+     ],
+     [
+      "A1",
+      23
+     ],
+     [
+      "A1",
+      24
+     ],
+     [
+      "A1",
+      25
+     ],
+     [
+      "A1",
+      26
+     ],
+     [
+      "A1",
+      27
+     ],
+     [
+      "A1",
+      28
+     ],
+     [
+      "A1",
+      29
+     ],
+     [
+      "A1",
+      30
+     ],
+     [
+      "A1",
+      31
+     ],
+     [
+      "A1",
+      32
+     ]
+    ],
+    "all_abstain": true,
+    "W_equals_D": true
+   },
+   "W_minus_T_below_L": {
+    "rows": 12,
+    "max_relative_shortfall": 0.9248672601362736,
+    "worst": [
+     [
+      0.9248672601362736,
+      "A2",
+      "absolute",
+      17,
+      "1.0650489418898532e-20",
+      "1.4175563726567251e-19"
+     ],
+     [
+      0.8716270934210599,
+      "A2",
+      "absolute",
+      18,
+      "1.7247792476693281e-20",
+      "1.3435695222875652e-19"
+     ],
+     [
+      0.8394965255076665,
+      "A2",
+      "relative",
+      17,
+      "8.1491622109736935e-15",
+      "5.0772497210725118e-14"
+     ],
+     [
+      0.8332344847010769,
+      "A1",
+      "absolute",
+      9,
+      "1.7464240634275674e-18",
+      "1.0472333325610779e-17"
+     ],
+     [
+      0.7673823263962622,
+      "A2",
+      "absolute",
+      19,
+      "2.9589795622148201e-20",
+      "1.2720355751022667e-19"
+     ]
+    ]
+   },
+   "population_score_pair": {
+    "whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "restricted": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    }
+   }
+  },
+  "second": {
+   "case": "second",
+   "counts": {
+    "deposited_whole": {
+     "commits": 65,
+     "abstains": 67,
+     "recursed": 6,
+     "direct": 59,
+     "right": 65,
+     "wrong": 0,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 65,
+     "abstains": 67,
+     "recursed": 6,
+     "direct": 59,
+     "right": 65,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 12,
+     "direct": 2,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 12,
+     "direct": 2,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "state_agreement": 69,
+   "max_abs_U_minus_W": "0.0",
+   "deposited_split": {
+    "order0": {
+     "rows": 4,
+     "commits": 4,
+     "recursed": 2,
+     "direct": 2
+    },
+    "model": {
+     "rows": 128,
+     "commits": 61,
+     "recursed": 4,
+     "direct": 57
+    }
+   },
+   "deposited_by_state": {
+    "recursed": 6,
+    "direct": 59
+   },
+   "enclosure_by_state": {
+    "recursed": 12,
+    "direct": 2
+   },
+   "deposited_winner_whole": {
+    "committed_rows": 65,
+    "winner_direct": 59,
+    "winner_recursed": 6,
+    "winner_tie": 0
+   },
+   "justified": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "recursed"
+    ],
+    [
+     "A1",
+     "relative",
+     0,
+     "recursed"
+    ],
+    [
+     "A2",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     5,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     6,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     7,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     8,
+     "recursed"
+    ]
+   ],
+   "unjustified_count": 57,
+   "unjustified_by_state": {
+    "recursed": 0,
+    "direct": 57
+   },
+   "wrong_whole": [],
+   "wrong_pop": [],
+   "enclosure_wrong_whole": [],
+   "enclosure_extra": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     3,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     4,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     9,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "measured_whole": {
+    "direct": 85,
+    "recursed": 44,
+    "tie": 3
+   },
+   "measured_pop": {
+    "direct": 97,
+    "recursed": 29,
+    "tie": 6
+   },
+   "structural": {
+    "rows": 32,
+    "orders": [
+     [
+      "A1",
+      17
+     ],
+     [
+      "A1",
+      18
+     ],
+     [
+      "A1",
+      19
+     ],
+     [
+      "A1",
+      20
+     ],
+     [
+      "A1",
+      21
+     ],
+     [
+      "A1",
+      22
+     ],
+     [
+      "A1",
+      23
+     ],
+     [
+      "A1",
+      24
+     ],
+     [
+      "A1",
+      25
+     ],
+     [
+      "A1",
+      26
+     ],
+     [
+      "A1",
+      27
+     ],
+     [
+      "A1",
+      28
+     ],
+     [
+      "A1",
+      29
+     ],
+     [
+      "A1",
+      30
+     ],
+     [
+      "A1",
+      31
+     ],
+     [
+      "A1",
+      32
+     ]
+    ],
+    "all_abstain": true,
+    "W_equals_D": true
+   },
+   "W_minus_T_below_L": {
+    "rows": 13,
+    "max_relative_shortfall": 0.9267700934325812,
+    "worst": [
+     [
+      0.9267700934325812,
+      "A1",
+      "absolute",
+      9,
+      "7.6688799097734302e-19",
+      "1.0472333325610779e-17"
+     ],
+     [
+      0.9114108694636538,
+      "A2",
+      "absolute",
+      17,
+      "1.0628176316844888e-20",
+      "1.1997156143760085e-19"
+     ],
+     [
+      0.8511428868524412,
+      "A2",
+      "absolute",
+      18,
+      "1.7247792476693281e-20",
+      "1.1586811078081243e-19"
+     ],
+     [
+      0.8345937394164484,
+      "A2",
+      "relative",
+      17,
+      "8.1491622109736935e-15",
+      "4.9267556029762924e-14"
+     ],
+     [
+      0.7761218134349277,
+      "A1",
+      "absolute",
+      10,
+      "1.4874701591310184e-18",
+      "6.6441049123768533e-18"
+     ]
+    ]
+   },
+   "population_score_pair": {
+    "whole": {
+     "commits": 65,
+     "abstains": 67,
+     "recursed": 6,
+     "direct": 59,
+     "right": 65,
+     "wrong": 0,
+     "tie": 0
+    },
+    "restricted": {
+     "commits": 65,
+     "abstains": 67,
+     "recursed": 6,
+     "direct": 59,
+     "right": 65,
+     "wrong": 0,
+     "tie": 0
+    }
+   }
+  },
+  "heldout": {
+   "case": "heldout",
+   "counts": {
+    "deposited_whole": {
+     "commits": 58,
+     "abstains": 74,
+     "recursed": 5,
+     "direct": 53,
+     "right": 58,
+     "wrong": 0,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 58,
+     "abstains": 74,
+     "recursed": 5,
+     "direct": 53,
+     "right": 58,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 13,
+     "abstains": 119,
+     "recursed": 10,
+     "direct": 3,
+     "right": 13,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 13,
+     "abstains": 119,
+     "recursed": 10,
+     "direct": 3,
+     "right": 13,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "state_agreement": 77,
+   "max_abs_U_minus_W": "0.0",
+   "deposited_split": {
+    "order0": {
+     "rows": 4,
+     "commits": 4,
+     "recursed": 1,
+     "direct": 3
+    },
+    "model": {
+     "rows": 128,
+     "commits": 54,
+     "recursed": 4,
+     "direct": 50
+    }
+   },
+   "deposited_by_state": {
+    "recursed": 5,
+    "direct": 53
+   },
+   "enclosure_by_state": {
+    "recursed": 10,
+    "direct": 3
+   },
+   "deposited_winner_whole": {
+    "committed_rows": 58,
+    "winner_direct": 53,
+    "winner_recursed": 5,
+    "winner_tie": 0
+   },
+   "justified": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A1",
+     "relative",
+     0,
+     "recursed"
+    ],
+    [
+     "A2",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     5,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     6,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     7,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     8,
+     "recursed"
+    ]
+   ],
+   "unjustified_count": 50,
+   "unjustified_by_state": {
+    "recursed": 0,
+    "direct": 50
+   },
+   "wrong_whole": [],
+   "wrong_pop": [],
+   "enclosure_wrong_whole": [],
+   "enclosure_extra": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     4,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     9,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "measured_whole": {
+    "direct": 88,
+    "recursed": 43,
+    "tie": 1
+   },
+   "measured_pop": {
+    "direct": 95,
+    "recursed": 35,
+    "tie": 2
+   },
+   "structural": {
+    "rows": 32,
+    "orders": [
+     [
+      "A1",
+      17
+     ],
+     [
+      "A1",
+      18
+     ],
+     [
+      "A1",
+      19
+     ],
+     [
+      "A1",
+      20
+     ],
+     [
+      "A1",
+      21
+     ],
+     [
+      "A1",
+      22
+     ],
+     [
+      "A1",
+      23
+     ],
+     [
+      "A1",
+      24
+     ],
+     [
+      "A1",
+      25
+     ],
+     [
+      "A1",
+      26
+     ],
+     [
+      "A1",
+      27
+     ],
+     [
+      "A1",
+      28
+     ],
+     [
+      "A1",
+      29
+     ],
+     [
+      "A1",
+      30
+     ],
+     [
+      "A1",
+      31
+     ],
+     [
+      "A1",
+      32
+     ]
+    ],
+    "all_abstain": true,
+    "W_equals_D": true,
+    "abstentions_total": 74,
+    "abstentions_structural": 32
+   },
+   "W_minus_T_below_L": {
+    "rows": 18,
+    "max_relative_shortfall": 0.9791557411055668,
+    "worst": [
+     [
+      0.9791557411055668,
+      "A2",
+      "absolute",
+      17,
+      "2.4850230039090687e-21",
+      "1.1921858275195077e-19"
+     ],
+     [
+      0.9660636806906892,
+      "A2",
+      "absolute",
+      18,
+      "3.9661272813844866e-21",
+      "1.1686969483152958e-19"
+     ],
+     [
+      0.9423019977201329,
+      "A2",
+      "absolute",
+      19,
+      "6.6911680652719019e-21",
+      "1.1596879962699664e-19"
+     ],
+     [
+      0.931523028977708,
+      "A2",
+      "relative",
+      17,
+      "3.4854759672545804e-15",
+      "5.0899972870002013e-14"
+     ],
+     [
+      0.9045759226635618,
+      "A2",
+      "absolute",
+      20,
+      "1.1896977390068122e-20",
+      "1.2467479615362448e-19"
+     ]
+    ]
+   },
+   "population_score_pair": {
+    "whole": {
+     "commits": 58,
+     "abstains": 74,
+     "recursed": 5,
+     "direct": 53,
+     "right": 58,
+     "wrong": 0,
+     "tie": 0
+    },
+    "restricted": {
+     "commits": 58,
+     "abstains": 74,
+     "recursed": 5,
+     "direct": 53,
+     "right": 58,
+     "wrong": 0,
+     "tie": 0
+    }
+   }
+  }
+ },
+ "five_checks": {
+  "first_control_pair": {
+   "expected": "68 commitments, 68 right restricted, 67 of 68 whole-band",
+   "first9353": {
+    "whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "restricted": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "first9352": {
+    "whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "restricted": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "confirmed": true
+  },
+  "second_decomposition": {
+   "expected": "65 = 4 order-0 measured + 61 model (57 direct, 4 recursed)",
+   "order0": {
+    "rows": 4,
+    "commits": 4,
+    "recursed": 2,
+    "direct": 2
+   },
+   "model": {
+    "rows": 128,
+    "commits": 61,
+    "recursed": 4,
+    "direct": 57
+   },
+   "confirmed": true
+  },
+  "heldout_decomposition": {
+   "expected": "58 = 53 direct + 5 recursed; always-direct right on 53 of 58",
+   "deposited_by_state": {
+    "recursed": 5,
+    "direct": 53
+   },
+   "commit_winners_whole": {
+    "committed_rows": 58,
+    "winner_direct": 53,
+    "winner_recursed": 5,
+    "winner_tie": 0
+   },
+   "recursed_commitments": [
+    [
+     "A1",
+     "relative",
+     0,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     5,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     6,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     7,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     8,
+     "recursed"
+    ]
+   ],
+   "confirmed": true
+  },
+  "heldout_structural_abstentions": {
+   "expected": "32 of 74 abstentions structural, orders 17-32, same stored fit",
+   "structural": {
+    "rows": 32,
+    "orders": [
+     [
+      "A1",
+      17
+     ],
+     [
+      "A1",
+      18
+     ],
+     [
+      "A1",
+      19
+     ],
+     [
+      "A1",
+      20
+     ],
+     [
+      "A1",
+      21
+     ],
+     [
+      "A1",
+      22
+     ],
+     [
+      "A1",
+      23
+     ],
+     [
+      "A1",
+      24
+     ],
+     [
+      "A1",
+      25
+     ],
+     [
+      "A1",
+      26
+     ],
+     [
+      "A1",
+      27
+     ],
+     [
+      "A1",
+      28
+     ],
+     [
+      "A1",
+      29
+     ],
+     [
+      "A1",
+      30
+     ],
+     [
+      "A1",
+      31
+     ],
+     [
+      "A1",
+      32
+     ]
+    ],
+    "all_abstain": true,
+    "W_equals_D": true,
+    "abstentions_total": 74,
+    "abstentions_structural": 32
+   },
+   "confirmed": true
+  },
+  "heuristic_charge": {
+   "expected": "paper charge exceeded at 5 of 130 harness entry-cells",
+   "confirmed": true,
+   "detail": {
+    "record": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\results-underflow-fix\\harness_cells.csv",
+    "sha256": "59fd3052b2d0939fb51edbdd5b9c04280f99d76fb5a72fde2b28ca132a009e72",
+    "log": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\results-underflow-fix\\harness.log",
+    "log_sha256": "3e9f834e69bf87e3dbca3e5187d7bfbbdc1af30eb088db16cf06515fe29d95a8",
+    "log_line": [
+     "charge violations: cert 0 paper 5"
+    ],
+    "rows_commitments": 65,
+    "entry_cells": 130,
+    "violations": 5,
+    "violating_cells": [
+     [
+      "A1",
+      "absolute",
+      6,
+      "product"
+     ],
+     [
+      "A1",
+      "absolute",
+      15,
+      "product"
+     ],
+     [
+      "A2",
+      "absolute",
+      0,
+      "ship"
+     ],
+     [
+      "A2",
+      "relative",
+      0,
+      "ship"
+     ],
+     [
+      "A2",
+      "relative",
+      1,
+      "ship"
+     ]
+    ]
+   }
+  }
+ },
+ "charge_check": {
+  "record": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\results-underflow-fix\\harness_cells.csv",
+  "sha256": "59fd3052b2d0939fb51edbdd5b9c04280f99d76fb5a72fde2b28ca132a009e72",
+  "log": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\results-underflow-fix\\harness.log",
+  "log_sha256": "3e9f834e69bf87e3dbca3e5187d7bfbbdc1af30eb088db16cf06515fe29d95a8",
+  "log_line": [
+   "charge violations: cert 0 paper 5"
+  ],
+  "rows_commitments": 65,
+  "entry_cells": 130,
+  "violations": 5,
+  "violating_cells": [
+   [
+    "A1",
+    "absolute",
+    6,
+    "product"
+   ],
+   [
+    "A1",
+    "absolute",
+    15,
+    "product"
+   ],
+   [
+    "A2",
+    "absolute",
+    0,
+    "ship"
+   ],
+   [
+    "A2",
+    "relative",
+    0,
+    "ship"
+   ],
+   [
+    "A2",
+    "relative",
+    1,
+    "ship"
+   ]
+  ]
+ },
+ "containment": {
+  "first9353": {
+   "case": "first9353",
+   "served_cells": 133684,
+   "magnitude_below_lower": 0,
+   "magnitude_above_upper": 0,
+   "signed_outside": 69940,
+   "worst_below_relative": "0.0",
+   "worst_above_relative": "0.0",
+   "rows": 132,
+   "measured_recursed_max_below_L": 8,
+   "measured_recursed_max_above_U": 28,
+   "rows_below": [
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 9,
+     "measured_max": "1.0131921985252545e-17",
+     "L": "1.0472333325610779e-17",
+     "U": "2.9452718170090626e-17",
+     "unserved_cells": 2419
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 20,
+     "measured_max": "2.9613692238243892e-18",
+     "L": "3.2975517029886871e-18",
+     "U": "3.2975517029886871e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 22,
+     "measured_max": "3.1316718833710213e-18",
+     "L": "3.6043879511836254e-18",
+     "U": "3.6043879511836254e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 28,
+     "measured_max": "2.2799725258587159e-18",
+     "L": "2.487360660355686e-18",
+     "U": "2.487360660355686e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 32,
+     "measured_max": "1.9269362933549409e-18",
+     "L": "1.9842038213125246e-18",
+     "U": "1.9842038213125246e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A2",
+     "metric": "absolute",
+     "order": 17,
+     "measured_max": "1.3595390413554722e-19",
+     "L": "1.4175563726567251e-19",
+     "U": "1.4175563726567251e-19",
+     "unserved_cells": 3357
+    },
+    {
+     "band": "A2",
+     "metric": "absolute",
+     "order": 19,
+     "measured_max": "1.2219827992960063e-19",
+     "L": "1.2720355751022667e-19",
+     "U": "3.9621299898448806e-19",
+     "unserved_cells": 3357
+    },
+    {
+     "band": "A2",
+     "metric": "relative",
+     "order": 17,
+     "measured_max": "4.9953384538033901e-14",
+     "L": "5.0772497210725118e-14",
+     "U": "1.0722963246607273e-13",
+     "unserved_cells": 3357
+    }
+   ],
+   "rows_above": [
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 17,
+     "measured_max": "4.1016598154390839e-18",
+     "L": "3.4076411959051341e-18",
+     "U": "3.4076411959051341e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 18,
+     "measured_max": "3.829370752377504e-18",
+     "L": "3.1770620591290185e-18",
+     "U": "3.1770620591290185e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 19,
+     "measured_max": "3.7442140360094787e-18",
+     "L": "3.1489803967860106e-18",
+     "U": "3.1489803967860106e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 21,
+     "measured_max": "3.5807964249029176e-18",
+     "L": "3.4080150073953887e-18",
+     "U": "3.4080150073953887e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 23,
+     "measured_max": "3.6971314892219007e-18",
+     "L": "2.8406811175488332e-18",
+     "U": "2.8406811175488332e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 24,
+     "measured_max": "3.8160691937321869e-18",
+     "L": "2.4593595399263985e-18",
+     "U": "2.4593595399263985e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 25,
+     "measured_max": "3.2554574536353594e-18",
+     "L": "2.3880957156469558e-18",
+     "U": "2.3880957156469558e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 26,
+     "measured_max": "3.2713010255372183e-18",
+     "L": "2.7762775455243639e-18",
+     "U": "2.7762775455243639e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 27,
+     "measured_max": "3.0388087021126632e-18",
+     "L": "2.7748339753040016e-18",
+     "U": "2.7748339753040016e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 29,
+     "measured_max": "2.7029113044413825e-18",
+     "L": "2.2334901236963848e-18",
+     "U": "2.2334901236963848e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 30,
+     "measured_max": "2.2475333160454123e-18",
+     "L": "2.0700959394653992e-18",
+     "U": "2.0700959394653992e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 31,
+     "measured_max": "2.6425788683849047e-18",
+     "L": "1.7131498741706241e-18",
+     "U": "1.7131498741706241e-18",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 17,
+     "measured_max": "3.7759204006035577e-14",
+     "L": "2.5948883847097323e-14",
+     "U": "2.5948883847097323e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 18,
+     "measured_max": "3.5805663607971868e-14",
+     "L": "2.1763933590666589e-14",
+     "U": "2.1763933590666589e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 19,
+     "measured_max": "3.6205536170796926e-14",
+     "L": "2.5393132265552625e-14",
+     "U": "2.5393132265552625e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 20,
+     "measured_max": "3.2641159687775614e-14",
+     "L": "2.5419708156309465e-14",
+     "U": "2.5419708156309465e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 21,
+     "measured_max": "4.3683391382752145e-14",
+     "L": "2.922339422959998e-14",
+     "U": "2.922339422959998e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 22,
+     "measured_max": "3.674981995318119e-14",
+     "L": "2.3453606238446705e-14",
+     "U": "2.3453606238446705e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 23,
+     "measured_max": "4.7589850601004604e-14",
+     "L": "3.3243864060504747e-14",
+     "U": "3.3243864060504747e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 24,
+     "measured_max": "5.2517157191983918e-14",
+     "L": "3.1277859537723067e-14",
+     "U": "3.1277859537723067e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 25,
+     "measured_max": "4.1672149667300619e-14",
+     "L": "3.3624014029554793e-14",
+     "U": "3.3624014029554793e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 26,
+     "measured_max": "3.7372902217543337e-14",
+     "L": "2.1413262540482521e-14",
+     "U": "2.1413262540482521e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 27,
+     "measured_max": "4.4975921624581121e-14",
+     "L": "2.8253625131831468e-14",
+     "U": "2.8253625131831468e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 28,
+     "measured_max": "3.9409524911943099e-14",
+     "L": "2.0991684587031349e-14",
+     "U": "2.0991684587031349e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 29,
+     "measured_max": "4.9343993177163969e-14",
+     "L": "2.9757681772005434e-14",
+     "U": "2.9757681772005434e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 30,
+     "measured_max": "3.773597947679568e-14",
+     "L": "2.1794281585017187e-14",
+     "U": "2.1794281585017187e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 31,
+     "measured_max": "5.2016958881982174e-14",
+     "L": "1.8172919452859015e-14",
+     "U": "1.8172919452859015e-14",
+     "unserved_cells": 3499
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 32,
+     "measured_max": "3.5149393492193877e-14",
+     "L": "1.6941088038101519e-14",
+     "U": "1.6941088038101519e-14",
+     "unserved_cells": 3499
+    }
+   ],
+   "worst_row_below_relative": "0.1311501631386187",
+   "worst_row_above_relative": "1.8623336507331913",
+   "enclosure_recursed_commitments": {
+    "commits": 11,
+    "endpoint_holds": 11,
+    "endpoint_fails": 0,
+    "failing": [],
+    "endpoint": "measured_max <= U"
+   },
+   "enclosure_direct_commitments": {
+    "commits": 3,
+    "endpoint_holds": 3,
+    "endpoint_fails": 0,
+    "failing": [],
+    "endpoint": "measured_max >= L"
+   }
+  },
+  "second": {
+   "case": "second",
+   "served_cells": 9200,
+   "magnitude_below_lower": 0,
+   "magnitude_above_upper": 0,
+   "signed_outside": 5297,
+   "worst_below_relative": "0.0",
+   "worst_above_relative": "0.0",
+   "rows": 132,
+   "measured_recursed_max_below_L": 9,
+   "measured_recursed_max_above_U": 24,
+   "rows_below": [
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 9,
+     "measured_max": "9.1463047175545235e-18",
+     "L": "1.0472333325610779e-17",
+     "U": "2.8473182097640402e-17",
+     "unserved_cells": 242
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 18,
+     "measured_max": "2.9052324277339955e-18",
+     "L": "3.1770620591290185e-18",
+     "U": "3.1770620591290185e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 20,
+     "measured_max": "2.7706393630100705e-18",
+     "L": "2.9739495684783104e-18",
+     "U": "2.9739495684783104e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 21,
+     "measured_max": "2.6956981538523996e-18",
+     "L": "3.4080150073953887e-18",
+     "U": "3.4080150073953887e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 17,
+     "measured_max": "1.8653050340778917e-14",
+     "L": "1.9535878890668184e-14",
+     "U": "1.9535878890668184e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 32,
+     "measured_max": "1.9160391943957e-14",
+     "L": "2.1791568530293171e-14",
+     "U": "2.1791568530293171e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A2",
+     "metric": "absolute",
+     "order": 20,
+     "measured_max": "9.8694319224961372e-20",
+     "L": "1.1109258079040311e-19",
+     "U": "7.1701281520776144e-19",
+     "unserved_cells": 168
+    },
+    {
+     "band": "A2",
+     "metric": "relative",
+     "order": 17,
+     "measured_max": "4.7457781165182113e-14",
+     "L": "4.9267556029762924e-14",
+     "U": "1.0722963246607273e-13",
+     "unserved_cells": 168
+    },
+    {
+     "band": "A2",
+     "metric": "relative",
+     "order": 18,
+     "measured_max": "4.9163147834464289e-14",
+     "L": "5.2371895079143218e-14",
+     "U": "1.9465492997909735e-13",
+     "unserved_cells": 168
+    }
+   ],
+   "rows_above": [
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 17,
+     "measured_max": "3.1549827213040754e-18",
+     "L": "2.6335910447838541e-18",
+     "U": "2.6335910447838541e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 19,
+     "measured_max": "3.7442140360094787e-18",
+     "L": "3.1489803967860106e-18",
+     "U": "3.1489803967860106e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 23,
+     "measured_max": "2.5312948051276036e-18",
+     "L": "2.1397277814366773e-18",
+     "U": "2.1397277814366773e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 24,
+     "measured_max": "2.8907267384446194e-18",
+     "L": "2.1431410393191371e-18",
+     "U": "2.1431410393191371e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 25,
+     "measured_max": "2.7956746429324991e-18",
+     "L": "2.2936299599441323e-18",
+     "U": "2.2936299599441323e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 26,
+     "measured_max": "3.2713010255372183e-18",
+     "L": "2.7149094140106892e-18",
+     "U": "2.7149094140106892e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 28,
+     "measured_max": "2.1210683744434879e-18",
+     "L": "1.8216876982550687e-18",
+     "U": "1.8216876982550687e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 30,
+     "measured_max": "2.2475333160454123e-18",
+     "L": "2.0700959394653992e-18",
+     "U": "2.0700959394653992e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 31,
+     "measured_max": "1.919912445862954e-18",
+     "L": "1.7131498741706241e-18",
+     "U": "1.7131498741706241e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 32,
+     "measured_max": "1.6167084326885658e-18",
+     "L": "1.4579647441162014e-18",
+     "U": "1.4579647441162014e-18",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 18,
+     "measured_max": "2.3414336176565753e-14",
+     "L": "1.4289669905393866e-14",
+     "U": "1.4289669905393866e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 19,
+     "measured_max": "2.5011753175997845e-14",
+     "L": "2.2466709820799106e-14",
+     "U": "2.2466709820799106e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 20,
+     "measured_max": "2.8738590919911268e-14",
+     "L": "1.3748805691358978e-14",
+     "U": "1.3748805691358978e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 21,
+     "measured_max": "2.813025986413771e-14",
+     "L": "2.1959902107954292e-14",
+     "U": "2.1959902107954292e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 22,
+     "measured_max": "2.1296720118875694e-14",
+     "L": "1.8310425533982611e-14",
+     "U": "1.8310425533982611e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 23,
+     "measured_max": "2.9870654634514724e-14",
+     "L": "1.9004508832500115e-14",
+     "U": "1.9004508832500115e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 24,
+     "measured_max": "3.9445250003555715e-14",
+     "L": "2.3300541771748067e-14",
+     "U": "2.3300541771748067e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 25,
+     "measured_max": "3.5390934141854813e-14",
+     "L": "2.458127244118584e-14",
+     "U": "2.458127244118584e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 26,
+     "measured_max": "2.241529622603145e-14",
+     "L": "1.4135204464419431e-14",
+     "U": "1.4135204464419431e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 27,
+     "measured_max": "3.4360996904863148e-14",
+     "L": "1.8414990788732913e-14",
+     "U": "1.8414990788732913e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 28,
+     "measured_max": "3.3209449455090745e-14",
+     "L": "1.3353166246715813e-14",
+     "U": "1.3353166246715813e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 29,
+     "measured_max": "3.0065279182807405e-14",
+     "L": "2.1748268932083397e-14",
+     "U": "2.1748268932083397e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 30,
+     "measured_max": "2.907335754549823e-14",
+     "L": "1.7749464642382912e-14",
+     "U": "1.7749464642382912e-14",
+     "unserved_cells": 290
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 31,
+     "measured_max": "2.5521920114377129e-14",
+     "L": "1.4848026619140789e-14",
+     "U": "1.4848026619140789e-14",
+     "unserved_cells": 290
+    }
+   ],
+   "worst_row_below_relative": "0.20901224084907559",
+   "worst_row_above_relative": "1.4870093610388883",
+   "enclosure_recursed_commitments": {
+    "commits": 12,
+    "endpoint_holds": 12,
+    "endpoint_fails": 0,
+    "failing": [],
+    "endpoint": "measured_max <= U"
+   },
+   "enclosure_direct_commitments": {
+    "commits": 2,
+    "endpoint_holds": 2,
+    "endpoint_fails": 0,
+    "failing": [],
+    "endpoint": "measured_max >= L"
+   }
+  },
+  "heldout": {
+   "case": "heldout",
+   "served_cells": 18821,
+   "magnitude_below_lower": 0,
+   "magnitude_above_upper": 0,
+   "signed_outside": 9709,
+   "worst_below_relative": "0.0",
+   "worst_above_relative": "0.0",
+   "rows": 132,
+   "measured_recursed_max_below_L": 14,
+   "measured_recursed_max_above_U": 21,
+   "rows_below": [
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 17,
+     "measured_max": "3.0120318461103079e-18",
+     "L": "3.4407760671923886e-18",
+     "U": "3.4407760671923886e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 18,
+     "measured_max": "2.9811319668100808e-18",
+     "L": "3.6823206581583606e-18",
+     "U": "3.6823206581583606e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 19,
+     "measured_max": "2.8615159967541541e-18",
+     "L": "3.0406972944900764e-18",
+     "U": "3.0406972944900764e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 20,
+     "measured_max": "3.5315215065983004e-18",
+     "L": "3.9427277751323448e-18",
+     "U": "3.9427277751323448e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 21,
+     "measured_max": "3.4086433151665624e-18",
+     "L": "3.9277308084012928e-18",
+     "U": "3.9277308084012928e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 22,
+     "measured_max": "2.2950945407033369e-18",
+     "L": "3.3793329607694057e-18",
+     "U": "3.3793329607694057e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 26,
+     "measured_max": "2.2976942720994675e-18",
+     "L": "2.8562002945368415e-18",
+     "U": "2.8562002945368415e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 27,
+     "measured_max": "2.7021115735063111e-18",
+     "L": "3.1082501594037e-18",
+     "U": "3.1082501594037e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 28,
+     "measured_max": "1.9535324184876324e-18",
+     "L": "1.9663274194750095e-18",
+     "U": "1.9663274194750095e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 30,
+     "measured_max": "1.9377757834413123e-18",
+     "L": "1.9940412995397654e-18",
+     "U": "1.9940412995397654e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 32,
+     "measured_max": "2.4408148053831034e-14",
+     "L": "2.442199271450014e-14",
+     "U": "2.442199271450014e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A2",
+     "metric": "absolute",
+     "order": 20,
+     "measured_max": "1.1112226899755568e-19",
+     "L": "1.2467479615362448e-19",
+     "U": "6.6089386439515062e-19",
+     "unserved_cells": 492
+    },
+    {
+     "band": "A2",
+     "metric": "relative",
+     "order": 17,
+     "measured_max": "5.0280834227868262e-14",
+     "L": "5.0899972870002013e-14",
+     "U": "1.0179540390181411e-13",
+     "unserved_cells": 492
+    },
+    {
+     "band": "A2",
+     "metric": "relative",
+     "order": 18,
+     "measured_max": "5.2629677456092854e-14",
+     "L": "5.276016213532356e-14",
+     "U": "1.8356127879191098e-13",
+     "unserved_cells": 492
+    }
+   ],
+   "rows_above": [
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 23,
+     "measured_max": "3.0641326245621965e-18",
+     "L": "2.5450346579422074e-18",
+     "U": "2.5450346579422074e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 24,
+     "measured_max": "2.6263791513212493e-18",
+     "L": "2.2494592285469705e-18",
+     "U": "2.2494592285469705e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 25,
+     "measured_max": "2.5675653311385351e-18",
+     "L": "2.349872474093345e-18",
+     "U": "2.349872474093345e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 29,
+     "measured_max": "2.1792624445781517e-18",
+     "L": "1.7535720699210146e-18",
+     "U": "1.7535720699210146e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 31,
+     "measured_max": "1.7973130367059117e-18",
+     "L": "1.7745226019949942e-18",
+     "U": "1.7745226019949942e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "absolute",
+     "order": 32,
+     "measured_max": "2.1698032694867424e-18",
+     "L": "1.6946570356507197e-18",
+     "U": "1.6946570356507197e-18",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 17,
+     "measured_max": "2.7727997121130648e-14",
+     "L": "2.2197441356800926e-14",
+     "U": "2.2197441356800926e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 18,
+     "measured_max": "2.4989684762097854e-14",
+     "L": "1.9338615323561732e-14",
+     "U": "1.9338615323561732e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 19,
+     "measured_max": "2.7674650343319213e-14",
+     "L": "2.1092630101088609e-14",
+     "U": "2.1092630101088609e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 20,
+     "measured_max": "2.9715173573657811e-14",
+     "L": "2.161820439694093e-14",
+     "U": "2.161820439694093e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 21,
+     "measured_max": "3.1567098183398292e-14",
+     "L": "1.6097337952110738e-14",
+     "U": "1.6097337952110738e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 22,
+     "measured_max": "2.8191975035827658e-14",
+     "L": "2.3540625311096801e-14",
+     "U": "2.3540625311096801e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 23,
+     "measured_max": "4.1994135761144253e-14",
+     "L": "3.0606485171289865e-14",
+     "U": "3.0606485171289865e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 24,
+     "measured_max": "3.7986153508960246e-14",
+     "L": "3.1458632565094388e-14",
+     "U": "3.1458632565094388e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 25,
+     "measured_max": "3.6463356218178572e-14",
+     "L": "2.7621222631191709e-14",
+     "U": "2.7621222631191709e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 26,
+     "measured_max": "2.8822018042929347e-14",
+     "L": "1.8744435694516942e-14",
+     "U": "1.8744435694516942e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 27,
+     "measured_max": "3.4417517422418059e-14",
+     "L": "2.2846602039758856e-14",
+     "U": "2.2846602039758856e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 28,
+     "measured_max": "3.09114029174827e-14",
+     "L": "1.6534919026626817e-14",
+     "U": "1.6534919026626817e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 29,
+     "measured_max": "3.9784589659415207e-14",
+     "L": "2.3457796770863399e-14",
+     "U": "2.3457796770863399e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 30,
+     "measured_max": "2.966166240233612e-14",
+     "L": "1.666441535385872e-14",
+     "U": "1.666441535385872e-14",
+     "unserved_cells": 483
+    },
+    {
+     "band": "A1",
+     "metric": "relative",
+     "order": 31,
+     "measured_max": "3.5377289662362979e-14",
+     "L": "1.6678770244684242e-14",
+     "U": "1.6678770244684242e-14",
+     "unserved_cells": 483
+    }
+   ],
+   "worst_row_below_relative": "0.32084391584166648",
+   "worst_row_above_relative": "1.1210970079546612",
+   "enclosure_recursed_commitments": {
+    "commits": 10,
+    "endpoint_holds": 10,
+    "endpoint_fails": 0,
+    "failing": [],
+    "endpoint": "measured_max <= U"
+   },
+   "enclosure_direct_commitments": {
+    "commits": 3,
+    "endpoint_holds": 3,
+    "endpoint_fails": 0,
+    "failing": [],
+    "endpoint": "measured_max >= L"
+   }
+  }
+ },
+ "inputs": {
+  "paper_model_analyze_py": {
+   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\analysis\\sweeps\\amplification_form\\analyze.py",
+   "sha256": "75745b378424098cb597e653a972040489a71bdc7c8195991fde89bc28dd994e"
+  },
+  "first9353": {
+   "cells": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\boys-crossover\\exact-tag-replay\\run\\cells-9353.csv",
+    "sha256": "2a2c45d1d7f59b74f4d3aeca647b46e4e20e86c2fb1917767a21a725f86d7da6"
+   },
+   "reference": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\data\\reference.csv",
+    "sha256": "c88a0af5bec51674fcbee78586911855299b1101f78c6fb8487e16fb39e5589b"
+   },
+   "provenance": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\provenance.json",
+    "sha256": "15e4c0f3b04a8b3f335785aab9b27c3d98acd42cdbb5bf0eb083521c794abddb"
+   },
+   "per_order": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\per_order.csv",
+    "sha256": "09d2fe8ce891546f2305c129955377138fd7a1781daa7fd6ed4ffdd58c311d57"
+   }
+  },
+  "first9352": {
+   "cells": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\boys-crossover\\exact-tag-replay\\run\\cells-9352.csv",
+    "sha256": "dd26d0b2a4352113d9f15433ec991adfacc211607ae9586c0bb51cd12b3f3369"
+   },
+   "reference": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\data\\reference.csv",
+    "sha256": "c88a0af5bec51674fcbee78586911855299b1101f78c6fb8487e16fb39e5589b"
+   },
+   "provenance": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\provenance.json",
+    "sha256": "15e4c0f3b04a8b3f335785aab9b27c3d98acd42cdbb5bf0eb083521c794abddb"
+   },
+   "per_order": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\per_order.csv",
+    "sha256": "09d2fe8ce891546f2305c129955377138fd7a1781daa7fd6ed4ffdd58c311d57"
+   }
+  },
+  "second": {
+   "cells": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form\\results\\cells.csv",
+    "sha256": "2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6"
+   },
+   "reference": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form\\data\\reference.csv",
+    "sha256": "514411570e902bc2320932a8ae6200d46e11d950471994c80c2775871f9a528d"
+   },
+   "provenance": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form\\results\\provenance.json",
+    "sha256": "64df907efb091793d2ad7ac0a771d52fb41629230d11b5fe76d91e8949faabea"
+   },
+   "per_order": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form\\results\\per_order.csv",
+    "sha256": "e1ea8f51e37367ddf1f5814e3538164fba691d6b6c6a5fb73f700463f8d1b656"
+   },
+   "record": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\inputs\\model-record\\prediction_record.csv",
+    "sha256": "d146ab20bfe0bbcded9f241129359dfd0414c022f437d164c59c05ed03c8b218"
+   }
+  },
+  "heldout": {
+   "cells": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\cells.csv",
+    "sha256": "252bd8df548fe118fcc04a805d20eae480ac032f521bcb694de1e5c4c5320d94"
+   },
+   "reference": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\data\\reference.csv",
+    "sha256": "cd8e16761db6e47563550d3f375d0747c1474d10d160ce77388656d097e7c09d"
+   },
+   "provenance": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\provenance.json",
+    "sha256": "91bd7ed9fa51522a012445b3c40583be17050a5245dd8e0918a5c9bd11d6e07d"
+   },
+   "per_order": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\per_order.csv",
+    "sha256": "29c1db32cfb2d08cfd281778de97618fe4ae239aeabccd31327b18ce3777274a"
+   },
+   "record": {
+    "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\prediction_heldout.csv",
+    "sha256": "7cb9786ea255605f3ab934f061bd8017e9564ed68fd6372c765584d513035c8d"
+   }
+  },
+  "model_record_prediction_csv": {
+   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\inputs\\model-record\\prediction.csv",
+   "sha256": "305b2a28392c48a6eae355a9e8cca04289c214899b165464ced917d4243702eb"
+  },
+  "certified_bound_readme": {
+   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\README.md",
+   "sha256": "6e6695dcbbf70792896a2441f2176cf07a35c5f612a0f5893694b665389e906d"
+  },
+  "heldout_readme": {
+   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\README.md",
+   "sha256": "211f39ef3200e81fa666558f35d8c30adfc217be0175fbddbec6c3f565a1d3e5"
+  },
+  "exact_tag_replay_readme": {
+   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\boys-crossover\\exact-tag-replay\\README.md",
+   "sha256": "ad5ce613f398a0630e84e535d432efe5e9f43f0f8f4dc85d56ecb883fde93f50"
+  },
+  "older_revision_analyze_py": {
+   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form\\analyze.py",
+   "sha256": "4e7454492a53cef13b7ce2b98ff10bde0529ac406c105a570193499a69077f20"
+  }
+ },
+ "cases": {
+  "first9353": {
+   "case": "first9353",
+   "inputs": {
+    "cells": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\boys-crossover\\exact-tag-replay\\run\\cells-9353.csv",
+     "sha256": "2a2c45d1d7f59b74f4d3aeca647b46e4e20e86c2fb1917767a21a725f86d7da6"
+    },
+    "reference": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\data\\reference.csv",
+     "sha256": "c88a0af5bec51674fcbee78586911855299b1101f78c6fb8487e16fb39e5589b"
+    },
+    "provenance": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\provenance.json",
+     "sha256": "15e4c0f3b04a8b3f335785aab9b27c3d98acd42cdbb5bf0eb083521c794abddb"
+    },
+    "per_order": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\per_order.csv",
+     "sha256": "09d2fe8ce891546f2305c129955377138fd7a1781daa7fd6ed4ffdd58c311d57"
+    }
+   },
+   "thresholds": [
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "2.015297705335114",
+    "2.015297705335114",
+    "2.015297705335114",
+    "2.015297705335114",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762"
+   ],
+   "model_from": "1.0855252345349333",
+   "missing_cells": 0,
+   "rows": 132,
+   "counts": {
+    "deposited_whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 13,
+     "wrong": 1,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "state_agreement": 70,
+   "dep_direct_unjustified": [
+    [
+     "A1",
+     "absolute",
+     2
+    ],
+    [
+     "A1",
+     "absolute",
+     3
+    ],
+    [
+     "A1",
+     "absolute",
+     4
+    ],
+    [
+     "A1",
+     "absolute",
+     5
+    ],
+    [
+     "A1",
+     "absolute",
+     6
+    ],
+    [
+     "A1",
+     "absolute",
+     7
+    ],
+    [
+     "A1",
+     "absolute",
+     8
+    ],
+    [
+     "A1",
+     "absolute",
+     11
+    ],
+    [
+     "A1",
+     "absolute",
+     12
+    ],
+    [
+     "A1",
+     "absolute",
+     13
+    ],
+    [
+     "A1",
+     "absolute",
+     14
+    ],
+    [
+     "A1",
+     "absolute",
+     15
+    ],
+    [
+     "A1",
+     "absolute",
+     16
+    ],
+    [
+     "A1",
+     "relative",
+     4
+    ],
+    [
+     "A1",
+     "relative",
+     6
+    ],
+    [
+     "A1",
+     "relative",
+     7
+    ],
+    [
+     "A1",
+     "relative",
+     8
+    ],
+    [
+     "A1",
+     "relative",
+     12
+    ],
+    [
+     "A1",
+     "relative",
+     13
+    ],
+    [
+     "A1",
+     "relative",
+     14
+    ],
+    [
+     "A1",
+     "relative",
+     15
+    ],
+    [
+     "A1",
+     "relative",
+     16
+    ],
+    [
+     "A2",
+     "absolute",
+     1
+    ],
+    [
+     "A2",
+     "absolute",
+     7
+    ],
+    [
+     "A2",
+     "absolute",
+     8
+    ],
+    [
+     "A2",
+     "absolute",
+     9
+    ],
+    [
+     "A2",
+     "absolute",
+     10
+    ],
+    [
+     "A2",
+     "absolute",
+     11
+    ],
+    [
+     "A2",
+     "absolute",
+     12
+    ],
+    [
+     "A2",
+     "absolute",
+     13
+    ],
+    [
+     "A2",
+     "absolute",
+     14
+    ],
+    [
+     "A2",
+     "absolute",
+     15
+    ],
+    [
+     "A2",
+     "absolute",
+     16
+    ],
+    [
+     "A2",
+     "absolute",
+     22
+    ],
+    [
+     "A2",
+     "absolute",
+     23
+    ],
+    [
+     "A2",
+     "absolute",
+     24
+    ],
+    [
+     "A2",
+     "absolute",
+     25
+    ],
+    [
+     "A2",
+     "absolute",
+     26
+    ],
+    [
+     "A2",
+     "absolute",
+     27
+    ],
+    [
+     "A2",
+     "absolute",
+     28
+    ],
+    [
+     "A2",
+     "absolute",
+     29
+    ],
+    [
+     "A2",
+     "absolute",
+     30
+    ],
+    [
+     "A2",
+     "absolute",
+     31
+    ],
+    [
+     "A2",
+     "absolute",
+     32
+    ],
+    [
+     "A2",
+     "relative",
+     1
+    ],
+    [
+     "A2",
+     "relative",
+     15
+    ],
+    [
+     "A2",
+     "relative",
+     16
+    ],
+    [
+     "A2",
+     "relative",
+     22
+    ],
+    [
+     "A2",
+     "relative",
+     23
+    ],
+    [
+     "A2",
+     "relative",
+     24
+    ],
+    [
+     "A2",
+     "relative",
+     25
+    ],
+    [
+     "A2",
+     "relative",
+     26
+    ],
+    [
+     "A2",
+     "relative",
+     27
+    ],
+    [
+     "A2",
+     "relative",
+     28
+    ],
+    [
+     "A2",
+     "relative",
+     29
+    ],
+    [
+     "A2",
+     "relative",
+     30
+    ],
+    [
+     "A2",
+     "relative",
+     31
+    ],
+    [
+     "A2",
+     "relative",
+     32
+    ]
+   ],
+   "dep_recursed_unjustified": [],
+   "enc_commits_where_dep_abstains": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     3,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "W_minus_T_below_L": [
+    [
+     "A1",
+     "absolute",
+     9,
+     "1.7464240634275674e-18",
+     "1.0472333325610779e-17"
+    ],
+    [
+     "A1",
+     "absolute",
+     10,
+     "3.1651939007381231e-18",
+     "6.6441049123768533e-18"
+    ],
+    [
+     "A1",
+     "relative",
+     9,
+     "3.1601582046487697e-15",
+     "4.7516874762067079e-15"
+    ],
+    [
+     "A2",
+     "absolute",
+     17,
+     "1.0650489418898532e-20",
+     "1.4175563726567251e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     18,
+     "1.7247792476693281e-20",
+     "1.3435695222875652e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     19,
+     "2.9589795622148201e-20",
+     "1.2720355751022667e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     20,
+     "5.3507331899260018e-20",
+     "1.266838333096921e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     21,
+     "1.0171942013045523e-19",
+     "1.2008711672254505e-19"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "8.1491622109736935e-15",
+     "5.0772497210725118e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     18,
+     "1.4725465590001201e-14",
+     "5.3652363860857305e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     19,
+     "2.7861981763053831e-14",
+     "5.5628357837235559e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     20,
+     "5.5115935177238775e-14",
+     "6.0951899337399455e-14"
+    ]
+   ],
+   "max_abs_U_minus_W": "0.0",
+   "per_order": {
+    "file": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\per_order.csv",
+    "present": true,
+    "checked": 264,
+    "mismatched": 0,
+    "max_rel": "4.6831722409848931e-17",
+    "examples": []
+   },
+   "formula_self_check": {
+    "samples": 98,
+    "max_rel_tau": "5.7346932080106567e-71",
+    "max_rel_amplification": "4.1837622155334675e-71",
+    "paper_analyze": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\analysis\\sweeps\\amplification_form\\analyze.py",
+    "paper_analyze_sha256": "75745b378424098cb597e653a972040489a71bdc7c8195991fde89bc28dd994e"
+   },
+   "record": {
+    "file": "None",
+    "present": false
+   }
+  },
+  "first9352": {
+   "case": "first9352",
+   "inputs": {
+    "cells": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\boys-crossover\\exact-tag-replay\\run\\cells-9352.csv",
+     "sha256": "dd26d0b2a4352113d9f15433ec991adfacc211607ae9586c0bb51cd12b3f3369"
+    },
+    "reference": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\data\\reference.csv",
+     "sha256": "c88a0af5bec51674fcbee78586911855299b1101f78c6fb8487e16fb39e5589b"
+    },
+    "provenance": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\provenance.json",
+     "sha256": "15e4c0f3b04a8b3f335785aab9b27c3d98acd42cdbb5bf0eb083521c794abddb"
+    },
+    "per_order": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\per_order.csv",
+     "sha256": "09d2fe8ce891546f2305c129955377138fd7a1781daa7fd6ed4ffdd58c311d57"
+    }
+   },
+   "thresholds": [
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "2.015297705335114",
+    "2.015297705335114",
+    "2.015297705335114",
+    "2.015297705335114",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762"
+   ],
+   "model_from": "1.0855252345349333",
+   "missing_cells": 0,
+   "rows": 132,
+   "counts": {
+    "deposited_whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 13,
+     "wrong": 1,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "state_agreement": 70,
+   "dep_direct_unjustified": [
+    [
+     "A1",
+     "absolute",
+     2
+    ],
+    [
+     "A1",
+     "absolute",
+     3
+    ],
+    [
+     "A1",
+     "absolute",
+     4
+    ],
+    [
+     "A1",
+     "absolute",
+     5
+    ],
+    [
+     "A1",
+     "absolute",
+     6
+    ],
+    [
+     "A1",
+     "absolute",
+     7
+    ],
+    [
+     "A1",
+     "absolute",
+     8
+    ],
+    [
+     "A1",
+     "absolute",
+     11
+    ],
+    [
+     "A1",
+     "absolute",
+     12
+    ],
+    [
+     "A1",
+     "absolute",
+     13
+    ],
+    [
+     "A1",
+     "absolute",
+     14
+    ],
+    [
+     "A1",
+     "absolute",
+     15
+    ],
+    [
+     "A1",
+     "absolute",
+     16
+    ],
+    [
+     "A1",
+     "relative",
+     4
+    ],
+    [
+     "A1",
+     "relative",
+     6
+    ],
+    [
+     "A1",
+     "relative",
+     7
+    ],
+    [
+     "A1",
+     "relative",
+     8
+    ],
+    [
+     "A1",
+     "relative",
+     12
+    ],
+    [
+     "A1",
+     "relative",
+     13
+    ],
+    [
+     "A1",
+     "relative",
+     14
+    ],
+    [
+     "A1",
+     "relative",
+     15
+    ],
+    [
+     "A1",
+     "relative",
+     16
+    ],
+    [
+     "A2",
+     "absolute",
+     1
+    ],
+    [
+     "A2",
+     "absolute",
+     7
+    ],
+    [
+     "A2",
+     "absolute",
+     8
+    ],
+    [
+     "A2",
+     "absolute",
+     9
+    ],
+    [
+     "A2",
+     "absolute",
+     10
+    ],
+    [
+     "A2",
+     "absolute",
+     11
+    ],
+    [
+     "A2",
+     "absolute",
+     12
+    ],
+    [
+     "A2",
+     "absolute",
+     13
+    ],
+    [
+     "A2",
+     "absolute",
+     14
+    ],
+    [
+     "A2",
+     "absolute",
+     15
+    ],
+    [
+     "A2",
+     "absolute",
+     16
+    ],
+    [
+     "A2",
+     "absolute",
+     22
+    ],
+    [
+     "A2",
+     "absolute",
+     23
+    ],
+    [
+     "A2",
+     "absolute",
+     24
+    ],
+    [
+     "A2",
+     "absolute",
+     25
+    ],
+    [
+     "A2",
+     "absolute",
+     26
+    ],
+    [
+     "A2",
+     "absolute",
+     27
+    ],
+    [
+     "A2",
+     "absolute",
+     28
+    ],
+    [
+     "A2",
+     "absolute",
+     29
+    ],
+    [
+     "A2",
+     "absolute",
+     30
+    ],
+    [
+     "A2",
+     "absolute",
+     31
+    ],
+    [
+     "A2",
+     "absolute",
+     32
+    ],
+    [
+     "A2",
+     "relative",
+     1
+    ],
+    [
+     "A2",
+     "relative",
+     15
+    ],
+    [
+     "A2",
+     "relative",
+     16
+    ],
+    [
+     "A2",
+     "relative",
+     22
+    ],
+    [
+     "A2",
+     "relative",
+     23
+    ],
+    [
+     "A2",
+     "relative",
+     24
+    ],
+    [
+     "A2",
+     "relative",
+     25
+    ],
+    [
+     "A2",
+     "relative",
+     26
+    ],
+    [
+     "A2",
+     "relative",
+     27
+    ],
+    [
+     "A2",
+     "relative",
+     28
+    ],
+    [
+     "A2",
+     "relative",
+     29
+    ],
+    [
+     "A2",
+     "relative",
+     30
+    ],
+    [
+     "A2",
+     "relative",
+     31
+    ],
+    [
+     "A2",
+     "relative",
+     32
+    ]
+   ],
+   "dep_recursed_unjustified": [],
+   "enc_commits_where_dep_abstains": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     3,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "W_minus_T_below_L": [
+    [
+     "A1",
+     "absolute",
+     9,
+     "1.7464240634275674e-18",
+     "1.0472333325610779e-17"
+    ],
+    [
+     "A1",
+     "absolute",
+     10,
+     "3.1651939007381231e-18",
+     "6.6441049123768533e-18"
+    ],
+    [
+     "A1",
+     "relative",
+     9,
+     "3.1601582046487697e-15",
+     "4.7516874762067079e-15"
+    ],
+    [
+     "A2",
+     "absolute",
+     17,
+     "1.0650489418898532e-20",
+     "1.4175563726567251e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     18,
+     "1.7247792476693281e-20",
+     "1.3435695222875652e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     19,
+     "2.9589795622148201e-20",
+     "1.2720355751022667e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     20,
+     "5.3507331899260018e-20",
+     "1.266838333096921e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     21,
+     "1.0171942013045523e-19",
+     "1.2008711672254505e-19"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "8.1491622109736935e-15",
+     "5.0772497210725118e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     18,
+     "1.4725465590001201e-14",
+     "5.3652363860857305e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     19,
+     "2.7861981763053831e-14",
+     "5.5628357837235559e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     20,
+     "5.5115935177238775e-14",
+     "6.0951899337399455e-14"
+    ]
+   ],
+   "max_abs_U_minus_W": "0.0",
+   "per_order": {
+    "file": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\per_order.csv",
+    "present": true,
+    "checked": 264,
+    "mismatched": 0,
+    "max_rel": "4.6831722409848931e-17",
+    "examples": []
+   },
+   "formula_self_check": {
+    "samples": 98,
+    "max_rel_tau": "5.1551686956736372e-71",
+    "max_rel_amplification": "4.1837622155334675e-71",
+    "paper_analyze": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\analysis\\sweeps\\amplification_form\\analyze.py",
+    "paper_analyze_sha256": "75745b378424098cb597e653a972040489a71bdc7c8195991fde89bc28dd994e"
+   },
+   "record": {
+    "file": "None",
+    "present": false
+   }
+  },
+  "second": {
+   "case": "second",
+   "inputs": {
+    "cells": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form\\results\\cells.csv",
+     "sha256": "2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6"
+    },
+    "reference": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form\\data\\reference.csv",
+     "sha256": "514411570e902bc2320932a8ae6200d46e11d950471994c80c2775871f9a528d"
+    },
+    "provenance": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form\\results\\provenance.json",
+     "sha256": "64df907efb091793d2ad7ac0a771d52fb41629230d11b5fe76d91e8949faabea"
+    },
+    "per_order": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form\\results\\per_order.csv",
+     "sha256": "e1ea8f51e37367ddf1f5814e3538164fba691d6b6c6a5fb73f700463f8d1b656"
+    }
+   },
+   "thresholds": [
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "2.015297705335114",
+    "2.015297705335114",
+    "2.015297705335114",
+    "2.015297705335114",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762"
+   ],
+   "model_from": "1.0855252345349333",
+   "missing_cells": 0,
+   "rows": 132,
+   "counts": {
+    "deposited_whole": {
+     "commits": 65,
+     "abstains": 67,
+     "recursed": 6,
+     "direct": 59,
+     "right": 65,
+     "wrong": 0,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 65,
+     "abstains": 67,
+     "recursed": 6,
+     "direct": 59,
+     "right": 65,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 12,
+     "direct": 2,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 12,
+     "direct": 2,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "state_agreement": 69,
+   "dep_direct_unjustified": [
+    [
+     "A1",
+     "absolute",
+     2
+    ],
+    [
+     "A1",
+     "absolute",
+     3
+    ],
+    [
+     "A1",
+     "absolute",
+     4
+    ],
+    [
+     "A1",
+     "absolute",
+     5
+    ],
+    [
+     "A1",
+     "absolute",
+     6
+    ],
+    [
+     "A1",
+     "absolute",
+     7
+    ],
+    [
+     "A1",
+     "absolute",
+     8
+    ],
+    [
+     "A1",
+     "absolute",
+     12
+    ],
+    [
+     "A1",
+     "absolute",
+     13
+    ],
+    [
+     "A1",
+     "absolute",
+     14
+    ],
+    [
+     "A1",
+     "absolute",
+     15
+    ],
+    [
+     "A1",
+     "absolute",
+     16
+    ],
+    [
+     "A1",
+     "relative",
+     4
+    ],
+    [
+     "A1",
+     "relative",
+     7
+    ],
+    [
+     "A1",
+     "relative",
+     8
+    ],
+    [
+     "A1",
+     "relative",
+     12
+    ],
+    [
+     "A1",
+     "relative",
+     13
+    ],
+    [
+     "A1",
+     "relative",
+     14
+    ],
+    [
+     "A1",
+     "relative",
+     15
+    ],
+    [
+     "A1",
+     "relative",
+     16
+    ],
+    [
+     "A2",
+     "absolute",
+     1
+    ],
+    [
+     "A2",
+     "absolute",
+     7
+    ],
+    [
+     "A2",
+     "absolute",
+     8
+    ],
+    [
+     "A2",
+     "absolute",
+     9
+    ],
+    [
+     "A2",
+     "absolute",
+     10
+    ],
+    [
+     "A2",
+     "absolute",
+     11
+    ],
+    [
+     "A2",
+     "absolute",
+     12
+    ],
+    [
+     "A2",
+     "absolute",
+     13
+    ],
+    [
+     "A2",
+     "absolute",
+     14
+    ],
+    [
+     "A2",
+     "absolute",
+     15
+    ],
+    [
+     "A2",
+     "absolute",
+     16
+    ],
+    [
+     "A2",
+     "absolute",
+     21
+    ],
+    [
+     "A2",
+     "absolute",
+     22
+    ],
+    [
+     "A2",
+     "absolute",
+     23
+    ],
+    [
+     "A2",
+     "absolute",
+     24
+    ],
+    [
+     "A2",
+     "absolute",
+     25
+    ],
+    [
+     "A2",
+     "absolute",
+     26
+    ],
+    [
+     "A2",
+     "absolute",
+     27
+    ],
+    [
+     "A2",
+     "absolute",
+     28
+    ],
+    [
+     "A2",
+     "absolute",
+     29
+    ],
+    [
+     "A2",
+     "absolute",
+     30
+    ],
+    [
+     "A2",
+     "absolute",
+     31
+    ],
+    [
+     "A2",
+     "absolute",
+     32
+    ],
+    [
+     "A2",
+     "relative",
+     1
+    ],
+    [
+     "A2",
+     "relative",
+     15
+    ],
+    [
+     "A2",
+     "relative",
+     16
+    ],
+    [
+     "A2",
+     "relative",
+     22
+    ],
+    [
+     "A2",
+     "relative",
+     23
+    ],
+    [
+     "A2",
+     "relative",
+     24
+    ],
+    [
+     "A2",
+     "relative",
+     25
+    ],
+    [
+     "A2",
+     "relative",
+     26
+    ],
+    [
+     "A2",
+     "relative",
+     27
+    ],
+    [
+     "A2",
+     "relative",
+     28
+    ],
+    [
+     "A2",
+     "relative",
+     29
+    ],
+    [
+     "A2",
+     "relative",
+     30
+    ],
+    [
+     "A2",
+     "relative",
+     31
+    ],
+    [
+     "A2",
+     "relative",
+     32
+    ]
+   ],
+   "dep_recursed_unjustified": [],
+   "enc_commits_where_dep_abstains": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     3,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     4,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     9,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "W_minus_T_below_L": [
+    [
+     "A1",
+     "absolute",
+     9,
+     "7.6688799097734302e-19",
+     "1.0472333325610779e-17"
+    ],
+    [
+     "A1",
+     "absolute",
+     10,
+     "1.4874701591310184e-18",
+     "6.6441049123768533e-18"
+    ],
+    [
+     "A1",
+     "absolute",
+     11,
+     "3.1888220215695876e-18",
+     "5.58014314798875e-18"
+    ],
+    [
+     "A1",
+     "relative",
+     9,
+     "1.0938658663142628e-15",
+     "3.6928489371104553e-15"
+    ],
+    [
+     "A1",
+     "relative",
+     10,
+     "2.4873161476592725e-15",
+     "5.2836059953327268e-15"
+    ],
+    [
+     "A2",
+     "absolute",
+     17,
+     "1.0628176316844888e-20",
+     "1.1997156143760085e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     18,
+     "1.7247792476693281e-20",
+     "1.1586811078081243e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     19,
+     "2.9589795622148201e-20",
+     "1.1305675196288062e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     20,
+     "5.3507331899260018e-20",
+     "1.1109258079040311e-19"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "8.1491622109736935e-15",
+     "4.9267556029762924e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     18,
+     "1.4725465590001201e-14",
+     "5.2371895079143218e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     19,
+     "2.7861981763053831e-14",
+     "5.3597877095709501e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     20,
+     "5.5115935177238775e-14",
+     "5.7283199716142173e-14"
+    ]
+   ],
+   "max_abs_U_minus_W": "0.0",
+   "per_order": {
+    "file": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\amplification-form\\results\\per_order.csv",
+    "present": true,
+    "checked": 264,
+    "mismatched": 0,
+    "max_rel": "4.7352149525754297e-17",
+    "examples": []
+   },
+   "formula_self_check": {
+    "samples": 98,
+    "max_rel_tau": "5.1551686956736372e-71",
+    "max_rel_amplification": "2.3971221089278956e-71",
+    "paper_analyze": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\analysis\\sweeps\\amplification_form\\analyze.py",
+    "paper_analyze_sha256": "75745b378424098cb597e653a972040489a71bdc7c8195991fde89bc28dd994e"
+   },
+   "record": {
+    "file": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\inputs\\model-record\\prediction_record.csv",
+    "present": true,
+    "checked": 132,
+    "state_mismatches": 0,
+    "winner_mismatches": 0,
+    "choice_mismatches": 0,
+    "right_mismatches": 0,
+    "max_rel": {
+     "predicted_ship": "4.2373970741942585e-17",
+     "predicted_product": "4.7352149525754297e-17",
+     "arithmetic": "3.5864838882881196e-17"
+    },
+    "examples": []
+   }
+  },
+  "heldout": {
+   "case": "heldout",
+   "inputs": {
+    "cells": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\cells.csv",
+     "sha256": "252bd8df548fe118fcc04a805d20eae480ac032f521bcb694de1e5c4c5320d94"
+    },
+    "reference": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\data\\reference.csv",
+     "sha256": "cd8e16761db6e47563550d3f375d0747c1474d10d160ce77388656d097e7c09d"
+    },
+    "provenance": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\provenance.json",
+     "sha256": "91bd7ed9fa51522a012445b3c40583be17050a5245dd8e0918a5c9bd11d6e07d"
+    },
+    "per_order": {
+     "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\per_order.csv",
+     "sha256": "29c1db32cfb2d08cfd281778de97618fe4ae239aeabccd31327b18ce3777274a"
+    }
+   },
+   "thresholds": [
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "1.0855252345349333",
+    "2.015297705335114",
+    "2.015297705335114",
+    "2.015297705335114",
+    "2.015297705335114",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "4.897870299825657",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762",
+    "10.783587858916762"
+   ],
+   "model_from": "1.0855252345349333",
+   "missing_cells": 0,
+   "rows": 132,
+   "counts": {
+    "deposited_whole": {
+     "commits": 58,
+     "abstains": 74,
+     "recursed": 5,
+     "direct": 53,
+     "right": 58,
+     "wrong": 0,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 58,
+     "abstains": 74,
+     "recursed": 5,
+     "direct": 53,
+     "right": 58,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 13,
+     "abstains": 119,
+     "recursed": 10,
+     "direct": 3,
+     "right": 13,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 13,
+     "abstains": 119,
+     "recursed": 10,
+     "direct": 3,
+     "right": 13,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "state_agreement": 77,
+   "dep_direct_unjustified": [
+    [
+     "A1",
+     "absolute",
+     2
+    ],
+    [
+     "A1",
+     "absolute",
+     3
+    ],
+    [
+     "A1",
+     "absolute",
+     4
+    ],
+    [
+     "A1",
+     "absolute",
+     5
+    ],
+    [
+     "A1",
+     "absolute",
+     6
+    ],
+    [
+     "A1",
+     "absolute",
+     7
+    ],
+    [
+     "A1",
+     "absolute",
+     8
+    ],
+    [
+     "A1",
+     "absolute",
+     12
+    ],
+    [
+     "A1",
+     "absolute",
+     13
+    ],
+    [
+     "A1",
+     "absolute",
+     14
+    ],
+    [
+     "A1",
+     "absolute",
+     15
+    ],
+    [
+     "A1",
+     "absolute",
+     16
+    ],
+    [
+     "A1",
+     "relative",
+     7
+    ],
+    [
+     "A1",
+     "relative",
+     8
+    ],
+    [
+     "A1",
+     "relative",
+     12
+    ],
+    [
+     "A1",
+     "relative",
+     13
+    ],
+    [
+     "A1",
+     "relative",
+     14
+    ],
+    [
+     "A1",
+     "relative",
+     15
+    ],
+    [
+     "A1",
+     "relative",
+     16
+    ],
+    [
+     "A2",
+     "absolute",
+     1
+    ],
+    [
+     "A2",
+     "absolute",
+     8
+    ],
+    [
+     "A2",
+     "absolute",
+     9
+    ],
+    [
+     "A2",
+     "absolute",
+     10
+    ],
+    [
+     "A2",
+     "absolute",
+     11
+    ],
+    [
+     "A2",
+     "absolute",
+     12
+    ],
+    [
+     "A2",
+     "absolute",
+     13
+    ],
+    [
+     "A2",
+     "absolute",
+     14
+    ],
+    [
+     "A2",
+     "absolute",
+     15
+    ],
+    [
+     "A2",
+     "absolute",
+     16
+    ],
+    [
+     "A2",
+     "absolute",
+     24
+    ],
+    [
+     "A2",
+     "absolute",
+     25
+    ],
+    [
+     "A2",
+     "absolute",
+     26
+    ],
+    [
+     "A2",
+     "absolute",
+     27
+    ],
+    [
+     "A2",
+     "absolute",
+     28
+    ],
+    [
+     "A2",
+     "absolute",
+     29
+    ],
+    [
+     "A2",
+     "absolute",
+     30
+    ],
+    [
+     "A2",
+     "absolute",
+     31
+    ],
+    [
+     "A2",
+     "absolute",
+     32
+    ],
+    [
+     "A2",
+     "relative",
+     1
+    ],
+    [
+     "A2",
+     "relative",
+     15
+    ],
+    [
+     "A2",
+     "relative",
+     16
+    ],
+    [
+     "A2",
+     "relative",
+     24
+    ],
+    [
+     "A2",
+     "relative",
+     25
+    ],
+    [
+     "A2",
+     "relative",
+     26
+    ],
+    [
+     "A2",
+     "relative",
+     27
+    ],
+    [
+     "A2",
+     "relative",
+     28
+    ],
+    [
+     "A2",
+     "relative",
+     29
+    ],
+    [
+     "A2",
+     "relative",
+     30
+    ],
+    [
+     "A2",
+     "relative",
+     31
+    ],
+    [
+     "A2",
+     "relative",
+     32
+    ]
+   ],
+   "dep_recursed_unjustified": [],
+   "enc_commits_where_dep_abstains": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     4,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     9,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "W_minus_T_below_L": [
+    [
+     "A1",
+     "absolute",
+     9,
+     "1.0202074204945244e-18",
+     "7.8430546397817519e-18"
+    ],
+    [
+     "A1",
+     "absolute",
+     10,
+     "1.9356666910860523e-18",
+     "6.905379041476448e-18"
+    ],
+    [
+     "A1",
+     "absolute",
+     11,
+     "4.0584010705240907e-18",
+     "6.784264270155769e-18"
+    ],
+    [
+     "A1",
+     "relative",
+     9,
+     "2.091675910626807e-15",
+     "3.1431141963309925e-15"
+    ],
+    [
+     "A1",
+     "relative",
+     10,
+     "3.9431001749859881e-15",
+     "5.8325823996283181e-15"
+    ],
+    [
+     "A2",
+     "absolute",
+     17,
+     "2.4850230039090687e-21",
+     "1.1921858275195077e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     18,
+     "3.9661272813844866e-21",
+     "1.1686969483152958e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     19,
+     "6.6911680652719019e-21",
+     "1.1596879962699664e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     20,
+     "1.1896977390068122e-20",
+     "1.2467479615362448e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     21,
+     "2.2233455181537847e-20",
+     "1.0975137356215925e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     22,
+     "4.3567690237377556e-20",
+     "1.0047378119693491e-19"
+    ],
+    [
+     "A2",
+     "absolute",
+     23,
+     "8.9322187718281521e-20",
+     "1.0177164107097274e-19"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "3.4854759672545804e-15",
+     "5.0899972870002013e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     18,
+     "5.2104014278989164e-15",
+     "5.276016213532356e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     19,
+     "7.775203193442528e-15",
+     "5.4392952166169547e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     20,
+     "1.4218103949680744e-14",
+     "5.8601670569584099e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     21,
+     "2.9017489541806843e-14",
+     "6.2106362990101615e-14"
+    ],
+    [
+     "A2",
+     "relative",
+     22,
+     "6.1716584355822545e-14",
+     "6.4615198301028326e-14"
+    ]
+   ],
+   "max_abs_U_minus_W": "0.0",
+   "per_order": {
+    "file": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\per_order.csv",
+    "present": true,
+    "checked": 264,
+    "mismatched": 0,
+    "max_rel": "3.8123205206556964e-17",
+    "examples": []
+   },
+   "formula_self_check": {
+    "samples": 98,
+    "max_rel_tau": "1.0905905373887952e-70",
+    "max_rel_amplification": "5.3520106770725931e-71",
+    "paper_analyze": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\analysis\\sweeps\\amplification_form\\analyze.py",
+    "paper_analyze_sha256": "75745b378424098cb597e653a972040489a71bdc7c8195991fde89bc28dd994e"
+   },
+   "record": {
+    "file": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\prediction_heldout.csv",
+    "present": true,
+    "checked": 132,
+    "state_mismatches": 0,
+    "winner_mismatches": 0,
+    "choice_mismatches": 0,
+    "right_mismatches": 0,
+    "max_rel": {
+     "predicted_recursed": "4.3214290502872232e-17",
+     "predicted_direct": "3.4948443980940886e-17",
+     "arithmetic": "4.3667730365710125e-17"
+    },
+    "examples": []
+   }
+  }
+ }
+}

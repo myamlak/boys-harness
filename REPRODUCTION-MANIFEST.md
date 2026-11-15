@@ -1,19 +1,18 @@
 # Reproduction manifest
 
-Harness release `v1.0.38` (`VERSION`). Kernel release boys `v5.3.2`. This file
-names, for Papers A, B and C, the commands that reproduce or verify each
+Harness release `v1.0.39` (`VERSION`). Kernel release boys `v5.3.2`. This file
+names, for Papers A, B, C and D, the commands that reproduce or verify each
 deposited record, the environment each record was made in, which records are
 reproduced and which are only re-serialised, and what the deposit does not
 carry.
 
-The papers cite harness `v1.0.38` at submission; the tag is cut from the merge
-commit.
-The recorded values carried from `v1.0.37` are unchanged. This release adds the
-full-cube order-three decomposition at `composition-audit/fullcube/`. The previous release moved
-the kernel pin in `.github/workflows/harness.yml` from `v5.3.1` to `v5.3.2`,
-a documentation, version-string and test-only change. The `v1.0.36` release added the held-out
-exact-tag replay at `amplification-sweeps/held-out-v531/` and its TeX fixture
-at `tables/prediction-record.tex`.
+The papers cite harness `v1.0.39` at submission; the tag is cut from the merge
+commit. This release adds the exact-tag replay at
+`boys-crossover/exact-tag-replay-v5.3.2/`, the Paper A interval/enclosure
+record at `amplification-sweeps/interval-enclosure/`, the Paper B libint2
+comparison at `accuracy-claim-audit/comparison-libint2/`, and Paper D's
+second fractional-design instance at `composition-audit/second-instance/`.
+The recorded values carried from `v1.0.38` are unchanged.
 
 ## Paths
 
@@ -23,7 +22,7 @@ the tag checkouts:
 
 ```sh
 git clone --branch v5.3.2 https://github.com/myamlak/boys.git boys
-git clone --branch v1.0.38 https://github.com/myamlak/boys-harness.git boys-harness  # (cut after this deposit merges)
+git clone --branch v1.0.39 https://github.com/myamlak/boys-harness.git boys-harness  # (cut after this deposit merges)
 cd boys-harness
 git -C ../boys worktree add ../boys-v5.1.1 v5.1.1
 git -C ../boys worktree add ../boys-v5.2.5 v5.2.5
@@ -41,6 +40,9 @@ the same names with `set NAME=value`.
 | `HARNESS` | `$PWD` | this repository |
 | `BOOST_SRC` | path to the Boost.Math 1.92.0 source tree | external, pinned by archive SHA-256 |
 | `CRLIBM_SRC` | path to the crlibm 1.0beta5 source tree | external, pinned by archive SHA-256 |
+| `BOYS_HARNESS` | path to this clone | optional override for the interval/enclosure scripts; the default is derived from the record's location |
+| `LIBINT_ROOT` | path to the libint2 2.13.1 install tree | external, for the libint2 accuracy comparison |
+| `CLAIMGATE_REPO` | path to the claimgate clone | external, tag `v0.1.0`, for the second-instance record |
 | `RUN` | a fresh directory for a run's outputs, e.g. `$PWD/run/certificates` | never reuse a deposited `results/` directory |
 
 The paper-tree inputs that `extract_and_verify.py` reads are three files, and
@@ -53,7 +55,7 @@ deposit must stay unchanged.
 
 | Item | Value |
 | --- | --- |
-| Harness | tag `v1.0.38`, `VERSION` 1.0.38. The tag is annotated and names the release commit. A file inside that commit cannot carry the tag object that points to it: resolve the tag object, commit and tree with `git rev-parse v1.0.38`, `git rev-parse 'v1.0.38^{}'` and `git rev-parse 'v1.0.38^{tree}'`. The preceding release, `v1.0.37`, is tag object `a07d808ea12ca4394104bf4054eabd2407ff1986`, commit `74eecb59de7e8d408872083c06a33284759ef6de`, tree `f832c317e1fdeb9076a439e5c80cf0609f1fe20b`. |
+| Harness | tag `v1.0.39`, `VERSION` 1.0.39. The tag is annotated and names the release commit. A file inside that commit cannot carry the tag object that points to it: resolve the tag object, commit and tree with `git rev-parse v1.0.39`, `git rev-parse 'v1.0.39^{}'` and `git rev-parse 'v1.0.39^{tree}'`. The preceding release, `v1.0.38`, is tag object `03ad030ee08c33124ab54b79b604a3272502b92c`, commit `0342a9734c0f34011ad09813deff31a35ceb9346`, tree `28cd4851252ca05928d21561b1b8bfd18b29d2e7`. |
 | Kernel | boys `v5.3.2`, tag object `058f10f273f37ca3b5769e9f1173c218f38fce6c`, commit `6739447d82765ae5f7f68351a99f418cd018dd9a`, tree `71be8196d53c31c8ec5d9be2c9fb48453b297c4e` |
 | Earlier kernel revisions named by records | v5.0.0 (first and second sweeps, bridge provenance); v5.1.1 (9,353-argument record, seed-spliced, held-out, Chebyshev recount); v5.2.5 and v5.2.6 (certificate; Paper C core and sensitivity sweeps); v5.3.1 (exact-tag replay, accuracy gate, coefficient identity, and the release the earlier paper tags named) |
 
@@ -75,6 +77,7 @@ this affects.
 | A | MSVC 19.51.36260 for x64 (14.51.36231), `/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2`; GCC 15, C++23, for the CI smoke build | Python 3.14.7, mpmath 1.4.1 | no record is a GPU run |
 | B | MSVC 14.5 (Visual Studio 18) for the Boost gate, C++17; gcc 15.2 on WSL Ubuntu for crlibm; C++23 and CMake 3.20 or newer for the composition audit | Python 3.10 or newer; mpmath 1.4.1; gmpy2 2.3.1 linked to MPFR 4.2.2 | the CUDA source was inspected, not run on a named device; no GPU measurement |
 | C | none for the counts | Python 3.14.7 (MSC v.1944, 64-bit); mpmath 1.4.1; numpy 2.5.2; scipy 1.18.1; baryrat 2.1.2; gmpy2 2.3.1; `math.fma` present | none |
+| D | MSVC 19.51.36260 for x64 (14.51.36231), C++17; CMake 4.4.2; Git 2.55.0; claimgate 0.1.0 | none | none |
 
 The records were made with the packages above. Install the Python stack into
 the interpreter the commands use:
@@ -95,8 +98,9 @@ script without `-I`. The certificate commands and the Paper B recount use
 
 Records: `amplification-sweeps/` (the two sweeps, certificate, strengthening,
 seed-spliced, held-out, held-out-v531, surrogate-control, apriori-bound,
-workload-pair), `chemistry-bridge/`, and `boys-crossover/exact-tag-replay/` and
-`boys-crossover/r4-and-9353/`.
+workload-pair, interval-enclosure), `chemistry-bridge/`, and
+`boys-crossover/exact-tag-replay/`, `boys-crossover/exact-tag-replay-v5.3.2/`
+and `boys-crossover/r4-and-9353/`.
 
 Build and run a sweep from its directory (MSVC form): `product-amplification/`
 holds `sweep1.cpp` and `amplification-form/` holds `sweep2.cpp`.
@@ -150,10 +154,32 @@ The identity check, from `boys-crossover/exact-tag-replay`:
 python compare_identity.py "$BOYS" "$HARNESS/amplification-sweeps/certified-bound/v531-check/digests.txt" "$BOYS_V511"
 ```
 
-Expected: measured column 45, v5.3.1 column 76, v5.1.1 tag tree 45. The two
-input lists, from `boys-crossover/r4-and-9353`: the script's second argument is
-the paper tree, and the three files it reads are deposited, so build the
-stand-in first.
+Expected: measured column 45, v5.3.1 column 76, v5.1.1 tag tree 45.
+
+The v5.3.2 replay is the same measurement at the submission tag; its commands
+and digests are in `boys-crossover/exact-tag-replay-v5.3.2/README.md`. From
+that directory, `python -I compare_outputs.py` compares the deposited
+measurement records with the v5.3.1 record byte for byte. The raw path record
+is not deposited, so the command reports 12 of 13 identical and exits 1 in the
+delivered state; `run/output-comparison.log` is the 13/13 run recorded before
+the raw file was removed, and the 13th digest is in `digests.txt`.
+
+The interval/enclosure record recomputes the paper model and scores the
+deposited and enclosure rules from the deposited first- and second-sweep,
+held-out and certified-bound records. From
+`amplification-sweeps/interval-enclosure`:
+
+```sh
+sh reproduce.sh
+```
+
+Expected: exit 0, with `results.csv`, `results.json`, `outcome_summary.json`
+and the per-case `work/` outputs byte-identical to the deposit. No boys
+checkout is read; `BOYS_HARNESS` optionally names this clone.
+
+The two input lists, from `boys-crossover/r4-and-9353`: the script's second
+argument is the paper tree, and the three files it reads are deposited, so
+build the stand-in first.
 
 ```sh
 mkdir -p paper-inputs/sweeps/amplification_form/data paper-inputs/sweeps/product_amplification/data
@@ -186,11 +212,15 @@ tensors and argument streams; `benzene-pvdz/commands.md` gives the benzene arm
 
 Reproduced and re-serialised:
 
-- Reproduced byte for byte at `v5.3.1`: the three sweep records (9,353, the
-  designed 9,352, and the second sweep), their admission and
-  replica-gain records, and the four certificate outputs (exact-tag
-  replay). The second sweep's path record is compared by digest only: it is
+- Reproduced byte for byte at `v5.3.1` and again at `v5.3.2`: the three sweep
+  records (9,353, the designed 9,352, and the second sweep), their admission
+  and replica-gain records, and the four certificate outputs (exact-tag
+  replays). The second sweep's path record is compared by digest only: it is
   291,827,555 bytes and is stored as a digest, not as a file.
+- Reproduced from the deposit: the interval/enclosure record
+  (`amplification-sweeps/interval-enclosure/`); `results.csv`, `results.json`,
+  `outcome_summary.json` and the per-case `work/` outputs are byte-identical
+  on a fresh run.
 - Reconstructed and verified against the deposits: the 73-argument R4 list
   (2,409 cells, worst difference `4.975492884e-46` at the deposited cell) and
   the 9,353rd argument.
@@ -199,9 +229,10 @@ Reproduced and re-serialised:
   surrogate-control, apriori-bound and workload-pair records, and the
   chemistry-bridge water and benzene records. Their analysis tables and
   summaries are regenerated from the deposited records.
-- `run/paths.csv` (291,827,555 bytes) is stored as a digest only, so
-  byte-for-byte reproduction cannot be a comparison against a deposited file:
-  compare its SHA-256 with `boys-crossover/exact-tag-replay/digests.txt`.
+- `run/paths.csv` (291,827,555 bytes) is stored as a digest only in each
+  exact-tag replay record, so byte-for-byte reproduction cannot be a
+  comparison against a deposited file: compare its SHA-256 with the record's
+  `digests.txt`.
 
 Missing artifacts:
 
@@ -225,10 +256,10 @@ the finite records.
 ## Paper B
 
 Records: `accuracy-claim-audit/` (the coverage enumeration, the captured cell
-summary, the Boost.Math and crlibm audits and the taxonomy testbed),
-`composition-audit/`, and `chemistry-bridge/` where the program paper cites the
-bridge. The accuracy gate's records and reference grids are in the `boys`
-repository at `v5.3.1`.
+summary, the Boost.Math and crlibm audits, the taxonomy testbed and the libint2
+accuracy comparison), `composition-audit/`, and `chemistry-bridge/` where the
+program paper cites the bridge. The accuracy gate's records and reference grids
+are in the `boys` repository at `v5.3.1`.
 
 Commands:
 
@@ -253,6 +284,24 @@ powershell -File run_measurement.ps1 -QuietMachine
 On Linux or WSL use `bash run_measurement.sh --quiet-machine --reference results/reference.csv --arguments-reference results/arguments.csv`.
 `signed_interaction.py`, `synthetic_surface.py` and `figure-ratio.json`
 recompute from `records/cells/` and the deposited reference.
+
+The libint2 accuracy comparison, from
+`accuracy-claim-audit/comparison-libint2`, needs a Linux or WSL x86-64 host, a
+boys `v5.3.2` checkout and a libint2 2.13.1 install tree:
+
+```sh
+MSYS_NO_PATHCONV=1 wsl -e sh -c \
+  'BOYS_SOURCE=/path/to/boys-v5.3.2 LIBINT_ROOT=/path/to/libint-2.13.1 sh accuracy-claim-audit/comparison-libint2/checks/run-all.sh'
+```
+The script path is relative to the clone; WSL starts in the translated
+current directory.
+
+The recorded run exited 0. A fresh run reproduces `results-all.tsv`, both
+per-grid tables, the raw probe outputs and `grid-crosscheck.txt` byte for
+byte, with all 28 command blocks at exit 0. The recorded commands name the
+measurement tree's paths, and the two check-script digest lines in
+`digests.txt` name the measured copies; the deposited check scripts differ
+only in path handling.
 
 The accuracy gate replay is separate from `check_registration.py`. From the
 `boys` checkout, configure, build and run the gate, then hold the committed
@@ -282,7 +331,8 @@ Reproduced and re-serialised:
 
 - Reproduced: the claim census and the counts from the deposited tools; the
   Boost.Math and crlibm audits from the pinned sources; the composition
-  audit's interaction records from the compressed cell files; the gate from the
+  audit's interaction records from the compressed cell files; the libint2
+  accuracy comparison from the probe against libint2 2.13.1; the gate from the
   `boys` tree.
 - Delivered records, checked rather than regenerated by one command:
   `accuracy-claim-audit/records/documented-claims-v531.tsv` (checked by
@@ -301,6 +351,9 @@ Missing artifacts:
   and crlibm 1.0beta5 (archive SHA-256
   `79d626f9515fccdbc724e8b74cbf848331317b1891ef22aaaf6a195e20bbbfe5`)
   are pinned but not deposited.
+- The libint2 2.13.1 install tree and the Linux x86-64 g++ are external; the
+  comparison record carries the probe source, digests, TSVs and logs. The
+  recorded command log names the measurement tree's paths.
 - The program demonstration record is in the submission package, not the
   harness.
 
@@ -404,6 +457,46 @@ root-isolation record is the continuous-side check: exact Sturm isolation and
 interval-wide denominator bounds for all 98 accepted rational fits in the
 corrected x0, second-edge a2 and 60-digit control records. Continuous-error
 certification beyond that is not claimed.
+
+## Paper D
+
+Records: `composition-audit/second-instance/` (the three-axis and four-axis
+fractional designs, their full-factorial coefficients, certificates and
+claimgate books).
+
+Commands, from `composition-audit/second-instance`:
+
+```sh
+bash reproduce.sh
+```
+
+The script snapshots the claimgate public tag `v0.1.0` with `git archive`,
+builds and tests claimgate, installs it, builds the instance driver against it
+and runs both instances. It writes `commands.txt`, `logs/`,
+`results/instances.csv` and both `results/*-axis/` directories. The recorded run
+had 20 commands and 0 failures; claimgate's `ctest` passed 3/3. Requirements:
+Git, CMake 3.20 or newer, a C++17 compiler (MSVC 14.5 in the recorded run), and
+the claimgate `v0.1.0` tag in a clone named by `CLAIMGATE_REPO` (default
+`../claimgate` beside this repository).
+
+Reproduced and re-serialised:
+
+- Reproduced from the claimgate `v0.1.0` tag: `results/` is byte-identical on
+  a fresh run, and `commands.txt` differs only in its date line.
+- Delivered as measured: `commands.txt`, `logs/` and `results/` are the
+  measurement-tree run; a fresh run regenerates them with the same result
+  values and the same relative commands.
+
+Missing artifacts:
+
+- claimgate 0.1.0 itself: external, at its public tag `v0.1.0` (tag object
+  `92298bb7ad9623d560fa31d2a9d61e2c04e68a0d`, commit
+  `97c4105c21d60f2b0e151fb48edce309630dda6e`); the driver and this record are
+  deposited.
+
+Finite-grid versus continuous: the designs are finite two-level factorial
+designs; the certificate bounds the joint call at the measured cells. No
+continuum statement is made.
 
 ## Consumers
 

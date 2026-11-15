@@ -1,0 +1,523 @@
+{
+ "case": "first9353",
+ "inputs": {
+  "cells": {
+   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\boys-crossover\\exact-tag-replay\\run\\cells-9353.csv",
+   "sha256": "2a2c45d1d7f59b74f4d3aeca647b46e4e20e86c2fb1917767a21a725f86d7da6"
+  },
+  "reference": {
+   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\data\\reference.csv",
+   "sha256": "c88a0af5bec51674fcbee78586911855299b1101f78c6fb8487e16fb39e5589b"
+  },
+  "provenance": {
+   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\provenance.json",
+   "sha256": "15e4c0f3b04a8b3f335785aab9b27c3d98acd42cdbb5bf0eb083521c794abddb"
+  },
+  "per_order": {
+   "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\per_order.csv",
+   "sha256": "09d2fe8ce891546f2305c129955377138fd7a1781daa7fd6ed4ffdd58c311d57"
+  }
+ },
+ "thresholds": [
+  "1.0855252345349333",
+  "1.0855252345349333",
+  "1.0855252345349333",
+  "1.0855252345349333",
+  "1.0855252345349333",
+  "2.015297705335114",
+  "2.015297705335114",
+  "2.015297705335114",
+  "2.015297705335114",
+  "4.897870299825657",
+  "4.897870299825657",
+  "4.897870299825657",
+  "4.897870299825657",
+  "4.897870299825657",
+  "4.897870299825657",
+  "4.897870299825657",
+  "4.897870299825657",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762",
+  "10.783587858916762"
+ ],
+ "model_from": "1.0855252345349333",
+ "missing_cells": 0,
+ "rows": 132,
+ "counts": {
+  "deposited_whole": {
+   "commits": 68,
+   "abstains": 64,
+   "recursed": 7,
+   "direct": 61,
+   "right": 67,
+   "wrong": 1,
+   "tie": 0
+  },
+  "deposited_pop": {
+   "commits": 68,
+   "abstains": 64,
+   "recursed": 7,
+   "direct": 61,
+   "right": 68,
+   "wrong": 0,
+   "tie": 0
+  },
+  "enclosure_whole": {
+   "commits": 14,
+   "abstains": 118,
+   "recursed": 11,
+   "direct": 3,
+   "right": 13,
+   "wrong": 1,
+   "tie": 0
+  },
+  "enclosure_pop": {
+   "commits": 14,
+   "abstains": 118,
+   "recursed": 11,
+   "direct": 3,
+   "right": 14,
+   "wrong": 0,
+   "tie": 0
+  }
+ },
+ "state_agreement": 70,
+ "dep_direct_unjustified": [
+  [
+   "A1",
+   "absolute",
+   2
+  ],
+  [
+   "A1",
+   "absolute",
+   3
+  ],
+  [
+   "A1",
+   "absolute",
+   4
+  ],
+  [
+   "A1",
+   "absolute",
+   5
+  ],
+  [
+   "A1",
+   "absolute",
+   6
+  ],
+  [
+   "A1",
+   "absolute",
+   7
+  ],
+  [
+   "A1",
+   "absolute",
+   8
+  ],
+  [
+   "A1",
+   "absolute",
+   11
+  ],
+  [
+   "A1",
+   "absolute",
+   12
+  ],
+  [
+   "A1",
+   "absolute",
+   13
+  ],
+  [
+   "A1",
+   "absolute",
+   14
+  ],
+  [
+   "A1",
+   "absolute",
+   15
+  ],
+  [
+   "A1",
+   "absolute",
+   16
+  ],
+  [
+   "A1",
+   "relative",
+   4
+  ],
+  [
+   "A1",
+   "relative",
+   6
+  ],
+  [
+   "A1",
+   "relative",
+   7
+  ],
+  [
+   "A1",
+   "relative",
+   8
+  ],
+  [
+   "A1",
+   "relative",
+   12
+  ],
+  [
+   "A1",
+   "relative",
+   13
+  ],
+  [
+   "A1",
+   "relative",
+   14
+  ],
+  [
+   "A1",
+   "relative",
+   15
+  ],
+  [
+   "A1",
+   "relative",
+   16
+  ],
+  [
+   "A2",
+   "absolute",
+   1
+  ],
+  [
+   "A2",
+   "absolute",
+   7
+  ],
+  [
+   "A2",
+   "absolute",
+   8
+  ],
+  [
+   "A2",
+   "absolute",
+   9
+  ],
+  [
+   "A2",
+   "absolute",
+   10
+  ],
+  [
+   "A2",
+   "absolute",
+   11
+  ],
+  [
+   "A2",
+   "absolute",
+   12
+  ],
+  [
+   "A2",
+   "absolute",
+   13
+  ],
+  [
+   "A2",
+   "absolute",
+   14
+  ],
+  [
+   "A2",
+   "absolute",
+   15
+  ],
+  [
+   "A2",
+   "absolute",
+   16
+  ],
+  [
+   "A2",
+   "absolute",
+   22
+  ],
+  [
+   "A2",
+   "absolute",
+   23
+  ],
+  [
+   "A2",
+   "absolute",
+   24
+  ],
+  [
+   "A2",
+   "absolute",
+   25
+  ],
+  [
+   "A2",
+   "absolute",
+   26
+  ],
+  [
+   "A2",
+   "absolute",
+   27
+  ],
+  [
+   "A2",
+   "absolute",
+   28
+  ],
+  [
+   "A2",
+   "absolute",
+   29
+  ],
+  [
+   "A2",
+   "absolute",
+   30
+  ],
+  [
+   "A2",
+   "absolute",
+   31
+  ],
+  [
+   "A2",
+   "absolute",
+   32
+  ],
+  [
+   "A2",
+   "relative",
+   1
+  ],
+  [
+   "A2",
+   "relative",
+   15
+  ],
+  [
+   "A2",
+   "relative",
+   16
+  ],
+  [
+   "A2",
+   "relative",
+   22
+  ],
+  [
+   "A2",
+   "relative",
+   23
+  ],
+  [
+   "A2",
+   "relative",
+   24
+  ],
+  [
+   "A2",
+   "relative",
+   25
+  ],
+  [
+   "A2",
+   "relative",
+   26
+  ],
+  [
+   "A2",
+   "relative",
+   27
+  ],
+  [
+   "A2",
+   "relative",
+   28
+  ],
+  [
+   "A2",
+   "relative",
+   29
+  ],
+  [
+   "A2",
+   "relative",
+   30
+  ],
+  [
+   "A2",
+   "relative",
+   31
+  ],
+  [
+   "A2",
+   "relative",
+   32
+  ]
+ ],
+ "dep_recursed_unjustified": [],
+ "enc_commits_where_dep_abstains": [
+  [
+   "A1",
+   "relative",
+   1,
+   "recursed"
+  ],
+  [
+   "A2",
+   "relative",
+   3,
+   "recursed"
+  ],
+  [
+   "A2",
+   "relative",
+   10,
+   "recursed"
+  ],
+  [
+   "A2",
+   "relative",
+   17,
+   "recursed"
+  ]
+ ],
+ "W_minus_T_below_L": [
+  [
+   "A1",
+   "absolute",
+   9,
+   "1.7464240634275674e-18",
+   "1.0472333325610779e-17"
+  ],
+  [
+   "A1",
+   "absolute",
+   10,
+   "3.1651939007381231e-18",
+   "6.6441049123768533e-18"
+  ],
+  [
+   "A1",
+   "relative",
+   9,
+   "3.1601582046487697e-15",
+   "4.7516874762067079e-15"
+  ],
+  [
+   "A2",
+   "absolute",
+   17,
+   "1.0650489418898532e-20",
+   "1.4175563726567251e-19"
+  ],
+  [
+   "A2",
+   "absolute",
+   18,
+   "1.7247792476693281e-20",
+   "1.3435695222875652e-19"
+  ],
+  [
+   "A2",
+   "absolute",
+   19,
+   "2.9589795622148201e-20",
+   "1.2720355751022667e-19"
+  ],
+  [
+   "A2",
+   "absolute",
+   20,
+   "5.3507331899260018e-20",
+   "1.266838333096921e-19"
+  ],
+  [
+   "A2",
+   "absolute",
+   21,
+   "1.0171942013045523e-19",
+   "1.2008711672254505e-19"
+  ],
+  [
+   "A2",
+   "relative",
+   17,
+   "8.1491622109736935e-15",
+   "5.0772497210725118e-14"
+  ],
+  [
+   "A2",
+   "relative",
+   18,
+   "1.4725465590001201e-14",
+   "5.3652363860857305e-14"
+  ],
+  [
+   "A2",
+   "relative",
+   19,
+   "2.7861981763053831e-14",
+   "5.5628357837235559e-14"
+  ],
+  [
+   "A2",
+   "relative",
+   20,
+   "5.5115935177238775e-14",
+   "6.0951899337399455e-14"
+  ]
+ ],
+ "max_abs_U_minus_W": "0.0",
+ "per_order": {
+  "file": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\first-sweep-9353\\sweeps\\product_amplification\\results\\per_order.csv",
+  "present": true,
+  "checked": 264,
+  "mismatched": 0,
+  "max_rel": "4.6831722409848931e-17",
+  "examples": []
+ },
+ "formula_self_check": {
+  "samples": 98,
+  "max_rel_tau": "5.7346932080106567e-71",
+  "max_rel_amplification": "4.1837622155334675e-71",
+  "paper_analyze": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\analysis\\sweeps\\amplification_form\\analyze.py",
+  "paper_analyze_sha256": "75745b378424098cb597e653a972040489a71bdc7c8195991fde89bc28dd994e"
+ },
+ "record": {
+  "file": "None",
+  "present": false
+ }
+}

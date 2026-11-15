@@ -1,0 +1,6 @@
+gate grid cells:      59301
+45-digit grid cells:  2904
+common (n, x) cells:  1254
+worst absolute diff:  4.968E-26 at n=3, x=0.011006941712522096
+worst relative diff:  4.941E-25 at n=22, x=0.8254041852680184
+verdict: AGREE within 1e-20 relative

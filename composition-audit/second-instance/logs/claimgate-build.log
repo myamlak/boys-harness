@@ -1,0 +1,13 @@
+Wersja programu MSBuild 18.11.1-1.26513.3+940033be3 dla .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/myaml/dev/_d-second-instance/src-claimgate-0.1.0/CMakeLists.txt
+  claimgate.cpp
+  claimgate.vcxproj -> C:\Users\myaml\dev\_d-second-instance\build\claimgate-msvc\Release\claimgate.lib
+  Building Custom Rule C:/Users/myaml/dev/_d-second-instance/src-claimgate-0.1.0/CMakeLists.txt
+  toy_accuracy.cpp
+  claimgate-example.vcxproj -> C:\Users\myaml\dev\_d-second-instance\build\claimgate-msvc\Release\claimgate-example.exe
+  Building Custom Rule C:/Users/myaml/dev/_d-second-instance/src-claimgate-0.1.0/CMakeLists.txt
+  claimgate_tests.cpp
+  claimgate-tests.vcxproj -> C:\Users\myaml\dev\_d-second-instance\build\claimgate-msvc\Release\claimgate-tests.exe
+  Building Custom Rule C:/Users/myaml/dev/_d-second-instance/src-claimgate-0.1.0/CMakeLists.txt

@@ -1,0 +1,1264 @@
+{
+ "cases": {
+  "first9353": {
+   "population_score_pair": {
+    "whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "restricted": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "counts": {
+    "deposited_whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 13,
+     "wrong": 1,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "deposited_split": {
+    "order0": {
+     "rows": 4,
+     "commits": 4,
+     "recursed": 1,
+     "direct": 3
+    },
+    "model": {
+     "rows": 128,
+     "commits": 64,
+     "recursed": 6,
+     "direct": 58
+    }
+   },
+   "deposited_winner_whole": {
+    "committed_rows": 68,
+    "winner_direct": 60,
+    "winner_recursed": 8,
+    "winner_tie": 0
+   },
+   "justified": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A1",
+     "relative",
+     0,
+     "recursed"
+    ],
+    [
+     "A2",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     4,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     5,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     6,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     7,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     8,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     9,
+     "recursed"
+    ]
+   ],
+   "unjustified_count": 58,
+   "unjustified_by_state": {
+    "recursed": 0,
+    "direct": 58
+   },
+   "worst_whole": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct",
+     "recursed"
+    ]
+   ],
+   "enclosure_wrong_whole": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct",
+     "recursed"
+    ]
+   ],
+   "enclosure_extra": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     3,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "measured_whole": {
+    "direct": 89,
+    "recursed": 42,
+    "tie": 1
+   },
+   "structural": {
+    "rows": 32,
+    "orders": [
+     [
+      "A1",
+      17
+     ],
+     [
+      "A1",
+      18
+     ],
+     [
+      "A1",
+      19
+     ],
+     [
+      "A1",
+      20
+     ],
+     [
+      "A1",
+      21
+     ],
+     [
+      "A1",
+      22
+     ],
+     [
+      "A1",
+      23
+     ],
+     [
+      "A1",
+      24
+     ],
+     [
+      "A1",
+      25
+     ],
+     [
+      "A1",
+      26
+     ],
+     [
+      "A1",
+      27
+     ],
+     [
+      "A1",
+      28
+     ],
+     [
+      "A1",
+      29
+     ],
+     [
+      "A1",
+      30
+     ],
+     [
+      "A1",
+      31
+     ],
+     [
+      "A1",
+      32
+     ]
+    ],
+    "all_abstain": true,
+    "W_equals_D": true
+   },
+   "W_minus_T_below_L": {
+    "rows": 12,
+    "max_relative_shortfall": 0.9248672601362736,
+    "worst": [
+     [
+      0.9248672601362736,
+      "A2",
+      "absolute",
+      17,
+      "1.0650489418898532e-20",
+      "1.4175563726567251e-19"
+     ],
+     [
+      0.8716270934210599,
+      "A2",
+      "absolute",
+      18,
+      "1.7247792476693281e-20",
+      "1.3435695222875652e-19"
+     ],
+     [
+      0.8394965255076665,
+      "A2",
+      "relative",
+      17,
+      "8.1491622109736935e-15",
+      "5.0772497210725118e-14"
+     ],
+     [
+      0.8332344847010769,
+      "A1",
+      "absolute",
+      9,
+      "1.7464240634275674e-18",
+      "1.0472333325610779e-17"
+     ],
+     [
+      0.7673823263962622,
+      "A2",
+      "absolute",
+      19,
+      "2.9589795622148201e-20",
+      "1.2720355751022667e-19"
+     ]
+    ]
+   }
+  },
+  "first9352": {
+   "population_score_pair": {
+    "whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "restricted": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "counts": {
+    "deposited_whole": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 67,
+     "wrong": 1,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 68,
+     "abstains": 64,
+     "recursed": 7,
+     "direct": 61,
+     "right": 68,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 13,
+     "wrong": 1,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 11,
+     "direct": 3,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "deposited_split": {
+    "order0": {
+     "rows": 4,
+     "commits": 4,
+     "recursed": 1,
+     "direct": 3
+    },
+    "model": {
+     "rows": 128,
+     "commits": 64,
+     "recursed": 6,
+     "direct": 58
+    }
+   },
+   "deposited_winner_whole": {
+    "committed_rows": 68,
+    "winner_direct": 60,
+    "winner_recursed": 8,
+    "winner_tie": 0
+   },
+   "justified": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A1",
+     "relative",
+     0,
+     "recursed"
+    ],
+    [
+     "A2",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     4,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     5,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     6,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     7,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     8,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     9,
+     "recursed"
+    ]
+   ],
+   "unjustified_count": 58,
+   "unjustified_by_state": {
+    "recursed": 0,
+    "direct": 58
+   },
+   "worst_whole": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct",
+     "recursed"
+    ]
+   ],
+   "enclosure_wrong_whole": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct",
+     "recursed"
+    ]
+   ],
+   "enclosure_extra": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     3,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "measured_whole": {
+    "direct": 89,
+    "recursed": 42,
+    "tie": 1
+   },
+   "structural": {
+    "rows": 32,
+    "orders": [
+     [
+      "A1",
+      17
+     ],
+     [
+      "A1",
+      18
+     ],
+     [
+      "A1",
+      19
+     ],
+     [
+      "A1",
+      20
+     ],
+     [
+      "A1",
+      21
+     ],
+     [
+      "A1",
+      22
+     ],
+     [
+      "A1",
+      23
+     ],
+     [
+      "A1",
+      24
+     ],
+     [
+      "A1",
+      25
+     ],
+     [
+      "A1",
+      26
+     ],
+     [
+      "A1",
+      27
+     ],
+     [
+      "A1",
+      28
+     ],
+     [
+      "A1",
+      29
+     ],
+     [
+      "A1",
+      30
+     ],
+     [
+      "A1",
+      31
+     ],
+     [
+      "A1",
+      32
+     ]
+    ],
+    "all_abstain": true,
+    "W_equals_D": true
+   },
+   "W_minus_T_below_L": {
+    "rows": 12,
+    "max_relative_shortfall": 0.9248672601362736,
+    "worst": [
+     [
+      0.9248672601362736,
+      "A2",
+      "absolute",
+      17,
+      "1.0650489418898532e-20",
+      "1.4175563726567251e-19"
+     ],
+     [
+      0.8716270934210599,
+      "A2",
+      "absolute",
+      18,
+      "1.7247792476693281e-20",
+      "1.3435695222875652e-19"
+     ],
+     [
+      0.8394965255076665,
+      "A2",
+      "relative",
+      17,
+      "8.1491622109736935e-15",
+      "5.0772497210725118e-14"
+     ],
+     [
+      0.8332344847010769,
+      "A1",
+      "absolute",
+      9,
+      "1.7464240634275674e-18",
+      "1.0472333325610779e-17"
+     ],
+     [
+      0.7673823263962622,
+      "A2",
+      "absolute",
+      19,
+      "2.9589795622148201e-20",
+      "1.2720355751022667e-19"
+     ]
+    ]
+   }
+  },
+  "second": {
+   "population_score_pair": {
+    "whole": {
+     "commits": 65,
+     "abstains": 67,
+     "recursed": 6,
+     "direct": 59,
+     "right": 65,
+     "wrong": 0,
+     "tie": 0
+    },
+    "restricted": {
+     "commits": 65,
+     "abstains": 67,
+     "recursed": 6,
+     "direct": 59,
+     "right": 65,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "counts": {
+    "deposited_whole": {
+     "commits": 65,
+     "abstains": 67,
+     "recursed": 6,
+     "direct": 59,
+     "right": 65,
+     "wrong": 0,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 65,
+     "abstains": 67,
+     "recursed": 6,
+     "direct": 59,
+     "right": 65,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 12,
+     "direct": 2,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 14,
+     "abstains": 118,
+     "recursed": 12,
+     "direct": 2,
+     "right": 14,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "deposited_split": {
+    "order0": {
+     "rows": 4,
+     "commits": 4,
+     "recursed": 2,
+     "direct": 2
+    },
+    "model": {
+     "rows": 128,
+     "commits": 61,
+     "recursed": 4,
+     "direct": 57
+    }
+   },
+   "deposited_winner_whole": {
+    "committed_rows": 65,
+    "winner_direct": 59,
+    "winner_recursed": 6,
+    "winner_tie": 0
+   },
+   "justified": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "recursed"
+    ],
+    [
+     "A1",
+     "relative",
+     0,
+     "recursed"
+    ],
+    [
+     "A2",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     5,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     6,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     7,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     8,
+     "recursed"
+    ]
+   ],
+   "unjustified_count": 57,
+   "unjustified_by_state": {
+    "recursed": 0,
+    "direct": 57
+   },
+   "worst_whole": [],
+   "enclosure_wrong_whole": [],
+   "enclosure_extra": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     3,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     4,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     9,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "measured_whole": {
+    "direct": 85,
+    "recursed": 44,
+    "tie": 3
+   },
+   "structural": {
+    "rows": 32,
+    "orders": [
+     [
+      "A1",
+      17
+     ],
+     [
+      "A1",
+      18
+     ],
+     [
+      "A1",
+      19
+     ],
+     [
+      "A1",
+      20
+     ],
+     [
+      "A1",
+      21
+     ],
+     [
+      "A1",
+      22
+     ],
+     [
+      "A1",
+      23
+     ],
+     [
+      "A1",
+      24
+     ],
+     [
+      "A1",
+      25
+     ],
+     [
+      "A1",
+      26
+     ],
+     [
+      "A1",
+      27
+     ],
+     [
+      "A1",
+      28
+     ],
+     [
+      "A1",
+      29
+     ],
+     [
+      "A1",
+      30
+     ],
+     [
+      "A1",
+      31
+     ],
+     [
+      "A1",
+      32
+     ]
+    ],
+    "all_abstain": true,
+    "W_equals_D": true
+   },
+   "W_minus_T_below_L": {
+    "rows": 13,
+    "max_relative_shortfall": 0.9267700934325812,
+    "worst": [
+     [
+      0.9267700934325812,
+      "A1",
+      "absolute",
+      9,
+      "7.6688799097734302e-19",
+      "1.0472333325610779e-17"
+     ],
+     [
+      0.9114108694636538,
+      "A2",
+      "absolute",
+      17,
+      "1.0628176316844888e-20",
+      "1.1997156143760085e-19"
+     ],
+     [
+      0.8511428868524412,
+      "A2",
+      "absolute",
+      18,
+      "1.7247792476693281e-20",
+      "1.1586811078081243e-19"
+     ],
+     [
+      0.8345937394164484,
+      "A2",
+      "relative",
+      17,
+      "8.1491622109736935e-15",
+      "4.9267556029762924e-14"
+     ],
+     [
+      0.7761218134349277,
+      "A1",
+      "absolute",
+      10,
+      "1.4874701591310184e-18",
+      "6.6441049123768533e-18"
+     ]
+    ]
+   }
+  },
+  "heldout": {
+   "population_score_pair": {
+    "whole": {
+     "commits": 58,
+     "abstains": 74,
+     "recursed": 5,
+     "direct": 53,
+     "right": 58,
+     "wrong": 0,
+     "tie": 0
+    },
+    "restricted": {
+     "commits": 58,
+     "abstains": 74,
+     "recursed": 5,
+     "direct": 53,
+     "right": 58,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "counts": {
+    "deposited_whole": {
+     "commits": 58,
+     "abstains": 74,
+     "recursed": 5,
+     "direct": 53,
+     "right": 58,
+     "wrong": 0,
+     "tie": 0
+    },
+    "deposited_pop": {
+     "commits": 58,
+     "abstains": 74,
+     "recursed": 5,
+     "direct": 53,
+     "right": 58,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_whole": {
+     "commits": 13,
+     "abstains": 119,
+     "recursed": 10,
+     "direct": 3,
+     "right": 13,
+     "wrong": 0,
+     "tie": 0
+    },
+    "enclosure_pop": {
+     "commits": 13,
+     "abstains": 119,
+     "recursed": 10,
+     "direct": 3,
+     "right": 13,
+     "wrong": 0,
+     "tie": 0
+    }
+   },
+   "deposited_split": {
+    "order0": {
+     "rows": 4,
+     "commits": 4,
+     "recursed": 1,
+     "direct": 3
+    },
+    "model": {
+     "rows": 128,
+     "commits": 54,
+     "recursed": 4,
+     "direct": 50
+    }
+   },
+   "deposited_winner_whole": {
+    "committed_rows": 58,
+    "winner_direct": 53,
+    "winner_recursed": 5,
+    "winner_tie": 0
+   },
+   "justified": [
+    [
+     "A1",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A1",
+     "relative",
+     0,
+     "recursed"
+    ],
+    [
+     "A2",
+     "absolute",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     0,
+     "direct"
+    ],
+    [
+     "A2",
+     "relative",
+     5,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     6,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     7,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     8,
+     "recursed"
+    ]
+   ],
+   "unjustified_count": 50,
+   "unjustified_by_state": {
+    "recursed": 0,
+    "direct": 50
+   },
+   "worst_whole": [],
+   "enclosure_wrong_whole": [],
+   "enclosure_extra": [
+    [
+     "A1",
+     "relative",
+     1,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     4,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     9,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     10,
+     "recursed"
+    ],
+    [
+     "A2",
+     "relative",
+     17,
+     "recursed"
+    ]
+   ],
+   "measured_whole": {
+    "direct": 88,
+    "recursed": 43,
+    "tie": 1
+   },
+   "structural": {
+    "rows": 32,
+    "orders": [
+     [
+      "A1",
+      17
+     ],
+     [
+      "A1",
+      18
+     ],
+     [
+      "A1",
+      19
+     ],
+     [
+      "A1",
+      20
+     ],
+     [
+      "A1",
+      21
+     ],
+     [
+      "A1",
+      22
+     ],
+     [
+      "A1",
+      23
+     ],
+     [
+      "A1",
+      24
+     ],
+     [
+      "A1",
+      25
+     ],
+     [
+      "A1",
+      26
+     ],
+     [
+      "A1",
+      27
+     ],
+     [
+      "A1",
+      28
+     ],
+     [
+      "A1",
+      29
+     ],
+     [
+      "A1",
+      30
+     ],
+     [
+      "A1",
+      31
+     ],
+     [
+      "A1",
+      32
+     ]
+    ],
+    "all_abstain": true,
+    "W_equals_D": true,
+    "abstentions_total": 74,
+    "abstentions_structural": 32
+   },
+   "W_minus_T_below_L": {
+    "rows": 18,
+    "max_relative_shortfall": 0.9791557411055668,
+    "worst": [
+     [
+      0.9791557411055668,
+      "A2",
+      "absolute",
+      17,
+      "2.4850230039090687e-21",
+      "1.1921858275195077e-19"
+     ],
+     [
+      0.9660636806906892,
+      "A2",
+      "absolute",
+      18,
+      "3.9661272813844866e-21",
+      "1.1686969483152958e-19"
+     ],
+     [
+      0.9423019977201329,
+      "A2",
+      "absolute",
+      19,
+      "6.6911680652719019e-21",
+      "1.1596879962699664e-19"
+     ],
+     [
+      0.931523028977708,
+      "A2",
+      "relative",
+      17,
+      "3.4854759672545804e-15",
+      "5.0899972870002013e-14"
+     ],
+     [
+      0.9045759226635618,
+      "A2",
+      "absolute",
+      20,
+      "1.1896977390068122e-20",
+      "1.2467479615362448e-19"
+     ]
+    ]
+   }
+  }
+ },
+ "charge": {
+  "record": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\results-underflow-fix\\harness_cells.csv",
+  "sha256": "59fd3052b2d0939fb51edbdd5b9c04280f99d76fb5a72fde2b28ca132a009e72",
+  "log": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\certified-bound\\results-underflow-fix\\harness.log",
+  "log_sha256": "3e9f834e69bf87e3dbca3e5187d7bfbbdc1af30eb088db16cf06515fe29d95a8",
+  "log_line": [
+   "charge violations: cert 0 paper 5"
+  ],
+  "rows_commitments": 65,
+  "entry_cells": 130,
+  "violations": 5,
+  "violating_cells": [
+   [
+    "A1",
+    "absolute",
+    6,
+    "product"
+   ],
+   [
+    "A1",
+    "absolute",
+    15,
+    "product"
+   ],
+   [
+    "A2",
+    "absolute",
+    0,
+    "ship"
+   ],
+   [
+    "A2",
+    "relative",
+    0,
+    "ship"
+   ],
+   [
+    "A2",
+    "relative",
+    1,
+    "ship"
+   ]
+  ]
+ }
+}

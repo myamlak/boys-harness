@@ -1,0 +1,7 @@
+Wersja programu MSBuild 18.11.1-1.26513.3+940033be3 dla .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/myaml/dev/_d-second-instance/record/CMakeLists.txt
+  instance.cpp
+  instance.vcxproj -> C:\Users\myaml\dev\_d-second-instance\build\instance\Release\instance.exe
+  Building Custom Rule C:/Users/myaml/dev/_d-second-instance/record/CMakeLists.txt

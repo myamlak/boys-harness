@@ -1,0 +1,8 @@
+first9353 | python -B work/q417_interval.py --case first9353 | exit=0 | 29s
+first9352 | python -B work/q417_interval.py --case first9352 | exit=0 | 30s
+second | python -B work/q417_interval.py --case second | exit=0 | 2s
+heldout | python -B work/q417_interval.py --case heldout | exit=0 | 5s
+containment-second | python -B work/q417_containment.py --case second | exit=0 | 2s
+containment-heldout | python -B work/q417_containment.py --case heldout | exit=0 | 2s
+containment-first9353 | python -B work/q417_containment.py --case first9353 | exit=0 | 16s
+checks | python -B work/q417_checks.py | exit=0 | 1s

@@ -1,0 +1,702 @@
+
+================================================================================
+instance: three-axis (3 axes)
+================================================================================
+
+=== claimgate book: full 8-cell factorial (8 cells) ===
+
+per lane, per region: delivered error / documented bound
+  lane                     region      points     real  delivered / claimed      max ratio (index, x)      vacuous no value
+  ------------------------------------------------------------------------------------------------------------------------------
+  A1 series term           full 8-cell factorial, both levels        8        8  0.00712 / 0.00833        0.854 (index=0, x=0)            0        0
+  A2 series term           full 8-cell factorial, both levels        8        8  0.0586 / 0.111           0.528 (index=0, x=0)            0        0
+  A3 series term           full 8-cell factorial, both levels        8        8  0.0414 / 0.0769          0.538 (index=0, x=0)            0        0
+  joint call (T1+T2+T3)    full 8-cell factorial, joint additive bound B+eta        8        8  0.1 / 0.196              0.509 (index=4, x=4)            0        0
+
+  delivered / claimed = |got - ref| and the bound it was judged against, at
+             the worst cell of the sweep; a row whose bound is per-cell shows the
+             pair at that cell, not the registered base bound
+  vacuous  = points where the documented bound is at least as large as the
+             reference value itself, so any returned value in range passes
+  no value = of those, points where the lane returned zero or a subnormal
+
+claims, each with one verdict:
+  a claim the document itself scopes - to a region, a set of indices, a
+  range of arguments - is met over that stated domain and prints the domain
+  with its verdict; a restriction the document states is not the same finding
+  as evidence missing from the tree, and never shares its verdict.
+  every row ends with what would have to be true for its check to fail, so a
+  green row says which reading of it is still open, not only that it passed.
+  a row registered as a record carries no verdict at all.
+  [verified at this revision] A1 series term / full 8-cell factorial, both levels - accuracy bound
+      8 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.854 of the bound at (index=0, x=0): delivered 0.007121 against 0.008333, 0 cells over the bound; the bound binds on 8 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] A2 series term / full 8-cell factorial, both levels - accuracy bound
+      8 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.528 of the bound at (index=0, x=0): delivered 0.05862 against 0.1111, 0 cells over the bound; the bound binds on 8 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] A3 series term / full 8-cell factorial, both levels - accuracy bound
+      8 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.538 of the bound at (index=0, x=0): delivered 0.04139 against 0.07692, 0 cells over the bound; the bound binds on 8 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] joint call (T1+T2+T3) / full 8-cell factorial, joint additive bound B+eta - accuracy bound
+      8 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.509 of the bound at (index=4, x=4): delivered 0.1 against 0.1964, 0 cells over the bound; the bound binds on 8 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+
+  cells: 32 comparison cells across every lane, region and index, of which 0 (0.0%) carry a bound at least as large as the value itself, so any return in range passes there and the cell cannot discriminate; the no-cell-over-budget statement above is carried by the remaining 32 (100.0%). This is the vacuous column aggregated, not a separate finding, and it is the number to read before reading the green rows
+
+  RESULT: 4 of 4 claims met at this revision (4 verified outright, 0 met over a stated domain, 0 exceeded, 0 vacuous only, 0 evidence absent; neither of the last two counted as met)
+          carried by the 32 of 32 comparison cells (100.0%) that can discriminate: the other 0 carry a bound at least as large as the value itself, so read the two numbers together
+
+rows by property type: a row refutes only what its own kind of question
+reaches
+  type                     claims      met  not met   records       cells  cannot discriminate
+  ----------------------------------------------------------------------------------------------
+  accuracy bound                4        4        0         0          32  0 (0.0%)
+  domain of validity            0        0        0         0           0  0 (0.0%)
+  ordering                      0        0        0         0           0  0 (0.0%)
+  continuity                    0        0        0         0           0  0 (0.0%)
+  reproducibility               0        0        0         0           0  0 (0.0%)
+  error floor                   0        0        0         0           0  0 (0.0%)
+  unclassified                  0        0        0         0           0  0 (0.0%)
+  a type with no rows is a defect class nothing in this book asks about,
+  and a type whose cells cannot discriminate can only see a return out of
+  range: the counts are what each kind of row saw, not what there was to see
+  PASS: every documented claim met at this revision
+book exit status: 0
+
+=== claimgate book: OA(4,3,2,2) half fraction (4 cells) ===
+
+per lane, per region: delivered error / documented bound
+  lane                     region      points     real  delivered / claimed      max ratio (index, x)      vacuous no value
+  ------------------------------------------------------------------------------------------------------------------------------
+  A1 series term           OA(4,3,2,2) half fraction, both levels        4        4  0.00712 / 0.00833        0.854 (index=0, x=0)            0        0
+  A2 series term           OA(4,3,2,2) half fraction, both levels        4        4  0.0586 / 0.111           0.528 (index=0, x=0)            0        0
+  A3 series term           OA(4,3,2,2) half fraction, both levels        4        4  0.0414 / 0.0769          0.538 (index=0, x=0)            0        0
+  joint call (T1+T2+T3)    OA(4,3,2,2) half fraction, joint additive bound B+eta        4        4  0.0929 / 0.196           0.473 (index=0, x=0)            0        0
+
+  delivered / claimed = |got - ref| and the bound it was judged against, at
+             the worst cell of the sweep; a row whose bound is per-cell shows the
+             pair at that cell, not the registered base bound
+  vacuous  = points where the documented bound is at least as large as the
+             reference value itself, so any returned value in range passes
+  no value = of those, points where the lane returned zero or a subnormal
+
+claims, each with one verdict:
+  a claim the document itself scopes - to a region, a set of indices, a
+  range of arguments - is met over that stated domain and prints the domain
+  with its verdict; a restriction the document states is not the same finding
+  as evidence missing from the tree, and never shares its verdict.
+  every row ends with what would have to be true for its check to fail, so a
+  green row says which reading of it is still open, not only that it passed.
+  a row registered as a record carries no verdict at all.
+  [verified at this revision] A1 series term / OA(4,3,2,2) half fraction, both levels - accuracy bound
+      4 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.854 of the bound at (index=0, x=0): delivered 0.007121 against 0.008333, 0 cells over the bound; the bound binds on 4 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] A2 series term / OA(4,3,2,2) half fraction, both levels - accuracy bound
+      4 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.528 of the bound at (index=0, x=0): delivered 0.05862 against 0.1111, 0 cells over the bound; the bound binds on 4 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] A3 series term / OA(4,3,2,2) half fraction, both levels - accuracy bound
+      4 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.538 of the bound at (index=0, x=0): delivered 0.04139 against 0.07692, 0 cells over the bound; the bound binds on 4 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] joint call (T1+T2+T3) / OA(4,3,2,2) half fraction, joint additive bound B+eta - accuracy bound
+      4 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.473 of the bound at (index=0, x=0): delivered 0.09289 against 0.1964, 0 cells over the bound; the bound binds on 4 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+
+  cells: 16 comparison cells across every lane, region and index, of which 0 (0.0%) carry a bound at least as large as the value itself, so any return in range passes there and the cell cannot discriminate; the no-cell-over-budget statement above is carried by the remaining 16 (100.0%). This is the vacuous column aggregated, not a separate finding, and it is the number to read before reading the green rows
+
+  RESULT: 4 of 4 claims met at this revision (4 verified outright, 0 met over a stated domain, 0 exceeded, 0 vacuous only, 0 evidence absent; neither of the last two counted as met)
+          carried by the 16 of 16 comparison cells (100.0%) that can discriminate: the other 0 carry a bound at least as large as the value itself, so read the two numbers together
+
+rows by property type: a row refutes only what its own kind of question
+reaches
+  type                     claims      met  not met   records       cells  cannot discriminate
+  ----------------------------------------------------------------------------------------------
+  accuracy bound                4        4        0         0          16  0 (0.0%)
+  domain of validity            0        0        0         0           0  0 (0.0%)
+  ordering                      0        0        0         0           0  0 (0.0%)
+  continuity                    0        0        0         0           0  0 (0.0%)
+  reproducibility               0        0        0         0           0  0 (0.0%)
+  error floor                   0        0        0         0           0  0 (0.0%)
+  unclassified                  0        0        0         0           0  0 (0.0%)
+  a type with no rows is a defect class nothing in this book asks about,
+  and a type whose cells cannot discriminate can only see a return out of
+  range: the counts are what each kind of row saw, not what there was to see
+  PASS: every documented claim met at this revision
+book exit status: 0
+
+d-second-instance certificate: three-axis
+=========================================
+
+Instance: three-axis (3 axes), 3-term series bank, fixed-point quantum Q = 2^-40.
+Axes and cones:
+  A1: sum_{k>=0} (-1)^k / k!; levels 0=5 terms, 1=8 terms; cone {A1}; bound b_A1 = 0.00833333333378907976929
+  A2: sum_{k>=1} (-1)^(k+1) / k; levels 0=8 terms, 1=12 terms; cone {A2}; bound b_A2 = 0.111111111111566851495
+  A3: sum_{k>=0} (-1)^k / (2k+1); levels 0=6 terms, 1=10 terms; cone {A3}; bound b_A3 = 0.0769230769235326738986
+  op_add: exact fixed-point integer addition; no local error, so no
+          first-order error term and no cone in the error decomposition.
+  w_p = 1; U_p = {A1,A2,A3}; |U_p| = 3; required strength 2*w_p = 2.
+
+Design:
+  full factorial: 8 cells
+  fractional: the even-parity half fraction I = A1*A2*A3, 4 cells, an OA(4,3,2,2) half fraction
+  strength-2 check (all columns balanced, all pairs balanced): PASS
+  cells saved: 4 of 8 (50.0%)
+
+Bounds:
+  b_A1 = 0.00833333333378907976929
+  b_A2 = 0.111111111111566851495
+  b_A3 = 0.0769230769235326738986
+  B = sum b_i = 0.196367521368888603428
+  eta (allowance) = 9.99999999999999979887e-13
+  certified joint bound B + eta = 0.196367521369888609062
+  delta (largest supported non-mean contrast) = 0.00934343434346374124289
+  N_w = 0, G_w = 1; non-additive bound = 9.99999999999999979887e-13 (for w_p=1 the formula reads eta)
+
+Full-factorial coefficients:
+  mask order support                  coefficient
+  0    0     {}                    -0.0788932454610926647831
+  1    1     {A1}                  0.00357142857137660030276
+  2    1     {A2}                  -0.00934343434346374124289
+  3    2     {A1,A2}               0
+  4    1     {A3}                  -0.00822418036068484070711
+  5    2     {A1,A3}               0
+  6    2     {A2,A3}               0
+  7    3     {A1,A2,A3}            0
+
+Fractional estimates:
+  mask order support                  estimate                    full                        difference
+  0    0     {}                       -0.0788932454610926647831   -0.0788932454610926647831                           0
+  1    1     {A1}                     0.00357142857137660030276   0.00357142857137660030276                           0
+  2    1     {A2}                    -0.00934343434346374124289  -0.00934343434346374124289                           0
+  3    2     {A1,A2}                 -0.00822418036068484070711                           0  -0.00822418036068484070711   (aliased estimate, not a coefficient)
+  4    1     {A3}                    -0.00822418036068484070711  -0.00822418036068484070711                           0
+  5    2     {A1,A3}                 -0.00934343434346374124289                           0  -0.00934343434346374124289   (aliased estimate, not a coefficient)
+  6    2     {A2,A3}                  0.00357142857137660030276                           0   0.00357142857137660030276   (aliased estimate, not a coefficient)
+  7    3     {A1,A2,A3}               -0.0788932454610926647831                           0   -0.0788932454610926647831   (aliased estimate, not a coefficient)
+
+Alias structure:
+  omega[alpha][alpha] = 1 for every alpha; all other nonzero entries are
+  the complement pairs:
+    {} <-> {A1,A2,A3}
+    {A1} <-> {A2,A3}
+    {A2} <-> {A1,A3}
+    {A1,A2} <-> {A3}
+  (the full 8x8 matrix is in alias-matrix.csv)
+
+Certificate checks:
+  PASS: per-axis bounds hold on all full and fractional cells (worst |m_i|/b_i = 0.854467059380189519757)
+  PASS: joint bound B+eta holds on all full and fractional cells (worst |error|/(B+eta) = 0.509413614017114158017)
+  PASS: every unsupported order is zero by the cone structure within eta (largest |full interaction| = 0 over 4 unsupported components; eta = 9.99999999999999979887e-13)
+  PASS: fractional main effects (and mean) match the full factorial within eta (largest main difference = 0, mean difference = 0)
+  PASS: alias matrix is the complement-pair structure of the half fraction
+  PASS: both levels of every axis are live (C3)
+  PASS: the fractional design has orthogonal-array strength 2
+  PASS: measured additive residual is within the allowance (largest |error - sum m_i| = 1.11022302462515654042e-16)
+
+RESULT: CERTIFIED - full factorial 8 cells, fractional OA(4,3,2,2) half fraction 4 cells, 4 cells saved (50.0%).
+
+=== claimgate book: fractional contrasts against the full factorial (mean and 3 main effects, bound eta) ===
+
+per lane, per region: delivered error / documented bound
+  lane                     region      points     real  delivered / claimed      max ratio (index, x)      vacuous no value
+  ------------------------------------------------------------------------------------------------------------------------------
+  fractional mean contrast OA(4,3,2,2) half fraction vs full 8-cell factorial        1        1  -                        -                               0        0
+  fractional main contrast A1 OA(4,3,2,2) half fraction vs full 8-cell factorial        1        1  -                        -                               0        0
+  fractional main contrast A2 OA(4,3,2,2) half fraction vs full 8-cell factorial        1        1  -                        -                               0        0
+  fractional main contrast A3 OA(4,3,2,2) half fraction vs full 8-cell factorial        1        1  -                        -                               0        0
+
+  delivered / claimed = |got - ref| and the bound it was judged against, at
+             the worst cell of the sweep; a row whose bound is per-cell shows the
+             pair at that cell, not the registered base bound
+  vacuous  = points where the documented bound is at least as large as the
+             reference value itself, so any returned value in range passes
+  no value = of those, points where the lane returned zero or a subnormal
+
+claims, each with one verdict:
+  a claim the document itself scopes - to a region, a set of indices, a
+  range of arguments - is met over that stated domain and prints the domain
+  with its verdict; a restriction the document states is not the same finding
+  as evidence missing from the tree, and never shares its verdict.
+  every row ends with what would have to be true for its check to fail, so a
+  green row says which reading of it is still open, not only that it passed.
+  a row registered as a record carries no verdict at all.
+  [verified at this revision] fractional mean contrast / OA(4,3,2,2) half fraction vs full 8-cell factorial - accuracy bound
+      1 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; the bound binds on 1 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] fractional main contrast A1 / OA(4,3,2,2) half fraction vs full 8-cell factorial - accuracy bound
+      1 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; the bound binds on 1 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] fractional main contrast A2 / OA(4,3,2,2) half fraction vs full 8-cell factorial - accuracy bound
+      1 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; the bound binds on 1 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] fractional main contrast A3 / OA(4,3,2,2) half fraction vs full 8-cell factorial - accuracy bound
+      1 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; the bound binds on 1 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+
+  cells: 4 comparison cells across every lane, region and index, of which 0 (0.0%) carry a bound at least as large as the value itself, so any return in range passes there and the cell cannot discriminate; the no-cell-over-budget statement above is carried by the remaining 4 (100.0%). This is the vacuous column aggregated, not a separate finding, and it is the number to read before reading the green rows
+
+  RESULT: 4 of 4 claims met at this revision (4 verified outright, 0 met over a stated domain, 0 exceeded, 0 vacuous only, 0 evidence absent; neither of the last two counted as met)
+          carried by the 4 of 4 comparison cells (100.0%) that can discriminate: the other 0 carry a bound at least as large as the value itself, so read the two numbers together
+
+rows by property type: a row refutes only what its own kind of question
+reaches
+  type                     claims      met  not met   records       cells  cannot discriminate
+  ----------------------------------------------------------------------------------------------
+  accuracy bound                4        4        0         0           4  0 (0.0%)
+  domain of validity            0        0        0         0           0  0 (0.0%)
+  ordering                      0        0        0         0           0  0 (0.0%)
+  continuity                    0        0        0         0           0  0 (0.0%)
+  reproducibility               0        0        0         0           0  0 (0.0%)
+  error floor                   0        0        0         0           0  0 (0.0%)
+  unclassified                  0        0        0         0           0  0 (0.0%)
+  a type with no rows is a defect class nothing in this book asks about,
+  and a type whose cells cannot discriminate can only see a return out of
+  range: the counts are what each kind of row saw, not what there was to see
+  PASS: every documented claim met at this revision
+book exit status: 0
+
+=== claimgate book: unsupported-order coefficients as records (4 rows, zero target, not judged) ===
+
+per lane, per region: delivered error / documented bound
+  lane                     region      points     real  delivered / claimed      max ratio (index, x)      vacuous no value
+  ------------------------------------------------------------------------------------------------------------------------------
+  full-factorial coefficient {A1,A2} full 8-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A1,A3} full 8-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A2,A3} full 8-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A1,A2,A3} full 8-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+
+  delivered / claimed = |got - ref| and the bound it was judged against, at
+             the worst cell of the sweep; a row whose bound is per-cell shows the
+             pair at that cell, not the registered base bound
+  vacuous  = points where the documented bound is at least as large as the
+             reference value itself, so any returned value in range passes
+  no value = of those, points where the lane returned zero or a subnormal
+
+claims, each with one verdict:
+  a claim the document itself scopes - to a region, a set of indices, a
+  range of arguments - is met over that stated domain and prints the domain
+  with its verdict; a restriction the document states is not the same finding
+  as evidence missing from the tree, and never shares its verdict.
+  every row ends with what would have to be true for its check to fail, so a
+  green row says which reading of it is still open, not only that it passed.
+  a row registered as a record carries no verdict at all.
+  [record, not judged] full-factorial coefficient {A1,A2} / full 8-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A1,A3} / full 8-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A2,A3} / full 8-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A1,A2,A3} / full 8-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+
+  cells: 4 comparison cells across every lane, region and index, of which 4 (100.0%) carry a bound at least as large as the value itself, so any return in range passes there and the cell cannot discriminate; the no-cell-over-budget statement above is carried by the remaining 0 (0.0%). This is the vacuous column aggregated, not a separate finding, and it is the number to read before reading the green rows
+
+  RESULT: 0 of 0 claims met at this revision (0 verified outright, 0 met over a stated domain, 0 exceeded, 0 vacuous only, 0 evidence absent; neither of the last two counted as met)
+          carried by the 0 of 4 comparison cells (0.0%) that can discriminate: the other 4 carry a bound at least as large as the value itself, so read the two numbers together
+
+rows by property type: a row refutes only what its own kind of question
+reaches
+  type                     claims      met  not met   records       cells  cannot discriminate
+  ----------------------------------------------------------------------------------------------
+  accuracy bound                0        0        0         4           4  4 (100.0%)
+  domain of validity            0        0        0         0           0  0 (0.0%)
+  ordering                      0        0        0         0           0  0 (0.0%)
+  continuity                    0        0        0         0           0  0 (0.0%)
+  reproducibility               0        0        0         0           0  0 (0.0%)
+  error floor                   0        0        0         0           0  0 (0.0%)
+  unclassified                  0        0        0         0           0  0 (0.0%)
+  a type with no rows is a defect class nothing in this book asks about,
+  and a type whose cells cannot discriminate can only see a return out of
+  range: the counts are what each kind of row saw, not what there was to see
+  PASS: every documented claim met at this revision
+book exit status: 0
+
+certificate checks: PASS
+contrast book exit status: 0
+interaction record book exit status: 0
+
+================================================================================
+instance: four-axis (4 axes)
+================================================================================
+
+=== claimgate book: full 16-cell factorial (16 cells) ===
+
+per lane, per region: delivered error / documented bound
+  lane                     region      points     real  delivered / claimed      max ratio (index, x)      vacuous no value
+  ------------------------------------------------------------------------------------------------------------------------------
+  A1 series term           full 16-cell factorial, both levels       16       16  0.00712 / 0.00833        0.854 (index=0, x=0)            0        0
+  A2 series term           full 16-cell factorial, both levels       16       16  0.0586 / 0.111           0.528 (index=0, x=0)            0        0
+  A3 series term           full 16-cell factorial, both levels       16       16  0.0414 / 0.0769          0.538 (index=0, x=0)            0        0
+  A4 series term           full 16-cell factorial, both levels       16       16  2.45e-05 / 2.48e-05      0.989 (index=0, x=0)            0        0
+  joint call (T1+T2+T3+T4) full 16-cell factorial, joint additive bound B+eta       16       16  0.1 / 0.196              0.509 (index=8, x=8)            0        0
+
+  delivered / claimed = |got - ref| and the bound it was judged against, at
+             the worst cell of the sweep; a row whose bound is per-cell shows the
+             pair at that cell, not the registered base bound
+  vacuous  = points where the documented bound is at least as large as the
+             reference value itself, so any returned value in range passes
+  no value = of those, points where the lane returned zero or a subnormal
+
+claims, each with one verdict:
+  a claim the document itself scopes - to a region, a set of indices, a
+  range of arguments - is met over that stated domain and prints the domain
+  with its verdict; a restriction the document states is not the same finding
+  as evidence missing from the tree, and never shares its verdict.
+  every row ends with what would have to be true for its check to fail, so a
+  green row says which reading of it is still open, not only that it passed.
+  a row registered as a record carries no verdict at all.
+  [verified at this revision] A1 series term / full 16-cell factorial, both levels - accuracy bound
+      16 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.854 of the bound at (index=0, x=0): delivered 0.007121 against 0.008333, 0 cells over the bound; the bound binds on 16 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] A2 series term / full 16-cell factorial, both levels - accuracy bound
+      16 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.528 of the bound at (index=0, x=0): delivered 0.05862 against 0.1111, 0 cells over the bound; the bound binds on 16 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] A3 series term / full 16-cell factorial, both levels - accuracy bound
+      16 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.538 of the bound at (index=0, x=0): delivered 0.04139 against 0.07692, 0 cells over the bound; the bound binds on 16 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] A4 series term / full 16-cell factorial, both levels - accuracy bound
+      16 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.989 of the bound at (index=0, x=0): delivered 2.453e-05 against 2.48e-05, 0 cells over the bound; the bound binds on 16 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] joint call (T1+T2+T3+T4) / full 16-cell factorial, joint additive bound B+eta - accuracy bound
+      16 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.509 of the bound at (index=8, x=8): delivered 0.1001 against 0.1964, 0 cells over the bound; the bound binds on 16 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+
+  cells: 80 comparison cells across every lane, region and index, of which 0 (0.0%) carry a bound at least as large as the value itself, so any return in range passes there and the cell cannot discriminate; the no-cell-over-budget statement above is carried by the remaining 80 (100.0%). This is the vacuous column aggregated, not a separate finding, and it is the number to read before reading the green rows
+
+  RESULT: 5 of 5 claims met at this revision (5 verified outright, 0 met over a stated domain, 0 exceeded, 0 vacuous only, 0 evidence absent; neither of the last two counted as met)
+          carried by the 80 of 80 comparison cells (100.0%) that can discriminate: the other 0 carry a bound at least as large as the value itself, so read the two numbers together
+
+rows by property type: a row refutes only what its own kind of question
+reaches
+  type                     claims      met  not met   records       cells  cannot discriminate
+  ----------------------------------------------------------------------------------------------
+  accuracy bound                5        5        0         0          80  0 (0.0%)
+  domain of validity            0        0        0         0           0  0 (0.0%)
+  ordering                      0        0        0         0           0  0 (0.0%)
+  continuity                    0        0        0         0           0  0 (0.0%)
+  reproducibility               0        0        0         0           0  0 (0.0%)
+  error floor                   0        0        0         0           0  0 (0.0%)
+  unclassified                  0        0        0         0           0  0 (0.0%)
+  a type with no rows is a defect class nothing in this book asks about,
+  and a type whose cells cannot discriminate can only see a return out of
+  range: the counts are what each kind of row saw, not what there was to see
+  PASS: every documented claim met at this revision
+book exit status: 0
+
+=== claimgate book: OA(8,4,2,2) half fraction (8 cells) ===
+
+per lane, per region: delivered error / documented bound
+  lane                     region      points     real  delivered / claimed      max ratio (index, x)      vacuous no value
+  ------------------------------------------------------------------------------------------------------------------------------
+  A1 series term           OA(8,4,2,2) half fraction, both levels        8        8  0.00712 / 0.00833        0.854 (index=0, x=0)            0        0
+  A2 series term           OA(8,4,2,2) half fraction, both levels        8        8  0.0586 / 0.111           0.528 (index=0, x=0)            0        0
+  A3 series term           OA(8,4,2,2) half fraction, both levels        8        8  0.0414 / 0.0769          0.538 (index=0, x=0)            0        0
+  A4 series term           OA(8,4,2,2) half fraction, both levels        8        8  2.45e-05 / 2.48e-05      0.989 (index=0, x=0)            0        0
+  joint call (T1+T2+T3+T4) OA(8,4,2,2) half fraction, joint additive bound B+eta        8        8  0.1 / 0.196              0.509 (index=4, x=4)            0        0
+
+  delivered / claimed = |got - ref| and the bound it was judged against, at
+             the worst cell of the sweep; a row whose bound is per-cell shows the
+             pair at that cell, not the registered base bound
+  vacuous  = points where the documented bound is at least as large as the
+             reference value itself, so any returned value in range passes
+  no value = of those, points where the lane returned zero or a subnormal
+
+claims, each with one verdict:
+  a claim the document itself scopes - to a region, a set of indices, a
+  range of arguments - is met over that stated domain and prints the domain
+  with its verdict; a restriction the document states is not the same finding
+  as evidence missing from the tree, and never shares its verdict.
+  every row ends with what would have to be true for its check to fail, so a
+  green row says which reading of it is still open, not only that it passed.
+  a row registered as a record carries no verdict at all.
+  [verified at this revision] A1 series term / OA(8,4,2,2) half fraction, both levels - accuracy bound
+      8 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.854 of the bound at (index=0, x=0): delivered 0.007121 against 0.008333, 0 cells over the bound; the bound binds on 8 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] A2 series term / OA(8,4,2,2) half fraction, both levels - accuracy bound
+      8 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.528 of the bound at (index=0, x=0): delivered 0.05862 against 0.1111, 0 cells over the bound; the bound binds on 8 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] A3 series term / OA(8,4,2,2) half fraction, both levels - accuracy bound
+      8 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.538 of the bound at (index=0, x=0): delivered 0.04139 against 0.07692, 0 cells over the bound; the bound binds on 8 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] A4 series term / OA(8,4,2,2) half fraction, both levels - accuracy bound
+      8 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.989 of the bound at (index=0, x=0): delivered 2.453e-05 against 2.48e-05, 0 cells over the bound; the bound binds on 8 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] joint call (T1+T2+T3+T4) / OA(8,4,2,2) half fraction, joint additive bound B+eta - accuracy bound
+      8 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.509 of the bound at (index=4, x=4): delivered 0.1 against 0.1964, 0 cells over the bound; the bound binds on 8 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+
+  cells: 40 comparison cells across every lane, region and index, of which 0 (0.0%) carry a bound at least as large as the value itself, so any return in range passes there and the cell cannot discriminate; the no-cell-over-budget statement above is carried by the remaining 40 (100.0%). This is the vacuous column aggregated, not a separate finding, and it is the number to read before reading the green rows
+
+  RESULT: 5 of 5 claims met at this revision (5 verified outright, 0 met over a stated domain, 0 exceeded, 0 vacuous only, 0 evidence absent; neither of the last two counted as met)
+          carried by the 40 of 40 comparison cells (100.0%) that can discriminate: the other 0 carry a bound at least as large as the value itself, so read the two numbers together
+
+rows by property type: a row refutes only what its own kind of question
+reaches
+  type                     claims      met  not met   records       cells  cannot discriminate
+  ----------------------------------------------------------------------------------------------
+  accuracy bound                5        5        0         0          40  0 (0.0%)
+  domain of validity            0        0        0         0           0  0 (0.0%)
+  ordering                      0        0        0         0           0  0 (0.0%)
+  continuity                    0        0        0         0           0  0 (0.0%)
+  reproducibility               0        0        0         0           0  0 (0.0%)
+  error floor                   0        0        0         0           0  0 (0.0%)
+  unclassified                  0        0        0         0           0  0 (0.0%)
+  a type with no rows is a defect class nothing in this book asks about,
+  and a type whose cells cannot discriminate can only see a return out of
+  range: the counts are what each kind of row saw, not what there was to see
+  PASS: every documented claim met at this revision
+book exit status: 0
+
+d-second-instance certificate: four-axis
+========================================
+
+Instance: four-axis (4 axes), 4-term series bank, fixed-point quantum Q = 2^-40.
+Axes and cones:
+  A1: sum_{k>=0} (-1)^k / k!; levels 0=5 terms, 1=8 terms; cone {A1}; bound b_A1 = 0.00833333333378907976929
+  A2: sum_{k>=1} (-1)^(k+1) / k; levels 0=8 terms, 1=12 terms; cone {A2}; bound b_A2 = 0.111111111111566851495
+  A3: sum_{k>=0} (-1)^k / (2k+1); levels 0=6 terms, 1=10 terms; cone {A3}; bound b_A3 = 0.0769230769235326738986
+  A4: sum_{k>=0} (-1)^k / (2k)!; levels 0=4 terms, 1=6 terms; cone {A4}; bound b_A4 = 2.48015877573346527735e-05
+  op_add: exact fixed-point integer addition; no local error, so no
+          first-order error term and no cone in the error decomposition.
+  w_p = 1; U_p = {A1,A2,A3,A4}; |U_p| = 4; required strength 2*w_p = 2.
+
+Design:
+  full factorial: 16 cells
+  fractional: the even-parity half fraction I = A1*A2*A3*A4, 8 cells, an OA(8,4,2,2) half fraction
+  strength-2 check (all columns balanced, all pairs balanced): PASS
+  cells saved: 8 of 16 (50.0%)
+
+Bounds:
+  b_A1 = 0.00833333333378907976929
+  b_A2 = 0.111111111111566851495
+  b_A3 = 0.0769230769235326738986
+  b_A4 = 2.48015877573346527735e-05
+  B = sum b_i = 0.196392322956645937193
+  eta (allowance) = 9.99999999999999979887e-13
+  certified joint bound B + eta = 0.196392322957645942827
+  delta (largest supported non-mean contrast) = 0.00934343434346374124289
+  N_w = 0, G_w = 1; non-additive bound = 9.99999999999999979887e-13 (for w_p=1 the formula reads eta)
+
+Full-factorial coefficients:
+  mask order support                  coefficient
+  0    0     {}                    -0.0789055105443932092157
+  1    1     {A1}                  0.00357142857137660030276
+  2    1     {A2}                  -0.00934343434346374124289
+  3    2     {A1,A2}               0
+  4    1     {A3}                  -0.00822418036068484070711
+  5    2     {A1,A3}               0
+  6    2     {A2,A3}               0
+  7    3     {A1,A2,A3}            0
+  8    1     {A4}                  -1.22630067380669061095e-05
+  9    2     {A1,A4}               0
+  10    2     {A2,A4}               0
+  11    3     {A1,A2,A4}            0
+  12    2     {A3,A4}               0
+  13    3     {A1,A3,A4}            0
+  14    3     {A2,A3,A4}            0
+  15    4     {A1,A2,A3,A4}         0
+
+Fractional estimates:
+  mask order support                  estimate                    full                        difference
+  0    0     {}                       -0.0789055105443932092157   -0.0789055105443932092157                           0
+  1    1     {A1}                     0.00357142857137660030276   0.00357142857137660030276                           0
+  2    1     {A2}                    -0.00934343434346374124289  -0.00934343434346374124289                           0
+  3    2     {A1,A2}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  4    1     {A3}                    -0.00822418036068484070711  -0.00822418036068484070711                           0
+  5    2     {A1,A3}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  6    2     {A2,A3}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  7    3     {A1,A2,A3}             -1.22630067380669061095e-05                           0 -1.22630067380669061095e-05   (aliased estimate, not a coefficient)
+  8    1     {A4}                   -1.22630067380669061095e-05 -1.22630067380669061095e-05                           0
+  9    2     {A1,A4}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  10    2     {A2,A4}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  11    3     {A1,A2,A4}              -0.00822418036068484070711                           0  -0.00822418036068484070711   (aliased estimate, not a coefficient)
+  12    2     {A3,A4}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  13    3     {A1,A3,A4}              -0.00934343434346374124289                           0  -0.00934343434346374124289   (aliased estimate, not a coefficient)
+  14    3     {A2,A3,A4}               0.00357142857137660030276                           0   0.00357142857137660030276   (aliased estimate, not a coefficient)
+  15    4     {A1,A2,A3,A4}            -0.0789055105443932092157                           0   -0.0789055105443932092157   (aliased estimate, not a coefficient)
+
+Alias structure:
+  omega[alpha][alpha] = 1 for every alpha; all other nonzero entries are
+  the complement pairs:
+    {} <-> {A1,A2,A3,A4}
+    {A1} <-> {A2,A3,A4}
+    {A2} <-> {A1,A3,A4}
+    {A1,A2} <-> {A3,A4}
+    {A3} <-> {A1,A2,A4}
+    {A1,A3} <-> {A2,A4}
+    {A2,A3} <-> {A1,A4}
+    {A1,A2,A3} <-> {A4}
+  (the full 16x16 matrix is in alias-matrix.csv)
+
+Certificate checks:
+  PASS: per-axis bounds hold on all full and fractional cells (worst |m_i|/b_i = 0.988972572183713038996)
+  PASS: joint bound B+eta holds on all full and fractional cells (worst |error|/(B+eta) = 0.509474175567620091165)
+  PASS: every unsupported order is zero by the cone structure within eta (largest |full interaction| = 0 over 11 unsupported components; eta = 9.99999999999999979887e-13)
+  PASS: fractional main effects (and mean) match the full factorial within eta (largest main difference = 0, mean difference = 0)
+  PASS: alias matrix is the complement-pair structure of the half fraction
+  PASS: both levels of every axis are live (C3)
+  PASS: the fractional design has orthogonal-array strength 2
+  PASS: measured additive residual is within the allowance (largest |error - sum m_i| = 1.11022302462515654042e-16)
+
+RESULT: CERTIFIED - full factorial 16 cells, fractional OA(8,4,2,2) half fraction 8 cells, 8 cells saved (50.0%).
+
+=== claimgate book: fractional contrasts against the full factorial (mean and 4 main effects, bound eta) ===
+
+per lane, per region: delivered error / documented bound
+  lane                     region      points     real  delivered / claimed      max ratio (index, x)      vacuous no value
+  ------------------------------------------------------------------------------------------------------------------------------
+  fractional mean contrast OA(8,4,2,2) half fraction vs full 16-cell factorial        1        1  -                        -                               0        0
+  fractional main contrast A1 OA(8,4,2,2) half fraction vs full 16-cell factorial        1        1  -                        -                               0        0
+  fractional main contrast A2 OA(8,4,2,2) half fraction vs full 16-cell factorial        1        1  -                        -                               0        0
+  fractional main contrast A3 OA(8,4,2,2) half fraction vs full 16-cell factorial        1        1  -                        -                               0        0
+  fractional main contrast A4 OA(8,4,2,2) half fraction vs full 16-cell factorial        1        1  -                        -                               0        0
+
+  delivered / claimed = |got - ref| and the bound it was judged against, at
+             the worst cell of the sweep; a row whose bound is per-cell shows the
+             pair at that cell, not the registered base bound
+  vacuous  = points where the documented bound is at least as large as the
+             reference value itself, so any returned value in range passes
+  no value = of those, points where the lane returned zero or a subnormal
+
+claims, each with one verdict:
+  a claim the document itself scopes - to a region, a set of indices, a
+  range of arguments - is met over that stated domain and prints the domain
+  with its verdict; a restriction the document states is not the same finding
+  as evidence missing from the tree, and never shares its verdict.
+  every row ends with what would have to be true for its check to fail, so a
+  green row says which reading of it is still open, not only that it passed.
+  a row registered as a record carries no verdict at all.
+  [verified at this revision] fractional mean contrast / OA(8,4,2,2) half fraction vs full 16-cell factorial - accuracy bound
+      1 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; the bound binds on 1 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] fractional main contrast A1 / OA(8,4,2,2) half fraction vs full 16-cell factorial - accuracy bound
+      1 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; the bound binds on 1 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] fractional main contrast A2 / OA(8,4,2,2) half fraction vs full 16-cell factorial - accuracy bound
+      1 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; the bound binds on 1 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] fractional main contrast A3 / OA(8,4,2,2) half fraction vs full 16-cell factorial - accuracy bound
+      1 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; the bound binds on 1 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] fractional main contrast A4 / OA(8,4,2,2) half fraction vs full 16-cell factorial - accuracy bound
+      1 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; the bound binds on 1 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+
+  cells: 5 comparison cells across every lane, region and index, of which 0 (0.0%) carry a bound at least as large as the value itself, so any return in range passes there and the cell cannot discriminate; the no-cell-over-budget statement above is carried by the remaining 5 (100.0%). This is the vacuous column aggregated, not a separate finding, and it is the number to read before reading the green rows
+
+  RESULT: 5 of 5 claims met at this revision (5 verified outright, 0 met over a stated domain, 0 exceeded, 0 vacuous only, 0 evidence absent; neither of the last two counted as met)
+          carried by the 5 of 5 comparison cells (100.0%) that can discriminate: the other 0 carry a bound at least as large as the value itself, so read the two numbers together
+
+rows by property type: a row refutes only what its own kind of question
+reaches
+  type                     claims      met  not met   records       cells  cannot discriminate
+  ----------------------------------------------------------------------------------------------
+  accuracy bound                5        5        0         0           5  0 (0.0%)
+  domain of validity            0        0        0         0           0  0 (0.0%)
+  ordering                      0        0        0         0           0  0 (0.0%)
+  continuity                    0        0        0         0           0  0 (0.0%)
+  reproducibility               0        0        0         0           0  0 (0.0%)
+  error floor                   0        0        0         0           0  0 (0.0%)
+  unclassified                  0        0        0         0           0  0 (0.0%)
+  a type with no rows is a defect class nothing in this book asks about,
+  and a type whose cells cannot discriminate can only see a return out of
+  range: the counts are what each kind of row saw, not what there was to see
+  PASS: every documented claim met at this revision
+book exit status: 0
+
+=== claimgate book: unsupported-order coefficients as records (11 rows, zero target, not judged) ===
+
+per lane, per region: delivered error / documented bound
+  lane                     region      points     real  delivered / claimed      max ratio (index, x)      vacuous no value
+  ------------------------------------------------------------------------------------------------------------------------------
+  full-factorial coefficient {A1,A2} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A1,A3} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A2,A3} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A1,A2,A3} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A1,A4} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A2,A4} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A1,A2,A4} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A3,A4} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A1,A3,A4} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A2,A3,A4} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+  full-factorial coefficient {A1,A2,A3,A4} full 16-cell factorial, zero target        1        0  -                        -                               1        0  record, not judged
+
+  delivered / claimed = |got - ref| and the bound it was judged against, at
+             the worst cell of the sweep; a row whose bound is per-cell shows the
+             pair at that cell, not the registered base bound
+  vacuous  = points where the documented bound is at least as large as the
+             reference value itself, so any returned value in range passes
+  no value = of those, points where the lane returned zero or a subnormal
+
+claims, each with one verdict:
+  a claim the document itself scopes - to a region, a set of indices, a
+  range of arguments - is met over that stated domain and prints the domain
+  with its verdict; a restriction the document states is not the same finding
+  as evidence missing from the tree, and never shares its verdict.
+  every row ends with what would have to be true for its check to fail, so a
+  green row says which reading of it is still open, not only that it passed.
+  a row registered as a record carries no verdict at all.
+  [record, not judged] full-factorial coefficient {A1,A2} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A1,A3} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A2,A3} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A1,A2,A3} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A1,A4} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A2,A4} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A1,A2,A4} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A3,A4} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A1,A3,A4} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A2,A3,A4} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+  [record, not judged] full-factorial coefficient {A1,A2,A3,A4} / full 16-cell factorial, zero target - accuracy bound
+      1 comparison cells, 1 of them (100.0%) with a bound at least as large as the reference itself
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+
+  cells: 11 comparison cells across every lane, region and index, of which 11 (100.0%) carry a bound at least as large as the value itself, so any return in range passes there and the cell cannot discriminate; the no-cell-over-budget statement above is carried by the remaining 0 (0.0%). This is the vacuous column aggregated, not a separate finding, and it is the number to read before reading the green rows
+
+  RESULT: 0 of 0 claims met at this revision (0 verified outright, 0 met over a stated domain, 0 exceeded, 0 vacuous only, 0 evidence absent; neither of the last two counted as met)
+          carried by the 0 of 11 comparison cells (0.0%) that can discriminate: the other 11 carry a bound at least as large as the value itself, so read the two numbers together
+
+rows by property type: a row refutes only what its own kind of question
+reaches
+  type                     claims      met  not met   records       cells  cannot discriminate
+  ----------------------------------------------------------------------------------------------
+  accuracy bound                0        0        0        11          11  11 (100.0%)
+  domain of validity            0        0        0         0           0  0 (0.0%)
+  ordering                      0        0        0         0           0  0 (0.0%)
+  continuity                    0        0        0         0           0  0 (0.0%)
+  reproducibility               0        0        0         0           0  0 (0.0%)
+  error floor                   0        0        0         0           0  0 (0.0%)
+  unclassified                  0        0        0         0           0  0 (0.0%)
+  a type with no rows is a defect class nothing in this book asks about,
+  and a type whose cells cannot discriminate can only see a return out of
+  range: the counts are what each kind of row saw, not what there was to see
+  PASS: every documented claim met at this revision
+book exit status: 0
+
+certificate checks: PASS
+contrast book exit status: 0
+interaction record book exit status: 0
+
+overall exit status: 0

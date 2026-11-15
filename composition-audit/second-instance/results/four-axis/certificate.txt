@@ -1,0 +1,92 @@
+d-second-instance certificate: four-axis
+========================================
+
+Instance: four-axis (4 axes), 4-term series bank, fixed-point quantum Q = 2^-40.
+Axes and cones:
+  A1: sum_{k>=0} (-1)^k / k!; levels 0=5 terms, 1=8 terms; cone {A1}; bound b_A1 = 0.00833333333378907976929
+  A2: sum_{k>=1} (-1)^(k+1) / k; levels 0=8 terms, 1=12 terms; cone {A2}; bound b_A2 = 0.111111111111566851495
+  A3: sum_{k>=0} (-1)^k / (2k+1); levels 0=6 terms, 1=10 terms; cone {A3}; bound b_A3 = 0.0769230769235326738986
+  A4: sum_{k>=0} (-1)^k / (2k)!; levels 0=4 terms, 1=6 terms; cone {A4}; bound b_A4 = 2.48015877573346527735e-05
+  op_add: exact fixed-point integer addition; no local error, so no
+          first-order error term and no cone in the error decomposition.
+  w_p = 1; U_p = {A1,A2,A3,A4}; |U_p| = 4; required strength 2*w_p = 2.
+
+Design:
+  full factorial: 16 cells
+  fractional: the even-parity half fraction I = A1*A2*A3*A4, 8 cells, an OA(8,4,2,2) half fraction
+  strength-2 check (all columns balanced, all pairs balanced): PASS
+  cells saved: 8 of 16 (50.0%)
+
+Bounds:
+  b_A1 = 0.00833333333378907976929
+  b_A2 = 0.111111111111566851495
+  b_A3 = 0.0769230769235326738986
+  b_A4 = 2.48015877573346527735e-05
+  B = sum b_i = 0.196392322956645937193
+  eta (allowance) = 9.99999999999999979887e-13
+  certified joint bound B + eta = 0.196392322957645942827
+  delta (largest supported non-mean contrast) = 0.00934343434346374124289
+  N_w = 0, G_w = 1; non-additive bound = 9.99999999999999979887e-13 (for w_p=1 the formula reads eta)
+
+Full-factorial coefficients:
+  mask order support                  coefficient
+  0    0     {}                    -0.0789055105443932092157
+  1    1     {A1}                  0.00357142857137660030276
+  2    1     {A2}                  -0.00934343434346374124289
+  3    2     {A1,A2}               0
+  4    1     {A3}                  -0.00822418036068484070711
+  5    2     {A1,A3}               0
+  6    2     {A2,A3}               0
+  7    3     {A1,A2,A3}            0
+  8    1     {A4}                  -1.22630067380669061095e-05
+  9    2     {A1,A4}               0
+  10    2     {A2,A4}               0
+  11    3     {A1,A2,A4}            0
+  12    2     {A3,A4}               0
+  13    3     {A1,A3,A4}            0
+  14    3     {A2,A3,A4}            0
+  15    4     {A1,A2,A3,A4}         0
+
+Fractional estimates:
+  mask order support                  estimate                    full                        difference
+  0    0     {}                       -0.0789055105443932092157   -0.0789055105443932092157                           0
+  1    1     {A1}                     0.00357142857137660030276   0.00357142857137660030276                           0
+  2    1     {A2}                    -0.00934343434346374124289  -0.00934343434346374124289                           0
+  3    2     {A1,A2}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  4    1     {A3}                    -0.00822418036068484070711  -0.00822418036068484070711                           0
+  5    2     {A1,A3}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  6    2     {A2,A3}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  7    3     {A1,A2,A3}             -1.22630067380669061095e-05                           0 -1.22630067380669061095e-05   (aliased estimate, not a coefficient)
+  8    1     {A4}                   -1.22630067380669061095e-05 -1.22630067380669061095e-05                           0
+  9    2     {A1,A4}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  10    2     {A2,A4}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  11    3     {A1,A2,A4}              -0.00822418036068484070711                           0  -0.00822418036068484070711   (aliased estimate, not a coefficient)
+  12    2     {A3,A4}                                          0                           0                           0   (aliased estimate, not a coefficient)
+  13    3     {A1,A3,A4}              -0.00934343434346374124289                           0  -0.00934343434346374124289   (aliased estimate, not a coefficient)
+  14    3     {A2,A3,A4}               0.00357142857137660030276                           0   0.00357142857137660030276   (aliased estimate, not a coefficient)
+  15    4     {A1,A2,A3,A4}            -0.0789055105443932092157                           0   -0.0789055105443932092157   (aliased estimate, not a coefficient)
+
+Alias structure:
+  omega[alpha][alpha] = 1 for every alpha; all other nonzero entries are
+  the complement pairs:
+    {} <-> {A1,A2,A3,A4}
+    {A1} <-> {A2,A3,A4}
+    {A2} <-> {A1,A3,A4}
+    {A1,A2} <-> {A3,A4}
+    {A3} <-> {A1,A2,A4}
+    {A1,A3} <-> {A2,A4}
+    {A2,A3} <-> {A1,A4}
+    {A1,A2,A3} <-> {A4}
+  (the full 16x16 matrix is in alias-matrix.csv)
+
+Certificate checks:
+  PASS: per-axis bounds hold on all full and fractional cells (worst |m_i|/b_i = 0.988972572183713038996)
+  PASS: joint bound B+eta holds on all full and fractional cells (worst |error|/(B+eta) = 0.509474175567620091165)
+  PASS: every unsupported order is zero by the cone structure within eta (largest |full interaction| = 0 over 11 unsupported components; eta = 9.99999999999999979887e-13)
+  PASS: fractional main effects (and mean) match the full factorial within eta (largest main difference = 0, mean difference = 0)
+  PASS: alias matrix is the complement-pair structure of the half fraction
+  PASS: both levels of every axis are live (C3)
+  PASS: the fractional design has orthogonal-array strength 2
+  PASS: measured additive residual is within the allowance (largest |error - sum m_i| = 1.11022302462515654042e-16)
+
+RESULT: CERTIFIED - full factorial 16 cells, fractional OA(8,4,2,2) half fraction 8 cells, 8 cells saved (50.0%).

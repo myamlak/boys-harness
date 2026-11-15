@@ -1,0 +1,8 @@
+vcvars64_exit=0
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe
+Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+sweep1.cpp
+sweep1_build_exit=0
+sweep2.cpp
+sweep2_build_exit=0

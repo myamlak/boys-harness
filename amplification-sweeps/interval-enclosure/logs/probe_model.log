@@ -1,0 +1,24 @@
+== second: cells 27588, pop A1 290, A2 282
+   commits 65, abstains 67, choices {'ship': 6, 'product': 59}
+   order0: [('absolute', 'ship', 'product'), ('relative', 'ship', 'product')]
+   record rows 132, state mismatches 0
+
+== first9353: cells 308649, pop A1 3499, A2 4541
+   commits 68, abstains 64, choices {'product': 61, 'ship': 7}
+   order0: [('absolute', 'product', 'product'), ('relative', 'ship', 'product')]
+
+== first9352: cells 308616, pop A1 3499, A2 4540
+   commits 68, abstains 64, choices {'product': 61, 'ship': 7}
+   order0: [('absolute', 'product', 'product'), ('relative', 'ship', 'product')]
+
+== heldout: cells 42900, pop A1 483, A2 650
+   commits 58, abstains 74, choices {'product': 53, 'ship': 5}
+   order0: [('absolute', 'product', 'product'), ('relative', 'ship', 'product')]
+Traceback (most recent call last):
+  File "C:\Users\myaml\dev\_a-q417-interval\work\probe_model.py", line 188, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\myaml\dev\_a-q417-interval\work\probe_model.py", line 175, in main
+    rec_w = mpf(row["predicted_ship"])
+                ~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'predicted_ship'
