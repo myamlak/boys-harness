@@ -1,0 +1,489 @@
+{
+ "case": "heldout",
+ "rows": 132,
+ "counts": {
+  "deposited_whole": {
+   "commits": 58,
+   "abstains": 74,
+   "recursed": 5,
+   "direct": 53,
+   "right": 58,
+   "wrong": 0,
+   "tie": 0
+  },
+  "deposited_pop": {
+   "commits": 58,
+   "abstains": 74,
+   "recursed": 5,
+   "direct": 53,
+   "right": 58,
+   "wrong": 0,
+   "tie": 0
+  },
+  "enclosure_whole": {
+   "commits": 13,
+   "abstains": 119,
+   "recursed": 10,
+   "direct": 3,
+   "right": 13,
+   "wrong": 0,
+   "tie": 0
+  },
+  "enclosure_pop": {
+   "commits": 13,
+   "abstains": 119,
+   "recursed": 10,
+   "direct": 3,
+   "right": 13,
+   "wrong": 0,
+   "tie": 0
+  }
+ },
+ "state_agreement": 77,
+ "dep_direct_unjustified": [
+  [
+   "A1",
+   "absolute",
+   2
+  ],
+  [
+   "A1",
+   "absolute",
+   3
+  ],
+  [
+   "A1",
+   "absolute",
+   4
+  ],
+  [
+   "A1",
+   "absolute",
+   5
+  ],
+  [
+   "A1",
+   "absolute",
+   6
+  ],
+  [
+   "A1",
+   "absolute",
+   7
+  ],
+  [
+   "A1",
+   "absolute",
+   8
+  ],
+  [
+   "A1",
+   "absolute",
+   12
+  ],
+  [
+   "A1",
+   "absolute",
+   13
+  ],
+  [
+   "A1",
+   "absolute",
+   14
+  ],
+  [
+   "A1",
+   "absolute",
+   15
+  ],
+  [
+   "A1",
+   "absolute",
+   16
+  ],
+  [
+   "A1",
+   "relative",
+   7
+  ],
+  [
+   "A1",
+   "relative",
+   8
+  ],
+  [
+   "A1",
+   "relative",
+   12
+  ],
+  [
+   "A1",
+   "relative",
+   13
+  ],
+  [
+   "A1",
+   "relative",
+   14
+  ],
+  [
+   "A1",
+   "relative",
+   15
+  ],
+  [
+   "A1",
+   "relative",
+   16
+  ],
+  [
+   "A2",
+   "absolute",
+   1
+  ],
+  [
+   "A2",
+   "absolute",
+   8
+  ],
+  [
+   "A2",
+   "absolute",
+   9
+  ],
+  [
+   "A2",
+   "absolute",
+   10
+  ],
+  [
+   "A2",
+   "absolute",
+   11
+  ],
+  [
+   "A2",
+   "absolute",
+   12
+  ],
+  [
+   "A2",
+   "absolute",
+   13
+  ],
+  [
+   "A2",
+   "absolute",
+   14
+  ],
+  [
+   "A2",
+   "absolute",
+   15
+  ],
+  [
+   "A2",
+   "absolute",
+   16
+  ],
+  [
+   "A2",
+   "absolute",
+   24
+  ],
+  [
+   "A2",
+   "absolute",
+   25
+  ],
+  [
+   "A2",
+   "absolute",
+   26
+  ],
+  [
+   "A2",
+   "absolute",
+   27
+  ],
+  [
+   "A2",
+   "absolute",
+   28
+  ],
+  [
+   "A2",
+   "absolute",
+   29
+  ],
+  [
+   "A2",
+   "absolute",
+   30
+  ],
+  [
+   "A2",
+   "absolute",
+   31
+  ],
+  [
+   "A2",
+   "absolute",
+   32
+  ],
+  [
+   "A2",
+   "relative",
+   1
+  ],
+  [
+   "A2",
+   "relative",
+   15
+  ],
+  [
+   "A2",
+   "relative",
+   16
+  ],
+  [
+   "A2",
+   "relative",
+   24
+  ],
+  [
+   "A2",
+   "relative",
+   25
+  ],
+  [
+   "A2",
+   "relative",
+   26
+  ],
+  [
+   "A2",
+   "relative",
+   27
+  ],
+  [
+   "A2",
+   "relative",
+   28
+  ],
+  [
+   "A2",
+   "relative",
+   29
+  ],
+  [
+   "A2",
+   "relative",
+   30
+  ],
+  [
+   "A2",
+   "relative",
+   31
+  ],
+  [
+   "A2",
+   "relative",
+   32
+  ]
+ ],
+ "dep_recursed_unjustified": [],
+ "enc_commits_where_dep_abstains": [
+  [
+   "A1",
+   "relative",
+   1,
+   "recursed"
+  ],
+  [
+   "A2",
+   "relative",
+   4,
+   "recursed"
+  ],
+  [
+   "A2",
+   "relative",
+   9,
+   "recursed"
+  ],
+  [
+   "A2",
+   "relative",
+   10,
+   "recursed"
+  ],
+  [
+   "A2",
+   "relative",
+   17,
+   "recursed"
+  ]
+ ],
+ "W_minus_T_below_L": [
+  [
+   "A1",
+   "absolute",
+   9,
+   "1.0202074204945244e-18",
+   "7.8430546397817519e-18"
+  ],
+  [
+   "A1",
+   "absolute",
+   10,
+   "1.9356666910860523e-18",
+   "6.905379041476448e-18"
+  ],
+  [
+   "A1",
+   "absolute",
+   11,
+   "4.0584010705240907e-18",
+   "6.784264270155769e-18"
+  ],
+  [
+   "A1",
+   "relative",
+   9,
+   "2.091675910626807e-15",
+   "3.1431141963309925e-15"
+  ],
+  [
+   "A1",
+   "relative",
+   10,
+   "3.9431001749859881e-15",
+   "5.8325823996283181e-15"
+  ],
+  [
+   "A2",
+   "absolute",
+   17,
+   "2.4850230039090687e-21",
+   "1.1921858275195077e-19"
+  ],
+  [
+   "A2",
+   "absolute",
+   18,
+   "3.9661272813844866e-21",
+   "1.1686969483152958e-19"
+  ],
+  [
+   "A2",
+   "absolute",
+   19,
+   "6.6911680652719019e-21",
+   "1.1596879962699664e-19"
+  ],
+  [
+   "A2",
+   "absolute",
+   20,
+   "1.1896977390068122e-20",
+   "1.2467479615362448e-19"
+  ],
+  [
+   "A2",
+   "absolute",
+   21,
+   "2.2233455181537847e-20",
+   "1.0975137356215925e-19"
+  ],
+  [
+   "A2",
+   "absolute",
+   22,
+   "4.3567690237377556e-20",
+   "1.0047378119693491e-19"
+  ],
+  [
+   "A2",
+   "absolute",
+   23,
+   "8.9322187718281521e-20",
+   "1.0177164107097274e-19"
+  ],
+  [
+   "A2",
+   "relative",
+   17,
+   "3.4854759672545804e-15",
+   "5.0899972870002013e-14"
+  ],
+  [
+   "A2",
+   "relative",
+   18,
+   "5.2104014278989164e-15",
+   "5.276016213532356e-14"
+  ],
+  [
+   "A2",
+   "relative",
+   19,
+   "7.775203193442528e-15",
+   "5.4392952166169547e-14"
+  ],
+  [
+   "A2",
+   "relative",
+   20,
+   "1.4218103949680744e-14",
+   "5.8601670569584099e-14"
+  ],
+  [
+   "A2",
+   "relative",
+   21,
+   "2.9017489541806843e-14",
+   "6.2106362990101615e-14"
+  ],
+  [
+   "A2",
+   "relative",
+   22,
+   "6.1716584355822545e-14",
+   "6.4615198301028326e-14"
+  ]
+ ],
+ "max_abs_U_minus_W": "0.0",
+ "per_order": {
+  "file": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\per_order.csv",
+  "present": true,
+  "checked": 264,
+  "mismatched": 0,
+  "max_rel": "3.8123205206556964e-17",
+  "examples": []
+ },
+ "formula_self_check": {
+  "samples": 98,
+  "max_rel_tau": "1.0905905373887952e-70",
+  "max_rel_amplification": "5.3520106770725931e-71",
+  "paper_analyze": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\product-amplification\\analysis\\sweeps\\amplification_form\\analyze.py",
+  "paper_analyze_sha256": "75745b378424098cb597e653a972040489a71bdc7c8195991fde89bc28dd994e"
+ },
+ "record": {
+  "file": "C:\\Users\\myaml\\dev\\papers-harness-repo\\amplification-sweeps\\held-out\\results\\prediction_heldout.csv",
+  "present": true,
+  "checked": 132,
+  "state_mismatches": 0,
+  "winner_mismatches": 0,
+  "choice_mismatches": 0,
+  "right_mismatches": 0,
+  "max_rel": {
+   "predicted_recursed": "4.3214290502872232e-17",
+   "predicted_direct": "3.4948443980940886e-17",
+   "arithmetic": "4.3667730365710125e-17"
+  },
+  "examples": []
+ }
+}
+wrote C:\Users\myaml\dev\_a-q417-interval\work\heldout.json
+wrote C:\Users\myaml\dev\_a-q417-interval\work\heldout.csv

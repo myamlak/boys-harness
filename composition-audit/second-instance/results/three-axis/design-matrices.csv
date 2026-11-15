@@ -1,0 +1,13 @@
+design,cell,full_cell,A1_level,A2_level,A3_level,A1_coded,A2_coded,A3_coded
+"full",0,0,0,0,0,1,1,1
+"full",1,1,0,0,1,1,1,-1
+"full",2,2,0,1,0,1,-1,1
+"full",3,3,0,1,1,1,-1,-1
+"full",4,4,1,0,0,-1,1,1
+"full",5,5,1,0,1,-1,1,-1
+"full",6,6,1,1,0,-1,-1,1
+"full",7,7,1,1,1,-1,-1,-1
+"fractional",0,0,0,0,0,1,1,1
+"fractional",1,3,0,1,1,1,-1,-1
+"fractional",2,5,1,0,1,-1,1,-1
+"fractional",3,6,1,1,0,-1,-1,1

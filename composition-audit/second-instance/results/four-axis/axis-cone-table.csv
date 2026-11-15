@@ -1,0 +1,6 @@
+axis,operation,levels,cone,series_remainder_bound,documented_bound,exact_reference
+"A1","exp(-1) Taylor series + fixed-point rounding","0=5 terms, 1=8 terms","{A1}","level0 0.00833333333333333321769; level1 2.48015873015873015658e-05",0.00833333333378907976929,0.367879441171442334024
+"A2","ln 2 alternating harmonic series + fixed-point rounding","0=8 terms, 1=12 terms","{A2}","level0 0.111111111111111104943; level1 0.076923076923076927347",0.111111111111566851495,0.693147180559945286227
+"A3","pi/4 arctangent series + fixed-point rounding","0=6 terms, 1=10 terms","{A3}","level0 0.076923076923076927347; level1 0.0476190476190476164042",0.0769230769235326738986,0.785398163397448278999
+"A4","cos(1) Taylor series + fixed-point rounding","0=4 terms, 1=6 terms","{A4}","level0 2.48015873015873015658e-05; level1 2.08767569878681001866e-09",2.48015877573346527735e-05,0.54030230586813976501
+"op_add","exact fixed-point integer addition and 2^-40 scaling","fixed, no level","{}","no local error; exact in double",0,"-"

@@ -1,0 +1,48 @@
+sha256 of the v5.3.2 replay's outputs and checks
+
+# Every measurement record below is byte-identical to the deposited v5.3.1
+# record, boys-crossover/exact-tag-replay. The comparison command is
+#     python -I compare_outputs.py        (exit 0)
+# which hashes the deposited files that are still present and compares this
+# record's run/paths.csv digest with the digest recorded in the deposited
+# digests.txt (that raw file was removed from the v5.3.1 record).
+
+first sweep, 9,353 arguments                    2a2c45d1d7f59b74f4d3aeca647b46e4e20e86c2fb1917767a21a725f86d7da6  run/cells-9353.csv
+first sweep admission, 9,353 arguments          3003115faf814830ca95948b9cc85e8880207caecbf208529e00a31f65e5dc91  run/admission-9353.csv
+first sweep replica gain, 9,353 arguments       e25ac559a3d5f23164340802c152bc9933b309a70b7ad09f4f5d7cc931e2855f  run/replica_gain-9353.csv
+first sweep, designed 9,352-argument record     dd26d0b2a4352113d9f15433ec991adfacc211607ae9586c0bb51cd12b3f3369  run/cells-9352.csv
+first sweep admission, designed record          19f2c6d9b993f4eb880ec124795f90ef4fc1a72f95dacfe6ddb990d5b111d143  run/admission-9352.csv
+first sweep replica gain, designed record       d0401a0f133ae9ca5ccc03b8f827caebf780cecee730f8bd3eff30026c6bdf29  run/replica_gain-9352.csv
+second sweep, 836 arguments                     2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6  run/cells-sweep2.csv
+second sweep admission                          d57b3bf925ae3740b28048139126ad0806fcab624e996e40586bc91503fb069f  run/admission-sweep2.csv
+second sweep path record                        81001a06d80c88e5b3ddac1f3dd011cae6f8ce2e806c8bf1f7f26e85dd8c8219  run/paths.csv
+certificate per-cell intervals                  8041c727ac90c6d0ff9bc5552738e91ca9fd7abe09973ea0fad43756ba62fa6a  run/certificates/cells_cert.csv
+certificate band comparisons                    1ecc53f44a18b1acf867812cf00bf74e0f4842abcbc2d925991d09a734d2e368  run/certificates/band_cert.csv
+certificate model cells                         d76f2737c80e9922e7e22432134ded5a1dd0eca33f925c2853fca3de25426efb  run/certificates/model_cells.csv
+certificate summary                             75c165fed51c91cdbb4a9546a98b5d526304a40114ba37424b1c0469fae0509a  run/certificates/summary.json
+
+# this run's logs and scripts. They are not byte-identical to the v5.3.1
+# record's logs: the deposited certificate logs carry an appended timing tail,
+# and the deposited build and sweep logs name the v5.3.1 paths and timings.
+build log                                       325f205787766905239710bd60e25a5435596f1cbaf02cb00ce80b660f835d6c  build-tag.log
+sweep run log                                   ddec1aa94e2827dcbcc6eb2c2d8f1b22b284d33518f72bc53d0bb0adddf42dae  run-sweeps.log
+certificate model replay log                    8ab142b8ee1161a33a9422151b97beef568a53e5cc420b7cd584b04a987f611f  run/replay-tag.log
+certificate bound validation log                b91fa7e0ce8e0705aaec9667b47aebea8c9d2ebc837829152012b3d4694f1ec3  run/certify-tag.log
+evaluated-file identity comparison output       b668e3fde6dea0146feb992d590d333319eeebfacb42167b7131f533f3c33fcd  run/identity-comparison.log
+tag-tree verification output                    387682c509e351999a3be9f0dd3ae0eb87052eb5e0bf48a6638aa4f4ce05be29  run/tag-tree-verification.log
+measurement-record comparison output            b465e943ce9cf7c2bd90f0c6d7c8eff1991936ec41d8f5e420d42cba5b7327b1  run/output-comparison.log
+git ls-tree -r v5.3.2 listing                   1480b60aaabb60ecf5ca8f2b086a10839af48257460b913747229d556ce2238d  run/ls-tree-v532.txt
+measurement-record comparison script            30c75b01cdc4e47cdb3f45ddbcf5176c9bb0880d0fa0e9b3655a96f8e58220ca  compare_outputs.py
+evaluated-file identity comparison script       74e7f18ce331212632f20521b26438545af431ab128032523fcb160a12532521  compare_identity.py
+tag-tree verification script                    3411bf38a03cdd06d4396dd4d160c6f34774ee9c2b07b14c5c1defb0a2acb67b  verify_tag_tree.py
+
+# kernel identity
+v5.3.2 version header sha256                    e2a1a783004191cd76bfc952f56d3a2bece49935722c54fb8aee64553c89b27e  include/boys/version.hpp in the tag tree
+v5.3.1 version header sha256                    02e6312dfa1a91b07abe98843c484f2331abb8f3f48b313fb6a15722c9067da9  the v5.3.1 tag tree
+evaluated files                                 76 (62 include/boys headers, 14 src)
+identical to the v5.3.1 tag tree                75 of 76; include/boys/version.hpp differs
+identical to the v5.1.1 tag tree                55 of 76 (45 headers, 10 src)
+
+# rebuilt executables, not deposited (build products)
+sweep1 executable                               fe61a0a6750f416653d8a4cd0407a22dd09477935a966c8cdf2cc9a6f71e1c2e  build/sweep1.exe (not deposited)
+sweep2 executable                               8159be35fc56207d7f00415bdedaad397f161ef07859bca88e57f9b220e1dbfb  build/sweep2.exe (not deposited)

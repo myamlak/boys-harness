@@ -1,0 +1,356 @@
+{
+ "case": "first9353",
+ "served_cells": 133684,
+ "magnitude_below_lower": 0,
+ "magnitude_above_upper": 0,
+ "signed_outside": 69940,
+ "worst_below_relative": "0.0",
+ "worst_above_relative": "0.0",
+ "rows": 132,
+ "measured_recursed_max_below_L": 8,
+ "measured_recursed_max_above_U": 28,
+ "rows_below": [
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 9,
+   "measured_max": "1.0131921985252545e-17",
+   "L": "1.0472333325610779e-17",
+   "U": "2.9452718170090626e-17",
+   "unserved_cells": 2419
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 20,
+   "measured_max": "2.9613692238243892e-18",
+   "L": "3.2975517029886871e-18",
+   "U": "3.2975517029886871e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 22,
+   "measured_max": "3.1316718833710213e-18",
+   "L": "3.6043879511836254e-18",
+   "U": "3.6043879511836254e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 28,
+   "measured_max": "2.2799725258587159e-18",
+   "L": "2.487360660355686e-18",
+   "U": "2.487360660355686e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 32,
+   "measured_max": "1.9269362933549409e-18",
+   "L": "1.9842038213125246e-18",
+   "U": "1.9842038213125246e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A2",
+   "metric": "absolute",
+   "order": 17,
+   "measured_max": "1.3595390413554722e-19",
+   "L": "1.4175563726567251e-19",
+   "U": "1.4175563726567251e-19",
+   "unserved_cells": 3357
+  },
+  {
+   "band": "A2",
+   "metric": "absolute",
+   "order": 19,
+   "measured_max": "1.2219827992960063e-19",
+   "L": "1.2720355751022667e-19",
+   "U": "3.9621299898448806e-19",
+   "unserved_cells": 3357
+  },
+  {
+   "band": "A2",
+   "metric": "relative",
+   "order": 17,
+   "measured_max": "4.9953384538033901e-14",
+   "L": "5.0772497210725118e-14",
+   "U": "1.0722963246607273e-13",
+   "unserved_cells": 3357
+  }
+ ],
+ "rows_above": [
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 17,
+   "measured_max": "4.1016598154390839e-18",
+   "L": "3.4076411959051341e-18",
+   "U": "3.4076411959051341e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 18,
+   "measured_max": "3.829370752377504e-18",
+   "L": "3.1770620591290185e-18",
+   "U": "3.1770620591290185e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 19,
+   "measured_max": "3.7442140360094787e-18",
+   "L": "3.1489803967860106e-18",
+   "U": "3.1489803967860106e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 21,
+   "measured_max": "3.5807964249029176e-18",
+   "L": "3.4080150073953887e-18",
+   "U": "3.4080150073953887e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 23,
+   "measured_max": "3.6971314892219007e-18",
+   "L": "2.8406811175488332e-18",
+   "U": "2.8406811175488332e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 24,
+   "measured_max": "3.8160691937321869e-18",
+   "L": "2.4593595399263985e-18",
+   "U": "2.4593595399263985e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 25,
+   "measured_max": "3.2554574536353594e-18",
+   "L": "2.3880957156469558e-18",
+   "U": "2.3880957156469558e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 26,
+   "measured_max": "3.2713010255372183e-18",
+   "L": "2.7762775455243639e-18",
+   "U": "2.7762775455243639e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 27,
+   "measured_max": "3.0388087021126632e-18",
+   "L": "2.7748339753040016e-18",
+   "U": "2.7748339753040016e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 29,
+   "measured_max": "2.7029113044413825e-18",
+   "L": "2.2334901236963848e-18",
+   "U": "2.2334901236963848e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 30,
+   "measured_max": "2.2475333160454123e-18",
+   "L": "2.0700959394653992e-18",
+   "U": "2.0700959394653992e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 31,
+   "measured_max": "2.6425788683849047e-18",
+   "L": "1.7131498741706241e-18",
+   "U": "1.7131498741706241e-18",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 17,
+   "measured_max": "3.7759204006035577e-14",
+   "L": "2.5948883847097323e-14",
+   "U": "2.5948883847097323e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 18,
+   "measured_max": "3.5805663607971868e-14",
+   "L": "2.1763933590666589e-14",
+   "U": "2.1763933590666589e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 19,
+   "measured_max": "3.6205536170796926e-14",
+   "L": "2.5393132265552625e-14",
+   "U": "2.5393132265552625e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 20,
+   "measured_max": "3.2641159687775614e-14",
+   "L": "2.5419708156309465e-14",
+   "U": "2.5419708156309465e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 21,
+   "measured_max": "4.3683391382752145e-14",
+   "L": "2.922339422959998e-14",
+   "U": "2.922339422959998e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 22,
+   "measured_max": "3.674981995318119e-14",
+   "L": "2.3453606238446705e-14",
+   "U": "2.3453606238446705e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 23,
+   "measured_max": "4.7589850601004604e-14",
+   "L": "3.3243864060504747e-14",
+   "U": "3.3243864060504747e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 24,
+   "measured_max": "5.2517157191983918e-14",
+   "L": "3.1277859537723067e-14",
+   "U": "3.1277859537723067e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 25,
+   "measured_max": "4.1672149667300619e-14",
+   "L": "3.3624014029554793e-14",
+   "U": "3.3624014029554793e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 26,
+   "measured_max": "3.7372902217543337e-14",
+   "L": "2.1413262540482521e-14",
+   "U": "2.1413262540482521e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 27,
+   "measured_max": "4.4975921624581121e-14",
+   "L": "2.8253625131831468e-14",
+   "U": "2.8253625131831468e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 28,
+   "measured_max": "3.9409524911943099e-14",
+   "L": "2.0991684587031349e-14",
+   "U": "2.0991684587031349e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 29,
+   "measured_max": "4.9343993177163969e-14",
+   "L": "2.9757681772005434e-14",
+   "U": "2.9757681772005434e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 30,
+   "measured_max": "3.773597947679568e-14",
+   "L": "2.1794281585017187e-14",
+   "U": "2.1794281585017187e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 31,
+   "measured_max": "5.2016958881982174e-14",
+   "L": "1.8172919452859015e-14",
+   "U": "1.8172919452859015e-14",
+   "unserved_cells": 3499
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 32,
+   "measured_max": "3.5149393492193877e-14",
+   "L": "1.6941088038101519e-14",
+   "U": "1.6941088038101519e-14",
+   "unserved_cells": 3499
+  }
+ ],
+ "worst_row_below_relative": "0.1311501631386187",
+ "worst_row_above_relative": "1.8623336507331913",
+ "enclosure_recursed_commitments": {
+  "commits": 11,
+  "endpoint_holds": 11,
+  "endpoint_fails": 0,
+  "failing": [],
+  "endpoint": "measured_max <= U"
+ },
+ "enclosure_direct_commitments": {
+  "commits": 3,
+  "endpoint_holds": 3,
+  "endpoint_fails": 0,
+  "failing": [],
+  "endpoint": "measured_max >= L"
+ }
+}

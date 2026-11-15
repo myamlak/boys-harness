@@ -1,0 +1,347 @@
+{
+ "case": "heldout",
+ "served_cells": 18821,
+ "magnitude_below_lower": 0,
+ "magnitude_above_upper": 0,
+ "signed_outside": 9709,
+ "worst_below_relative": "0.0",
+ "worst_above_relative": "0.0",
+ "rows": 132,
+ "measured_recursed_max_below_L": 14,
+ "measured_recursed_max_above_U": 21,
+ "rows_below": [
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 17,
+   "measured_max": "3.0120318461103079e-18",
+   "L": "3.4407760671923886e-18",
+   "U": "3.4407760671923886e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 18,
+   "measured_max": "2.9811319668100808e-18",
+   "L": "3.6823206581583606e-18",
+   "U": "3.6823206581583606e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 19,
+   "measured_max": "2.8615159967541541e-18",
+   "L": "3.0406972944900764e-18",
+   "U": "3.0406972944900764e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 20,
+   "measured_max": "3.5315215065983004e-18",
+   "L": "3.9427277751323448e-18",
+   "U": "3.9427277751323448e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 21,
+   "measured_max": "3.4086433151665624e-18",
+   "L": "3.9277308084012928e-18",
+   "U": "3.9277308084012928e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 22,
+   "measured_max": "2.2950945407033369e-18",
+   "L": "3.3793329607694057e-18",
+   "U": "3.3793329607694057e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 26,
+   "measured_max": "2.2976942720994675e-18",
+   "L": "2.8562002945368415e-18",
+   "U": "2.8562002945368415e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 27,
+   "measured_max": "2.7021115735063111e-18",
+   "L": "3.1082501594037e-18",
+   "U": "3.1082501594037e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 28,
+   "measured_max": "1.9535324184876324e-18",
+   "L": "1.9663274194750095e-18",
+   "U": "1.9663274194750095e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 30,
+   "measured_max": "1.9377757834413123e-18",
+   "L": "1.9940412995397654e-18",
+   "U": "1.9940412995397654e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 32,
+   "measured_max": "2.4408148053831034e-14",
+   "L": "2.442199271450014e-14",
+   "U": "2.442199271450014e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A2",
+   "metric": "absolute",
+   "order": 20,
+   "measured_max": "1.1112226899755568e-19",
+   "L": "1.2467479615362448e-19",
+   "U": "6.6089386439515062e-19",
+   "unserved_cells": 492
+  },
+  {
+   "band": "A2",
+   "metric": "relative",
+   "order": 17,
+   "measured_max": "5.0280834227868262e-14",
+   "L": "5.0899972870002013e-14",
+   "U": "1.0179540390181411e-13",
+   "unserved_cells": 492
+  },
+  {
+   "band": "A2",
+   "metric": "relative",
+   "order": 18,
+   "measured_max": "5.2629677456092854e-14",
+   "L": "5.276016213532356e-14",
+   "U": "1.8356127879191098e-13",
+   "unserved_cells": 492
+  }
+ ],
+ "rows_above": [
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 23,
+   "measured_max": "3.0641326245621965e-18",
+   "L": "2.5450346579422074e-18",
+   "U": "2.5450346579422074e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 24,
+   "measured_max": "2.6263791513212493e-18",
+   "L": "2.2494592285469705e-18",
+   "U": "2.2494592285469705e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 25,
+   "measured_max": "2.5675653311385351e-18",
+   "L": "2.349872474093345e-18",
+   "U": "2.349872474093345e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 29,
+   "measured_max": "2.1792624445781517e-18",
+   "L": "1.7535720699210146e-18",
+   "U": "1.7535720699210146e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 31,
+   "measured_max": "1.7973130367059117e-18",
+   "L": "1.7745226019949942e-18",
+   "U": "1.7745226019949942e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "absolute",
+   "order": 32,
+   "measured_max": "2.1698032694867424e-18",
+   "L": "1.6946570356507197e-18",
+   "U": "1.6946570356507197e-18",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 17,
+   "measured_max": "2.7727997121130648e-14",
+   "L": "2.2197441356800926e-14",
+   "U": "2.2197441356800926e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 18,
+   "measured_max": "2.4989684762097854e-14",
+   "L": "1.9338615323561732e-14",
+   "U": "1.9338615323561732e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 19,
+   "measured_max": "2.7674650343319213e-14",
+   "L": "2.1092630101088609e-14",
+   "U": "2.1092630101088609e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 20,
+   "measured_max": "2.9715173573657811e-14",
+   "L": "2.161820439694093e-14",
+   "U": "2.161820439694093e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 21,
+   "measured_max": "3.1567098183398292e-14",
+   "L": "1.6097337952110738e-14",
+   "U": "1.6097337952110738e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 22,
+   "measured_max": "2.8191975035827658e-14",
+   "L": "2.3540625311096801e-14",
+   "U": "2.3540625311096801e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 23,
+   "measured_max": "4.1994135761144253e-14",
+   "L": "3.0606485171289865e-14",
+   "U": "3.0606485171289865e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 24,
+   "measured_max": "3.7986153508960246e-14",
+   "L": "3.1458632565094388e-14",
+   "U": "3.1458632565094388e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 25,
+   "measured_max": "3.6463356218178572e-14",
+   "L": "2.7621222631191709e-14",
+   "U": "2.7621222631191709e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 26,
+   "measured_max": "2.8822018042929347e-14",
+   "L": "1.8744435694516942e-14",
+   "U": "1.8744435694516942e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 27,
+   "measured_max": "3.4417517422418059e-14",
+   "L": "2.2846602039758856e-14",
+   "U": "2.2846602039758856e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 28,
+   "measured_max": "3.09114029174827e-14",
+   "L": "1.6534919026626817e-14",
+   "U": "1.6534919026626817e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 29,
+   "measured_max": "3.9784589659415207e-14",
+   "L": "2.3457796770863399e-14",
+   "U": "2.3457796770863399e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 30,
+   "measured_max": "2.966166240233612e-14",
+   "L": "1.666441535385872e-14",
+   "U": "1.666441535385872e-14",
+   "unserved_cells": 483
+  },
+  {
+   "band": "A1",
+   "metric": "relative",
+   "order": 31,
+   "measured_max": "3.5377289662362979e-14",
+   "L": "1.6678770244684242e-14",
+   "U": "1.6678770244684242e-14",
+   "unserved_cells": 483
+  }
+ ],
+ "worst_row_below_relative": "0.32084391584166648",
+ "worst_row_above_relative": "1.1210970079546612",
+ "enclosure_recursed_commitments": {
+  "commits": 10,
+  "endpoint_holds": 10,
+  "endpoint_fails": 0,
+  "failing": [],
+  "endpoint": "measured_max <= U"
+ },
+ "enclosure_direct_commitments": {
+  "commits": 3,
+  "endpoint_holds": 3,
+  "endpoint_fails": 0,
+  "failing": [],
+  "endpoint": "measured_max >= L"
+ }
+}

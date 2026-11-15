@@ -1,0 +1,5 @@
+downward fused = False
+  total {'ship': 27588, 'product': 27588} mismatches {}
+downward fused = True
+  total {'ship': 27588, 'product': 27588} mismatches {'ship': 208}
+  first ship ('A1', 0.029916890803630927, 0, 0.9901165712623343, 0.9901165712623344, 1)

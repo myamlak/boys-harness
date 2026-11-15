@@ -1,0 +1,32 @@
+In file included from /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/initialize.h:31,
+                 from /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h:57,
+                 from /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/probe/compare_boys_accuracy.cpp:32:
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/shgshell_ordering.h: In function ‘int libint2::INT_SOLIDHARMINDEX_GAUSSIAN(int, int)’:
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/shgshell_ordering.h:65:44: warning: unused parameter ‘l’ [-Wunused-parameter]
+   65 | inline int INT_SOLIDHARMINDEX_GAUSSIAN(int l, int m) {
+      |                                        ~~~~^
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h: In instantiation of ‘libint2::FmEval_Chebyshev7<Real>::FmEval_Chebyshev7(int, double) [with Real = double]’:
+/mnt/c/Users/myaml/dev/_b-accuracy-compare/record/probe/compare_boys_accuracy.cpp:360:59:   required from here
+  360 |     libint2::FmEval_Chebyshev7<double> chebyshev(kMaxOrder);
+      |                                                           ^
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h:305:14: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const std::size_t’ {aka ‘const long unsigned int’} [-Wsign-compare]
+  305 |     if (mmax > cheb_table_mmax)
+      |         ~~~~~^~~~~~~~~~~~~~~~~
+In file included from /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2.h:44,
+                 from /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/initialize.h:29:
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/numeric.h: In instantiation of ‘Real libint2::get_epsilon(const Real&) [with Real = double]’:
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h:173:37:   required from ‘static Real libint2::FmEval_Reference<Real>::eval(Real, size_t) [with Real = double; size_t = long unsigned int]’
+  173 |     const Real epsilon = get_epsilon(T);
+      |                          ~~~~~~~~~~~^~~
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h:198:52:   required from ‘static void libint2::FmEval_Reference<Real>::eval(Real*, Real, size_t) [with Real = double; size_t = long unsigned int]’
+  198 |     for (size_t m = 0; m <= mmax; ++m) Fm[m] = eval(T, m);
+      |                                                ~~~~^~~~~~
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h:233:35:   required from ‘static void libint2::FmEval_Reference2<Real>::eval(Real*, Real, size_t) [with Real = double; size_t = long unsigned int]’
+  233 |       FmEval_Reference<Real>::eval(Fm, t, mmax);
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/mnt/c/Users/myaml/dev/_b-accuracy-compare/record/probe/compare_boys_accuracy.cpp:381:49:   required from here
+  381 |         libint2::FmEval_Reference2<double>::eval(ref2_values.data(), g.x, kMaxOrder);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/numeric.h:181:37: warning: unused parameter ‘value’ [-Wunused-parameter]
+  181 | inline Real get_epsilon(const Real& value) {
+      |                         ~~~~~~~~~~~~^~~~~

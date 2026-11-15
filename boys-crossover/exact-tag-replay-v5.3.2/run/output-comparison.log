@@ -1,0 +1,17 @@
+record                             bytes        sha256                                                           result
+run/cells-9353.csv                 21672799     2a2c45d1d7f59b74f4d3aeca647b46e4e20e86c2fb1917767a21a725f86d7da6 identical (deposited file compared byte for byte)
+run/admission-9353.csv             335156       3003115faf814830ca95948b9cc85e8880207caecbf208529e00a31f65e5dc91 identical (deposited file compared byte for byte)
+run/replica_gain-9353.csv          7820122      e25ac559a3d5f23164340802c152bc9933b309a70b7ad09f4f5d7cc931e2855f identical (deposited file compared byte for byte)
+run/cells-9352.csv                 21670457     dd26d0b2a4352113d9f15433ec991adfacc211607ae9586c0bb51cd12b3f3369 identical (deposited file compared byte for byte)
+run/admission-9352.csv             335120       19f2c6d9b993f4eb880ec124795f90ef4fc1a72f95dacfe6ddb990d5b111d143 identical (deposited file compared byte for byte)
+run/replica_gain-9352.csv          7819330      d0401a0f133ae9ca5ccc03b8f827caebf780cecee730f8bd3eff30026c6bdf29 identical (deposited file compared byte for byte)
+run/cells-sweep2.csv               1914945      2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6 identical (deposited file compared byte for byte)
+run/admission-sweep2.csv           30166        d57b3bf925ae3740b28048139126ad0806fcab624e996e40586bc91503fb069f identical (deposited file compared byte for byte)
+run/paths.csv                      291827555    81001a06d80c88e5b3ddac1f3dd011cae6f8ce2e806c8bf1f7f26e85dd8c8219 identical (deposited raw removed; digest from its digests.txt)
+run/certificates/cells_cert.csv    11044412     8041c727ac90c6d0ff9bc5552738e91ca9fd7abe09973ea0fad43756ba62fa6a identical (deposited file compared byte for byte)
+run/certificates/band_cert.csv     24365        1ecc53f44a18b1acf867812cf00bf74e0f4842abcbc2d925991d09a734d2e368 identical (deposited file compared byte for byte)
+run/certificates/model_cells.csv   47602        d76f2737c80e9922e7e22432134ded5a1dd0eca33f925c2853fca3de25426efb identical (deposited file compared byte for byte)
+run/certificates/summary.json      156248       75c165fed51c91cdbb4a9546a98b5d526304a40114ba37424b1c0469fae0509a identical (deposited file compared byte for byte)
+
+13 of 13 measurement records identical
+compare_exit=0 

@@ -1,0 +1,12 @@
+Probe build command (run inside WSL)
+====================================
+
+g++ -std=c++20 -O2 -mavx2 -mfma -Wall -Wextra -I /mnt/c/Users/myaml/dev/_boys-library/include -I /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/probe/compare_boys_accuracy.cpp /mnt/c/Users/myaml/dev/libint-2.13.1/inst/lib/libint2.a -o /mnt/c/Users/myaml/dev/_b-accuracy-compare/bin/compare_boys_accuracy
+
+Flags: -std=c++20 -O2 -mavx2 -mfma -Wall -Wextra
+Include paths: Boys v5.3.2 public headers; libint2 2.13.1 inst/include
+Link: libint2 2.13.1 inst/lib/libint2.a (only for libint2_static_cleanup;
+the Boys evaluator is header-only).
+Compiler: g++ 15.2.0, WSL Linux x86-64 (see commands-and-exit-codes.txt).
+Build warnings: all 32 lines come from libint2 third-party headers;
+the probe source compiles warning-free under -Wall -Wextra.

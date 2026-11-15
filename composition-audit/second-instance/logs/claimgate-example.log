@@ -1,0 +1,67 @@
+  EXCEEDED (record, not judged) series 16 terms / x in [30, 40] outside the claimed region  index=16 x=30  err=7.25981e+09  bound=1e-12  ratio=7.26e+21  ref=9.35762e-14
+  EXCEEDED (record, not judged) series 16 terms / x in [30, 40] outside the claimed region  index=16 x=30.100000000000001  err=7.64011e+09  bound=1e-12  ratio=7.64e+21  ref=8.46713e-14
+  EXCEEDED (record, not judged) series 16 terms / x in [30, 40] outside the claimed region  index=16 x=30.199999999999999  err=8.03896e+09  bound=1e-12  ratio=8.039e+21  ref=7.66137e-14
+  EXCEEDED (record, not judged) series 16 terms / x in [30, 40] outside the claimed region  index=16 x=30.300000000000001  err=8.45718e+09  bound=1e-12  ratio=8.457e+21  ref=6.9323e-14
+  EXCEEDED (record, not judged) series 16 terms / x in [30, 40] outside the claimed region  index=16 x=30.399999999999999  err=8.89564e+09  bound=1e-12  ratio=8.896e+21  ref=6.2726e-14
+
+per lane, per region: delivered error / documented bound
+  lane                     region      points     real  delivered / claimed      max ratio (index, x)      vacuous no value
+  ------------------------------------------------------------------------------------------------------------------------------
+  series 16 terms          x in [0, 1]      101      101  4.5e-14 / 1e-12          0.045 (index=16, x=1)           0        0
+  series 12 terms          x in [0, 0.5]      101      101  4.91e-13 / 1e-10         0.00491 (index=12, x=0.5)        0        0
+  single precision         x in [0, 105]      421       56  1.11e-08 / 1e-06         0.0111 (index=0, x=0.75)      365       71
+  single precision         x in [87, 105] at the floor       73        2  6.81e-46 / 1.18e-38      5.8e-08 (index=0, x=104)       71       71
+  series 16 terms          x in [30, 40] outside the claimed region      101        0  5.94e+11 / 1e-12         5.94e+23 (index=16, x=40)      101        0  record, not judged
+
+  delivered / claimed = |got - ref| and the bound it was judged against, at
+             the worst cell of the sweep; a row whose bound is per-cell shows the
+             pair at that cell, not the registered base bound
+  vacuous  = points where the documented bound is at least as large as the
+             reference value itself, so any returned value in range passes
+  no value = of those, points where the lane returned zero or a subnormal
+
+claims, each with one verdict:
+  a claim the document itself scopes - to a region, a set of indices, a
+  range of arguments - is met over that stated domain and prints the domain
+  with its verdict; a restriction the document states is not the same finding
+  as evidence missing from the tree, and never shares its verdict.
+  every row ends with what would have to be true for its check to fail, so a
+  green row says which reading of it is still open, not only that it passed.
+  a row registered as a record carries no verdict at all.
+  [verified at this revision] series 16 terms / x in [0, 1] - accuracy bound
+      101 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.045 of the bound at (index=16, x=1): delivered 4.502e-14 against 1e-12, 0 cells over the bound; the bound binds on 101 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] series 12 terms / x in [0, 0.5] - accuracy bound
+      101 comparison cells, 0 of them (0.0%) with a bound at least as large as the reference itself; worst 0.00491 of the bound at (index=12, x=0.5): delivered 4.908e-13 against 1e-10, 0 cells over the bound; the bound binds on 101 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [met over the stated domain] domain: the arguments where exp(-x) is larger than the bound, x below about 13.8
+      single precision / x in [0, 105] - accuracy bound
+      421 comparison cells, 365 of them (86.7%) with a bound at least as large as the reference itself, 71 of those returning a value that cannot hold the reference (the largest reference so discarded is 9.982e-39 at index=0, x=87.5); worst 0.0111 of the bound at (index=0, x=0.75): delivered 1.112e-08 against 1e-06, 0 cells over the bound; the bound binds on 56 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [verified at this revision] single precision / x in [87, 105] at the floor - error floor
+      73 comparison cells, 71 of them (97.3%) with a bound at least as large as the reference itself, 71 of those returning a value that cannot hold the reference (the largest reference so discarded is 9.982e-39 at index=0, x=87.5); worst 5.8e-08 of the bound at (index=0, x=104): delivered 6.814e-46 against 1.175e-38, 0 cells over the bound; the bound binds on 2 cells: 0 returned a subnormal, 0 returned zero (the largest reference a zero return discarded is 0), 0 were outside the bound
+      falsified by: a measured row: the sweep would have to deliver a cell over its bound (the row prints its cells, its worst cell and its failure count, so a non-zero failure count is what to look for), or cover none of the domain it names
+  [record, not judged] series 16 terms / x in [30, 40] outside the claimed region - domain of validity
+      101 comparison cells, 101 of them (100.0%) with a bound at least as large as the reference itself; worst 5.94e+23 of the bound at (index=16, x=40): delivered 5.941e+11 against 1e-12, 101 cells over the bound
+      this row's cells are counted in the table above and in the cell totals, but no verdict rests on it
+
+  cells: 797 comparison cells across every lane, region and index, of which 537 (67.4%) carry a bound at least as large as the value itself, so any return in range passes there and the cell cannot discriminate; the no-cell-over-budget statement above is carried by the remaining 260 (32.6%). This is the vacuous column aggregated, not a separate finding, and it is the number to read before reading the green rows
+
+  RESULT: 4 of 4 claims met at this revision (3 verified outright, 1 met over a stated domain, 0 exceeded, 0 vacuous only, 0 evidence absent; neither of the last two counted as met)
+          carried by the 260 of 797 comparison cells (32.6%) that can discriminate: the other 537 carry a bound at least as large as the value itself, so read the two numbers together
+
+rows by property type: a row refutes only what its own kind of question
+reaches
+  type                     claims      met  not met   records       cells  cannot discriminate
+  ----------------------------------------------------------------------------------------------
+  accuracy bound                3        3        0         0         623  365 (58.6%)
+  domain of validity            0        0        0         1         101  101 (100.0%)
+  ordering                      0        0        0         0           0  0 (0.0%)
+  continuity                    0        0        0         0           0  0 (0.0%)
+  reproducibility               0        0        0         0           0  0 (0.0%)
+  error floor                   1        1        0         0          73  71 (97.3%)
+  unclassified                  0        0        0         0           0  0 (0.0%)
+  a type with no rows is a defect class nothing in this book asks about,
+  and a type whose cells cannot discriminate can only see a return out of
+  range: the counts are what each kind of row saw, not what there was to see
+  PASS: every documented claim met at this revision

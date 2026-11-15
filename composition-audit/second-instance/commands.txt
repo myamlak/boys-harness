@@ -1,0 +1,109 @@
+d-second-instance record: commands and exit codes
+date: 2026-11-15T17:25:33Z
+host: MINGW64_NT-10.0-26200 3.6.9-b4195d69.x86_64 x86_64
+claimgate repo: $CLAIMGATE_REPO
+claimgate tag: v0.1.0
+instance root: .
+
+[1] version-git
+  command: git --version
+  cwd: .
+  exit: 0
+
+[2] version-cmake
+  command: cmake --version
+  cwd: .
+  exit: 0
+
+[3] claimgate-status
+  command: git -C '$CLAIMGATE_REPO' status --porcelain
+  cwd: .
+  exit: 0
+
+[4] claimgate-head
+  command: git -C '$CLAIMGATE_REPO' rev-parse HEAD
+  cwd: .
+  exit: 0
+
+[5] claimgate-tag-commit
+  command: git -C '$CLAIMGATE_REPO' rev-parse 'v0.1.0^{commit}'
+  cwd: .
+  exit: 0
+
+[6] claimgate-tag-object
+  command: git -C '$CLAIMGATE_REPO' rev-parse 'v0.1.0'
+  cwd: .
+  exit: 0
+
+[7] clean-snapshot
+  command: rm -rf './src-claimgate-0.1.0'
+  cwd: .
+  exit: 0
+
+[8] clean-build
+  command: rm -rf './build' './install/claimgate-0.1.0' './results'
+  cwd: .
+  exit: 0
+
+[9] make-dirs
+  command: mkdir -p './src-claimgate-0.1.0' './build' './install/claimgate-0.1.0' './results'
+  cwd: .
+  exit: 0
+
+[10] extract-tag
+  command: git -C '$CLAIMGATE_REPO' archive 'v0.1.0' | tar -x -C './src-claimgate-0.1.0'
+  cwd: .
+  exit: 0
+
+[11] claimgate-configure
+  command: cmake -S './src-claimgate-0.1.0' -B './build/claimgate-msvc' -DCMAKE_BUILD_TYPE=Release
+  cwd: .
+  exit: 0
+
+[12] claimgate-build
+  command: cmake --build './build/claimgate-msvc' --config Release
+  cwd: .
+  exit: 0
+
+[13] claimgate-ctest
+  command: ctest --test-dir './build/claimgate-msvc' -C Release --output-on-failure
+  cwd: .
+  exit: 0
+
+[14] claimgate-example
+  command: './build/claimgate-msvc/Release/claimgate-example.exe'
+  cwd: .
+  exit: 0
+
+[15] claimgate-install
+  command: cmake --install './build/claimgate-msvc' --config Release --prefix './install/claimgate-0.1.0'
+  cwd: .
+  exit: 0
+
+[16] instance-configure
+  command: cmake -S '.' -B './build/instance' -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH='./install/claimgate-0.1.0'
+  cwd: .
+  exit: 0
+
+[17] instance-build
+  command: cmake --build './build/instance' --config Release
+  cwd: .
+  exit: 0
+
+[18] instance-run
+  command: './build/instance/Release/instance.exe' all --out './results'
+  cwd: .
+  exit: 0
+
+[19] claimgate-status-after
+  command: git -C '$CLAIMGATE_REPO' status --porcelain
+  cwd: .
+  exit: 0
+
+[20] results-listing
+  command: find './results' -type f -printf '%P %s bytes\n' | sort
+  cwd: .
+  exit: 0
+
+total commands: 20
+failures: 0

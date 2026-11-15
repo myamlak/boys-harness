@@ -1,0 +1,315 @@
+### compiler version
+$ g++ --version
+g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+Copyright (C) 2025 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+exit=0
+
+### kernel
+$ uname -a
+Linux trompek 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+exit=0
+
+### boys annotated tag object
+$ git -C /mnt/c/Users/myaml/dev/_boys-library rev-parse v5.3.2
+058f10f273f37ca3b5769e9f1173c218f38fce6c
+exit=0
+
+### boys tag commit
+$ git -C /mnt/c/Users/myaml/dev/_boys-library rev-parse 'v5.3.2^{commit}'
+6739447d82765ae5f7f68351a99f418cd018dd9a
+exit=0
+
+### boys tag tree
+$ git -C /mnt/c/Users/myaml/dev/_boys-library rev-parse 'v5.3.2^{tree}'
+71be8196d53c31c8ec5d9be2c9fb48453b297c4e
+exit=0
+
+### boys tracked tree vs tag (all paths)
+$ git -C /mnt/c/Users/myaml/dev/_boys-library diff --quiet v5.3.2 && echo 'tracked tree identical to v5.3.2'
+tracked tree identical to v5.3.2
+exit=0
+
+### boys working tree status
+$ git -C /mnt/c/Users/myaml/dev/_boys-library status --porcelain
+?? .api-push/
+?? _check-525.log
+?? _ctest532-debug.log
+?? _ctest532-docs-final.log
+?? _ctest532-docs.log
+?? _ctest532-release.log
+?? _gate-build2.log
+?? _gate-cfg.log
+?? _gate-cfg2.log
+?? _gate-cfg3.log
+?? _gate-check1.log
+?? _gate-check2.log
+?? _gate-check3.log
+?? _gate-run.status
+?? _gate532-docs-2.log
+?? _gate532-docs.log
+?? _probe-526-err.txt
+?? _probe-526-err2.txt
+?? _probe-526-exit.txt
+?? _probe-526-exit2.txt
+?? _probe-526-raw.txt
+?? _probe-526-raw2.txt
+?? _probe-build.log
+?? _probe-cfg.log
+?? _probe-check.log
+?? _probe-rebuild.log
+?? _probe-rebuild2.log
+?? _probe-recfg.log
+?? _probe-run.status
+?? _regen-525.log
+?? _regen.log
+?? _run_regen_525.cmd
+?? probe-records/
+exit=0
+
+### libint2 version
+$ grep -n 'define LIBINT_VERSION' /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/config.h
+30:#define LIBINT_VERSION "2.13.1"
+exit=0
+
+### libint2 checkout kind
+$ if [ -d /mnt/c/Users/myaml/dev/libint-2.13.1/.git ]; then echo 'git checkout'; else echo 'not a git checkout (no .git directory)'; fi
+not a git checkout (no .git directory)
+exit=0
+
+### grid, source and library digests
+$ sha256sum /mnt/c/Users/myaml/dev/_boys-library/tests/data/boys_accuracy_gate_reference.csv /mnt/c/Users/myaml/dev/_boys-library/tests/data/boys_reference.csv /mnt/c/Users/myaml/dev/_boys-library/tools/gen_boys_accuracy_gate_reference.py /mnt/c/Users/myaml/dev/_boys-library/tools/gen_boys_coefficients.py /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/probe/compare_boys_accuracy.cpp /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/checks/compare_grids.py /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/checks/run-all.sh /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/config.h /mnt/c/Users/myaml/dev/libint-2.13.1/inst/lib/libint2.a | tee /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/digests.txt
+a2a667ce4d8bfdba12bd902d76e1e1bc1ee607965ca74d7da6a49aaf2ddcd678  /mnt/c/Users/myaml/dev/_boys-library/tests/data/boys_accuracy_gate_reference.csv
+e25cf343be108c21842f5590aa98cf73d32faa6bf772862cd8afcf39772f17e8  /mnt/c/Users/myaml/dev/_boys-library/tests/data/boys_reference.csv
+ba8a8547ac8286510fce60d30b006aa9490e62ea4229791d51ef94fe1bba1c50  /mnt/c/Users/myaml/dev/_boys-library/tools/gen_boys_accuracy_gate_reference.py
+1d8b88ac30c757138a4c87219d68b56756c175c36230818b2360dc0bf7bdd373  /mnt/c/Users/myaml/dev/_boys-library/tools/gen_boys_coefficients.py
+32023cac3d4d0e5ba9e18f155973a12115c769b7a075023c8a47e2989e953595  /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/probe/compare_boys_accuracy.cpp
+f19043cc4aebcda28f117a4555cc85095087971ecab742ddfd897424304bad1a  /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/checks/compare_grids.py
+951efba19644f3f15f7abae7a38a10f913a97c7b20473a856d97ffd20c8009e2  /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/checks/run-all.sh
+890ab0261a2be2517d3d4cedfd7d07e2a1c6be7b6f057dc7ea2ea418e17067c1  /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h
+e9deda18a73e1722221efb39abc41c87bde4d7b05a313425052afd9f6a699fd6  /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/config.h
+01614c77bdbe46c54819272303eb947d5068a60333b2e4898f1bd2fb3c269597  /mnt/c/Users/myaml/dev/libint-2.13.1/inst/lib/libint2.a
+exit=0
+
+### boys header digests
+$ find /mnt/c/Users/myaml/dev/_boys-library/include/boys -name '*.hpp' -print0 | sort -z | xargs -0 sha256sum | tee -a /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/digests.txt
+57c7b40c50cbbf71a4fd356bd62492672bb3b2eedc9e7693110ce7d0f819dfc5  /mnt/c/Users/myaml/dev/_boys-library/include/boys/accuracy.hpp
+ae121250d918b5ad413030f205262ef6aed845d55688faab9dba231f1d50c762  /mnt/c/Users/myaml/dev/_boys-library/include/boys/backend.hpp
+7df021b424c6dcdcc71a5698617d9c03c5de86188795041a64463a06a5bde4ac  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys.hpp
+ef0e63c63ad91ab34d9b44d2a815fb0be953a6b30f307943db451677f2e2eb97  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_accuracy_here.hpp
+5be0d740b82868cecec305125c8dcd04e4824bd1a14d0b3b6f434c55759c9e87  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_all.hpp
+1d750e9d56485e057920a3da37cadbe59ebc326036fb8dbdfb8cedbda31d61df  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_arguments_lanes.hpp
+7ff344b7b68b32ab8030b99f9ff07b95a0293e4cf018709b03a6490f674643d4  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_backend_simd.hpp
+e372ef9020d53007659bc5fc11cc5a56882f2ce7ef53fd709828d09ed97b8701  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_build_defaults.hpp
+d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients.hpp
+7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_coarse_cheb.hpp
+97d33714d421d93fe50798aad49bcf05fc20fffbaae9de72c6037ff7778a2505  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_coarse_mono.hpp
+4ba32e64ee9152de8ad4ed539b5cd3bfaa84164ee23820fb625e922bff363e4c  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_coarse_rat.hpp
+5af8ec47f5b133ec37b807c01ff769591afeaa55a5f04fa84c1b0cd37f7732b4  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_far.hpp
+17713d76e1382d9bd5e46d326a55ed8d709deaa298e7026ad0dfa47c81a22ecc  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_narrow_cheb.hpp
+b7b90c5d00095786e3e127072a8bd1fd2f7591236471695afb3791dfe156d597  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_narrow_mono.hpp
+24d7692131a068cfbe84fea480dd61cfb6ab74ea60fbe2b4af1d1d8ae49a5b4b  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_narrow_rat.hpp
+28f932bb8f1d7f4d2a693687d5ab685b4765f31a4eab447dbdd9df8698272185  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_uniform_cheb.hpp
+fab92465088ebcc44e83f08cc161a688f699e42f924b264210c7fbaa8d0848b8  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_uniform_cheb_transposed.hpp
+35db563c1aeb28ecf55fee3c5a17209dd9a8a5497de10d5885f2166710393f89  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_uniform_mono.hpp
+b97abda2adba952051e6a87af97c513f70ab25b43aa84772e71f4197aab5b975  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_uniform_mono_transposed.hpp
+28cf0bbf05828f03a82b81670da1ddf566a1797052c33081b78e4fae49f379d5  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_d_uniform_rat.hpp
+619740c19a0caaa905dcb16694dd898ead09e5dc0d2403d5a3939a17cfc8b693  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_f32_coarse_cheb.hpp
+dfb6e1634d76100470a86cd809ff620befecb9514a2543c43b9fcf9f3a6baaaa  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_f32_coarse_mono.hpp
+1780b14f4382ccab07b469b192ae6868be14cdddf83615ab4c2422c022c56e3c  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_f32_coarse_rat.hpp
+06ac9c5ee5fe2bba3ae0ec5a228d412f4e3dccf5c6d41af5cb7e63b48901a6d8  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_f32_narrow_cheb.hpp
+fd227bc0ee723996381272d6ad26ae28622e1066c0d6284bf2f90ff66a7d8d83  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_f32_narrow_mono.hpp
+09fff507f0907fe2836e551886497c6512e31a77986c8f18578ffd6e7c37c331  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_f32_narrow_rat.hpp
+731e119838f2ba6b9d6b91bb99f25164ad000573cebae4e65715fd2e6d5417e6  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_f32_uniform_cheb.hpp
+e59636a52a711b26dd1546f34fabac8d16e17ad50de7aa100664fa8fa549eaac  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_f32_uniform_mono.hpp
+e5090fbe19893682ec7b9c7b983ab3c8090170c3626299e6cbd7e71874f1002d  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_coefficients_f32_uniform_rat.hpp
+d4bc6709354248aa6bcc79a7a4d91545cdfcd4b75de8bdf6575934d803f4666b  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_cuda.hpp
+2ee24a318cbea459c24dc708da2a6d72ca81bc8a818f33ee35002ac88499284d  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_cuda_arithmetic.hpp
+78905861728a90ae632f52bcee0c2b071187cfb4be5cb84be05f268af4178c9e  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_cuda_device.hpp
+664c716b422bf18185243e64832d39e8edd25ec2b754ee2f9d4916ca81271be4  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_cuda_launch.hpp
+6fb0d300629adacda0fd51978cc4ca566521137d7dacf1edc8ff5e0f12a7a63d  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_cuda_muladd.hpp
+d16dce5a29d93eea6ce419d66d88528af64338e40d2b0ecde2cf9fd5c3e84bed  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_cuda_options.hpp
+aad6d345788e824c60e637b335589fc11c5421656417825431e2812dc159b42c  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_cuda_policy.hpp
+6e3c0eb667e58980883f7e72f0a2729cda702cb4476c8d1a5a00736472827866  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_cuda_probe.hpp
+1c15d22a7cd09f2b52d4eeca4829fe09993766a6071862d4c5bd32464b56f862  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_decl.hpp
+74388aeabc3754d5506f7ff89134fe0da0dab3d5016f607b21f5ddef029b66b1  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_default_tables.hpp
+058e6b66cf68ed4412a163f8f6875e93da37bb7f98df3be373ea17eeb4f750ea  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_device_tables.hpp
+32eef040a83bd59c77e975f15d5f30f0c85dd68148842726f9f03f2e4e34d66b  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_effective_degrees.hpp
+a38477d09fa892cccd59ab3b709870b5fcb1f4f5884b0d23a8e6b82f7c1a0a6e  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_fit32.hpp
+1461322534274e1c1c8e82b7cec7deb956161a6e2c492f5d91a03881868fcce9  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_fit_chebyshev.hpp
+71861ec3f857acebe5257444ef4b0e49ec01645d3a9dfff034c82311ae90897e  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_fit_core.hpp
+66ad9630f2362ee89c4c83129017f5e8d1fa8d133b2efddd096ad82fc3330773  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_fit_rational.hpp
+4719e11f65c3c5bf09732c1df45bcd1ca676a1da3c7635b2e6f96c78f6b4e59f  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_fit_uniform.hpp
+8ae70fbdc9b42d8a52bb19badacd3379155454036d5dd700f86ba59c64c0d43d  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_flat_grid.hpp
+05ac06e00b33fdb019bb48940634c4aea9da8a162acfdc611645ba25ebb105b5  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_impl.hpp
+6e40fcd69797d398ff69b03c42d29727693e5ecd0d8dec2877f8542d45710a46  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_orders_lanes.hpp
+8141bb577ab12d58dd9e74f433e9422ab6143af47241ed4df2511822387cb467  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_probe.hpp
+d0b05554d34dd695aaa3ae6dd500a623ae284429212c8b1a28de014e556194d4  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_span.hpp
+d6351fcf238309cccf97780364acb7a09620fadda7a3830eafb344956a5de602  /mnt/c/Users/myaml/dev/_boys-library/include/boys/boys_transform.hpp
+f30dfa5f9ba90ed0fb86d7ba9eaea61cf6d09e169a3d6901b99521c7745ed781  /mnt/c/Users/myaml/dev/_boys-library/include/boys/dependent_false.hpp
+e13fd05586aa73c8cb3da44d12ee55462dbfe5c3b1acaefd700185fba87fd3df  /mnt/c/Users/myaml/dev/_boys-library/include/boys/f16.hpp
+ef8646b1b73a2e37e647beb2e4a3b0f43f3d636787e459fb4be75403d179ff91  /mnt/c/Users/myaml/dev/_boys-library/include/boys/half2.hpp
+fb86c9e7ae793e32a8dee31ea4c48c8c93f2ede00df9ec62659506e7d47e4772  /mnt/c/Users/myaml/dev/_boys-library/include/boys/isa_tiers.hpp
+f3377544732eb39b30b4a98e4c3de006fb6f66d7aaadcde2c29b96df3603fccb  /mnt/c/Users/myaml/dev/_boys-library/include/boys/kernels.hpp
+7d2c49c10e01ad3b78c564cbb346a1b870ca64f351d2ba31df0de0d9a60e2f4b  /mnt/c/Users/myaml/dev/_boys-library/include/boys/policy.hpp
+2043500fdaa01f3ed411ce188d5ec89946108a4fe9e6fa0ed839e89e66759df7  /mnt/c/Users/myaml/dev/_boys-library/include/boys/status.hpp
+e2a1a783004191cd76bfc952f56d3a2bece49935722c54fb8aee64553c89b27e  /mnt/c/Users/myaml/dev/_boys-library/include/boys/version.hpp
+exit=0
+
+### compile probe
+$ g++ -std=c++20 -O2 -mavx2 -mfma -Wall -Wextra -I /mnt/c/Users/myaml/dev/_boys-library/include -I /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/probe/compare_boys_accuracy.cpp /mnt/c/Users/myaml/dev/libint-2.13.1/inst/lib/libint2.a -o /mnt/c/Users/myaml/dev/_b-accuracy-compare/bin/compare_boys_accuracy 2> /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/build-warnings.txt
+exit=0
+
+### build warnings (all from libint2 headers)
+$ cat /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/build-warnings.txt
+In file included from /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/initialize.h:31,
+                 from /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h:57,
+                 from /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/probe/compare_boys_accuracy.cpp:32:
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/shgshell_ordering.h: In function ‘int libint2::INT_SOLIDHARMINDEX_GAUSSIAN(int, int)’:
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/shgshell_ordering.h:65:44: warning: unused parameter ‘l’ [-Wunused-parameter]
+   65 | inline int INT_SOLIDHARMINDEX_GAUSSIAN(int l, int m) {
+      |                                        ~~~~^
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h: In instantiation of ‘libint2::FmEval_Chebyshev7<Real>::FmEval_Chebyshev7(int, double) [with Real = double]’:
+/mnt/c/Users/myaml/dev/_b-accuracy-compare/record/probe/compare_boys_accuracy.cpp:360:59:   required from here
+  360 |     libint2::FmEval_Chebyshev7<double> chebyshev(kMaxOrder);
+      |                                                           ^
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h:305:14: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const std::size_t’ {aka ‘const long unsigned int’} [-Wsign-compare]
+  305 |     if (mmax > cheb_table_mmax)
+      |         ~~~~~^~~~~~~~~~~~~~~~~
+In file included from /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2.h:44,
+                 from /mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/initialize.h:29:
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/numeric.h: In instantiation of ‘Real libint2::get_epsilon(const Real&) [with Real = double]’:
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h:173:37:   required from ‘static Real libint2::FmEval_Reference<Real>::eval(Real, size_t) [with Real = double; size_t = long unsigned int]’
+  173 |     const Real epsilon = get_epsilon(T);
+      |                          ~~~~~~~~~~~^~~
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h:198:52:   required from ‘static void libint2::FmEval_Reference<Real>::eval(Real*, Real, size_t) [with Real = double; size_t = long unsigned int]’
+  198 |     for (size_t m = 0; m <= mmax; ++m) Fm[m] = eval(T, m);
+      |                                                ~~~~^~~~~~
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/boys.h:233:35:   required from ‘static void libint2::FmEval_Reference2<Real>::eval(Real*, Real, size_t) [with Real = double; size_t = long unsigned int]’
+  233 |       FmEval_Reference<Real>::eval(Fm, t, mmax);
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/mnt/c/Users/myaml/dev/_b-accuracy-compare/record/probe/compare_boys_accuracy.cpp:381:49:   required from here
+  381 |         libint2::FmEval_Reference2<double>::eval(ref2_values.data(), g.x, kMaxOrder);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/c/Users/myaml/dev/libint-2.13.1/inst/include/libint2/numeric.h:181:37: warning: unused parameter ‘value’ [-Wunused-parameter]
+  181 | inline Real get_epsilon(const Real& value) {
+      |                         ~~~~~~~~~~~~^~~~~
+exit=0
+
+### probe binary digest
+$ sha256sum /mnt/c/Users/myaml/dev/_b-accuracy-compare/bin/compare_boys_accuracy | tee -a /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/digests.txt
+77ea2662d69db06294b5096928c5910fba8a58a1f7644238650ef16d7ecb0df9  /mnt/c/Users/myaml/dev/_b-accuracy-compare/bin/compare_boys_accuracy
+exit=0
+
+### gate grid run
+$ /mnt/c/Users/myaml/dev/_b-accuracy-compare/bin/compare_boys_accuracy /mnt/c/Users/myaml/dev/_boys-library/tests/data/boys_accuracy_gate_reference.csv boys_accuracy_gate_25digit > /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-gate.txt 2> /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-gate.err
+exit=0
+
+### gate grid output
+$ cat /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-gate.txt
+# grid: /mnt/c/Users/myaml/dev/_boys-library/tests/data/boys_accuracy_gate_reference.csv
+# grid label: boys_accuracy_gate_25digit
+# rows: 59301 | unique x: 1797 | orders: 0..32
+# boys single vs batch differing cells: 0
+# contract domain: reference value >= DBL_MIN (2.2250738585072014e-308)
+# columns: grid, impl, rows, contract_cells, below_double_min, ref_underflow, meet_contract, over_contract, meet_all_rows, non_finite, zero_forbidden, zero_within_bound, worst_abs_err, worst_abs_n, worst_abs_x, worst_abs_ref, worst_abs_value, worst_bound_ratio, worst_ratio_n, worst_ratio_x, worst_ratio_ref, worst_ratio_value, worst_rel_err, worst_rel_n, worst_rel_x, worst_rel_ref, worst_rel_value, documented_bound, worst_over_documented_bound, documented_bound_cells_met
+boys_accuracy_gate_25digit	boys_v5.3.2_double_single_BoysAllOrders	59301	55524	3777	0	55524	0	59301	0	0	27	4.58123210837777886e-15	32	31.000000000000004	3.282257529495611860821142e-15	7.8634896378733907e-15	2.87818166412031916e-01	32	31.000000000000004	3.282257529495611860821142e-15	7.8634896378733907e-15	1.39575644726505719e+00	32	31.000000000000004	3.282257529495611860821142e-15	7.8634896378733907e-15	max(1e-13*F_n(x),1e-13*F_0(x)) = 1e-13*F_0(x)	2.87818166412031916e-01	55524
+boys_accuracy_gate_25digit	boys_v5.3.2_double_batch_BoysAllN	59301	55524	3777	0	55524	0	59301	0	0	27	4.58123210837777886e-15	32	31.000000000000004	3.282257529495611860821142e-15	7.8634896378733907e-15	2.87818166412031916e-01	32	31.000000000000004	3.282257529495611860821142e-15	7.8634896378733907e-15	1.39575644726505719e+00	32	31.000000000000004	3.282257529495611860821142e-15	7.8634896378733907e-15	max(1e-13*F_n(x),1e-13*F_0(x)) = 1e-13*F_0(x)	2.87818166412031916e-01	55524
+boys_accuracy_gate_25digit	libint2_2.13.1_FmEval_Chebyshev7_double	59301	55524	3777	0	55524	0	59301	0	0	0	2.04805790382511788e-16	0	1.0855252345349331	0.7309793287682191559884870	0.73097932876821936	3.12991801621122375e-03	0	30.533267103528054	0.1603829887111368532707671	0.1603829887111369	4.07817658338993590e-15	32	63712	1.689196302637218061487504e-122	1.689196302637225e-122	none published		
+boys_accuracy_gate_25digit	libint2_2.13.1_FmEval_Reference2_double	59301	55524	3777	0	55524	0	59301	0	0	0	4.01317434145509466e-16	0	0.60468855346576822	0.8303001937001949900246056	0.83030019370019459	2.29869447279869955e-02	0	91.114726965318596	0.09284331776826041689692874	0.09284331776826063	2.37451620210585933e-15	16	102.47050196267885	1.734826240397750818400200e-21	1.7348262403977467e-21	header statement: absolute precision ~ 1*DBL_EPSILON for m<=40	1.80737304687499998e+00	55478
+# worst cells
+# boys single worst_abs n=32 x=31.000000000000004 ref=3.282257529495611860821142e-15 value=7.8634896378733907e-15 abs_err=4.58123210837777886e-15 rel_err=1.39575644726505719e+00 bound=1.59171054610202172e-14 err_over_bound=2.87818166412031916e-01
+# boys single worst_ratio n=32 x=31.000000000000004 ref=3.282257529495611860821142e-15 value=7.8634896378733907e-15 abs_err=4.58123210837777886e-15 rel_err=1.39575644726505719e+00 bound=1.59171054610202172e-14 err_over_bound=2.87818166412031916e-01
+# boys single worst_rel n=32 x=31.000000000000004 ref=3.282257529495611860821142e-15 value=7.8634896378733907e-15 abs_err=4.58123210837777886e-15 rel_err=1.39575644726505719e+00 bound=1.59171054610202172e-14 err_over_bound=2.87818166412031916e-01
+# boys batch worst_abs n=32 x=31.000000000000004 ref=3.282257529495611860821142e-15 value=7.8634896378733907e-15 abs_err=4.58123210837777886e-15 rel_err=1.39575644726505719e+00 bound=1.59171054610202172e-14 err_over_bound=2.87818166412031916e-01
+# boys batch worst_ratio n=32 x=31.000000000000004 ref=3.282257529495611860821142e-15 value=7.8634896378733907e-15 abs_err=4.58123210837777886e-15 rel_err=1.39575644726505719e+00 bound=1.59171054610202172e-14 err_over_bound=2.87818166412031916e-01
+# boys batch worst_rel n=32 x=31.000000000000004 ref=3.282257529495611860821142e-15 value=7.8634896378733907e-15 abs_err=4.58123210837777886e-15 rel_err=1.39575644726505719e+00 bound=1.59171054610202172e-14 err_over_bound=2.87818166412031916e-01
+# cheb7 worst_abs n=0 x=1.0855252345349331 ref=0.7309793287682191559884870 value=0.73097932876821936 abs_err=2.04805790382511788e-16 rel_err=2.80180002802038394e-16 bound=7.30979328768219156e-14 err_over_bound=2.80180002802038394e-03
+# cheb7 worst_ratio_to_boys_contract n=0 x=30.533267103528054 ref=0.1603829887111368532707671 value=0.1603829887111369 abs_err=5.01985605860788553e-17 rel_err=3.12991801621122375e-16 bound=1.60382988711136853e-14 err_over_bound=3.12991801621122375e-03
+# cheb7 worst_rel n=32 x=63712 ref=1.689196302637218061487504e-122 value=1.689196302637225e-122 abs_err=6.88884080616396212e-137 rel_err=4.07817658338993590e-15 bound=3.51102823111173746e-16 err_over_bound=1.96205793651014558e-121
+# ref2 worst_abs n=0 x=0.60468855346576822 ref=0.8303001937001949900246056 value=0.83030019370019459 abs_err=4.01317434145509466e-16 rel_err=4.83340166834186323e-16 bound=8.30300193700194990e-14 err_over_bound=4.83340166834186323e-03
+# ref2 worst_ratio_to_boys_contract n=0 x=91.114726965318596 ref=0.09284331776826041689692874 value=0.09284331776826063 abs_err=2.13418421390193513e-16 rel_err=2.29869447279869955e-15 bound=9.28433177682604169e-15 err_over_bound=2.29869447279869955e-02
+# ref2 worst_rel n=16 x=102.47050196267885 ref=1.734826240397750818400200e-21 value=1.7348262403977467e-21 abs_err=4.11937301566285379e-36 rel_err=2.37451620210585933e-15 bound=8.75478547798695545e-15 err_over_bound=4.70528150120937962e-22
+# reference cells below the double floor: 3777 (of which long-double-underflow: 0)
+exit=0
+
+### 45-digit grid run
+$ /mnt/c/Users/myaml/dev/_b-accuracy-compare/bin/compare_boys_accuracy /mnt/c/Users/myaml/dev/_boys-library/tests/data/boys_reference.csv boys_reference_45digit > /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-45digit.txt 2> /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-45digit.err
+exit=0
+
+### 45-digit grid output
+$ cat /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-45digit.txt
+# grid: /mnt/c/Users/myaml/dev/_boys-library/tests/data/boys_reference.csv
+# grid label: boys_reference_45digit
+# rows: 2904 | unique x: 88 | orders: 0..32
+# boys single vs batch differing cells: 0
+# contract domain: reference value >= DBL_MIN (2.2250738585072014e-308)
+# columns: grid, impl, rows, contract_cells, below_double_min, ref_underflow, meet_contract, over_contract, meet_all_rows, non_finite, zero_forbidden, zero_within_bound, worst_abs_err, worst_abs_n, worst_abs_x, worst_abs_ref, worst_abs_value, worst_bound_ratio, worst_ratio_n, worst_ratio_x, worst_ratio_ref, worst_ratio_value, worst_rel_err, worst_rel_n, worst_rel_x, worst_rel_ref, worst_rel_value, documented_bound, worst_over_documented_bound, documented_bound_cells_met
+boys_reference_45digit	boys_v5.3.2_double_single_BoysAllOrders	2904	2904	0	0	2904	0	2904	0	0	0	3.09707771581346769e-15	0	0.0042169650342858229	0.998596121483982035904546100370479160214303771	0.99859612148398513	3.10143174921508677e-02	0	0.0042169650342858229	0.998596121483982035904546100370479160214303771	0.99859612148398513	7.92370225064802444e-01	32	33	5.75095013067449296813715442923034843008278943e-16	1.0307831780053496e-15	max(1e-13*F_n(x),1e-13*F_0(x)) = 1e-13*F_0(x)	3.10143174921508677e-02	2904
+boys_reference_45digit	boys_v5.3.2_double_batch_BoysAllN	2904	2904	0	0	2904	0	2904	0	0	0	3.09707771581346769e-15	0	0.0042169650342858229	0.998596121483982035904546100370479160214303771	0.99859612148398513	3.10143174921508677e-02	0	0.0042169650342858229	0.998596121483982035904546100370479160214303771	0.99859612148398513	7.92370225064802444e-01	32	33	5.75095013067449296813715442923034843008278943e-16	1.0307831780053496e-15	max(1e-13*F_n(x),1e-13*F_0(x)) = 1e-13*F_0(x)	3.10143174921508677e-02	2904
+boys_reference_45digit	libint2_2.13.1_FmEval_Chebyshev7_double	2904	2904	0	0	2904	0	2904	0	0	0	1.50866732301357942e-16	0	0.0026101572156825366	0.999130628463656482850440993365955254004083096	0.99913062846365663	2.09883178494018978e-03	0	2.1544346900318838	0.58088759266369350808061959189024542156074535	0.58088759266369339	2.09580500310460900e-15	31	61.896581889126054	2.6856939560746525561552578939294437952092625e-24	2.6856939560746582e-24	none published		
+boys_reference_45digit	libint2_2.13.1_FmEval_Reference2_double	2904	2904	0	0	2904	0	2904	0	0	0	3.38162657598228833e-16	0	2.0152977053351142	0.596380204378119232542693601008265755514783989	0.59638020437811889	9.51824840167965945e-03	0	29	0.164568208623554517073455394070547031919066632	0.16456820862355467	1.21784123282962114e-15	9	61.896581889126054	0.000000000000568525138652479392619263416923855952044111652	5.685251386524787e-13	header statement: absolute precision ~ 1*DBL_EPSILON for m<=40	1.52294921874999999e+00	2903
+# worst cells
+# boys single worst_abs n=0 x=0.0042169650342858229 ref=0.998596121483982035904546100370479160214303771 value=0.99859612148398513 abs_err=3.09707771581346769e-15 rel_err=3.10143174921508677e-15 bound=9.98596121483982036e-14 err_over_bound=3.10143174921508677e-02
+# boys single worst_ratio n=0 x=0.0042169650342858229 ref=0.998596121483982035904546100370479160214303771 value=0.99859612148398513 abs_err=3.09707771581346769e-15 rel_err=3.10143174921508677e-15 bound=9.98596121483982036e-14 err_over_bound=3.10143174921508677e-02
+# boys single worst_rel n=32 x=33 ref=5.75095013067449296813715442923034843008278943e-16 value=1.0307831780053496e-15 abs_err=4.55688164937900302e-16 rel_err=7.92370225064802444e-01 bound=1.54272305827641016e-14 err_over_bound=2.95379110653219080e-02
+# boys batch worst_abs n=0 x=0.0042169650342858229 ref=0.998596121483982035904546100370479160214303771 value=0.99859612148398513 abs_err=3.09707771581346769e-15 rel_err=3.10143174921508677e-15 bound=9.98596121483982036e-14 err_over_bound=3.10143174921508677e-02
+# boys batch worst_ratio n=0 x=0.0042169650342858229 ref=0.998596121483982035904546100370479160214303771 value=0.99859612148398513 abs_err=3.09707771581346769e-15 rel_err=3.10143174921508677e-15 bound=9.98596121483982036e-14 err_over_bound=3.10143174921508677e-02
+# boys batch worst_rel n=32 x=33 ref=5.75095013067449296813715442923034843008278943e-16 value=1.0307831780053496e-15 abs_err=4.55688164937900302e-16 rel_err=7.92370225064802444e-01 bound=1.54272305827641016e-14 err_over_bound=2.95379110653219080e-02
+# cheb7 worst_abs n=0 x=0.0026101572156825366 ref=0.999130628463656482850440993365955254004083096 value=0.99913062846365663 abs_err=1.50866732301357942e-16 rel_err=1.50998005669531670e-16 bound=9.99130628463656483e-14 err_over_bound=1.50998005669531670e-03
+# cheb7 worst_ratio_to_boys_contract n=0 x=2.1544346900318838 ref=0.58088759266369350808061959189024542156074535 value=0.58088759266369339 abs_err=1.21918534295994974e-16 rel_err=2.09883178494018978e-16 bound=5.80887592663693508e-14 err_over_bound=2.09883178494018978e-03
+# cheb7 worst_rel n=31 x=61.896581889126054 ref=2.6856939560746525561552578939294437952092625e-24 value=2.6856939560746582e-24 abs_err=5.62869082994906682e-39 rel_err=2.09580500310460900e-15 bound=1.12644919073302502e-14 err_over_bound=4.99684395555049862e-25
+# ref2 worst_abs n=0 x=2.0152977053351142 ref=0.596380204378119232542693601008265755514783989 value=0.59638020437811889 abs_err=3.38162657598228833e-16 rel_err=5.67025288759963042e-16 bound=5.96380204378119233e-14 err_over_bound=5.67025288759963042e-03
+# ref2 worst_ratio_to_boys_contract n=0 x=29 ref=0.164568208623554517073455394070547031919066632 value=0.16456820862355467 abs_err=1.56640108869843253e-16 rel_err=9.51824840167965945e-16 bound=1.64568208623554517e-14 err_over_bound=9.51824840167965945e-03
+# ref2 worst_rel n=9 x=61.896581889126054 ref=0.000000000000568525138652479392619263416923855952044111652 value=5.685251386524787e-13 abs_err=6.92373355751166799e-28 rel_err=1.21784123282962114e-15 bound=1.12644919073302502e-14 err_over_bound=6.14651207925864890e-14
+# reference cells below the double floor: 0 (of which long-double-underflow: 0)
+exit=0
+
+### probe stderr (both runs; empty means no parse or domain errors)
+$ cat /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-gate.err /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-45digit.err
+exit=0
+
+### grid cross-check
+$ python3 /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/checks/compare_grids.py > /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/grid-crosscheck.txt 2> /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/grid-crosscheck.err
+exit=0
+
+### grid cross-check output
+$ cat /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/grid-crosscheck.txt
+gate grid cells:      59301
+45-digit grid cells:  2904
+common (n, x) cells:  1254
+worst absolute diff:  4.968E-26 at n=3, x=0.011006941712522096
+worst relative diff:  4.941E-25 at n=22, x=0.8254041852680184
+verdict: AGREE within 1e-20 relative
+exit=0
+
+### extract TSV header from probe output
+$ sed -n 's/^# columns: //p' /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-gate.txt | sed 's/, /\t/g' > /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/results-header.tsv
+exit=0
+
+### extract gate grid rows
+$ grep -v '^#' /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-gate.txt > /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/rows-gate.tsv
+exit=0
+
+### extract 45-digit grid rows
+$ grep -v '^#' /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-45digit.txt > /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/rows-45digit.tsv
+exit=0
+
+### assemble results-gate-grid.tsv
+$ cat /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/results-header.tsv /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/rows-gate.tsv > /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/results-gate-grid.tsv
+exit=0
+
+### assemble results-45digit-grid.tsv
+$ cat /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/results-header.tsv /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/rows-45digit.tsv > /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/results-45digit-grid.tsv
+exit=0
+
+### assemble results-all.tsv
+$ cat /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/results-header.tsv /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/rows-gate.tsv /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/rows-45digit.tsv > /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/results-all.tsv
+exit=0
+
+### copy raw outputs into record
+$ cp /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-gate.txt /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/raw-gate-grid.txt && cp /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/run-45digit.txt /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/raw-45digit-grid.txt && cp /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/build-warnings.txt /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/build-warnings.txt && cp /mnt/c/Users/myaml/dev/_b-accuracy-compare/logs/grid-crosscheck.txt /mnt/c/Users/myaml/dev/_b-accuracy-compare/record/grid-crosscheck.txt
+exit=0
+
