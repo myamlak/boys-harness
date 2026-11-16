@@ -1,18 +1,20 @@
 # Reproduction manifest
 
-Harness release `v1.0.39` (`VERSION`). Kernel release boys `v5.3.2`. This file
+Harness release `v1.0.40` (`VERSION`). Kernel release boys `v5.3.2`. This file
 names, for Papers A, B, C and D, the commands that reproduce or verify each
 deposited record, the environment each record was made in, which records are
 reproduced and which are only re-serialised, and what the deposit does not
 carry.
 
-The papers cite harness `v1.0.39` at submission; the tag is cut from the merge
-commit. This release adds the exact-tag replay at
+The papers cite harness `v1.0.40` at submission; the tag is cut from the merge
+commit. The release carries the `v1.0.39` records — the exact-tag replay at
 `boys-crossover/exact-tag-replay-v5.3.2/`, the Paper A interval/enclosure
 record at `amplification-sweeps/interval-enclosure/`, the Paper B libint2
 comparison at `accuracy-claim-audit/comparison-libint2/`, and Paper D's
-second fractional-design instance at `composition-audit/second-instance/`.
-The recorded values carried from `v1.0.38` are unchanged.
+second fractional-design instance at `composition-audit/second-instance/` —
+and adds no new measurement: it corrects the witness-rerun manifest to hash
+the committed bytes and maps the synthetic record to its deposited script.
+The recorded values carried from `v1.0.39` are unchanged.
 
 ## Paths
 
@@ -22,7 +24,7 @@ the tag checkouts:
 
 ```sh
 git clone --branch v5.3.2 https://github.com/myamlak/boys.git boys
-git clone --branch v1.0.39 https://github.com/myamlak/boys-harness.git boys-harness  # (cut after this deposit merges)
+git clone --branch v1.0.40 https://github.com/myamlak/boys-harness.git boys-harness  # (cut after this deposit merges)
 cd boys-harness
 git -C ../boys worktree add ../boys-v5.1.1 v5.1.1
 git -C ../boys worktree add ../boys-v5.2.5 v5.2.5
@@ -55,7 +57,7 @@ deposit must stay unchanged.
 
 | Item | Value |
 | --- | --- |
-| Harness | tag `v1.0.39`, `VERSION` 1.0.39. The tag is annotated and names the release commit. A file inside that commit cannot carry the tag object that points to it: resolve the tag object, commit and tree with `git rev-parse v1.0.39`, `git rev-parse 'v1.0.39^{}'` and `git rev-parse 'v1.0.39^{tree}'`. The preceding release, `v1.0.38`, is tag object `03ad030ee08c33124ab54b79b604a3272502b92c`, commit `0342a9734c0f34011ad09813deff31a35ceb9346`, tree `28cd4851252ca05928d21561b1b8bfd18b29d2e7`. |
+| Harness | tag `v1.0.40`, `VERSION` 1.0.40. The tag is annotated and names the release commit. A file inside that commit cannot carry the tag object that points to it: resolve the tag object, commit and tree with `git rev-parse v1.0.40`, `git rev-parse 'v1.0.40^{}'` and `git rev-parse 'v1.0.40^{tree}'`. The preceding release, `v1.0.39`, is tag object `85856bbe49cee5a915c86ea0fa07bcd7f1e4a399`, commit `309cf873d04e3466bf072b2b19bb8ee9718d4546`, tree `a31b26b05aa60d8a97743b4234e039e92607c463`. |
 | Kernel | boys `v5.3.2`, tag object `058f10f273f37ca3b5769e9f1173c218f38fce6c`, commit `6739447d82765ae5f7f68351a99f418cd018dd9a`, tree `71be8196d53c31c8ec5d9be2c9fb48453b297c4e` |
 | Earlier kernel revisions named by records | v5.0.0 (first and second sweeps, bridge provenance); v5.1.1 (9,353-argument record, seed-spliced, held-out, Chebyshev recount); v5.2.5 and v5.2.6 (certificate; Paper C core and sensitivity sweeps); v5.3.1 (exact-tag replay, accuracy gate, coefficient identity, and the release the earlier paper tags named) |
 
