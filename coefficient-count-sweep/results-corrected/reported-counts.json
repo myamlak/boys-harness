@@ -1,0 +1,3649 @@
+{
+ "schema": "qcx-paper-c-reported-counts/v1",
+ "generated_utc": "2026-11-15T22:09:11Z",
+ "definition": "Reported stored coefficient count: the nominal count (m+1)+k of the recorded pair when that truncation meets the cell target on both the 2,001-node certifying and 4,001-node checking grids under both the 60-digit and binary64 evaluations (mode 'nominal', 40 cells); otherwise the nominal count of a genuine re-solve at the control's count count60 whose truncation meets the target on both grids under binary64 or 60-digit evaluation (mode 'genuine', 1 cell); otherwise the full stored witness len(P)+len(Q)-1 of the recorded pair, whose nominal truncation does not meet the target and for which no genuine re-solve exists at count60 (mode 'full', 4 cells). Each stored coefficient counts once; a cell's pair is the pair that meets.",
+ "source": {
+  "record": "results-corrected/corrected-counts-60dig.json",
+  "sha256": "18a41a42798f0cd1fead4a143309ded3112d1bba94727b093bf27df02e3256e7",
+  "audit_generated_utc": "2026-11-15T22:09:11Z",
+  "harness_tag": "v1.0.39",
+  "harness_commit": "309cf873d04e3466bf072b2b19bb8ee9718d4546"
+ },
+ "cells": [
+  {
+   "index": 0,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 0.0078125,
+   "width_name": "m7",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    2,
+    1
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    2,
+    1
+   ],
+   "delivered_2001": 4.322935549356055e-16,
+   "delivered_4001": 4.322935549356055e-16,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    2,
+    1
+   ],
+   "below_ratio": 2.740515463927423,
+   "best_below": 2.740515463927423e-13,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 1,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 0.015625,
+   "width_name": "m6",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    2,
+    1
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    2,
+    1
+   ],
+   "delivered_2001": 6.48586768307562e-16,
+   "delivered_4001": 6.486532225040158e-16,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    2,
+    1
+   ],
+   "below_ratio": 21.889887670090378,
+   "best_below": 2.188988767009038e-12,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 2,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 0.03125,
+   "width_name": "m5",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    1,
+    2
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    1,
+    2
+   ],
+   "delivered_2001": 3.2411395218953035e-15,
+   "delivered_4001": 3.2411427136235106e-15,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    1,
+    2
+   ],
+   "below_ratio": 174.82495994030782,
+   "best_below": 1.7482495994030784e-11,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 3,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 0.0625,
+   "width_name": "m4",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    1,
+    2
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    1,
+    2
+   ],
+   "delivered_2001": 4.2999117657144365e-14,
+   "delivered_4001": 4.2999117657144365e-14,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    1,
+    2
+   ],
+   "below_ratio": 1394.1690731500487,
+   "best_below": 1.3941690731500488e-10,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 4,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 0.125,
+   "width_name": "m3",
+   "nominal_count": 5,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    2,
+    2
+   ],
+   "count_mode": "nominal",
+   "reported_count": 5,
+   "reported_pair": [
+    2,
+    2
+   ],
+   "delivered_2001": 6.514101251292658e-16,
+   "delivered_4001": 6.514101251292658e-16,
+   "count60": 5,
+   "genuine_pairs_64": [
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 5,
+   "pair": [
+    2,
+    2
+   ],
+   "below_ratio": 6.757335977027558,
+   "best_below": 6.757335977027558e-13,
+   "best_below_pair": [
+    1,
+    2
+   ]
+  },
+  {
+   "index": 5,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 0.25,
+   "width_name": "m2",
+   "nominal_count": 5,
+   "full_count": 7,
+   "chebyshev_count": 6,
+   "recorded_pair": [
+    1,
+    3
+   ],
+   "count_mode": "nominal",
+   "reported_count": 5,
+   "reported_pair": [
+    1,
+    3
+   ],
+   "delivered_2001": 1.4909241800718397e-14,
+   "delivered_4001": 1.4909241800718397e-14,
+   "count60": 5,
+   "genuine_pairs_64": [
+    [
+     1,
+     3
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     3
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 5,
+   "pair": [
+    1,
+    3
+   ],
+   "below_ratio": 106.50761960222012,
+   "best_below": 1.0650761960222013e-11,
+   "best_below_pair": [
+    1,
+    2
+   ]
+  },
+  {
+   "index": 6,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 0.5,
+   "width_name": "m1",
+   "nominal_count": 6,
+   "full_count": 9,
+   "chebyshev_count": 7,
+   "recorded_pair": [
+    1,
+    4
+   ],
+   "count_mode": "nominal",
+   "reported_count": 6,
+   "reported_pair": [
+    1,
+    4
+   ],
+   "delivered_2001": 6.560721252534133e-16,
+   "delivered_4001": 6.561629422713387e-16,
+   "count60": 6,
+   "genuine_pairs_64": [
+    [
+     1,
+     4
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     4
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 6,
+   "pair": [
+    1,
+    4
+   ],
+   "below_ratio": 2.5718302698045217,
+   "best_below": 2.571830269804522e-13,
+   "best_below_pair": [
+    2,
+    2
+   ]
+  },
+  {
+   "index": 7,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 1.0,
+   "width_name": "p0",
+   "nominal_count": 6,
+   "full_count": 9,
+   "chebyshev_count": 8,
+   "recorded_pair": [
+    1,
+    4
+   ],
+   "count_mode": "nominal",
+   "reported_count": 6,
+   "reported_pair": [
+    1,
+    4
+   ],
+   "delivered_2001": 6.26633471540377e-15,
+   "delivered_4001": 6.26633471540377e-15,
+   "count60": 6,
+   "genuine_pairs_64": [
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 6,
+   "pair": [
+    1,
+    4
+   ],
+   "below_ratio": 82.47235023307061,
+   "best_below": 8.247235023307062e-12,
+   "best_below_pair": [
+    2,
+    2
+   ]
+  },
+  {
+   "index": 8,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 2.0,
+   "width_name": "p1",
+   "nominal_count": 7,
+   "full_count": 11,
+   "chebyshev_count": 9,
+   "recorded_pair": [
+    5,
+    1
+   ],
+   "count_mode": "nominal",
+   "reported_count": 7,
+   "reported_pair": [
+    5,
+    1
+   ],
+   "delivered_2001": 6.970833590794224e-14,
+   "delivered_4001": 6.970833590794224e-14,
+   "count60": 7,
+   "genuine_pairs_64": [
+    [
+     5,
+     1
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     5,
+     1
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 7,
+   "pair": [
+    5,
+    1
+   ],
+   "below_ratio": 12.08861644313109,
+   "best_below": 1.208861644313109e-12,
+   "best_below_pair": [
+    3,
+    2
+   ]
+  },
+  {
+   "index": 9,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 4.0,
+   "width_name": "p2",
+   "nominal_count": 9,
+   "full_count": 9,
+   "chebyshev_count": 11,
+   "recorded_pair": [
+    4,
+    4
+   ],
+   "count_mode": "nominal",
+   "reported_count": 9,
+   "reported_pair": [
+    4,
+    4
+   ],
+   "delivered_2001": 2.274978462259457e-14,
+   "delivered_4001": 2.2751950360068858e-14,
+   "count60": 9,
+   "genuine_pairs_64": [
+    [
+     4,
+     4
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     4,
+     4
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 9,
+   "pair": [
+    4,
+    4
+   ],
+   "below_ratio": 10.144210365493635,
+   "best_below": 1.0144210365493635e-12,
+   "best_below_pair": [
+    6,
+    1
+   ]
+  },
+  {
+   "index": 10,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 8.0,
+   "width_name": "p3",
+   "nominal_count": 11,
+   "full_count": 11,
+   "chebyshev_count": 14,
+   "recorded_pair": [
+    5,
+    5
+   ],
+   "count_mode": "nominal",
+   "reported_count": 11,
+   "reported_pair": [
+    5,
+    5
+   ],
+   "delivered_2001": 1.7386478762176326e-15,
+   "delivered_4001": 1.8077332816696455e-15,
+   "count60": 11,
+   "genuine_pairs_64": [
+    [
+     7,
+     3
+    ],
+    [
+     6,
+     4
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     2,
+     8
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     7,
+     3
+    ],
+    [
+     6,
+     4
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     2,
+     8
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 11,
+   "pair": [
+    5,
+    5
+   ],
+   "below_ratio": 1.5689530053988643,
+   "best_below": 1.5689530053988644e-13,
+   "best_below_pair": [
+    4,
+    5
+   ]
+  },
+  {
+   "index": 11,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 16.0,
+   "width_name": "p4",
+   "nominal_count": 12,
+   "full_count": 13,
+   "chebyshev_count": 18,
+   "recorded_pair": [
+    5,
+    6
+   ],
+   "count_mode": "nominal",
+   "reported_count": 12,
+   "reported_pair": [
+    5,
+    6
+   ],
+   "delivered_2001": 2.233263593189753e-14,
+   "delivered_4001": 2.2001782066239788e-14,
+   "count60": 12,
+   "genuine_pairs_64": [
+    [
+     5,
+     6
+    ],
+    [
+     6,
+     5
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     5,
+     6
+    ],
+    [
+     6,
+     5
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 12,
+   "pair": [
+    5,
+    6
+   ],
+   "below_ratio": 15.369816329130366,
+   "best_below": 1.5369816329130366e-12,
+   "best_below_pair": [
+    5,
+    5
+   ]
+  },
+  {
+   "index": 12,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 32.0,
+   "width_name": "p5",
+   "nominal_count": 15,
+   "full_count": 21,
+   "chebyshev_count": 25,
+   "recorded_pair": [
+    10,
+    4
+   ],
+   "count_mode": "full",
+   "reported_count": 21,
+   "reported_pair": [
+    10,
+    4
+   ],
+   "delivered_2001": 6.25677861209244e-14,
+   "delivered_4001": 6.257537979464515e-14,
+   "count60": 15,
+   "genuine_pairs_64": [],
+   "genuine_pairs_60": [],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": false,
+     "meets64_2001": false,
+     "meets60_4001": false,
+     "meets64_4001": false
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 15,
+   "pair": [
+    10,
+    4
+   ],
+   "below_ratio": 2.0481132136605313,
+   "best_below": 2.0481132136605314e-13,
+   "best_below_pair": [
+    8,
+    5
+   ]
+  },
+  {
+   "index": 13,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 19.100151847891517,
+   "width_name": "ship",
+   "nominal_count": 13,
+   "full_count": 17,
+   "chebyshev_count": 20,
+   "recorded_pair": [
+    4,
+    8
+   ],
+   "count_mode": "nominal",
+   "reported_count": 13,
+   "reported_pair": [
+    4,
+    8
+   ],
+   "delivered_2001": 3.609578491833986e-14,
+   "delivered_4001": 3.609578491833986e-14,
+   "count60": 13,
+   "genuine_pairs_64": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     4
+    ],
+    [
+     7,
+     5
+    ],
+    [
+     6,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     4
+    ],
+    [
+     7,
+     5
+    ],
+    [
+     6,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 13,
+   "pair": [
+    4,
+    8
+   ],
+   "below_ratio": 2.2686288009062876,
+   "best_below": 2.2686288009062875e-13,
+   "best_below_pair": [
+    5,
+    6
+   ]
+  },
+  {
+   "index": 14,
+   "target": "rel:1e-13",
+   "target_kind": "rel",
+   "target_value": 1e-13,
+   "width": 17.089489586712254,
+   "width_name": "paper",
+   "nominal_count": 12,
+   "full_count": 13,
+   "chebyshev_count": 19,
+   "recorded_pair": [
+    5,
+    6
+   ],
+   "count_mode": "nominal",
+   "reported_count": 12,
+   "reported_pair": [
+    5,
+    6
+   ],
+   "delivered_2001": 5.800733152862125e-14,
+   "delivered_4001": 5.800733152862125e-14,
+   "count60": 12,
+   "genuine_pairs_64": [
+    [
+     5,
+     6
+    ],
+    [
+     6,
+     5
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     5,
+     6
+    ],
+    [
+     6,
+     5
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 12,
+   "pair": [
+    5,
+    6
+   ],
+   "below_ratio": 24.750918958636706,
+   "best_below": 2.475091895863671e-12,
+   "best_below_pair": [
+    5,
+    5
+   ]
+  },
+  {
+   "index": 15,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 0.0078125,
+   "width_name": "m7",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    2,
+    1
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    2,
+    1
+   ],
+   "delivered_2001": 1.1102230246251565e-16,
+   "delivered_4001": 1.1102230246251565e-16,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    2,
+    1
+   ],
+   "below_ratio": 1.4077627952246985,
+   "best_below": 7.038813976123492e-14,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 16,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 0.015625,
+   "width_name": "m6",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    2,
+    1
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    2,
+    1
+   ],
+   "delivered_2001": 1.6653345369377348e-16,
+   "delivered_4001": 1.6653345369377348e-16,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    2,
+    1
+   ],
+   "below_ratio": 11.242118347354335,
+   "best_below": 5.621059173677168e-13,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 17,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 0.03125,
+   "width_name": "m5",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    1,
+    2
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    1,
+    2
+   ],
+   "delivered_2001": 8.326672684688674e-16,
+   "delivered_4001": 8.326672684688674e-16,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    1,
+    2
+   ],
+   "below_ratio": 89.7126817278604,
+   "best_below": 4.48563408639302e-12,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 18,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 0.0625,
+   "width_name": "m4",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    1,
+    2
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    1,
+    2
+   ],
+   "delivered_2001": 1.1046719095020308e-14,
+   "delivered_4001": 1.1046719095020308e-14,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    1,
+    2
+   ],
+   "below_ratio": 714.4818070514702,
+   "best_below": 3.572409035257351e-11,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 19,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 0.125,
+   "width_name": "m3",
+   "nominal_count": 5,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    2,
+    2
+   ],
+   "count_mode": "nominal",
+   "reported_count": 5,
+   "reported_pair": [
+    2,
+    2
+   ],
+   "delivered_2001": 1.6653345369377348e-16,
+   "delivered_4001": 1.6653345369377348e-16,
+   "count60": 5,
+   "genuine_pairs_64": [
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 5,
+   "pair": [
+    2,
+    2
+   ],
+   "below_ratio": 3.4561242756581123,
+   "best_below": 1.7280621378290562e-13,
+   "best_below_pair": [
+    1,
+    2
+   ]
+  },
+  {
+   "index": 20,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 0.25,
+   "width_name": "m2",
+   "nominal_count": 5,
+   "full_count": 7,
+   "chebyshev_count": 6,
+   "recorded_pair": [
+    1,
+    3
+   ],
+   "count_mode": "nominal",
+   "reported_count": 5,
+   "reported_pair": [
+    1,
+    3
+   ],
+   "delivered_2001": 3.83026943495679e-15,
+   "delivered_4001": 3.83026943495679e-15,
+   "count60": 5,
+   "genuine_pairs_64": [
+    [
+     1,
+     3
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     3
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 5,
+   "pair": [
+    1,
+    3
+   ],
+   "below_ratio": 54.16000981028901,
+   "best_below": 2.7080004905144506e-12,
+   "best_below_pair": [
+    1,
+    2
+   ]
+  },
+  {
+   "index": 21,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 0.5,
+   "width_name": "m1",
+   "nominal_count": 6,
+   "full_count": 9,
+   "chebyshev_count": 7,
+   "recorded_pair": [
+    1,
+    4
+   ],
+   "count_mode": "nominal",
+   "reported_count": 6,
+   "reported_pair": [
+    1,
+    4
+   ],
+   "delivered_2001": 1.6653345369377348e-16,
+   "delivered_4001": 1.6653345369377348e-16,
+   "count60": 6,
+   "genuine_pairs_64": [
+    [
+     1,
+     4
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     4
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 6,
+   "pair": [
+    1,
+    4
+   ],
+   "below_ratio": 1.2967404927621828,
+   "best_below": 6.483702463810914e-14,
+   "best_below_pair": [
+    2,
+    2
+   ]
+  },
+  {
+   "index": 22,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 1.0,
+   "width_name": "p0",
+   "nominal_count": 6,
+   "full_count": 9,
+   "chebyshev_count": 8,
+   "recorded_pair": [
+    1,
+    4
+   ],
+   "count_mode": "nominal",
+   "reported_count": 6,
+   "reported_pair": [
+    1,
+    4
+   ],
+   "delivered_2001": 1.609823385706477e-15,
+   "delivered_4001": 1.609823385706477e-15,
+   "count60": 6,
+   "genuine_pairs_64": [
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 6,
+   "pair": [
+    1,
+    4
+   ],
+   "below_ratio": 40.699665859733614,
+   "best_below": 2.0349832929866807e-12,
+   "best_below_pair": [
+    2,
+    2
+   ]
+  },
+  {
+   "index": 23,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 2.0,
+   "width_name": "p1",
+   "nominal_count": 7,
+   "full_count": 11,
+   "chebyshev_count": 9,
+   "recorded_pair": [
+    5,
+    1
+   ],
+   "count_mode": "nominal",
+   "reported_count": 7,
+   "reported_pair": [
+    5,
+    1
+   ],
+   "delivered_2001": 1.659783421814609e-14,
+   "delivered_4001": 1.659783421814609e-14,
+   "count60": 7,
+   "genuine_pairs_64": [
+    [
+     5,
+     1
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     5,
+     1
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 7,
+   "pair": [
+    5,
+    1
+   ],
+   "below_ratio": 5.747069486972123,
+   "best_below": 2.8735347434860614e-13,
+   "best_below_pair": [
+    3,
+    2
+   ]
+  },
+  {
+   "index": 24,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 4.0,
+   "width_name": "p2",
+   "nominal_count": 9,
+   "full_count": 14,
+   "chebyshev_count": 11,
+   "recorded_pair": [
+    7,
+    1
+   ],
+   "count_mode": "nominal",
+   "reported_count": 9,
+   "reported_pair": [
+    7,
+    1
+   ],
+   "delivered_2001": 4.929390229335695e-14,
+   "delivered_4001": 4.929390229335695e-14,
+   "count60": 9,
+   "genuine_pairs_64": [
+    [
+     7,
+     1
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     4,
+     4
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     1,
+     7
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     7,
+     1
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     4,
+     4
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     1,
+     7
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 9,
+   "pair": [
+    7,
+    1
+   ],
+   "below_ratio": 4.509725926027386,
+   "best_below": 2.254862963013693e-13,
+   "best_below_pair": [
+    6,
+    1
+   ]
+  },
+  {
+   "index": 25,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 8.0,
+   "width_name": "p3",
+   "nominal_count": 10,
+   "full_count": 11,
+   "chebyshev_count": 14,
+   "recorded_pair": [
+    4,
+    5
+   ],
+   "count_mode": "nominal",
+   "reported_count": 10,
+   "reported_pair": [
+    4,
+    5
+   ],
+   "delivered_2001": 3.1308289294429414e-14,
+   "delivered_4001": 3.1308289294429414e-14,
+   "count60": 10,
+   "genuine_pairs_64": [
+    [
+     4,
+     5
+    ],
+    [
+     5,
+     4
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     4,
+     5
+    ],
+    [
+     5,
+     4
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 10,
+   "pair": [
+    4,
+    5
+   ],
+   "below_ratio": 19.122481376143696,
+   "best_below": 9.561240688071848e-13,
+   "best_below_pair": [
+    4,
+    4
+   ]
+  },
+  {
+   "index": 26,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 16.0,
+   "width_name": "p4",
+   "nominal_count": 12,
+   "full_count": 13,
+   "chebyshev_count": 18,
+   "recorded_pair": [
+    5,
+    6
+   ],
+   "count_mode": "nominal",
+   "reported_count": 12,
+   "reported_pair": [
+    5,
+    6
+   ],
+   "delivered_2001": 3.913536161803677e-15,
+   "delivered_4001": 3.913536161803677e-15,
+   "count60": 12,
+   "genuine_pairs_64": [
+    [
+     7,
+     4
+    ],
+    [
+     6,
+     5
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     7,
+     4
+    ],
+    [
+     6,
+     5
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 12,
+   "pair": [
+    5,
+    6
+   ],
+   "below_ratio": 5.159206395433102,
+   "best_below": 2.579603197716551e-13,
+   "best_below_pair": [
+    5,
+    5
+   ]
+  },
+  {
+   "index": 27,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 32.0,
+   "width_name": "p5",
+   "nominal_count": 14,
+   "full_count": 17,
+   "chebyshev_count": 24,
+   "recorded_pair": [
+    8,
+    5
+   ],
+   "count_mode": "genuine",
+   "reported_count": 14,
+   "reported_pair": [
+    7,
+    6
+   ],
+   "delivered_2001": 2.8754776337791554e-14,
+   "delivered_4001": 2.8754776337791554e-14,
+   "count60": 14,
+   "genuine_pairs_64": [
+    [
+     7,
+     6
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     6,
+     7
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": false,
+     "meets64_2001": false,
+     "meets60_4001": false,
+     "meets64_4001": false
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 14,
+   "pair": [
+    7,
+    6
+   ],
+   "below_ratio": 2.1271873151818,
+   "best_below": 1.0635936575909e-13,
+   "best_below_pair": [
+    6,
+    6
+   ]
+  },
+  {
+   "index": 28,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 19.100151847891517,
+   "width_name": "ship",
+   "nominal_count": 12,
+   "full_count": 13,
+   "chebyshev_count": 19,
+   "recorded_pair": [
+    5,
+    6
+   ],
+   "count_mode": "nominal",
+   "reported_count": 12,
+   "reported_pair": [
+    5,
+    6
+   ],
+   "delivered_2001": 3.658184866139891e-14,
+   "delivered_4001": 3.6415315207705135e-14,
+   "count60": 12,
+   "genuine_pairs_64": [
+    [
+     5,
+     6
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     5,
+     6
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 12,
+   "pair": [
+    5,
+    6
+   ],
+   "below_ratio": 16.892043319671757,
+   "best_below": 8.446021659835878e-13,
+   "best_below_pair": [
+    5,
+    5
+   ]
+  },
+  {
+   "index": 29,
+   "target": "abs:5e-14",
+   "target_kind": "abs",
+   "target_value": 5e-14,
+   "width": 17.089489586712254,
+   "width_name": "paper",
+   "nominal_count": 12,
+   "full_count": 13,
+   "chebyshev_count": 19,
+   "recorded_pair": [
+    5,
+    6
+   ],
+   "count_mode": "nominal",
+   "reported_count": 12,
+   "reported_pair": [
+    5,
+    6
+   ],
+   "delivered_2001": 1.0158540675320182e-14,
+   "delivered_4001": 1.0158540675320182e-14,
+   "count60": 12,
+   "genuine_pairs_64": [
+    [
+     5,
+     6
+    ],
+    [
+     6,
+     5
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     5,
+     6
+    ],
+    [
+     6,
+     5
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 12,
+   "pair": [
+    5,
+    6
+   ],
+   "below_ratio": 8.149037000748649,
+   "best_below": 4.0745185003743245e-13,
+   "best_below_pair": [
+    5,
+    5
+   ]
+  },
+  {
+   "index": 30,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 0.0078125,
+   "width_name": "m7",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    2,
+    1
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    2,
+    1
+   ],
+   "delivered_2001": 4.322935549356055e-16,
+   "delivered_4001": 4.322935549356055e-16,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    2,
+    1
+   ],
+   "below_ratio": 27.40515463927423,
+   "best_below": 2.740515463927423e-13,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 31,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 0.015625,
+   "width_name": "m6",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    2,
+    1
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    2,
+    1
+   ],
+   "delivered_2001": 6.48586768307562e-16,
+   "delivered_4001": 6.486532225040158e-16,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    2,
+    1
+   ],
+   "below_ratio": 218.8988767009038,
+   "best_below": 2.188988767009038e-12,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 32,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 0.03125,
+   "width_name": "m5",
+   "nominal_count": 4,
+   "full_count": 5,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    1,
+    2
+   ],
+   "count_mode": "nominal",
+   "reported_count": 4,
+   "reported_pair": [
+    1,
+    2
+   ],
+   "delivered_2001": 3.2411395218953035e-15,
+   "delivered_4001": 3.2411427136235106e-15,
+   "count60": 4,
+   "genuine_pairs_64": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 4,
+   "pair": [
+    1,
+    2
+   ],
+   "below_ratio": 1748.2495994030785,
+   "best_below": 1.7482495994030784e-11,
+   "best_below_pair": [
+    1,
+    1
+   ]
+  },
+  {
+   "index": 33,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 0.0625,
+   "width_name": "m4",
+   "nominal_count": 5,
+   "full_count": 7,
+   "chebyshev_count": 5,
+   "recorded_pair": [
+    3,
+    1
+   ],
+   "count_mode": "nominal",
+   "reported_count": 5,
+   "reported_pair": [
+    3,
+    1
+   ],
+   "delivered_2001": 4.3320265374188123e-16,
+   "delivered_4001": 4.3327934579836567e-16,
+   "count60": 5,
+   "genuine_pairs_64": [
+    [
+     3,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     3,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 5,
+   "pair": [
+    3,
+    1
+   ],
+   "below_ratio": 4.299911765714437,
+   "best_below": 4.2999117657144365e-14,
+   "best_below_pair": [
+    1,
+    2
+   ]
+  },
+  {
+   "index": 34,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 0.125,
+   "width_name": "m3",
+   "nominal_count": 5,
+   "full_count": 5,
+   "chebyshev_count": 6,
+   "recorded_pair": [
+    2,
+    2
+   ],
+   "count_mode": "nominal",
+   "reported_count": 5,
+   "reported_pair": [
+    2,
+    2
+   ],
+   "delivered_2001": 6.514101251292658e-16,
+   "delivered_4001": 6.514101251292658e-16,
+   "count60": 5,
+   "genuine_pairs_64": [
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 5,
+   "pair": [
+    2,
+    2
+   ],
+   "below_ratio": 67.57335977027559,
+   "best_below": 6.757335977027558e-13,
+   "best_below_pair": [
+    1,
+    2
+   ]
+  },
+  {
+   "index": 35,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 0.25,
+   "width_name": "m2",
+   "nominal_count": 5,
+   "full_count": 5,
+   "chebyshev_count": 6,
+   "recorded_pair": [
+    2,
+    2
+   ],
+   "count_mode": "nominal",
+   "reported_count": 5,
+   "reported_pair": [
+    2,
+    2
+   ],
+   "delivered_2001": 8.28904347586235e-15,
+   "delivered_4001": 8.28923570196582e-15,
+   "count60": 5,
+   "genuine_pairs_64": [
+    [
+     2,
+     2
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     2,
+     2
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 5,
+   "pair": [
+    2,
+    2
+   ],
+   "below_ratio": 1065.0761960222012,
+   "best_below": 1.0650761960222013e-11,
+   "best_below_pair": [
+    1,
+    2
+   ]
+  },
+  {
+   "index": 36,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 0.5,
+   "width_name": "m1",
+   "nominal_count": 6,
+   "full_count": 9,
+   "chebyshev_count": 7,
+   "recorded_pair": [
+    1,
+    4
+   ],
+   "count_mode": "nominal",
+   "reported_count": 6,
+   "reported_pair": [
+    1,
+    4
+   ],
+   "delivered_2001": 6.560721252534133e-16,
+   "delivered_4001": 6.561629422713387e-16,
+   "count60": 6,
+   "genuine_pairs_64": [
+    [
+     1,
+     4
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     4
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 6,
+   "pair": [
+    1,
+    4
+   ],
+   "below_ratio": 25.718302698045218,
+   "best_below": 2.571830269804522e-13,
+   "best_below_pair": [
+    2,
+    2
+   ]
+  },
+  {
+   "index": 37,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 1.0,
+   "width_name": "p0",
+   "nominal_count": 6,
+   "full_count": 9,
+   "chebyshev_count": 9,
+   "recorded_pair": [
+    1,
+    4
+   ],
+   "count_mode": "nominal",
+   "reported_count": 6,
+   "reported_pair": [
+    1,
+    4
+   ],
+   "delivered_2001": 6.26633471540377e-15,
+   "delivered_4001": 6.26633471540377e-15,
+   "count60": 6,
+   "genuine_pairs_64": [
+    [
+     1,
+     4
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     1,
+     4
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 6,
+   "pair": [
+    1,
+    4
+   ],
+   "below_ratio": 824.7235023307062,
+   "best_below": 8.247235023307062e-12,
+   "best_below_pair": [
+    2,
+    2
+   ]
+  },
+  {
+   "index": 38,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 2.0,
+   "width_name": "p1",
+   "nominal_count": 9,
+   "full_count": 9,
+   "chebyshev_count": 10,
+   "recorded_pair": [
+    4,
+    4
+   ],
+   "count_mode": "nominal",
+   "reported_count": 9,
+   "reported_pair": [
+    4,
+    4
+   ],
+   "delivered_2001": 5.838219087767357e-16,
+   "delivered_4001": 5.838219087767357e-16,
+   "count60": 9,
+   "genuine_pairs_64": [
+    [
+     4,
+     4
+    ],
+    [
+     7,
+     1
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     1,
+     7
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     4,
+     4
+    ],
+    [
+     7,
+     1
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     1,
+     7
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 9,
+   "pair": [
+    4,
+    4
+   ],
+   "below_ratio": 1.3661432665375617,
+   "best_below": 1.3661432665375616e-14,
+   "best_below_pair": [
+    3,
+    4
+   ]
+  },
+  {
+   "index": 39,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 4.0,
+   "width_name": "p2",
+   "nominal_count": 10,
+   "full_count": 11,
+   "chebyshev_count": 12,
+   "recorded_pair": [
+    4,
+    5
+   ],
+   "count_mode": "nominal",
+   "reported_count": 10,
+   "reported_pair": [
+    4,
+    5
+   ],
+   "delivered_2001": 8.643038725054143e-16,
+   "delivered_4001": 8.643038725054143e-16,
+   "count60": 10,
+   "genuine_pairs_64": [
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     3
+    ],
+    [
+     5,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     2,
+     7
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     3
+    ],
+    [
+     5,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     2,
+     7
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 10,
+   "pair": [
+    4,
+    5
+   ],
+   "below_ratio": 2.2728625957402953,
+   "best_below": 2.2728625957402953e-14,
+   "best_below_pair": [
+    4,
+    4
+   ]
+  },
+  {
+   "index": 40,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 8.0,
+   "width_name": "p3",
+   "nominal_count": 11,
+   "full_count": 11,
+   "chebyshev_count": 15,
+   "recorded_pair": [
+    5,
+    5
+   ],
+   "count_mode": "nominal",
+   "reported_count": 11,
+   "reported_pair": [
+    5,
+    5
+   ],
+   "delivered_2001": 1.7386478762176326e-15,
+   "delivered_4001": 1.8077332816696455e-15,
+   "count60": 11,
+   "genuine_pairs_64": [
+    [
+     5,
+     5
+    ],
+    [
+     4,
+     6
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     5,
+     5
+    ],
+    [
+     4,
+     6
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 11,
+   "pair": [
+    5,
+    5
+   ],
+   "below_ratio": 15.689530053988644,
+   "best_below": 1.5689530053988644e-13,
+   "best_below_pair": [
+    4,
+    5
+   ]
+  },
+  {
+   "index": 41,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 16.0,
+   "width_name": "p4",
+   "nominal_count": 14,
+   "full_count": 21,
+   "chebyshev_count": 20,
+   "recorded_pair": [
+    3,
+    10
+   ],
+   "count_mode": "full",
+   "reported_count": 21,
+   "reported_pair": [
+    3,
+    10
+   ],
+   "delivered_2001": 4.933549517487415e-15,
+   "delivered_4001": 4.933549517487415e-15,
+   "count60": 14,
+   "genuine_pairs_64": [],
+   "genuine_pairs_60": [],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": false,
+     "meets64_2001": false,
+     "meets60_4001": false,
+     "meets64_4001": false
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 14,
+   "pair": [
+    3,
+    10
+   ],
+   "below_ratio": 1.0587323701047717,
+   "best_below": 1.0587323701047717e-14,
+   "best_below_pair": [
+    8,
+    4
+   ]
+  },
+  {
+   "index": 42,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 32.0,
+   "width_name": "p5",
+   "nominal_count": 18,
+   "full_count": 29,
+   "chebyshev_count": 26,
+   "recorded_pair": [
+    14,
+    3
+   ],
+   "count_mode": "full",
+   "reported_count": 29,
+   "reported_pair": [
+    14,
+    3
+   ],
+   "delivered_2001": 6.325061236452513e-15,
+   "delivered_4001": 6.736522122696012e-15,
+   "count60": 17,
+   "genuine_pairs_64": [],
+   "genuine_pairs_60": [],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": false,
+     "meets64_2001": false,
+     "meets60_4001": false,
+     "meets64_4001": false
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 18,
+   "pair": [
+    14,
+    3
+   ],
+   "below_ratio": 3.071132275803026,
+   "best_below": 3.071132275803026e-14,
+   "best_below_pair": [
+    12,
+    4
+   ]
+  },
+  {
+   "index": 43,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 19.100151847891517,
+   "width_name": "ship",
+   "nominal_count": 15,
+   "full_count": 15,
+   "chebyshev_count": 21,
+   "recorded_pair": [
+    7,
+    7
+   ],
+   "count_mode": "nominal",
+   "reported_count": 15,
+   "reported_pair": [
+    7,
+    7
+   ],
+   "delivered_2001": 5.487916942564074e-15,
+   "delivered_4001": 7.453404199665581e-15,
+   "count60": 15,
+   "genuine_pairs_64": [
+    [
+     7,
+     7
+    ]
+   ],
+   "genuine_pairs_60": [
+    [
+     7,
+     7
+    ]
+   ],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 15,
+   "pair": [
+    7,
+    7
+   ],
+   "below_ratio": 1.220630407866565,
+   "best_below": 1.2206304078665652e-14,
+   "best_below_pair": [
+    3,
+    10
+   ]
+  },
+  {
+   "index": 44,
+   "target": "rel:1e-14",
+   "target_kind": "rel",
+   "target_value": 1e-14,
+   "width": 17.089489586712254,
+   "width_name": "paper",
+   "nominal_count": 14,
+   "full_count": 21,
+   "chebyshev_count": 20,
+   "recorded_pair": [
+    3,
+    10
+   ],
+   "count_mode": "full",
+   "reported_count": 21,
+   "reported_pair": [
+    3,
+    10
+   ],
+   "delivered_2001": 5.9019087311097205e-15,
+   "delivered_4001": 5.9019087311097205e-15,
+   "count60": 14,
+   "genuine_pairs_64": [],
+   "genuine_pairs_60": [],
+   "recorded_fit_meets": {
+    "nominal": {
+     "meets60_2001": false,
+     "meets64_2001": false,
+     "meets60_4001": false,
+     "meets64_4001": false
+    },
+    "full": {
+     "meets60_2001": true,
+     "meets64_2001": true,
+     "meets60_4001": true,
+     "meets64_4001": true
+    }
+   },
+   "corrected_count": 14,
+   "pair": [
+    3,
+    10
+   ],
+   "below_ratio": 1.0960687643489482,
+   "best_below": 1.0960687643489481e-14,
+   "best_below_pair": [
+    8,
+    4
+   ]
+  }
+ ],
+ "summary": {
+  "cells": 45,
+  "counts": {
+   "nominal": 361,
+   "reported": 392,
+   "full": 454,
+   "chebyshev": 494
+  },
+  "modes": {
+   "nominal": 40,
+   "full": 4,
+   "genuine": 1
+  },
+  "comparison": {
+   "fewer": 39,
+   "equal": 3,
+   "more": 3,
+   "equal_cells": [
+    "rel:1e-13 m3",
+    "abs:5e-14 m3",
+    "rel:1e-14 m4"
+   ],
+   "more_cells": [
+    "rel:1e-14 p4",
+    "rel:1e-14 p5",
+    "rel:1e-14 paper"
+   ]
+  },
+  "full_vs_nominal": [
+   {
+    "target": "rel:1e-13",
+    "width_name": "p5",
+    "nominal_count": 15,
+    "full_count": 21,
+    "chebyshev_count": 25,
+    "count_mode": "full"
+   },
+   {
+    "target": "abs:5e-14",
+    "width_name": "p5",
+    "nominal_count": 14,
+    "full_count": 17,
+    "chebyshev_count": 24,
+    "count_mode": "genuine"
+   },
+   {
+    "target": "rel:1e-14",
+    "width_name": "p4",
+    "nominal_count": 14,
+    "full_count": 21,
+    "chebyshev_count": 20,
+    "count_mode": "full"
+   },
+   {
+    "target": "rel:1e-14",
+    "width_name": "p5",
+    "nominal_count": 18,
+    "full_count": 29,
+    "chebyshev_count": 26,
+    "count_mode": "full"
+   },
+   {
+    "target": "rel:1e-14",
+    "width_name": "paper",
+    "nominal_count": 14,
+    "full_count": 21,
+    "chebyshev_count": 20,
+    "count_mode": "full"
+   }
+  ],
+  "charged_cells": [
+   {
+    "target": "rel:1e-13",
+    "width_name": "p5",
+    "reported_count": 21,
+    "pair": [
+     10,
+     4
+    ]
+   },
+   {
+    "target": "rel:1e-14",
+    "width_name": "p4",
+    "reported_count": 21,
+    "pair": [
+     3,
+     10
+    ]
+   },
+   {
+    "target": "rel:1e-14",
+    "width_name": "p5",
+    "reported_count": 29,
+    "pair": [
+     14,
+     3
+    ]
+   },
+   {
+    "target": "rel:1e-14",
+    "width_name": "paper",
+    "reported_count": 21,
+    "pair": [
+     3,
+     10
+    ]
+   }
+  ],
+  "genuine_cells": [
+   {
+    "target": "abs:5e-14",
+    "width_name": "p5",
+    "reported_count": 14,
+    "pair": [
+     7,
+     6
+    ]
+   }
+  ],
+  "series": {
+   "rel:1e-13": {
+    "widths": [
+     "m7",
+     "m6",
+     "m5",
+     "m4",
+     "m3",
+     "m2",
+     "m1",
+     "p0",
+     "p1",
+     "p2",
+     "p3",
+     "p4",
+     "p5"
+    ],
+    "reported": [
+     4,
+     4,
+     4,
+     4,
+     5,
+     5,
+     6,
+     6,
+     7,
+     9,
+     11,
+     12,
+     21
+    ],
+    "nominal": [
+     4,
+     4,
+     4,
+     4,
+     5,
+     5,
+     6,
+     6,
+     7,
+     9,
+     11,
+     12,
+     15
+    ],
+    "chebyshev": [
+     5,
+     5,
+     5,
+     5,
+     5,
+     6,
+     7,
+     8,
+     9,
+     11,
+     14,
+     18,
+     25
+    ],
+    "d": [
+     1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     2,
+     2,
+     2,
+     3,
+     6,
+     4
+    ]
+   },
+   "abs:5e-14": {
+    "widths": [
+     "m7",
+     "m6",
+     "m5",
+     "m4",
+     "m3",
+     "m2",
+     "m1",
+     "p0",
+     "p1",
+     "p2",
+     "p3",
+     "p4",
+     "p5"
+    ],
+    "reported": [
+     4,
+     4,
+     4,
+     4,
+     5,
+     5,
+     6,
+     6,
+     7,
+     9,
+     10,
+     12,
+     14
+    ],
+    "nominal": [
+     4,
+     4,
+     4,
+     4,
+     5,
+     5,
+     6,
+     6,
+     7,
+     9,
+     10,
+     12,
+     14
+    ],
+    "chebyshev": [
+     5,
+     5,
+     5,
+     5,
+     5,
+     6,
+     7,
+     8,
+     9,
+     11,
+     14,
+     18,
+     24
+    ],
+    "d": [
+     1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     2,
+     2,
+     2,
+     4,
+     6,
+     10
+    ]
+   },
+   "rel:1e-14": {
+    "widths": [
+     "m7",
+     "m6",
+     "m5",
+     "m4",
+     "m3",
+     "m2",
+     "m1",
+     "p0",
+     "p1",
+     "p2",
+     "p3",
+     "p4",
+     "p5"
+    ],
+    "reported": [
+     4,
+     4,
+     4,
+     5,
+     5,
+     5,
+     6,
+     6,
+     9,
+     10,
+     11,
+     21,
+     29
+    ],
+    "nominal": [
+     4,
+     4,
+     4,
+     5,
+     5,
+     5,
+     6,
+     6,
+     9,
+     10,
+     11,
+     14,
+     18
+    ],
+    "chebyshev": [
+     5,
+     5,
+     5,
+     5,
+     6,
+     6,
+     7,
+     9,
+     10,
+     12,
+     15,
+     20,
+     26
+    ],
+    "d": [
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     3,
+     1,
+     2,
+     4,
+     -1,
+     -3
+    ]
+   }
+  },
+  "worst_charge": {
+   "cell": [
+    "rel:1e-14",
+    "p5"
+   ],
+   "nominal": 18,
+   "reported": 29,
+   "chebyshev": 26
+  }
+ }
+}
