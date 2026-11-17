@@ -1,7 +1,8 @@
 # Witness rerun: two documented accuracy sentences
 
 This directory re-derives, in a bounded and fully deposited run, the two
-false-sentence witnesses reported in the Paper B accuracy audit:
+false-sentence witnesses reported in the accuracy audit recorded in this
+deposit:
 
 1. **Boost.Math 1.92.0, Airy functions.** The sentence on the `airy_ai` and
    `airy_bi` documentation pages says the relative error is "less than 100 ε"

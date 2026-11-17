@@ -162,9 +162,12 @@ The v5.3.2 replay is the same measurement at the submission tag; its commands
 and digests are in `boys-crossover/exact-tag-replay-v5.3.2/README.md`. From
 that directory, `python -I compare_outputs.py` compares the deposited
 measurement records with the v5.3.1 record byte for byte. The raw path record
-is not deposited, so the command reports 12 of 13 identical and exits 1 in the
-delivered state; `run/output-comparison.log` is the 13/13 run recorded before
-the raw file was removed, and the 13th digest is in `digests.txt`.
+is not deposited: for it the script compares the digest recorded in this
+record's `digests.txt` with the deposited record's digest, so the command
+reports 13 of 13 identical and exits 0 in the delivered state.
+`run/output-comparison.log` is the earlier run in which the produced raw file
+was still present; it reports the same 13 of 13, and the 13th digest is in
+`digests.txt`.
 
 The interval/enclosure record recomputes the paper model and scores the
 deposited and enclosure rules from the deposited first- and second-sweep,
