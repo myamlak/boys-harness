@@ -1,7 +1,7 @@
 # Witness rerun for the two false-sentence findings
 
-Bounded re-derivation of the two witnesses reported in the accuracy audit of
-Section `sec:audit`. The rerun was made on 26 October 2026 from public,
+Bounded re-derivation of the two witnesses reported in the accuracy audit
+recorded in this deposit. The rerun was made on 26 October 2026 from public,
 pinned sources, on one Windows 11 machine with WSL2 for the Linux build. Both
 documented sentences are re-tested against an mpmath reference at 60
 significant digits. The witness directory is deposited as

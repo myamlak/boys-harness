@@ -1,7 +1,8 @@
 # Witness rerun: two documented accuracy sentences
 
 This directory re-derives, in a bounded and fully deposited run, the two
-false-sentence witnesses reported in the Paper B accuracy audit:
+false-sentence witnesses reported in the accuracy audit recorded in this
+deposit:
 
 1. **Boost.Math 1.92.0, Airy functions.** The sentence on the `airy_ai` and
    `airy_bi` documentation pages says the relative error is "less than 100 ε"
@@ -202,6 +203,24 @@ parsed source. Rebuilding is the first two commands of each reproduction
 section.
 
 `MANIFEST.sha256` lists every included file with its hash.
+
+## Manifest byte convention
+
+`MANIFEST.sha256` hashes the exact bytes committed in this repository. Thirty-one
+of the thirty-three listed files are stored with LF line endings; `README.md` and
+`WITNESS-RERUN.md` are stored with the CRLF bytes they were deposited with. The
+claimgate run books hash the CRLF serialisation used by the Windows measurement
+tree. The two serialisations carry the same content, so only the hash differs.
+This line reproduces the boost-airy book's data hash from the committed file:
+
+```sh
+tr -d '\r' < raw/boost_airy_reference.csv | sed 's/$/\r/' | sha256sum
+```
+
+`sha256sum -c MANIFEST.sha256` on a fresh `git archive` of the deposit reports
+33/33 OK. The earlier manifest hashed the working-tree CRLF forms for twelve
+files and kept two entries that predated a later edit; this one hashes the
+committed bytes throughout.
 
 ## Note on untrusted data
 

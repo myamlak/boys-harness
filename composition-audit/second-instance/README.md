@@ -1,6 +1,6 @@
 # d-second-instance: two fractional designs certified against claimgate 0.1.0
 
-A real, deterministic second instance of the Paper D design argument, in two
+A real, deterministic second instance of the design argument, in two
 sizes. Independent series approximations are summed by one joint call; the
 error of that call decomposes into independent per-axis errors, so the widest
 dependency cone is `w_p = 1`, a strength-2 fractional design exists, and it
@@ -66,7 +66,7 @@ instances).
 local error term that depends only on its own axis: cone `{A_i}`. The final
 integer addition and power-of-two scaling have a local error that is
 identically zero, so they add no axis to the cone. That is the same reading
-Paper D applies to an exact final store in the fp64 lane, whose operand may
+this audit applies to an exact final store in the fp64 lane, whose operand may
 depend on every live axis but which adds no axis because it has no local
 error. The upstream terms already carry the operand dependence. The error
 decomposition is therefore exactly the additive `m1+...+mn`, with no

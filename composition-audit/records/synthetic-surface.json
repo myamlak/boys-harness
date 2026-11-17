@@ -3,7 +3,12 @@
   "command": "python -I scripts/synthetic_surface.py --seeds 200 --points 8",
   "script": {
     "path": "scripts/synthetic_surface.py",
-    "sha256": "269d71499c3df0e0e6843732e0324dc38c45f18f1f7cc57bcc2861ac52ba1ec1"
+    "sha256": "269d71499c3df0e0e6843732e0324dc38c45f18f1f7cc57bcc2861ac52ba1ec1",
+    "deposit": {
+      "path": "composition-audit/synthetic_surface.py",
+      "sha256": "c33ef0a02c52cd0cbc007e181d464118222f7d06ba6cba0748a2d11e1026d2b1",
+      "note": "repository-root-relative; the same 1162-line script in LF. script.sha256 above is the paper-tree CRLF run script cited by the paper."
+    }
   },
   "python": "3.14.7",
   "numpy": "2.5.2",
