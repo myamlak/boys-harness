@@ -1,0 +1,122 @@
+{
+  "record": "exact-tag-replay-v5.3.2",
+  "role": "the exact-tag replay of the route-comparison study's measurements at the submission tag boys v5.3.2, compared with the deposited v5.3.1 replay record",
+  "date": "2026-11-15",
+  "deposited_record_compared": "boys-crossover/exact-tag-replay (the v5.3.1 replay)",
+  "kernel": {
+    "version": "5.3.2",
+    "tag": "v5.3.2",
+    "tag_object": "058f10f273f37ca3b5769e9f1173c218f38fce6c",
+    "commit": "6739447d82765ae5f7f68351a99f418cd018dd9a",
+    "tree": "71be8196d53c31c8ec5d9be2c9fb48453b297c4e",
+    "version_header_sha256": "e2a1a783004191cd76bfc952f56d3a2bece49935722c54fb8aee64553c89b27e",
+    "source_tree": "C:\\Users\\myaml\\dev\\_a-exact-tag-replay-v532, produced by git archive v5.3.2 and extracted",
+    "tree_verification": {
+      "listing_command": "git -C C:\\Users\\myaml\\dev\\_boys-library ls-tree -r v5.3.2",
+      "listing": "run/ls-tree-v532.txt",
+      "script": "verify_tag_tree.py",
+      "output": "run/tag-tree-verification.log",
+      "exit": 0,
+      "result": "files 718 mismatched 0"
+    },
+    "identity": {
+      "evaluated_files": 76,
+      "include_headers": 62,
+      "src_files": 14,
+      "identical_to_v5_3_1_tag_tree": {"headers": 61, "src": 14, "all": 75},
+      "differs_from_v5_3_1_tag_tree_only_in": "include/boys/version.hpp",
+      "v5_3_1_version_header_sha256": "02e6312dfa1a91b07abe98843c484f2331abb8f3f48b313fb6a15722c9067da9",
+      "identical_to_v5_1_1_tag_tree": {"headers": 45, "src": 10, "all": 55},
+      "note": "the v5.3.1-to-v5.3.2 difference under include/ and src/ is include/boys/version.hpp only (git diff v5.3.1 v5.3.2 -- include src: 1 file changed, 2 insertions, 2 deletions); the identity counts against the v5.1.1 tag tree and the v531-check digest columns are in run/identity-comparison.log"
+    }
+  },
+  "harness": {
+    "version": "1.0.38",
+    "tag": "v1.0.38",
+    "tag_commit": "03ad030ee08c33124ab54b79b604a3272502b92c",
+    "working_tree_head": "8305917f8de439360d725e9e7bef1f86c406cb1a",
+    "note": "the certificate scripts and inputs were read from the harness working tree at HEAD, whose VERSION file reads 1.0.38"
+  },
+  "environment": {
+    "compiler": "Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64 (MSVC 14.51.36231)",
+    "compiler_path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+    "compile_flags": "/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2",
+    "python": "3.14.7",
+    "mpmath": "1.4.1"
+  },
+  "inputs": {
+    "first_sweep_grid_9353": {"path": "papers-a-v5/papers/boys-crossover/sweeps/product_amplification/data/grid.csv", "sha256": "780f75744e71f34da9e42b22ef359cc56424283e67a4faf7a16ea58847fae488"},
+    "first_sweep_grid_9352": {"path": "harness/amplification-sweeps/product-amplification/data/grid.csv", "sha256": "e8d2c73dcad0a88c61c37270beff42003e09233897f2200522aa73bc12c5d0ad", "note": "the deposited v5.3.1 provenance records sha256 da7a6c12090b0367054f561fdce749fb8147879dbae3a2544902d5b51667414c for this input, which is the first 9,352 data rows of the paper tree's 9,353-row grid with CRLF endings; the harness file holds the same rows with LF endings, so the parsed argument list is identical and the produced records are byte-identical"},
+    "second_sweep_grid": {"path": "harness/amplification-sweeps/amplification-form/data/grid.csv", "sha256": "5fee3f7930f52e1b982c421e84d2b6e36d97af450b8512508cd9ea5dc7b9f507"},
+    "second_sweep_fits": {"path": "harness/amplification-sweeps/amplification-form/data/fits.csv", "sha256": "ed9d8ea3cebef5bd734962fcb307a36a8729b752feb6eb0fc1a966a397d835e5"},
+    "certificate_sweep_reference": {"path": "harness/amplification-sweeps/amplification-form/data/reference.csv", "sha256": "514411570e902bc2320932a8ae6200d46e11d950471994c80c2775871f9a528d"},
+    "certificate_sweep_cells": {"path": "harness/amplification-sweeps/amplification-form/results/cells.csv", "sha256": "2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6"},
+    "certificate_sweep_per_order": {"path": "harness/amplification-sweeps/amplification-form/results/per_order.csv", "sha256": "e1ea8f51e37367ddf1f5814e3538164fba691d6b6c6a5fb73f700463f8d1b656"},
+    "model_record_prediction": {"sha256": "305b2a28392c48a6eae355a9e8cca04289c214899b165464ced917d4243702eb"},
+    "model_record_prediction_record": {"sha256": "d146ab20bfe0bbcded9f241129359dfd0414c022f437d164c59c05ed03c8b218"},
+    "exp_bits": {"path": "harness/amplification-sweeps/certified-bound/exp/exp_bits.txt", "sha256": "493afdc2e62ac94c3a38cdf994bd3b587ffa649ac95c32eda90c60542febd95d"},
+    "sweep1_source": {"path": "papers-a-v5/papers/boys-crossover/sweeps/product_amplification/sweep1.cpp", "sha256": "309bcb71e29916512be479e2e51953f03f5d7d29cf4da5d74d6f3c53d1bede38"},
+    "sweep2_source": {"path": "papers-a-v5/papers/boys-crossover/sweeps/amplification_form/sweep2.cpp", "sha256": "57e91b7e019e62647154ff3a41128c21a594baee5312a564697c162efe9be76d"},
+    "replica_header": {"path": "papers-a-v5/papers/boys-crossover/sweeps/common/replica.hpp", "sha256": "e2ae9aaafc826059981b0435d629e09399a1bcbeecc3a64b9d77981d13456f69"}
+  },
+  "builds": {
+    "sweep1_build_exit": 0,
+    "sweep2_build_exit": 0,
+    "sweep1_exe_sha256": "fe61a0a6750f416653d8a4cd0407a22dd09477935a966c8cdf2cc9a6f71e1c2e",
+    "sweep2_exe_sha256": "8159be35fc56207d7f00415bdedaad397f161ef07859bca88e57f9b220e1dbfb",
+    "binaries_deposited": false,
+    "note": "the executables are build products and are not expected to be byte-identical to the v5.3.1 replay's binaries, whose paths and build time differed"
+  },
+  "runs": {
+    "sweep1_9353_exit": 0,
+    "sweep1_9353_seconds": 1.7,
+    "sweep1_9352_exit": 0,
+    "sweep1_9352_seconds": 1.7,
+    "sweep2_exit": 0,
+    "sweep2_seconds": 15.4,
+    "model_replay_exit": 0,
+    "model_replay_seconds": 3.1,
+    "model_replay": "with the separate downward step: 27,588 recursed and 27,588 direct values bit for bit, 0 mismatches; with the fused downward step: 208 recursed mismatches, the first at (A1, 0.029916890803630927, 0), one ulp",
+    "bound_validation_exit": 0,
+    "bound_validation_seconds": 23.7,
+    "bound_validation": "55,176 entry-cells, 0 violations, worst |r|/C 0.71875 at (A1, 0.0, 24, ship), population band inside 264/264; 132/132 band comparisons, 65/65 commitments and 67/67 abstentions overlap"
+  },
+  "comparison": {
+    "command": "python -I compare_outputs.py",
+    "exit": 0,
+    "log": "run/output-comparison.log",
+    "result": "13 of 13 measurement records byte-identical to the deposited v5.3.1 record",
+    "method": "the deposited files still present are hashed directly and checked against the deposited digests.txt; run/paths.csv was removed from the v5.3.1 record after its digest was taken, so this record's digest is compared with the digest in that file"
+  },
+  "outputs": {
+    "first_sweep_cells_9353": {"sha256": "2a2c45d1d7f59b74f4d3aeca647b46e4e20e86c2fb1917767a21a725f86d7da6", "matches_deposit": true},
+    "first_sweep_admission_9353": {"sha256": "3003115faf814830ca95948b9cc85e8880207caecbf208529e00a31f65e5dc91", "matches_deposit": true},
+    "first_sweep_replica_gain_9353": {"sha256": "e25ac559a3d5f23164340802c152bc9933b309a70b7ad09f4f5d7cc931e2855f", "matches_deposit": true},
+    "first_sweep_cells_9352": {"sha256": "dd26d0b2a4352113d9f15433ec991adfacc211607ae9586c0bb51cd12b3f3369", "matches_deposit": true},
+    "first_sweep_admission_9352": {"sha256": "19f2c6d9b993f4eb880ec124795f90ef4fc1a72f95dacfe6ddb990d5b111d143", "matches_deposit": true},
+    "first_sweep_replica_gain_9352": {"sha256": "d0401a0f133ae9ca5ccc03b8f827caebf780cecee730f8bd3eff30026c6bdf29", "matches_deposit": true},
+    "second_sweep_cells": {"sha256": "2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6", "matches_deposit": true},
+    "second_sweep_admission": {"sha256": "d57b3bf925ae3740b28048139126ad0806fcab624e996e40586bc91503fb069f", "matches_deposit": true},
+    "second_sweep_paths": {"sha256": "81001a06d80c88e5b3ddac1f3dd011cae6f8ce2e806c8bf1f7f26e85dd8c8219", "matches_deposit": true, "stored": "raw file deposited in this record, 291,827,555 bytes"},
+    "certificate_cells_cert": {"sha256": "8041c727ac90c6d0ff9bc5552738e91ca9fd7abe09973ea0fad43756ba62fa6a", "matches_deposit": true},
+    "certificate_band_cert": {"sha256": "1ecc53f44a18b1acf867812cf00bf74e0f4842abcbc2d925991d09a734d2e368", "matches_deposit": true},
+    "certificate_model_cells": {"sha256": "d76f2737c80e9922e7e22432134ded5a1dd0eca33f925c2853fca3de25426efb", "matches_deposit": true},
+    "certificate_summary": {"sha256": "75c165fed51c91cdbb4a9546a98b5d526304a40114ba37424b1c0469fae0509a", "matches_deposit": true}
+  },
+  "logs": {
+    "build": {"path": "build-tag.log", "sha256": "325f205787766905239710bd60e25a5435596f1cbaf02cb00ce80b660f835d6c"},
+    "sweeps": {"path": "run-sweeps.log", "sha256": "ddec1aa94e2827dcbcc6eb2c2d8f1b22b284d33518f72bc53d0bb0adddf42dae"},
+    "model_replay": {"path": "run/replay-tag.log", "sha256": "8ab142b8ee1161a33a9422151b97beef568a53e5cc420b7cd584b04a987f611f", "note": "its content is an exact prefix of the deposited v5.3.1 log, which appends a timing tail"},
+    "bound_validation": {"path": "run/certify-tag.log", "sha256": "b91fa7e0ce8e0705aaec9667b47aebea8c9d2ebc837829152012b3d4694f1ec3", "note": "its content is an exact prefix of the deposited v5.3.1 log, which appends a timing tail"},
+    "identity_comparison": {"path": "run/identity-comparison.log", "sha256": "b668e3fde6dea0146feb992d590d333319eeebfacb42167b7131f533f3c33fcd"},
+    "tag_tree_verification": {"path": "run/tag-tree-verification.log", "sha256": "387682c509e351999a3be9f0dd3ae0eb87052eb5e0bf48a6638aa4f4ce05be29", "exit": 0},
+    "output_comparison": {"path": "run/output-comparison.log", "sha256": "b465e943ce9cf7c2bd90f0c6d7c8eff1991936ec41d8f5e420d42cba5b7327b1", "exit": 0}
+  },
+  "scope": {
+    "residual_lemma_probe": "not rerun: it is not in the replay's Commands section and its grid path is the manuscript workspace, not this harness checkout; it reads no measurement produced by this replay",
+    "paper_sources_modified": false,
+    "v5_3_1_record_modified": false,
+    "delivery_folder_modified": false
+  },
+  "result": "all 13 measurement records reproduced at boys v5.3.2 are byte-identical to the deposited v5.3.1 record"
+}

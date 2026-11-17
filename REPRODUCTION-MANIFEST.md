@@ -1,20 +1,21 @@
 # Reproduction manifest
 
-Harness release `v1.0.40` (`VERSION`). Kernel release boys `v5.3.2`. This file
-names, for Papers A, B, C and D, the commands that reproduce or verify each
-deposited record, the environment each record was made in, which records are
-reproduced and which are only re-serialised, and what the deposit does not
-carry.
+Harness release `v1.0.42` (`VERSION`). Kernel release boys `v5.3.2`. This file
+names, for the campaign studies, the commands that reproduce or verify
+each deposited record, the environment each record was made in, which records
+are reproduced and which are only re-serialised, and what the deposit does
+not carry.
 
-The papers cite harness `v1.0.40` at submission; the tag is cut from the merge
-commit. The release carries the `v1.0.39` records — the exact-tag replay at
-`boys-crossover/exact-tag-replay-v5.3.2/`, the Paper A interval/enclosure
-record at `amplification-sweeps/interval-enclosure/`, the Paper B libint2
-comparison at `accuracy-claim-audit/comparison-libint2/`, and Paper D's
+The campaign studies cite harness `v1.0.42` at submission; the tag is cut from
+the merge commit. The release carries the `v1.0.41` records — the exact-tag
+replay at `boys-crossover/exact-tag-replay-v5.3.2/`, the route-comparison
+study's interval/enclosure record at
+`amplification-sweeps/interval-enclosure/`, the gate audit's libint2 comparison
+at `accuracy-claim-audit/comparison-libint2/`, and the composition study's
 second fractional-design instance at `composition-audit/second-instance/` —
-and adds no new measurement: it corrects the witness-rerun manifest to hash
-the committed bytes and maps the synthetic record to its deposited script.
-The recorded values carried from `v1.0.39` are unchanged.
+and adds no new measurement: it adds the neutral copies that the campaign
+studies cite and declares the release version. The recorded values carried
+from `v1.0.41` are unchanged.
 
 ## Paths
 
@@ -24,7 +25,7 @@ the tag checkouts:
 
 ```sh
 git clone --branch v5.3.2 https://github.com/myamlak/boys.git boys
-git clone --branch v1.0.40 https://github.com/myamlak/boys-harness.git boys-harness  # (cut after this deposit merges)
+git clone --branch v1.0.42 https://github.com/myamlak/boys-harness.git boys-harness  # (cut after this deposit merges)
 cd boys-harness
 git -C ../boys worktree add ../boys-v5.1.1 v5.1.1
 git -C ../boys worktree add ../boys-v5.2.5 v5.2.5
@@ -47,19 +48,19 @@ the same names with `set NAME=value`.
 | `CLAIMGATE_REPO` | path to the claimgate clone | external, tag `v0.1.0`, for the second-instance record |
 | `RUN` | a fresh directory for a run's outputs, e.g. `$PWD/run/certificates` | never reuse a deposited `results/` directory |
 
-The paper-tree inputs that `extract_and_verify.py` reads are three files, and
-all three are deposited; the stand-in is built from the deposit in the Paper A
-block below, so no manuscript checkout is needed. Commands that write into the
-deposit are a record's own regeneration commands; run them in a copy if the
-deposit must stay unchanged.
+The study-tree inputs that `extract_and_verify.py` reads are three files, and
+all three are deposited; the stand-in is built from the deposit in the
+route-comparison study block below, so no study-tree checkout is needed.
+Commands that write into the deposit are a record's own regeneration commands;
+run them in a copy if the deposit must stay unchanged.
 
 ## Identity
 
 | Item | Value |
 | --- | --- |
-| Harness | tag `v1.0.40`, `VERSION` 1.0.40. The tag is annotated and names the release commit. A file inside that commit cannot carry the tag object that points to it: resolve the tag object, commit and tree with `git rev-parse v1.0.40`, `git rev-parse 'v1.0.40^{}'` and `git rev-parse 'v1.0.40^{tree}'`. The preceding release, `v1.0.39`, is tag object `85856bbe49cee5a915c86ea0fa07bcd7f1e4a399`, commit `309cf873d04e3466bf072b2b19bb8ee9718d4546`, tree `a31b26b05aa60d8a97743b4234e039e92607c463`. |
+| Harness | tag `v1.0.42`, `VERSION` 1.0.42. The tag is annotated and names the release commit. A file inside that commit cannot carry the tag object that points to it: resolve the tag object, commit and tree with `git rev-parse v1.0.42`, `git rev-parse 'v1.0.42^{}'` and `git rev-parse 'v1.0.42^{tree}'`. The preceding release, `v1.0.41`, is tag object `bb575b3e7d03a6a53b140a61156b820b28d3a263`, commit `b8788fbe8d351c407098fbe5e332b8ec9ed3781e`, tree `00a9efd22dbc434a253a7d209fa28e211de66286`. |
 | Kernel | boys `v5.3.2`, tag object `058f10f273f37ca3b5769e9f1173c218f38fce6c`, commit `6739447d82765ae5f7f68351a99f418cd018dd9a`, tree `71be8196d53c31c8ec5d9be2c9fb48453b297c4e` |
-| Earlier kernel revisions named by records | v5.0.0 (first and second sweeps, bridge provenance); v5.1.1 (9,353-argument record, seed-spliced, held-out, Chebyshev recount); v5.2.5 and v5.2.6 (certificate; Paper C core and sensitivity sweeps); v5.3.1 (exact-tag replay, accuracy gate, coefficient identity, and the release the earlier paper tags named) |
+| Earlier kernel revisions named by records | v5.0.0 (first and second sweeps, bridge provenance); v5.1.1 (9,353-argument record, seed-spliced, held-out, Chebyshev recount); v5.2.5 and v5.2.6 (certificate; coefficient-count core and sensitivity sweeps); v5.3.1 (exact-tag replay, accuracy gate, coefficient identity, and the release the earlier study tags named) |
 
 Each record's own `provenance.json` names the revision it was measured at. That
 name is the record's provenance, not a current reference.
@@ -74,12 +75,12 @@ this affects.
 
 ## Environments
 
-| Paper | Compilers and toolchains | Python and numerical stack | CUDA |
+| Study | Compilers and toolchains | Python and numerical stack | CUDA |
 | --- | --- | --- | --- |
-| A | MSVC 19.51.36260 for x64 (14.51.36231), `/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2`; GCC 15, C++23, for the CI smoke build | Python 3.14.7, mpmath 1.4.1 | no record is a GPU run |
-| B | MSVC 14.5 (Visual Studio 18) for the Boost gate, C++17; gcc 15.2 on WSL Ubuntu for crlibm; C++23 and CMake 3.20 or newer for the composition audit | Python 3.10 or newer; mpmath 1.4.1; gmpy2 2.3.1 linked to MPFR 4.2.2 | the CUDA source was inspected, not run on a named device; no GPU measurement |
-| C | none for the counts | Python 3.14.7 (MSC v.1944, 64-bit); mpmath 1.4.1; numpy 2.5.2; scipy 1.18.1; baryrat 2.1.2; gmpy2 2.3.1; `math.fma` present | none |
-| D | MSVC 19.51.36260 for x64 (14.51.36231), C++17; CMake 4.4.2; Git 2.55.0; claimgate 0.1.0 | none | none |
+| Route comparison | MSVC 19.51.36260 for x64 (14.51.36231), `/nologo /std:c++latest /O2 /EHsc /fp:precise /arch:AVX2`; GCC 15, C++23, for the CI smoke build | Python 3.14.7, mpmath 1.4.1 | no record is a GPU run |
+| Gate audit | MSVC 14.5 (Visual Studio 18) for the Boost gate, C++17; gcc 15.2 on WSL Ubuntu for crlibm; C++23 and CMake 3.20 or newer for the composition audit | Python 3.10 or newer; mpmath 1.4.1; gmpy2 2.3.1 linked to MPFR 4.2.2 | the CUDA source was inspected, not run on a named device; no GPU measurement |
+| Coefficient count | none for the counts | Python 3.14.7 (MSC v.1944, 64-bit); mpmath 1.4.1; numpy 2.5.2; scipy 1.18.1; baryrat 2.1.2; gmpy2 2.3.1; `math.fma` present | none |
+| Composition | MSVC 19.51.36260 for x64 (14.51.36231), C++17; CMake 4.4.2; Git 2.55.0; claimgate 0.1.0 | none | none |
 
 The records were made with the packages above. Install the Python stack into
 the interpreter the commands use:
@@ -93,10 +94,10 @@ Windows 11 (10.0.26200) on AMD64.
 
 A command that uses `python -I` ignores the user site: its packages must be in
 the interpreter's own site-packages, so install without `--user`, or run the
-script without `-I`. The certificate commands and the Paper B recount use
+script without `-I`. The certificate commands and the gate-audit recount use
 `python -I`; every other command here runs without it.
 
-## Paper A
+## Route-comparison study
 
 Records: `amplification-sweeps/` (the two sweeps, certificate, strengthening,
 seed-spliced, held-out, held-out-v531, surrogate-control, apriori-bound,
@@ -169,7 +170,7 @@ reports 13 of 13 identical and exits 0 in the delivered state.
 was still present; it reports the same 13 of 13, and the 13th digest is in
 `digests.txt`.
 
-The interval/enclosure record recomputes the paper model and scores the
+The interval/enclosure record recomputes the study model and scores the
 deposited and enclosure rules from the deposited first- and second-sweep,
 held-out and certified-bound records. From
 `amplification-sweeps/interval-enclosure`:
@@ -183,7 +184,7 @@ and the per-case `work/` outputs byte-identical to the deposit. No boys
 checkout is read; `BOYS_HARNESS` optionally names this clone.
 
 The two input lists, from `boys-crossover/r4-and-9353`: the script's second
-argument is the paper tree, and the three files it reads are deposited, so
+argument is the study tree, and the three files it reads are deposited, so
 build the stand-in first.
 
 ```sh
@@ -196,7 +197,7 @@ cp "$HARNESS/amplification-sweeps/product-amplification/first-sweep-9353/sweeps/
 python extract_and_verify.py "$BOYS" paper-inputs "$HARNESS/amplification-sweeps"
 ```
 
-The three paper-tree inputs are the same bytes deposited as
+The three study-tree inputs are the same bytes deposited as
 `amplification-sweeps/amplification-form/data/{grid,reference}.csv` and
 `amplification-sweeps/product-amplification/first-sweep-9353/sweeps/product_amplification/data/grid.csv`.
 The script writes its outputs beside itself; run it in a copy if the deposit
@@ -252,19 +253,20 @@ Missing artifacts:
 - The cc-pVTZ and benzene dense tensors and argument streams: not deposited;
   the probe regenerates them (about twenty minutes per tensor).
 
-Finite-grid versus continuous: all of Paper A's checks are finite-grid. The
-certificate validates 55,176 entry-cells and 132 band comparisons; it is
+Finite-grid versus continuous: all of the route-comparison study's checks are
+finite-grid. The certificate validates 55,176 entry-cells and 132 band
+comparisons; it is
 conditional and makes no continuum claim. The residual lemma is derived, and
 the probe checks its premises on the two grids. The replay is byte identity on
 the finite records.
 
-## Paper B
+## Gate audit
 
 Records: `accuracy-claim-audit/` (the coverage enumeration, the captured cell
 summary, the Boost.Math and crlibm audits, the taxonomy testbed and the libint2
 accuracy comparison), `composition-audit/`, and `chemistry-bridge/` where the
-program paper cites the bridge. The accuracy gate's records and reference grids
-are in the `boys` repository at `v5.3.1`.
+campaign's program study cites the bridge. The accuracy gate's records and
+reference grids are in the `boys` repository at `v5.3.1`.
 
 Commands:
 
@@ -350,7 +352,8 @@ Missing artifacts:
 - The un-deposited kernel grid: the gate's 25-significant-digit and 45-digit
   reference grids, and the generators that reproduce them, are committed in the
   `boys` repository at `v5.3.1`, not in this harness deposit. The 45-digit grid
-  is also the R4 source used by Paper A and Paper C.
+  is also the R4 source used by the route-comparison study and the
+  coefficient-count study.
 - The external audit sources: Boost.Math 1.92.0 (archive SHA-256
   `c4a3b310ddd2472416e091067166b0713be97c63f38c212c484ada022fd296ce`)
   and crlibm 1.0beta5 (archive SHA-256
@@ -359,14 +362,14 @@ Missing artifacts:
 - The libint2 2.13.1 install tree and the Linux x86-64 g++ are external; the
   comparison record carries the probe source, digests, TSVs and logs. The
   recorded command log names the measurement tree's paths.
-- The program demonstration record is in the submission package, not the
-  harness.
+- The campaign's program demonstration record is in the submission package,
+  not the harness.
 
 Finite-grid versus continuous: the gate's verdicts are conformance at committed
 grid points and make no statement between them. The audit's claims are measured
 on the pinned grids. No continuous statement is made.
 
-## Paper C
+## Coefficient-count study
 
 Records: `coefficient-count-sweep/` (the core, ladder, stability,
 re-certification, second-edge, second-instance, F1, third-edge, shipped-seed,
@@ -448,7 +451,7 @@ Missing artifacts:
 - The historical 24-coefficient ladder cell: at width `2^5` and target
   `1e-15`, the corrected record stores 25 `[22/2]` against the historical 24
   `[21/2]`. The historical record carries no fitted coefficients, so its 24
-  cannot be re-evaluated at 60 digits; the paper records it as an unresolved
+  cannot be re-evaluated at 60 digits; the study records it as an unresolved
   historical comparison.
 - The `baryrat` 2.1.2 solver: the independent-solver records are copied
   records, not regenerated.
@@ -463,7 +466,7 @@ interval-wide denominator bounds for all 98 accepted rational fits in the
 corrected x0, second-edge a2 and 60-digit control records. Continuous-error
 certification beyond that is not claimed.
 
-## Paper D
+## Composition study
 
 Records: `composition-audit/second-instance/` (the three-axis and four-axis
 fractional designs, their full-factorial coefficients, certificates and
@@ -505,17 +508,17 @@ continuum statement is made.
 
 ## Consumers
 
-The paper-side gates that consume these records are manuscript tools, not part
+The study-side gates that consume these records are campaign tools, not part
 of this deposit. Their paths and SHA-256 as of this release:
 
-| Paper | Tool | SHA-256 |
+| Study | Tool | SHA-256 |
 | --- | --- | --- |
-| A | `tools/check_paper_numbers.py` | `25867469f6eb41e8cf824ec9f1d0ba6b466dafd892b162f764bb75bbb0079c39` |
-| B | `tools/check_source_facts.py --boys "$BOYS"` | `2cd153750ac5ad9340ee340cb9eae6ba4398453187ddd6be98f9ca51849b7a7b` |
-| C | `tools/check_paper_numbers.py` | `1e7bfe852e16b303921eb28b8dbb1b29d1efa1a672a3df886927308e07268e73` |
-| C | `tools/build_ledger.py` | `1b26b3a69abd62d955bb764b32aebaea226ed9595f7432df644f55388ac79644` |
+| Route comparison | `tools/check_paper_numbers.py` | `25867469f6eb41e8cf824ec9f1d0ba6b466dafd892b162f764bb75bbb0079c39` |
+| Gate audit | `tools/check_source_facts.py --boys "$BOYS"` | `2cd153750ac5ad9340ee340cb9eae6ba4398453187ddd6be98f9ca51849b7a7b` |
+| Coefficient count | `tools/check_paper_numbers.py` | `1e7bfe852e16b303921eb28b8dbb1b29d1efa1a672a3df886927308e07268e73` |
+| Coefficient count | `tools/build_ledger.py` | `1b26b3a69abd62d955bb764b32aebaea226ed9595f7432df644f55388ac79644` |
 
-They read each paper's own tree and its `tools/ledger.json`; an outsider
+They read each study's own tree and its `tools/ledger.json`; an outsider
 cannot run them without that workspace. The deposited records they check are
 named above. The digest names the revision this manifest was written against,
 not a file in this deposit.
