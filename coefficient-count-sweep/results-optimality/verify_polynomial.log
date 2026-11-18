@@ -1,0 +1,6 @@
+verifying certificate_polynomial_paper_cell.json
+degree 16 dVP: nodes=18 alternating=True delta=2.212570e-13 (4.43 x target)
+degree 17 grid (70-digit): max|err| in [4.042273e-14, 4.042273e-14] meets=True
+degree 17 grid (binary64): max|err| in [4.043317e-14, 4.043317e-14] meets=True
+PASS in 50.4s
+POLYVERIFY_EXIT=0

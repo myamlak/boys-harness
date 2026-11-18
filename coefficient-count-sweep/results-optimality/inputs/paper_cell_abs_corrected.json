@@ -1,0 +1,56 @@
+{
+ "schema": "paper-c-optimality-input-cell-1",
+ "meta": {
+  "source": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\results-corrected\\corrected-counts.json",
+  "sha256": "9bb8ac0633b10e8a7922684ca8a419135103f2c7825b4d06b9c71603399b7195",
+  "width_name": "paper",
+  "target": "abs:5e-14"
+ },
+ "cells": [
+  {
+   "target": "abs:5e-14",
+   "width": "17.089489586712254",
+   "width_name": "paper",
+   "corrected_count": 12,
+   "pair": [
+    5,
+    6
+   ],
+   "delivered_2001": 1.0158540675320182e-14,
+   "delivered_4001": 1.0158540675320182e-14,
+   "guard": 0.0341595927631431,
+   "guard_2001": 0.0341595927631431,
+   "guard_4001": 0.0341595927631431,
+   "best_below": 4.0745185003743245e-13,
+   "below_ratio": 8.149037000748649,
+   "best_below_pair": [
+    5,
+    5
+   ],
+   "route": "default",
+   "witness_converged": false,
+   "meets_4001": true,
+   "count_lowered_by_tightened": false,
+   "margin_limited": true,
+   "paper_rat_stored": 12,
+   "witness_P": [
+    "0.19599983536275146",
+    "0.27689192434658276",
+    "0.14800974592717368",
+    "0.035296907336204702",
+    "0.0034474327399948316",
+    "9.3280177580719387e-5",
+    "-1.4022420346373808e-16"
+   ],
+   "witness_Q": [
+    "1.0",
+    "1.6216883038676362",
+    "1.0285371190046554",
+    "0.31160944431938841",
+    "0.043987715773656882",
+    "0.0023299233874236939",
+    "2.039068315011345e-5"
+   ]
+  }
+ ]
+}

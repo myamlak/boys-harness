@@ -1,0 +1,7 @@
+C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\baryrat.py:931: RuntimeWarning: divide by zero encountered in scalar divide
+  deviation = max_err / local_max.min() - 1
+synthetic wide-cell probe: [15/12] stored 28, W=4775037961972879/250000000000000 (ship width)
+warning: BRASIL did not converge; dev=6.0, err=3.89e-16
+BRASIL: converged=False dev=6.000e+00 5.9s
+certify_type: certified=False pole_free=False nodes=0 delta=None 6.2s
+BENCH_EXIT=1

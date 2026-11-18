@@ -1,0 +1,40 @@
+started_utc=2026-11-18T21:15:31Z
+command=python -I make_certificate.py
+audit_sha256=18a41a42798f0cd1fead4a143309ded3112d1bba94727b093bf27df02e3256e7
+corrected_sha256=9bb8ac0633b10e8a7922684ca8a419135103f2c7825b4d06b9c71603399b7195
+[     0.0s] audit   C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-corrected\corrected-counts-60dig.json  sha256=18a41a42798f0cd1fead4a143309ded3112d1bba94727b093bf27df02e3256e7
+[     0.0s] corrected C:\Users\myaml\dev\papers-c-v5\papers\coefficient-counts\results-corrected\corrected-counts.json  sha256=9bb8ac0633b10e8a7922684ca8a419135103f2c7825b4d06b9c71603399b7195
+[     0.1s] cell width=17.089489586712254 a=11.899848152108484 target=abs:5e-14
+[     0.1s] stored pair [5/6] nominal count 12
+[     0.1s] nominal P length 6, Q length 7; witness 7/7
+[     0.1s] exact grid check on paper_W (267023274792379/15625000000000) ...
+[    31.2s]   paper_W: max |err| in [1.023324e-14, 1.023324e-14] meets=True
+[    31.2s] exact grid check on record_W (8544744793356127/500000000000000) ...
+[    77.1s]   record_W: max |err| in [1.023293e-14, 1.023293e-14] meets=True
+[   105.9s] binary64 stored nominal truncation: max |err| in [9.769346e-15, 9.769346e-15] meets=True
+[   105.9s] rounding budget: the record's binary64 Horner evaluation of this fit is 9.936496070395151e-15; a conservative few-ulp Horner budget is O(1e-14), so the meeting cannot be overturned by evaluation rounding
+[   105.9s] recorded stored-11 types: [(1, 9), (2, 8), (3, 7), (4, 6), (5, 5), (6, 4), (7, 3), (8, 2), (9, 1)]
+[   105.9s] certifying recorded below-count [1/9] (stored 11, need 12 alternations)
+[   110.9s]   certified=True pole_free=True delta=1.380585e-11 (276.117029 x target) nodes=12
+[   110.9s] certifying recorded below-count [2/8] (stored 11, need 12 alternations)
+[   116.6s]   certified=True pole_free=True delta=1.276121e-11 (255.224182 x target) nodes=12
+[   116.6s] certifying recorded below-count [3/7] (stored 11, need 12 alternations)
+[   121.5s]   certified=True pole_free=True delta=1.121254e-12 (22.425088 x target) nodes=12
+[   121.5s] certifying recorded below-count [4/6] (stored 11, need 12 alternations)
+[   125.5s]   certified=True pole_free=True delta=4.812850e-13 (9.625699 x target) nodes=12
+[   125.5s] certifying recorded below-count [5/5] (stored 11, need 12 alternations)
+[   129.4s]   certified=True pole_free=True delta=4.073395e-13 (8.146790 x target) nodes=12
+[   129.4s] certifying recorded below-count [6/4] (stored 11, need 12 alternations)
+[   133.9s]   certified=True pole_free=True delta=6.779747e-13 (13.559493 x target) nodes=12
+[   133.9s] certifying recorded below-count [7/3] (stored 11, need 12 alternations)
+[   141.7s]   certified=True pole_free=True delta=2.482697e-12 (49.653949 x target) nodes=12
+[   141.7s] certifying recorded below-count [8/2] (stored 11, need 12 alternations)
+[   147.2s]   certified=True pole_free=True delta=1.393663e-11 (278.732651 x target) nodes=12
+[   147.2s] certifying recorded below-count [9/1] (stored 11, need 12 alternations)
+[   152.0s]   certified=True pole_free=True delta=1.377386e-11 (275.477159 x target) nodes=12
+[   152.0s] solving search-excluded endpoint [10/0] with BRASIL ...
+[   159.4s]   certified=True delta=3.847030e-09 (76940.597347 x target)
+[   159.4s] solving search-excluded endpoint [0/10] with BRASIL ...
+[   166.7s]   certified=True delta=1.245162e-10 (2490.324489 x target)
+conclusion={"rational_minimum_stored_count": 12, "recorded_family_certified": true, "beyond_search_certified": true, "stored_fit_meets": true, "rounding_budget": "lower bound: exact rational arithmetic, no rounding budget needed. Upper bound: exact evaluation of the stored binary64 coefficients; the record's binary64 Horner value is 9.936496070395151e-15 and a conservative few-ulp Horner budget is below 1.1e-14, leaving the meeting intact.", "all_recorded_types_exceed_target": true, "weakest_type": "recorded below-count [5/5]", "weakest_delta": "4.073395e-13", "weakest_delta_over_target": "8.146790", "scope": "all rationals of stored count <= 11 whose pairs are admissible in the paper's search (m>=1, k>=1, k<=12); the endpoint types [0/10] and [10/0] are certified separately as search-excluded extras", "proof": "de la Vallee Poussin: if F_0 - r has m+k+2 alternating signs of magnitude > eps, no rational R of type (m,k) can satisfy |F_0 - R| <= eps, since R - r would have m+k+1 zeros but numerator degree at most m+k. Padding the numerator embeds every lower-count pair in a count-11 type."}
+defects=[]
