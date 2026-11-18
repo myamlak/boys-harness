@@ -1,0 +1,61 @@
+== exp_check on second-platform probe ==
+arguments 9541
+worst |delta|/ref in 2^-53 units: 0.988081126378 at x = 11.084208097312864
+worst relative: 1.0969904167e-16
+arguments above 0.5 unit: 2582 above 1 unit: 0
+python math.exp mismatches: 0
+half-scaling mismatches: 0
+conditional eta_E <= 2^-52 supported: True
+exp_check exit=0
+
+== exp_check on deposited probe (control) ==
+arguments 9541
+worst |delta|/ref in 2^-53 units: 0.999662996081 at x = 11.084208097312864
+worst relative: 1.10984887511e-16
+arguments above 0.5 unit: 2585 above 1 unit: 0
+python math.exp mismatches: 37
+half-scaling mismatches: 0
+conditional eta_E <= 2^-52 supported: True
+deposited control exit=0
+
+== bit comparison ==
+arguments 9541 9541 only_deposited 0 only_second 0
+exp bits differ 37 half bits differ 37 max bit difference 1
+  x=4.2931804248658892e-09 deposited=3feffffffdb1f324 second=3feffffffdb1f325 diff=1
+  x=1e-08 deposited=3feffffffaa19c47 second=3feffffffaa19c48 diff=1
+  x=0.041869537617584829 deposited=3feeb0160a9aa1d0 second=3feeb0160a9aa1cf diff=1
+  x=1.5590366116438534 deposited=3fcaec602881bbb3 second=3fcaec602881bbb2 diff=1
+  x=1.9917591617705526 deposited=3fc1775ce8d22122 second=3fc1775ce8d22121 diff=1
+  x=2.1295382557362106 deposited=3fbe6fb7c463f1fe second=3fbe6fb7c463f1ff diff=1
+  x=3.5269569474266844 deposited=3f9e19854153e56a second=3f9e19854153e569 diff=1
+  x=3.5821564383666411 deposited=3f9c7bb4b9f89266 second=3f9c7bb4b9f89265 diff=1
+  x=3.8087648748569882 deposited=3f96b5301418c200 second=3f96b5301418c1ff diff=1
+  x=3.849459131867397 deposited=3f95cd5f8a01bb4c second=3f95cd5f8a01bb4b diff=1
+  x=4.1197519368572593 deposited=3f90a3755ec7c804 second=3f90a3755ec7c803 diff=1
+  x=4.1784531951006771 deposited=3f8f613d7cc6bc96 second=3f8f613d7cc6bc95 diff=1
+  x=5.7930413123301561 deposited=3f68f994373ad85b second=3f68f994373ad85a diff=1
+  x=5.945858172307557 deposited=3f656f8668a79cba second=3f656f8668a79cb9 diff=1
+  x=5.9506599600750114 deposited=3f65553cff015358 second=3f65553cff015357 diff=1
+  x=5.9525707001173522 deposited=3f654ad02f578860 second=3f654ad02f578861 diff=1
+  x=6.3001289862819156 deposited=3f5e1506eec101a0 second=3f5e1506eec1019f diff=1
+  x=6.4653279542392017 deposited=3f59805a72ce34be second=3f59805a72ce34bd diff=1
+  x=6.5251608763758924 deposited=3f580532eca33714 second=3f580532eca33715 diff=1
+  x=6.7687057989823902 deposited=3f52d403a9010ae4 second=3f52d403a9010ae3 diff=1
+  x=6.8156845129019787 deposited=3f51f6d012d19e30 second=3f51f6d012d19e2f diff=1
+  x=7.0276408694349346 deposited=3f4d10e10ea545c6 second=3f4d10e10ea545c7 diff=1
+  x=7.2166071313079776 deposited=3f480faaca950a31 second=3f480faaca950a32 diff=1
+  x=7.2863328040742381 deposited=3f4670cfb33e9bcc second=3f4670cfb33e9bcd diff=1
+  x=8.3583650228554962 deposited=3f2eba1334ffd850 second=3f2eba1334ffd84f diff=1
+  x=9.041095568691798 deposited=3f1f0c70f936010a second=3f1f0c70f936010b diff=1
+  x=9.2125045142421875 deposited=3f1a2860f872ded0 second=3f1a2860f872ded1 diff=1
+  x=9.2459885411992477 deposited=3f194bde9358ed36 second=3f194bde9358ed37 diff=1
+  x=10.02887593288049 deposited=3f0720096b031a73 second=3f0720096b031a72 diff=1
+  x=10.147990623856185 deposited=3f0487408828d801 second=3f0487408828d800 diff=1
+  x=10.200284878430882 deposited=3f037b7ea40dae2e second=3f037b7ea40dae2d diff=1
+  x=10.624449387758967 deposited=3ef97ecc26b5a567 second=3ef97ecc26b5a566 diff=1
+  x=10.981793460686053 deposited=3ef1d5b3c0c1488b second=3ef1d5b3c0c1488a diff=1
+  x=11.084208097312864 deposited=3ef019413a6135f8 second=3ef019413a6135f9 diff=1
+  x=11.360263861161261 deposited=3ee86e2c918400d1 second=3ee86e2c918400d0 diff=1
+  x=11.538825404703665 deposited=3ee46f71f31091be second=3ee46f71f31091bd diff=1
+  x=11.899847920335612 deposited=3edc7c4024d94ac4 second=3edc7c4024d94ac3 diff=1
+compare exit=0

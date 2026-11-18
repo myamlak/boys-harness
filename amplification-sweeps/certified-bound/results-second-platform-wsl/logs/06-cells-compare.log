@@ -1,0 +1,50 @@
+== cells.csv cell-by-cell comparison ==
+rows 27588 27588 keys equal True
+recursed entries differ 70 of 27588 max ulp 4782468
+direct entries differ 0 of 27588 max ulp 0
+cells with both entries differing 0
+arguments with any differing entry 5
+  A1 x=1e-08 n=0 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=1 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=2 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=3 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=4 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=5 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=6 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=8 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=9 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=10 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=11 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=13 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=14 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=16 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=17 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=18 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=19 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=20 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=21 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=23 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=24 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=25 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=27 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=28 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=29 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=30 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1e-08 n=31 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1.5590366116438534 n=1 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1.5590366116438534 n=2 recursed_diff=True(2 ulp) direct_diff=False(0 ulp)
+  A1 x=1.5590366116438534 n=3 recursed_diff=True(9 ulp) direct_diff=False(0 ulp)
+  A1 x=1.5590366116438534 n=4 recursed_diff=True(19 ulp) direct_diff=False(0 ulp)
+  A1 x=1.9917591617705526 n=1 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1.9917591617705526 n=2 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1.9917591617705526 n=3 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A1 x=1.9917591617705526 n=4 recursed_diff=True(6 ulp) direct_diff=False(0 ulp)
+  A2 x=7.0276408694349346 n=9 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A2 x=7.0276408694349346 n=10 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A2 x=7.0276408694349346 n=11 recursed_diff=True(1 ulp) direct_diff=False(0 ulp)
+  A2 x=7.0276408694349346 n=12 recursed_diff=True(2 ulp) direct_diff=False(0 ulp)
+  A2 x=7.0276408694349346 n=13 recursed_diff=True(8 ulp) direct_diff=False(0 ulp)
+compare exit=0
+
+== admission.csv byte comparison ==
+cmp exit=0

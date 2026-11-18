@@ -1,0 +1,233 @@
+Second-platform measurement of the Paper A certified bound
+==========================================================
+
+Platform
+--------
+WSL2, Ubuntu 26.04 LTS, kernel 6.18.33.2-microsoft-standard-WSL2, x86_64.
+CPU Intel Core i7-9850H @ 2.60 GHz, 12 logical processors, 15 GiB RAM.
+GCC/G++ 15.2.0 (Ubuntu 15.2.0-16ubuntu1), binutils 2.46.
+glibc 2.43 (Ubuntu GLIBC 2.43-2ubuntu2.4); libm is /lib/x86_64-linux-gnu/libm.so.6
+from libc6 2.43-2ubuntu2.4.
+Python 3.14.4, mpmath 1.4.1 (user site).
+Kernel: /home/myamlak/a-second-platform, a detached checkout at tag v5.3.2,
+commit 6739447d82765ae5f7f68351a99f418cd018dd9a, working tree clean; reused as
+delivered, not rebuilt.  boys_coefficients.hpp sha256 d978d88b... (the record's
+"v5.2.5 / v5.2.6" content identity), boys_coefficients_d_coarse_cheb.hpp
+7af73817... (the record's FIT_D_DIGEST).
+
+The sweep programs are header-only at this API: they compile against
+include/boys and link nothing, so only the tag's headers were used.
+
+All work is beneath /mnt/c/Users/myaml/dev/_a-second-platform (W).
+The deposit copies were read-only inputs; no paper, harness or boys file was
+edited.
+
+Commands and exit codes
+-----------------------
+(exit codes are the process exit codes captured in the named logs)
+
+ 1. Environment capture (W):
+      { uname -a; cat /etc/os-release; gcc --version; g++ --version; ld --version;
+        ldd --version; getconf GNU_LIBC_VERSION; ls -l .../libm.so.6;
+        dpkg-query -W libc6; grep model name /proc/cpuinfo; nproc; free -h;
+        python3 --version; python3 -c 'import mpmath...';
+        cd /home/myamlak/a-second-platform; git describe --tags --exact-match;
+        git rev-parse HEAD; git status --porcelain; sha256sum <headers>;
+        sha256sum <harness sources and inputs>; } > logs/00-environment.txt
+    exit 0.  -> logs/00-environment.txt
+
+ 2. Exponential probe build (W):
+      g++ -std=c++23 -O2 -ffp-contract=off -fno-fast-math \
+          -o exp-run/exp_probe certified-bound/exp/exp_probe.cpp
+    exit 0.  -> logs/01-exp-build-run.log
+
+ 3. Probe input bits (W), from the deposited probe output:
+      cut -d" " -f1 certified-bound/exp/exp_bits.txt > exp-run/xbits_in.txt
+    exit 0; 9,541 arguments.  -> logs/01-exp-build-run.log
+
+ 4. Probe run (W):
+      ./exp-run/exp_probe exp-run/xbits_in.txt exp-run/exp_bits_second_platform.txt
+    exit 0; 9,541 lines.  -> logs/01-exp-build-run.log
+
+ 5. Probe check on this platform (W):
+      python3 certified-bound/exp/exp_check.py \
+          --exp-bits exp-run/exp_bits_second_platform.txt
+    exit 0.  -> logs/02-exp-check.log
+
+ 6. Probe check of the deposited (MSVC/UCRT) bits as control (W):
+      python3 certified-bound/exp/exp_check.py \
+          --exp-bits certified-bound/exp/exp_bits.txt
+    exit 0.  -> logs/02-exp-check.log
+
+ 7. Bit comparison of the two probe outputs (W):
+      python3 tools/compare_exp.py certified-bound/exp/exp_bits.txt \
+          exp-run/exp_bits_second_platform.txt
+    exit 0.  -> logs/02-exp-check.log
+
+ 8. Second-platform sweep build (W):
+      g++ -std=c++23 -O2 -ffp-contract=off -fno-fast-math \
+          -I /home/myamlak/a-second-platform/include \
+          -o build/sweep2 amplification-form/sweep2.cpp
+    exit 0 (two -Wunused-result warnings on the header fgets calls).
+    -> logs/03-sweep-build.log
+
+ 9. Second-platform sweep run (W/amplification-form):
+      "$W/build/sweep2" --grid data/grid.csv --fits data/fits.csv \
+          --paths results/paths.csv --cells results/cells.csv \
+          --admission results/admission.csv
+    exit 0; 42.59 s, 4,920 KB max RSS; 27,589 cells.csv lines,
+    837 admission.csv lines, 3,004,443 paths.csv lines.
+    -> logs/04-sweep-run.log
+
+10. Cell-by-cell comparison with the deposited sweep (W):
+      python3 tools/compare_cells.py deposit-ref/cells.csv \
+          amplification-form/results/cells.csv
+    exit 0.  -> logs/06-cells-compare.log
+    admission.csv comparison: cmp deposit-ref admission.csv, exit 0,
+    byte-identical.  -> logs/06-cells-compare.log
+
+11. Sweep reduction to per_order.csv, deposited analyze.py (W/amplification-form):
+      python3 analyze.py --tree . --boys-tree /home/myamlak/a-second-platform
+    exit 0; 44 s.  -> logs/05-analyze.log
+
+12. per_order.csv comparison (W):
+      python3 tools/compare_per_order.py deposit-ref/per_order.csv \
+          amplification-form/results/per_order.csv
+    exit 0.  -> logs/07-per-order-compare.log
+
+13. Certified bound on the second-platform sweep (W/certified-bound):
+      python3 code/certify.py --kernel /home/myamlak/a-second-platform \
+          --sweep ../amplification-form \
+          --model-record inputs/model-record \
+          --exp-bits ../exp-run/exp_bits_second_platform.txt \
+          --out results-second-platform
+    exit 0; 15 s.  (No -I: isolated mode hides the user-site mpmath on this
+    machine; the scripts insert their own code directory themselves.)
+    -> logs/08-certify.log
+
+14. Harness commitment pass, first attempt (W/certified-bound):
+      python3 explore/harnesscells.py --kernel /home/myamlak/a-second-platform \
+          --sweep "$W/amplification-form" --model-record inputs/model-record \
+          --deposit "$W/apriori-bound" \
+          --exp-bits "$W/exp-run/exp_bits_second_platform.txt" \
+          --out results-second-platform
+    exit 1: the deposit's apriori-bound/coeffs.py hard-codes the Windows path
+    C:/Users/myaml/dev/bladawiec/external/boys/include/boys, which does not
+    exist under WSL.  No file was changed.
+    -> logs/09a-harnesscells-first-attempt.log
+
+15. Compatibility path for that hard-coded read (W):
+      mkdir -p "$W/coeffs-root/C:/Users/myaml/dev/bladawiec/external/boys/include"
+      ln -s /home/myamlak/a-second-platform/include/boys \
+            "$W/coeffs-root/C:/Users/myaml/dev/bladawiec/external/boys/include/boys"
+    exit 0.  The deposit is then read via its own path, resolving to the
+    v5.3.2 headers; no deposit file is edited.
+
+16. Harness pass rerun from coeffs-root, before the exact-CSV input was added:
+      cd "$W/coeffs-root"
+      python3 "$W/certified-bound/explore/harnesscells.py" \
+          --kernel /home/myamlak/a-second-platform \
+          --sweep "$W/amplification-form" --model-record "$W/.../model-record" \
+          --deposit "$W/apriori-bound-noexact" \
+          --exp-bits "$W/exp-run/exp_bits_second_platform.txt" \
+          --out "$W/certified-bound/results-second-platform"
+    exit 0; every printed number as below, but the exact-CSV cross-check line
+    read "0 max None" because that input had not been copied.  Superseded.
+    -> logs/09b-harnesscells-noexact.log
+
+17. Copy the deposit's exact-CSV input (W):
+      cp .../apriori-bound/exact_amplification_form.csv apriori-bound/
+    exit 0.
+
+18. Harness pass, final (same command as 16 with --deposit "$W/apriori-bound"):
+    exit 0.  -> logs/09-harnesscells.log
+
+19. Record-vs-record comparison (W):
+      python3 tools/compare_records.py deposit-ref \
+          certified-bound/results-second-platform
+    exit 0.  -> logs/11-record-compare.log
+    cmp deposit-ref/harness_cells.csv .../harness_cells.csv: exit 0.
+    cmp deposit-ref/band_cert.csv .../band_cert.csv: exit 0.
+    cmp deposit-ref/model_cells.csv .../model_cells.csv: exit 0.
+
+20. CR-normalized log comparison (W):
+      tr -d '\r' < deposit-ref/certify.log | diff - <our certify log lines>
+      tr -d '\r' < deposit-ref/harness.log | diff - <our harness log lines>
+    exit 0 for both (the deposited logs carry CRLF; the text is identical).
+    -> logs/13-log-summary-compare.log
+
+21. Paper statistics from the produced records (W):
+      python3 tools/paper_stats.py certified-bound/results-second-platform
+    exit 0.  -> logs/12-stats.log
+
+22. summary.json comparison (W, python):
+    exit 0; every top-level field and every obstruction field identical.
+    -> logs/13-log-summary-compare.log
+
+23. Margin at changed cells (W):
+      python3 tools/changed_cells.py deposit-ref \
+          certified-bound/results-second-platform
+    exit 0.  -> logs/14-margin.log
+
+24. Kernel checkout integrity (W):
+      cd /home/myamlak/a-second-platform; git describe --tags --exact-match;
+      git status --porcelain
+    exit 0; v5.3.2; zero porcelain lines.  -> logs/14-margin.log
+
+Artifact paths (all beneath W)
+------------------------------
+Run records:
+  amplification-form/results/cells.csv          55,176 delivered entries
+  amplification-form/results/admission.csv
+  amplification-form/results/per_order.csv      132 band/order/method rows
+  amplification-form/results/paths.csv          intermediate, 3,004,443 rows
+  certified-bound/results-second-platform/cells_cert.csv    55,176 rows
+  certified-bound/results-second-platform/band_cert.csv     132 rows
+  certified-bound/results-second-platform/model_cells.csv   132 rows
+  certified-bound/results-second-platform/harness_cells.csv 65 rows
+  certified-bound/results-second-platform/summary.json
+  exp-run/exp_bits_second_platform.txt          9,541 probe arguments
+  exp-run/xbits_in.txt
+Logs:
+  logs/00-environment.txt
+  logs/01-exp-build-run.log
+  logs/02-exp-check.log
+  logs/03-sweep-build.log
+  logs/04-sweep-run.log
+  logs/05-analyze.log
+  logs/06-cells-compare.log
+  logs/07-per-order-compare.log
+  logs/08-certify.log
+  logs/09a-harnesscells-first-attempt.log
+  logs/09b-harnesscells-noexact.log
+  logs/09-harnesscells.log
+  logs/10-cells-detail.log
+  logs/11-record-compare.log
+  logs/12-stats.log
+  logs/13-log-summary-compare.log
+  logs/14-margin.log
+  logs/15-artifact-digests.txt
+Scripts:
+  tools/compare_exp.py, tools/compare_cells.py, tools/cells_detail.py,
+  tools/compare_per_order.py, tools/compare_records.py, tools/paper_stats.py,
+  tools/changed_cells.py
+Comparison inputs (copies of the deposited record):
+  deposit-ref/cells.csv, per_order.csv, harness_cells.csv, band_cert.csv,
+  model_cells.csv, certify.log, harness.log, summary.json
+
+Result in one paragraph
+-----------------------
+The full 55,176-entry comparison runs on the second platform and reproduces
+the deposited record: 0 bound violations, worst |r|/C 0.71875 at
+(A1, 0, 24, ship), 264/264 population bands inside, all 132 band comparisons
+overlap (the band_cert.csv file is byte-identical), 65/65 commitments overlap,
+49 truncation-agreeing and 16 truncation-opposite, loser C/|t| medians 83.29
+over the 59 recursed losers and 13.31 over the six direct losers, required
+factor median 85.23 over the 49 agreeing comparisons, range 9.00 to 3937.69.
+The delivered doubles differ from the Windows/MSVC record at 70 of 55,176
+entries (all recursed, five arguments, largest relative difference 9.4e-10),
+every one traceable to a one-ulp glibc-versus-UCRT exponential difference;
+all 27,588 direct entries are bit-identical.  two per_order at_x rows move
+(A1 absolute orders 18 and 29, both abstentions), which leaves the commitment
+cell set, harness_cells.csv, band_cert.csv and model_cells.csv byte-identical
+to the deposited record.
