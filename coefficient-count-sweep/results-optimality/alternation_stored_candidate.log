@@ -1,0 +1,6 @@
+located 13 extrema, 13 alternating (need 13)
+type-(5,6) exact dVP lower bound: 9.050746e-15
+alternating: True, nodes: 13
+stored candidate's exact sup at the 13 nodes: 9.770200e-15
+ratio candidate sup / lower bound: 1.079491
+wrote alternation_stored_candidate.json (3.5s)

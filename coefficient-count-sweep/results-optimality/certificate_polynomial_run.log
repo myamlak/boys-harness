@@ -1,0 +1,21 @@
+degree 17: Remez iter=4 E=4.04227e-14 max=4.04227e-14 (82.2s)
+  exact grid: hp=4.042273e-14 meets=True; binary64 coeffs=4.043317e-14 meets=True
+degree 16: Remez iter=4 E=2.21257e-13 max=2.21257e-13 (71.3s)
+  dVP degree 16: ok=True delta=2.212570e-13 (4.43 x target) nodes=18
+wrote certificate_polynomial_paper_cell.json
+{
+ "polynomial_minimum_stored_count": 18,
+ "polynomial_minimum_upper_bound": 18,
+ "degree_17_meets": true,
+ "degree_16_certified_to_fail": true,
+ "paper_chebyshev_count": 19,
+ "note": "The paper's 19 is a Chebyshev-interpolation count, not a polynomial-family minimum; the paper labels it solver-relative."
+}
+verifying certificate_polynomial_paper_cell.json
+degree 16 dVP: nodes=18 alternating=True delta=2.212570e-13 (4.43 x target)
+degree 17 grid (70-digit): max|err| in [4.042273e-14, 4.042273e-14] meets=True
+degree 17 grid (binary64): max|err| in [4.043317e-14, 4.043317e-14] meets=True
+PASS in 81.5s
+POLY_ALL_EXIT=0
+
+[exited with code 0]

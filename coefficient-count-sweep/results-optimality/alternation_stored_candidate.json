@@ -1,0 +1,32 @@
+{
+ "schema": "paper-c-alternation-stored-candidate-1",
+ "pair": [
+  5,
+  6
+ ],
+ "needed_alternations": 13,
+ "located_extrema": 13,
+ "alternating_nodes": 13,
+ "signs": [
+  1,
+  -1,
+  1,
+  -1,
+  1,
+  -1,
+  1,
+  -1,
+  1,
+  -1,
+  1,
+  -1,
+  1
+ ],
+ "dvp_lower_bound": "9.050746e-15",
+ "dvp_lower_num": "90507457599204920150355283",
+ "dvp_lower_den": "10000000000000000000000000000000000000000",
+ "candidate_sup_at_nodes": "9.770200e-15",
+ "sup_over_lower": "1.079491",
+ "target": "5e-14",
+ "note": "The 13-point dVP bound is exact for type (5,6). The gap between it and the stored candidate's sup shows the stored BRASIL fit is near-minimax but not exactly equioscillating; the alternation theorem's equality form does not certify it as the exact type-(5,6) minimax."
+}
