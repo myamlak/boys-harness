@@ -1,0 +1,47 @@
+== record-vs-record comparison ==
+== cells_cert.csv
+  rows 55176 55176 keys and order equal True fields equal True
+  differing rows 83
+   C            diff=25 maxrel=4.025e-16 first ('A1', '1e-08', '0', 'ship'): 4.440892105907162e-16 -> 4.440892105907163e-16
+   e            diff=70 maxrel=1.998e+00 first ('A1', '1e-08', '0', 'ship'): -6.3756631645051878e-17 -> 4.7265670817463777e-17
+   r            diff=70 maxrel=1.998e+00 first ('A1', '1e-08', '0', 'ship'): -6.3756631645051878e-17 -> 4.7265670817463777e-17
+   c_rec        diff=23 maxrel=5.054e-16 first ('A1', '1e-08', '0', 'ship'): 2.220446064056317e-16 -> 2.2204460640563177e-16
+   c_exp        diff=68 maxrel=2.689e-16 first ('A1', '1e-08', '0', 'ship'): 2.2204460418508456e-16 -> 2.2204460418508459e-16
+== band_cert.csv
+  rows 132 132 keys and order equal True fields equal True
+  differing rows 0
+== model_cells.csv
+  rows 132 132 keys and order equal True fields equal True
+  differing rows 0
+== harness_cells.csv
+  rows 65 65 keys and order equal True fields equal True
+  differing rows 0
+compare exit=0
+
+== harness_cells.csv byte comparison ==
+cmp harness exit=0
+
+== harness log vs deposited log ==
+1,9c1,11
+< counts {'committed': 65, 'cert_overlap': 65, 'trunc_agree': 49, 'trunc_opposite': 16}
+< trunc agree 49 opposite 16
+< paper charge/loser |t|: median 50.22395288436263  cert charge/loser |t|: median 83.27064776166068
+< over the 49 agreeing cells:
+<   paper combined charge / gap: median 57.3935567854094581085824114760950486579783376357413010126047   certified combined charge / gap: median 85.2258201558907970820178541308166437117987972893893426286342
+< loser delivered/truncation over all cells: signed median 9.57302184326235 sign-blind median 9.57302184326235
+< loser delivered/truncation over agreeing cells: signed median 6.273856942285998 sign-blind median 6.273856942285998
+< charge violations: cert 0 paper 5
+< exact CSV cross-check: 65 max 1.1671903103190006e-24
+---
+> == harnesscells.py rerun with the exact-CSV input ==
+> counts {'committed': 65, 'cert_overlap': 65, 'trunc_agree': 49, 'trunc_opposite': 16}
+> trunc agree 49 opposite 16
+> paper charge/loser |t|: median 50.22395288436263  cert charge/loser |t|: median 83.27064776166068
+> over the 49 agreeing cells:
+>   paper combined charge / gap: median 57.3935567854094581085824114760950486579783376357413010126047   certified combined charge / gap: median 85.2258201558907970820178541308166437117987972893893426286342
+> loser delivered/truncation over all cells: signed median 9.57302184326235 sign-blind median 9.57302184326235
+> loser delivered/truncation over agreeing cells: signed median 6.273856942285998 sign-blind median 6.273856942285998
+> charge violations: cert 0 paper 5
+> exact CSV cross-check: 65 max 1.1671903103190006e-24
+> harnesscells exit=0
+diff exit=1

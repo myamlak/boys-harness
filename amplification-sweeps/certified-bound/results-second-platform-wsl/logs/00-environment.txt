@@ -1,0 +1,52 @@
+== second-platform environment record ==
+Wed Nov 18 20:26:19 UTC 2026
+
+-- kernel / distro --
+Linux trompek 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 26.04 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04 LTS (Resolute Raccoon)"
+
+-- toolchain --
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+GNU ld (GNU Binutils for Ubuntu) 2.46
+ldd (Ubuntu GLIBC 2.43-2ubuntu2.4) 2.43
+glibc 2.43
+-rw-r--r-- 1 root root 1198376 Sep  3 16:09 /lib/x86_64-linux-gnu/libm.so.6
+libc6:amd64	2.43-2ubuntu2.4
+
+-- CPU / memory --
+model name	: Intel(R) Core(TM) i7-9850H CPU @ 2.60GHz
+cpu MHz		: 2592.008
+12
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       765Mi        13Gi       4.4Mi       1.4Gi        14Gi
+
+-- python --
+Python 3.14.4
+mpmath 1.4.1 /home/myamlak/.local/lib/python3.14/site-packages/mpmath/__init__.py
+
+-- boys kernel --
+v5.3.2
+6739447d82765ae5f7f68351a99f418cd018dd9a
+d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00  include/boys/boys_coefficients.hpp
+7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e  include/boys/boys_coefficients_d_coarse_cheb.hpp
+e2a1a783004191cd76bfc952f56d3a2bece49935722c54fb8aee64553c89b27e  include/boys/version.hpp
+
+-- harness copies (work tree) --
+e6f25d173f1710d8dbb5d61d28d8cb506839e855544dae7f764271c526cd41cd  amplification-form/sweep2.cpp
+672d786cae75906e0d3acd55d4c143a903091f72aab3793820abf150b5dce186  common/replica.hpp
+4e7454492a53cef13b7ce2b98ff10bde0529ac406c105a570193499a69077f20  amplification-form/analyze.py
+5fee3f7930f52e1b982c421e84d2b6e36d97af450b8512508cd9ea5dc7b9f507  amplification-form/data/grid.csv
+ed9d8ea3cebef5bd734962fcb307a36a8729b752feb6eb0fc1a966a397d835e5  amplification-form/data/fits.csv
+514411570e902bc2320932a8ae6200d46e11d950471994c80c2775871f9a528d  amplification-form/data/reference.csv
+ca6917792e4936ec14a929b7fbc53897fdee5eb95934b1cec099afa86215ec9a  certified-bound/code/certify.py
+a6d0c8254f7858a1c79fff0ca16decd29e58bcc39212eb29be1f6d3ffc0e1eb5  certified-bound/explore/harnesscells.py
+
+-- deposited record copies --
+2888ea9a76e9582bd5433e782983f42040d30684b30e786840fba6c477a296e6  deposit-ref/cells.csv
+e1ea8f51e37367ddf1f5814e3538164fba691d6b6c6a5fb73f700463f8d1b656  deposit-ref/per_order.csv
+59fd3052b2d0939fb51edbdd5b9c04280f99d76fb5a72fde2b28ca132a009e72  deposit-ref/harness_cells.csv
+1ecc53f44a18b1acf867812cf00bf74e0f4842abcbc2d925991d09a734d2e368  deposit-ref/band_cert.csv

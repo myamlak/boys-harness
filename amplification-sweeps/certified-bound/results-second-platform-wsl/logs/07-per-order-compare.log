@@ -1,0 +1,6 @@
+== per_order.csv comparison ==
+rows 132 132
+at_x_abs differs ('A1', 18, 'ship') 1e-08 -> 0.072854042586237136 worst 4.3880973891380562e-18 -> 3.9425394863084001e-18
+at_x_abs differs ('A1', 29, 'ship') 1e-08 -> 0.0072854042586237133 worst 3.1549666700714255e-18 -> 2.9029763551138194e-18
+at_x differences 2 worst_abs text differences 2 worst_rel text differences 0
+compare exit=0

@@ -1,0 +1,27 @@
+== CR-normalized log comparisons ==
+-- deposit-ref/certify.log vs logs/08-certify.log
+diff exit=0
+-- deposit-ref/harness.log vs logs/09-harnesscells.log
+diff exit=0
+
+== summary.json comparison ==
+cells same
+modes same
+eps_base same
+max_abs_delivered same
+min_abs_delivered same
+max_C same
+validation same
+model_cell_counts same
+band_counts same
+committed same
+committed_trunc_agree same
+committed_trunc_opposite same
+loser_zero_count same
+loser_zero_agree same
+r_gt_t_count same
+r_gt_t_agree same
+need_factor_median same
+charge_over_t_median same
+obstruction rows 65 65 field differences {}
+summary compare exit=0

@@ -8,6 +8,8 @@ _freeline-scratch/
 !amplification-sweeps/certified-bound/results/
 !amplification-sweeps/certified-bound/results-underflow-fix/
 !amplification-sweeps/certified-bound/results-underflow-fix/**
+!amplification-sweeps/certified-bound/results-second-platform-wsl/
+!amplification-sweeps/certified-bound/results-second-platform-wsl/**
 data/
 sweep1
 sweep2
