@@ -4,6 +4,32 @@ Self-contained certificate artifacts for one cell of Paper C, "Stored
 coefficient counts for the Boys function F_0: rational against Chebyshev
 fits".  Nothing here is inserted into the paper.  This is a deposit for review.
 
+## Correction to the parent deposit
+
+This is a correction deposit.  Its parent is the immutable data tag
+`count-optimality-2026-11-18`.  Two records change:
+
+* `verify_certificate.py` now parses the stored binary64 coefficient strings
+  as binary64 values (`Fraction(float(s))`), matching how the record stores
+  and evaluates them, instead of as exact decimal literals.  The regenerated
+  `verify_certificate.log` reports `9.769346e-15` for the binary64
+  coefficients (exactly `9.76934599056004e-15`, the value recorded in
+  `certificate_rational_paper_cell.json` under
+  `stored_candidate_binary64.exact_grid_check_paper_W.max_error_upper`).
+  The parent deposit's log reported `9.594201e-15`, the result of the
+  decimal-literal parse; the paper quoted that number.
+* `dct/` holds the independent DCT interpolation record:
+  `dct/dct_interpolation_check.py`, its JSON output
+  `dct/dct_interpolation_paper_cell.json`, and its log
+  `dct/dct_interpolation_paper_cell.log`.  They reproduce the degree-17
+  miss (`5.599782e-14`) and the degree-18 meeting (`9.879860e-15`) from
+  F_0 at 60-digit precision on the same cell and grid as the certificate.
+  The parent deposit recorded this comparison only as a README sentence.
+
+The rational certificate JSON, the polynomial certificate JSON and their
+generation logs are unchanged.  The parent tag and its commit are not
+modified.
+
 ## Case
 
 * Function: `F_0(x) = sqrt(pi)/(2 sqrt(x)) erf(sqrt(x))`.
@@ -53,8 +79,9 @@ padding the numerator into one of these types.
 | `[0/10]` (extra) | 11 | 1.245162e-10 | 2490.32 |
 
 The stored 12-coefficient fit meets the target: exact maximum error
-`1.023324e-14` with the 70-digit coefficients, `9.594201e-15` with the
-binary64-stored coefficients, against the record's binary64 Horner value
+`1.023324e-14` with the 70-digit coefficients, `9.769346e-15` with the
+binary64-stored coefficients (the strings evaluated as binary64 values,
+exactly `9.76934599056004e-15`), against the record's binary64 Horner value
 `9.936496e-15`.  Hence 12 is both achievable and necessary.
 
 At this cell the certified 12 also equals the off-diagonal theorem's even
@@ -71,9 +98,10 @@ nodes gives the lower bound `2.212570e-13` (4.43× target), so no degree-16
 polynomial meets.  The all-polynomial minimum is therefore exactly 18.
 
 The paper's Chebyshev-interpolation count of 19 is the interpolation solver's
-minimum, not the polynomial-family minimum: the degree-17 DCT interpolant
-misses at `5.60e-14` in the pilot's independent DCT check, while the degree-18
-interpolant meets.  The paper already labels this count solver-relative.
+minimum, not the polynomial-family minimum: the independent DCT check in
+`dct/` gives a degree-17 miss at `5.599782e-14` and a degree-18 meeting at
+`9.879860e-15`, on the same cell and 2,001-node grid.  The paper already
+labels this count solver-relative.
 
 ### 3. The stored candidate's own type (step (a))
 
@@ -144,9 +172,10 @@ Run from this directory unless stated otherwise.  `python` is Python 3.14.7.
 | --- | --- | --- |
 | `python -I inputs/extract_cells.py` | 0 | extracts the two one-cell inputs, source digests verified |
 | `python -I make_certificate.py --audit inputs/paper_cell_abs_audit.json --corrected inputs/paper_cell_abs_corrected.json --out ../regen.json --log ../regen.log` | 0 | 124.8 s; regenerates the rational certificate; conclusion, all nine type bounds, the grid result and the two extras match the deposited certificate exactly (only the recorded input paths/digests and the timestamp differ) |
-| `python -I verify_certificate.py` | 0 | PASS in 202.0 s; re-checks every exact inequality, the Sturm poles, the grid meeting and the conclusion |
+| `python -I verify_certificate.py > verify_certificate.log 2>&1; echo VERIFY_EXIT=$? >> verify_certificate.log` | 0 | PASS in 189.4 s; re-checks every exact inequality, the Sturm poles, the grid meeting and the conclusion; the corrected binary64 parse reports `9.769346e-15`, meets=True |
 | `python -I certify_polynomial.py` | 0 | Remez degrees 17 and 16, degree-16 dVP `2.212570e-13`, degree-17 grid checks; see `certificate_polynomial_run.log` |
 | `python -I verify_polynomial.py` | 0 | PASS in 50.4 s; re-checks the 18 degree-16 nodes and the two degree-17 grid checks |
+| `python -I dct/dct_interpolation_check.py > dct/dct_interpolation_paper_cell.log 2>&1; echo DCT_EXIT=$? >> dct/dct_interpolation_paper_cell.log` | 0 | PASS; degree-17 DCT miss `5.599782e-14`, degree-18 meeting `9.879860e-15`, 60-digit values with an 80-digit stability check; writes `dct/dct_interpolation_paper_cell.json` and the redirected log |
 | `python -I alternation_stored_candidate.py --corrected inputs/paper_cell_abs_corrected.json --out alternation_stored_candidate.json` | 0 | 3.5 s; 13 alternating nodes; type-`(5,6)` dVP bound `9.050746e-15` |
 | `python -I bench_high_degree.py` | 1 | negative scaling result: BRASIL `[15/12]` `converged=False`, deviation 6.0; `certify_type` `pole_free=False`, zero nodes |
 
@@ -156,7 +185,10 @@ generation from the full Paper C records:
 runs before the deposited ones fixed three tooling faults: a Fraction/string
 conversion bug, Python's 4300-digit integer-string limit, and a verifier
 cross-check tolerance.  They do not affect the deposited results; the final
-commands above are the ones that produced and re-checked this deposit.
+commands above are the ones that produced and re-checked this deposit.  This
+correction deposit fixes a fourth, verifier-only fault: the binary64
+coefficient strings were parsed as exact decimal literals instead of binary64
+values; see "Correction to the parent deposit" above.
 
 ## Input provenance
 
@@ -196,21 +228,25 @@ file including this README; the README cannot list its own digest.
 | `certificate_rational_paper_cell.json` | `a637b30929623e4651910c0e397e6dc81d85b9c611732127a5a53bdf8629870e` |
 | `certificate_rational_paper_cell.log` | `fe85442c720154aa4878bf11268ec63caae7b95e4f4a11f08cb299e68ce097dc` |
 | `certify_polynomial.py` | `7ebe9cbfcce30199ff094f35b2b2d4fb02768d0cfc1bb6c0216ded17a9bb65c4` |
+| `dct/dct_interpolation_check.py` | `7def3973cb1299b8283d75356382e84ebc1b5941050ea9ee9e8ecf36bab399fe` |
+| `dct/dct_interpolation_paper_cell.json` | `db494d9231afc02a051af81a88d13e5948c9dbf146a504e4c35befcdf4531d98` |
+| `dct/dct_interpolation_paper_cell.log` | `681d6bdda159344e98f40e9388de6c2d97f8a8427c22eaf30ba710ca88994413` |
 | `f0exact.py` | `f85114e00bc1506e062e9b8b7bf70341774ed7089d6adbfc924e8ddb2c0777cb` |
 | `inputs/extract_cells.py` | `8adc2fc789ed23fa309f7a2aa56cbd74a208aee232a1f1c81b6a183b0a16f3f3` |
 | `inputs/paper_cell_abs_audit.json` | `a1f46c56cc82480c36db6d948270be745e36b6d1a00958f1745b70936cb7a536` |
 | `inputs/paper_cell_abs_corrected.json` | `b9b0ba70b321f909eba1d47313705cb9130eb4e3360cddd525b9a6e4060bb784` |
 | `make_certificate.py` | `1b57288237ac2a2cabbf63edf6cf487d70ca2611172248fc7b203ac6e5b54ad5` |
-| `verify_certificate.log` | `c4e2830fa7f8dbfcf08de8ed0b3a66cb5a28768c59826bb9a323115bbfde62a5` |
-| `verify_certificate.py` | `bc5c2d570dbc093cd46b3b3842129499c3d7036a2a0a14c63bd8e2d16d89950e` |
+| `verify_certificate.log` | `f131dfc8ac5e667d289cce25081a6026f71d9bbf6973806c3a18015b2909b352` |
+| `verify_certificate.py` | `3a2bef1bbbb71b9fec315bffb1301f21fd4b442b5179457a858a6d0dc1b0f495` |
 | `verify_polynomial.log` | `9d37c16243f9ace9e65a3c3369eefd775025a04eec8c29894f2d2bc974b2c2d0` |
 | `verify_polynomial.py` | `9ae214c7aff7b9723cdcfa8a6b833cd73b6aed69a1790cbfca92e85f75cc3687` |
 
 ## Proposed harness deposit
 
 Repository `https://github.com/myamlak/boys-harness` (Public, BSD 3-Clause),
-data tag `count-optimality-2026-11-18`, directory
-`coefficient-count-sweep/results-optimality/`, holding this directory.  It is
-a deposit, not a release, in the pattern of the existing
-`count-audit-2026-11-16` audit deposit.  The harness working tree was not
-touched and the tag is proposed, not created.
+data tag `count-optimality-2026-11-18-fix` (parent `count-optimality-2026-11-18`),
+directory `coefficient-count-sweep/results-optimality/`, holding this
+directory.  It is a data deposit, not a release, in the pattern of the
+existing `count-audit-2026-11-16` audit deposit.  The parent tag and its
+commit are not modified.  The harness working tree was not touched and the
+tag is proposed, not created.

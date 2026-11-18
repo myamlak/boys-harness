@@ -1,6 +1,6 @@
 verifying certificate_rational_paper_cell.json
 stored candidate (70-digit coeffs): max|err| in [1.023324e-14, 1.023324e-14], meets=True
-stored candidate (binary64 coeffs): max|err| in [9.594201e-15, 9.594201e-15], meets=True
+stored candidate (binary64 coeffs): max|err| in [9.769346e-15, 9.769346e-15], meets=True
 recorded [1/9] nodes=12 needed=12 alternating=True delta=1.380585e-11 (276.12 x target)
 recorded [2/8] nodes=12 needed=12 alternating=True delta=1.276121e-11 (255.22 x target)
 recorded [3/7] nodes=12 needed=12 alternating=True delta=1.121254e-12 (22.43 x target)
@@ -12,5 +12,5 @@ recorded [8/2] nodes=12 needed=12 alternating=True delta=1.393663e-11 (278.73 x 
 recorded [9/1] nodes=12 needed=12 alternating=True delta=1.377386e-11 (275.48 x target)
 extra    [10/0] nodes=12 needed=12 alternating=True delta=3.847030e-09 (76940.60 x target)
 extra    [0/10] nodes=12 needed=12 alternating=True delta=1.245162e-10 (2490.32 x target)
-PASS in 202.0s
+PASS in 189.4s
 VERIFY_EXIT=0

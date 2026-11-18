@@ -5,7 +5,10 @@ Reads certificate_rational_paper_cell.json, rebuilds every exact rational
 from the stored decimal strings, and re-verifies:
   * the stored 12-coefficient nominal truncation meets 5e-14 on the
     2,001-node paper grid, for both the 70-digit coefficients and the
-    binary64-stored coefficients;
+    binary64-stored coefficients.  The binary64 coefficient strings are
+    parsed as binary64 values (the exact rational value of the stored
+    double), not as exact decimal literals, because that is how the
+    record stores and evaluates them;
   * every recorded stored-11 type has a pole-free reference and m+k+2
     exactly alternating nodes whose exact lower bounds exceed 5e-14;
   * the search-excluded endpoint types, if present, do the same;
@@ -43,6 +46,15 @@ def fail(msg):
 
 def frac_list(strs):
     return [Fraction(s) for s in strs]
+
+
+def frac_list_binary64(strs):
+    """Exact rational value of each stored binary64 coefficient.
+
+    The strings are shortest round-trip renderings of doubles, so
+    float(s) recovers the stored binary64 value exactly.
+    """
+    return [Fraction(float(s)) for s in strs]
 
 
 def exact_grid(P, Q, W, target, n_terms=N_TERMS):
@@ -83,8 +95,8 @@ def main(argv):
 
     b64 = cert.get("stored_candidate_binary64")
     if b64:
-        P64 = frac_list(b64["P"])
-        Q64 = frac_list(b64["Q"])
+        P64 = frac_list_binary64(b64["P"])
+        Q64 = frac_list_binary64(b64["Q"])
         lo64, hi64, meets64 = exact_grid(P64, Q64, W_paper, target)
         print(f"stored candidate (binary64 coeffs): max|err| in "
               f"[{float(lo64):.6e}, {float(hi64):.6e}], meets={meets64}")
