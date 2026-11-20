@@ -4,9 +4,9 @@ Self-contained certificate artifacts for one cell of Paper C, "Stored
 coefficient counts for the Boys function F_0: rational against Chebyshev
 fits".  Nothing here is inserted into the paper.  This is a deposit for review.
 
-## Correction to the parent deposit
+## Correction 1 (binary64 parse and DCT record)
 
-This is a correction deposit.  Its parent is the immutable data tag
+This is the first correction deposit.  Its parent is the immutable data tag
 `count-optimality-2026-11-18`.  Two records change:
 
 * `verify_certificate.py` now parses the stored binary64 coefficient strings
@@ -30,14 +30,41 @@ The rational certificate JSON, the polynomial certificate JSON and their
 generation logs are unchanged.  The parent tag and its commit are not
 modified.
 
+## Correction 2 (continuum upper bound and 40-digit precision)
+
+This second correction's parent is the immutable data tag
+`count-optimality-2026-11-18-fix`.  Three things change:
+
+* The degree-17 upper bound is now certified over the whole interval, not
+  only on the 2,001-node grid.  `continuum_bound.py` computes an exact
+  rational interval Taylor enclosure; `continuum_bound_paper_cell.json`
+  records the bounds `4.265856e-14` (stored coefficients) and `4.266879e-14`
+  (binary64), both below `5e-14`; `verify_continuum_bound.py` recomputes and
+  checks them.
+* The polynomial certificate stores 40 significant digits
+  (`mp.nstr(c, 40)`), not 70.  The 70 is the audit's decimal precision.  This
+  README and Paper C now say 40 significant digits for the stored coefficient
+  strings.
+* `continuum_bound.py` now asserts that the certificate's cell equals the
+  hard-coded cell, and `verify_polynomial.py` labels the stored strings
+  "40-digit stored".  The deposited `certificate_polynomial_run.log` and
+  `verify_polynomial.log` retain the historical "70-digit" label; that label
+  describes the generation precision, not the stored format, and the logged
+  values are unchanged.
+
+The rational and polynomial certificate JSONs and their generation logs are
+unchanged.  The parent tags and their commits are not modified.
+
 ## Case
 
 * Function: `F_0(x) = sqrt(pi)/(2 sqrt(x)) erf(sqrt(x))`.
 * Interval: the paper cell `[x0, x1]`, with
   `x0 = 11.899848152108484` and `x1 = 28.989337738820740`
   (prior-work width `W_prior = x1 - x0 = 17.089489586712256`).
-* Target: `5e-14` absolute on the paper's 2,001-node certifying grid
-  (2,000 in the record's `nodes` field, 2,001 grid points).
+* Target: `5e-14` absolute.  The counts are checked on the paper's 2,001-node
+  certifying grid (2,000 in the record's `nodes` field, 2,001 grid points);
+  the degree-17 polynomial's upper bound is also checked over the whole
+  interval by the continuum bound.
 * Stored rational candidate: the corrected record's nominal `[5/6]`
   truncation, 12 stored coefficients (6 numerator + 7 denominator).  Its
   full witness arrays are 7/7; the nominal truncation is the reported
@@ -90,12 +117,15 @@ certificate's necessity meet.
 
 ### 2. The polynomial-family minimum is 18 stored coefficients
 
-A degree-17 Remez polynomial meets `5e-14` with exact maximum error
-`4.042273e-14` (70-digit Chebyshev coefficients) and `4.043317e-14`
-(binary64 Chebyshev coefficients), so 18 stored coefficients suffice.  A dVP
-certificate with a degree-16 reference and 18 exactly verified alternating
-nodes gives the lower bound `2.212570e-13` (4.43× target), so no degree-16
-polynomial meets.  The all-polynomial minimum is therefore exactly 18.
+A degree-17 Remez polynomial meets `5e-14` over the whole cell.  Exact
+evaluation on the 2,001-node grid gives `4.042273e-14` (stored
+40-significant-digit Chebyshev coefficients) and `4.043317e-14` (binary64).
+The exact rational interval Taylor bound in `continuum_bound.py` gives
+`4.265856e-14` and `4.266879e-14` over `[x0, x1]`, leaving at least
+`7.33e-15`.  A dVP certificate with a degree-16 reference and 18 exactly
+verified alternating nodes gives the lower bound `2.212570e-13` (4.43×
+target), so no degree-16 polynomial meets.  The all-polynomial minimum is
+therefore exactly 18.
 
 The paper's Chebyshev-interpolation count of 19 is the interpolation solver's
 minimum, not the polynomial-family minimum: the independent DCT check in
@@ -124,9 +154,10 @@ count.
   nodes exactly; the search only proposes them.
 * The stored fit's near-equioscillation (the 7.9% gap in item 3) is numerical
   evidence about the fit, not a proof of type minimality.
-* The degree-17 binary64 Chebyshev coefficients meet under exact evaluation;
-  the actual binary64 Clenshaw rounding is covered by a conservative budget,
-  not by interval arithmetic.  The margin is about `0.96e-14`.
+* The interval bound is for the coefficient vector, evaluated exactly.  It
+  does not by itself bound a particular evaluation route's rounding; the
+  binary64 Clenshaw route is a separate delivery question.  The relevant
+  margin for the coefficient vector is `7.33e-15`.
 * The high-degree scaling probe is numerical: a default BRASIL `[15/12]` solve
   at the ship width returned `converged=False`, deviation 6.0, and a
   denominator pole on the interval; the certificate code rejected it
@@ -164,6 +195,18 @@ once the terms decrease (checked in code).  The series formula is checked
 formally through order 120 via `(2k+1) c_k = e_k`, the coefficient form of
 `2x F_0'(x) + F_0(x) = exp(-x)`.
 
+For the degree-17 polynomial the upper bound is an exact rational interval
+Taylor expansion.  On 300 subintervals, each of width `2/300` in `t`, the
+error `e(t) = p(t) - F_0(x(t))` is expanded to degree 5 about the left
+endpoint.  The coefficients are intervals:
+`e^(k)(t_i) = p^(k)(t_i) - (W/2)^k (-1)^k F_k(x_i)`, with `F_0` from its
+alternating series and `F_1..F_6` from the Boys recurrence.  The degree-5
+polynomial is sampled at 101 points per subinterval; the bound adds the
+between-sample mean-value slack and the degree-6 Taylor remainder.  Every
+inequality is exact rational arithmetic.  `verify_continuum_bound.py`
+recomputes the whole bound and checks that the published upper decimal is at
+least the recomputed value and below the target.
+
 ## Commands and exit codes
 
 Run from this directory unless stated otherwise.  `python` is Python 3.14.7.
@@ -175,6 +218,8 @@ Run from this directory unless stated otherwise.  `python` is Python 3.14.7.
 | `python -I verify_certificate.py > verify_certificate.log 2>&1; echo VERIFY_EXIT=$? >> verify_certificate.log` | 0 | PASS in 189.4 s; re-checks every exact inequality, the Sturm poles, the grid meeting and the conclusion; the corrected binary64 parse reports `9.769346e-15`, meets=True |
 | `python -I certify_polynomial.py` | 0 | Remez degrees 17 and 16, degree-16 dVP `2.212570e-13`, degree-17 grid checks; see `certificate_polynomial_run.log` |
 | `python -I verify_polynomial.py` | 0 | PASS in 50.4 s; re-checks the 18 degree-16 nodes and the two degree-17 grid checks |
+| `python -I continuum_bound.py --certificate certificate_polynomial_paper_cell.json --n-sub 300 --out continuum_bound_paper_cell.json` | 0 | exact rational interval Taylor bound; `4.265856e-14` stored and `4.266879e-14` binary64; see `continuum_bound_paper_cell.log` |
+| `python -I verify_continuum_bound.py --certificate certificate_polynomial_paper_cell.json --bound continuum_bound_paper_cell.json` | 0 | PASS; recomputes the exact bound and checks the published upper decimal is at least it and below `5e-14` |
 | `python -I dct/dct_interpolation_check.py > dct/dct_interpolation_paper_cell.log 2>&1; echo DCT_EXIT=$? >> dct/dct_interpolation_paper_cell.log` | 0 | PASS; degree-17 DCT miss `5.599782e-14`, degree-18 meeting `9.879860e-15`, 60-digit values with an 80-digit stability check; writes `dct/dct_interpolation_paper_cell.json` and the redirected log |
 | `python -I alternation_stored_candidate.py --corrected inputs/paper_cell_abs_corrected.json --out alternation_stored_candidate.json` | 0 | 3.5 s; 13 alternating nodes; type-`(5,6)` dVP bound `9.050746e-15` |
 | `python -I bench_high_degree.py` | 1 | negative scaling result: BRASIL `[15/12]` `converged=False`, deviation 6.0; `certify_type` `pole_free=False`, zero nodes |
@@ -228,6 +273,10 @@ file including this README; the README cannot list its own digest.
 | `certificate_rational_paper_cell.json` | `a637b30929623e4651910c0e397e6dc81d85b9c611732127a5a53bdf8629870e` |
 | `certificate_rational_paper_cell.log` | `fe85442c720154aa4878bf11268ec63caae7b95e4f4a11f08cb299e68ce097dc` |
 | `certify_polynomial.py` | `7ebe9cbfcce30199ff094f35b2b2d4fb02768d0cfc1bb6c0216ded17a9bb65c4` |
+| `continuum_bound.py` | `eca008a6987dce19baa3cf552dc971ceccbe247fc57539cdc1423be336335519` |
+| `continuum_bound_paper_cell.json` | `014ed7246f19454b535e0adf85cc1db42349cd5037c5592f7adda179fa15b4b7` |
+| `continuum_bound_paper_cell.log` | `a017bd35330dc265da768d6261e8937a497f10906072e95973b0a8af0626885a` |
+| `continuum_bound_verify.log` | `2d5271aa26a93b57eb4f497dd963a6ab5c7a5a5d6fc7909621d28f04347e298a` |
 | `dct/dct_interpolation_check.py` | `7def3973cb1299b8283d75356382e84ebc1b5941050ea9ee9e8ecf36bab399fe` |
 | `dct/dct_interpolation_paper_cell.json` | `db494d9231afc02a051af81a88d13e5948c9dbf146a504e4c35befcdf4531d98` |
 | `dct/dct_interpolation_paper_cell.log` | `681d6bdda159344e98f40e9388de6c2d97f8a8427c22eaf30ba710ca88994413` |
@@ -238,15 +287,15 @@ file including this README; the README cannot list its own digest.
 | `make_certificate.py` | `1b57288237ac2a2cabbf63edf6cf487d70ca2611172248fc7b203ac6e5b54ad5` |
 | `verify_certificate.log` | `f131dfc8ac5e667d289cce25081a6026f71d9bbf6973806c3a18015b2909b352` |
 | `verify_certificate.py` | `3a2bef1bbbb71b9fec315bffb1301f21fd4b442b5179457a858a6d0dc1b0f495` |
+| `verify_continuum_bound.py` | `f0f75abe3f374a925ce36fc6962d4b9477a3bf2b6961e001b265a71c35c6b07b` |
 | `verify_polynomial.log` | `9d37c16243f9ace9e65a3c3369eefd775025a04eec8c29894f2d2bc974b2c2d0` |
-| `verify_polynomial.py` | `9ae214c7aff7b9723cdcfa8a6b833cd73b6aed69a1790cbfca92e85f75cc3687` |
+| `verify_polynomial.py` | `209e83c4504dfe99035ca46be9d171564209fa5a6b34e85da8a9da64ce5b4512` |
 
 ## Proposed harness deposit
 
 Repository `https://github.com/myamlak/boys-harness` (Public, BSD 3-Clause),
-data tag `count-optimality-2026-11-18-fix` (parent `count-optimality-2026-11-18`),
+data tag `count-optimality-2026-11-20` (parent `count-optimality-2026-11-18-fix`),
 directory `coefficient-count-sweep/results-optimality/`, holding this
 directory.  It is a data deposit, not a release, in the pattern of the
-existing `count-audit-2026-11-16` audit deposit.  The parent tag and its
-commit are not modified.  The harness working tree was not touched and the
-tag is proposed, not created.
+existing `count-audit-2026-11-16` audit deposit.  The parent tags and their
+commits are not modified.

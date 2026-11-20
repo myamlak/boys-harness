@@ -1,0 +1,5 @@
+certificate sha256: b398c185f73c10142a7082ba344ea8dbae8145e74fa9ad1615c3af49b3c93792
+stored_coefficients: bound 4.265856e-14; meets=True margin 7.341e-15; worst_t -1.000000e+00
+binary64_coefficients: bound 4.266879e-14; meets=True margin 7.331e-15; worst_t -1.000000e+00
+wrote continuum_bound_paper_cell.json
+EXIT=0
