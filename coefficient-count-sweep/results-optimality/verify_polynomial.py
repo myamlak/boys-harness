@@ -112,7 +112,7 @@ def main(argv):
     d17 = cert["degree_17"]
     cs = [Fraction(s) for s in d17["chebyshev_coefficients"]]
     cs64 = [Fraction(float(s)) for s in d17["chebyshev_coefficients"]]
-    for label, cc in (("70-digit", cs), ("binary64", cs64)):
+    for label, cc in (("40-digit stored", cs), ("binary64", cs64)):
         lo, hi = exact_grid_poly(cc)
         meets = hi <= TARGET
         print(f"degree 17 grid ({label}): max|err| in "

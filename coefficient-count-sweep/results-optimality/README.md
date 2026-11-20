@@ -33,7 +33,7 @@ modified.
 ## Correction 2 (continuum upper bound and 40-digit precision)
 
 This second correction's parent is the immutable data tag
-`count-optimality-2026-11-18-fix`.  Two things change:
+`count-optimality-2026-11-18-fix`.  Three things change:
 
 * The degree-17 upper bound is now certified over the whole interval, not
   only on the 2,001-node grid.  `continuum_bound.py` computes an exact
@@ -45,6 +45,12 @@ This second correction's parent is the immutable data tag
   (`mp.nstr(c, 40)`), not 70.  The 70 is the audit's decimal precision.  This
   README and Paper C now say 40 significant digits for the stored coefficient
   strings.
+* `continuum_bound.py` now asserts that the certificate's cell equals the
+  hard-coded cell, and `verify_polynomial.py` labels the stored strings
+  "40-digit stored".  The deposited `certificate_polynomial_run.log` and
+  `verify_polynomial.log` retain the historical "70-digit" label; that label
+  describes the generation precision, not the stored format, and the logged
+  values are unchanged.
 
 The rational and polynomial certificate JSONs and their generation logs are
 unchanged.  The parent tags and their commits are not modified.
@@ -267,7 +273,7 @@ file including this README; the README cannot list its own digest.
 | `certificate_rational_paper_cell.json` | `a637b30929623e4651910c0e397e6dc81d85b9c611732127a5a53bdf8629870e` |
 | `certificate_rational_paper_cell.log` | `fe85442c720154aa4878bf11268ec63caae7b95e4f4a11f08cb299e68ce097dc` |
 | `certify_polynomial.py` | `7ebe9cbfcce30199ff094f35b2b2d4fb02768d0cfc1bb6c0216ded17a9bb65c4` |
-| `continuum_bound.py` | `0720d8e7f1c5efa518017a1dde25b9eddbefcd8e67efcaea6908bb44e8a03e6c` |
+| `continuum_bound.py` | `eca008a6987dce19baa3cf552dc971ceccbe247fc57539cdc1423be336335519` |
 | `continuum_bound_paper_cell.json` | `014ed7246f19454b535e0adf85cc1db42349cd5037c5592f7adda179fa15b4b7` |
 | `continuum_bound_paper_cell.log` | `a017bd35330dc265da768d6261e8937a497f10906072e95973b0a8af0626885a` |
 | `continuum_bound_verify.log` | `2d5271aa26a93b57eb4f497dd963a6ab5c7a5a5d6fc7909621d28f04347e298a` |
@@ -283,7 +289,7 @@ file including this README; the README cannot list its own digest.
 | `verify_certificate.py` | `3a2bef1bbbb71b9fec315bffb1301f21fd4b442b5179457a858a6d0dc1b0f495` |
 | `verify_continuum_bound.py` | `f0f75abe3f374a925ce36fc6962d4b9477a3bf2b6961e001b265a71c35c6b07b` |
 | `verify_polynomial.log` | `9d37c16243f9ace9e65a3c3369eefd775025a04eec8c29894f2d2bc974b2c2d0` |
-| `verify_polynomial.py` | `9ae214c7aff7b9723cdcfa8a6b833cd73b6aed69a1790cbfca92e85f75cc3687` |
+| `verify_polynomial.py` | `209e83c4504dfe99035ca46be9d171564209fa5a6b34e85da8a9da64ce5b4512` |
 
 ## Proposed harness deposit
 

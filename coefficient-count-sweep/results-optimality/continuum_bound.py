@@ -135,6 +135,11 @@ def compute(cert_path: str, n_sub: int, nsamp: int = NSAMP):
     """Return per-coefficient-set continuum bounds and their components."""
     with open(cert_path, encoding="utf-8") as fh:
         cert = json.load(fh)
+    cell = cert["cell"]
+    if (Fraction(cell["a"]) != A or Fraction(cell["b"]) != B
+            or Fraction(cell["W"]) != W):
+        raise ArithmeticError(
+            "certificate cell does not match the hard-coded cell")
     str_cs = cert["degree_17"]["chebyshev_coefficients"]
     h = Fraction(2, n_sub)
     sh = h / nsamp
