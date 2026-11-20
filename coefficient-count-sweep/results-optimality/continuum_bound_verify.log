@@ -1,0 +1,4 @@
+PASS stored_coefficients: recomputed 4.265856e-14, published upper 0.0000000000000426585604478459114938233616 below target by 7.341e-15
+PASS binary64_coefficients: recomputed 4.266879e-14, published upper 0.0000000000000426687902623466888877185968 below target by 7.331e-15
+PASS: continuum upper bound verified by exact recomputation
+EXIT=0

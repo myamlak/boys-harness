@@ -1,0 +1,47 @@
+{
+ "schema": "paper-c-continuum-bound-1",
+ "cell": {
+  "a": "2974962038027121/250000000000000",
+  "b": "1449466886941037/50000000000000",
+  "width": "267023274792379/15625000000000",
+  "target": "5e-14 absolute"
+ },
+ "certificate_sha256": "b398c185f73c10142a7082ba344ea8dbae8145e74fa9ad1615c3af49b3c93792",
+ "method": {
+  "argument": "exact rational interval Taylor expansion",
+  "degree": 5,
+  "subintervals": 300,
+  "samples_per_subinterval": 101,
+  "f0_terms": 120,
+  "exp_terms": 160
+ },
+ "results": [
+  {
+   "coefficients": "stored_coefficients",
+   "bound": {
+    "upper_decimal": "0.0000000000000426585604478459114938233616",
+    "float": 4.2658560447845915e-14,
+    "rounding": "ceiling to 40 decimal places"
+   },
+   "worst_t": -1.0,
+   "sample_max_float": 4.0422728138446775e-14,
+   "slack_float": 8.877171860717515e-16,
+   "remainder_float": 1.3481151233273877e-15,
+   "meets": true
+  },
+  {
+   "coefficients": "binary64_coefficients",
+   "bound": {
+    "upper_decimal": "0.0000000000000426687902623466888877185968",
+    "float": 4.266879026234669e-14,
+    "rounding": "ceiling to 40 decimal places"
+   },
+   "worst_t": -1.0,
+   "sample_max_float": 4.0432957940125636e-14,
+   "slack_float": 8.8771719889366495e-16,
+   "remainder_float": 1.3481151233273877e-15,
+   "meets": true
+  }
+ ],
+ "conclusion": "the degree-17 polynomial meets the 5e-14 target over the whole cell, for the stored coefficients and their binary64 roundings"
+}
