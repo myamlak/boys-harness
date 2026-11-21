@@ -1,0 +1,472 @@
+{
+  "old": "C:\\Users\\myaml\\dev\\_half-sweep-work\\half_sweep.bin",
+  "new": "half_sweep.bin",
+  "header": {
+    "version_old": 1,
+    "version_new": 1,
+    "nmax_old": 32,
+    "nmax_new": 32,
+    "rows_old": 2124606,
+    "rows_new": 2124606
+  },
+  "formats": {
+    "binary16": {
+      "cells": 1047519,
+      "changed_got_bits": 0,
+      "changed_bound": 0,
+      "changed_cells": []
+    },
+    "bfloat16": {
+      "cells": 1077087,
+      "changed_got_bits": 0,
+      "changed_bound": 0,
+      "changed_cells": []
+    }
+  },
+  "results_cells": {
+    "v511": [
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "worst",
+        "n": 0,
+        "arg_bits_hex": "0x1B82",
+        "old_got_bits_hex": "0x3BFE",
+        "new_got_bits_hex": "0x3BFE",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "top0",
+        "n": 0,
+        "arg_bits_hex": "0x1B82",
+        "old_got_bits_hex": "0x3BFE",
+        "new_got_bits_hex": "0x3BFE",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "top1",
+        "n": 0,
+        "arg_bits_hex": "0x3FBE",
+        "old_got_bits_hex": "0x38D8",
+        "new_got_bits_hex": "0x38D8",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "top2",
+        "n": 0,
+        "arg_bits_hex": "0x1D42",
+        "old_got_bits_hex": "0x3BFD",
+        "new_got_bits_hex": "0x3BFD",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "top3",
+        "n": 1,
+        "arg_bits_hex": "0x3780",
+        "old_got_bits_hex": "0x340E",
+        "new_got_bits_hex": "0x340E",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "top4",
+        "n": 0,
+        "arg_bits_hex": "0x1201",
+        "old_got_bits_hex": "0x3BFF",
+        "new_got_bits_hex": "0x3BFF",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "top5",
+        "n": 0,
+        "arg_bits_hex": "0x421C",
+        "old_got_bits_hex": "0x3801",
+        "new_got_bits_hex": "0x3801",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "top6",
+        "n": 1,
+        "arg_bits_hex": "0x142B",
+        "old_got_bits_hex": "0x3555",
+        "new_got_bits_hex": "0x3555",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "top7",
+        "n": 0,
+        "arg_bits_hex": "0x3928",
+        "old_got_bits_hex": "0x3A92",
+        "new_got_bits_hex": "0x3A92",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "top8",
+        "n": 0,
+        "arg_bits_hex": "0x48A6",
+        "old_got_bits_hex": "0x34A6",
+        "new_got_bits_hex": "0x34A6",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "binary16",
+        "slot": "top9",
+        "n": 0,
+        "arg_bits_hex": "0x1881",
+        "old_got_bits_hex": "0x3BFE",
+        "new_got_bits_hex": "0x3BFE",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "worst",
+        "n": 0,
+        "arg_bits_hex": "0x3FA4",
+        "old_got_bits_hex": "0x3F33",
+        "new_got_bits_hex": "0x3F33",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "top0",
+        "n": 0,
+        "arg_bits_hex": "0x3FA4",
+        "old_got_bits_hex": "0x3F33",
+        "new_got_bits_hex": "0x3F33",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "top1",
+        "n": 5,
+        "arg_bits_hex": "0x3D31",
+        "old_got_bits_hex": "0x3DB4",
+        "new_got_bits_hex": "0x3DB4",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "top2",
+        "n": 7,
+        "arg_bits_hex": "0x3991",
+        "old_got_bits_hex": "0x3D89",
+        "new_got_bits_hex": "0x3D89",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "top3",
+        "n": 0,
+        "arg_bits_hex": "0x4073",
+        "old_got_bits_hex": "0x3EE7",
+        "new_got_bits_hex": "0x3EE7",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "top4",
+        "n": 6,
+        "arg_bits_hex": "0x3994",
+        "old_got_bits_hex": "0x3D9D",
+        "new_got_bits_hex": "0x3D9D",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "top5",
+        "n": 0,
+        "arg_bits_hex": "0x4084",
+        "old_got_bits_hex": "0x3EDE",
+        "new_got_bits_hex": "0x3EDE",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "top6",
+        "n": 3,
+        "arg_bits_hex": "0x3BE3",
+        "old_got_bits_hex": "0x3E11",
+        "new_got_bits_hex": "0x3E11",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "top7",
+        "n": 4,
+        "arg_bits_hex": "0x399C",
+        "old_got_bits_hex": "0x3DE4",
+        "new_got_bits_hex": "0x3DE4",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "top8",
+        "n": 6,
+        "arg_bits_hex": "0x3993",
+        "old_got_bits_hex": "0x3D9E",
+        "new_got_bits_hex": "0x3D9E",
+        "changed": false
+      },
+      {
+        "results": "v511",
+        "format": "bfloat16",
+        "slot": "top9",
+        "n": 4,
+        "arg_bits_hex": "0x399D",
+        "old_got_bits_hex": "0x3DE3",
+        "new_got_bits_hex": "0x3DE3",
+        "changed": false
+      }
+    ],
+    "v533": [
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "worst",
+        "n": 0,
+        "arg_bits_hex": "0x1B82",
+        "old_got_bits_hex": "0x3BFE",
+        "new_got_bits_hex": "0x3BFE",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "top0",
+        "n": 0,
+        "arg_bits_hex": "0x1B82",
+        "old_got_bits_hex": "0x3BFE",
+        "new_got_bits_hex": "0x3BFE",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "top1",
+        "n": 0,
+        "arg_bits_hex": "0x3FBE",
+        "old_got_bits_hex": "0x38D8",
+        "new_got_bits_hex": "0x38D8",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "top2",
+        "n": 0,
+        "arg_bits_hex": "0x1D42",
+        "old_got_bits_hex": "0x3BFD",
+        "new_got_bits_hex": "0x3BFD",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "top3",
+        "n": 1,
+        "arg_bits_hex": "0x3780",
+        "old_got_bits_hex": "0x340E",
+        "new_got_bits_hex": "0x340E",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "top4",
+        "n": 0,
+        "arg_bits_hex": "0x1201",
+        "old_got_bits_hex": "0x3BFF",
+        "new_got_bits_hex": "0x3BFF",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "top5",
+        "n": 0,
+        "arg_bits_hex": "0x421C",
+        "old_got_bits_hex": "0x3801",
+        "new_got_bits_hex": "0x3801",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "top6",
+        "n": 1,
+        "arg_bits_hex": "0x142B",
+        "old_got_bits_hex": "0x3555",
+        "new_got_bits_hex": "0x3555",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "top7",
+        "n": 0,
+        "arg_bits_hex": "0x3928",
+        "old_got_bits_hex": "0x3A92",
+        "new_got_bits_hex": "0x3A92",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "top8",
+        "n": 0,
+        "arg_bits_hex": "0x48A6",
+        "old_got_bits_hex": "0x34A6",
+        "new_got_bits_hex": "0x34A6",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "binary16",
+        "slot": "top9",
+        "n": 0,
+        "arg_bits_hex": "0x1881",
+        "old_got_bits_hex": "0x3BFE",
+        "new_got_bits_hex": "0x3BFE",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "worst",
+        "n": 0,
+        "arg_bits_hex": "0x3FA4",
+        "old_got_bits_hex": "0x3F33",
+        "new_got_bits_hex": "0x3F33",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "top0",
+        "n": 0,
+        "arg_bits_hex": "0x3FA4",
+        "old_got_bits_hex": "0x3F33",
+        "new_got_bits_hex": "0x3F33",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "top1",
+        "n": 5,
+        "arg_bits_hex": "0x3D31",
+        "old_got_bits_hex": "0x3DB4",
+        "new_got_bits_hex": "0x3DB4",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "top2",
+        "n": 7,
+        "arg_bits_hex": "0x3991",
+        "old_got_bits_hex": "0x3D89",
+        "new_got_bits_hex": "0x3D89",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "top3",
+        "n": 0,
+        "arg_bits_hex": "0x4073",
+        "old_got_bits_hex": "0x3EE7",
+        "new_got_bits_hex": "0x3EE7",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "top4",
+        "n": 6,
+        "arg_bits_hex": "0x3994",
+        "old_got_bits_hex": "0x3D9D",
+        "new_got_bits_hex": "0x3D9D",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "top5",
+        "n": 0,
+        "arg_bits_hex": "0x4084",
+        "old_got_bits_hex": "0x3EDE",
+        "new_got_bits_hex": "0x3EDE",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "top6",
+        "n": 3,
+        "arg_bits_hex": "0x3BE3",
+        "old_got_bits_hex": "0x3E11",
+        "new_got_bits_hex": "0x3E11",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "top7",
+        "n": 4,
+        "arg_bits_hex": "0x399C",
+        "old_got_bits_hex": "0x3DE4",
+        "new_got_bits_hex": "0x3DE4",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "top8",
+        "n": 6,
+        "arg_bits_hex": "0x3993",
+        "old_got_bits_hex": "0x3D9E",
+        "new_got_bits_hex": "0x3D9E",
+        "changed": false
+      },
+      {
+        "results": "v533",
+        "format": "bfloat16",
+        "slot": "top9",
+        "n": 4,
+        "arg_bits_hex": "0x399D",
+        "old_got_bits_hex": "0x3DE3",
+        "new_got_bits_hex": "0x3DE3",
+        "changed": false
+      }
+    ]
+  }
+}

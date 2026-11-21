@@ -1,0 +1,26 @@
+{
+  "old": "C:\\Users\\myaml\\dev\\_half-sweep-work\\half_sweep.bin",
+  "new": "half_sweep-v511-rebuild.bin",
+  "header": {
+    "version_old": 1,
+    "version_new": 1,
+    "nmax_old": 32,
+    "nmax_new": 32,
+    "rows_old": 2124606,
+    "rows_new": 2124606
+  },
+  "formats": {
+    "binary16": {
+      "cells": 1047519,
+      "changed_got_bits": 0,
+      "changed_bound": 0,
+      "changed_cells": []
+    },
+    "bfloat16": {
+      "cells": 1077087,
+      "changed_got_bits": 0,
+      "changed_bound": 0,
+      "changed_cells": []
+    }
+  }
+}

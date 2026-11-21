@@ -1,0 +1,126 @@
+{
+  "lane": " the composition paper 24-cell audit",
+  "scratch": "<run root>",
+  "note": "Read-only with respect to the paper, harness and kernel repositories. No commit or push.",
+  "paper": {
+    "repo": "<paper checkout>",
+    "revision": "3ec716b",
+    "passage": "papers/claim-gate/main.tex:1397-1462; papers/claim-gate/supplement.tex:1330-1400 (S6)"
+  },
+  "harness": {
+    "repo": "this repository",
+    "version": "1.0.42",
+    "driver": "this repository/composition-audit/measure_interaction.cpp",
+    "driver_sha256": "e2fda6e305727800ee5b83e2e3edd10461ee687aa1fd6c76230c25f45cdaf93e",
+    "driver_used_for_v500_record_sha256": "e2fda6e305727800ee5b83e2e3edd10461ee687aa1fd6c76230c25f45cdaf93e",
+    "scratch_copy": "<run root>/harness",
+    "record_archive": "this repository/composition-audit/records/cells/cells-msvc-fused.csv.xz",
+    "record_archive_sha256": "4af5694810099d07ac9eee268f20073f08d63242731d08a06ebc3d1328c0638d",
+    "record_decompressed_sha256": "a80771fb9de8f9b22fe042031b0b6212f976ba1cd5696b7f824391f9cd53ebfc",
+    "reference_csv": "this repository/composition-audit/records/reference.csv",
+    "reference_sha256": "7aa5c584dc201fb4e088851caaef70095946014e348e652016cb7fbf0960b2b8",
+    "arguments_csv_deposit_crlf": "this repository/composition-audit/records/arguments.csv",
+    "arguments_csv_deposit_sha256": "3ce404b5b63623f52125a66206f6ca3b9521453a62dc72ec502b17f97c31eefb"
+  },
+  "kernel": {
+    "repo": "<kernel checkout>",
+    "v5_0_0_tag_object": "39cf4a13bbaf58169bbc0e262d512159d15975e8",
+    "v5_0_0_commit": "482fd3388c276091834a6c12a642d9de2481c9f2",
+    "v5_3_1_tag_object": "d1e63f71c6f2501aecc6340e31216a42c2a390b9",
+    "v5_3_1_commit": "2f83e40a6504368b7b2f13682e29b4f24ab2a40c",
+    "worktrees": {
+      "v5.0.0": "<run root>/boys-v500",
+      "v5.3.1": "<run root>/boys-v531"
+    },
+    "worktrees_dirty_paths": 0,
+    "v5_3_1_to_v5_3_3_include_src_diff": "version.hpp and comment-only lines in src/boys_simd.cpp; no arithmetic-content change"
+  },
+  "commands": [
+    {
+      "step": "configure-v531",
+      "command": "cmake -S harness -B build-v531 -G \"Visual Studio 18 2026\" -A x64 -DBOYS_SOURCE_DIR=<run root>/boys-v531 -DBOYS_MULADD_SEPARATE=OFF -DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "exit_code": 0
+    },
+    {
+      "step": "build-v531",
+      "command": "cmake --build build-v531 --target measure-interaction --config Release",
+      "exit_code": 0,
+      "elapsed_s": 180
+    },
+    {
+      "step": "run-v531",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File harness/run_measurement.ps1 -BoysSource boys-v531 -AllowOtherRevision -QuietMachine -OutDir run-v531/out -BuildDir build-v531 -Reference harness/records/reference.csv -Python python -MulAddRoute fused",
+      "runtime_environment": "BOYS_CANARY_HINT_ONLY=1",
+      "exit_code": 0,
+      "note": "The -Reference value is shadowed by the script's own $reference assignment (PowerShell names are case-insensitive), so the deposited reference was pre-copied to run-v531/out/reference.csv; its SHA-256 equals the deposit.",
+      "driver_commands_inside_script": [
+        "build-v531/Release/measure-interaction.exe --emit-arguments run-v531/out/arguments.csv",
+        "build-v531/Release/measure-interaction.exe --canary-only",
+        "build-v531/Release/measure-interaction.exe --arguments run-v531/out/arguments.csv --reference run-v531/out/reference.csv --out run-v531/out/cells.csv --env run-v531/out/environment.txt"
+      ]
+    },
+    {
+      "step": "determinism-rerun-v531",
+      "command": "BOYS_CANARY_HINT_ONLY=1 build-v531/Release/measure-interaction.exe --arguments run-v531/out/arguments.csv --reference run-v531/out/reference.csv --out record/cells-rerun.csv --env record/environment-rerun.txt",
+      "exit_code": 0,
+      "elapsed_ms": 7099,
+      "output_sha256": "65c223da9eeb225ac4ba45ae713ef86e133af521af005b3cddd30257aafaa255",
+      "matches_primary_run": true
+    },
+    {
+      "step": "configure-v500-control",
+      "command": "cmake -S harness -B build-v500 -G \"Visual Studio 18 2026\" -A x64 -DBOYS_SOURCE_DIR=<run root>/boys-v500 -DBOYS_MULADD_SEPARATE=OFF",
+      "exit_code": 0
+    },
+    {
+      "step": "build-v500-control",
+      "command": "cmake --build build-v500 --target measure-interaction --config Release",
+      "exit_code": 0,
+      "elapsed_s": 135
+    },
+    {
+      "step": "reproduce-v500-record",
+      "command": "BOYS_CANARY_HINT_ONLY=1 build-v500/Release/measure-interaction.exe --arguments record/arguments-v500.csv --reference run-v531/out/reference.csv --out record/cells-v500-reproduced.csv --env record/environment-v500-reproduced.txt",
+      "exit_code": 0,
+      "elapsed_ms": 5448,
+      "output_sha256": "a80771fb9de8f9b22fe042031b0b6212f976ba1cd5696b7f824391f9cd53ebfc",
+      "matches_record_decompressed": true
+    },
+    {
+      "step": "analyze-24",
+      "command": "python -I analyze_24.py --record <record_archive> --measured run-v531/out/cells.csv --detail record/comparison-24-detail.csv --summary record/comparison-24-summary.csv --json record/comparison-24.json ...",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "target_cells": 24,
+    "values_per_cell": 297,
+    "target_rows": 7128,
+    "moved_values": 7128,
+    "cells_whose_delivered_error_moved": 24,
+    "total_rows": 494208,
+    "unchanged_rows": 487080,
+    "only_moving_group": "fp64|rational-minimax|shipped",
+    "n0_max_v500": "1.6098653907154834e-14",
+    "n0_max_v531": "5.6053401067827709e-15",
+    "n0_ratio": 0.3481868819039306,
+    "n0_max_argument_v500": "x=12,n=0",
+    "n0_max_argument_v531": "x=24,n=0",
+    "npos_max_v500_range": ["1.2345216677551884e-14", "1.2452187515548564e-14"],
+    "npos_max_v531_range": ["3.7281146064580758e-15", "3.9398103481220113e-15"],
+    "npos_max_argument_v500": "x=12,n=32",
+    "npos_max_argument_v531": "x=12,n=32",
+    "v500_delivered_figure_source": "1.69145631228896759e-14",
+    "v531_delivered_figure_source": "6.04405276991530667e-15",
+    "drivers_guaranteed_figure_column_changed": false,
+    "canary_verdict": "wide (timing label only; errors deterministic and three runs byte-identical)"
+  },
+  "files": {
+    "primary_run": "<run root>/run-v531/out/",
+    "detail_csv": "<run root>/record/comparison-24-detail.csv",
+    "summary_csv": "<run root>/record/comparison-24-summary.csv",
+    "json": "<run root>/record/comparison-24.json",
+    "v500_reproduction": "<run root>/record/cells-v500-reproduced.csv",
+    "logs": "<run root>/logs/"
+  }
+}

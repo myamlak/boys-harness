@@ -46,6 +46,14 @@ limitation column names what neither reproduces nor verifies.
 
 Each directory has a README with its build and run commands.
 
+New in 1.0.43: the half-lane sweep re-run at kernel `v5.3.3` and its
+cell-by-cell comparison with `v5.1.1` (`accuracy-claim-audit/half-sweep-v533/`);
+the public-header and source identity across `v5.3.1`, `v5.3.2` and `v5.3.3`
+(`accuracy-claim-audit/release-identity/`); the re-measurement of the 24 changed
+composition cells at `v5.3.1` (`composition-audit/v531-24cell/`); and the
+matched-solver class-test record
+(`coefficient-count-sweep/results-f1-independent/class_test_matched.json`).
+
 ## Requirements
 
 - A C++23 compiler and CMake 3.20 or newer for the C++ harnesses.
