@@ -267,6 +267,10 @@ summary, the Boost.Math and crlibm audits, the taxonomy testbed and the libint2
 accuracy comparison), `composition-audit/`, and `chemistry-bridge/` where the
 campaign's program study cites the bridge. The accuracy gate's records and
 reference grids are in the `boys` repository at `v5.3.1`.
+The release-identity record (`accuracy-claim-audit/release-identity/`) compares
+every public header and source at v5.3.1, v5.3.2 and v5.3.3. The half-lane
+sweep re-run (`accuracy-claim-audit/half-sweep-v533/`) measures v5.3.3 and
+compares it cell by cell with the v5.1.1 record.
 
 Commands:
 
@@ -374,6 +378,9 @@ on the pinned grids. No continuous statement is made.
 Records: `coefficient-count-sweep/` (the core, ladder, stability,
 re-certification, second-edge, second-instance, F1, third-edge, shipped-seed,
 Chebyshev recount, 60-digit control and strong-optional records).
+The matched-solver class-test record is
+`coefficient-count-sweep/results-f1-independent/class_test_matched.json`,
+produced by `coefficient-count-sweep/analysis/class_test_matched.py`.
 
 Commands, from `coefficient-count-sweep`:
 
@@ -471,6 +478,8 @@ certification beyond that is not claimed.
 Records: `composition-audit/second-instance/` (the three-axis and four-axis
 fractional designs, their full-factorial coefficients, certificates and
 claimgate books).
+The 24 changed cells re-measured at `v5.3.1` are in
+`composition-audit/v531-24cell/`.
 
 Commands, from `composition-audit/second-instance`:
 

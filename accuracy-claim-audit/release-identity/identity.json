@@ -1,0 +1,581 @@
+{
+ "schema": "boys-release-identity/1",
+ "description": "Byte identity of the public kernel headers and sources at v5.3.1, v5.3.2 and v5.3.3, the three revisions the the measurement carries name. The libint2 probe was built against v5.3.2 headers; the consumer session was captured at v5.3.1; the release is v5.3.3. Only version.hpp and comment-only changes in src/boys_simd.cpp differ.",
+ "tags": {
+  "v5.3.1": "2f83e40a6504368b7b2f13682e29b4f24ab2a40c",
+  "v5.3.2": "6739447d82765ae5f7f68351a99f418cd018dd9a",
+  "v5.3.3": "01bba7b0ed7e0dd387f2af087e992445222e5546"
+ },
+ "files": [
+  {
+   "path": "include/boys/accuracy.hpp",
+   "v5.3.1": "57c7b40c50cbbf71a4fd356bd62492672bb3b2eedc9e7693110ce7d0f819dfc5",
+   "v5.3.2": "57c7b40c50cbbf71a4fd356bd62492672bb3b2eedc9e7693110ce7d0f819dfc5",
+   "v5.3.3": "57c7b40c50cbbf71a4fd356bd62492672bb3b2eedc9e7693110ce7d0f819dfc5",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/backend.hpp",
+   "v5.3.1": "ae121250d918b5ad413030f205262ef6aed845d55688faab9dba231f1d50c762",
+   "v5.3.2": "ae121250d918b5ad413030f205262ef6aed845d55688faab9dba231f1d50c762",
+   "v5.3.3": "ae121250d918b5ad413030f205262ef6aed845d55688faab9dba231f1d50c762",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys.hpp",
+   "v5.3.1": "7df021b424c6dcdcc71a5698617d9c03c5de86188795041a64463a06a5bde4ac",
+   "v5.3.2": "7df021b424c6dcdcc71a5698617d9c03c5de86188795041a64463a06a5bde4ac",
+   "v5.3.3": "7df021b424c6dcdcc71a5698617d9c03c5de86188795041a64463a06a5bde4ac",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_accuracy_here.hpp",
+   "v5.3.1": "ef0e63c63ad91ab34d9b44d2a815fb0be953a6b30f307943db451677f2e2eb97",
+   "v5.3.2": "ef0e63c63ad91ab34d9b44d2a815fb0be953a6b30f307943db451677f2e2eb97",
+   "v5.3.3": "ef0e63c63ad91ab34d9b44d2a815fb0be953a6b30f307943db451677f2e2eb97",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_all.hpp",
+   "v5.3.1": "5be0d740b82868cecec305125c8dcd04e4824bd1a14d0b3b6f434c55759c9e87",
+   "v5.3.2": "5be0d740b82868cecec305125c8dcd04e4824bd1a14d0b3b6f434c55759c9e87",
+   "v5.3.3": "5be0d740b82868cecec305125c8dcd04e4824bd1a14d0b3b6f434c55759c9e87",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_arguments_lanes.hpp",
+   "v5.3.1": "1d750e9d56485e057920a3da37cadbe59ebc326036fb8dbdfb8cedbda31d61df",
+   "v5.3.2": "1d750e9d56485e057920a3da37cadbe59ebc326036fb8dbdfb8cedbda31d61df",
+   "v5.3.3": "1d750e9d56485e057920a3da37cadbe59ebc326036fb8dbdfb8cedbda31d61df",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_backend_simd.hpp",
+   "v5.3.1": "7ff344b7b68b32ab8030b99f9ff07b95a0293e4cf018709b03a6490f674643d4",
+   "v5.3.2": "7ff344b7b68b32ab8030b99f9ff07b95a0293e4cf018709b03a6490f674643d4",
+   "v5.3.3": "7ff344b7b68b32ab8030b99f9ff07b95a0293e4cf018709b03a6490f674643d4",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_build_defaults.hpp",
+   "v5.3.1": "e372ef9020d53007659bc5fc11cc5a56882f2ce7ef53fd709828d09ed97b8701",
+   "v5.3.2": "e372ef9020d53007659bc5fc11cc5a56882f2ce7ef53fd709828d09ed97b8701",
+   "v5.3.3": "e372ef9020d53007659bc5fc11cc5a56882f2ce7ef53fd709828d09ed97b8701",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_c.h",
+   "v5.3.1": "7c3ff99a07ddb4a9e8b41320632a1f6a0f9c63c4f4bdfe9f1778dda3f0e4014c",
+   "v5.3.2": "7c3ff99a07ddb4a9e8b41320632a1f6a0f9c63c4f4bdfe9f1778dda3f0e4014c",
+   "v5.3.3": "7c3ff99a07ddb4a9e8b41320632a1f6a0f9c63c4f4bdfe9f1778dda3f0e4014c",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients.hpp",
+   "v5.3.1": "d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00",
+   "v5.3.2": "d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00",
+   "v5.3.3": "d978d88bcfbb60727cab3eed32039c9d66ce917a14c7f5a199b6215db8f7ea00",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_coarse_cheb.hpp",
+   "v5.3.1": "7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e",
+   "v5.3.2": "7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e",
+   "v5.3.3": "7af73817161c34144f149f67a577a275c42e10c6daeb2bdb2245d1367556cf8e",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_coarse_mono.hpp",
+   "v5.3.1": "97d33714d421d93fe50798aad49bcf05fc20fffbaae9de72c6037ff7778a2505",
+   "v5.3.2": "97d33714d421d93fe50798aad49bcf05fc20fffbaae9de72c6037ff7778a2505",
+   "v5.3.3": "97d33714d421d93fe50798aad49bcf05fc20fffbaae9de72c6037ff7778a2505",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_coarse_rat.hpp",
+   "v5.3.1": "4ba32e64ee9152de8ad4ed539b5cd3bfaa84164ee23820fb625e922bff363e4c",
+   "v5.3.2": "4ba32e64ee9152de8ad4ed539b5cd3bfaa84164ee23820fb625e922bff363e4c",
+   "v5.3.3": "4ba32e64ee9152de8ad4ed539b5cd3bfaa84164ee23820fb625e922bff363e4c",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_far.hpp",
+   "v5.3.1": "5af8ec47f5b133ec37b807c01ff769591afeaa55a5f04fa84c1b0cd37f7732b4",
+   "v5.3.2": "5af8ec47f5b133ec37b807c01ff769591afeaa55a5f04fa84c1b0cd37f7732b4",
+   "v5.3.3": "5af8ec47f5b133ec37b807c01ff769591afeaa55a5f04fa84c1b0cd37f7732b4",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_narrow_cheb.hpp",
+   "v5.3.1": "17713d76e1382d9bd5e46d326a55ed8d709deaa298e7026ad0dfa47c81a22ecc",
+   "v5.3.2": "17713d76e1382d9bd5e46d326a55ed8d709deaa298e7026ad0dfa47c81a22ecc",
+   "v5.3.3": "17713d76e1382d9bd5e46d326a55ed8d709deaa298e7026ad0dfa47c81a22ecc",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_narrow_mono.hpp",
+   "v5.3.1": "b7b90c5d00095786e3e127072a8bd1fd2f7591236471695afb3791dfe156d597",
+   "v5.3.2": "b7b90c5d00095786e3e127072a8bd1fd2f7591236471695afb3791dfe156d597",
+   "v5.3.3": "b7b90c5d00095786e3e127072a8bd1fd2f7591236471695afb3791dfe156d597",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_narrow_rat.hpp",
+   "v5.3.1": "24d7692131a068cfbe84fea480dd61cfb6ab74ea60fbe2b4af1d1d8ae49a5b4b",
+   "v5.3.2": "24d7692131a068cfbe84fea480dd61cfb6ab74ea60fbe2b4af1d1d8ae49a5b4b",
+   "v5.3.3": "24d7692131a068cfbe84fea480dd61cfb6ab74ea60fbe2b4af1d1d8ae49a5b4b",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_uniform_cheb.hpp",
+   "v5.3.1": "28f932bb8f1d7f4d2a693687d5ab685b4765f31a4eab447dbdd9df8698272185",
+   "v5.3.2": "28f932bb8f1d7f4d2a693687d5ab685b4765f31a4eab447dbdd9df8698272185",
+   "v5.3.3": "28f932bb8f1d7f4d2a693687d5ab685b4765f31a4eab447dbdd9df8698272185",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_uniform_cheb_transposed.hpp",
+   "v5.3.1": "fab92465088ebcc44e83f08cc161a688f699e42f924b264210c7fbaa8d0848b8",
+   "v5.3.2": "fab92465088ebcc44e83f08cc161a688f699e42f924b264210c7fbaa8d0848b8",
+   "v5.3.3": "fab92465088ebcc44e83f08cc161a688f699e42f924b264210c7fbaa8d0848b8",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_uniform_mono.hpp",
+   "v5.3.1": "35db563c1aeb28ecf55fee3c5a17209dd9a8a5497de10d5885f2166710393f89",
+   "v5.3.2": "35db563c1aeb28ecf55fee3c5a17209dd9a8a5497de10d5885f2166710393f89",
+   "v5.3.3": "35db563c1aeb28ecf55fee3c5a17209dd9a8a5497de10d5885f2166710393f89",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_uniform_mono_transposed.hpp",
+   "v5.3.1": "b97abda2adba952051e6a87af97c513f70ab25b43aa84772e71f4197aab5b975",
+   "v5.3.2": "b97abda2adba952051e6a87af97c513f70ab25b43aa84772e71f4197aab5b975",
+   "v5.3.3": "b97abda2adba952051e6a87af97c513f70ab25b43aa84772e71f4197aab5b975",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_d_uniform_rat.hpp",
+   "v5.3.1": "28cf0bbf05828f03a82b81670da1ddf566a1797052c33081b78e4fae49f379d5",
+   "v5.3.2": "28cf0bbf05828f03a82b81670da1ddf566a1797052c33081b78e4fae49f379d5",
+   "v5.3.3": "28cf0bbf05828f03a82b81670da1ddf566a1797052c33081b78e4fae49f379d5",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_f32_coarse_cheb.hpp",
+   "v5.3.1": "619740c19a0caaa905dcb16694dd898ead09e5dc0d2403d5a3939a17cfc8b693",
+   "v5.3.2": "619740c19a0caaa905dcb16694dd898ead09e5dc0d2403d5a3939a17cfc8b693",
+   "v5.3.3": "619740c19a0caaa905dcb16694dd898ead09e5dc0d2403d5a3939a17cfc8b693",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_f32_coarse_mono.hpp",
+   "v5.3.1": "dfb6e1634d76100470a86cd809ff620befecb9514a2543c43b9fcf9f3a6baaaa",
+   "v5.3.2": "dfb6e1634d76100470a86cd809ff620befecb9514a2543c43b9fcf9f3a6baaaa",
+   "v5.3.3": "dfb6e1634d76100470a86cd809ff620befecb9514a2543c43b9fcf9f3a6baaaa",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_f32_coarse_rat.hpp",
+   "v5.3.1": "1780b14f4382ccab07b469b192ae6868be14cdddf83615ab4c2422c022c56e3c",
+   "v5.3.2": "1780b14f4382ccab07b469b192ae6868be14cdddf83615ab4c2422c022c56e3c",
+   "v5.3.3": "1780b14f4382ccab07b469b192ae6868be14cdddf83615ab4c2422c022c56e3c",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_f32_narrow_cheb.hpp",
+   "v5.3.1": "06ac9c5ee5fe2bba3ae0ec5a228d412f4e3dccf5c6d41af5cb7e63b48901a6d8",
+   "v5.3.2": "06ac9c5ee5fe2bba3ae0ec5a228d412f4e3dccf5c6d41af5cb7e63b48901a6d8",
+   "v5.3.3": "06ac9c5ee5fe2bba3ae0ec5a228d412f4e3dccf5c6d41af5cb7e63b48901a6d8",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_f32_narrow_mono.hpp",
+   "v5.3.1": "fd227bc0ee723996381272d6ad26ae28622e1066c0d6284bf2f90ff66a7d8d83",
+   "v5.3.2": "fd227bc0ee723996381272d6ad26ae28622e1066c0d6284bf2f90ff66a7d8d83",
+   "v5.3.3": "fd227bc0ee723996381272d6ad26ae28622e1066c0d6284bf2f90ff66a7d8d83",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_f32_narrow_rat.hpp",
+   "v5.3.1": "09fff507f0907fe2836e551886497c6512e31a77986c8f18578ffd6e7c37c331",
+   "v5.3.2": "09fff507f0907fe2836e551886497c6512e31a77986c8f18578ffd6e7c37c331",
+   "v5.3.3": "09fff507f0907fe2836e551886497c6512e31a77986c8f18578ffd6e7c37c331",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_f32_uniform_cheb.hpp",
+   "v5.3.1": "731e119838f2ba6b9d6b91bb99f25164ad000573cebae4e65715fd2e6d5417e6",
+   "v5.3.2": "731e119838f2ba6b9d6b91bb99f25164ad000573cebae4e65715fd2e6d5417e6",
+   "v5.3.3": "731e119838f2ba6b9d6b91bb99f25164ad000573cebae4e65715fd2e6d5417e6",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_f32_uniform_mono.hpp",
+   "v5.3.1": "e59636a52a711b26dd1546f34fabac8d16e17ad50de7aa100664fa8fa549eaac",
+   "v5.3.2": "e59636a52a711b26dd1546f34fabac8d16e17ad50de7aa100664fa8fa549eaac",
+   "v5.3.3": "e59636a52a711b26dd1546f34fabac8d16e17ad50de7aa100664fa8fa549eaac",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_coefficients_f32_uniform_rat.hpp",
+   "v5.3.1": "e5090fbe19893682ec7b9c7b983ab3c8090170c3626299e6cbd7e71874f1002d",
+   "v5.3.2": "e5090fbe19893682ec7b9c7b983ab3c8090170c3626299e6cbd7e71874f1002d",
+   "v5.3.3": "e5090fbe19893682ec7b9c7b983ab3c8090170c3626299e6cbd7e71874f1002d",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_cuda.hpp",
+   "v5.3.1": "d4bc6709354248aa6bcc79a7a4d91545cdfcd4b75de8bdf6575934d803f4666b",
+   "v5.3.2": "d4bc6709354248aa6bcc79a7a4d91545cdfcd4b75de8bdf6575934d803f4666b",
+   "v5.3.3": "d4bc6709354248aa6bcc79a7a4d91545cdfcd4b75de8bdf6575934d803f4666b",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_cuda_arithmetic.hpp",
+   "v5.3.1": "2ee24a318cbea459c24dc708da2a6d72ca81bc8a818f33ee35002ac88499284d",
+   "v5.3.2": "2ee24a318cbea459c24dc708da2a6d72ca81bc8a818f33ee35002ac88499284d",
+   "v5.3.3": "2ee24a318cbea459c24dc708da2a6d72ca81bc8a818f33ee35002ac88499284d",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_cuda_device.hpp",
+   "v5.3.1": "78905861728a90ae632f52bcee0c2b071187cfb4be5cb84be05f268af4178c9e",
+   "v5.3.2": "78905861728a90ae632f52bcee0c2b071187cfb4be5cb84be05f268af4178c9e",
+   "v5.3.3": "78905861728a90ae632f52bcee0c2b071187cfb4be5cb84be05f268af4178c9e",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_cuda_launch.hpp",
+   "v5.3.1": "664c716b422bf18185243e64832d39e8edd25ec2b754ee2f9d4916ca81271be4",
+   "v5.3.2": "664c716b422bf18185243e64832d39e8edd25ec2b754ee2f9d4916ca81271be4",
+   "v5.3.3": "664c716b422bf18185243e64832d39e8edd25ec2b754ee2f9d4916ca81271be4",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_cuda_muladd.hpp",
+   "v5.3.1": "6fb0d300629adacda0fd51978cc4ca566521137d7dacf1edc8ff5e0f12a7a63d",
+   "v5.3.2": "6fb0d300629adacda0fd51978cc4ca566521137d7dacf1edc8ff5e0f12a7a63d",
+   "v5.3.3": "6fb0d300629adacda0fd51978cc4ca566521137d7dacf1edc8ff5e0f12a7a63d",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_cuda_options.hpp",
+   "v5.3.1": "d16dce5a29d93eea6ce419d66d88528af64338e40d2b0ecde2cf9fd5c3e84bed",
+   "v5.3.2": "d16dce5a29d93eea6ce419d66d88528af64338e40d2b0ecde2cf9fd5c3e84bed",
+   "v5.3.3": "d16dce5a29d93eea6ce419d66d88528af64338e40d2b0ecde2cf9fd5c3e84bed",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_cuda_policy.hpp",
+   "v5.3.1": "aad6d345788e824c60e637b335589fc11c5421656417825431e2812dc159b42c",
+   "v5.3.2": "aad6d345788e824c60e637b335589fc11c5421656417825431e2812dc159b42c",
+   "v5.3.3": "aad6d345788e824c60e637b335589fc11c5421656417825431e2812dc159b42c",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_cuda_probe.hpp",
+   "v5.3.1": "6e3c0eb667e58980883f7e72f0a2729cda702cb4476c8d1a5a00736472827866",
+   "v5.3.2": "6e3c0eb667e58980883f7e72f0a2729cda702cb4476c8d1a5a00736472827866",
+   "v5.3.3": "6e3c0eb667e58980883f7e72f0a2729cda702cb4476c8d1a5a00736472827866",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_decl.hpp",
+   "v5.3.1": "1c15d22a7cd09f2b52d4eeca4829fe09993766a6071862d4c5bd32464b56f862",
+   "v5.3.2": "1c15d22a7cd09f2b52d4eeca4829fe09993766a6071862d4c5bd32464b56f862",
+   "v5.3.3": "1c15d22a7cd09f2b52d4eeca4829fe09993766a6071862d4c5bd32464b56f862",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_default_tables.hpp",
+   "v5.3.1": "74388aeabc3754d5506f7ff89134fe0da0dab3d5016f607b21f5ddef029b66b1",
+   "v5.3.2": "74388aeabc3754d5506f7ff89134fe0da0dab3d5016f607b21f5ddef029b66b1",
+   "v5.3.3": "74388aeabc3754d5506f7ff89134fe0da0dab3d5016f607b21f5ddef029b66b1",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_device_tables.hpp",
+   "v5.3.1": "058e6b66cf68ed4412a163f8f6875e93da37bb7f98df3be373ea17eeb4f750ea",
+   "v5.3.2": "058e6b66cf68ed4412a163f8f6875e93da37bb7f98df3be373ea17eeb4f750ea",
+   "v5.3.3": "058e6b66cf68ed4412a163f8f6875e93da37bb7f98df3be373ea17eeb4f750ea",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_effective_degrees.hpp",
+   "v5.3.1": "32eef040a83bd59c77e975f15d5f30f0c85dd68148842726f9f03f2e4e34d66b",
+   "v5.3.2": "32eef040a83bd59c77e975f15d5f30f0c85dd68148842726f9f03f2e4e34d66b",
+   "v5.3.3": "32eef040a83bd59c77e975f15d5f30f0c85dd68148842726f9f03f2e4e34d66b",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_fit32.hpp",
+   "v5.3.1": "a38477d09fa892cccd59ab3b709870b5fcb1f4f5884b0d23a8e6b82f7c1a0a6e",
+   "v5.3.2": "a38477d09fa892cccd59ab3b709870b5fcb1f4f5884b0d23a8e6b82f7c1a0a6e",
+   "v5.3.3": "a38477d09fa892cccd59ab3b709870b5fcb1f4f5884b0d23a8e6b82f7c1a0a6e",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_fit_chebyshev.hpp",
+   "v5.3.1": "1461322534274e1c1c8e82b7cec7deb956161a6e2c492f5d91a03881868fcce9",
+   "v5.3.2": "1461322534274e1c1c8e82b7cec7deb956161a6e2c492f5d91a03881868fcce9",
+   "v5.3.3": "1461322534274e1c1c8e82b7cec7deb956161a6e2c492f5d91a03881868fcce9",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_fit_core.hpp",
+   "v5.3.1": "71861ec3f857acebe5257444ef4b0e49ec01645d3a9dfff034c82311ae90897e",
+   "v5.3.2": "71861ec3f857acebe5257444ef4b0e49ec01645d3a9dfff034c82311ae90897e",
+   "v5.3.3": "71861ec3f857acebe5257444ef4b0e49ec01645d3a9dfff034c82311ae90897e",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_fit_rational.hpp",
+   "v5.3.1": "66ad9630f2362ee89c4c83129017f5e8d1fa8d133b2efddd096ad82fc3330773",
+   "v5.3.2": "66ad9630f2362ee89c4c83129017f5e8d1fa8d133b2efddd096ad82fc3330773",
+   "v5.3.3": "66ad9630f2362ee89c4c83129017f5e8d1fa8d133b2efddd096ad82fc3330773",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_fit_uniform.hpp",
+   "v5.3.1": "4719e11f65c3c5bf09732c1df45bcd1ca676a1da3c7635b2e6f96c78f6b4e59f",
+   "v5.3.2": "4719e11f65c3c5bf09732c1df45bcd1ca676a1da3c7635b2e6f96c78f6b4e59f",
+   "v5.3.3": "4719e11f65c3c5bf09732c1df45bcd1ca676a1da3c7635b2e6f96c78f6b4e59f",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_flat_grid.hpp",
+   "v5.3.1": "8ae70fbdc9b42d8a52bb19badacd3379155454036d5dd700f86ba59c64c0d43d",
+   "v5.3.2": "8ae70fbdc9b42d8a52bb19badacd3379155454036d5dd700f86ba59c64c0d43d",
+   "v5.3.3": "8ae70fbdc9b42d8a52bb19badacd3379155454036d5dd700f86ba59c64c0d43d",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_impl.hpp",
+   "v5.3.1": "05ac06e00b33fdb019bb48940634c4aea9da8a162acfdc611645ba25ebb105b5",
+   "v5.3.2": "05ac06e00b33fdb019bb48940634c4aea9da8a162acfdc611645ba25ebb105b5",
+   "v5.3.3": "05ac06e00b33fdb019bb48940634c4aea9da8a162acfdc611645ba25ebb105b5",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_orders_lanes.hpp",
+   "v5.3.1": "6e40fcd69797d398ff69b03c42d29727693e5ecd0d8dec2877f8542d45710a46",
+   "v5.3.2": "6e40fcd69797d398ff69b03c42d29727693e5ecd0d8dec2877f8542d45710a46",
+   "v5.3.3": "6e40fcd69797d398ff69b03c42d29727693e5ecd0d8dec2877f8542d45710a46",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_probe.hpp",
+   "v5.3.1": "8141bb577ab12d58dd9e74f433e9422ab6143af47241ed4df2511822387cb467",
+   "v5.3.2": "8141bb577ab12d58dd9e74f433e9422ab6143af47241ed4df2511822387cb467",
+   "v5.3.3": "8141bb577ab12d58dd9e74f433e9422ab6143af47241ed4df2511822387cb467",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_span.hpp",
+   "v5.3.1": "d0b05554d34dd695aaa3ae6dd500a623ae284429212c8b1a28de014e556194d4",
+   "v5.3.2": "d0b05554d34dd695aaa3ae6dd500a623ae284429212c8b1a28de014e556194d4",
+   "v5.3.3": "d0b05554d34dd695aaa3ae6dd500a623ae284429212c8b1a28de014e556194d4",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/boys_transform.hpp",
+   "v5.3.1": "d6351fcf238309cccf97780364acb7a09620fadda7a3830eafb344956a5de602",
+   "v5.3.2": "d6351fcf238309cccf97780364acb7a09620fadda7a3830eafb344956a5de602",
+   "v5.3.3": "d6351fcf238309cccf97780364acb7a09620fadda7a3830eafb344956a5de602",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/dependent_false.hpp",
+   "v5.3.1": "f30dfa5f9ba90ed0fb86d7ba9eaea61cf6d09e169a3d6901b99521c7745ed781",
+   "v5.3.2": "f30dfa5f9ba90ed0fb86d7ba9eaea61cf6d09e169a3d6901b99521c7745ed781",
+   "v5.3.3": "f30dfa5f9ba90ed0fb86d7ba9eaea61cf6d09e169a3d6901b99521c7745ed781",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/f16.hpp",
+   "v5.3.1": "e13fd05586aa73c8cb3da44d12ee55462dbfe5c3b1acaefd700185fba87fd3df",
+   "v5.3.2": "e13fd05586aa73c8cb3da44d12ee55462dbfe5c3b1acaefd700185fba87fd3df",
+   "v5.3.3": "e13fd05586aa73c8cb3da44d12ee55462dbfe5c3b1acaefd700185fba87fd3df",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/half2.hpp",
+   "v5.3.1": "ef8646b1b73a2e37e647beb2e4a3b0f43f3d636787e459fb4be75403d179ff91",
+   "v5.3.2": "ef8646b1b73a2e37e647beb2e4a3b0f43f3d636787e459fb4be75403d179ff91",
+   "v5.3.3": "ef8646b1b73a2e37e647beb2e4a3b0f43f3d636787e459fb4be75403d179ff91",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/isa_tiers.hpp",
+   "v5.3.1": "fb86c9e7ae793e32a8dee31ea4c48c8c93f2ede00df9ec62659506e7d47e4772",
+   "v5.3.2": "fb86c9e7ae793e32a8dee31ea4c48c8c93f2ede00df9ec62659506e7d47e4772",
+   "v5.3.3": "fb86c9e7ae793e32a8dee31ea4c48c8c93f2ede00df9ec62659506e7d47e4772",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/kernels.hpp",
+   "v5.3.1": "f3377544732eb39b30b4a98e4c3de006fb6f66d7aaadcde2c29b96df3603fccb",
+   "v5.3.2": "f3377544732eb39b30b4a98e4c3de006fb6f66d7aaadcde2c29b96df3603fccb",
+   "v5.3.3": "f3377544732eb39b30b4a98e4c3de006fb6f66d7aaadcde2c29b96df3603fccb",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/policy.hpp",
+   "v5.3.1": "7d2c49c10e01ad3b78c564cbb346a1b870ca64f351d2ba31df0de0d9a60e2f4b",
+   "v5.3.2": "7d2c49c10e01ad3b78c564cbb346a1b870ca64f351d2ba31df0de0d9a60e2f4b",
+   "v5.3.3": "7d2c49c10e01ad3b78c564cbb346a1b870ca64f351d2ba31df0de0d9a60e2f4b",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/status.hpp",
+   "v5.3.1": "2043500fdaa01f3ed411ce188d5ec89946108a4fe9e6fa0ed839e89e66759df7",
+   "v5.3.2": "2043500fdaa01f3ed411ce188d5ec89946108a4fe9e6fa0ed839e89e66759df7",
+   "v5.3.3": "2043500fdaa01f3ed411ce188d5ec89946108a4fe9e6fa0ed839e89e66759df7",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "include/boys/version.hpp",
+   "v5.3.1": "02e6312dfa1a91b07abe98843c484f2331abb8f3f48b313fb6a15722c9067da9",
+   "v5.3.2": "e2a1a783004191cd76bfc952f56d3a2bece49935722c54fb8aee64553c89b27e",
+   "v5.3.3": "e5599615583504c31582df88250f3811b15c24f37f97c17c1b7373a34afc8131",
+   "byte_identical_all_three": false
+  },
+  {
+   "path": "src/boys.cpp",
+   "v5.3.1": "e25ec03302ed831a384e19e8cda29af98e330f79f6dc5f7b82ae87c014a822b9",
+   "v5.3.2": "e25ec03302ed831a384e19e8cda29af98e330f79f6dc5f7b82ae87c014a822b9",
+   "v5.3.3": "e25ec03302ed831a384e19e8cda29af98e330f79f6dc5f7b82ae87c014a822b9",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_backend_registry.hpp",
+   "v5.3.1": "105ed219333bfad46b783a900e12d00e3568915e9c66e4b87870c360baed4997",
+   "v5.3.2": "105ed219333bfad46b783a900e12d00e3568915e9c66e4b87870c360baed4997",
+   "v5.3.3": "105ed219333bfad46b783a900e12d00e3568915e9c66e4b87870c360baed4997",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_backend_simd.hpp",
+   "v5.3.1": "498d7d34020c26a9e4e25a4153c861dc528ba1898a1067b73369c10e69b5f941",
+   "v5.3.2": "498d7d34020c26a9e4e25a4153c861dc528ba1898a1067b73369c10e69b5f941",
+   "v5.3.3": "498d7d34020c26a9e4e25a4153c861dc528ba1898a1067b73369c10e69b5f941",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_c.cpp",
+   "v5.3.1": "b341913156b5bf43480a3613e6c61e535f9fadd1d827264cd745592c887b95d2",
+   "v5.3.2": "b341913156b5bf43480a3613e6c61e535f9fadd1d827264cd745592c887b95d2",
+   "v5.3.3": "b341913156b5bf43480a3613e6c61e535f9fadd1d827264cd745592c887b95d2",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_cuda.cpp",
+   "v5.3.1": "28e90b5e57cfb1f09d3dca2b6745438d9adf08814bc96509e900549f3dc8f2d0",
+   "v5.3.2": "28e90b5e57cfb1f09d3dca2b6745438d9adf08814bc96509e900549f3dc8f2d0",
+   "v5.3.3": "28e90b5e57cfb1f09d3dca2b6745438d9adf08814bc96509e900549f3dc8f2d0",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_cuda.cu",
+   "v5.3.1": "87a809a344e4dc8a6be1e83c9e335c2763ea5f729420736260657e7e4b903d41",
+   "v5.3.2": "87a809a344e4dc8a6be1e83c9e335c2763ea5f729420736260657e7e4b903d41",
+   "v5.3.3": "87a809a344e4dc8a6be1e83c9e335c2763ea5f729420736260657e7e4b903d41",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_cuda_probe.cpp",
+   "v5.3.1": "f9a7334c2716a294f1f33d315497233a95abfbe19b54a8978de5274062a103e8",
+   "v5.3.2": "f9a7334c2716a294f1f33d315497233a95abfbe19b54a8978de5274062a103e8",
+   "v5.3.3": "f9a7334c2716a294f1f33d315497233a95abfbe19b54a8978de5274062a103e8",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_cuda_probe_entries.hpp",
+   "v5.3.1": "0769f883c56ae2e5012c5a362fdf80bd8a7c4026c9af1a7242aa311735355a39",
+   "v5.3.2": "0769f883c56ae2e5012c5a362fdf80bd8a7c4026c9af1a7242aa311735355a39",
+   "v5.3.3": "0769f883c56ae2e5012c5a362fdf80bd8a7c4026c9af1a7242aa311735355a39",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_cuda_probe_kernels.cu",
+   "v5.3.1": "306c19f21e83d4dfdc3d8c8dcb29b5a4084beaf860e5557de6ca43536f3efa7d",
+   "v5.3.2": "306c19f21e83d4dfdc3d8c8dcb29b5a4084beaf860e5557de6ca43536f3efa7d",
+   "v5.3.3": "306c19f21e83d4dfdc3d8c8dcb29b5a4084beaf860e5557de6ca43536f3efa7d",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_defaults.cpp",
+   "v5.3.1": "a7b5812bd34501d9d351882635ab93f5a6c5cc2262605450aae420e71b01f37e",
+   "v5.3.2": "a7b5812bd34501d9d351882635ab93f5a6c5cc2262605450aae420e71b01f37e",
+   "v5.3.3": "a7b5812bd34501d9d351882635ab93f5a6c5cc2262605450aae420e71b01f37e",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_dispatch.cpp",
+   "v5.3.1": "5d14463c76cb8cfbffdf3c33aaabc43fc4ea4319adfe684bca5efb46eff86e15",
+   "v5.3.2": "5d14463c76cb8cfbffdf3c33aaabc43fc4ea4319adfe684bca5efb46eff86e15",
+   "v5.3.3": "5d14463c76cb8cfbffdf3c33aaabc43fc4ea4319adfe684bca5efb46eff86e15",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_orders_simd.cpp",
+   "v5.3.1": "84a24261efb5c812652e6270596b76d2fa6920041578f25391acbe2915f484e4",
+   "v5.3.2": "84a24261efb5c812652e6270596b76d2fa6920041578f25391acbe2915f484e4",
+   "v5.3.3": "84a24261efb5c812652e6270596b76d2fa6920041578f25391acbe2915f484e4",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_orders_simd.hpp",
+   "v5.3.1": "53491e27f58e10db31cf3dbc149b2ef62a904a696941153a4743f93c9bf05f95",
+   "v5.3.2": "53491e27f58e10db31cf3dbc149b2ef62a904a696941153a4743f93c9bf05f95",
+   "v5.3.3": "53491e27f58e10db31cf3dbc149b2ef62a904a696941153a4743f93c9bf05f95",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_probe.cpp",
+   "v5.3.1": "7e6f10a04eb7b525f757ba511c50f05f6b7ceea93fbe8abc3bf40d0463091bba",
+   "v5.3.2": "7e6f10a04eb7b525f757ba511c50f05f6b7ceea93fbe8abc3bf40d0463091bba",
+   "v5.3.3": "7e6f10a04eb7b525f757ba511c50f05f6b7ceea93fbe8abc3bf40d0463091bba",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_simd.cpp",
+   "v5.3.1": "7b71c4d416c8f5e0afa31827ed4439db8cf8f49a932f25b497c22792fe6b1ac8",
+   "v5.3.2": "7b71c4d416c8f5e0afa31827ed4439db8cf8f49a932f25b497c22792fe6b1ac8",
+   "v5.3.3": "eeb7af4a967bfbd5d593601fc8f5329550d0a3a29e18be2436f6c2a536529370",
+   "byte_identical_all_three": false
+  },
+  {
+   "path": "src/boys_tier_avx2.cpp",
+   "v5.3.1": "07fcdc2699bd3c211fc089cdcf20adc396f508ce260fa732a8e38b05a950755b",
+   "v5.3.2": "07fcdc2699bd3c211fc089cdcf20adc396f508ce260fa732a8e38b05a950755b",
+   "v5.3.3": "07fcdc2699bd3c211fc089cdcf20adc396f508ce260fa732a8e38b05a950755b",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_tier_baseline.cpp",
+   "v5.3.1": "bc7f2a3477ad6f64f2b60eb394113d8d708c33f0313b55d2dc98b826bb3bc895",
+   "v5.3.2": "bc7f2a3477ad6f64f2b60eb394113d8d708c33f0313b55d2dc98b826bb3bc895",
+   "v5.3.3": "bc7f2a3477ad6f64f2b60eb394113d8d708c33f0313b55d2dc98b826bb3bc895",
+   "byte_identical_all_three": true
+  },
+  {
+   "path": "src/boys_tier_entries.hpp",
+   "v5.3.1": "86ab54b87cb760fd92101f6bece3535446d6ea1e20e9ea34ed10f0fca26d8913",
+   "v5.3.2": "86ab54b87cb760fd92101f6bece3535446d6ea1e20e9ea34ed10f0fca26d8913",
+   "v5.3.3": "86ab54b87cb760fd92101f6bece3535446d6ea1e20e9ea34ed10f0fca26d8913",
+   "byte_identical_all_three": true
+  }
+ ],
+ "canonical_source": {
+  "path": "src/boys_simd.cpp",
+  "method": "C++ comments stripped, whitespace collapsed, SHA-256",
+  "hash": {
+   "v5.3.1": "5f757ee418140e3cceeeb059fb2dc65ad9077815334be3501385a05ffd164ca8",
+   "v5.3.2": "5f757ee418140e3cceeeb059fb2dc65ad9077815334be3501385a05ffd164ca8",
+   "v5.3.3": "5f757ee418140e3cceeeb059fb2dc65ad9077815334be3501385a05ffd164ca8"
+  }
+ },
+ "conclusion": "All include/boys/* files except version.hpp are byte-identical at the three tags. src/boys_simd.cpp differs only in comments; its comment-stripped hash is identical at the three tags. The compiled arithmetic of the probe and the session is therefore the release arithmetic."
+}

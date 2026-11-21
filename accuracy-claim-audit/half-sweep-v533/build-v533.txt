@@ -1,0 +1,100 @@
+Build and run commands, as used on 21 November 2026.
+
+Kernel revision measured: annotated tag v5.3.3, tag object 4119217c8ab23d9f370b301a9bd6338e2c804f7e,
+commit 01bba7b0ed7e0dd387f2af087e992445222e5546. Detached worktree created with
+
+    git -C <kernel checkout> worktree add --detach ^
+        <run root>\boys-v5.3.3 01bba7b0ed7e0dd387f2af087e992445222e5546
+
+The source repository was clean before and after; the worktree's own status was clean at the time
+of the run. Its origin is https://github.com/myamlak/boys.git (the brief said git@github.com; the
+URL differs, the tag and commit do not).
+
+Control revision: v5.1.1, commit 834bdbb18a30ac8538b519436429f78d41f187ce, in the worktree
+<run root>\boys-v5.1.1 (created the same way).
+
+Toolchain: Visual Studio 18 Community; cl 19.51.36260.0, toolset 14.51.36231, x64; Windows SDK
+10.0.26100.0; CMake 4.4.2, generator "Visual Studio 18 2026"; MSBuild 18.11.1-1.26513.3.
+Python 3.14.7, mpmath 1.4.1, numpy 2.5.2.
+
+The deposit's build.txt records cl 19.51.36256.0; this machine reports 19.51.36260.0. The toolset
+directory is the same 14.51.36231, so the compiler proper is the same; only the reported cl
+version string differs.
+
+Library (a new build directory under the scratch directory):
+
+    cmake -S <run root>\boys-v5.3.3 ^
+          -B <run root>\build ^
+          -G "Visual Studio 18 2026" -A x64 ^
+          -DBOYS_BUILD_TESTS=OFF -DBUILD_BENCHMARKS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_CUDA=OFF
+    cmake --build <run root>\build --config Release --target boys
+
+Configure exit 0, 18.86 s wall (CMake reports 15.4 s configure, 0.2 s generate).
+Build exit 0, 249.61 s wall. It writes build\Release\boys.lib, 79,717,686 bytes,
+SHA256 AF8E018EED9D402C0BC8C3BDFB587D4AB5B83AF8011B0F74B239D99CC0256DB6.
+(The v5.1.1 record's library was 79,379,968 bytes.)
+
+Harness (the source is a byte-copy of the paper deposit, SHA256
+B969BDDC3AD5D7AAAD66559C4DE56CE29414837AB7EF65D49DAFB4581C064B0F):
+
+    call "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Auxiliary\Build\vcvars64.bat"
+    cl /nologo /std:c++20 /O2 /EHsc /MD /DBoysFp16=1 ^
+       /I <run root>\boys-v5.3.3\include ^
+       half_sweep.cpp <run root>\build\Release\boys.lib ^
+       /Fe:half_sweep.exe
+
+Compile and link exit 0, 14.77 s; half_sweep.exe 72,704 bytes,
+SHA256 B0FB371D599251EECF6E1FAF9E84319D8113B2DC0CC48AE60BE475D4E00753A3.
+
+Run the sweep from the scratch directory:
+
+    half_sweep.exe half_sweep.bin        (exit 0, 0.547 s, 46,741,352 bytes)
+
+Header check: magic 'HSWP', version 1, nmax 32, rows 2,124,606.
+SHA256 6F0F4CC23CDEDE6F7A116E804D5FEE9DCE6DC3D887B280A10EEC9D1FB53327A7.
+That hash is byte-identical to the v5.1.1 sweep at
+<previous run root>\half_sweep.bin.
+
+Reference pass (the oracle is a byte-copy of the deposit, SHA256
+24E7BE9A2C0F74132F06DB8854717F9AEB08FE68BF80A90F9E50EB074159087E; run without -I so mpmath
+comes from the user site, exactly as the record did):
+
+    python half_sweep_oracle.py half_sweep.bin results-v533.json --jobs 8
+
+Exit 0, 155.4 s wall (reference 154.2 s, total 154.8 s).
+SHA256 of results-v533.json 9EC27E0D1B9492FA323CE6B416538725EE2FDFC155DC563DF62CA25DB8DC0BFC.
+
+Control, v5.1.1 headers recompiled with the same cl and run over the same domain (no boys.lib:
+the half entries are header-defined, and the v5.1.1 deposit records that the two links are
+byte-identical):
+
+    cl /nologo /std:c++20 /O2 /EHsc /MD /DBoysFp16=1 ^
+       /I <run root>\boys-v5.1.1\include ^
+       half_sweep.cpp /Fe:half_sweep-v511-rebuild.exe
+    half_sweep-v511-rebuild.exe half_sweep-v511-rebuild.bin
+
+Compile exit 0, 15.53 s; sweep exit 0, 46,741,352 bytes.
+Comparison with the old raw binary: 0 changed returned bits, 0 changed bounds, in both formats.
+
+Policy probe (against the v5.3.3 headers and library):
+
+    cl /nologo /std:c++20 /O2 /EHsc /MD /DBoysFp16=1 ^
+       /I <run root>\boys-v5.3.3\include ^
+       probe_policy.cpp <run root>\build\Release\boys.lib ^
+       /Fe:probe_policy.exe
+    probe_policy.exe
+
+Compile exit 0, 17.99 s; run exit 0, 0.564 s. It static-asserts that the compiled fp16 single row
+is FitGranularity::kUniform with DivisionForm::kRefinedReciprocal and that the bf16 single row is
+DivisionForm::kPlainReciprocal; both asserts hold. It then compares the default entry with the
+same row at the other division form: fp16 0 differing returns in 1,047,519 cells; bf16 2
+differing returns in 1,077,087 cells (n=17 at x=0x4308 and x=0x4408), neither reached by the
+default (which is the plain form).
+
+Comparison program:
+
+    python compare_sweeps.py <previous run root>\half_sweep.bin ^
+        half_sweep.bin compare-v511-v533.json results-v511.json results-v533.json
+
+Exit 0. Output: binary16 1,047,519 cells, 0 changed returned bits, 0 changed bounds; bfloat16
+1,077,087 cells, 0 changed returned bits, 0 changed bounds.

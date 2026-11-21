@@ -1,0 +1,137 @@
+{
+  "record": "half-lane exhaustive sweep, v5.3.3 vs v5.1.1",
+  "date": "2026-11-21",
+  "purpose": "referee-requested re-run of the half-lane sweep at tag v5.3.3; paper not touched",
+  "kernel": {
+    "repository": "https://github.com/myamlak/boys.git",
+    "tag": "v5.3.3",
+    "tag_object": "4119217c8ab23d9f370b301a9bd6338e2c804f7e",
+    "commit": "01bba7b0ed7e0dd387f2af087e992445222e5546",
+    "worktree": "<run root>/boys-v5.3.3",
+    "worktree_head": "01bba7b0ed7e0dd387f2af087e992445222e5546",
+    "worktree_clean": true,
+    "build_options": "BOYS_BUILD_TESTS=OFF, BUILD_BENCHMARKS=OFF, BUILD_EXAMPLES=OFF, BUILD_CUDA=OFF; defaults otherwise"
+  },
+  "control": {
+    "tag": "v5.1.1",
+    "commit": "834bdbb18a30ac8538b519436429f78d41f187ce",
+    "worktree": "<run root>/boys-v5.1.1",
+    "method": "headers-only harness rebuild, same cl, same domain",
+    "changed_bits_vs_old_raw_binary": 0,
+    "old_raw_binary": "<previous run root>/half_sweep.bin",
+    "old_raw_binary_bytes": 46741352,
+    "old_raw_binary_sha256": "6F0F4CC23CDEDE6F7A116E804D5FEE9DCE6DC3D887B280A10EEC9D1FB53327A7"
+  },
+  "toolchain": {
+    "visual_studio": "18 Community",
+    "cl": "19.51.36260.0",
+    "toolset": "14.51.36231",
+    "windows_sdk": "10.0.26100.0",
+    "cmake": "4.4.2",
+    "generator": "Visual Studio 18 2026",
+    "msbuild": "18.11.1-1.26513.3",
+    "python": "3.14.7",
+    "mpmath": "1.4.1",
+    "numpy": "2.5.2",
+    "note": "the deposit's build.txt records cl 19.51.36256.0; the toolset directory is the same"
+  },
+  "harness": {
+    "source": "<run root>/half_sweep.cpp",
+    "source_sha256": "B969BDDC3AD5D7AAAD66559C4DE56CE29414837AB7EF65D49DAFB4581C064B0F",
+    "oracle": "<run root>/half_sweep_oracle.py",
+    "oracle_sha256": "24E7BE9A2C0F74132F06DB8854717F9AEB08FE68BF80A90F9E50EB074159087E",
+    "deposit": "this deposit",
+    "copied_verbatim": true
+  },
+  "library": {
+    "bytes": 79717686,
+    "sha256": "AF8E018EED9D402C0BC8C3BDFB587D4AB5B83AF8011B0F74B239D99CC0256DB6",
+    "v511_bytes": 79379968
+  },
+  "build": {
+    "configure_exit": 0,
+    "configure_seconds": 18.86,
+    "build_exit": 0,
+    "build_seconds": 249.61,
+    "harness_compile_exit": 0,
+    "harness_compile_seconds": 14.77,
+    "harness_exe_bytes": 72704,
+    "harness_exe_sha256": "B0FB371D599251EECF6E1FAF9E84319D8113B2DC0CC48AE60BE475D4E00753A3"
+  },
+  "sweep": {
+    "command": "half_sweep.exe half_sweep.bin",
+    "exit": 0,
+    "seconds": 0.547,
+    "bytes": 46741352,
+    "sha256": "6F0F4CC23CDEDE6F7A116E804D5FEE9DCE6DC3D887B280A10EEC9D1FB53327A7",
+    "counts": {
+      "binary16_arguments": 31743,
+      "binary16_cells": 1047519,
+      "bfloat16_arguments": 32639,
+      "bfloat16_cells": 1077087,
+      "total_cells": 2124606
+    },
+    "byte_identical_to_v511_raw_binary": true
+  },
+  "oracle": {
+    "command": "python half_sweep_oracle.py half_sweep.bin results-v533.json --jobs 8",
+    "exit": 0,
+    "seconds_total": 155.4,
+    "seconds_reference": 154.2,
+    "results_sha256": "9EC27E0D1B9492FA323CE6B416538725EE2FDFC155DC563DF62CA25DB8DC0BFC",
+    "revision_block_note": "the oracle hardcodes library_tag v5.1.1 and commit 834bdbb; results-v533.json is its verbatim output and the sweep it scores is v5.3.3 / 01bba7b"
+  },
+  "worst": {
+    "binary16": {
+      "n": 0,
+      "arg_bits_hex": "0x1B82",
+      "x": 0.003665924072265625,
+      "got_bits_hex": "0x3BFE",
+      "delivered": 0.9990234375,
+      "reference": 0.9987793680370024,
+      "bound": 0.000244240625,
+      "error": 0.00024406946299759813,
+      "ratio": 0.999299207482777,
+      "margin_per_cent": 0.07007925172229923
+    },
+    "bfloat16": {
+      "n": 0,
+      "arg_bits_hex": "0x3FA4",
+      "x": 1.28125,
+      "got_bits_hex": "0x3F33",
+      "delivered": 0.69921875,
+      "reference": 0.6972656908714802,
+      "bound": 0.001953225,
+      "error": 0.0019530591285198406,
+      "ratio": 0.9999150781501572,
+      "margin_per_cent": 0.00849218498427673
+    }
+  },
+  "comparison_v511": {
+    "changed_returned_bits_binary16": 0,
+    "changed_returned_bits_bfloat16": 0,
+    "changed_bounds_binary16": 0,
+    "changed_bounds_bfloat16": 0,
+    "worst_ratio_difference_binary16": 0.0,
+    "worst_ratio_difference_bfloat16": 0.0,
+    "format_blocks_identical": true,
+    "comparison_file": "<run root>/compare-v511-v533.json"
+  },
+  "policy_probe": {
+    "source": "<run root>/probe_policy.cpp",
+    "exit": 0,
+    "seconds": 0.564,
+    "fp16_default_row": "FitGranularity::kUniform, DivisionForm::kRefinedReciprocal",
+    "bf16_default_row": "DivisionForm::kPlainReciprocal",
+    "fp16_default_vs_plain_differing_returns": 0,
+    "bf16_default_vs_refined_differing_returns": 2,
+    "note": "the v5.3.3 fp16 single default row changed from PlainReciprocal to RefinedReciprocal relative to v5.1.1; that change moves no stored fp16 bit on the exhaustive domain, which explains the byte-identical sweep"
+  },
+  "verdict": {
+    "published_half_lane_bound_passed": true,
+    "cells_over_bound": 0,
+    "non_finite_returns": 0,
+    "h04_holds": true,
+    "h04_values": "binary16 0.999299207482777 (margin 0.07007925172229923 per cent); bfloat16 0.9999150781501572 (margin 0.00849218498427673 per cent)"
+  }
+}
