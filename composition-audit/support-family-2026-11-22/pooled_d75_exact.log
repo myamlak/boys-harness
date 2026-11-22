@@ -1,0 +1,22 @@
+components 144, permitted 75, targets 66, Q 69, main effects 8
+D75: N=75, numeric rank 75/75, cond 6.928203, kappa 1.000000, amp 54.506
+  rank mod 1009: 75/75
+  rank mod 2017: 75/75
+  rank mod 3001: 75/75
+
+largest |B_alpha,beta| / G_beta entries:
+  alpha frozenset() (0, 0, 0, 0, 0, 0)  beta frozenset({3, 5}) (0, 0, 0, 1, 0, 1)  |B|/G = 1.000000  B=-1.000000
+  alpha frozenset({3}) (0, 0, 0, 1, 0, 0)  beta frozenset({3, 5}) (0, 0, 0, 1, 0, 1)  |B|/G = 1.000000  B=1.000000
+  alpha frozenset() (0, 0, 0, 0, 0, 0)  beta frozenset({1, 3}) (0, 1, 0, 1, 0, 0)  |B|/G = 1.000000  B=-1.000000
+  alpha frozenset() (0, 0, 0, 0, 0, 0)  beta frozenset({1, 3, 5}) (0, 1, 0, 1, 0, 1)  |B|/G = 1.000000  B=-1.000000
+  alpha frozenset({3}) (0, 0, 0, 1, 0, 0)  beta frozenset({0, 1, 3}) (1, 1, 0, 1, 0, 0)  |B|/G = 1.000000  B=1.000000
+  alpha frozenset({3}) (0, 0, 0, 1, 0, 0)  beta frozenset({0, 3}) (1, 0, 0, 1, 0, 0)  |B|/G = 1.000000  B=1.000000
+  alpha frozenset({3}) (0, 0, 0, 1, 0, 0)  beta frozenset({1, 3}) (0, 1, 0, 1, 0, 0)  |B|/G = 1.000000  B=1.000000
+  alpha frozenset({3}) (0, 0, 0, 1, 0, 0)  beta frozenset({0, 1, 3, 4}) (1, 1, 0, 1, 1, 0)  |B|/G = 1.000000  B=1.224745
+  alpha frozenset() (0, 0, 0, 0, 0, 0)  beta frozenset({0, 1, 3}) (1, 1, 0, 1, 0, 0)  |B|/G = 1.000000  B=-1.000000
+  alpha frozenset() (0, 0, 0, 0, 0, 0)  beta frozenset({0, 1, 3, 5}) (1, 1, 0, 1, 0, 1)  |B|/G = 1.000000  B=-1.000000
+  alpha frozenset() (0, 0, 0, 0, 0, 0)  beta frozenset({0, 1, 3, 4}) (1, 1, 0, 1, 1, 0)  |B|/G = 1.000000  B=-1.224745
+  alpha frozenset() (0, 0, 0, 0, 0, 0)  beta frozenset({0, 3}) (1, 0, 0, 1, 0, 0)  |B|/G = 1.000000  B=-1.000000
+
+fused fp64: kappa*eta_Q = 3.954e-16; target signal 1.329e-14; published figure 2.558e-14
+fused fp32: kappa*eta_Q = 2.376e-07; target signal 5.220e-08; published figure 1.5e-07

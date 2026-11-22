@@ -1,0 +1,22 @@
+loading fused ...
+loading separate ...
+
+=== fused ===
+fp64: eta_Q 2.770933e-16  eta_old 2.614e-17  ratio None  q_coef 8.708e-17  target_coef 1.325e-16  recon 1.89e-29
+   eta_Q at {'n': 32, 'x': 11.5, 'region': 'A', 'route': 'chebyshev', 'scheme': 'split-clenshaw', 'component_index': 10, 'support': ['pack', 'form'], 'choices': [0, 1, 2, 0]}
+   q_coef at {'n': 32, 'x': 11.5, 'region': 'A', 'route': 'chebyshev', 'scheme': 'split-clenshaw', 'component_index': 10, 'support': ['pack', 'form'], 'choices': [0, 1, 2, 0]}
+   target at {'n': 32, 'x': 12.0, 'region': 'B', 'route': 'chebyshev', 'scheme': 'split-clenshaw', 'component_index': 28, 'support': ['partition', 'form'], 'choices': [2, 0, 2, 0]}
+fp32: eta_Q 1.710590e-07  eta_old 0.000e+00  ratio None  q_coef 5.376e-08  target_coef 6.183e-08  recon 7.94e-23
+   eta_Q at {'n': 0, 'x': 11.5, 'region': 'A', 'route': 'chebyshev', 'scheme': 'split-clenshaw', 'component_index': 10, 'support': ['pack', 'form'], 'choices': [0, 1, 2, 0]}
+   q_coef at {'n': 0, 'x': 11.5, 'region': 'A', 'route': 'rational-minimax', 'scheme': 'split-clenshaw', 'component_index': 10, 'support': ['pack', 'form'], 'choices': [0, 1, 2, 0]}
+   target at {'n': 0, 'x': 7.3, 'region': 'A', 'route': 'rational-minimax', 'scheme': 'split-clenshaw', 'component_index': 18, 'support': ['partition', 'pack'], 'choices': [1, 1, 0, 0]}
+
+=== separate ===
+fp64: eta_Q 2.770933e-16  eta_old 2.285e-17  ratio None  q_coef 8.708e-17  target_coef 1.660e-16  recon 1.26e-29
+   eta_Q at {'n': 32, 'x': 11.5, 'region': 'A', 'route': 'chebyshev', 'scheme': 'split-clenshaw', 'component_index': 10, 'support': ['pack', 'form'], 'choices': [0, 1, 2, 0]}
+   q_coef at {'n': 32, 'x': 11.5, 'region': 'A', 'route': 'chebyshev', 'scheme': 'split-clenshaw', 'component_index': 10, 'support': ['pack', 'form'], 'choices': [0, 1, 2, 0]}
+   target at {'n': 32, 'x': 12.0, 'region': 'B', 'route': 'rational-minimax', 'scheme': 'split-clenshaw', 'component_index': 16, 'support': ['partition', 'form'], 'choices': [1, 0, 2, 0]}
+fp32: eta_Q 1.710590e-07  eta_old 0.000e+00  ratio None  q_coef 5.376e-08  target_coef 6.183e-08  recon 7.94e-23
+   eta_Q at {'n': 0, 'x': 11.5, 'region': 'A', 'route': 'chebyshev', 'scheme': 'split-clenshaw', 'component_index': 10, 'support': ['pack', 'form'], 'choices': [0, 1, 2, 0]}
+   q_coef at {'n': 0, 'x': 11.5, 'region': 'A', 'route': 'rational-minimax', 'scheme': 'split-clenshaw', 'component_index': 10, 'support': ['pack', 'form'], 'choices': [0, 1, 2, 0]}
+   target at {'n': 0, 'x': 7.3, 'region': 'A', 'route': 'rational-minimax', 'scheme': 'split-clenshaw', 'component_index': 18, 'support': ['partition', 'pack'], 'choices': [1, 1, 0, 0]}

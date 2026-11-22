@@ -1,0 +1,53 @@
+condition A rows: (190, 36)
+float rank: 36
+QR pivot rows count: 36
+exact rank of the 36 selected rows: 36 / 36
+selected constraint labels:
+   ('TR0', 13, 6)
+   ('TR0', 14, 2)
+   ('TR0', 14, 12)
+   ('TR0', 15, 0)
+   ('TR0', 15, 1)
+   ('TR0', 15, 2)
+   ('TR0', 15, 6)
+   ('TR0', 15, 12)
+   ('TR0', 16, 4)
+   ('TR0', 16, 6)
+   ('TR0', 16, 12)
+   ('TR0', 17, 4)
+   ('TR0', 17, 6)
+   ('TR0', 18, 0)
+   ('TR0', 18, 2)
+   ('TR0', 18, 12)
+   ('TR0', 26, 24)
+   ('TR0', 27, 24)
+   ('TR0', 28, 4)
+   ('TR0', 28, 24)
+   ('TR0', 30, 24)
+   ('TT', 13, 18)
+   ('TT', 14, 15)
+   ('TT', 14, 18)
+   ('TT', 15, 18)
+   ('TT', 16, 17)
+   ('TT', 16, 18)
+   ('TT', 17, 18)
+   ('TT', 25, 30)
+   ('TT', 26, 27)
+   ('TT', 26, 30)
+   ('TT', 27, 30)
+   ('TT', 28, 29)
+   ('TT', 28, 30)
+   ('TT', 29, 30)
+   ('norm', -1, -1)
+
+V0: target rank 12, free target columns [7, 13]
+  null vector: F4(1,0,0,0) * [partition,exp](1, 0, 0, 1) + F4(1,0,0,0) * [partition,pack](1, 1, 0, 0)
+  float coefficients: [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  null vector: F4(1,0,0,0) * [partition,exp](2, 0, 0, 1) + F4(1,0,0,0) * [partition,pack](2, 1, 0, 0)
+  float coefficients: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+
+V6: target rank 12, free target columns [7, 13]
+  null vector: F4(-1,0,0,0) * [partition,exp](1, 0, 0, 1) + F4(1,0,0,0) * [partition,pack](1, 1, 0, 0)
+  float coefficients: [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  null vector: F4(-1,0,0,0) * [partition,exp](2, 0, 0, 1) + F4(1,0,0,0) * [partition,pack](2, 1, 0, 0)
+  float coefficients: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 1.0]

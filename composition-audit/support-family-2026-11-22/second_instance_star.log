@@ -1,0 +1,11 @@
+recorded full coefficients (order <= 1): {0: -0.07890551054439321, 1: 0.0035714285713766003, 2: -0.009343434343463741, 4: -0.00822418036068484, 8: -1.2263006738066906e-05}
+recorded interactions, max |c|: 0.0
+
+star: 5 runs, rank(P) 5, cond 6.342, kappa_max 3.000, max|est-full| 1.388e-16
+  kappa per permitted component: {'mean': 3.0, 'A1': 1.0, 'A2': 1.0, 'A4': 1.0, 'A8': 1.0}
+
+half-fraction: 8 runs, rank(P) 5, cond 1.000, kappa_max 1.000, max|est-full| 0.000e+00
+  kappa per permitted component: {'mean': 1.0, 'A1': 1.0, 'A2': 1.0, 'A4': 1.0, 'A8': 1.0}
+
+full: 16 runs, rank(P) 5, cond 1.000, kappa_max 0.000, max|est-full| 0.000e+00
+  kappa per permitted component: {'mean': 0.0, 'A1': 0.0, 'A2': 0.0, 'A4': 0.0, 'A8': 0.0}

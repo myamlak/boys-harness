@@ -1,0 +1,11 @@
+components 144, permitted 75, targets 66, Q 69, main effects 8
+loading fused
+fused fp64: max|chat-c| 5.906e-17, identity residual 6.13e-29, max target est 1.329e-14, max ratio to kappa*eta_Q 0.896, points above bound 857/858
+   examples: [{'n': 0, 'x': 0.0, 'target_est_max': 0.0, 'eta_Q': 0.0, 'bound_max': 0.0}, {'n': 0, 'x': 0.1, 'target_est_max': 2.224912390869552e-16, 'eta_Q': 3.1631176112825075e-32, 'bound_max': 3.163117611282508e-32}, {'n': 0, 'x': 0.125, 'target_est_max': 6.138671444114536e-16, 'eta_Q': 4.3374844432715116e-17, 'bound_max': 4.337484443271513e-17}]
+fused fp32: max|chat-c| 5.702e-08, identity residual 3.90e-22, max target est 6.584e-08, max ratio to kappa*eta_Q 40866.820, points above bound 384/858
+   examples: [{'n': 0, 'x': 0.0, 'target_est_max': 0.0, 'eta_Q': 0.0, 'bound_max': 0.0}, {'n': 0, 'x': 0.1, 'target_est_max': 1.2573586789303987e-08, 'eta_Q': 2.694901288659489e-08, 'bound_max': 2.6949012886594897e-08}, {'n': 0, 'x': 0.125, 'target_est_max': 1.4636602692059875e-08, 'eta_Q': 3.104892305126647e-08, 'bound_max': 3.104892305126648e-08}]
+loading separate
+separate fp64: max|chat-c| 8.927e-17, identity residual 1.09e-28, max target est 1.331e-14, max ratio to kappa*eta_Q 1.637, points above bound 856/858
+   examples: [{'n': 0, 'x': 0.0, 'target_est_max': 0.0, 'eta_Q': 0.0, 'bound_max': 0.0}, {'n': 0, 'x': 0.1, 'target_est_max': 2.224912390869552e-16, 'eta_Q': 3.1631176112825075e-32, 'bound_max': 3.163117611282508e-32}, {'n': 0, 'x': 0.125, 'target_est_max': 6.138671444114536e-16, 'eta_Q': 4.3374844432715116e-17, 'bound_max': 4.337484443271513e-17}]
+separate fp32: max|chat-c| 5.376e-08, identity residual 3.90e-22, max target est 7.134e-08, max ratio to kappa*eta_Q 24747.698, points above bound 386/858
+   examples: [{'n': 0, 'x': 0.0, 'target_est_max': 0.0, 'eta_Q': 0.0, 'bound_max': 0.0}, {'n': 0, 'x': 0.1, 'target_est_max': 1.2573586789303987e-08, 'eta_Q': 2.6949012886594887e-08, 'bound_max': 2.6949012886594894e-08}, {'n': 0, 'x': 0.125, 'target_est_max': 1.4636602692059875e-08, 'eta_Q': 3.622374355981087e-08, 'bound_max': 3.622374355981088e-08}]

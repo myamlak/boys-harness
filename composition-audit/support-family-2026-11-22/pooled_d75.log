@@ -1,0 +1,29 @@
+components 144, permitted 75, targets 66, Q 69, main effects 8
+five-axis factorial cells: 72
+full 144: rank 75, kappa 0.000, amp 2.000
+
+D75 extra [6, 18, 30]:
+  rank 75/75, cond 6.928, kappa 1.0000 (targets 1.0000), amp 54.506 (targets 54.506)
+
+D75 extra [7, 19, 31]:
+  rank 75/75, cond 6.928, kappa 1.0000 (targets 1.0000), amp 54.506 (targets 54.506)
+
+D75 extra [10, 22, 34]:
+  rank 75/75, cond 6.928, kappa 1.0000 (targets 1.0000), amp 54.506 (targets 54.506)
+
+D75 extra [6, 30, 18]:
+  rank 75/75, cond 6.928, kappa 1.0000 (targets 1.0000), amp 54.506 (targets 54.506)
+
+N=73: extra 1 pack-1 cells: rank 73, kappa 1.1975, amp 19107155017577316.000, cond 6.928
+
+N=74: extra 2 pack-1 cells: rank 73, kappa 10.7435, amp 773725932096163584.000, cond 22978262147934120.000
+
+N=75: extra 3 pack-1 cells: rank 73, kappa 13.5783, amp 97838842166504608.000, cond 98291496470481088.000
+
+N=76: extra 4 pack-1 cells: rank 73, kappa 1.0002, amp 30396741132563124.000, cond 82918822942750576.000
+
+N=78: extra 6 pack-1 cells: rank 73, kappa 1755394315586264.5000, amp 85223833075053120.000, cond 26851097380537184.000
+
+N=81: extra 9 pack-1 cells: rank 74, kappa 1.5254, amp 30888259059969288.000, cond 10472044676148152.000
+
+N=84: extra 12 pack-1 cells: rank 74, kappa 3.5256, amp 154441295299846400.000, cond 17347612199633998.000

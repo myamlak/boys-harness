@@ -1,0 +1,46 @@
+=== single removals (N=35) ===
+remove  4 (0, 0, 2, 0): kappa_max 0.1000 amp 2.929 cond 1.55 |PQ| 0.064
+remove 10 (0, 1, 2, 0): kappa_max 0.1000 amp 2.929 cond 1.55 |PQ| 0.064
+remove 31 (2, 1, 0, 1): kappa_max 0.1000 amp 2.929 cond 1.55 |PQ| 0.064
+remove  0 (0, 0, 0, 0): kappa_max 0.1000 amp 2.929 cond 1.55 |PQ| 0.064
+remove  1 (0, 0, 0, 1): kappa_max 0.1000 amp 2.929 cond 1.55 |PQ| 0.064
+remove  5 (0, 0, 2, 1): kappa_max 0.1000 amp 2.929 cond 1.55 |PQ| 0.064
+remove  6 (0, 1, 0, 0): kappa_max 0.1000 amp 2.929 cond 1.55 |PQ| 0.064
+remove 30 (2, 1, 0, 0): kappa_max 0.1000 amp 2.929 cond 1.55 |PQ| 0.064
+remove  7 (0, 1, 0, 1): kappa_max 0.1000 amp 2.929 cond 1.55 |PQ| 0.064
+remove 11 (0, 1, 2, 1): kappa_max 0.1000 amp 2.929 cond 1.55 |PQ| 0.064
+
+=== pairs (N=34), best 15 ===
+pairs evaluated in 0.3s; 18 rank-deficient
+remove (12, 26): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (13, 27): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (16, 26): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (17, 27): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (18, 32): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (19, 33): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (22, 32): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (23, 33): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (2, 12): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (2, 16): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (3, 13): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (3, 17): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (8, 18): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (8, 22): kappa_max 0.1333 amp 2.808 cond 1.55
+remove (9, 19): kappa_max 0.1333 amp 2.808 cond 1.55
+
+=== local search by N ===
+N=21: cost 2.212 kappa_max 0.8165 amp 13.953 cond 3.46
+N=22: cost 2.057 kappa_max 0.8165 amp 12.403 cond 3.46
+N=23: cost 1.815 kappa_max 0.6667 amp 11.485 cond 3.46
+N=24: cost 1.251 kappa_max 0.5774 amp 6.738 cond 2.45
+N=25: cost 1.161 kappa_max 0.4811 amp 6.795 cond 2.45
+N=26: cost 1.115 kappa_max 0.3969 amp 7.179 cond 2.45
+N=27: cost 0.873 kappa_max 0.3928 amp 4.799 cond 2.00
+N=28: cost 0.819 kappa_max 0.3368 amp 4.821 cond 2.00
+N=29: cost 0.775 kappa_max 0.3402 amp 4.349 cond 2.00
+N=30: cost 0.669 kappa_max 0.3007 amp 3.684 cond 1.73
+N=31: cost 0.627 kappa_max 0.2396 amp 3.873 cond 1.73
+N=32: cost 0.570 kappa_max 0.2042 amp 3.655 cond 1.73
+N=33: cost 0.483 kappa_max 0.2309 amp 2.520 cond 1.55
+N=34: cost 0.414 kappa_max 0.1333 amp 2.808 cond 1.55
+N=35: cost 0.393 kappa_max 0.1000 amp 2.929 cond 1.55

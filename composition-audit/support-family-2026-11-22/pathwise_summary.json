@@ -1,0 +1,282 @@
+{
+ "fused": {
+  "label": "fused",
+  "sha256": "4af5694810099d07ac9eee268f20073f08d63242731d08a06ebc3d1328c0638d",
+  "lanes": {
+   "fp64": {
+    "eta_Q_max": 2.770933467143233e-16,
+    "eta_Q_at": {
+     "n": 32,
+     "x": 11.5,
+     "region": "A",
+     "route": "chebyshev",
+     "scheme": "split-clenshaw",
+     "component_index": 10,
+     "support": [
+      "pack",
+      "form"
+     ],
+     "choices": [
+      0,
+      1,
+      2,
+      0
+     ]
+    },
+    "eta_old_max": 2.6135670158107584e-17,
+    "eta_old_at": {
+     "n": 32,
+     "x": 12.0,
+     "region": "B",
+     "route": "rational-minimax",
+     "scheme": "split-clenshaw"
+    },
+    "q_coef_max": 8.708203754816587e-17,
+    "q_coef_at": {
+     "n": 32,
+     "x": 11.5,
+     "region": "A",
+     "route": "chebyshev",
+     "scheme": "split-clenshaw",
+     "component_index": 10,
+     "support": [
+      "pack",
+      "form"
+     ],
+     "choices": [
+      0,
+      1,
+      2,
+      0
+     ]
+    },
+    "target_coef_max": 1.3246952610212075e-16,
+    "target_coef_at": {
+     "n": 32,
+     "x": 12.0,
+     "region": "B",
+     "route": "chebyshev",
+     "scheme": "split-clenshaw",
+     "component_index": 28,
+     "support": [
+      "partition",
+      "form"
+     ],
+     "choices": [
+      2,
+      0,
+      2,
+      0
+     ]
+    },
+    "recon_max": 1.8932661725304283e-29,
+    "ratio_max": null,
+    "n_points_paths": 3300
+   },
+   "fp32": {
+    "eta_Q_max": 1.710590479234786e-07,
+    "eta_Q_at": {
+     "n": 0,
+     "x": 11.5,
+     "region": "A",
+     "route": "chebyshev",
+     "scheme": "split-clenshaw",
+     "component_index": 10,
+     "support": [
+      "pack",
+      "form"
+     ],
+     "choices": [
+      0,
+      1,
+      2,
+      0
+     ]
+    },
+    "eta_old_max": 0.0,
+    "eta_old_at": null,
+    "q_coef_max": 5.3758672342225054e-08,
+    "q_coef_at": {
+     "n": 0,
+     "x": 11.5,
+     "region": "A",
+     "route": "rational-minimax",
+     "scheme": "split-clenshaw",
+     "component_index": 10,
+     "support": [
+      "pack",
+      "form"
+     ],
+     "choices": [
+      0,
+      1,
+      2,
+      0
+     ]
+    },
+    "target_coef_max": 6.182974505420785e-08,
+    "target_coef_at": {
+     "n": 0,
+     "x": 7.3,
+     "region": "A",
+     "route": "rational-minimax",
+     "scheme": "split-clenshaw",
+     "component_index": 18,
+     "support": [
+      "partition",
+      "pack"
+     ],
+     "choices": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "recon_max": 7.940933880509066e-23,
+    "ratio_max": null,
+    "n_points_paths": 3300
+   }
+  }
+ },
+ "separate": {
+  "label": "separate",
+  "sha256": "f3493c4ca6aceaf642bcb8e5ef4b4d330c1214f64e467e284c7526ed1094b5bb",
+  "lanes": {
+   "fp64": {
+    "eta_Q_max": 2.770933467143233e-16,
+    "eta_Q_at": {
+     "n": 32,
+     "x": 11.5,
+     "region": "A",
+     "route": "chebyshev",
+     "scheme": "split-clenshaw",
+     "component_index": 10,
+     "support": [
+      "pack",
+      "form"
+     ],
+     "choices": [
+      0,
+      1,
+      2,
+      0
+     ]
+    },
+    "eta_old_max": 2.285076044759198e-17,
+    "eta_old_at": {
+     "n": 32,
+     "x": 12.0,
+     "region": "B",
+     "route": "chebyshev",
+     "scheme": "split-clenshaw"
+    },
+    "q_coef_max": 8.708203754816587e-17,
+    "q_coef_at": {
+     "n": 32,
+     "x": 11.5,
+     "region": "A",
+     "route": "chebyshev",
+     "scheme": "split-clenshaw",
+     "component_index": 10,
+     "support": [
+      "pack",
+      "form"
+     ],
+     "choices": [
+      0,
+      1,
+      2,
+      0
+     ]
+    },
+    "target_coef_max": 1.6596224846843992e-16,
+    "target_coef_at": {
+     "n": 32,
+     "x": 12.0,
+     "region": "B",
+     "route": "rational-minimax",
+     "scheme": "split-clenshaw",
+     "component_index": 16,
+     "support": [
+      "partition",
+      "form"
+     ],
+     "choices": [
+      1,
+      0,
+      2,
+      0
+     ]
+    },
+    "recon_max": 1.262177448353619e-29,
+    "ratio_max": null,
+    "n_points_paths": 3300
+   },
+   "fp32": {
+    "eta_Q_max": 1.710590479234786e-07,
+    "eta_Q_at": {
+     "n": 0,
+     "x": 11.5,
+     "region": "A",
+     "route": "chebyshev",
+     "scheme": "split-clenshaw",
+     "component_index": 10,
+     "support": [
+      "pack",
+      "form"
+     ],
+     "choices": [
+      0,
+      1,
+      2,
+      0
+     ]
+    },
+    "eta_old_max": 0.0,
+    "eta_old_at": null,
+    "q_coef_max": 5.3758672342225054e-08,
+    "q_coef_at": {
+     "n": 0,
+     "x": 11.5,
+     "region": "A",
+     "route": "rational-minimax",
+     "scheme": "split-clenshaw",
+     "component_index": 10,
+     "support": [
+      "pack",
+      "form"
+     ],
+     "choices": [
+      0,
+      1,
+      2,
+      0
+     ]
+    },
+    "target_coef_max": 6.182974505420785e-08,
+    "target_coef_at": {
+     "n": 0,
+     "x": 7.3,
+     "region": "A",
+     "route": "rational-minimax",
+     "scheme": "split-clenshaw",
+     "component_index": 18,
+     "support": [
+      "partition",
+      "pack"
+     ],
+     "choices": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "recon_max": 7.940933880509066e-23,
+    "ratio_max": null,
+    "n_points_paths": 3300
+   }
+  }
+ }
+}
