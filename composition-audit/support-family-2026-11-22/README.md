@@ -177,26 +177,31 @@ term the proof produces; a display without `delta_alpha` is the zero-noise
 case and is false under assumption 4 with nonzero noise.
 
 **Orthogonal-array special case.** If `D` is an orthogonal array of strength
-`t` with `2 w_p <= t <= |U_p|`, then `Omega_PP = I` and `Omega_PQ = 0` on the
-surviving supports. With `B = 0`, `r_beta = Phi_beta` and
-`kappa_joint = 1`, and the theorem becomes
+`t` with `2 w_p <= t <= |U_p|`, then `Omega_PP = I` and `Omega_PQ = 0` for
+support unions at most `t`, and `kappa_alpha <= G_alpha`. An alias with support
+union above `t` survives; it lies in `Q` and is covered by `eta`, but its column
+of `B` need not vanish. Then
+`r_beta = Phi_beta - sum_T B_{alpha beta} Phi_alpha` differs from `Phi_beta`,
+and the joint constant need not be 1: the 96-cell strength-4 array gives
+`kappa_joint = 2`. The componentwise theorem keeps the orthogonal-array form
 
 ```
 |c_alpha| <= |chat_alpha| + delta + G_alpha eta   (alpha in T),
 ```
 
 which recovers the orthogonal-array theorem. The full factorial gives the exact
-special case. The recovery needs a qualification: `eta_Q` bounds every
-component outside the family, including order-two and order-three structural
-zeros, whereas the orthogonal-array allowance bounds only orders above `w_p`.
-On an orthogonal array those low-order zeros do not alias into the targets
-(their unions are at most `2 w_p <= t`), so the orthogonal-array theorem never
-needs them in the allowance. The single-allowance bound `kappa_alpha eta_Q` is
-therefore in general looser than `delta + G_w eta` on an orthogonal array.
-Exact recovery holds either with an alias-support-restricted allowance or at
-the proof's intermediate step, where the sum over surviving aliases is bounded
-by `G_alpha eta`. The theorem is a strict generalisation of the design
-condition, not of the packaged allowance.
+special case. Exact recovery of the array's packaged allowance needs an
+alias-support-restricted allowance: `eta_Q` bounds every component outside the
+family, including order-two and order-three structural zeros, whereas the
+orthogonal-array allowance bounds only orders above `w_p`. On an orthogonal
+array those low-order zeros do not alias into the targets (their unions are at
+most `2 w_p <= t`), so the orthogonal-array theorem never needs them in the
+allowance. The single-allowance bound `kappa_alpha eta_Q` is therefore in
+general looser than `delta + G_w eta` on an orthogonal array, and exact recovery
+holds with an alias-support-restricted allowance, at the proof's intermediate
+step (the sum over surviving aliases is at most `G_alpha eta`), or when no
+alias survives. The theorem is a strict generalisation of the design condition,
+not of the packaged allowance.
 
 **No-replication convention.** "Within the 36-cell cube the only strength-2
 array is the full cube" holds for a simple design, in which each cell is used
@@ -404,7 +409,7 @@ bound. Charging the maximum allowance at every point instead gives the
 global-allowance ratio.
 
 The corrected ratios are 1.04 on the fp64 pathwise cube, 1.000000 on the fp64
-pooled cube pointwise (1.000255 on either arm with one global allowance, 0.025
+pooled cube pointwise (1.0255 on either arm with one global allowance, 2.55
 per cent), and about 3 on the fp32 cube. The fp64 family-aware bound therefore
 essentially matches the full factorial on the pooled cube and costs about four
 per cent on the pathwise cube. The fp32 ratios are about 3: the allowance is at
