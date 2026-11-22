@@ -1,4 +1,4 @@
-# Support-family-aware design certification: corrected derivation for review
+# Support-family-aware design certification: corrected derivation
 
 This document derives a generalisation of the design rule studied here. It supersedes the
 earlier version: the joint bound now charges the structural-zero allowance once through a
@@ -30,8 +30,8 @@ For the Boys resolving fp64/fp32 path, the four free axes are partition (3 level
 
 Hence P_p = 2^{G,F,E} union 2^{G,K}, with 10 supports and 21 components (1 mean, 6 mains, 14
 interactions). The fourteen targets are the interaction channels of order 2 or 3; the
-fifteen structural zeros are the channels whose support meets neither cone: {K,F}, {K,E},
-{G,K,F}, {G,K,E}, {K,F,E} and {G,K,F,E} with their channels.
+fifteen structural zeros are the channels whose support is contained in neither cone:
+{K,F}, {K,E}, {G,K,F}, {G,K,E}, {K,F,E} and {G,K,F,E} with their channels.
 
 Pooled over route and scheme, the upward cone widens to five axes while the packed-sum cone
 stays {partition, pack}. With axes R, S, G, K, F, E at levels (2,2,3,2,3,2),
@@ -66,26 +66,29 @@ and the **joint contamination constant**
 
     |c_alpha| <= |c_hat_alpha| + delta_alpha + kappa_alpha eta_Q,
 
-and for every a in X_p, with r_beta(a) = Phi_beta(a) - sum_{alpha in T} B_{alpha beta} Phi_alpha(a),
+and for every a in X_p the full non-additive part
+N(a) = sum_{alpha in T} c_alpha Phi_alpha(a) + sum_{beta in Q} c_beta Phi_beta(a) obeys,
+with r_beta(a) = Phi_beta(a) - sum_{alpha in T} B_{alpha beta} Phi_alpha(a),
 
-    |sum_{alpha in T} c_alpha Phi_alpha(a)|
+    |N(a)|
         <= sum_{alpha in T} G_alpha |c_hat_alpha| + kappa_joint eta_Q
            + sum_{alpha in T} G_alpha delta_alpha.
 
 **Proof.** Substituting the expansion of e into the raw contrast gives
 g_I = Omega_{II} c_I + Omega_{IQ} c_Q + nu_I, hence
 c_hat_I = c_I + B c_Q + Omega_{II}^{-1} nu_I. The componentwise bound follows from the
-triangle inequality, the definition of kappa_alpha and (iii), (iv). For the joint bound use
-the identity
+triangle inequality, the definition of kappa_alpha and (iii), (iv). For the joint bound,
+add the structural-zero expansion to the permitted one and use the identity
 
-    sum_T c_alpha Phi_alpha
-        = sum_T c_hat_alpha Phi_alpha + sum_Q c_beta r_beta - sum_T nu_hat_alpha Phi_alpha,
+    N(a) = sum_T c_hat_alpha Phi_alpha + sum_Q c_beta r_beta
+           - sum_T nu_hat_alpha Phi_alpha,
 
 then |r_beta(a)| <= kappa_joint G_beta by definition and |Phi_alpha(a)| <= G_alpha. QED.
 
-The first display now carries the measurement term the proof produces; the earlier display
-without delta_alpha is the nu = 0 case. The older per-target sum of suprema is replaced by
-the single charge kappa_joint eta_Q.
+The first display carries the measurement term the proof produces; a display without
+delta_alpha is the nu = 0 case and is false under (iv) with nonzero noise. The second
+display bounds the full non-additive part, permitted interactions and structural zeros
+together, which is the quantity the composition rule needs.
 
 ## 3. Specialisation to the orthogonal-array theorem
 
@@ -96,8 +99,17 @@ r_beta = Phi_beta and kappa_joint = 1; kappa_alpha <= G_alpha. The theorem becom
 
     |c_alpha| <= |c_hat_alpha| + delta + G_alpha eta  (alpha in T),
 
-which recovers the orthogonal-array theorem, and the full factorial gives the exact
-special case. The family-aware theorem is a strict generalisation.
+which recovers the orthogonal-array theorem, and the full factorial gives the exact special
+case. The family-aware theorem is a generalisation, but the recovery needs a qualification:
+eta_Q bounds every component outside the family, including order-two and order-three
+structural zeros, whereas the orthogonal-array allowance bounds only orders above w_p. On an
+orthogonal array those low-order zeros do not alias into the targets (their unions are at
+most 2w_p <= t), so the orthogonal-array theorem never needs them in the allowance. The
+single-allowance bound kappa_alpha eta_Q is therefore in general looser than
+delta + G_wp eta on an orthogonal array, and exact recovery holds either with an
+alias-support-restricted allowance or at the proof's intermediate step
+(sum over surviving aliases <= G_alpha eta). The theorem is a strict generalisation of the
+design condition, not of the packaged allowance.
 
 ## 4. What is assumed and what is not
 
@@ -171,12 +183,18 @@ further cells. The design
 
 attains N = 75. Rank 75 is verified numerically, modulo 1009, 2017 and 3001, and by a Schur
 block: subtracting the matching pack-mean column from each pack-contrast column leaves a
-3x3 block with determinant 24 sqrt3 = 41.569219 on the three pack=orders rows. The
-target-restricted kappa_max is 1.0, all sixty-six G_alpha kappa_alpha equal 1 within
-1.3e-15, and the per-target sum is 66. The joint contamination constant is
-**kappa_joint = 3 exactly**. The measurement factors are max over targets 33.116168 and
-target sum 253.722222. The certificate is reproduced by certify_d75.py; the constant by
-kappa_joint.py.
+3x3 block with determinant 24 sqrt3 = 41.569219 on the three pack=orders rows. Minimality
+excludes 73 and 74 runs: the 72 pack-mean columns are functions of the five-axis projection,
+so 72 distinct projections are necessary; with N = 72 each projection appears once, the
+pack-contrast columns lie in the pack-mean span; at N = 73 or 74 the pack-contrast residuals
+after regression are supported on one or two duplicated pairs and have rank at most 1 or 2,
+less than 3; only at N = 75 with three duplicated pairs at distinct partition levels is the
+residual 3x3 invertible. The target-restricted kappa_max is 1.0, all sixty-six
+G_alpha kappa_alpha equal 1 within 1.3e-15, and the per-target sum is 66. The Gram condition
+is 48, so the model-matrix condition is sqrt(48) = 4 sqrt3 = 6.928203. The joint
+contamination constant is **kappa_joint = 3 exactly**. The measurement factors are max over
+targets 33.116168 and target sum 253.722222. The certificate is reproduced by
+certify_d75.py; the constant by kappa_joint.py.
 
 ## 8. Corrected frontier and provenance
 

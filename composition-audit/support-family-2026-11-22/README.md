@@ -70,9 +70,9 @@ effects, and **66 targets** (permitted components of order 2 to 5). The
 complement has **69 structural zeros**. Again `T` is every permitted
 interaction channel.
 
-The components outside `P` are structural zeros: the path decomposition gives
-them no first-order local error term. They are not assumed to have zero
-coefficient. Their measured coefficient vector is allowed for by the
+The components outside `P` are structural zeros: their support is contained in
+neither cone, and the path decomposition gives them no first-order local error
+term. They are not assumed to have zero coefficient. Their measured coefficient vector is allowed for by the
 structural-zero allowance
 
 ```
@@ -143,14 +143,24 @@ kappa_joint = max over beta in Q of
               |Phi_beta(a) - sum_{alpha in T} B_{alpha beta} Phi_alpha(a)| / G_beta.
 ```
 
-Then for every cell `a` of the cube,
+Then for every cell `a` of the cube the full non-additive part
 
 ```
-|sum_{alpha in T} c_alpha Phi_alpha(a)|
+N(a) = sum_{alpha in T} c_alpha Phi_alpha(a)
+       + sum_{beta in Q} c_beta Phi_beta(a)
+```
+
+obeys
+
+```
+|N(a)|
     <= sum_{alpha in T} G_alpha |chat_alpha|
        + kappa_joint eta_Q
        + sum_{alpha in T} G_alpha delta_alpha.
 ```
+
+The bound covers the permitted interactions and the structural zeros together,
+which is the quantity the composition rule needs.
 
 The charge `kappa_joint eta_Q` is paid once, not once per target. The proof
 uses the identity
@@ -163,8 +173,8 @@ sum_T c_alpha Phi_alpha
 
 with `r_beta(a) = Phi_beta(a) - sum_T B_{alpha beta} Phi_alpha(a)`, and the
 definition of `kappa_joint`. The first display now carries the measurement
-term the proof produces; the earlier display without `delta_alpha` is the
-zero-measurement case.
+term the proof produces; a display without `delta_alpha` is the zero-noise
+case and is false under assumption 4 with nonzero noise.
 
 **Orthogonal-array special case.** If `D` is an orthogonal array of strength
 `t` with `2 w_p <= t <= |U_p|`, then `Omega_PP = I` and `Omega_PQ = 0` on the
@@ -175,10 +185,18 @@ surviving supports. With `B = 0`, `r_beta = Phi_beta` and
 |c_alpha| <= |chat_alpha| + delta + G_alpha eta   (alpha in T),
 ```
 
-which is the orthogonal-array theorem. The full factorial gives the exact
-special case. The family-aware theorem is a strict generalisation: it replaces
-exact orthogonality by estimability plus a measured `eta_Q`, and it charges the
-alias once through `kappa_joint`.
+which recovers the orthogonal-array theorem. The full factorial gives the exact
+special case. The recovery needs a qualification: `eta_Q` bounds every
+component outside the family, including order-two and order-three structural
+zeros, whereas the orthogonal-array allowance bounds only orders above `w_p`.
+On an orthogonal array those low-order zeros do not alias into the targets
+(their unions are at most `2 w_p <= t`), so the orthogonal-array theorem never
+needs them in the allowance. The single-allowance bound `kappa_alpha eta_Q` is
+therefore in general looser than `delta + G_w eta` on an orthogonal array.
+Exact recovery holds either with an alias-support-restricted allowance or at
+the proof's intermediate step, where the sum over surviving aliases is bounded
+by `G_alpha eta`. The theorem is a strict generalisation of the design
+condition, not of the packaged allowance.
 
 **No-replication convention.** "Within the 36-cell cube the only strength-2
 array is the full cube" holds for a simple design, in which each cell is used
@@ -187,7 +205,8 @@ at most once. With replication, other 36-run strength-2 arrays exist; they use
 
 ## The 21-run pathwise design D21
 
-Cell order is `partition, pack, form, exp`, with index
+The permitted family has 21 components, so at least 21 runs are needed. Cell
+order is `partition, pack, form, exp`, with index
 `partition*12 + pack*6 + form*2 + exp`. D21 is:
 
 - the full 3 x 3 `partition x form` grid at `(pack, exp) = (0, 0)`;
@@ -207,7 +226,8 @@ Certificate (`certify_d21.py`, `certify_d21.json`, `certify_d21.log`):
 - `kappa_max = sqrt(2/3) = 0.816496580927726`;
 - all 14 target values `G_alpha kappa_alpha` equal 1, so the per-target sum is
   14;
-- `cond(F_P) = 3.464101615`; threshold amplification
+- Gram condition 12, so the model-matrix condition is
+  `sqrt(12) = 2 sqrt 3 = 3.464101615`; threshold amplification
   `max_alpha sum_gamma |(Omega_PP^{-1})_{alpha gamma}| G_gamma = 14.024284`.
 
 The equality `G_alpha kappa_alpha = 1` is the design's balance property: the
@@ -223,7 +243,9 @@ carries the same per-target alias term. The joint constant is smaller:
   measurement term is at most 2.5e-27 or 2.5e-20, negligible against the bound.
 
 `kappa_joint.py`, `kappa_joint.json` and `kappa_joint.log` contain the
-per-beta breakdown.
+per-beta breakdown. A different valid 21-cell design has the same target
+`kappa_max` but per-target sum 11.25 and a worse amplification of 20.830; it is
+not the design cited.
 
 ## The 75-run pooled design D75
 
@@ -242,10 +264,18 @@ Rank proof. The 72 pack-mean columns restricted to the 72 `pack = arguments`
 rows are the five-axis orthonormal basis and are invertible. Subtracting the
 matching pack-mean column from each of the three pack-contrast columns leaves a
 matrix supported on the three `pack = orders` rows with the 3 x 3 matrix
-`[1, linear(p), quadratic(p)]` at `p = 0, 1, 2`; its determinant is `3 sqrt 3`
-with the normalised rows (`24 sqrt 3` in the unnormalised rows of the
-derivation). The rank is also checked numerically and modulo the primes 1009,
-2017 and 3001.
+`[1, linear(p), quadratic(p)]` at `p = 0, 1, 2`; its determinant is
+`24 sqrt 3 = 41.569219` in the unnormalised rows (`3 sqrt 3` with the
+normalised rows). The rank is also checked numerically and modulo the primes
+1009, 2017 and 3001.
+
+Minimality excludes 73 and 74 runs. The 72 pack-mean columns are functions of
+the five-axis projection, so 72 distinct projections are necessary. At
+`N = 72` each projection appears once and the pack-contrast columns lie in the
+pack-mean span. At `N = 73` or `N = 74` the pack-contrast residuals after
+regression are supported on one or two duplicated pairs and have rank at most
+1 or 2, less than 3. Only at `N = 75`, with three duplicated pairs at distinct
+partition levels, is the residual 3 x 3 block invertible.
 
 Certificate (`certify_d75.py`, `certify_d75.json`, `certify_d75.log`):
 
@@ -254,7 +284,8 @@ Certificate (`certify_d75.py`, `certify_d75.json`, `certify_d75.log`):
 - `kappa_max = 1.0` (to floating-point precision);
 - all 66 target values `G_alpha kappa_alpha` equal 1 within 1.3e-15, so the
   per-target sum is 66;
-- `cond = 6.928203230`; threshold amplification
+- Gram condition 48, so the model-matrix condition is
+  `sqrt(48) = 4 sqrt 3 = 6.928203230`; threshold amplification
   `max_alpha sum_gamma |(Omega_PP^{-1})_{alpha gamma}| G_gamma = 54.506148`;
 - `kappa_joint(D75) = 3` exactly;
 - measurement factors: max over targets 33.116168, target sum 253.722222.
@@ -316,7 +347,9 @@ target estimate exceeds the alias-only bound wherever the permitted signal or
 the measurement term is larger than the alias allowance; the bound in that
 column is the alias term alone, not the full certified bound. The point counts
 are close to 858 in fp64 and about 45 per cent in fp32 because the fp32 alias
-allowance is larger than the other terms at the remaining points.
+allowance is larger than the other terms at the remaining points. On fp64 the
+target estimates are about 34 times the allowance, so the 75-run design rejects
+additivity at the same 857/858 and 856/858 points as the full cube.
 
 The structural-zero allowances that enter the frontier are:
 
@@ -402,6 +435,14 @@ interaction signal there (`1.33e-16`); the pooled `eta_Q = 3.95e-16` is about
 34 times below the permitted pooled signal (`1.33e-14`). It is a measured
 extraction or noise envelope, not a proved physical Taylor remainder. The fp32
 `eta_Q` is at the interaction-signal scale, which is why fp32 does not save.
+
+A prospective run carries its own measurement threshold through
+`delta_alpha`, and the design amplifies it. The certificate's threshold
+amplification is 14.024284 for D21 and 54.506148 for D75 over all permitted
+rows; the theorem's cell-average factors are at most 8.485281 and 33.116168
+over the targets. The retrospective record's measurement term is small, but a
+prospective use must supply the prospective threshold; the smaller design does
+not remove the amplification.
 
 ## The four-axis second-instance star
 
