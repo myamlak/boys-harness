@@ -1,0 +1,197 @@
+boys accuracy gate
+reference    : tests/data/boys_accuracy_gate_reference.csv
+               33 orders x 1797 arguments = 59301 points
+default rows : the committed header's (BOYS_BUILD_DEFAULTS_REPLACED is not defined), so every
+               published figure is judged here
+boundaries   : x_ext=1.0855252345349333  x0=11.899848152108484  x1=28.98933773882074
+tiers        : n<=4 1.0855252345349333 | n<=8 2.0152977053351142 | n<=16 4.8978702998256569 | n<=32 10.783587858916762
+AVX2 tier    : present
+muladd route : scalar-fp64 fused (bare product-plus-add does not contract here)
+muladd route : scalar-fp32 fused (bare product-plus-add does not contract here)
+verdict      : strict (--strict: the default verdict, stated) - a claim this build carries and cannot verify at this revision fails the gate, while a claim whose subject this build does not carry is named with its reason and fails nothing here
+  EXCEEDED (the lane book, record, not judged) double single / header x<x0  n=0 x=4.9406564584124654e-324  err=2.9976e-15  bound=1e-15  ratio=2.998  ref=1 (1e0)
+  EXCEEDED (the lane book, record, not judged) double single / header x<x0  n=0 x=1e-300  err=2.9976e-15  bound=1e-15  ratio=2.998  ref=1 (1e0)
+  EXCEEDED (the lane book, record, not judged) double single / header x<x0  n=0 x=9.9999999999999998e-13  err=3.10862e-15  bound=1e-15  ratio=3.109  ref=1 (1e-1)
+  EXCEEDED (the lane book, record, not judged) double single / header x<x0  n=0 x=1e-08  err=3.10862e-15  bound=1e-15  ratio=3.109  ref=1 (1e-1)
+  EXCEEDED (the lane book, record, not judged) double single / header x<x0  n=0 x=1.0000000000000001e-05  err=2.9976e-15  bound=1e-15  ratio=2.998  ref=0.999997 (1e-1)
+
+the certified fit routes, measured:
+  one row per route and region. 'reported' is the worst error the generator
+  measured for the fit it generated, on a dense sweep of each piece's own
+  interval; 'measured' is this gate's own sweep of the same route on the
+  committed reference grid, which is the coarser of the two and reads a
+  little under it on a fit that equioscillates. The gate refuses a row
+  whose 'reported' would not cover its 'measured'.
+  'from' is the argument the selector takes over at: a value above 'lo' means
+  the fit covers more than naming the route hands it
+  route                region stored    scope   cells      from       reported       measured            bar
+  chebyshev            A      1320      0..32      21318              0    1.73613e-16    2.22045e-16          3e-14
+                                        0..32      21318              -              -    3.11299e-15          1e-13
+  rational-minimax     A      891       0..32      21318        1.08553    2.45899e-14    2.25032e-14          3e-14
+                                        0..32      21318              -              -    4.06627e-16          1e-13
+  chebyshev            B      25        F0           319        11.8998    5.09007e-17    5.55112e-17    2.56906e-14
+                                        0..32      10527              -              -    2.21466e-16          1e-13
+  rational-minimax     B      13        F0           319        11.8998    6.04405e-15    5.55112e-17    2.56906e-14
+                                        0..32      10527              -              -    2.92871e-16          1e-13
+  cells outside every route's interval that the rational route changed: 0
+  cells inside a route's interval that it changed: 30103 of 31845 (94.5%)
+  cells where naming the default route differed from the default entry: 0
+  cells where a route value outside the enumeration differed from the default: 0
+
+  the float lane's fit routes, BoysFitRoutesF32 and
+  BoysSingleF32WithRoute, each row over the interval it names, at every
+  order, against the reference this gate uses (4 rows, 58938 cells,
+  0 of them outside the row's bar):
+  route                    stored    scope    cells       reported       measured            bar    n          at x
+  float chebyshev A        1408      0..32    21285    1.23617e-07    4.88105e-08        1.5e-07    0       2.08827
+  float rational A         465       0..32    21285    1.44417e-07    1.01669e-07        1.5e-07    0      0.189421
+  float chebyshev B        11        F0        8184    3.14497e-08    2.57248e-08        1.5e-07    0       12.4151
+  float rational B         6         F0        8184    7.50229e-08    4.12332e-08        1.5e-07    0       19.6288
+  rows whose stored count disagrees with the table the kernel reads: 0
+  cells where naming this build's default route or a route outside the
+  enumeration differed from the default entry: 0
+  cells outside the non-default route's own rows that naming it changed:
+  0; inside one: 10497
+  cells of the routes' sweep where the value is at or below the format's
+  own floor: 0
+
+  the float lane's single entry at each policy it accepts, every order,
+  over the interval the policy's fits serve, against the reference this
+  gate uses:
+  reported is the figure include/boys/boys_coefficients.hpp publishes
+  for the fit the policy reads in that region, and the row is the
+  measurement that figure is read against.
+  policy               reg     cells       reported       measured            bar   of bar    n          at x  differs
+  chebyshev x Clenshaw A       21285    1.23617e-07    1.05761e-07        1.5e-07    0.705    0      0.072854      n/a
+  chebyshev x Clenshaw B        8184    3.14497e-08    2.76767e-08        1.5e-07    0.185    0       13.3023      n/a
+  chebyshev x Horner   A       21285    8.97856e-08    7.67578e-08        1.5e-07    0.512    0      0.553691    11453
+  chebyshev x Horner   B        8184    2.18613e-08    2.22277e-08        1.5e-07    0.148   32       11.8998     1015
+  rational minimax     A       21285    1.44417e-07    1.34471e-07        1.5e-07    0.896    4    0.00014678    20111
+  rational minimax     B        8184    7.50229e-08    7.50229e-08        1.5e-07    0.500    0            13     3711
+  chebyshev x Clenshaw x narrow A       21285    1.19209e-07    1.02681e-07        1.5e-07    0.685    0      0.684828    17846
+  chebyshev x Clenshaw x narrow B        8184    5.96046e-08    4.51733e-08        1.5e-07    0.301   32       12.0335     2438
+  rational minimax x narrow A       21285    1.14376e-07    1.15993e-07        1.5e-07    0.773    0      0.706684    19243
+  rational minimax x narrow B        8184    3.29858e-08    2.95023e-08        1.5e-07    0.197    0       15.3349     1913
+
+  the float lane's batch entry at each policy it accepts, every order,
+  over the interval the policy's fits serve, against the reference this
+  gate uses:
+  The batch entry's value at order n is its recursion's and not a single
+  fit's, so no fit's published figure is judged here: the bar column
+  is what the row is held to. The differs column is the count of the
+  row's cells where this policy's value is not the shipped pair's.
+  policy               reg     cells       measured            bar   of bar    n          at x  differs
+  chebyshev x Clenshaw A       21285    1.08354e-07        1.5e-07    0.722    0        11.151      n/a
+  chebyshev x Clenshaw B        8184    2.76767e-08        1.5e-07    0.185    0       13.3023      n/a
+  chebyshev x Horner   A       21285    1.08354e-07        1.5e-07    0.722    0        11.151        0
+  chebyshev x Horner   B        8184    2.22277e-08        1.5e-07    0.148   32       11.8998     1015
+  rational minimax     A       21285    1.08354e-07        1.5e-07    0.722    0        11.151       14
+  rational minimax     B        8184    7.50229e-08        1.5e-07    0.500    0            13     3711
+  chebyshev x Clenshaw x narrow A       21285    1.08354e-07        1.5e-07    0.722    0        11.151        1
+  chebyshev x Clenshaw x narrow B        8184    4.51733e-08        1.5e-07    0.301   32       12.0335     2438
+  rational minimax x narrow A       21285    1.08354e-07        1.5e-07    0.722    0        11.151       18
+  rational minimax x narrow B        8184    2.95023e-08        1.5e-07    0.197    0       15.3349     1913
+  the float lane's policy rows: 294690 cell(s), 0 of them outside the row's bar,
+  0 row(s) measured over no argument at all, 0 cell(s) at or below the
+  format's own floor
+  rows of a policy other than the shipped pair whose value never differed from
+  the shipped pair's on any cell they cover: 0 of the 12 rows the count is
+  required for. The batch entry's region-A rows are counted apart, because
+  they seed from the double lane's fit at the policy's route, scheme and
+  partition rather than from a table this lane stores: the scheme's row covers
+  21285 cell(s) and 0 of them differ, the route's row 21285 and 14, the narrow
+  partition's 21285 and 1, and the narrow partition's rational route 21285 and 18
+  single-order rows whose published figure is short of the measured one by more
+  than a tenth of the bar: 0 of 10, the worst by 0.0108 of the bar
+  the floor's share of the float lane's policy rows (the route book's own cells): 0 of the 237260 discriminating cell(s) this book counts pass only because of the value floor a row states beside its relative figure - every cell it carries meets the figure it is judged against - so no part of this book rests on the floor
+
+  the rational route over the narrow partition, measured against the same reference
+  the route rows are: 59301 cell(s) through the batch entry, 24226 of them a value the
+  shipped partition's route does not answer with (the carriage that makes naming it an
+  option rather than a spelling), worst piece value 2.21663e-14 away from the reference.
+
+accuracy gate, version 5.3.3
+accuracy gate, inputs src=e88e2344bdc402ff,include=0480316e776ac8f1,gate=a447bf3837496454,grid=970db44ddb6a7da5,cmake=62742307746303c5
+  reference: tests/data/boys_accuracy_gate_reference.csv (1797 arguments per order, 33 orders, independent of the code under test)
+per-lane, per-region: delivered error / documented bound
+  lane                     region      points     real  delivered / claimed      max ratio (n, x)          vacuous no value
+  ------------------------------------------------------------------------------------------------------------------------------
+  double single            A             7821     7821  3.11e-15 / 1e-13         0.0311 (n=0, x=0.00421697)        0        0
+  double single            band         13497    13497  1.68e-15 / 1e-13         0.0168 (n=0, x=1.10906)         0        0
+  double single            B             8184     8184  2.21e-16 / 1e-13         0.00221 (n=0, x=12.501)         0        0
+  double single            C            29799     5555  1.4 / 4.85               0.288 (n=32, x=31)          24244     3804
+  double batch             all-orders    59301    35057  1.4 / 4.85               0.288 (n=32, x=31)          24244     3804
+  double batch             fixed-n      59301    35057  1.4 / 4.85               0.288 (n=32, x=31)          24244     3804
+  double batch             all-n       118602    70114  1.4 / 4.85               0.288 (n=32, x=31)          48488     7608
+  double batch             all-n at-orders    89985    54668  1.4 / 4.85               0.288 (n=32, x=31)          35317     4929
+  float single             all          59301    25378  8.3e-08 / 2.38e-07       0.325 (n=0, x=2.08827)      33923    17791
+  float batch              all          59301    25378  8.3e-08 / 2.38e-07       0.325 (n=0, x=2.08827)      33923    17791
+  float batch              all, orders axis    59301    25378  1.29e-07 / 2.38e-07      0.543 (n=0, x=1.46214)      33923    17791
+  float batch              all-n        59301    25378  8.3e-08 / 2.38e-07       0.325 (n=0, x=2.08827)      33923    17791
+  fp16 store-half          single       47256    25307  0.000122 / 0.000122      0.999 (n=0, x=9.29688)      21949    21949
+  fp16 store-half          batch        59301    25307  0.000122 / 0.000122      0.999 (n=0, x=9.29688)      33994    33994
+  bf16 store-half          single       59301    25644  0.000976 / 0.000977      0.999 (n=0, x=3.79688)      33657    17791
+  bf16 store-half          batch        59301    25644  0.000976 / 0.000977      0.999 (n=0, x=3.79688)      33657    17791
+  fp16 simd-half           A              648      648  3.8e-06 / 3.91e-06       0.971 (n=32, x=0.250407)        0        0
+  fp16 simd-half           B             8184     2443  6.09e-05 / 6.11e-05      0.997 (n=0, x=19.0425)       5741     5741
+  fp16 simd-half           C              901        0  1.93e-14 / 1.3e-07       1.49e-07 (n=32, x=29)         901      901
+  bf16 simd-half           A              648      648  3.03e-05 / 3.06e-05      0.988 (n=32, x=0.45898)         0        0
+  bf16 simd-half           B             8184     2586  0.000488 / 0.000488      0.999 (n=0, x=17.2242)       5598        0
+  bf16 simd-half           C              901        0  3.6e-17 / 1e-07          3.6e-10 (n=32, x=29.1956)      901      735
+  double single            header x<x0    21318    21318  3.11e-15 / 1e-15         3.11 (n=0, x=1e-12)             0        0  the lane book, record, not judged
+  native packed half       C             2134     2134  9.19e-07 / 1.91e-06      0.482 (n=5, x=50.6562)          0        0
+  native packed half batch C             2148     2148  9.19e-07 / 1.91e-06      0.482 (n=5, x=50.6562)          0        0
+  transform kFp64          A            21318    21318  1.11e-16 / 1e-15         0.111 (n=0, x=0)                0        0
+  transform kTf32x3        A            21318    21150  1.82e-07 / 2.5e-07       0.728 (n=0, x=0.225848)       168        0
+  transform kBf16x6        A            21318    21150  1.43e-07 / 2.5e-07       0.572 (n=0, x=0.284131)       168        0
+
+  delivered / claimed = |F_hat(n,x) - F(n,x)| and the bound it was judged
+             against, at the worst cell of the sweep; a claim whose bound is
+             per-region or per-value (the half lanes' half-ULP term) shows the
+             pair at that cell, not the base bound
+  vacuous  = points where the documented bound is at least as large as
+             |F_n(x)| itself, so any returned value in range passes
+  no value = of those, points where the lane returned zero or a subnormal
+  record,  = the slot has no verdict in this build: no live claim is judged at
+  not judged it, either because its figure is the shipped default build's in a
+             build whose default rows are a replacement's, or because the claim
+             it carried was withdrawn; its ratio may be above 1.0 in a green run
+
+published cells and ranges, measured:
+  half worst cell (n=0, x=721): documented 0.990 of budget
+    delivered 0.03302 vs reference 0.0330048 -> err 1.52041e-05, bound 1.53588e-05, ratio 0.9899
+    representation term share of that budget: measured 0.9935, documented 0.99
+  half lane, sweep worst: fp16 0.999 at (n=0, x=9.29688); bf16 0.9994 at (n=0, x=3.79688)
+  half lane range, region C, per order (reference | lane):
+    a -1 is 'no argument of the branch on the grid', not 'x = -1'
+    order  ref normal to lane normal to    ref zero to   lane != 0 to   scaled limit
+        0    2.00983e+08          65504    8.80706e+14          65504    3.40282e+38
+        1        373.003            373        52078.4          52064    5.03107e+08
+        2        40.0421        40.0312        862.533          862.5        28248.2
+        3             -1             -1         159.18        159.125        1243.28
+        4             -1             -1        67.9302        67.9375        287.401
+        5             -1             -1        41.2353          41.25        125.854
+        6             -1             -1        30.8453        30.8906        74.1858
+        7             -1             -1             -1             -1        52.1543
+        8             -1             -1             -1             -1        41.2353
+       32             -1             -1             -1             -1             -1
+    (scaled limit = the largest argument at which the order's whole ladder,
+     seed included, still fits what a per-order power-of-two scale can hold in
+     binary16's normal range; the subnormal-field limit is, per order, printed for order 8 below)
+  asymptotic branch across its stated domain edge (x = 16):
+    worst err below 16 (n=32, x=4)  = 6.27944e+14
+    worst err in [16, kX1)        gate: the registration table and the claims book disagree: 2 error(s)
+  claim D01: the quote is not in README.md (lines 291-293, the bound's first paragraph): "For every `n <= 32` and every `x >= 0` the error of a returned value is at or below **`1e-13 · F_0(x)`** — the ladder's first rung scaled by `1e-13`, not the value the caller asked for."
+  claim D01: the quote is not in README.md (lines 291-293, the bound's first paragraph): "For every `n <= 32` and every `x >= 0` the error of a returned value is at or below **`1e-13 · F_0(x)`** — the ladder's first rung scaled by `1e-13`, not the value the caller asked for."
+gate: the registration check failed, so no verdict table is reported
+      = 1.70172e-05
+    worst err in the shipped domain (n=32, x=28.9893) = 5e-14
+    jump across the edge, one grid step apart: 4.175 to 17.24
+    jump across the edge, two-unit windows:     8.002 to 68.82
+    error just below the edge over the branch's own figure (orders 0..24):
+      1.393e+05 to 1.625e+07  (5.14 to 7.21 orders)
+  power-of-two rescale in binary16: 45663 (value, power) pairs checked in the
+    normal range, 0 pairs where rounding and scaling disagreed
+  float lane's own floor where |F| >= 0.5: worst relative error 8.636e-08 at (n=0, x=2.81804);
+    the documented ceiling is about 6e-8, the published figure 2^-22 of the value,
+    or its 1.5e-7 floor where that is the larger

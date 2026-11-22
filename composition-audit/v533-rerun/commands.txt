@@ -1,0 +1,85 @@
+composition v5.3.3 re-measurement: commands and exit codes
+date: 2026-11-22
+host: Windows 11, x64, MSVC 19.51, Visual Studio 18 2026
+kernel: boys v5.3.3, annotated tag object 4119217c8ab23d9f370b301a9bd6338e2c804f7e,
+        commit 01bba7b0ed7e0dd387f2af087e992445222e5546, worktree clean
+harness: boys-harness 3be00038384f209dd0879feece817c32465a2258, version 1.0.43,
+         composition-audit at that commit
+
+Paths are written with <harness> for the harness checkout and <boys> for the
+kernel worktree.
+
+[1] configure-fused
+  cwd: <harness>
+  command: cmake -S composition-audit -B build-harness-fused -G "Visual Studio 18 2026" -A x64 -DBOYS_SOURCE_DIR=<boys> -DBOYS_MULADD_SEPARATE=OFF -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  exit: 0
+
+[2] build-fused
+  cwd: <harness>
+  command: cmake --build build-harness-fused --target measure-interaction --config Release
+  exit: 0
+
+[3] run-fused
+  cwd: <harness>
+  environment: BOYS_CANARY_HINT_ONLY=1
+  command: build-harness-fused\Release\measure-interaction.exe --arguments composition-audit\records\arguments.csv --reference composition-audit\records\reference.csv --out results-fused\cells.csv --env results-fused\environment.txt --canary-samples 1
+  exit: 0
+  output: 494208 rows, 0 refused cells-readings, 0 readings over the published figure
+  cells decompressed sha256: 65c223da9eeb225ac4ba45ae713ef86e133af521af005b3cddd30257aafaa255
+  cells xz sha256: 44e140752d2e44b8bc117cefdc39d5aab998114a6105256d3715cfec99249b62
+
+[4] configure-separate
+  cwd: <harness>
+  command: cmake -S composition-audit -B build-harness-separate -G "Visual Studio 18 2026" -A x64 -DBOYS_SOURCE_DIR=<boys> -DBOYS_MULADD_SEPARATE=ON -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  exit: 0
+
+[5] build-separate
+  cwd: <harness>
+  command: cmake --build build-harness-separate --target measure-interaction --config Release
+  exit: 0
+
+[6] run-separate
+  cwd: <harness>
+  environment: BOYS_CANARY_HINT_ONLY=1
+  command: build-harness-separate\Release\measure-interaction.exe --arguments composition-audit\records\arguments.csv --reference composition-audit\records\reference.csv --out results-separate\cells.csv --env results-separate\environment.txt --canary-samples 1
+  exit: 0
+  output: 494208 rows, 0 refused cells-readings, 0 readings over the published figure
+  cells decompressed sha256: 7d1748cc97551e1528734960503ad821d100d17ab12c6e2d15f1c5417be4192a
+  cells xz sha256: 8e3c2c5b2fb96e49949dc5b5e227e50796ef2d2174a531c2fce9f01b02e9b1fe
+
+[7] determinism-rerun-fused
+  cwd: <harness>
+  environment: BOYS_CANARY_HINT_ONLY=1
+  command: build-harness-fused\Release\measure-interaction.exe --arguments composition-audit\records\arguments.csv --reference composition-audit\records\reference.csv --out <scratch>\rerun-fused.csv --env <scratch>\rerun-fused-env.txt --canary-samples 1
+  exit: 0
+  output sha256: 65c223da9eeb225ac4ba45ae713ef86e133af521af005b3cddd30257aafaa255
+  matches primary run: yes, byte for byte
+
+[8] determinism-rerun-separate
+  cwd: <harness>
+  environment: BOYS_CANARY_HINT_ONLY=1
+  command: build-harness-separate\Release\measure-interaction.exe --arguments composition-audit\records\arguments.csv --reference composition-audit\records\reference.csv --out <scratch>\rerun-separate.csv --env <scratch>\rerun-separate-env.txt --canary-samples 1
+  exit: 0
+  output sha256: 7d1748cc97551e1528734960503ad821d100d17ab12c6e2d15f1c5417be4192a
+  matches primary run: yes, byte for byte
+
+[9] compare
+  cwd: <harness>
+  command: python composition-audit\v533-rerun\compare_v533.py
+  exit: 0
+  output: all comparison numbers reproduce
+
+[10] regenerate-b1
+  cwd: <harness>
+  command: python composition-audit\v533-rerun\b1_calls.py
+  exit: 0
+  output: 1152 rows (576 calls per configuration)
+
+[11] regenerate-b7
+  cwd: <harness>
+  command: python composition-audit\v533-rerun\b7_ratio_distribution.py
+  exit: 0
+
+Reference identity: the two cells files carry 988416 rows in total; each row's
+ref_hi and ref_lo pair equals the deposited reference's value at the same
+(lane, order, narrowed argument). Mismatches: 0.
