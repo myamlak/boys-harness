@@ -159,7 +159,8 @@ has cells
 
     0, 1, 2, 4, 7, 9, 11, 12, 13, 14, 16, 19, 21, 23, 24, 25, 26, 28, 31, 33, 35.
 
-Its 21x21 permitted block has exact rank 21 over Q(sqrt2, sqrt3). The target-restricted
+Its 21x21 permitted block has exact rank 21 over Q(sqrt2, sqrt3). The Gram condition is
+12, so the model-matrix condition is sqrt(12) = 2 sqrt3 = 3.464102. The target-restricted
 kappa_max is sqrt(2/3) = 0.816496580927726 (over all 21 permitted rows it is 1.0), and every
 one of the fourteen G_alpha kappa_alpha equals 1, so the per-target sum is 14. The joint
 contamination constant is **kappa_joint = 4 exactly**, with per-beta ratios 1,1,2,3,4
@@ -235,8 +236,14 @@ kernel revision, arithmetic tier and region, with the allowance refreshed when d
 detected). The fp64 pathwise eta_Q = 2.77e-16 is the same order as the permitted interaction
 signal there (1.33e-16); the pooled eta_Q = 3.95e-16 is 34 times below the permitted pooled
 signal (1.33e-14). It is a measured noise or extraction envelope, not a proved physical
-Taylor remainder. The fp32 eta_Q is at the interaction-signal scale, which is why fp32 does
-not save.
+Taylor remainder. The fp32 eta_Q is at the interaction-signal scale, which is why the
+reduced design is a valid but loose bound there and the full cube still decides the
+verdict.
+
+For a prospective operated protocol with fresh measurements, the measurement term enters
+through the amplification (max over targets 8.485281 for D21 and 33.116168 for D75), so the
+34-fold fp64 margin over the allowance can shrink. Any protocol that uses the reduced
+design on new measurements must state and monitor that amplified floor.
 
 The second-instance four-axis star design replaces the 8-run half fraction with 5 runs at
 ratio 1.00, with contamination at most 3e-12 against B = 0.1964; its structural remainder is
@@ -256,7 +263,8 @@ The scripts and their outputs are in this directory: `certify_d21.py`, `certify_
 `pooled_d75_record_check.py`, `exact_proofs.py` and `second_instance_star.py`, with JSON
 and log outputs. Record inputs: the composition-audit full-cube cell archives named in
 `fullcube_summary.json`; measured kernel v5.0.0 revision `482fd338`; source read at
-`v5.3.1`; harness tag `v1.0.42`.
+`v5.3.1`; harness tag `v1.0.42`. The record is deposited in pull request #59 and is tagged
+`support-family-2026-11-22`; this derivation is included in the record.
 
 Run from this directory:
 

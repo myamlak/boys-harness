@@ -434,15 +434,16 @@ The fp64 pathwise `eta_Q = 2.77e-16` is the same order as the permitted
 interaction signal there (`1.33e-16`); the pooled `eta_Q = 3.95e-16` is about
 34 times below the permitted pooled signal (`1.33e-14`). It is a measured
 extraction or noise envelope, not a proved physical Taylor remainder. The fp32
-`eta_Q` is at the interaction-signal scale, which is why fp32 does not save.
+`eta_Q` is at the interaction-signal scale, so the reduced design is a valid
+but loose bound there and the full cube still decides the verdict.
 
-A prospective run carries its own measurement threshold through
-`delta_alpha`, and the design amplifies it. The certificate's threshold
-amplification is 14.024284 for D21 and 54.506148 for D75 over all permitted
-rows; the theorem's cell-average factors are at most 8.485281 and 33.116168
-over the targets. The retrospective record's measurement term is small, but a
-prospective use must supply the prospective threshold; the smaller design does
-not remove the amplification.
+For a prospective operated protocol with fresh measurements, the measurement
+term enters through the amplification: at most 8.485281 over the targets for
+D21 and 33.116168 for D75 on the design's cell average, or 14.024284 and
+54.506148 in the certificate's supremum form. The 34-fold fp64 margin over the
+allowance can therefore shrink. Any protocol that uses the reduced design on
+new measurements must state and monitor that amplified floor; the smaller
+design does not remove the amplification.
 
 ## The four-axis second-instance star
 
