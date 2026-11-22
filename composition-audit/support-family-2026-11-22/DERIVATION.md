@@ -131,7 +131,7 @@ minimality statement is unaffected.
 On levels (3,2,3,2), any strength-2 orthogonal array has every pair marginal balanced, so N
 is divisible by 9, 6 and 4, hence by lcm(9,6,4) = 36; the only simple such design inside the
 cube is the full cube. Strength 3 and above implies strength 2, so no proper orthogonal
-array of any strength exists.
+array of strength at least two exists.
 
 The exact-orthogonality route is also empty below 36. Requiring target estimates to be
 unaliased with the mean and mains gives 189 alias equations (98 target-to-mean/main plus 91
