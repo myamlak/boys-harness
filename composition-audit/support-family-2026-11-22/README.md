@@ -307,7 +307,7 @@ smaller.
   marginal balanced, so `N` is divisible by 9, 6 and 4, hence by
   `lcm(9, 6, 4) = 36`. Within the cube the only simple strength-2 array is the
   full cube; strength 3 and above implies strength 2. With the no-replication
-  convention, no proper orthogonal array of any strength exists below 36 runs.
+  convention, no proper orthogonal array of strength at least two exists below 36 runs.
 - Condition A, the exact-orthogonality condition of the theorem (target-target
   inner products diagonal, target-main-effect inner products zero, and the
   normalization), has a 36-row constraint matrix of exact rank 36 over
