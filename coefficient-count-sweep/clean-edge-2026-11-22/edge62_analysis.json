@@ -1,0 +1,323 @@
+{
+  "edge": "62.0",
+  "scale": "5.210150516837854",
+  "widths": {
+    "2^-7": {
+      "cheb": {
+        "stored": [
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0
+        ],
+        "primary_all_eight": {
+          "n": 8,
+          "intercept": -0.3809523809523805,
+          "slope": 0.38095238095238093,
+          "max_abs_residual": 0.8095238095238093,
+          "max_abs_second_difference": 2.0
+        },
+        "secondary_contract": {
+          "n": 6,
+          "intercept": 0.5333333333333332,
+          "slope": 0.45714285714285713,
+          "max_abs_residual": 2.5619047619047617,
+          "max_abs_second_difference": 2.0
+        },
+        "verdict_primary": "holds",
+        "verdict_secondary": "fails"
+      },
+      "rat": {
+        "stored": [
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "primary_all_eight": {
+          "n": 8,
+          "intercept": 1.3214285714285712,
+          "slope": 0.17857142857142858,
+          "max_abs_residual": 0.46428571428571397,
+          "max_abs_second_difference": 1.0
+        },
+        "secondary_contract": {
+          "n": 6,
+          "intercept": 3.0,
+          "slope": 0.14285714285714285,
+          "max_abs_residual": 1.7142857142857144,
+          "max_abs_second_difference": 1.0
+        },
+        "verdict_primary": "holds",
+        "verdict_secondary": "holds"
+      }
+    },
+    "2^0": {
+      "cheb": {
+        "stored": [
+          5.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          9.0,
+          9.0,
+          9.0
+        ],
+        "primary_all_eight": {
+          "n": 8,
+          "intercept": 1.4761904761904763,
+          "slope": 0.5238095238095238,
+          "max_abs_residual": 0.8095238095238093,
+          "max_abs_second_difference": 2.0
+        },
+        "secondary_contract": {
+          "n": 6,
+          "intercept": 4.0,
+          "slope": 0.5714285714285714,
+          "max_abs_residual": 3.8571428571428577,
+          "max_abs_second_difference": 2.0
+        },
+        "verdict_primary": "holds",
+        "verdict_secondary": "fails"
+      },
+      "rat": {
+        "stored": [
+          4.0,
+          5.0,
+          5.0,
+          6.0,
+          6.0,
+          6.0,
+          7.0,
+          7.0
+        ],
+        "primary_all_eight": {
+          "n": 8,
+          "intercept": 1.095238095238095,
+          "slope": 0.40476190476190477,
+          "max_abs_residual": 0.45238095238095255,
+          "max_abs_second_difference": 1.0
+        },
+        "secondary_contract": {
+          "n": 6,
+          "intercept": 3.466666666666667,
+          "slope": 0.4,
+          "max_abs_residual": 2.666666666666668,
+          "max_abs_second_difference": 1.0
+        },
+        "verdict_primary": "holds",
+        "verdict_secondary": "fails"
+      }
+    },
+    "2^5": {
+      "cheb": {
+        "stored": [
+          16.0,
+          18.0,
+          20.0,
+          21.0,
+          23.0,
+          25.0,
+          27.0,
+          29.0
+        ],
+        "primary_all_eight": {
+          "n": 8,
+          "intercept": 1.4285714285714306,
+          "slope": 1.8214285714285714,
+          "max_abs_residual": 0.4642857142857153,
+          "max_abs_second_difference": 1.0
+        },
+        "secondary_contract": {
+          "n": 6,
+          "intercept": 11.533333333333331,
+          "slope": 1.7428571428571429,
+          "max_abs_residual": 9.704761904761902,
+          "max_abs_second_difference": 1.0
+        },
+        "verdict_primary": "holds",
+        "verdict_secondary": "fails"
+      },
+      "rat": {
+        "stored": [
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          13.0,
+          14.0,
+          15.0,
+          22.0
+        ],
+        "primary_all_eight": {
+          "n": 8,
+          "intercept": -4.0,
+          "slope": 1.5,
+          "max_abs_residual": 3.5,
+          "max_abs_second_difference": 6.0
+        },
+        "secondary_contract": {
+          "n": 6,
+          "intercept": 7.166666666666668,
+          "slope": 1.0,
+          "max_abs_residual": 6.166666666666668,
+          "max_abs_second_difference": 6.0
+        },
+        "verdict_primary": "fails",
+        "verdict_secondary": "fails"
+      }
+    },
+    "ship": {
+      "cheb": {
+        "stored": [
+          13.0,
+          15.0,
+          17.0,
+          17.0,
+          19.0,
+          21.0,
+          23.0,
+          25.0
+        ],
+        "primary_all_eight": {
+          "n": 8,
+          "intercept": -0.14285714285714235,
+          "slope": 1.6428571428571428,
+          "max_abs_residual": 0.928571428571427,
+          "max_abs_second_difference": 2.0
+        },
+        "secondary_contract": {
+          "n": 6,
+          "intercept": 9.399999999999999,
+          "slope": 1.4857142857142858,
+          "max_abs_residual": 8.74285714285714,
+          "max_abs_second_difference": 2.0
+        },
+        "verdict_primary": "holds",
+        "verdict_secondary": "fails"
+      },
+      "rat": {
+        "stored": [
+          8.0,
+          9.0,
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          13.0,
+          16.0
+        ],
+        "primary_all_eight": {
+          "n": 8,
+          "intercept": -0.773809523809522,
+          "slope": 1.0238095238095237,
+          "max_abs_residual": 1.416666666666666,
+          "max_abs_second_difference": 2.0
+        },
+        "secondary_contract": {
+          "n": 6,
+          "intercept": 6.566666666666666,
+          "slope": 0.7714285714285715,
+          "max_abs_residual": 5.280952380952382,
+          "max_abs_second_difference": 2.0
+        },
+        "verdict_primary": "fails",
+        "verdict_secondary": "fails"
+      }
+    },
+    "paper": {
+      "cheb": {
+        "stored": [
+          13.0,
+          14.0,
+          15.0,
+          17.0,
+          19.0,
+          19.0,
+          21.0,
+          23.0
+        ],
+        "primary_all_eight": {
+          "n": 8,
+          "intercept": 1.3333333333333321,
+          "slope": 1.4166666666666667,
+          "max_abs_residual": 0.75,
+          "max_abs_second_difference": 2.0
+        },
+        "secondary_contract": {
+          "n": 6,
+          "intercept": 9.4,
+          "slope": 1.3428571428571427,
+          "max_abs_residual": 7.857142857142854,
+          "max_abs_second_difference": 2.0
+        },
+        "verdict_primary": "holds",
+        "verdict_secondary": "fails"
+      },
+      "rat": {
+        "stored": [
+          8.0,
+          8.0,
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          13.0,
+          14.0
+        ],
+        "primary_all_eight": {
+          "n": 8,
+          "intercept": 0.08333333333333393,
+          "slope": 0.9166666666666666,
+          "max_abs_residual": 0.583333333333333,
+          "max_abs_second_difference": 1.0
+        },
+        "secondary_contract": {
+          "n": 6,
+          "intercept": 5.166666666666666,
+          "slope": 0.8571428571428571,
+          "max_abs_residual": 4.88095238095238,
+          "max_abs_second_difference": 1.0
+        },
+        "verdict_primary": "holds",
+        "verdict_secondary": "fails"
+      }
+    }
+  },
+  "missing": [],
+  "verdict_primary": {
+    "chebyshev_holds_everywhere": true,
+    "rational_fail_widths": [
+      "2^5",
+      "ship"
+    ],
+    "rational_hold_widths": [
+      "2^-7",
+      "2^0",
+      "paper"
+    ],
+    "verdict": "mixed"
+  },
+  "verdict_secondary": {
+    "chebyshev_holds_everywhere": false,
+    "rational_fail_widths": [
+      "2^0",
+      "2^5",
+      "ship",
+      "paper"
+    ],
+    "rational_hold_widths": [
+      "2^-7"
+    ],
+    "verdict": "uninterpretable-chebyshev"
+  }
+}
