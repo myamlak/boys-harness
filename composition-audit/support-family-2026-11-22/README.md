@@ -249,14 +249,22 @@ the same bound with the alias term absent. At the deposited record:
 | --- | --- | --- | --- |
 | pathwise (D21, 21 runs) | fp64 | 2.97e-14 | 2.59e-14 |
 | pathwise (D21, 21 runs) | fp32 | 2.72e-06 | 2.81e-07 |
-| pooled (D75, 75 runs) | fp64 | 5.21e-14 | 4.66e-14 |
+| pooled (D75, 75 runs) | fp64 | 7.27e-14 | 4.66e-14 |
 | pooled (D75, 75 runs) | fp32 | 1.61e-05 | 3.72e-07 |
 
-In fp64 the reduced designs sit within 15 per cent of the full-factorial
-reference while using 21 of 36 cells and 75 of 144 cells. In fp32 the alias
-allowance dominates: the reduced-design bound is about ten times the reference
-on the pathwise cube and about forty times on the pooled cube. The reduced
-designs are fp64 designs; the record does not claim an fp32 saving.
+The increment over the full-factorial reference is the target count times the
+lane's structural-zero allowance: 14 `eta_Q` on the four-axis cube and 66
+`eta_Q` on the six-axis cube. For the pooled fp64 row the increment is
+66 x 3.954108e-16 = 2.61e-14, so the bound is
+4.66e-14 + 2.61e-14 = 7.27e-14. The total allowance charge, including the one
+`eta_Q` already in the full-factorial reference, is 67 `eta_Q` = 2.65e-14.
+
+In fp64 the pathwise design costs 15 per cent more bound than the full
+factorial at 21 of 36 cells; the pooled design costs 56 per cent more at 75 of
+144 cells. In fp32 the alias allowance dominates: the reduced-design bound is
+about ten times the reference on the pathwise cube and about forty times on the
+pooled cube. The reduced designs are fp64 designs; the record does not claim an
+fp32 saving.
 
 ## The four-axis second-instance star
 
