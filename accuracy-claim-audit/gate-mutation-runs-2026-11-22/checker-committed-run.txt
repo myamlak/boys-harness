@@ -1,0 +1,13 @@
+the gate's recorded run, held to the version and the inputs it names
+  tests/data/boys_accuracy_gate_run.txt
+  version: 5.3.3
+  this tree: version 5.3.3
+  the gate reads: src, include, tests/boys_accuracy_gate.cpp, tests/boys_gate_reference.hpp, tests/boys_no_vector_fallback_sweep.hpp, tests/data/boys_accuracy_gate_reference.csv, CMakeLists.txt
+    src: e88e2344bdc402ff
+    include: 0480316e776ac8f1
+    gate: a447bf3837496454
+    grid: 970db44ddb6a7da5
+  CMakeLists.txt reads the same content the run's stamp states
+  device lanes: 4 of 4 measured on a card
+
+verdict: clean - the recorded run describes this tree's code: every group of the content it says it read is unchanged since the release it names, and the delivered figures it records are this tree's gate's

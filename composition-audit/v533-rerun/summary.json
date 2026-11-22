@@ -1,0 +1,789 @@
+{
+ "schema": "composition-v533-rerun/1",
+ "title": "The 576-call composition factorial re-measured at kernel v5.3.3",
+ "purpose": "Re-measure every cell of the deposited composition factorial at the program-of-record kernel v5.3.3, with the deposited arguments and the deposited 60-digit reference, and compare every row with the v5.0.0 archive.",
+ "kernel": {
+  "library": "boys",
+  "version": "5.3.3",
+  "annotated_tag": "v5.3.3",
+  "tag_object": "4119217c8ab23d9f370b301a9bd6338e2c804f7e",
+  "commit": "01bba7b0ed7e0dd387f2af087e992445222e5546",
+  "worktree_clean": true
+ },
+ "harness": {
+  "repository": "boys-harness",
+  "version": "1.0.43",
+  "commit": "3be00038384f209dd0879feece817c32465a2258",
+  "composition_audit": "composition-audit",
+  "driver": "composition-audit/measure_interaction.cpp",
+  "driver_sha256": "e2fda6e305727800ee5b83e2e3edd10461ee687aa1fd6c76230c25f45cdaf93e",
+  "cmakelists_sha256": "efffab99b5ab89dbe552330a269b4650f3d19f26e3e77b16708c154de36398c6",
+  "signed_interaction_sha256": "3883e385619c8affa4df684ef77bb4437fc2a4a13be89f5cb0ec52858443a0a3",
+  "summarise_interaction_sha256": "df67f52e83319591f2e2acbb53bec69e494fd6a17e6be9ffcc30f18ff56e4c86"
+ },
+ "build": {
+  "compiler": "msvc",
+  "compiler_version": "1951",
+  "generator": "Visual Studio 18 2026",
+  "platform": "x64",
+  "build_type": "Release",
+  "cuda": false,
+  "routes": [
+   "fused",
+   "separate"
+  ],
+  "route_evidence": "each environment.txt records muladd_fp64 and muladd_selected_fp64 as the route the build was asked for and the route delivered"
+ },
+ "measurement": {
+  "design": {
+   "within_lane_axes": {
+    "route": 2,
+    "scheme": 2,
+    "partition": 3,
+    "pack": 2,
+    "form": 3,
+    "exp": 2
+   },
+   "within_lane_calls": 144,
+   "lanes": [
+    "fp64",
+    "fp32",
+    "fp16",
+    "bf16"
+   ],
+   "calls": 576,
+   "arguments": {
+    "total": 26,
+    "exact": 16,
+    "generic": 10
+   },
+   "orders": {
+    "count": 33,
+    "first": 0,
+    "last": 32
+   },
+   "points_per_call": 858,
+   "rows_per_configuration": 494208,
+   "rows_identity": "576 calls x 26 arguments x 33 orders = 494208",
+   "points_identity": "26 arguments x 33 orders = 858 points per call",
+   "calls_identity": "144 within-lane calls x 4 lanes = 576 calls"
+  },
+  "configurations": {
+   "fused": {
+    "cells_xz": "results-fused/cells.csv.xz",
+    "cells_xz_sha256": "44e140752d2e44b8bc117cefdc39d5aab998114a6105256d3715cfec99249b62",
+    "cells_xz_size_bytes": 3797884,
+    "cells_sha256": "65c223da9eeb225ac4ba45ae713ef86e133af521af005b3cddd30257aafaa255",
+    "rows": 494208,
+    "refusals": 0,
+    "environment": "results-fused/environment.txt",
+    "muladd_fp64": "fused",
+    "muladd_fp32": "fused",
+    "canary_samples": 1,
+    "canary_verdict": "quiet",
+    "compiler": "msvc",
+    "compiler_version": "1951",
+    "avx2_defined": "1"
+   },
+   "separate": {
+    "cells_xz": "results-separate/cells.csv.xz",
+    "cells_xz_sha256": "8e3c2c5b2fb96e49949dc5b5e227e50796ef2d2174a531c2fce9f01b02e9b1fe",
+    "cells_xz_size_bytes": 3778708,
+    "cells_sha256": "7d1748cc97551e1528734960503ad821d100d17ab12c6e2d15f1c5417be4192a",
+    "rows": 494208,
+    "refusals": 0,
+    "environment": "results-separate/environment.txt",
+    "muladd_fp64": "separate",
+    "muladd_fp32": "separate",
+    "canary_samples": 1,
+    "canary_verdict": "quiet",
+    "compiler": "msvc",
+    "compiler_version": "1951",
+    "avx2_defined": "1"
+   }
+  },
+  "reuse": {
+   "arguments": {
+    "path": "composition-audit/records/arguments.csv",
+    "sha256": "04eb574b48ce60360c2f61302ba86b2a24522a4b25f11cb700efc6103f277a08",
+    "rows": 104,
+    "note": "26 arguments per lane; 16 exact and 10 generic; the CRLF working-tree copy of an older clone hashes 3ce404b5b63623f52125a66206f6ca3b9521453a62dc72ec502b17f97c31eefb and is content-identical"
+   },
+   "reference": {
+    "path": "composition-audit/records/reference.csv",
+    "sha256": "484ff2240eab39825740f2a240473cffe6062ef2391b94a9ef3cc82f5c0d9cc9",
+    "rows": 3432,
+    "description": "single 60-digit mpmath evaluation per (lane, narrowed argument, order), split into a double-double hi/lo pair",
+    "identity_checked": {
+     "rows": 988416,
+     "mismatches": 0
+    }
+   },
+   "reference_generator": {
+    "path": "composition-audit/gen_reference.py",
+    "sha256": "a8dc35e8e473a3a2f3feed183825fa4c7f9b7e18e518348a67ee444a7d4dd5cf",
+    "note": "not re-run; the deposited reference was reused and checked row by row"
+   }
+  }
+ },
+ "canary": {
+  "role": "timing witness only; the measured error rows are deterministic",
+  "host_spread_per_cent": 9.36,
+  "alarm_per_cent": 5.0,
+  "samples_per_configuration": 1,
+  "hint_only": true,
+  "why": "a multi-sample gate on this host was above the 5 per cent alarm and would have stopped the run; the build is validated by the byte-identical determinism re-runs and by the 487,080 unchanged rows, not by timing"
+ },
+ "comparison": {
+  "statistic": "signed pointwise interaction over the largest of the four responses; a contrast is material at alpha when its largest |pi|/max(|r|) over informative points exceeds alpha",
+  "deposited_cube": {
+   "fused": {
+    "path": "composition-audit/records/cells/cells-msvc-fused.csv.xz",
+    "sha256": "4af5694810099d07ac9eee268f20073f08d63242731d08a06ebc3d1328c0638d",
+    "size_bytes": 3796704
+   },
+   "separate": {
+    "path": "composition-audit/records/cells/cells-msvc-separate.csv.xz",
+    "sha256": "f3493c4ca6aceaf642bcb8e5ef4b4d330c1214f64e467e284c7526ed1094b5bb",
+    "size_bytes": 3776060
+   }
+  },
+  "per_route": {
+   "fused": {
+    "rows_old": 494208,
+    "rows_new": 494208,
+    "cells_compared": 494208,
+    "changed_cells": 7128,
+    "changed_abs_err": 7128,
+    "changed_figure_half_digit_limit": 0,
+    "identical_rows": 487080,
+    "max_abs_value_difference": 1.1157741397482823e-14,
+    "affected_combinations": 24,
+    "affected_lane": [
+     "fp64"
+    ],
+    "affected_route": [
+     "rational-minimax"
+    ],
+    "affected_partition": [
+     "shipped"
+    ],
+    "affected_schemes": [
+     "horner",
+     "split-clenshaw"
+    ],
+    "affected_packs": [
+     "arguments",
+     "orders"
+    ],
+    "affected_forms": [
+     "exact-division",
+     "plain-reciprocal",
+     "refined-reciprocal"
+    ],
+    "affected_exps": [
+     "accurate",
+     "fast"
+    ],
+    "changed_arguments": [
+     12.0,
+     12.7,
+     16.0,
+     17.3,
+     24.0,
+     24.7,
+     29.0,
+     30.3,
+     30.5
+    ],
+    "changed_orders": {
+     "count": 33,
+     "first": 0,
+     "last": 32
+    },
+    "material_old": {
+     "0.05": 912,
+     "0.1": 901,
+     "0.2": 899
+    },
+    "material_new": {
+     "0.05": 897,
+     "0.1": 885,
+     "0.2": 883
+    },
+    "per_lane_material": {
+     "fp64": {
+      "old": {
+       "0.05": 336,
+       "0.1": 325,
+       "0.2": 323
+      },
+      "new": {
+       "0.05": 321,
+       "0.1": 309,
+       "0.2": 307
+      },
+      "informative": 592,
+      "contrasts": 664
+     },
+     "fp32": {
+      "old": {
+       "0.05": 276,
+       "0.1": 276,
+       "0.2": 276
+      },
+      "new": {
+       "0.05": 276,
+       "0.1": 276,
+       "0.2": 276
+      },
+      "informative": 576,
+      "contrasts": 664
+     }
+    },
+    "max_statement_ratio_new": {
+     "fp64": 0.47303043999577227,
+     "fp32": 0.8191245254432976,
+     "fp16": 0.9934027438291815,
+     "bf16": 0.9985908700338076
+    },
+    "max_statement_ratio_old": {
+     "fp64": 0.629268025193091,
+     "fp32": 0.8191245254432976,
+     "fp16": 0.9934027438291815,
+     "bf16": 0.9985908700338076
+    },
+    "max_abs_value_difference_at": {
+     "lane": "fp64",
+     "cell": [
+      "rational-minimax",
+      "split-clenshaw",
+      "shipped",
+      "orders",
+      "exact-division",
+      "accurate"
+     ],
+     "n": 0,
+     "x_nominal": 12.0,
+     "x": 12.0
+    },
+    "changed_cells_detail": {
+     "count": 7128,
+     "max_abs_value_difference": 1.1157741397482823e-14,
+     "min_difference": -5.773159728050814e-15,
+     "max_difference": 1.1157741397482823e-14,
+     "by_lane": {
+      "fp64": 7128
+     },
+     "by_route": {
+      "rational-minimax": 7128
+     },
+     "by_partition": {
+      "shipped": 7128
+     },
+     "by_scheme": {
+      "split-clenshaw": 3564,
+      "horner": 3564
+     },
+     "by_pack": {
+      "arguments": 3564,
+      "orders": 3564
+     },
+     "by_form": {
+      "exact-division": 2376,
+      "plain-reciprocal": 2376,
+      "refined-reciprocal": 2376
+     },
+     "by_exp": {
+      "accurate": 3564,
+      "fast": 3564
+     }
+    },
+    "max_abs_err_by_lane": {
+     "old": {
+      "fp64": 1.6098653907154834e-14,
+      "fp32": 1.2286867881649464e-07,
+      "fp16": 0.0002421015624270254,
+      "bf16": 0.0012459617773443797
+     },
+     "new": {
+      "fp64": 1.0337893604199906e-14,
+      "fp32": 1.2286867881649464e-07,
+      "fp16": 0.0002421015624270254,
+      "bf16": 0.0012459617773443797
+     }
+    }
+   },
+   "separate": {
+    "rows_old": 494208,
+    "rows_new": 494208,
+    "cells_compared": 494208,
+    "changed_cells": 7128,
+    "changed_abs_err": 7128,
+    "changed_figure_half_digit_limit": 0,
+    "identical_rows": 487080,
+    "max_abs_value_difference": 1.1157741397482823e-14,
+    "affected_combinations": 24,
+    "affected_lane": [
+     "fp64"
+    ],
+    "affected_route": [
+     "rational-minimax"
+    ],
+    "affected_partition": [
+     "shipped"
+    ],
+    "affected_schemes": [
+     "horner",
+     "split-clenshaw"
+    ],
+    "affected_packs": [
+     "arguments",
+     "orders"
+    ],
+    "affected_forms": [
+     "exact-division",
+     "plain-reciprocal",
+     "refined-reciprocal"
+    ],
+    "affected_exps": [
+     "accurate",
+     "fast"
+    ],
+    "changed_arguments": [
+     12.0,
+     12.7,
+     16.0,
+     17.3,
+     24.0,
+     24.7,
+     29.0,
+     30.3,
+     30.5
+    ],
+    "changed_orders": {
+     "count": 33,
+     "first": 0,
+     "last": 32
+    },
+    "material_old": {
+     "0.05": 914,
+     "0.1": 903,
+     "0.2": 901
+    },
+    "material_new": {
+     "0.05": 895,
+     "0.1": 891,
+     "0.2": 885
+    },
+    "per_lane_material": {
+     "fp64": {
+      "old": {
+       "0.05": 338,
+       "0.1": 327,
+       "0.2": 325
+      },
+      "new": {
+       "0.05": 319,
+       "0.1": 315,
+       "0.2": 309
+      },
+      "informative": 592,
+      "contrasts": 664
+     },
+     "fp32": {
+      "old": {
+       "0.05": 276,
+       "0.1": 276,
+       "0.2": 276
+      },
+      "new": {
+       "0.05": 276,
+       "0.1": 276,
+       "0.2": 276
+      },
+      "informative": 576,
+      "contrasts": 664
+     }
+    },
+    "max_statement_ratio_new": {
+     "fp64": 0.47303043999577227,
+     "fp32": 0.8191245254432976,
+     "fp16": 0.9934027438291815,
+     "bf16": 0.9985908700338076
+    },
+    "max_statement_ratio_old": {
+     "fp64": 0.6270981920683498,
+     "fp32": 0.8191245254432976,
+     "fp16": 0.9934027438291815,
+     "bf16": 0.9985908700338076
+    },
+    "max_abs_value_difference_at": {
+     "lane": "fp64",
+     "cell": [
+      "rational-minimax",
+      "split-clenshaw",
+      "shipped",
+      "orders",
+      "exact-division",
+      "accurate"
+     ],
+     "n": 0,
+     "x_nominal": 12.0,
+     "x": 12.0
+    },
+    "changed_cells_detail": {
+     "count": 7128,
+     "max_abs_value_difference": 1.1157741397482823e-14,
+     "min_difference": -5.662137425588298e-15,
+     "max_difference": 1.1157741397482823e-14,
+     "by_lane": {
+      "fp64": 7128
+     },
+     "by_route": {
+      "rational-minimax": 7128
+     },
+     "by_partition": {
+      "shipped": 7128
+     },
+     "by_scheme": {
+      "split-clenshaw": 3564,
+      "horner": 3564
+     },
+     "by_pack": {
+      "arguments": 3564,
+      "orders": 3564
+     },
+     "by_form": {
+      "exact-division": 2376,
+      "plain-reciprocal": 2376,
+      "refined-reciprocal": 2376
+     },
+     "by_exp": {
+      "accurate": 3564,
+      "fast": 3564
+     }
+    },
+    "max_abs_err_by_lane": {
+     "old": {
+      "fp64": 1.6043142755923576e-14,
+      "fp32": 1.2286867881649464e-07,
+      "fp16": 0.0002421015624270254,
+      "bf16": 0.0012459617773443797
+     },
+     "new": {
+      "fp64": 1.0337893604199906e-14,
+      "fp32": 1.2286867881649464e-07,
+      "fp16": 0.0002421015624270254,
+      "bf16": 0.0012459617773443797
+     }
+    }
+   }
+  },
+  "contrast_counts": {
+   "order_three_components": 44,
+   "total": 1808,
+   "informative": 1648,
+   "per_lane": 664,
+   "cross_lane": 480,
+   "unchanged": true,
+   "note": "the contrast structure is a property of the design; the v5.3.3 re-measurement leaves the five counts unchanged. 664 is the pairwise contrast count within one lane, 480 is the number crossing the precision axis, and 44 is the number of order-three components in the six-axis within-lane decomposition"
+  },
+  "material_counts": {
+   "fused": {
+    "old": {
+     "0.05": 912,
+     "0.1": 901,
+     "0.2": 899
+    },
+    "new": {
+     "0.05": 897,
+     "0.1": 885,
+     "0.2": 883
+    }
+   },
+   "separate": {
+    "old": {
+     "0.05": 914,
+     "0.1": 903,
+     "0.2": 901
+    },
+    "new": {
+     "0.05": 895,
+     "0.1": 891,
+     "0.2": 885
+    }
+   }
+  },
+  "per_lane_material": {
+   "fused": {
+    "fp64": {
+     "contrasts": 664,
+     "informative": 592,
+     "old": {
+      "0.05": 336,
+      "0.1": 325,
+      "0.2": 323
+     },
+     "new": {
+      "0.05": 321,
+      "0.1": 309,
+      "0.2": 307
+     }
+    },
+    "fp32": {
+     "contrasts": 664,
+     "informative": 576,
+     "old": {
+      "0.05": 276,
+      "0.1": 276,
+      "0.2": 276
+     },
+     "new": {
+      "0.05": 276,
+      "0.1": 276,
+      "0.2": 276
+     }
+    }
+   },
+   "separate": {
+    "fp64": {
+     "contrasts": 664,
+     "informative": 592,
+     "old": {
+      "0.05": 338,
+      "0.1": 327,
+      "0.2": 325
+     },
+     "new": {
+      "0.05": 319,
+      "0.1": 315,
+      "0.2": 309
+     }
+    },
+    "fp32": {
+     "contrasts": 664,
+     "informative": 576,
+     "old": {
+      "0.05": 276,
+      "0.1": 276,
+      "0.2": 276
+     },
+     "new": {
+      "0.05": 276,
+      "0.1": 276,
+      "0.2": 276
+     }
+    }
+   }
+  },
+  "statement_ratio_maxima": {
+   "fused": {
+    "old": {
+     "fp64": 0.629268025193091,
+     "fp32": 0.8191245254432976,
+     "fp16": 0.9934027438291815,
+     "bf16": 0.9985908700338076
+    },
+    "new": {
+     "fp64": 0.47303043999577227,
+     "fp32": 0.8191245254432976,
+     "fp16": 0.9934027438291815,
+     "bf16": 0.9985908700338076
+    },
+    "overall_max_new": 0.9985908700338076,
+    "overall_max_new_lane": "bf16"
+   },
+   "separate": {
+    "old": {
+     "fp64": 0.6270981920683498,
+     "fp32": 0.8191245254432976,
+     "fp16": 0.9934027438291815,
+     "bf16": 0.9985908700338076
+    },
+    "new": {
+     "fp64": 0.47303043999577227,
+     "fp32": 0.8191245254432976,
+     "fp16": 0.9934027438291815,
+     "bf16": 0.9985908700338076
+    },
+    "overall_max_new": 0.9985908700338076,
+    "overall_max_new_lane": "bf16"
+   }
+  }
+ },
+ "b1_calls": {
+  "path": "composition-audit/v533-rerun/b1_calls.tsv",
+  "source_cube": "the deposited v5.0.0 msvc cells",
+  "note": "see b1-note.md; the exact sum over separate per-axis figures is not defined by the published heterogeneous axis rows",
+  "maxima": {
+   "rows": 1152,
+   "per_configuration": {
+    "fused": {
+     "calls": 576,
+     "lanes": {
+      "fp64": {
+       "calls": 144,
+       "max_err_over_figure": 0.629268025193091,
+       "max_err_over_statement": 0.629268025193091,
+       "max_err_over_six_statements": 0.1048780041988485
+      },
+      "fp32": {
+       "calls": 144,
+       "max_err_over_figure": 0.8191245254432976,
+       "max_err_over_statement": 0.8191245254432976,
+       "max_err_over_six_statements": 0.1365207542405496
+      },
+      "fp16": {
+       "calls": 144,
+       "max_err_over_figure": 1614.0104161801694,
+       "max_err_over_statement": 0.9934027438291815,
+       "max_err_over_six_statements": 0.16556712397153023
+      },
+      "bf16": {
+       "calls": 144,
+       "max_err_over_figure": 8306.411848962533,
+       "max_err_over_statement": 0.9985908700338076,
+       "max_err_over_six_statements": 0.16643181167230128
+      }
+     },
+     "overall": {
+      "max_err_over_figure": 8306.411848962533,
+      "max_err_over_statement": 0.9985908700338076,
+      "max_err_over_six_statements": 0.16643181167230128
+     }
+    },
+    "separate": {
+     "calls": 576,
+     "lanes": {
+      "fp64": {
+       "calls": 144,
+       "max_err_over_figure": 0.6270981920683498,
+       "max_err_over_statement": 0.6270981920683498,
+       "max_err_over_six_statements": 0.10451636534472497
+      },
+      "fp32": {
+       "calls": 144,
+       "max_err_over_figure": 0.8191245254432976,
+       "max_err_over_statement": 0.8191245254432976,
+       "max_err_over_six_statements": 0.1365207542405496
+      },
+      "fp16": {
+       "calls": 144,
+       "max_err_over_figure": 1614.0104161801694,
+       "max_err_over_statement": 0.9934027438291815,
+       "max_err_over_six_statements": 0.16556712397153023
+      },
+      "bf16": {
+       "calls": 144,
+       "max_err_over_figure": 8306.411848962533,
+       "max_err_over_statement": 0.9985908700338076,
+       "max_err_over_six_statements": 0.16643181167230128
+      }
+     },
+     "overall": {
+      "max_err_over_figure": 8306.411848962533,
+      "max_err_over_statement": 0.9985908700338076,
+      "max_err_over_six_statements": 0.16643181167230128
+     }
+    }
+   }
+  }
+ },
+ "b7_ratio_distribution": {
+  "path": "composition-audit/v533-rerun/b7_ratio_distribution.json",
+  "source_cube": "the deposited v5.0.0 msvc cells",
+  "note": "see b7-note.md; the materiality counts are saturated",
+  "distribution": {
+   "msvc-fused": {
+    "rows_read": 494208,
+    "contrasts": 1808,
+    "informative": 1648,
+    "material": {
+     "0.05": 912,
+     "0.1": 901,
+     "0.2": 899
+    },
+    "bands": {
+     "<=0.05": 736,
+     "(0.05,0.10]": 11,
+     "(0.10,0.20]": 2,
+     "(0.20,0.50]": 35,
+     "(0.50,1.00]": 36,
+     ">1": 828
+    },
+    "quantiles": {
+     "0": 0.0,
+     "0.1": 0.0,
+     "0.25": 0.0,
+     "0.5": 1.0010077181740726,
+     "0.75": 1.966900515945531,
+     "0.9": 1.9996621529640912,
+     "0.95": 2.624920504116276,
+     "0.99": 3.75077850841118,
+     "1.0": 3.9264180858800426
+    },
+    "share_gt_1": 0.5024271844660194,
+    "paper_cell_max_quantiles": {
+     "0": 0.0,
+     "0.5": 0.0,
+     "0.9": 0.50063369628421,
+     "0.99": 1.034464474130182,
+     "1.0": 1.0369065500019312
+    },
+    "paper_cell_max_gt_1": 24
+   },
+   "msvc-separate": {
+    "rows_read": 494208,
+    "contrasts": 1808,
+    "informative": 1648,
+    "material": {
+     "0.05": 914,
+     "0.1": 903,
+     "0.2": 901
+    },
+    "bands": {
+     "<=0.05": 734,
+     "(0.05,0.10]": 11,
+     "(0.10,0.20]": 2,
+     "(0.20,0.50]": 35,
+     "(0.50,1.00]": 30,
+     ">1": 836
+    },
+    "quantiles": {
+     "0": 0.0,
+     "0.1": 0.0,
+     "0.25": 0.0,
+     "0.5": 1.037219146449483,
+     "0.75": 1.9736871231468924,
+     "0.9": 1.99966214923943,
+     "0.95": 2.719420634627428,
+     "0.99": 3.7447090579296427,
+     "1.0": 3.9075556608213016
+    },
+    "share_gt_1": 0.5072815533980582,
+    "paper_cell_max_quantiles": {
+     "0": 0.0,
+     "0.5": 0.0,
+     "0.9": 0.5143288271507998,
+     "0.99": 1.0345837252435488,
+     "1.0": 1.0370342509835748
+    },
+    "paper_cell_max_gt_1": 24
+   }
+  }
+ },
+ "determinism": {
+  "fused_sha256": "65c223da9eeb225ac4ba45ae713ef86e133af521af005b3cddd30257aafaa255",
+  "separate_sha256": "7d1748cc97551e1528734960503ad821d100d17ab12c6e2d15f1c5417be4192a",
+  "reruns_byte_identical": true,
+  "reference_rows_checked": 988416,
+  "reference_mismatches": 0
+ },
+ "limits": [
+  "host measurement only; no device lanes are carried",
+  "the canary readings are not a timing record",
+  "the comparison is against the deposited MSVC v5.0.0 cube",
+  "the signed-interaction material counts cover the resolving lanes (fp64 and fp32); the half lanes are measured and safety-checked but do not resolve the axis terms"
+ ]
+}

@@ -1,0 +1,92 @@
+gate mutation runs: commands, diffs and exit codes
+date: 2026-11-22
+host: Windows 11, x64, MSVC 19.51, Visual Studio 18 2026
+kernel: boys v5.3.3, annotated tag object 4119217c8ab23d9f370b301a9bd6338e2c804f7e,
+        commit 01bba7b0ed7e0dd387f2af087e992445222e5546
+build: build-gate, BUILD_CUDA=OFF, AVX2 tier present
+
+[0] configure and build
+  command: cmake -S <boys> -B build-gate -G "Visual Studio 18 2026" -A x64 -DBUILD_CUDA=OFF
+  exit: 0
+  command: cmake --build build-gate --target boys-accuracy-gate --config Release
+  exit: 0
+
+[1] clean baseline
+  command: build-gate\Release\boys-accuracy-gate.exe --strict
+  exit: 0
+  output: PASS; see clean-gate.txt
+
+[2] anchored sentence
+  file: README.md line 292
+  diff: -returned value is at or below **`1e-13 . F_0(x)`** ...
+        +returned value is at or below **`1e-14 . F_0(x)`** ...
+        (one character, 3 -> 4; no rebuild)
+  command: build-gate\Release\boys-accuracy-gate.exe --strict
+  exit: 2
+  output: two claim D01 registration failures; "gate: the registration check failed,
+          so no verdict table is reported"; see anchored-sentence-gate.txt
+
+[3] default path
+  file: include/boys/boys_coefficients_d_uniform_mono.hpp line 14
+  diff: -    9.89680267367013866e-01, ...
+        +    8.89680267367013866e-01, ...
+        (one character, 9 -> 8; detail::kFlatMonoCoeffs)
+  command: cmake --build build-gate --target boys-accuracy-gate --config Release
+  exit: 0
+  command: build-gate\Release\boys-accuracy-gate.exe --strict
+  exit: 1
+  output: lane book fails README.double.single, README.double.batch and
+          header.double.region_A_and_band; double single A moves from 3.11e-15 to
+          0.102 over 1e-13 at n=0 x=0.0582832; combination coverage 95 of 192;
+          see default-path-gate.txt
+  command: ctest --test-dir build-gate -C Release -R "^boys-accuracy-gate$" --output-on-failure
+  exit: 8
+  output: 1 test failed of 1, test #10 boys-accuracy-gate; see default-path-ctest.txt
+
+[4] option kBcoeffs
+  file: include/boys/boys_coefficients.hpp line 198
+  diff: -    {1.99358578668927033e-01, ...
+        +    {9.99358578668927033e-01, ...
+        (one character, 1 -> 9)
+  rebuild exit: 0
+  command: build-gate\Release\boys-accuracy-gate.exe --strict
+  exit: 1
+  output: scheme result 28 of 29; NOT MET split-clenshaw / region B; stored seed
+          moves from 5.55e-17 to 0.8; combination coverage 94 of 192; option space
+          13 of 16; see option-kBcoeffs-gate.txt
+
+[5] option kFlatCoeffs
+  file: include/boys/boys_coefficients_d_uniform_cheb.hpp line 14
+  diff: -    9.89728020325774338e-01, ...
+        +    8.89728020325774338e-01, ...
+        (one character, 9 -> 8)
+  rebuild exit: 0
+  command: build-gate\Release\boys-accuracy-gate.exe --strict
+  exit: 1
+  output: 1,470 uniform-partition cells outside 5.5e-14 (worst n=0 x=4.21697e-08,
+          0.1); combination coverage 95 of 192; option space 16 of 16; see
+          option-kFlatCoeffs-gate.txt
+
+[6] option kNarrowBcoeffs
+  file: include/boys/boys_coefficients.hpp line 591
+  diff: -    2.43275733172444691e-01, ...
+        +    9.43275733172444691e-01, ...
+        (one character, 2 -> 9)
+  rebuild exit: 0
+  command: build-gate\Release\boys-accuracy-gate.exe --strict
+  exit: 1
+  output: narrow stored seed moves from 5.55e-17 to 0.7; scheme result 23 of 29;
+          option space 14 of 16; combination coverage 94 of 192; see
+          option-kNarrowBcoeffs-gate.txt
+
+[7] checker
+  command: python tools\check_recorded_run.py --run <record>\clean-gate.txt
+  exit: 1
+  output: STALE: 0 of 4 device lanes measured on a card (host-only build);
+          see checker-host-only-run.txt
+  command: python tools\check_recorded_run.py
+  exit: 0
+  output: clean; see checker-committed-run.txt
+
+Each mutation was reverted with git restore after its run; the final clean
+rebuild reproduces clean-gate.txt byte for byte.

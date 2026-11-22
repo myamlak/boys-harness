@@ -1,0 +1,16 @@
+the gate's recorded run, held to the version and the inputs it names
+  C:/Users/myaml/dev/_verify-B-2026-11-22/gate-cpu-clean.txt
+  version: 5.3.3
+  this tree: version 5.3.3
+  the gate reads: src, include, tests/boys_accuracy_gate.cpp, tests/boys_gate_reference.hpp, tests/boys_no_vector_fallback_sweep.hpp, tests/data/boys_accuracy_gate_reference.csv, CMakeLists.txt
+    src: e88e2344bdc402ff
+    include: 0480316e776ac8f1
+    gate: a447bf3837496454
+    grid: 970db44ddb6a7da5
+  CMakeLists.txt reads the same content the run's stamp states
+  device lanes: 0 of 4 measured on a card
+
+1 finding(s):
+
+STALE: C:/Users/myaml/dev/_verify-B-2026-11-22/gate-cpu-clean.txt records that 0 of the 4 device lane(s) its build carries were measured on a card. The remaining 4 answer no question here: a combination on one of them is measured by no row of this record, and a reader who takes the record's own totals for the library's space is reading the host half's run as the whole one. This is the build the record was taken from and not the library's space - re-make the run from a build with BUILD_CUDA=ON on a host with a usable card, and commit the new record
+
