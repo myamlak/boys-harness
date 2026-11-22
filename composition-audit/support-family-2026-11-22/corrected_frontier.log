@@ -1,0 +1,18 @@
+components 144, permitted 75, targets 66, Q 69, main effects 8
+loading fused
+loading separate
+
+measurement inflation factors (max_alpha sum_gamma |inv| * mean|Phi|):
+  D21: {'max_all_permitted': 9.000000000000009, 'max_targets': 8.485281374238577, 'sum_G_amp_targets': 74.11111111111114}
+  D75: {'max_all_permitted': 35.12500000000003, 'max_targets': 33.11616758556997, 'sum_G_amp_targets': 253.72222222222217}
+
+corrected frontier, per-term breakdown
+design/lane  full_nonadd  full_bound  eta_Q_max  sumGk(old)  kappa_joint  charge  M_hat  posterior  family_bound  ratio
+fused/fp64/path              2.9895e-16 2.5882e-14 2.7709e-16 14 4 1.1084e-15 2.9895e-16 1.4073e-15 2.6990e-14 1.0428
+fused/fp64/pooled            2.0975e-14 4.6558e-14 3.9541e-16 66 3 1.1862e-15 2.0975e-14 2.0975e-14 4.6558e-14 1.0000
+fused/fp32/path              2.0907e-07 3.5907e-07 1.7106e-07 14 4 6.8424e-07 2.4709e-07 9.3132e-07 1.0813e-06 3.0114
+fused/fp32/pooled            2.2213e-07 3.7213e-07 2.3758e-07 66 3 7.1275e-07 2.6609e-07 9.7884e-07 1.1288e-06 3.0335
+separate/fp64/path           3.4467e-16 2.5928e-14 2.7709e-16 14 4 1.1084e-15 3.3367e-16 1.4073e-15 2.6990e-14 1.0410
+separate/fp64/pooled         2.0903e-14 4.6486e-14 3.9541e-16 66 3 1.1862e-15 2.0903e-14 2.0903e-14 4.6486e-14 1.0000
+separate/fp32/path           1.7106e-07 3.2106e-07 1.7106e-07 14 4 6.8424e-07 2.2808e-07 9.1231e-07 1.0623e-06 3.3088
+separate/fp32/pooled         2.1456e-07 3.6456e-07 2.1771e-07 66 3 6.5313e-07 2.6609e-07 8.7905e-07 1.0291e-06 2.8228

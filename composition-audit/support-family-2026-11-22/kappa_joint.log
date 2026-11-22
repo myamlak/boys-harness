@@ -1,0 +1,42 @@
+components 144, permitted 75, targets 66, Q 69, main effects 8
+D21 kappa_joint (exact over Q(sqrt2,sqrt3)):
+  beta 20 support ['partition', 'pack', 'form'] choices [1, 1, 1, 0]  G=1.500000  kappa_joint_beta=4.000000000000  at cell 5 [0, 0, 2, 1]
+  beta 21 support ['partition', 'pack', 'form', 'exp'] choices [1, 1, 1, 1]  G=1.500000  kappa_joint_beta=4.000000000000  at cell 5 [0, 0, 2, 1]
+  beta 32 support ['partition', 'pack', 'form'] choices [2, 1, 1, 0]  G=1.732051  kappa_joint_beta=4.000000000000  at cell 17 [1, 0, 2, 1]
+  beta 33 support ['partition', 'pack', 'form', 'exp'] choices [2, 1, 1, 1]  G=1.732051  kappa_joint_beta=4.000000000000  at cell 17 [1, 0, 2, 1]
+  beta 34 support ['partition', 'pack', 'form'] choices [2, 1, 2, 0]  G=2.000000  kappa_joint_beta=3.000000000000  at cell 15 [1, 0, 1, 1]
+  beta 35 support ['partition', 'pack', 'form', 'exp'] choices [2, 1, 2, 1]  G=2.000000  kappa_joint_beta=3.000000000000  at cell 15 [1, 0, 1, 1]
+  beta 22 support ['partition', 'pack', 'form'] choices [1, 1, 2, 0]  G=1.732051  kappa_joint_beta=3.000000000000  at cell 3 [0, 0, 1, 1]
+  beta 23 support ['partition', 'pack', 'form', 'exp'] choices [1, 1, 2, 1]  G=1.732051  kappa_joint_beta=3.000000000000  at cell 3 [0, 0, 1, 1]
+  beta 31 support ['partition', 'pack', 'exp'] choices [2, 1, 0, 1]  G=1.414214  kappa_joint_beta=3.000000000000  at cell 18 [1, 1, 0, 0]
+  beta 19 support ['partition', 'pack', 'exp'] choices [1, 1, 0, 1]  G=1.224745  kappa_joint_beta=3.000000000000  at cell 6 [0, 1, 0, 0]
+  beta 10 support ['pack', 'form'] choices [0, 1, 2, 0]  G=1.414214  kappa_joint_beta=2.000000000000  at cell 3 [0, 0, 1, 1]
+  beta  8 support ['pack', 'form'] choices [0, 1, 1, 0]  G=1.224745  kappa_joint_beta=2.000000000000  at cell 1 [0, 0, 0, 1]
+  beta 11 support ['pack', 'form', 'exp'] choices [0, 1, 2, 1]  G=1.414214  kappa_joint_beta=1.000000000000  at cell 2 [0, 0, 1, 0]
+  beta  7 support ['pack', 'exp'] choices [0, 1, 0, 1]  G=1.000000  kappa_joint_beta=1.000000000000  at cell 0 [0, 0, 0, 0]
+  beta  9 support ['pack', 'form', 'exp'] choices [0, 1, 1, 1]  G=1.224745  kappa_joint_beta=1.000000000000  at cell 0 [0, 0, 0, 0]
+D21 kappa_joint = 4.000000000000
+D21 kappa_joint nearest integer: 4
+
+D75 kappa_joint (float B, exact sup on the 144-cell cube):
+  beta 20 support ['partition', 'pack', 'form'] choices [0, 0, 1, 1, 1, 0]  G=1.500000  kappa_joint_beta=3.000000000000  at cell 10
+  beta 21 support ['partition', 'pack', 'form', 'exp'] choices [0, 0, 1, 1, 1, 1]  G=1.500000  kappa_joint_beta=3.000000000000  at cell 7
+  beta 56 support ['scheme', 'partition', 'pack', 'form'] choices [0, 1, 1, 1, 1, 0]  G=1.500000  kappa_joint_beta=3.000000000000  at cell 10
+  beta 57 support ['scheme', 'partition', 'pack', 'form', 'exp'] choices [0, 1, 1, 1, 1, 1]  G=1.500000  kappa_joint_beta=3.000000000000  at cell 7
+  beta 92 support ['route', 'partition', 'pack', 'form'] choices [1, 0, 1, 1, 1, 0]  G=1.500000  kappa_joint_beta=3.000000000000  at cell 10
+  beta 93 support ['route', 'partition', 'pack', 'form', 'exp'] choices [1, 0, 1, 1, 1, 1]  G=1.500000  kappa_joint_beta=3.000000000000  at cell 7
+  beta 32 support ['partition', 'pack', 'form'] choices [0, 0, 2, 1, 1, 0]  G=1.732051  kappa_joint_beta=3.000000000000  at cell 22
+  beta 33 support ['partition', 'pack', 'form', 'exp'] choices [0, 0, 2, 1, 1, 1]  G=1.732051  kappa_joint_beta=3.000000000000  at cell 19
+  beta 69 support ['scheme', 'partition', 'pack', 'form', 'exp'] choices [0, 1, 2, 1, 1, 1]  G=1.732051  kappa_joint_beta=3.000000000000  at cell 126
+  beta 90 support ['route', 'partition', 'pack'] choices [1, 0, 1, 1, 0, 0]  G=1.224745  kappa_joint_beta=3.000000000000  at cell 82
+  beta 127 support ['route', 'scheme', 'partition', 'pack', 'exp'] choices [1, 1, 1, 1, 0, 1]  G=1.224745  kappa_joint_beta=3.000000000000  at cell 42
+  beta 128 support ['route', 'scheme', 'partition', 'pack', 'form'] choices [1, 1, 1, 1, 1, 0]  G=1.500000  kappa_joint_beta=3.000000000000  at cell 10
+  beta 129 support ['route', 'scheme', 'partition', 'pack', 'form', 'exp'] choices [1, 1, 1, 1, 1, 1]  G=1.500000  kappa_joint_beta=3.000000000000  at cell 7
+  beta 19 support ['partition', 'pack', 'exp'] choices [0, 0, 1, 1, 0, 1]  G=1.224745  kappa_joint_beta=3.000000000000  at cell 7
+  beta 31 support ['partition', 'pack', 'exp'] choices [0, 0, 2, 1, 0, 1]  G=1.414214  kappa_joint_beta=3.000000000000  at cell 19
+  beta 54 support ['scheme', 'partition', 'pack'] choices [0, 1, 1, 1, 0, 0]  G=1.224745  kappa_joint_beta=3.000000000000  at cell 42
+  beta 55 support ['scheme', 'partition', 'pack', 'exp'] choices [0, 1, 1, 1, 0, 1]  G=1.224745  kappa_joint_beta=3.000000000000  at cell 7
+  beta 68 support ['scheme', 'partition', 'pack', 'form'] choices [0, 1, 2, 1, 1, 0]  G=1.732051  kappa_joint_beta=3.000000000000  at cell 23
+  beta 91 support ['route', 'partition', 'pack', 'exp'] choices [1, 0, 1, 1, 0, 1]  G=1.224745  kappa_joint_beta=3.000000000000  at cell 7
+  beta 102 support ['route', 'partition', 'pack'] choices [1, 0, 2, 1, 0, 0]  G=1.414214  kappa_joint_beta=3.000000000000  at cell 90
+D75 kappa_joint = 3.000000000000 (nearest integer 3)
