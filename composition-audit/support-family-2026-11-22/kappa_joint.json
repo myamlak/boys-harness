@@ -1,0 +1,1733 @@
+{
+ "D21": {
+  "rows": [
+   {
+    "beta": 20,
+    "support": [
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     1,
+     1,
+     0
+    ],
+    "G": 1.4999999999999998,
+    "kappa_joint_beta": 4.000000000000001,
+    "argmax_cell": 5,
+    "argmax_levels": [
+     0,
+     0,
+     2,
+     1
+    ]
+   },
+   {
+    "beta": 21,
+    "support": [
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "G": 1.4999999999999998,
+    "kappa_joint_beta": 4.000000000000001,
+    "argmax_cell": 5,
+    "argmax_levels": [
+     0,
+     0,
+     2,
+     1
+    ]
+   },
+   {
+    "beta": 32,
+    "support": [
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     2,
+     1,
+     1,
+     0
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 4.000000000000001,
+    "argmax_cell": 17,
+    "argmax_levels": [
+     1,
+     0,
+     2,
+     1
+    ]
+   },
+   {
+    "beta": 33,
+    "support": [
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     2,
+     1,
+     1,
+     1
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 4.000000000000001,
+    "argmax_cell": 17,
+    "argmax_levels": [
+     1,
+     0,
+     2,
+     1
+    ]
+   },
+   {
+    "beta": 34,
+    "support": [
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     2,
+     1,
+     2,
+     0
+    ],
+    "G": 1.9999999999999996,
+    "kappa_joint_beta": 3.000000000000001,
+    "argmax_cell": 15,
+    "argmax_levels": [
+     1,
+     0,
+     1,
+     1
+    ]
+   },
+   {
+    "beta": 35,
+    "support": [
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     2,
+     1,
+     2,
+     1
+    ],
+    "G": 1.9999999999999996,
+    "kappa_joint_beta": 3.000000000000001,
+    "argmax_cell": 15,
+    "argmax_levels": [
+     1,
+     0,
+     1,
+     1
+    ]
+   },
+   {
+    "beta": 22,
+    "support": [
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     1,
+     2,
+     0
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 3.0000000000000004,
+    "argmax_cell": 3,
+    "argmax_levels": [
+     0,
+     0,
+     1,
+     1
+    ]
+   },
+   {
+    "beta": 23,
+    "support": [
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     2,
+     1
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 3.0000000000000004,
+    "argmax_cell": 3,
+    "argmax_levels": [
+     0,
+     0,
+     1,
+     1
+    ]
+   },
+   {
+    "beta": 31,
+    "support": [
+     "partition",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     2,
+     1,
+     0,
+     1
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 3.0000000000000004,
+    "argmax_cell": 18,
+    "argmax_levels": [
+     1,
+     1,
+     0,
+     0
+    ]
+   },
+   {
+    "beta": 19,
+    "support": [
+     "partition",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     0,
+     1
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 6,
+    "argmax_levels": [
+     0,
+     1,
+     0,
+     0
+    ]
+   },
+   {
+    "beta": 10,
+    "support": [
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     1,
+     2,
+     0
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.0000000000000004,
+    "argmax_cell": 3,
+    "argmax_levels": [
+     0,
+     0,
+     1,
+     1
+    ]
+   },
+   {
+    "beta": 8,
+    "support": [
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     1,
+     1,
+     0
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 2.0,
+    "argmax_cell": 1,
+    "argmax_levels": [
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   {
+    "beta": 11,
+    "support": [
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     2,
+     1
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 1.0000000000000002,
+    "argmax_cell": 2,
+    "argmax_levels": [
+     0,
+     0,
+     1,
+     0
+    ]
+   },
+   {
+    "beta": 7,
+    "support": [
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "G": 1.0,
+    "kappa_joint_beta": 1.0,
+    "argmax_cell": 0,
+    "argmax_levels": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "beta": 9,
+    "support": [
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     1,
+     1
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 1.0,
+    "argmax_cell": 0,
+    "argmax_levels": [
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "kappa_joint": 4.000000000000001
+ },
+ "D75": {
+  "rows": [
+   {
+    "beta": 20,
+    "support": [
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     0,
+     1,
+     1,
+     1,
+     0
+    ],
+    "G": 1.4999999999999998,
+    "kappa_joint_beta": 3.000000000000001,
+    "argmax_cell": 10
+   },
+   {
+    "beta": 21,
+    "support": [
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     0,
+     1,
+     1,
+     1,
+     1
+    ],
+    "G": 1.4999999999999998,
+    "kappa_joint_beta": 3.000000000000001,
+    "argmax_cell": 7
+   },
+   {
+    "beta": 56,
+    "support": [
+     "scheme",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     1,
+     1,
+     1,
+     1,
+     0
+    ],
+    "G": 1.4999999999999998,
+    "kappa_joint_beta": 3.000000000000001,
+    "argmax_cell": 10
+   },
+   {
+    "beta": 57,
+    "support": [
+     "scheme",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "G": 1.4999999999999998,
+    "kappa_joint_beta": 3.000000000000001,
+    "argmax_cell": 7
+   },
+   {
+    "beta": 92,
+    "support": [
+     "route",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     0,
+     1,
+     1,
+     1,
+     0
+    ],
+    "G": 1.4999999999999998,
+    "kappa_joint_beta": 3.000000000000001,
+    "argmax_cell": 10
+   },
+   {
+    "beta": 93,
+    "support": [
+     "route",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     0,
+     1,
+     1,
+     1,
+     1
+    ],
+    "G": 1.4999999999999998,
+    "kappa_joint_beta": 3.000000000000001,
+    "argmax_cell": 7
+   },
+   {
+    "beta": 32,
+    "support": [
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     0,
+     2,
+     1,
+     1,
+     0
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 3.0000000000000004,
+    "argmax_cell": 22
+   },
+   {
+    "beta": 33,
+    "support": [
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     0,
+     2,
+     1,
+     1,
+     1
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 3.0000000000000004,
+    "argmax_cell": 19
+   },
+   {
+    "beta": 69,
+    "support": [
+     "scheme",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     2,
+     1,
+     1,
+     1
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 3.0000000000000004,
+    "argmax_cell": 126
+   },
+   {
+    "beta": 90,
+    "support": [
+     "route",
+     "partition",
+     "pack"
+    ],
+    "choices": [
+     1,
+     0,
+     1,
+     1,
+     0,
+     0
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 3.0000000000000004,
+    "argmax_cell": 82
+   },
+   {
+    "beta": 127,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     1,
+     1,
+     0,
+     1
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 3.0000000000000004,
+    "argmax_cell": 42
+   },
+   {
+    "beta": 128,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     0
+    ],
+    "G": 1.4999999999999998,
+    "kappa_joint_beta": 3.0000000000000004,
+    "argmax_cell": 10
+   },
+   {
+    "beta": 129,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "G": 1.4999999999999998,
+    "kappa_joint_beta": 3.0000000000000004,
+    "argmax_cell": 7
+   },
+   {
+    "beta": 19,
+    "support": [
+     "partition",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     0,
+     0,
+     1,
+     1,
+     0,
+     1
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 7
+   },
+   {
+    "beta": 31,
+    "support": [
+     "partition",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     0,
+     0,
+     2,
+     1,
+     0,
+     1
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 19
+   },
+   {
+    "beta": 54,
+    "support": [
+     "scheme",
+     "partition",
+     "pack"
+    ],
+    "choices": [
+     0,
+     1,
+     1,
+     1,
+     0,
+     0
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 42
+   },
+   {
+    "beta": 55,
+    "support": [
+     "scheme",
+     "partition",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     1,
+     1,
+     0,
+     1
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 7
+   },
+   {
+    "beta": 68,
+    "support": [
+     "scheme",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     1,
+     2,
+     1,
+     1,
+     0
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 23
+   },
+   {
+    "beta": 91,
+    "support": [
+     "route",
+     "partition",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     1,
+     0,
+     1,
+     1,
+     0,
+     1
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 7
+   },
+   {
+    "beta": 102,
+    "support": [
+     "route",
+     "partition",
+     "pack"
+    ],
+    "choices": [
+     1,
+     0,
+     2,
+     1,
+     0,
+     0
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 90
+   },
+   {
+    "beta": 103,
+    "support": [
+     "route",
+     "partition",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     1,
+     0,
+     2,
+     1,
+     0,
+     1
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 21
+   },
+   {
+    "beta": 104,
+    "support": [
+     "route",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     0,
+     2,
+     1,
+     1,
+     0
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 23
+   },
+   {
+    "beta": 126,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack"
+    ],
+    "choices": [
+     1,
+     1,
+     1,
+     1,
+     0,
+     0
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 42
+   },
+   {
+    "beta": 139,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     2,
+     1,
+     0,
+     1
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 21
+   },
+   {
+    "beta": 140,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     1,
+     2,
+     1,
+     1,
+     0
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 3.0,
+    "argmax_cell": 23
+   },
+   {
+    "beta": 66,
+    "support": [
+     "scheme",
+     "partition",
+     "pack"
+    ],
+    "choices": [
+     0,
+     1,
+     2,
+     1,
+     0,
+     0
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.9999999999999996,
+    "argmax_cell": 54
+   },
+   {
+    "beta": 67,
+    "support": [
+     "scheme",
+     "partition",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     2,
+     1,
+     0,
+     1
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.9999999999999996,
+    "argmax_cell": 19
+   },
+   {
+    "beta": 105,
+    "support": [
+     "route",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     0,
+     2,
+     1,
+     1,
+     1
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 2.9999999999999996,
+    "argmax_cell": 22
+   },
+   {
+    "beta": 138,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack"
+    ],
+    "choices": [
+     1,
+     1,
+     2,
+     1,
+     0,
+     0
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.9999999999999996,
+    "argmax_cell": 54
+   },
+   {
+    "beta": 141,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     2,
+     1,
+     1,
+     1
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 2.9999999999999996,
+    "argmax_cell": 54
+   },
+   {
+    "beta": 22,
+    "support": [
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     0,
+     1,
+     1,
+     2,
+     0
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 2.5,
+    "argmax_cell": 8
+   },
+   {
+    "beta": 23,
+    "support": [
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     0,
+     1,
+     1,
+     2,
+     1
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 2.5,
+    "argmax_cell": 8
+   },
+   {
+    "beta": 34,
+    "support": [
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     0,
+     2,
+     1,
+     2,
+     0
+    ],
+    "G": 1.9999999999999996,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 20
+   },
+   {
+    "beta": 35,
+    "support": [
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     0,
+     2,
+     1,
+     2,
+     1
+    ],
+    "G": 1.9999999999999996,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 20
+   },
+   {
+    "beta": 58,
+    "support": [
+     "scheme",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     1,
+     1,
+     1,
+     2,
+     0
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 8
+   },
+   {
+    "beta": 59,
+    "support": [
+     "scheme",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     1,
+     1,
+     2,
+     1
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 8
+   },
+   {
+    "beta": 70,
+    "support": [
+     "scheme",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     1,
+     2,
+     1,
+     2,
+     0
+    ],
+    "G": 1.9999999999999996,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 20
+   },
+   {
+    "beta": 71,
+    "support": [
+     "scheme",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     2,
+     1,
+     2,
+     1
+    ],
+    "G": 1.9999999999999996,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 20
+   },
+   {
+    "beta": 94,
+    "support": [
+     "route",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     0,
+     1,
+     1,
+     2,
+     0
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 8
+   },
+   {
+    "beta": 95,
+    "support": [
+     "route",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     0,
+     1,
+     1,
+     2,
+     1
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 8
+   },
+   {
+    "beta": 106,
+    "support": [
+     "route",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     0,
+     2,
+     1,
+     2,
+     0
+    ],
+    "G": 1.9999999999999996,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 20
+   },
+   {
+    "beta": 107,
+    "support": [
+     "route",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     0,
+     2,
+     1,
+     2,
+     1
+    ],
+    "G": 1.9999999999999996,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 20
+   },
+   {
+    "beta": 130,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     1,
+     1,
+     1,
+     2,
+     0
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 8
+   },
+   {
+    "beta": 131,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     1,
+     1,
+     2,
+     1
+    ],
+    "G": 1.732050807568877,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 8
+   },
+   {
+    "beta": 142,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     1,
+     2,
+     1,
+     2,
+     0
+    ],
+    "G": 1.9999999999999996,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 20
+   },
+   {
+    "beta": 143,
+    "support": [
+     "route",
+     "scheme",
+     "partition",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     2,
+     1,
+     2,
+     1
+    ],
+    "G": 1.9999999999999996,
+    "kappa_joint_beta": 2.4999999999999996,
+    "argmax_cell": 20
+   },
+   {
+    "beta": 43,
+    "support": [
+     "scheme",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     1
+    ],
+    "G": 1.0,
+    "kappa_joint_beta": 2.0000000000000013,
+    "argmax_cell": 57
+   },
+   {
+    "beta": 79,
+    "support": [
+     "route",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     1
+    ],
+    "G": 1.0,
+    "kappa_joint_beta": 2.0000000000000013,
+    "argmax_cell": 95
+   },
+   {
+    "beta": 9,
+    "support": [
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     0,
+     0,
+     1,
+     1,
+     1
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 2.000000000000001,
+    "argmax_cell": 59
+   },
+   {
+    "beta": 44,
+    "support": [
+     "scheme",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     1,
+     0,
+     1,
+     1,
+     0
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 2.000000000000001,
+    "argmax_cell": 19
+   },
+   {
+    "beta": 45,
+    "support": [
+     "scheme",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     0,
+     1,
+     1,
+     1
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 2.000000000000001,
+    "argmax_cell": 23
+   },
+   {
+    "beta": 80,
+    "support": [
+     "route",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     0,
+     0,
+     1,
+     1,
+     0
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 2.000000000000001,
+    "argmax_cell": 19
+   },
+   {
+    "beta": 81,
+    "support": [
+     "route",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     0,
+     0,
+     1,
+     1,
+     1
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 2.000000000000001,
+    "argmax_cell": 23
+   },
+   {
+    "beta": 115,
+    "support": [
+     "route",
+     "scheme",
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     0,
+     1,
+     0,
+     1
+    ],
+    "G": 1.0,
+    "kappa_joint_beta": 2.000000000000001,
+    "argmax_cell": 7
+   },
+   {
+    "beta": 116,
+    "support": [
+     "route",
+     "scheme",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     1,
+     0,
+     1,
+     1,
+     0
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 2.000000000000001,
+    "argmax_cell": 10
+   },
+   {
+    "beta": 117,
+    "support": [
+     "route",
+     "scheme",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     0,
+     1,
+     1,
+     1
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 2.000000000000001,
+    "argmax_cell": 7
+   },
+   {
+    "beta": 11,
+    "support": [
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     0,
+     0,
+     1,
+     2,
+     1
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.0000000000000004,
+    "argmax_cell": 21
+   },
+   {
+    "beta": 46,
+    "support": [
+     "scheme",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     1,
+     0,
+     1,
+     2,
+     0
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.0000000000000004,
+    "argmax_cell": 56
+   },
+   {
+    "beta": 47,
+    "support": [
+     "scheme",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     0,
+     1,
+     0,
+     1,
+     2,
+     1
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.0000000000000004,
+    "argmax_cell": 21
+   },
+   {
+    "beta": 82,
+    "support": [
+     "route",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     0,
+     0,
+     1,
+     2,
+     0
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.0000000000000004,
+    "argmax_cell": 33
+   },
+   {
+    "beta": 83,
+    "support": [
+     "route",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     0,
+     0,
+     1,
+     2,
+     1
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.0000000000000004,
+    "argmax_cell": 21
+   },
+   {
+    "beta": 114,
+    "support": [
+     "route",
+     "scheme",
+     "pack"
+    ],
+    "choices": [
+     1,
+     1,
+     0,
+     1,
+     0,
+     0
+    ],
+    "G": 1.0,
+    "kappa_joint_beta": 2.0000000000000004,
+    "argmax_cell": 6
+   },
+   {
+    "beta": 118,
+    "support": [
+     "route",
+     "scheme",
+     "pack",
+     "form"
+    ],
+    "choices": [
+     1,
+     1,
+     0,
+     1,
+     2,
+     0
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.0000000000000004,
+    "argmax_cell": 33
+   },
+   {
+    "beta": 119,
+    "support": [
+     "route",
+     "scheme",
+     "pack",
+     "form",
+     "exp"
+    ],
+    "choices": [
+     1,
+     1,
+     0,
+     1,
+     2,
+     1
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 2.0000000000000004,
+    "argmax_cell": 21
+   },
+   {
+    "beta": 7,
+    "support": [
+     "pack",
+     "exp"
+    ],
+    "choices": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     1
+    ],
+    "G": 1.0,
+    "kappa_joint_beta": 1.0000000000000013,
+    "argmax_cell": 12
+   },
+   {
+    "beta": 8,
+    "support": [
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     0,
+     0,
+     1,
+     1,
+     0
+    ],
+    "G": 1.224744871391589,
+    "kappa_joint_beta": 1.0000000000000013,
+    "argmax_cell": 12
+   },
+   {
+    "beta": 10,
+    "support": [
+     "pack",
+     "form"
+    ],
+    "choices": [
+     0,
+     0,
+     0,
+     1,
+     2,
+     0
+    ],
+    "G": 1.414213562373095,
+    "kappa_joint_beta": 1.0000000000000002,
+    "argmax_cell": 33
+   },
+   {
+    "beta": 42,
+    "support": [
+     "scheme",
+     "pack"
+    ],
+    "choices": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     0
+    ],
+    "G": 1.0,
+    "kappa_joint_beta": 1.0000000000000002,
+    "argmax_cell": 6
+   },
+   {
+    "beta": 78,
+    "support": [
+     "route",
+     "pack"
+    ],
+    "choices": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0
+    ],
+    "G": 1.0,
+    "kappa_joint_beta": 1.0000000000000002,
+    "argmax_cell": 6
+   }
+  ],
+  "kappa_joint": 3.000000000000001
+ }
+}

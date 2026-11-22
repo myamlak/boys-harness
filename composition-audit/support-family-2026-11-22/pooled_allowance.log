@@ -1,0 +1,19 @@
+components 144, permitted 75, targets 66, Q 69, main effects 8
+loading fused
+loading separate
+
+fused fp64: eta_Q 3.9541e-16  eta_old 3.146e-28  target 1.329e-14  q_coef 5.072e-17
+  eta_Q at {'n': 32, 'x': 11.5, 'region': 'A', 'support': ['pack', 'form'], 'component_index': 10}
+  target at {'n': 0, 'x': 17.3, 'region': 'B', 'component_index': 96, 'support': ['route', 'partition']}
+
+fused fp32: eta_Q 2.3758e-07  eta_old 0.000e+00  target 5.220e-08  q_coef 5.376e-08
+  eta_Q at {'n': 0, 'x': 11.5, 'region': 'A', 'support': ['pack', 'form'], 'component_index': 10}
+  target at {'n': 32, 'x': 12.0, 'region': 'B', 'component_index': 16, 'support': ['partition', 'form']}
+
+separate fp64: eta_Q 3.9541e-16  eta_old 1.462e-18  target 1.331e-14  q_coef 5.356e-17
+  eta_Q at {'n': 32, 'x': 11.5, 'region': 'A', 'support': ['pack', 'form'], 'component_index': 10}
+  target at {'n': 0, 'x': 17.3, 'region': 'B', 'component_index': 96, 'support': ['route', 'partition']}
+
+separate fp32: eta_Q 2.1771e-07  eta_old 0.000e+00  target 7.134e-08  q_coef 5.376e-08
+  eta_Q at {'n': 0, 'x': 7.3, 'region': 'A', 'support': ['route', 'partition', 'pack'], 'component_index': 102}
+  target at {'n': 0, 'x': 12.0, 'region': 'B', 'component_index': 84, 'support': ['route', 'partition']}

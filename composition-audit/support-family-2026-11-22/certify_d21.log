@@ -1,0 +1,48 @@
+D21 cells: [0, 1, 2, 4, 7, 9, 11, 12, 13, 14, 16, 19, 21, 23, 24, 25, 26, 28, 31, 33, 35]
+D21 cell count: 21
+  cell  0 levels (partition,pack,form,exp) = (0, 0, 0, 0)
+  cell  1 levels (partition,pack,form,exp) = (0, 0, 0, 1)
+  cell  2 levels (partition,pack,form,exp) = (0, 0, 1, 0)
+  cell  4 levels (partition,pack,form,exp) = (0, 0, 2, 0)
+  cell  7 levels (partition,pack,form,exp) = (0, 1, 0, 1)
+  cell  9 levels (partition,pack,form,exp) = (0, 1, 1, 1)
+  cell 11 levels (partition,pack,form,exp) = (0, 1, 2, 1)
+  cell 12 levels (partition,pack,form,exp) = (1, 0, 0, 0)
+  cell 13 levels (partition,pack,form,exp) = (1, 0, 0, 1)
+  cell 14 levels (partition,pack,form,exp) = (1, 0, 1, 0)
+  cell 16 levels (partition,pack,form,exp) = (1, 0, 2, 0)
+  cell 19 levels (partition,pack,form,exp) = (1, 1, 0, 1)
+  cell 21 levels (partition,pack,form,exp) = (1, 1, 1, 1)
+  cell 23 levels (partition,pack,form,exp) = (1, 1, 2, 1)
+  cell 24 levels (partition,pack,form,exp) = (2, 0, 0, 0)
+  cell 25 levels (partition,pack,form,exp) = (2, 0, 0, 1)
+  cell 26 levels (partition,pack,form,exp) = (2, 0, 1, 0)
+  cell 28 levels (partition,pack,form,exp) = (2, 0, 2, 0)
+  cell 31 levels (partition,pack,form,exp) = (2, 1, 0, 1)
+  cell 33 levels (partition,pack,form,exp) = (2, 1, 1, 1)
+  cell 35 levels (partition,pack,form,exp) = (2, 1, 2, 1)
+
+exact rank of the 21x21 permitted block over Q(sqrt2,sqrt3): 21 / 21
+kappa_max = 0.816496580927726
+cond(F_P) = 3.464101615
+threshold amplification max_alpha sum_gamma |invPP| G = 14.024284
+eigenvalues of Omega_PP: [0.142857143, 0.142857143, 0.142857143, 0.857142857, 0.857142857, 0.857142857, 0.857142857, 0.857142857, 0.857142857, 0.857142857, 0.857142857, 0.857142857, 0.857142857, 0.857142857, 0.857142857, 1.714285714, 1.714285714, 1.714285714, 1.714285714, 1.714285714, 1.714285714]
+
+the fourteen G_alpha kappa_alpha values:
+  target support ['form', 'exp'] choices (0, 0, 1, 1)  G=1.224744871392  kappa=0.816496580928  G*kappa=1.000000000000000
+  target support ['form', 'exp'] choices (0, 0, 2, 1)  G=1.414213562373  kappa=0.707106781187  G*kappa=1.000000000000000
+  target support ['partition', 'exp'] choices (1, 0, 0, 1)  G=1.224744871392  kappa=0.816496580928  G*kappa=1.000000000000000
+  target support ['partition', 'form'] choices (1, 0, 1, 0)  G=1.500000000000  kappa=0.666666666667  G*kappa=1.000000000000000
+  target support ['partition', 'form', 'exp'] choices (1, 0, 1, 1)  G=1.500000000000  kappa=0.666666666667  G*kappa=1.000000000000000
+  target support ['partition', 'form'] choices (1, 0, 2, 0)  G=1.732050807569  kappa=0.577350269190  G*kappa=1.000000000000000
+  target support ['partition', 'form', 'exp'] choices (1, 0, 2, 1)  G=1.732050807569  kappa=0.577350269190  G*kappa=1.000000000000000
+  target support ['partition', 'pack'] choices (1, 1, 0, 0)  G=1.224744871392  kappa=0.816496580928  G*kappa=1.000000000000000
+  target support ['partition', 'exp'] choices (2, 0, 0, 1)  G=1.414213562373  kappa=0.707106781187  G*kappa=1.000000000000000
+  target support ['partition', 'form'] choices (2, 0, 1, 0)  G=1.732050807569  kappa=0.577350269190  G*kappa=1.000000000000000
+  target support ['partition', 'form', 'exp'] choices (2, 0, 1, 1)  G=1.732050807569  kappa=0.577350269190  G*kappa=1.000000000000000
+  target support ['partition', 'form'] choices (2, 0, 2, 0)  G=2.000000000000  kappa=0.500000000000  G*kappa=1.000000000000000
+  target support ['partition', 'form', 'exp'] choices (2, 0, 2, 1)  G=2.000000000000  kappa=0.500000000000  G*kappa=1.000000000000000
+  target support ['partition', 'pack'] choices (2, 1, 0, 0)  G=1.414213562373  kappa=0.707106781187  G*kappa=1.000000000000000
+
+sum G_alpha kappa_alpha = 14.000000000000000
+min = 1.000000000000000, max = 1.000000000000000

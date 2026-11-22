@@ -1,0 +1,117 @@
+{
+ "fused": {
+  "sha256": "4af5694810099d07ac9eee268f20073f08d63242731d08a06ebc3d1328c0638d",
+  "lanes": {
+   "fp64": {
+    "eta_Q_max": 3.954107869287956e-16,
+    "eta_Q_at": {
+     "n": 32,
+     "x": 11.5,
+     "region": "A",
+     "support": [
+      "pack",
+      "form"
+     ],
+     "component_index": 10
+    },
+    "eta_old_max": 3.1458747969592987e-28,
+    "target_max": 1.3294744484644432e-14,
+    "target_at": {
+     "n": 0,
+     "x": 17.3,
+     "region": "B",
+     "component_index": 96,
+     "support": [
+      "route",
+      "partition"
+     ]
+    },
+    "q_coef_max": 5.072275367786294e-17
+   },
+   "fp32": {
+    "eta_Q_max": 2.3758201100483145e-07,
+    "eta_Q_at": {
+     "n": 0,
+     "x": 11.5,
+     "region": "A",
+     "support": [
+      "pack",
+      "form"
+     ],
+     "component_index": 10
+    },
+    "eta_old_max": 0.0,
+    "target_max": 5.219634598272631e-08,
+    "target_at": {
+     "n": 32,
+     "x": 12.0,
+     "region": "B",
+     "component_index": 16,
+     "support": [
+      "partition",
+      "form"
+     ]
+    },
+    "q_coef_max": 5.375867234222504e-08
+   }
+  }
+ },
+ "separate": {
+  "sha256": "f3493c4ca6aceaf642bcb8e5ef4b4d330c1214f64e467e284c7526ed1094b5bb",
+  "lanes": {
+   "fp64": {
+    "eta_Q_max": 3.9541195384293496e-16,
+    "eta_Q_at": {
+     "n": 32,
+     "x": 11.5,
+     "region": "A",
+     "support": [
+      "pack",
+      "form"
+     ],
+     "component_index": 10
+    },
+    "eta_old_max": 1.4620378549652734e-18,
+    "target_max": 1.331009638358744e-14,
+    "target_at": {
+     "n": 0,
+     "x": 17.3,
+     "region": "B",
+     "component_index": 96,
+     "support": [
+      "route",
+      "partition"
+     ]
+    },
+    "q_coef_max": 5.356348237210552e-17
+   },
+   "fp32": {
+    "eta_Q_max": 2.1771128156944778e-07,
+    "eta_Q_at": {
+     "n": 0,
+     "x": 7.3,
+     "region": "A",
+     "support": [
+      "route",
+      "partition",
+      "pack"
+     ],
+     "component_index": 102
+    },
+    "eta_old_max": 0.0,
+    "target_max": 7.133650745015946e-08,
+    "target_at": {
+     "n": 0,
+     "x": 12.0,
+     "region": "B",
+     "component_index": 84,
+     "support": [
+      "route",
+      "partition"
+     ]
+    },
+    "q_coef_max": 5.375867234222504e-08
+   }
+  }
+ }
+}

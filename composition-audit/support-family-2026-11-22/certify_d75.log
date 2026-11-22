@@ -1,0 +1,94 @@
+components 144, permitted 75, targets 66, Q 69, main effects 8
+D75 construction: all 72 cells with pack = arguments, plus pack = orders at partition 0,1,2 with route=scheme=form=exp=0
+pack=orders cells: [6, 18, 30]
+cell count: 75
+cells: [0, 1, 2, 3, 4, 5, 6, 12, 13, 14, 15, 16, 17, 18, 24, 25, 26, 27, 28, 29, 30, 36, 37, 38, 39, 40, 41, 48, 49, 50, 51, 52, 53, 60, 61, 62, 63, 64, 65, 72, 73, 74, 75, 76, 77, 84, 85, 86, 87, 88, 89, 96, 97, 98, 99, 100, 101, 108, 109, 110, 111, 112, 113, 120, 121, 122, 123, 124, 125, 132, 133, 134, 135, 136, 137]
+
+numeric rank of the 75x75 permitted block: 75 / 75
+condition number: 6.928203230
+kappa_max = 1.000000000000001
+threshold amplification max_alpha sum_gamma |invPP| G = 54.506148
+rank mod 1009: 75 / 75
+rank mod 2017: 75 / 75
+rank mod 3001: 75 / 75
+
+the sixty-six G_alpha kappa_alpha values (target: value):
+  ['form', 'exp'] (0, 0, 0, 0, 1, 1): 1.000000000000000
+  ['form', 'exp'] (0, 0, 0, 0, 2, 1): 1.000000000000000
+  ['partition', 'exp'] (0, 0, 1, 0, 0, 1): 1.000000000000000
+  ['partition', 'form'] (0, 0, 1, 0, 1, 0): 1.000000000000000
+  ['partition', 'form', 'exp'] (0, 0, 1, 0, 1, 1): 1.000000000000000
+  ['partition', 'form'] (0, 0, 1, 0, 2, 0): 1.000000000000000
+  ['partition', 'form', 'exp'] (0, 0, 1, 0, 2, 1): 1.000000000000000
+  ['partition', 'pack'] (0, 0, 1, 1, 0, 0): 1.000000000000001
+  ['partition', 'exp'] (0, 0, 2, 0, 0, 1): 1.000000000000000
+  ['partition', 'form'] (0, 0, 2, 0, 1, 0): 1.000000000000000
+  ['partition', 'form', 'exp'] (0, 0, 2, 0, 1, 1): 1.000000000000000
+  ['partition', 'form'] (0, 0, 2, 0, 2, 0): 1.000000000000000
+  ['partition', 'form', 'exp'] (0, 0, 2, 0, 2, 1): 1.000000000000000
+  ['partition', 'pack'] (0, 0, 2, 1, 0, 0): 1.000000000000001
+  ['scheme', 'exp'] (0, 1, 0, 0, 0, 1): 1.000000000000000
+  ['scheme', 'form'] (0, 1, 0, 0, 1, 0): 1.000000000000000
+  ['scheme', 'form', 'exp'] (0, 1, 0, 0, 1, 1): 1.000000000000000
+  ['scheme', 'form'] (0, 1, 0, 0, 2, 0): 1.000000000000000
+  ['scheme', 'form', 'exp'] (0, 1, 0, 0, 2, 1): 1.000000000000000
+  ['scheme', 'partition'] (0, 1, 1, 0, 0, 0): 1.000000000000000
+  ['scheme', 'partition', 'exp'] (0, 1, 1, 0, 0, 1): 1.000000000000000
+  ['scheme', 'partition', 'form'] (0, 1, 1, 0, 1, 0): 1.000000000000000
+  ['scheme', 'partition', 'form', 'exp'] (0, 1, 1, 0, 1, 1): 1.000000000000000
+  ['scheme', 'partition', 'form'] (0, 1, 1, 0, 2, 0): 1.000000000000000
+  ['scheme', 'partition', 'form', 'exp'] (0, 1, 1, 0, 2, 1): 1.000000000000000
+  ['scheme', 'partition'] (0, 1, 2, 0, 0, 0): 1.000000000000000
+  ['scheme', 'partition', 'exp'] (0, 1, 2, 0, 0, 1): 1.000000000000000
+  ['scheme', 'partition', 'form'] (0, 1, 2, 0, 1, 0): 1.000000000000000
+  ['scheme', 'partition', 'form', 'exp'] (0, 1, 2, 0, 1, 1): 1.000000000000000
+  ['scheme', 'partition', 'form'] (0, 1, 2, 0, 2, 0): 1.000000000000000
+  ['scheme', 'partition', 'form', 'exp'] (0, 1, 2, 0, 2, 1): 1.000000000000000
+  ['route', 'exp'] (1, 0, 0, 0, 0, 1): 1.000000000000000
+  ['route', 'form'] (1, 0, 0, 0, 1, 0): 1.000000000000000
+  ['route', 'form', 'exp'] (1, 0, 0, 0, 1, 1): 1.000000000000000
+  ['route', 'form'] (1, 0, 0, 0, 2, 0): 1.000000000000000
+  ['route', 'form', 'exp'] (1, 0, 0, 0, 2, 1): 1.000000000000000
+  ['route', 'partition'] (1, 0, 1, 0, 0, 0): 1.000000000000000
+  ['route', 'partition', 'exp'] (1, 0, 1, 0, 0, 1): 1.000000000000000
+  ['route', 'partition', 'form'] (1, 0, 1, 0, 1, 0): 1.000000000000000
+  ['route', 'partition', 'form', 'exp'] (1, 0, 1, 0, 1, 1): 1.000000000000000
+  ['route', 'partition', 'form'] (1, 0, 1, 0, 2, 0): 1.000000000000000
+  ['route', 'partition', 'form', 'exp'] (1, 0, 1, 0, 2, 1): 1.000000000000000
+  ['route', 'partition'] (1, 0, 2, 0, 0, 0): 1.000000000000000
+  ['route', 'partition', 'exp'] (1, 0, 2, 0, 0, 1): 1.000000000000000
+  ['route', 'partition', 'form'] (1, 0, 2, 0, 1, 0): 1.000000000000000
+  ['route', 'partition', 'form', 'exp'] (1, 0, 2, 0, 1, 1): 1.000000000000000
+  ['route', 'partition', 'form'] (1, 0, 2, 0, 2, 0): 1.000000000000000
+  ['route', 'partition', 'form', 'exp'] (1, 0, 2, 0, 2, 1): 1.000000000000000
+  ['route', 'scheme'] (1, 1, 0, 0, 0, 0): 1.000000000000000
+  ['route', 'scheme', 'exp'] (1, 1, 0, 0, 0, 1): 1.000000000000000
+  ['route', 'scheme', 'form'] (1, 1, 0, 0, 1, 0): 1.000000000000000
+  ['route', 'scheme', 'form', 'exp'] (1, 1, 0, 0, 1, 1): 1.000000000000000
+  ['route', 'scheme', 'form'] (1, 1, 0, 0, 2, 0): 1.000000000000000
+  ['route', 'scheme', 'form', 'exp'] (1, 1, 0, 0, 2, 1): 1.000000000000000
+  ['route', 'scheme', 'partition'] (1, 1, 1, 0, 0, 0): 1.000000000000000
+  ['route', 'scheme', 'partition', 'exp'] (1, 1, 1, 0, 0, 1): 1.000000000000000
+  ['route', 'scheme', 'partition', 'form'] (1, 1, 1, 0, 1, 0): 1.000000000000000
+  ['route', 'scheme', 'partition', 'form', 'exp'] (1, 1, 1, 0, 1, 1): 1.000000000000000
+  ['route', 'scheme', 'partition', 'form'] (1, 1, 1, 0, 2, 0): 1.000000000000000
+  ['route', 'scheme', 'partition', 'form', 'exp'] (1, 1, 1, 0, 2, 1): 1.000000000000000
+  ['route', 'scheme', 'partition'] (1, 1, 2, 0, 0, 0): 1.000000000000000
+  ['route', 'scheme', 'partition', 'exp'] (1, 1, 2, 0, 0, 1): 1.000000000000000
+  ['route', 'scheme', 'partition', 'form'] (1, 1, 2, 0, 1, 0): 1.000000000000000
+  ['route', 'scheme', 'partition', 'form', 'exp'] (1, 1, 2, 0, 1, 1): 1.000000000000000
+  ['route', 'scheme', 'partition', 'form'] (1, 1, 2, 0, 2, 0): 1.000000000000000
+  ['route', 'scheme', 'partition', 'form', 'exp'] (1, 1, 2, 0, 2, 1): 1.000000000000000
+
+sum G_alpha kappa_alpha = 66.000000000000000
+min = 1.000000000000000, max = 1.000000000000001
+
+largest |B_alpha,beta|/G_beta entries:
+  alpha frozenset() (0, 0, 0, 0, 0, 0), beta frozenset({3, 5}) (0, 0, 0, 1, 0, 1), ratio 1.000000000000, B -1.000000000000
+  alpha frozenset({3}) (0, 0, 0, 1, 0, 0), beta frozenset({3, 5}) (0, 0, 0, 1, 0, 1), ratio 1.000000000000, B 1.000000000000
+  alpha frozenset() (0, 0, 0, 0, 0, 0), beta frozenset({1, 3}) (0, 1, 0, 1, 0, 0), ratio 1.000000000000, B -1.000000000000
+  alpha frozenset() (0, 0, 0, 0, 0, 0), beta frozenset({1, 3, 5}) (0, 1, 0, 1, 0, 1), ratio 1.000000000000, B -1.000000000000
+  alpha frozenset({3}) (0, 0, 0, 1, 0, 0), beta frozenset({0, 1, 3}) (1, 1, 0, 1, 0, 0), ratio 1.000000000000, B 1.000000000000
+  alpha frozenset({3}) (0, 0, 0, 1, 0, 0), beta frozenset({0, 3}) (1, 0, 0, 1, 0, 0), ratio 1.000000000000, B 1.000000000000
+  alpha frozenset({3}) (0, 0, 0, 1, 0, 0), beta frozenset({1, 3}) (0, 1, 0, 1, 0, 0), ratio 1.000000000000, B 1.000000000000
+  alpha frozenset({3}) (0, 0, 0, 1, 0, 0), beta frozenset({0, 1, 3, 4}) (1, 1, 0, 1, 1, 0), ratio 1.000000000000, B 1.224744871392
