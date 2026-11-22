@@ -11,7 +11,8 @@ Rank proof:
   * subtracting the matching pack-mean column from each of the three
     pack-contrast columns leaves a matrix supported on the three pack=orders
     rows with the 3x3 matrix [1, linear(p), quadratic(p)] at p = 0,1,2,
-    whose determinant is -3*sqrt(3).
+    whose determinant is -24*sqrt(3) (the block is -2 times [1, linear(p),
+    quadratic(p)], whose determinant is 3*sqrt(3)).
 The rank is also checked modulo three primes p = 1 mod 24.
 """
 

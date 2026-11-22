@@ -269,10 +269,10 @@ Rank proof. The 72 pack-mean columns restricted to the 72 `pack = arguments`
 rows are the five-axis orthonormal basis and are invertible. Subtracting the
 matching pack-mean column from each of the three pack-contrast columns leaves a
 matrix supported on the three `pack = orders` rows with the 3 x 3 matrix
-`[1, linear(p), quadratic(p)]` at `p = 0, 1, 2`; its determinant is
-`24 sqrt 3 = 41.569219` in the unnormalised rows (`3 sqrt 3` with the
-normalised rows). The rank is also checked numerically and modulo the primes
-1009, 2017 and 3001.
+`[1, linear(p), quadratic(p)]` at `p = 0, 1, 2`; the block is `-2` times that
+matrix, whose determinant is `3 sqrt 3`, so the block's determinant is
+`-24 sqrt 3 = -41.569219`. The rank is also checked numerically and modulo
+the primes 1009, 2017 and 3001.
 
 Minimality excludes 73 and 74 runs. The 72 pack-mean columns are functions of
 the five-axis projection, so 72 distinct projections are necessary. At
