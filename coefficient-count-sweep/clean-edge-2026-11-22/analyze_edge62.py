@@ -47,6 +47,7 @@ def fit_line(xs: list[int], ys: list[float]) -> tuple[float, float]:
 
 def metrics(ys: list[float], count: int) -> dict:
     xs = EXPONENTS[:count]
+    ys = ys[:count]
     intercept, slope = fit_line(xs, ys)
     residual = max(abs(y - (intercept + slope * x)) for x, y in zip(xs, ys))
     second = max((abs(ys[i - 1] - 2 * ys[i] + ys[i + 1])

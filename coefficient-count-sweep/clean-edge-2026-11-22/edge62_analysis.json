@@ -23,13 +23,13 @@
         },
         "secondary_contract": {
           "n": 6,
-          "intercept": 0.5333333333333332,
+          "intercept": -1.1333333333333333,
           "slope": 0.45714285714285713,
-          "max_abs_residual": 2.5619047619047617,
+          "max_abs_residual": 0.8952380952380952,
           "max_abs_second_difference": 2.0
         },
         "verdict_primary": "holds",
-        "verdict_secondary": "fails"
+        "verdict_secondary": "holds"
       },
       "rat": {
         "stored": [
@@ -51,9 +51,9 @@
         },
         "secondary_contract": {
           "n": 6,
-          "intercept": 3.0,
+          "intercept": 1.6666666666666665,
           "slope": 0.14285714285714285,
-          "max_abs_residual": 1.7142857142857144,
+          "max_abs_residual": 0.4761904761904763,
           "max_abs_second_difference": 1.0
         },
         "verdict_primary": "holds",
@@ -81,13 +81,13 @@
         },
         "secondary_contract": {
           "n": 6,
-          "intercept": 4.0,
+          "intercept": 1.0,
           "slope": 0.5714285714285714,
-          "max_abs_residual": 3.8571428571428577,
+          "max_abs_residual": 0.8571428571428577,
           "max_abs_second_difference": 2.0
         },
         "verdict_primary": "holds",
-        "verdict_secondary": "fails"
+        "verdict_secondary": "holds"
       },
       "rat": {
         "stored": [
@@ -109,13 +109,13 @@
         },
         "secondary_contract": {
           "n": 6,
-          "intercept": 3.466666666666667,
+          "intercept": 1.1333333333333329,
           "slope": 0.4,
-          "max_abs_residual": 2.666666666666668,
+          "max_abs_residual": 0.4666666666666668,
           "max_abs_second_difference": 1.0
         },
         "verdict_primary": "holds",
-        "verdict_secondary": "fails"
+        "verdict_secondary": "holds"
       }
     },
     "2^5": {
@@ -139,13 +139,13 @@
         },
         "secondary_contract": {
           "n": 6,
-          "intercept": 11.533333333333331,
+          "intercept": 2.1999999999999993,
           "slope": 1.7428571428571429,
-          "max_abs_residual": 9.704761904761902,
+          "max_abs_residual": 0.3714285714285701,
           "max_abs_second_difference": 1.0
         },
         "verdict_primary": "holds",
-        "verdict_secondary": "fails"
+        "verdict_secondary": "holds"
       },
       "rat": {
         "stored": [
@@ -167,13 +167,13 @@
         },
         "secondary_contract": {
           "n": 6,
-          "intercept": 7.166666666666668,
+          "intercept": 1.0,
           "slope": 1.0,
-          "max_abs_residual": 6.166666666666668,
-          "max_abs_second_difference": 6.0
+          "max_abs_residual": 0.0,
+          "max_abs_second_difference": 0.0
         },
         "verdict_primary": "fails",
-        "verdict_secondary": "fails"
+        "verdict_secondary": "holds"
       }
     },
     "ship": {
@@ -197,13 +197,13 @@
         },
         "secondary_contract": {
           "n": 6,
-          "intercept": 9.399999999999999,
+          "intercept": 1.3999999999999986,
           "slope": 1.4857142857142858,
-          "max_abs_residual": 8.74285714285714,
+          "max_abs_residual": 0.7428571428571438,
           "max_abs_second_difference": 2.0
         },
         "verdict_primary": "holds",
-        "verdict_secondary": "fails"
+        "verdict_secondary": "holds"
       },
       "rat": {
         "stored": [
@@ -225,13 +225,13 @@
         },
         "secondary_contract": {
           "n": 6,
-          "intercept": 6.566666666666666,
+          "intercept": 1.7333333333333343,
           "slope": 0.7714285714285715,
-          "max_abs_residual": 5.280952380952382,
-          "max_abs_second_difference": 2.0
+          "max_abs_residual": 0.4476190476190496,
+          "max_abs_second_difference": 1.0
         },
         "verdict_primary": "fails",
-        "verdict_secondary": "fails"
+        "verdict_secondary": "holds"
       }
     },
     "paper": {
@@ -255,13 +255,13 @@
         },
         "secondary_contract": {
           "n": 6,
-          "intercept": 9.4,
+          "intercept": 2.066666666666668,
           "slope": 1.3428571428571427,
-          "max_abs_residual": 7.857142857142854,
+          "max_abs_residual": 0.8190476190476161,
           "max_abs_second_difference": 2.0
         },
         "verdict_primary": "holds",
-        "verdict_secondary": "fails"
+        "verdict_secondary": "holds"
       },
       "rat": {
         "stored": [
@@ -283,13 +283,13 @@
         },
         "secondary_contract": {
           "n": 6,
-          "intercept": 5.166666666666666,
+          "intercept": 0.6666666666666661,
           "slope": 0.8571428571428571,
-          "max_abs_residual": 4.88095238095238,
+          "max_abs_residual": 0.47619047619047716,
           "max_abs_second_difference": 1.0
         },
         "verdict_primary": "holds",
-        "verdict_secondary": "fails"
+        "verdict_secondary": "holds"
       }
     }
   },
@@ -308,16 +308,15 @@
     "verdict": "mixed"
   },
   "verdict_secondary": {
-    "chebyshev_holds_everywhere": false,
-    "rational_fail_widths": [
+    "chebyshev_holds_everywhere": true,
+    "rational_fail_widths": [],
+    "rational_hold_widths": [
+      "2^-7",
       "2^0",
       "2^5",
       "ship",
       "paper"
     ],
-    "rational_hold_widths": [
-      "2^-7"
-    ],
-    "verdict": "uninterpretable-chebyshev"
+    "verdict": "transient-specific"
   }
 }
