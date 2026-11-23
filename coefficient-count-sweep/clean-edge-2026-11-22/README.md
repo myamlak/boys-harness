@@ -83,9 +83,11 @@ verdict rule are unchanged.
 **Primary, all eight targets: mixed.** Rational fails at `2^5` and `ship`, and
 holds at `2^-7`, `2^0` and `paper`; Chebyshev holds at every width.
 
-**Secondary, contract range: uninterpretable for clean-edge inference.** The
-Chebyshev contract-range residual exceeds one stored coefficient at every
-width, so the pre-registered interpretability condition is not met.
+**Secondary, contract range: transient-specific.** Chebyshev holds at every
+width, with a contract-range residual of at most 0.896, and the rational
+family holds at all five widths, so the pre-registered secondary fit meets the
+transient-specific criterion. It is reported beside the primary fit and does
+not choose the verdict.
 
 Primary residuals and second differences:
 
@@ -97,17 +99,20 @@ Primary residuals and second differences:
 | `ship` | 0.929 | 2.0 | holds | 1.417 | 2.0 | fails |
 | `paper` | 0.750 | 2.0 | holds | 0.583 | 1.0 | holds |
 
-In the secondary fit the Chebyshev residuals are 2.562, 3.857, 9.705, 8.743
-and 7.857, in the width order above; all exceed one stored coefficient. The
-secondary rational fit fails at `2^0`, `2^5`, `ship` and `paper` and holds at
-`2^-7`, but the failed Chebyshev control makes that pattern uninterpretable for
-clean-edge inference.
+In the secondary fit the Chebyshev residuals are 0.895, 0.857, 0.371, 0.743
+and 0.819, in the width order above, all within one stored coefficient. The
+secondary rational residuals are 0.476, 0.467, 0.000, 0.448 and 0.476, with
+second differences at most one, so the rational fit holds at every width. The
+verdicts differ because the primary reads the deepest target, `1e-15`, where
+the rational rows depart. The `1e-14` rows lie on the contract-range line, and
+over the contract range the rational law holds at every width.
 
 The clean-edge result is mixed, not a universal confirmation. The rational
-failure is not a pure x0 transient artefact: it reappears at the clean edge at
-`2^5` and `ship`, so it is not confined to the x0 transient regime. It is,
-however, width-dependent at the clean edge, where three of the five widths
-hold. The headline claim is therefore limited to what the pattern supports, and
+failure is consistent with its not being a pure x0 transient artefact, since it
+reappears at the clean edge at `2^5` and `ship`, but the probe cannot decide
+that: its counts are nominal and unaudited at 60 digits. It is width-dependent
+at the clean edge, where three of the five widths hold, and it is carried by
+the deepest target, since the contract-range fit holds at every width. The headline claim is therefore limited to what the pattern supports, and
 the title keeps the scoped wording "where the affine target law fails" without
 a clean-edge generalisation.
 
