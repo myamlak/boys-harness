@@ -25,7 +25,7 @@
    "full_max": 1.209750535391648e-13,
    "family_max": 1.2097505353916485e-13,
    "ratio_pointwise": 1.0099163208938051,
-   "ratio_pointwise_with_measurement": 1.0099163208938302,
+   "ratio_pointwise_with_measurement": 1.0099163208938406,
    "ratio_maxima": 1.0000000000000004,
    "ratio_one_allowance": {
     "max": 1.0016781466127977,
@@ -68,7 +68,7 @@
    "full_max": 1.5957691216057325e-06,
    "family_max": 1.9069595759415099e-06,
    "ratio_pointwise": 1.6358870382873127,
-   "ratio_pointwise_with_measurement": 1.6358870382873347,
+   "ratio_pointwise_with_measurement": 1.6358870382873436,
    "ratio_maxima": 1.1950096979083316,
    "ratio_one_allowance": {
     "max": 1.1956575502422502,
@@ -111,7 +111,7 @@
    "full_max": 1.2090272576834007e-13,
    "family_max": 1.2090272576834012e-13,
    "ratio_pointwise": 1.009916320956846,
-   "ratio_pointwise_with_measurement": 1.0099163209568711,
+   "ratio_pointwise_with_measurement": 1.0099163209568816,
    "ratio_maxima": 1.0000000000000004,
    "ratio_one_allowance": {
     "max": 1.001911697422882,
@@ -154,7 +154,7 @@
    "full_max": 1.5957691216057325e-06,
    "family_max": 1.9069595759415099e-06,
    "ratio_pointwise": 1.7054026431488027,
-   "ratio_pointwise_with_measurement": 1.7054026431488256,
+   "ratio_pointwise_with_measurement": 1.705402643148835,
    "ratio_maxima": 1.1950096979083316,
    "ratio_one_allowance": {
     "max": 1.2464659837507865,

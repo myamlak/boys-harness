@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import importlib.util
 import lzma
 import os
 import sys
@@ -37,7 +38,6 @@ def harness_root():
 
 
 REPO = harness_root()
-import importlib.util  # noqa: E402
 
 _spec = importlib.util.spec_from_file_location(
     "fc", os.path.join(REPO, "composition-audit", "fullcube",

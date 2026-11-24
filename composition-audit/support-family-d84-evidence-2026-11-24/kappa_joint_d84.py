@@ -81,8 +81,7 @@ def build_exact_phi():
     rows = [basis_rows(c) for c in LEVELS]
     phi = [[ZERO] * N for _ in range(N)]
     for a in range(N):
-        levels = pa.choice_levels(a) if hasattr(pa, "choice_levels") else None
-        # pa has no level accessor; decode from the cell index directly.
+        # Decode the cell's level on each axis from its cell index.
         lv = tuple((a // s) % c for c, s in zip(LEVELS, pa.STR))
         for idx in range(N):
             v = ONE
@@ -142,11 +141,6 @@ def sign_exact(value, start_digits=40, max_digits=20000):
         digits *= 2
     raise ArithmeticError(
         f"sign undecided for {value!r} at {max_digits} digits")
-
-
-def cmp_square(value, k2_g2):
-    """Sign of value - k2*g2 for field elements; used to bound r^2/G^2."""
-    return sign_exact(value - k2_g2)
 
 
 # --------------------------------------------------------------------------

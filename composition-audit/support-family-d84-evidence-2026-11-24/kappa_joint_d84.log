@@ -1,11 +1,11 @@
 components 144, permitted 75, targets 66, Q 69, main effects 8
 cells 84, permitted 84, complement 60, targets 75
 building the exact 144-cell basis
-  exact vs float Phi max deviation: 4.441e-16 (6.0 s)
+  exact vs float Phi max deviation: 4.441e-16 (5.4 s)
   exact G vs float G max deviation: 4.441e-16
 forming the exact Gram matrix
 inverting the 84 x 84 permitted block exactly
-  exact inverse and alias matrix done (92.2 s)
+  exact inverse and alias matrix done (93.5 s)
   exact B vs float B max deviation: 1.332e-15
 computing 60 x 144 exact residuals
 
@@ -29,5 +29,5 @@ planted channel 8 support ['pack', 'form']:
   max |target alias| (float): 0.000e+00
   nonzero targets: []
 
-runtime 131.0 s
+runtime 131.5 s
 kappa_joint = 4 exactly

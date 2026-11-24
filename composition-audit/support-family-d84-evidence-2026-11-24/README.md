@@ -166,7 +166,7 @@ The per-term maxima are:
 | separate | fp64 | 2.090273e-14 | 2.770933e-16 | 1.108373e-15 | 2.090273e-14 | 1.209027e-13 | 1.209027e-13 |
 | separate | fp32 | 2.145560e-7 | 1.710590e-7 | 6.842362e-7 | 2.660919e-7 | 1.906960e-6 | 1.595769e-6 |
 
-The measurement term moves the ratio by at most 2.5e-14 absolute and is
+The measurement term moves the ratio by at most 3.8e-14 absolute and is
 invisible at the printed precision. The ratio of the two maxima (family
 maximum over full maximum, a different quantity from the pointwise
 maximum) is 1.0000000000000004 on fp64 and 1.1950096979 on fp32.

@@ -6,7 +6,7 @@ loading fused
   fused/fp32: A
   fused/fp32: B
   fused/fp32: C
-  done fused (35.0 s)
+  done fused (37.2 s)
 loading separate
   separate/fp64: A
   separate/fp64: B
@@ -14,7 +14,7 @@ loading separate
   separate/fp32: A
   separate/fp32: B
   separate/fp32: C
-  done separate (71.3 s)
+  done separate (74.1 s)
 
 A. scalar transport coverage (100 splits)
   fused/fp64       path    cov 1.000000 ctpt 0.999860 ctcell 0.999995 worst 0.518949 ctworst 1.308646 med 0.000063 p95 0.081603

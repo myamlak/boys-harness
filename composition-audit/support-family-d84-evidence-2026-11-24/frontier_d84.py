@@ -36,11 +36,11 @@ sys.path.insert(0, HERE)
 import d84_fixture as fx             # noqa: E402
 import record_figures as rf          # noqa: E402
 
-cf = fx.cf
 fc = fx.fc
 pa = fx.pa
 
 KAPPA = 4.0
+EPS = {"fp64": 1e-29, "fp32": 1e-22}
 LANES = ["fp64", "fp32"]
 EXPECTED = {
     ("fused", "fp64"): 1.009916,
@@ -87,6 +87,9 @@ def lane_terms(R_lane, d):
 def main():
     d = fx.build("d84")
     fx.verify_against_certificate(d)
+    measure = {lane: EPS[lane]
+               * d["measurement_inflation"]["sum_G_amp_targets"]
+               for lane in LANES}
     arms = arm_paths()
     out = {
         "meta": {
@@ -128,9 +131,7 @@ def main():
             full = tilde + terms["Nfull"]
             family = tilde + terms["Mhat"] + KAPPA * terms["eta"]
             ratio = family / full
-            ratio_measure = (family + 2.5372222222222217e-27
-                             if lane_name == "fp64"
-                             else family + 2.537222222222222e-20) / full
+            ratio_measure = (family + measure[lane_name]) / full
             one = (tilde + terms["Mhat"] + terms["eta"]) / full
             maxima = float(family.max() / full.max())
             p = int(np.argmax(ratio))

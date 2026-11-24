@@ -32,7 +32,7 @@
    }
   },
   "protocol": "worked-check/prospective/additions.py at SHA-256 546e0304b438dd1d029ddc45a3d5b0ab016ab340f317d842a22b91384690c87a, run with the corrected pooled design",
-  "runtime_seconds": 71.32656270009466,
+  "runtime_seconds": 74.14390679995995,
   "figure_checks": {
    "fused/fp64": {
     "max_rel_dev": 2.8929406881304926e-15,

@@ -411,7 +411,6 @@ def planted_test(path, pooled, d, lane_name, meas, xs, ns, arm):
                                   ).max()) for b in blocks)
         max_S = max(float(S.max()) for S in S_base)
         max_M = max(float(np.abs(b["M"]).max()) for b in blocks)
-        support = sorted(supports[PLANT_IDX])
         residual = (phi - PT @ bT)
         kappa_beta = float(np.abs(residual).max() / G_idx)
 
