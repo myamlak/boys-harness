@@ -1,0 +1,190 @@
+{
+ "schema": "clean-edge-60dig-cell-1",
+ "cell": {
+  "key": "2^-7:rel:1e-11",
+  "width_name": "2^-7",
+  "width": 0.040704300912795734,
+  "a": 62.0,
+  "target": "rel:1e-11",
+  "kind": "rel",
+  "target_value": 1e-11,
+  "record_count": 3,
+  "record_pair": [
+   1,
+   1
+  ],
+  "record_solver": "remez",
+  "record_delivered_rel": "2.7626022752304738e-13"
+ },
+ "precision": {
+  "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+  "conversion_dps": 70,
+  "reference": "F_0 at 70 decimal digits (mpmath)",
+  "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+  "grid_nodes": 2001,
+  "check_nodes": 4001,
+  "k_max": 12,
+  "den_floor": 0.001,
+  "target": "relative to F_0 at each node"
+ },
+ "reproduction": {
+  "record_solver": "remez",
+  "brasil_route": "default",
+  "brasil_converged": true,
+  "brasil_deviation": 0.0,
+  "brasil_e64": "2.7626521312063613e-13",
+  "record_delivered_rel": "2.7626022752304738e-13",
+  "exact_match": false
+ },
+ "count60": 3,
+ "direction": "equal",
+ "minimality": "every admissible pair at each count below was solved on the default route; a count whose default route found no meeting fit was also swept on the tightened route; the first count where neither route meets is the below-count check",
+ "delta_vs_record": 0,
+ "accepted": {
+  "m": 1,
+  "k": 1,
+  "stored": 3,
+  "settings": "default",
+  "converged": true,
+  "deviation": 0.0,
+  "e60": "2.7622522879083967e-13",
+  "e60_abs": "3.1089406965383903e-14",
+  "e60_at_t": "-1.0",
+  "e64r": "2.7624698361042939e-13",
+  "e64r_abs": "3.1091855490606034e-14",
+  "e64": "2.7626521312063613e-13",
+  "e64_abs": "3.108624468950438e-14",
+  "guard60": "0.99950789194882135",
+  "guard64": "0.9995078919488214",
+  "meets60": true,
+  "P60": [
+   "0.112532463618087693829970827950433589968783081975345484888563",
+   "0.00000923196035438204924584302675276638842783968519617677761877105"
+  ],
+  "Q60": [
+   "1.0",
+   "0.000246114583073247582536004392093049686875712307522739740534288"
+  ],
+  "P70": [
+   "0.1125324636180876938299708279504335899687830819753454848885628088274721",
+   "0.000009231960354382049245843026752766388427839685196176777618771053607813826"
+  ],
+  "Q70": [
+   "1.0",
+   "0.000246114583073247582536004392093049686875712307522739740534287668480299"
+  ],
+  "nodes": [
+   "-0.8660095614926411",
+   "0.8659425097582212"
+  ],
+  "weights": [
+   "-0.7069560599336873",
+   "0.7072574703197109"
+  ],
+  "values": [
+   "0.11254845695814185",
+   "0.11251647833165473"
+  ],
+  "e60_4001": "2.7622522879083967e-13",
+  "e60_4001_abs": "3.1089406965383903e-14",
+  "guard60_4001": "0.99950789194882135",
+  "meets60_4001": true
+ },
+ "failing_level": null,
+ "freeline": {
+  "record_series": [
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   4.0,
+   4.0,
+   4.0
+  ],
+  "substituted_series": [
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   4.0,
+   4.0,
+   4.0
+  ],
+  "record_primary": {
+   "n": 8,
+   "intercept": 1.3214285714285712,
+   "slope": 0.17857142857142858,
+   "max_abs_residual": 0.46428571428571397,
+   "max_abs_second_difference": 1.0
+  },
+  "substituted_primary": {
+   "n": 8,
+   "intercept": 1.3214285714285712,
+   "slope": 0.17857142857142858,
+   "max_abs_residual": 0.46428571428571397,
+   "max_abs_second_difference": 1.0
+  },
+  "record_secondary": {
+   "n": 6,
+   "intercept": 1.6666666666666665,
+   "slope": 0.14285714285714285,
+   "max_abs_residual": 0.4761904761904763,
+   "max_abs_second_difference": 1.0
+  },
+  "substituted_secondary": {
+   "n": 6,
+   "intercept": 1.6666666666666665,
+   "slope": 0.14285714285714285,
+   "max_abs_residual": 0.4761904761904763,
+   "max_abs_second_difference": 1.0
+  },
+  "record_primary_verdict": "holds",
+  "substituted_primary_verdict": "holds",
+  "record_secondary_verdict": "holds",
+  "substituted_secondary_verdict": "holds"
+ },
+ "brasil": {
+  "solves": 1,
+  "unconverged": 0,
+  "exceptions": 0
+ },
+ "levels": [
+  {
+   "stored": 3,
+   "settings": "default",
+   "label": "confirm-record-pair",
+   "meets60": true,
+   "solved": 1,
+   "pairs_tried": [
+    "[1/1]"
+   ],
+   "seconds": null,
+   "rows": [
+    {
+     "m": 1,
+     "k": 1,
+     "stored": 3,
+     "settings": "default",
+     "converged": true,
+     "deviation": 0.0,
+     "info_error": 3.108624468950438e-14,
+     "e60": "2.7622522879083967e-13",
+     "e60_abs": "3.1089406965383903e-14",
+     "e64r": "2.7624698361042939e-13",
+     "e64": "2.7626521312063613e-13",
+     "guard60": "0.99950789194882135",
+     "meets60": true,
+     "seconds": 1.88,
+     "exception": null,
+     "convert_exception": null,
+     "score_exception": null
+    }
+   ]
+  }
+ ],
+ "status": "ok",
+ "wall_seconds": 6.1,
+ "generated_utc": "2026-11-24T21:21:57Z"
+}
