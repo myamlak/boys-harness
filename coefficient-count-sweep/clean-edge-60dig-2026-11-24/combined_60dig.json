@@ -1,0 +1,2736 @@
+{
+ "schema": "clean-edge-60dig-full-1",
+ "generated_utc": "2026-11-24T21:23:43Z",
+ "record": {
+  "path": "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json",
+  "sha256": "963facd9e18c96b547b6543c8713d5dd8294104d2776fb8d71dd30c0d40bff8b"
+ },
+ "control_core": {
+  "path": "C:\\Users\\myaml\\dev\\papers-c-v5\\papers\\coefficient-counts\\results-control-60dig\\control_60dig_brasil.py",
+  "sha256": "8ffedf42c97111fd7512c48d85cedf282007b0aee664fc171569aab7c3e0f559"
+ },
+ "runner": {
+  "path": "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+  "sha256": "eb165d1a1bfe1fbbab051ec5ec267cdedd2cad47dc41e786701fde5694d6a9a8"
+ },
+ "launcher": {
+  "path": "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_all_60dig.py",
+  "sha256": "d2762e23efabc3ad6f92cb6dd341624d2418066c1ea21875afa0b6678a06fdea"
+ },
+ "jobs": 8,
+ "cell_timeout_seconds": 3600.0,
+ "total_wall_seconds": 1471.0,
+ "settings": {
+  "edge": "62.0",
+  "scale": "5.210150516837854",
+  "targets": [
+   "rel:1e-08",
+   "rel:1e-09",
+   "rel:1e-10",
+   "rel:1e-11",
+   "rel:1e-12",
+   "rel:1e-13",
+   "rel:1e-14",
+   "rel:1e-15"
+  ],
+  "widths": [
+   "2^-7",
+   "2^0",
+   "2^5",
+   "ship",
+   "paper"
+  ],
+  "grid_nodes": 2001,
+  "check_nodes": 4001,
+  "k_max": 12,
+  "den_floor": 0.001,
+  "convert_dps": 70,
+  "eval_dps": 60,
+  "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+  "default": {
+   "tol": 0.0001,
+   "maxiter": 1000,
+   "npi": -30,
+   "init_steps": 100,
+   "max_step_size": 0.1
+  },
+  "tightened": {
+   "tol": 1e-08,
+   "maxiter": 5000,
+   "npi": -40,
+   "init_steps": 300,
+   "max_step_size": 0.05
+  }
+ },
+ "cells": [
+  {
+   "key": "m7_rel_1e-08",
+   "width": 0.040704300912795734,
+   "width_name": "2^-7",
+   "target": "rel:1e-08",
+   "record_count": 3,
+   "record_pair": [
+    1,
+    1
+   ],
+   "record_solver": "remez",
+   "count60": 3,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    1,
+    1
+   ],
+   "accepted_stored": 3,
+   "accepted_settings": "default",
+   "e60": "2.7622522879083967e-13",
+   "guard60": "0.99950789194882135",
+   "e64": "2.7626521312063613e-13",
+   "e64r": "2.7624698361042939e-13",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 1,
+    "unconverged": 0,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 6.1,
+   "launcher_wall_seconds": 6.4,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^-7",
+    "--target",
+    "rel:1e-08",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\m7_rel_1e-08.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "m7_rel_1e-09",
+   "width": 0.040704300912795734,
+   "width_name": "2^-7",
+   "target": "rel:1e-09",
+   "record_count": 3,
+   "record_pair": [
+    1,
+    1
+   ],
+   "record_solver": "remez",
+   "count60": 3,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    1,
+    1
+   ],
+   "accepted_stored": 3,
+   "accepted_settings": "default",
+   "e60": "2.7622522879083967e-13",
+   "guard60": "0.99950789194882135",
+   "e64": "2.7626521312063613e-13",
+   "e64r": "2.7624698361042939e-13",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 1,
+    "unconverged": 0,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 6.1,
+   "launcher_wall_seconds": 6.4,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^-7",
+    "--target",
+    "rel:1e-09",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\m7_rel_1e-09.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "m7_rel_1e-10",
+   "width": 0.040704300912795734,
+   "width_name": "2^-7",
+   "target": "rel:1e-10",
+   "record_count": 3,
+   "record_pair": [
+    1,
+    1
+   ],
+   "record_solver": "remez",
+   "count60": 3,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    1,
+    1
+   ],
+   "accepted_stored": 3,
+   "accepted_settings": "default",
+   "e60": "2.7622522879083967e-13",
+   "guard60": "0.99950789194882135",
+   "e64": "2.7626521312063613e-13",
+   "e64r": "2.7624698361042939e-13",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 1,
+    "unconverged": 0,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 6.2,
+   "launcher_wall_seconds": 6.6,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^-7",
+    "--target",
+    "rel:1e-10",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\m7_rel_1e-10.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "m7_rel_1e-11",
+   "width": 0.040704300912795734,
+   "width_name": "2^-7",
+   "target": "rel:1e-11",
+   "record_count": 3,
+   "record_pair": [
+    1,
+    1
+   ],
+   "record_solver": "remez",
+   "count60": 3,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    1,
+    1
+   ],
+   "accepted_stored": 3,
+   "accepted_settings": "default",
+   "e60": "2.7622522879083967e-13",
+   "guard60": "0.99950789194882135",
+   "e64": "2.7626521312063613e-13",
+   "e64r": "2.7624698361042939e-13",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 1,
+    "unconverged": 0,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 6.1,
+   "launcher_wall_seconds": 6.5,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^-7",
+    "--target",
+    "rel:1e-11",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\m7_rel_1e-11.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "m7_rel_1e-12",
+   "width": 0.040704300912795734,
+   "width_name": "2^-7",
+   "target": "rel:1e-12",
+   "record_count": 3,
+   "record_pair": [
+    1,
+    1
+   ],
+   "record_solver": "remez",
+   "count60": 3,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    1,
+    1
+   ],
+   "accepted_stored": 3,
+   "accepted_settings": "default",
+   "e60": "2.7622522879083967e-13",
+   "guard60": "0.99950789194882135",
+   "e64": "2.7626521312063613e-13",
+   "e64r": "2.7624698361042939e-13",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 1,
+    "unconverged": 0,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 5.9,
+   "launcher_wall_seconds": 6.3,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^-7",
+    "--target",
+    "rel:1e-12",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\m7_rel_1e-12.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "m7_rel_1e-13",
+   "width": 0.040704300912795734,
+   "width_name": "2^-7",
+   "target": "rel:1e-13",
+   "record_count": 4,
+   "record_pair": [
+    1,
+    2
+   ],
+   "record_solver": "lawson",
+   "count60": 4,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    1,
+    2
+   ],
+   "accepted_stored": 4,
+   "accepted_settings": "default",
+   "e60": "1.247184035916354e-16",
+   "guard60": "0.9993438909879601",
+   "e64": "2.466852769800942e-16",
+   "e64r": "9.9592200351071506e-17",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 3,
+    "unconverged": 0,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 9.7,
+   "launcher_wall_seconds": 10.1,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^-7",
+    "--target",
+    "rel:1e-13",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\m7_rel_1e-13.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "m7_rel_1e-14",
+   "width": 0.040704300912795734,
+   "width_name": "2^-7",
+   "target": "rel:1e-14",
+   "record_count": 4,
+   "record_pair": [
+    1,
+    2
+   ],
+   "record_solver": "lawson",
+   "count60": 4,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    1,
+    2
+   ],
+   "accepted_stored": 4,
+   "accepted_settings": "default",
+   "e60": "1.247184035916354e-16",
+   "guard60": "0.9993438909879601",
+   "e64": "2.466852769800942e-16",
+   "e64r": "9.9592200351071506e-17",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 3,
+    "unconverged": 0,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 10.1,
+   "launcher_wall_seconds": 10.5,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^-7",
+    "--target",
+    "rel:1e-14",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\m7_rel_1e-14.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "m7_rel_1e-15",
+   "width": 0.040704300912795734,
+   "width_name": "2^-7",
+   "target": "rel:1e-15",
+   "record_count": 4,
+   "record_pair": [
+    1,
+    2
+   ],
+   "record_solver": "lawson",
+   "count60": 4,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    1,
+    2
+   ],
+   "accepted_stored": 4,
+   "accepted_settings": "default",
+   "e60": "1.247184035916354e-16",
+   "guard60": "0.9993438909879601",
+   "e64": "2.466852769800942e-16",
+   "e64r": "9.9592200351071506e-17",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 3,
+    "unconverged": 0,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 11.1,
+   "launcher_wall_seconds": 11.5,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^-7",
+    "--target",
+    "rel:1e-15",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\m7_rel_1e-15.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p0_rel_1e-08",
+   "width": 5.210150516837854,
+   "width_name": "2^0",
+   "target": "rel:1e-08",
+   "record_count": 4,
+   "record_pair": [
+    1,
+    2
+   ],
+   "record_solver": "remez",
+   "count60": 4,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    1,
+    2
+   ],
+   "accepted_stored": 4,
+   "accepted_settings": "default",
+   "e60": "2.6397276168096807e-9",
+   "guard60": "0.9224778164821453",
+   "e64": "2.6397275483501204e-09",
+   "e64r": "2.6397275615493992e-9",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 3,
+    "unconverged": 0,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 11.4,
+   "launcher_wall_seconds": 12.3,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^0",
+    "--target",
+    "rel:1e-08",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p0_rel_1e-08.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p0_rel_1e-09",
+   "width": 5.210150516837854,
+   "width_name": "2^0",
+   "target": "rel:1e-09",
+   "record_count": 5,
+   "record_pair": [
+    2,
+    2
+   ],
+   "record_solver": "remez",
+   "count60": 5,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    2,
+    2
+   ],
+   "accepted_stored": 5,
+   "accepted_settings": "default",
+   "e60": "1.3312133365408387e-11",
+   "guard60": "0.9040555911063067",
+   "e64": "1.3312222018262274e-11",
+   "e64r": "1.3312145821749723e-11",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 5,
+    "unconverged": 1,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 46.6,
+   "launcher_wall_seconds": 47.0,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^0",
+    "--target",
+    "rel:1e-09",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p0_rel_1e-09.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p0_rel_1e-10",
+   "width": 5.210150516837854,
+   "width_name": "2^0",
+   "target": "rel:1e-10",
+   "record_count": 5,
+   "record_pair": [
+    2,
+    2
+   ],
+   "record_solver": "remez",
+   "count60": 5,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    2,
+    2
+   ],
+   "accepted_stored": 5,
+   "accepted_settings": "default",
+   "e60": "1.3312133365408387e-11",
+   "guard60": "0.9040555911063067",
+   "e64": "1.3312222018262274e-11",
+   "e64r": "1.3312145821749723e-11",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 5,
+    "unconverged": 1,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 46.8,
+   "launcher_wall_seconds": 47.2,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^0",
+    "--target",
+    "rel:1e-10",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p0_rel_1e-10.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p0_rel_1e-11",
+   "width": 5.210150516837854,
+   "width_name": "2^0",
+   "target": "rel:1e-11",
+   "record_count": 6,
+   "record_pair": [
+    2,
+    3
+   ],
+   "record_solver": "remez",
+   "count60": 6,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    2,
+    3
+   ],
+   "accepted_stored": 6,
+   "accepted_settings": "default",
+   "e60": "6.7217744244393239e-14",
+   "guard60": "0.88600128281357512",
+   "e64": "6.727040202101771e-14",
+   "e64r": "6.7267146403556544e-14",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 7,
+    "unconverged": 1,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 34.1,
+   "launcher_wall_seconds": 35.0,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^0",
+    "--target",
+    "rel:1e-11",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p0_rel_1e-11.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p0_rel_1e-12",
+   "width": 5.210150516837854,
+   "width_name": "2^0",
+   "target": "rel:1e-12",
+   "record_count": 6,
+   "record_pair": [
+    2,
+    3
+   ],
+   "record_solver": "remez",
+   "count60": 6,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    2,
+    3
+   ],
+   "accepted_stored": 6,
+   "accepted_settings": "default",
+   "e60": "6.7217744244393239e-14",
+   "guard60": "0.88600128281357512",
+   "e64": "6.727040202101771e-14",
+   "e64r": "6.7267146403556544e-14",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 7,
+    "unconverged": 1,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 36.6,
+   "launcher_wall_seconds": 37.3,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^0",
+    "--target",
+    "rel:1e-12",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p0_rel_1e-12.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p0_rel_1e-13",
+   "width": 5.210150516837854,
+   "width_name": "2^0",
+   "target": "rel:1e-13",
+   "record_count": 6,
+   "record_pair": [
+    2,
+    3
+   ],
+   "record_solver": "remez",
+   "count60": 6,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    2,
+    3
+   ],
+   "accepted_stored": 6,
+   "accepted_settings": "default",
+   "e60": "6.7217744244393239e-14",
+   "guard60": "0.88600128281357512",
+   "e64": "6.727040202101771e-14",
+   "e64r": "6.7267146403556544e-14",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 7,
+    "unconverged": 1,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 37.9,
+   "launcher_wall_seconds": 38.7,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^0",
+    "--target",
+    "rel:1e-13",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p0_rel_1e-13.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p0_rel_1e-14",
+   "width": 5.210150516837854,
+   "width_name": "2^0",
+   "target": "rel:1e-14",
+   "record_count": 7,
+   "record_pair": [
+    3,
+    3
+   ],
+   "record_solver": "remez",
+   "count60": 7,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    3,
+    3
+   ],
+   "accepted_stored": 7,
+   "accepted_settings": "default",
+   "e60": "4.9525347097272989e-16",
+   "guard60": "0.86830283715096195",
+   "e64": "6.217349230910808e-16",
+   "e64r": "5.3129480297843442e-16",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 9,
+    "unconverged": 4,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 70.8,
+   "launcher_wall_seconds": 71.4,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^0",
+    "--target",
+    "rel:1e-14",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p0_rel_1e-14.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p0_rel_1e-15",
+   "width": 5.210150516837854,
+   "width_name": "2^0",
+   "target": "rel:1e-15",
+   "record_count": 7,
+   "record_pair": [
+    3,
+    3
+   ],
+   "record_solver": "remez",
+   "count60": 7,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    3,
+    3
+   ],
+   "accepted_stored": 7,
+   "accepted_settings": "default",
+   "e60": "4.9525347097272989e-16",
+   "guard60": "0.86830283715096195",
+   "e64": "6.217349230910808e-16",
+   "e64r": "5.3129480297843442e-16",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 9,
+    "unconverged": 4,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 70.4,
+   "launcher_wall_seconds": 71.0,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^0",
+    "--target",
+    "rel:1e-15",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p0_rel_1e-15.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p5_rel_1e-08",
+   "width": 166.72481653881133,
+   "width_name": "2^5",
+   "target": "rel:1e-08",
+   "record_count": 9,
+   "record_pair": [
+    4,
+    4
+   ],
+   "record_solver": "remez",
+   "count60": 9,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    4,
+    4
+   ],
+   "accepted_stored": 9,
+   "accepted_settings": "default",
+   "e60": "8.2083596714441795e-10",
+   "guard60": "0.052562638431432309",
+   "e64": "8.20836069561154e-10",
+   "e64r": "8.208360757333997e-10",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 13,
+    "unconverged": 2,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 141.0,
+   "launcher_wall_seconds": 142.0,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^5",
+    "--target",
+    "rel:1e-08",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p5_rel_1e-08.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p5_rel_1e-09",
+   "width": 166.72481653881133,
+   "width_name": "2^5",
+   "target": "rel:1e-09",
+   "record_count": 10,
+   "record_pair": [
+    4,
+    5
+   ],
+   "record_solver": "remez",
+   "count60": 9,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    4,
+    4
+   ],
+   "accepted_stored": 9,
+   "accepted_settings": "default",
+   "e60": "8.2083596714441795e-10",
+   "guard60": "0.052562638431432309",
+   "e64": "8.20836069561154e-10",
+   "e64r": "8.208360757333997e-10",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 20,
+    "unconverged": 2,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 141.7,
+   "launcher_wall_seconds": 142.3,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^5",
+    "--target",
+    "rel:1e-09",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p5_rel_1e-09.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p5_rel_1e-10",
+   "width": 166.72481653881133,
+   "width_name": "2^5",
+   "target": "rel:1e-10",
+   "record_count": 11,
+   "record_pair": [
+    5,
+    5
+   ],
+   "record_solver": "remez",
+   "count60": 10,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    4,
+    5
+   ],
+   "accepted_stored": 10,
+   "accepted_settings": "default",
+   "e60": "6.6386525337014121e-11",
+   "guard60": "0.037926851514646878",
+   "e64": "6.638662771452393e-11",
+   "e64r": "6.6386593741538357e-11",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 23,
+    "unconverged": 4,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 261.3,
+   "launcher_wall_seconds": 262.1,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^5",
+    "--target",
+    "rel:1e-10",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p5_rel_1e-10.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p5_rel_1e-11",
+   "width": 166.72481653881133,
+   "width_name": "2^5",
+   "target": "rel:1e-11",
+   "record_count": 12,
+   "record_pair": [
+    5,
+    6
+   ],
+   "record_solver": "remez",
+   "count60": 11,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    5,
+    5
+   ],
+   "accepted_stored": 11,
+   "accepted_settings": "default",
+   "e60": "5.3689435218588266e-12",
+   "guard60": "0.027366325037068454",
+   "e64": "5.368877145256371e-12",
+   "e64r": "5.3689978385596941e-12",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 26,
+    "unconverged": 8,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 378.7,
+   "launcher_wall_seconds": 379.2,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^5",
+    "--target",
+    "rel:1e-11",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p5_rel_1e-11.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p5_rel_1e-12",
+   "width": 166.72481653881133,
+   "width_name": "2^5",
+   "target": "rel:1e-12",
+   "record_count": 13,
+   "record_pair": [
+    6,
+    6
+   ],
+   "record_solver": "remez",
+   "count60": 12,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    5,
+    6
+   ],
+   "accepted_stored": 12,
+   "accepted_settings": "default",
+   "e60": "4.3479573587164032e-13",
+   "guard60": "0.019746045369728032",
+   "e64": "4.348151053679178e-13",
+   "e64r": "4.3484143079733538e-13",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 29,
+    "unconverged": 14,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 518.3,
+   "launcher_wall_seconds": 518.7,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^5",
+    "--target",
+    "rel:1e-12",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p5_rel_1e-12.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p5_rel_1e-13",
+   "width": 166.72481653881133,
+   "width_name": "2^5",
+   "target": "rel:1e-13",
+   "record_count": 14,
+   "record_pair": [
+    6,
+    7
+   ],
+   "record_solver": "remez",
+   "count60": 13,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    6,
+    6
+   ],
+   "accepted_stored": 13,
+   "accepted_settings": "default",
+   "e60": "3.5426442251654303e-14",
+   "guard60": "0.01424755889536192",
+   "e64": "3.540569621596063e-14",
+   "e64r": "3.5390759854470688e-14",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 32,
+    "unconverged": 22,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 627.0,
+   "launcher_wall_seconds": 627.4,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^5",
+    "--target",
+    "rel:1e-13",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p5_rel_1e-13.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p5_rel_1e-14",
+   "width": 166.72481653881133,
+   "width_name": "2^5",
+   "target": "rel:1e-14",
+   "record_count": 15,
+   "record_pair": [
+    5,
+    9
+   ],
+   "record_solver": "lawson",
+   "count60": 14,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    6,
+    7
+   ],
+   "accepted_stored": 14,
+   "accepted_settings": "default",
+   "e60": "3.1940324733738524e-15",
+   "guard60": "0.010268792178641576",
+   "e64": "5.994376543572092e-15",
+   "e64r": "3.1694905170993778e-15",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 35,
+    "unconverged": 29,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 736.7,
+   "launcher_wall_seconds": 737.4,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^5",
+    "--target",
+    "rel:1e-14",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p5_rel_1e-14.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "p5_rel_1e-15",
+   "width": 166.72481653881133,
+   "width_name": "2^5",
+   "target": "rel:1e-15",
+   "record_count": 22,
+   "record_pair": [
+    19,
+    2
+   ],
+   "record_solver": "lawson",
+   "count60": 15,
+   "direction": "down",
+   "delta_vs_record": -7,
+   "accepted_pair": [
+    6,
+    8
+   ],
+   "accepted_stored": 15,
+   "accepted_settings": "default",
+   "e60": "6.4804911767675102e-16",
+   "guard60": "0.0076084740911630768",
+   "e64": "5.9581659359817834e-15",
+   "e64r": "2.3722666222184059e-15",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 109,
+    "unconverged": 105,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 1470.7,
+   "launcher_wall_seconds": 1471.0,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "2^5",
+    "--target",
+    "rel:1e-15",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\p5_rel_1e-15.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "ship_rel_1e-08",
+   "width": 99.51466602197347,
+   "width_name": "ship",
+   "target": "rel:1e-08",
+   "record_count": 8,
+   "record_pair": [
+    3,
+    4
+   ],
+   "record_solver": "remez",
+   "count60": 8,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    3,
+    4
+   ],
+   "accepted_stored": 8,
+   "accepted_settings": "default",
+   "e60": "8.0466807885511366e-10",
+   "guard60": "0.14685055721452659",
+   "e64": "8.046681657875909e-10",
+   "e64r": "8.0466810403615874e-10",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 11,
+    "unconverged": 1,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 80.9,
+   "launcher_wall_seconds": 82.4,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "ship",
+    "--target",
+    "rel:1e-08",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\ship_rel_1e-08.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "ship_rel_1e-09",
+   "width": 99.51466602197347,
+   "width_name": "ship",
+   "target": "rel:1e-09",
+   "record_count": 9,
+   "record_pair": [
+    4,
+    4
+   ],
+   "record_solver": "remez",
+   "count60": 8,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    3,
+    4
+   ],
+   "accepted_stored": 8,
+   "accepted_settings": "default",
+   "e60": "8.0466807885511366e-10",
+   "guard60": "0.14685055721452659",
+   "e64": "8.046681657875909e-10",
+   "e64r": "8.0466810403615874e-10",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 17,
+    "unconverged": 1,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 95.1,
+   "launcher_wall_seconds": 95.6,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "ship",
+    "--target",
+    "rel:1e-09",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\ship_rel_1e-09.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "ship_rel_1e-10",
+   "width": 99.51466602197347,
+   "width_name": "ship",
+   "target": "rel:1e-10",
+   "record_count": 9,
+   "record_pair": [
+    4,
+    4
+   ],
+   "record_solver": "remez",
+   "count60": 9,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    4,
+    4
+   ],
+   "accepted_stored": 9,
+   "accepted_settings": "default",
+   "e60": "4.7925382912670438e-11",
+   "guard60": "0.11559007294157025",
+   "e64": "4.792509865119272e-11",
+   "e64r": "4.7925290421908803e-11",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 13,
+    "unconverged": 1,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 145.4,
+   "launcher_wall_seconds": 145.9,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "ship",
+    "--target",
+    "rel:1e-10",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\ship_rel_1e-10.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "ship_rel_1e-11",
+   "width": 99.51466602197347,
+   "width_name": "ship",
+   "target": "rel:1e-11",
+   "record_count": 10,
+   "record_pair": [
+    4,
+    5
+   ],
+   "record_solver": "remez",
+   "count60": 10,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    4,
+    5
+   ],
+   "accepted_stored": 10,
+   "accepted_settings": "default",
+   "e60": "2.8545546068415256e-12",
+   "guard60": "0.090984049620989686",
+   "e64": "2.85444239103232e-12",
+   "e64r": "2.8544693365315774e-12",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 15,
+    "unconverged": 4,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 266.5,
+   "launcher_wall_seconds": 266.9,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "ship",
+    "--target",
+    "rel:1e-11",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\ship_rel_1e-11.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "ship_rel_1e-12",
+   "width": 99.51466602197347,
+   "width_name": "ship",
+   "target": "rel:1e-12",
+   "record_count": 11,
+   "record_pair": [
+    5,
+    5
+   ],
+   "record_solver": "remez",
+   "count60": 11,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    5,
+    5
+   ],
+   "accepted_stored": 11,
+   "accepted_settings": "default",
+   "e60": "1.7027721626201495e-13",
+   "guard60": "0.071615113444736112",
+   "e64": "1.701560513374213e-13",
+   "e64r": "1.7026074162072296e-13",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 17,
+    "unconverged": 9,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 461.8,
+   "launcher_wall_seconds": 462.5,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "ship",
+    "--target",
+    "rel:1e-12",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\ship_rel_1e-12.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "ship_rel_1e-13",
+   "width": 99.51466602197347,
+   "width_name": "ship",
+   "target": "rel:1e-13",
+   "record_count": 12,
+   "record_pair": [
+    5,
+    6
+   ],
+   "record_solver": "remez",
+   "count60": 12,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    5,
+    6
+   ],
+   "accepted_stored": 12,
+   "accepted_settings": "default",
+   "e60": "1.0455359106959561e-14",
+   "guard60": "0.056367037428162945",
+   "e64": "1.037956015508405e-14",
+   "e64r": "1.0451734926123928e-14",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 19,
+    "unconverged": 15,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 543.3,
+   "launcher_wall_seconds": 543.9,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "ship",
+    "--target",
+    "rel:1e-13",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\ship_rel_1e-13.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "ship_rel_1e-14",
+   "width": 99.51466602197347,
+   "width_name": "ship",
+   "target": "rel:1e-14",
+   "record_count": 13,
+   "record_pair": [
+    6,
+    6
+   ],
+   "record_solver": "remez",
+   "count60": 13,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    6,
+    6
+   ],
+   "accepted_stored": 13,
+   "accepted_settings": "default",
+   "e60": "1.1635360431844178e-15",
+   "guard60": "0.044212275358074625",
+   "e64": "1.4802211042534455e-15",
+   "e64r": "1.1171146945041626e-15",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 21,
+    "unconverged": 19,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 591.0,
+   "launcher_wall_seconds": 591.4,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "ship",
+    "--target",
+    "rel:1e-14",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\ship_rel_1e-14.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "ship_rel_1e-15",
+   "width": 99.51466602197347,
+   "width_name": "ship",
+   "target": "rel:1e-15",
+   "record_count": 16,
+   "record_pair": [
+    12,
+    3
+   ],
+   "record_solver": "remez",
+   "count60": 13,
+   "direction": "down",
+   "delta_vs_record": -3,
+   "accepted_pair": [
+    6,
+    6
+   ],
+   "accepted_stored": 13,
+   "accepted_settings": "tightened",
+   "e60": "8.8616641776340029e-16",
+   "guard60": "0.044287004445073072",
+   "e64": "2.0251819552857364e-15",
+   "e64r": "1.4483129488898202e-15",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 67,
+    "unconverged": 64,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 1412.6,
+   "launcher_wall_seconds": 1412.9,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "ship",
+    "--target",
+    "rel:1e-15",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\ship_rel_1e-15.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "paper_rel_1e-08",
+   "width": 89.03881300270399,
+   "width_name": "paper",
+   "target": "rel:1e-08",
+   "record_count": 8,
+   "record_pair": [
+    3,
+    4
+   ],
+   "record_solver": "remez",
+   "count60": 7,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    3,
+    3
+   ],
+   "accepted_stored": 7,
+   "accepted_settings": "default",
+   "e60": "8.0274461838760328e-9",
+   "guard60": "0.20993579359353185",
+   "e64": "8.027446353381917e-09",
+   "e64r": "8.0274461751716431e-9",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 14,
+    "unconverged": 0,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 37.4,
+   "launcher_wall_seconds": 37.8,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "paper",
+    "--target",
+    "rel:1e-08",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\paper_rel_1e-08.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "paper_rel_1e-09",
+   "width": 89.03881300270399,
+   "width_name": "paper",
+   "target": "rel:1e-09",
+   "record_count": 8,
+   "record_pair": [
+    3,
+    4
+   ],
+   "record_solver": "remez",
+   "count60": 8,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    3,
+    4
+   ],
+   "accepted_stored": 8,
+   "accepted_settings": "default",
+   "e60": "4.4490252903024046e-10",
+   "guard60": "0.16803984679721287",
+   "e64": "4.4490242325561685e-10",
+   "e64r": "4.4490253251121116e-10",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 11,
+    "unconverged": 1,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 79.8,
+   "launcher_wall_seconds": 80.5,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "paper",
+    "--target",
+    "rel:1e-09",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\paper_rel_1e-09.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "paper_rel_1e-10",
+   "width": 89.03881300270399,
+   "width_name": "paper",
+   "target": "rel:1e-10",
+   "record_count": 9,
+   "record_pair": [
+    4,
+    4
+   ],
+   "record_solver": "remez",
+   "count60": 9,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    4,
+    4
+   ],
+   "accepted_stored": 9,
+   "accepted_settings": "default",
+   "e60": "2.4657349097064374e-11",
+   "guard60": "0.13450488912230458",
+   "e64": "2.4657366088616573e-11",
+   "e64r": "2.4657261692897356e-11",
+   "converged": true,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 13,
+    "unconverged": 2,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 164.3,
+   "launcher_wall_seconds": 164.7,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "paper",
+    "--target",
+    "rel:1e-10",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\paper_rel_1e-10.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "paper_rel_1e-11",
+   "width": 89.03881300270399,
+   "width_name": "paper",
+   "target": "rel:1e-11",
+   "record_count": 10,
+   "record_pair": [
+    4,
+    5
+   ],
+   "record_solver": "remez",
+   "count60": 10,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    4,
+    5
+   ],
+   "accepted_stored": 10,
+   "accepted_settings": "default",
+   "e60": "1.3667971716599557e-12",
+   "guard60": "0.10766228154736662",
+   "e64": "1.3665927007271627e-12",
+   "e64r": "1.3668390555213034e-12",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 15,
+    "unconverged": 6,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 304.0,
+   "launcher_wall_seconds": 304.4,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "paper",
+    "--target",
+    "rel:1e-11",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\paper_rel_1e-11.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "paper_rel_1e-12",
+   "width": 89.03881300270399,
+   "width_name": "paper",
+   "target": "rel:1e-12",
+   "record_count": 11,
+   "record_pair": [
+    5,
+    5
+   ],
+   "record_solver": "remez",
+   "count60": 11,
+   "direction": "equal",
+   "delta_vs_record": 0,
+   "accepted_pair": [
+    5,
+    5
+   ],
+   "accepted_stored": 11,
+   "accepted_settings": "default",
+   "e60": "7.6070121804757735e-14",
+   "guard60": "0.08617448094085938",
+   "e64": "7.601804207678204e-14",
+   "e64r": "7.6036925885654207e-14",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 17,
+    "unconverged": 9,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 429.0,
+   "launcher_wall_seconds": 430.0,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "paper",
+    "--target",
+    "rel:1e-12",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\paper_rel_1e-12.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "paper_rel_1e-13",
+   "width": 89.03881300270399,
+   "width_name": "paper",
+   "target": "rel:1e-13",
+   "record_count": 12,
+   "record_pair": [
+    5,
+    6
+   ],
+   "record_solver": "remez",
+   "count60": 11,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    5,
+    5
+   ],
+   "accepted_stored": 11,
+   "accepted_settings": "default",
+   "e60": "7.6070121804757735e-14",
+   "guard60": "0.08617448094085938",
+   "e64": "7.601804207678204e-14",
+   "e64r": "7.6036925885654207e-14",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 26,
+    "unconverged": 15,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 493.9,
+   "launcher_wall_seconds": 494.3,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "paper",
+    "--target",
+    "rel:1e-13",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\paper_rel_1e-13.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "paper_rel_1e-14",
+   "width": 89.03881300270399,
+   "width_name": "paper",
+   "target": "rel:1e-14",
+   "record_count": 13,
+   "record_pair": [
+    6,
+    6
+   ],
+   "record_solver": "lawson",
+   "count60": 12,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    5,
+    6
+   ],
+   "accepted_stored": 12,
+   "accepted_settings": "default",
+   "e60": "4.5844809177939551e-15",
+   "guard60": "0.068984930801401335",
+   "e64": "4.61881774643739e-15",
+   "e64r": "4.5835467209486221e-15",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 29,
+    "unconverged": 23,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 612.6,
+   "launcher_wall_seconds": 613.4,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "paper",
+    "--target",
+    "rel:1e-14",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\paper_rel_1e-14.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  },
+  {
+   "key": "paper_rel_1e-15",
+   "width": 89.03881300270399,
+   "width_name": "paper",
+   "target": "rel:1e-15",
+   "record_count": 14,
+   "record_pair": [
+    9,
+    4
+   ],
+   "record_solver": "remez",
+   "count60": 13,
+   "direction": "down",
+   "delta_vs_record": -1,
+   "accepted_pair": [
+    6,
+    6
+   ],
+   "accepted_stored": 13,
+   "accepted_settings": "default",
+   "e60": "5.9812791121970481e-16",
+   "guard60": "0.054926076819199675",
+   "e64": "9.899535079840243e-16",
+   "e64r": "6.2300256221437507e-16",
+   "converged": false,
+   "precision": {
+    "evaluation": "monomial coefficients held at 60 significant digits and evaluated at 60 decimal digits",
+    "conversion_dps": 70,
+    "reference": "F_0 at 70 decimal digits (mpmath)",
+    "solver": "BRASIL (baryrat 2.1.2), binary64 fit",
+    "grid_nodes": 2001,
+    "check_nodes": 4001,
+    "k_max": 12,
+    "den_floor": 0.001,
+    "target": "relative to F_0 at each node"
+   },
+   "brasil": {
+    "solves": 32,
+    "unconverged": 29,
+    "exceptions": 0
+   },
+   "status": "ok",
+   "wall_seconds": 672.9,
+   "launcher_wall_seconds": 673.7,
+   "error": null,
+   "launcher_note": null,
+   "command": [
+    "C:\\Users\\myaml\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\run_cell_60dig.py",
+    "--width",
+    "paper",
+    "--target",
+    "rel:1e-15",
+    "--out",
+    "C:\\Users\\myaml\\dev\\_c60-clean-edge-full-2026-11-24\\cells\\paper_rel_1e-15.json",
+    "--record",
+    "C:\\Users\\myaml\\dev\\papers-harness-repo\\coefficient-count-sweep\\clean-edge-2026-11-22\\edge62_sweep.json"
+   ]
+  }
+ ],
+ "freeline": {
+  "2^-7": {
+   "record_series": [
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    4.0,
+    4.0,
+    4.0
+   ],
+   "substituted_series": [
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    4.0,
+    4.0,
+    4.0
+   ],
+   "complete": true,
+   "record_primary": {
+    "n": 8,
+    "intercept": 1.3214285714285712,
+    "slope": 0.17857142857142858,
+    "max_abs_residual": 0.46428571428571397,
+    "max_abs_second_difference": 1.0
+   },
+   "substituted_primary": {
+    "n": 8,
+    "intercept": 1.3214285714285712,
+    "slope": 0.17857142857142858,
+    "max_abs_residual": 0.46428571428571397,
+    "max_abs_second_difference": 1.0
+   },
+   "record_primary_verdict": "holds",
+   "substituted_primary_verdict": "holds",
+   "record_secondary": {
+    "n": 6,
+    "intercept": 1.6666666666666665,
+    "slope": 0.14285714285714285,
+    "max_abs_residual": 0.4761904761904763,
+    "max_abs_second_difference": 1.0
+   },
+   "substituted_secondary": {
+    "n": 6,
+    "intercept": 1.6666666666666665,
+    "slope": 0.14285714285714285,
+    "max_abs_residual": 0.4761904761904763,
+    "max_abs_second_difference": 1.0
+   },
+   "record_secondary_verdict": "holds",
+   "substituted_secondary_verdict": "holds",
+   "changed_primary": false,
+   "changed_secondary": false
+  },
+  "2^0": {
+   "record_series": [
+    4.0,
+    5.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    7.0,
+    7.0
+   ],
+   "substituted_series": [
+    4.0,
+    5.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    7.0,
+    7.0
+   ],
+   "complete": true,
+   "record_primary": {
+    "n": 8,
+    "intercept": 1.095238095238095,
+    "slope": 0.40476190476190477,
+    "max_abs_residual": 0.45238095238095255,
+    "max_abs_second_difference": 1.0
+   },
+   "substituted_primary": {
+    "n": 8,
+    "intercept": 1.095238095238095,
+    "slope": 0.40476190476190477,
+    "max_abs_residual": 0.45238095238095255,
+    "max_abs_second_difference": 1.0
+   },
+   "record_primary_verdict": "holds",
+   "substituted_primary_verdict": "holds",
+   "record_secondary": {
+    "n": 6,
+    "intercept": 1.1333333333333329,
+    "slope": 0.4,
+    "max_abs_residual": 0.4666666666666668,
+    "max_abs_second_difference": 1.0
+   },
+   "substituted_secondary": {
+    "n": 6,
+    "intercept": 1.1333333333333329,
+    "slope": 0.4,
+    "max_abs_residual": 0.4666666666666668,
+    "max_abs_second_difference": 1.0
+   },
+   "record_secondary_verdict": "holds",
+   "substituted_secondary_verdict": "holds",
+   "changed_primary": false,
+   "changed_secondary": false
+  },
+  "2^5": {
+   "record_series": [
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0,
+    15.0,
+    22.0
+   ],
+   "substituted_series": [
+    9.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0,
+    15.0
+   ],
+   "complete": true,
+   "record_primary": {
+    "n": 8,
+    "intercept": -4.0,
+    "slope": 1.5,
+    "max_abs_residual": 3.5,
+    "max_abs_second_difference": 6.0
+   },
+   "substituted_primary": {
+    "n": 8,
+    "intercept": 1.083333333333334,
+    "slope": 0.9166666666666666,
+    "max_abs_residual": 0.5833333333333321,
+    "max_abs_second_difference": 1.0
+   },
+   "record_primary_verdict": "fails",
+   "substituted_primary_verdict": "holds",
+   "record_secondary": {
+    "n": 6,
+    "intercept": 1.0,
+    "slope": 1.0,
+    "max_abs_residual": 0.0,
+    "max_abs_second_difference": 0.0
+   },
+   "substituted_secondary": {
+    "n": 6,
+    "intercept": 1.666666666666666,
+    "slope": 0.8571428571428571,
+    "max_abs_residual": 0.47619047619047805,
+    "max_abs_second_difference": 1.0
+   },
+   "record_secondary_verdict": "holds",
+   "substituted_secondary_verdict": "holds",
+   "changed_primary": true,
+   "changed_secondary": false
+  },
+  "ship": {
+   "record_series": [
+    8.0,
+    9.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    16.0
+   ],
+   "substituted_series": [
+    8.0,
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    13.0
+   ],
+   "complete": true,
+   "record_primary": {
+    "n": 8,
+    "intercept": -0.773809523809522,
+    "slope": 1.0238095238095237,
+    "max_abs_residual": 1.416666666666666,
+    "max_abs_second_difference": 2.0
+   },
+   "substituted_primary": {
+    "n": 8,
+    "intercept": 0.9166666666666661,
+    "slope": 0.8333333333333334,
+    "max_abs_residual": 0.41666666666666696,
+    "max_abs_second_difference": 1.0
+   },
+   "record_primary_verdict": "fails",
+   "substituted_primary_verdict": "holds",
+   "record_secondary": {
+    "n": 6,
+    "intercept": 1.7333333333333343,
+    "slope": 0.7714285714285715,
+    "max_abs_residual": 0.4476190476190496,
+    "max_abs_second_difference": 1.0
+   },
+   "substituted_secondary": {
+    "n": 6,
+    "intercept": 0.6666666666666661,
+    "slope": 0.8571428571428571,
+    "max_abs_residual": 0.47619047619047716,
+    "max_abs_second_difference": 1.0
+   },
+   "record_secondary_verdict": "holds",
+   "substituted_secondary_verdict": "holds",
+   "changed_primary": true,
+   "changed_secondary": false
+  },
+  "paper": {
+   "record_series": [
+    8.0,
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0
+   ],
+   "substituted_series": [
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    11.0,
+    12.0,
+    13.0
+   ],
+   "complete": true,
+   "record_primary": {
+    "n": 8,
+    "intercept": 0.08333333333333393,
+    "slope": 0.9166666666666666,
+    "max_abs_residual": 0.583333333333333,
+    "max_abs_second_difference": 1.0
+   },
+   "substituted_primary": {
+    "n": 8,
+    "intercept": 0.6785714285714288,
+    "slope": 0.8214285714285714,
+    "max_abs_residual": 0.4642857142857135,
+    "max_abs_second_difference": 1.0
+   },
+   "record_primary_verdict": "holds",
+   "substituted_primary_verdict": "holds",
+   "record_secondary": {
+    "n": 6,
+    "intercept": 0.6666666666666661,
+    "slope": 0.8571428571428571,
+    "max_abs_residual": 0.47619047619047716,
+    "max_abs_second_difference": 1.0
+   },
+   "substituted_secondary": {
+    "n": 6,
+    "intercept": 0.3333333333333339,
+    "slope": 0.8571428571428571,
+    "max_abs_residual": 0.4761904761904763,
+    "max_abs_second_difference": 1.0
+   },
+   "record_secondary_verdict": "holds",
+   "substituted_secondary_verdict": "holds",
+   "changed_primary": false,
+   "changed_secondary": false
+  }
+ },
+ "summary": {
+  "cells_total": 40,
+  "cells_ok": 40,
+  "cells_error": 0,
+  "cells_timeout": 0,
+  "cells_no_count60": 0,
+  "brasil_solves": 690,
+  "brasil_unconverged": 398,
+  "brasil_exceptions": 0,
+  "changed_widths": [
+   "2^5",
+   "ship"
+  ],
+  "partial_widths": [],
+  "record_primary_verdict": "mixed",
+  "substituted_primary_verdict": "transient-specific",
+  "record_rational_fail_widths": [
+   "2^5",
+   "ship"
+  ],
+  "substituted_rational_fail_widths": []
+ }
+}
