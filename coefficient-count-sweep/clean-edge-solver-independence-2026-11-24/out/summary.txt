@@ -1,0 +1,27 @@
+Clean-edge solver-independence research summary
+=======================================================
+
+BRASIL 60-digit control:
+  2^5 rel:1e-15          count 15  pair [6/8]  e60 6.4804911767675102e-16  guard 0.0076084740911630768  BRASIL-converged False
+  ship rel:1e-15         count 13  pair [6/6]  e60 8.8616641776340029e-16  guard 0.044287004445073072  BRASIL-converged False
+
+Independent arm (SK construction + Remez/Newton polish):
+  2^5  count 15: meeting pairs [[6, 8], [7, 7]], best e60 7.0226416642394374e-16
+       targeted Newton [6/8]: e60 2.5634851571260719e-16  guard 0.0078417105153113476  meets True  4001 meets True
+       convergence: certificate False, newton_ok False (maximum Newton iterations), grid/ref 1.3752977236590628
+  2^5  count 14: best e60 8.4753572430358747e-15, no meeting pair
+       de la Vallee Poussin min grid bound 1.3249223056307639e-15 (> target: True)
+  ship count 13: SK best e60 1.8067095438838784e-15
+       targeted Newton [6/6]: e60 5.3885322603847251e-16  guard 0.04452579531066782  meets True  4001 meets True
+       convergence: certificate False, newton_ok False (maximum Newton iterations), grid/ref 1.1394203925421675
+  ship count 12: best e60 2.9284113044804476e-14, no meeting pair
+       de la Vallee Poussin min grid bound 5.359156349772307e-15 (> target: True)
+
+Remez/Newton solver notes:
+  known-answer test passed: t^4..t^8 minimax polynomials with exact errors 2^(1-n)
+  cold [6/8]: best-admissible, not certified, meets=False at 1.753192978686451e-15 (grid/ref 131.0167217149823), spurious near-pole local solution
+  weighted least squares (Sanathanan-Koerner) supplied the good starting fit; targeted Newton then reached 2.56e-16 (2^5) and 5.39e-16 (ship)
+  neither targeted fit reached a full equioscillation certificate (newton_ok False); the counts rest on the constructive fits plus the de la Vallee Poussin bounds
+
+Conclusion: independent counts 15 (2^5) and 13 (ship), identical to BRASIL;
+the clean-edge meeting counts are not solver-specific.

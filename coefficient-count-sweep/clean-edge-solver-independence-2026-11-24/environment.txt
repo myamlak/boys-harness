@@ -1,0 +1,22 @@
+Clean-edge solver-independence environment
+==========================================
+Captured from C:\Users\myaml\dev\_clean-edge-solver-independence-2026-11-24
+on 2026-11-24 at 22:26 UTC with `python -I` and importlib.metadata.
+
+platform: Windows-11-10.0.26200-SP0
+machine: AMD64
+python_version: 3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]
+python_executable: C:\Users\myaml\AppData\Local\Python\pythoncore-3.14-64\python.exe
+
+mpmath: 1.4.1
+mpmath.libmp.BACKEND: gmpy (gmpy2 2.3.1)
+numpy: 2.5.2
+scipy: 1.18.1
+baryrat: 2.1.2
+gmpy2: 2.3.1
+
+The independent arm imports only mpmath beside the standard library. numpy,
+scipy and baryrat are recorded because the surrounding control environment
+uses them; baryrat 2.1.2 is the BRASIL dependency. No deposited script
+imports numpy, scipy or baryrat. mpmath resolves its libmp backend to gmpy
+because gmpy2 2.3.1 is importable and MPMATH_NOGMPY is not set.
