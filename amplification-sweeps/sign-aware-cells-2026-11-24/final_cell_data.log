@@ -1,0 +1,36 @@
+cell data
+==============================================================================
+
+A1 absolute n=2  state=product  loser=ship  trunc_order=ship
+  x_ship = 0x1.2afc28a320f1cp+0  (1.1679101370108986)  served=4  mode=recursed
+  x_prod = 0x1.14f5adfc80fd9p-17  (8.254041852680183e-06)  band_index=0  mode=product
+  delivered ship bits = 3fb6f8c2e578d579  0x1.6f8c2e578d579p-4
+  delivered prod bits = 3fc9998fb567c0b0  0x1.9998fb567c0b0p-3
+  model ship bits     = 3fb6f8c2e578d579  match=True
+  model prod bits     = 3fc9998fb567c0b0  match=True
+  exp probe exp(-x)   = 0x1.3e7b0ad01ef63p-2  half = 0x1.3e7b0ad01ef63p-3  bits=3fc3e7b0ad01ef63
+  half*2 == exp       = True
+  record t_ship=-6.4917454300308284e-19  t_prod=-4.2299035600448165e-18
+  record C_ship=4.416689911177222e-16  C_prod=2.0361369054747489e-16
+  record r_ship=7.7398423691274816e-17  r_prod=4.6001193660319236e-17
+  cert row ship: t=-6.4917454300308284e-19 C=4.416689911177222e-16 e=-7.8047598234277899e-17 r=-7.7398423691274816e-17 mode=recursed c_seed=2.362400917526392e-16 c_rec=1.378912963142198e-16 c_exp=6.753760305086321e-17
+  cert row prod: t=-4.2299035600448165e-18 C=2.0361369054747489e-16 e=-5.0231097220364053e-17 r=-4.6001193660319236e-17 mode=product
+  exactroute ship (exact e^-x/2) = 0.0897332964167016459237522
+  exactroute prod               = 0.1999988208549488460199403
+
+A2 absolute n=23  state=product  loser=ship  trunc_order=ship
+  x_ship = 0x1.5bae4437a047ep+3  (10.865022762913437)  served=32  mode=recursed
+  x_prod = 0x1.940f1dc4271a6p+2  (6.3134226241640246)  band_index=1  mode=product
+  delivered ship bits = 3ea8007e6ae55cc5  0x1.8007e6ae55cc5p-21
+  delivered prod bits = 3f0b1b3000bcf884  0x1.b1b3000bcf884p-15
+  model ship bits     = 3ea8007e6ae55cc5  match=True
+  model prod bits     = 3f0b1b3000bcf884  match=True
+  exp probe exp(-x)   = 0x1.40b37c002fc69p-16  half = 0x1.40b37c002fc69p-17  bits=3ee40b37c002fc69
+  half*2 == exp       = True
+  record t_ship=-8.8263878025284688e-20  t_prod=8.8323567988376423e-20
+  record C_ship=7.3514595105562318e-18  C_prod=6.4838301930096881e-20
+  record r_ship=4.6552903335651712e-19  r_prod=3.7819249319680788e-21
+  cert row ship: t=-8.8263878025284688e-20 C=7.351459510556232e-18 e=-5.537929113818018e-19 r=-4.6552903335651712e-19 mode=recursed c_seed=2.7849641152007076e-18 c_rec=4.2987625537783755e-18 c_exp=2.677328415771481e-19
+  cert row prod: t=8.8323567988376423e-20 C=6.483830193009688e-20 e=8.4541643056408344e-20 r=-3.7819249319680788e-21 mode=product
+  exactroute ship (exact e^-x/2) = 0.0000007153132253566334584156477
+  exactroute prod               = 0.00005170097582983624769971969

@@ -1,0 +1,30 @@
+==============================================================================
+A1 absolute order 2
+  reference check (certificate midpoint - record value):
+    e_c: -9.053e-62
+    e_o: 2.5274e-62
+    t_c: -9.053e-62
+    t_o: 2.5293e-62
+    r_c: 2.1346e-102
+    r_o: -1.8569e-65
+  max |diff| = 9.053e-62 (60-digit reference rounding)
+  containment with the record's 1e-45 tier margin: True
+  record sign-blind test: above=False below=False same_sign=False magnitude=False (intersects, as the 0/16 deposit says)
+  certified: signs e_c=-1 e_o=-1; e_c-e_o sign +1; e_c+e_o sign -1; signed_above=True same_sign=True magnitude=True
+  paper framework (record t + certified rounding): combined in [2.7816501e-17, 2.7816501e-17], certifies=True
+==============================================================================
+A2 absolute order 23
+  reference check (certificate midpoint - record value):
+    e_c: 7.2839e-65
+    e_o: -9.1664e-65
+    t_c: 7.2839e-65
+    t_o: -1.5245e-62
+    r_c: -1.1518e-105
+    r_o: 1.5154e-62
+  max |diff| = 1.525e-62 (60-digit reference rounding)
+  containment with the record's 1e-45 tier margin: True
+  record sign-blind test: above=False below=False same_sign=False magnitude=False (intersects, as the 0/16 deposit says)
+  certified: signs e_c=+1 e_o=-1; e_c-e_o sign +1; e_c+e_o sign -1; signed_above=True same_sign=False magnitude=True
+  paper framework (record t + certified rounding): combined in [-4.6925127e-19, -4.6925127e-19], certifies=True
+==============================================================================
+wrote reference_check.json
