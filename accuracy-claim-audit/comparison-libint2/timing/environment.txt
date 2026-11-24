@@ -1,0 +1,9 @@
+record: 2026-11-24 21:56 local (run-gate.txt timestamp)
+host: WSL2 on Windows 11, Microsoft kernel 6.18.33.2-microsoft-standard-WSL2, x86_64
+cpu: Intel(R) Core(TM) i7-9850H CPU @ 2.60GHz
+compiler: g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+flags: -O3 -mavx2 -mfma
+libint2: 2.13.1
+grid: tests/data/boys_accuracy_gate_reference.csv (boys tag v5.3.3), second column
+arguments: 1797 unique, orders 0..32
+protocol: two warm-up passes per arm, five timed repeats, median

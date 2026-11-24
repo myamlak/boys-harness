@@ -1,0 +1,6 @@
+# arguments: 1797, orders: 0..32
+boys_ladder  total 0.000051 s  ns/argument      28.38  ns/order    0.86
+boys_batch   total 0.000064 s  ns/argument      35.61  ns/order    1.08
+cheb7        total 0.000092 s  ns/argument      51.14  ns/order    1.55
+reference2   total 0.006522 s  ns/argument    3629.60  ns/order  109.99
+# checksum 3309.5230437145351
