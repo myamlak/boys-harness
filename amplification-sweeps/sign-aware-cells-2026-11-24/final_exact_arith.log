@@ -1,0 +1,9 @@
+EFT self-test: 2000 random pairs reconstruct exactly (TwoSum, TwoDiff, TwoProd)
+Chebyshev sum == split-Clenshaw expression exactly; worst |diff| = 0.0
+delivered product basis vs exact T_k: worst relative deviation = 3.058144283294112e-15 (rounding, charged to r)
+F_2(1.1679101370108986) enclosed by k=50, width=1.651e-65, ref inside=True
+F_2(8.254041852680183e-06) enclosed by k=11, width=7.199e-72, ref inside=True
+F_23(10.865022762913437) enclosed by k=106, width=2.239e-64, ref inside=True
+F_23(6.3134226241640246) enclosed by k=85, width=1.253e-64, ref inside=True
+exp(-1.1679101370108986)/2 enclosed by k=51, width=1.984e-65, ref inside=True
+exp(-10.865022762913437)/2 enclosed by k=108, width=2.929e-64, ref inside=True

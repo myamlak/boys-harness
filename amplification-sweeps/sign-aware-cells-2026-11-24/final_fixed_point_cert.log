@@ -1,0 +1,18 @@
+==================================================================================
+A1 absolute order 2
+  P= 64: correction in [2.976135e-17, 3.306817e-17] width 3.307e-18 sign + threshold 3.581e-18 certifies=True
+  P= 80: correction in [3.139721e-17, 3.139725e-17] width 4.467e-23 sign + threshold 3.581e-18 certifies=True
+  P= 96: correction in [3.139723e-17, 3.139723e-17] width 6.058e-28 sign + threshold 3.581e-18 certifies=True
+  P=112: correction in [3.139723e-17, 3.139723e-17] width 7.511e-33 sign + threshold 3.581e-18 certifies=True
+  P=128: correction in [3.139723e-17, 3.139723e-17] width 1.205e-37 sign + threshold 3.581e-18 certifies=True
+  P=160: correction in [3.139723e-17, 3.139723e-17] width 2.805e-47 sign + threshold 3.581e-18 certifies=True
+==================================================================================
+A2 absolute order 23
+  P= 64: correction in [-4.201283e-17, 3.984443e-17] width 8.186e-17 sign 0 threshold 5.969e-23 certifies=False
+  P= 80: correction in [-4.699958e-19, -4.686210e-19] width 1.375e-21 sign - threshold 5.969e-23 certifies=True
+  P= 96: correction in [-4.693110e-19, -4.693109e-19] width 2.359e-26 sign - threshold 5.969e-23 certifies=True
+  P=112: correction in [-4.693110e-19, -4.693110e-19] width 2.650e-31 sign - threshold 5.969e-23 certifies=True
+  P=128: correction in [-4.693110e-19, -4.693110e-19] width 5.078e-36 sign - threshold 5.969e-23 certifies=True
+  P=160: correction in [-4.693110e-19, -4.693110e-19] width 1.246e-45 sign - threshold 5.969e-23 certifies=True
+==================================================================================
+wrote fixed_point_cert.json
