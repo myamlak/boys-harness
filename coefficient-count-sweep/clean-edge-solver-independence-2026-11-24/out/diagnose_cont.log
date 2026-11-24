@@ -1,0 +1,13 @@
+[6/0] conv=True grid_max=0.00013523703122685803 guard=1.0 extrema_ref=8 (0.5s)
+[6/1] conv=False status=best-admissible grid_max=6.7405980462510243e-7 guard=0.29928190336748799 ratio=3.4857742711077042 newton=maximum Newton iterations (37.7s)
+[6/2] conv=False status=best-admissible grid_max=1.4582829890264354e-8 guard=0.12246556860420796 ratio=10.118605204760686 newton=maximum Newton iterations (41.3s)
+[6/3] conv=False status=best-admissible grid_max=5.9749195488038773e-10 guard=0.061069443293815193 ratio=16.374801309205237 newton=maximum Newton iterations (44.7s)
+[6/4] conv=False status=best-admissible grid_max=3.1947615184743228e-11 guard=0.035024115760893735 ratio=28.551755790978527 newton=maximum Newton iterations (47.5s)
+[6/5] conv=False status=best-admissible grid_max=2.1685291464895605e-12 guard=0.022209709033888856 ratio=45.295996212412203 newton=maximum Newton iterations (64.6s)
+[6/6] conv=False status=best-admissible grid_max=1.7742304532062861e-13 guard=0.015185576894252494 ratio=67.737859793393924 newton=maximum Newton iterations (75.5s)
+[6/7] conv=False status=best-admissible grid_max=1.6397047958759703e-14 guard=0.011002218276053548 ratio=94.866917288321452 newton=maximum Newton iterations (89.6s)
+[6/8] conv=False status=best-admissible grid_max=1.753192978686451e-15 guard=0.0083463293329078285 ratio=131.0167217149823 newton=maximum Newton iterations (126.2s)
+
+best along continuation: [6/8] grid_max=1.753192978686451e-15 converged=False
+60-digit score of the best fit: e60= 1.753192978686451e-15 guard60= 0.0083463293329078285 meets= False at t= -0.985
+total 527.8s

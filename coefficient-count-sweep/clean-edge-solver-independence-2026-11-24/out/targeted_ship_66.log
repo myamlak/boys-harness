@@ -1,0 +1,11 @@
+start [6/6] e=1.806709544e-15 guard=0.0446714 extrema=14 ref=14
+round 0: newton_ok=False note=maximum Newton iterations e=5.610043286e-16 guard=0.0445424 ratio=1.25595 extrema=14 (4s)
+round 1: newton_ok=False note=maximum Newton iterations e=5.403360143e-16 guard=0.0445255 ratio=1.14339 extrema=14 (4s)
+round 2: newton_ok=False note=maximum Newton iterations e=5.388620341e-16 guard=0.0445258 ratio=1.13945 extrema=14 (4s)
+round 3: newton_ok=False note=maximum Newton iterations e=5.388532489e-16 guard=0.0445258 ratio=1.13942 extrema=14 (5s)
+round 4: newton_ok=False note=maximum Newton iterations e=5.38853226e-16 guard=0.0445258 ratio=1.13942 extrema=14 (5s)
+round 5: newton_ok=False note=maximum Newton iterations e=5.388532266e-16 guard=0.0445258 ratio=1.13942 extrema=14 (5s)
+round 6: newton_ok=False note=maximum Newton iterations e=5.388532266e-16 guard=0.0445258 ratio=1.13942 extrema=14 (5s)
+round 7: newton_ok=False note=maximum Newton iterations e=5.388532266e-16 guard=0.0445258 ratio=1.13942 extrema=14 (5s)
+BEST round 4: e60=5.3885322603847251e-16 guard60=0.04452579531066782 meets=True e60_4001=5.4026100869330508e-16
+wrote out/targeted_ship_66.json

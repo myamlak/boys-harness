@@ -1,0 +1,2 @@
+A cold-DC maehly: conv=False status=best-admissible grid_max=3.2735960767499298e-15 guard=0.008527192409326091 ratio=636.21490306900028 newton=maximum Newton iterations (83s)
+B interp Newton maehly: conv=False status=best-admissible grid_max=2.547458509183707e-15 guard=0.0084734890319453798 ratio=395.85075543212706 newton=maximum Newton iterations (304s)
