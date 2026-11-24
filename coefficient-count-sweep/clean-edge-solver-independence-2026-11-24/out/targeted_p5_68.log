@@ -1,0 +1,11 @@
+start [6/8] e=8.023033446e-16 guard=0.00791048 extrema=16 ref=16
+round 0: newton_ok=False note=maximum Newton iterations e=3.624804813e-16 guard=0.00782889 ratio=2.274 extrema=16 (3s)
+round 1: newton_ok=False note=maximum Newton iterations e=2.642431756e-16 guard=0.00783468 ratio=1.45304 extrema=16 (4s)
+round 2: newton_ok=False note=maximum Newton iterations e=2.563485157e-16 guard=0.00784171 ratio=1.3753 extrema=16 (4s)
+round 3: newton_ok=False note=maximum Newton iterations e=2.581428833e-16 guard=0.00784503 ratio=1.37339 extrema=16 (4s)
+round 4: newton_ok=False note=maximum Newton iterations e=2.590551345e-16 guard=0.00784575 ratio=1.3722 extrema=16 (4s)
+round 5: newton_ok=False note=maximum Newton iterations e=2.593136874e-16 guard=0.00784614 ratio=1.37183 extrema=16 (5s)
+round 6: newton_ok=False note=maximum Newton iterations e=2.5940307e-16 guard=0.00784631 ratio=1.37173 extrema=16 (5s)
+round 7: newton_ok=False note=maximum Newton iterations e=2.594487937e-16 guard=0.00784634 ratio=1.37166 extrema=16 (4s)
+BEST round 2: e60=2.5634851571260719e-16 guard60=0.0078417105153113476 meets=True e60_4001=2.5767742029803888e-16
+wrote out/targeted_p5_68.json

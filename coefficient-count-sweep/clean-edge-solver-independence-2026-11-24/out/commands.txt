@@ -1,0 +1,87 @@
+Clean-edge solver-independence: commands and runtimes
+======================================================
+
+All runs: Windows 11, Python 3.14.7, mpmath 1.4.1, numpy 2.5.2,
+scipy 1.18.1, baryrat 2.1.2 (baryrat is not used by the independent arm).
+Scratch directory: C:\Users\myaml\dev\_clean-edge-solver-independence-2026-11-24
+No paper, record, tag or branch was modified.  Nothing was committed.
+
+1. Independent re-score of the BRASIL control fits (building-block check)
+   python -I verify_scoring.py
+   23.1 s
+   Reproduced the control's stored e60 exactly at 2,001 nodes:
+   2^5 [6/8]  6.4804911767675102e-16, guard 0.0076084740911630768
+   ship [6/6] 8.8616641776340029e-16, guard 0.044287004445073072
+   and confirmed P60 = 60-significant-digit rounding of P70.
+
+2. Known-answer test of the independent rational Remez solver
+   python -I remez_rational.py --test
+   1.0 s
+   Minimax polynomials for t^4, t^5, t^6, t^8 on [-1,1] recovered with the
+   exact theoretical errors 2^(1-n); t^4 coefficients equal t^2 - 1/8 to
+   1e-40.  PASS.
+
+3. Independent weighted-least-squares pair sweeps (70 dps; 8 processes)
+   python -I sk_pairs.py --width-name "2^5" --target "rel:1e-15" \
+       --stored 15 --jobs 8 --out out/p5_s15.json
+   60.8 s   meeting pairs [6/8] e60 8.0230e-16, [7/7] e60 7.0226e-16
+   python -I sk_pairs.py --width-name "2^5" --target "rel:1e-15" \
+       --stored 14 --jobs 8 --out out/p5_s14.json
+   48.2 s   no meeting pair; best [6/7] e60 8.4754e-15
+   python -I sk_pairs.py --width-name ship --target "rel:1e-15" \
+       --stored 13 --jobs 8 --out out/ship_s13.json
+   36.7 s   no SK meeting pair; best [6/6] e60 1.8067e-15
+   python -I sk_pairs.py --width-name ship --target "rel:1e-15" \
+       --stored 12 --jobs 8 --out out/ship_s12.json
+   32.9 s   no meeting pair; best [5/6] e60 2.9284e-14
+
+4. de la Vallee Poussin lower bounds at the below-counts (2,001-grid nodes)
+   python -I lower_bounds.py --json out/p5_s14.json --width-name "2^5" \
+       --stored 14 --out out/lb_p5_s14.json
+   5.0 s    min grid-node L = 1.3249223056307639e-15 at [6/7];
+            all 12 pairs above 1e-15
+   python -I lower_bounds.py --json out/ship_s12.json --width-name ship \
+       --stored 12 --out out/lb_ship_s12.json
+   4.3 s    min grid-node L = 5.359156349772307e-15 at [5/6];
+            all 10 pairs above 1e-15
+
+5. Targeted Newton/Remez polish of the meeting fits
+   python -I targeted_newton.py --json out/ship_s13.json --m 6 --k 6 \
+       --width-name ship --out out/targeted_ship_66.json
+   ~40 s    [6/6] e60 5.3885322603847251e-16, guard 0.04452579531066782,
+            meets; Newton ratio 1.1394, no equioscillation certificate
+   python -I targeted_newton.py --json out/p5_s15.json --m 6 --k 8 \
+       --width-name "2^5" --out out/targeted_p5_68.json
+   ~35 s    [6/8] e60 2.5634851571260719e-16, guard 0.0078417105153113476,
+            meets; Newton ratio 1.3753, no equioscillation certificate
+
+6. Dense-grid checks and summary
+   python -I final_checks.py
+   39.1 s   2^5 [6/8] 2,001 / 4,001 / 20,001 nodes:
+            2.5635e-16 / 2.5768e-16 / 2.5903e-16, all meet
+            ship [6/6] 2,001 / 4,001 / 20,001 nodes:
+            5.3885e-16 / 5.4026e-16 / 5.5278e-16, all meet
+   python -I assemble_summary.py
+   <1 s
+
+Exploratory / blocker runs
+--------------------------
+python -I remez_rational.py --a 62.0 --width 166.72481653881133 --m 6 --k 8
+   cold differential correction from Chebyshev references: 127 s, best
+   1.753192978686451e-15, guard 0.0083463, grid/reference-min ratio 131.0,
+   no certificate.  The iteration converged to a spurious near-pole local
+   solution; exact Newton on Chebyshev/extrema references diverged or
+   stalled.  This is the blocker that the weighted-least-squares
+   initialization resolved.
+
+python -I diagnose_cont.py
+   denominator-degree continuation [6/0]..[6/8]: 527.8 s, final
+   [6/8] 1.753192978686451e-15 (same spurious basin), no certificate.
+
+External package candidates checked
+-----------------------------------
+PyPI: no rational-minimax package found for `remez`, `rational-minimax`,
+`rational_approximation`, `ratinterp`; `chebfun` 0.11.0 is the polynomial
+`chebpy` package (no rational minimax); `minimax` and `pychebfun` are not
+rational minimax solvers.  The independent solver is therefore the
+from-scratch Remez/Newton implementation in remez_rational.py.
