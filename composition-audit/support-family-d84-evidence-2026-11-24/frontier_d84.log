@@ -1,0 +1,9 @@
+components 144, permitted 75, targets 66, Q 69, main effects 8
+design D84: 84 cells, 84 permitted, 60 complement, 75 targets, kappa_joint 4.0
+arm       lane       ratio     median        p95  within1%  within5%      block  ok
+fused     fp64    1.009916   1.000000   1.000080   100.00%   100.00%   1.009916 yes
+fused     fp32    1.635887   1.000000   1.013176    94.29%    98.37%   1.635887 yes
+separate  fp64    1.009916   1.000000   1.000086   100.00%   100.00%   1.009916 yes
+separate  fp32    1.705403   1.000000   1.013130    94.29%    98.37%   1.705403 yes
+
+certificate frontier block confirmed
