@@ -1,0 +1,107 @@
+components 144, permitted 75, targets 66, Q 69, main effects 8
+loading fused
+  fused/fp64: A
+  fused/fp64: B
+  fused/fp64: C
+  fused/fp32: A
+  fused/fp32: B
+  fused/fp32: C
+  done fused (35.0 s)
+loading separate
+  separate/fp64: A
+  separate/fp64: B
+  separate/fp64: C
+  separate/fp32: A
+  separate/fp32: B
+  separate/fp32: C
+  done separate (71.3 s)
+
+A. scalar transport coverage (100 splits)
+  fused/fp64       path    cov 1.000000 ctpt 0.999860 ctcell 0.999995 worst 0.518949 ctworst 1.308646 med 0.000063 p95 0.081603
+  fused/fp64       pooled  cov 1.000000 ctpt 0.999977 ctcell 0.999999 worst 0.988824 ctworst 1.002548 med 0.055639 p95 0.623794
+  fused/fp32       path    cov 1.000000 ctpt 0.999720 ctcell 0.999988 worst 0.691234 ctworst 3.370991 med 0.001021 p95 0.059471
+  fused/fp32       pooled  cov 1.000000 ctpt 0.999814 ctcell 0.999985 worst 0.625241 ctworst 2.870128 med 0.002706 p95 0.100365
+  separate/fp64    path    cov 1.000000 ctpt 1.000000 ctcell 1.000000 worst 0.510094 ctworst 0.896505 med 0.000060 p95 0.071519
+  separate/fp64    pooled  cov 1.000000 ctpt 0.999814 ctcell 0.999997 worst 0.980739 ctworst 1.018228 med 0.053313 p95 0.605286
+  separate/fp32    path    cov 1.000000 ctpt 0.999790 ctcell 0.999989 worst 0.691234 ctworst 3.370991 med 0.000947 p95 0.059810
+  separate/fp32    pooled  cov 1.000000 ctpt 0.999907 ctcell 0.999988 worst 0.622855 ctworst 2.365037 med 0.002670 p95 0.101820
+
+A. cell-subsample coverage
+  fused/fp64       path    cov 1.000000 cell 1.000000 worst 1.000000 med 0.086100
+  fused/fp64       pooled  cov 1.000000 cell 1.000000 worst 0.093205 med 0.031715
+  fused/fp32       path    cov 1.000000 cell 1.000000 worst 1.000000 med 0.208074
+  fused/fp32       pooled  cov 1.000000 cell 1.000000 worst 0.224269 med 0.055740
+  separate/fp64    path    cov 1.000000 cell 1.000000 worst 1.000000 med 0.089655
+  separate/fp64    pooled  cov 1.000000 cell 1.000000 worst 0.093389 med 0.031759
+  separate/fp32    path    cov 1.000000 cell 1.000000 worst 1.000000 med 0.202255
+  separate/fp32    pooled  cov 1.000000 cell 1.000000 worst 0.224269 med 0.057410
+
+B. planted: frozen allowance at delta0 and thresholds
+  fused/fp64       path    global_frozen     + delta0 1.108373e-15 ratio(1d0) 0.566725 maxratio 0.999184 frozen*=none
+  fused/fp64       path    global_frozen     - delta0 1.108373e-15 ratio(1d0) 0.566725 maxratio 0.999184 frozen*=none
+  fused/fp64       path    pointwise_frozen  + delta0 1.108373e-15 ratio(1d0) 1.000000 maxratio 1.000000 frozen*=none
+  fused/fp64       path    pointwise_frozen  - delta0 1.108373e-15 ratio(1d0) 1.000000 maxratio 1.000000 frozen*=none
+  fused/fp64       path    aliasT 1.000000e+00 charge/delta 1.224745
+  fused/fp64       pooled  global_frozen     + delta0 1.108373e-15 ratio(1d0) 1.224745 maxratio 1224.744871 frozen*=0.816497
+  fused/fp64       pooled  global_frozen     - delta0 1.108373e-15 ratio(1d0) 1.224745 maxratio 1224.744871 frozen*=0.816497
+  fused/fp64       pooled  pointwise_frozen  + delta0 1.108373e-15 ratio(1d0) 379761985493.241699 maxratio 170442202586830.781250 frozen*=0.000000
+  fused/fp64       pooled  pointwise_frozen  - delta0 1.108373e-15 ratio(1d0) 379540256493.741150 maxratio 169951966420031.687500 frozen*=0.000000
+  fused/fp64       pooled  aliasT 4.440892e-16 charge/delta 0.000000
+  fused/fp32       path    global_frozen     + delta0 6.842362e-07 ratio(1d0) 0.560451 maxratio 0.999184 frozen*=none
+  fused/fp32       path    global_frozen     - delta0 6.842362e-07 ratio(1d0) 0.560451 maxratio 0.999184 frozen*=none
+  fused/fp32       path    pointwise_frozen  + delta0 6.842362e-07 ratio(1d0) 1.000000 maxratio 1.000000 frozen*=none
+  fused/fp32       path    pointwise_frozen  - delta0 6.842362e-07 ratio(1d0) 1.000000 maxratio 1.000000 frozen*=none
+  fused/fp32       path    aliasT 1.000000e+00 charge/delta 1.224745
+  fused/fp32       pooled  global_frozen     + delta0 6.842362e-07 ratio(1d0) 1.224745 maxratio 1224.744871 frozen*=0.816497
+  fused/fp32       pooled  global_frozen     - delta0 6.842362e-07 ratio(1d0) 1.224745 maxratio 1224.744871 frozen*=0.816497
+  fused/fp32       pooled  pointwise_frozen  + delta0 6.842362e-07 ratio(1d0) 21859742308874.101562 maxratio 303340769137304.500000 frozen*=0.000000
+  fused/fp32       pooled  pointwise_frozen  - delta0 6.842362e-07 ratio(1d0) 21796031529058.644531 maxratio 303328382760605.375000 frozen*=0.000000
+  fused/fp32       pooled  aliasT 4.440892e-16 charge/delta 0.000000
+  separate/fp64    path    global_frozen     + delta0 1.108373e-15 ratio(1d0) 0.567355 maxratio 0.999184 frozen*=none
+  separate/fp64    path    global_frozen     - delta0 1.108373e-15 ratio(1d0) 0.567355 maxratio 0.999184 frozen*=none
+  separate/fp64    path    pointwise_frozen  + delta0 1.108373e-15 ratio(1d0) 1.000000 maxratio 1.000000 frozen*=none
+  separate/fp64    path    pointwise_frozen  - delta0 1.108373e-15 ratio(1d0) 1.000000 maxratio 1.000000 frozen*=none
+  separate/fp64    path    aliasT 1.000000e+00 charge/delta 1.224745
+  separate/fp64    pooled  global_frozen     + delta0 1.108373e-15 ratio(1d0) 1.224745 maxratio 1224.744871 frozen*=0.816497
+  separate/fp64    pooled  global_frozen     - delta0 1.108373e-15 ratio(1d0) 1.224745 maxratio 1224.744871 frozen*=0.816497
+  separate/fp64    pooled  pointwise_frozen  + delta0 1.108373e-15 ratio(1d0) 379761985493.241699 maxratio 170442202586830.781250 frozen*=0.000000
+  separate/fp64    pooled  pointwise_frozen  - delta0 1.108373e-15 ratio(1d0) 379540256493.741150 maxratio 169951966420031.687500 frozen*=0.000000
+  separate/fp64    pooled  aliasT 4.440892e-16 charge/delta 0.000000
+  separate/fp32    path    global_frozen     + delta0 6.842362e-07 ratio(1d0) 0.560306 maxratio 0.999184 frozen*=none
+  separate/fp32    path    global_frozen     - delta0 6.842362e-07 ratio(1d0) 0.560306 maxratio 0.999184 frozen*=none
+  separate/fp32    path    pointwise_frozen  + delta0 6.842362e-07 ratio(1d0) 1.000000 maxratio 1.000000 frozen*=none
+  separate/fp32    path    pointwise_frozen  - delta0 6.842362e-07 ratio(1d0) 1.000000 maxratio 1.000000 frozen*=none
+  separate/fp32    path    aliasT 1.000000e+00 charge/delta 1.224745
+  separate/fp32    pooled  global_frozen     + delta0 6.842362e-07 ratio(1d0) 1.224745 maxratio 1224.744871 frozen*=0.816497
+  separate/fp32    pooled  global_frozen     - delta0 6.842362e-07 ratio(1d0) 1.224745 maxratio 1224.744871 frozen*=0.816497
+  separate/fp32    pooled  pointwise_frozen  + delta0 6.842362e-07 ratio(1d0) 21859742308874.105469 maxratio 303340769137304.437500 frozen*=0.000000
+  separate/fp32    pooled  pointwise_frozen  - delta0 6.842362e-07 ratio(1d0) 21796031529058.652344 maxratio 303328382760605.375000 frozen*=0.000000
+  separate/fp32    pooled  aliasT 4.440892e-16 charge/delta 0.000000
+
+B. planted: self-consistent allowance
+  fused/fp64       path    self_consistent_exact  ratio(1d0) 0.211210 th=none maxratio 1.000000 at1000 0.200011
+  fused/fp64       path    self_consistent_upper  ratio(1d0) 0.211210 th=none maxratio 1.000000 at1000 0.200011
+  fused/fp64       pooled  self_consistent_exact  ratio(1d0) 0.781147 th=none maxratio 0.999884 at1000 0.252636
+  fused/fp64       pooled  self_consistent_upper  ratio(1d0) 0.781147 th=none maxratio 0.999884 at1000 0.252636
+  fused/fp32       path    self_consistent_exact  ratio(1d0) 0.208593 th=none maxratio 1.000000 at1000 0.200009
+  fused/fp32       path    self_consistent_upper  ratio(1d0) 0.208593 th=none maxratio 1.000000 at1000 0.200009
+  fused/fp32       pooled  self_consistent_exact  ratio(1d0) 0.267430 th=none maxratio 1.000000 at1000 0.250018
+  fused/fp32       pooled  self_consistent_upper  ratio(1d0) 0.267430 th=none maxratio 1.000000 at1000 0.250018
+  separate/fp64    path    self_consistent_exact  ratio(1d0) 0.215379 th=none maxratio 1.000000 at1000 0.200016
+  separate/fp64    path    self_consistent_upper  ratio(1d0) 0.215379 th=none maxratio 1.000000 at1000 0.200016
+  separate/fp64    pooled  self_consistent_exact  ratio(1d0) 0.781148 th=none maxratio 0.999882 at1000 0.252627
+  separate/fp64    pooled  self_consistent_upper  ratio(1d0) 0.781148 th=none maxratio 0.999882 at1000 0.252627
+  separate/fp32    path    self_consistent_exact  ratio(1d0) 0.208460 th=none maxratio 1.000000 at1000 0.200009
+  separate/fp32    path    self_consistent_upper  ratio(1d0) 0.208460 th=none maxratio 1.000000 at1000 0.200009
+  separate/fp32    pooled  self_consistent_exact  ratio(1d0) 0.270213 th=none maxratio 1.000000 at1000 0.250021
+  separate/fp32    pooled  self_consistent_upper  ratio(1d0) 0.270213 th=none maxratio 1.000000 at1000 0.250021
+
+C. pointwise ratio distribution
+  fused/fp64       path    min 1.000000 med 1.000000 p95 1.000079 max 1.011051 <=1.01 0.9988 <=1.05 1.0000
+  fused/fp64       pooled  min 1.000000 med 1.000000 p95 1.000080 max 1.009916 <=1.01 1.0000 <=1.05 1.0000
+  fused/fp32       path    min 1.000000 med 1.000000 p95 1.014543 max 1.619582 <=1.01 0.9429 <=1.05 0.9837
+  fused/fp32       pooled  min 1.000000 med 1.000000 p95 1.013176 max 1.635887 <=1.01 0.9429 <=1.05 0.9837
+  separate/fp64    path    min 1.000000 med 1.000000 p95 1.000085 max 1.011051 <=1.01 0.9988 <=1.05 1.0000
+  separate/fp64    pooled  min 1.000000 med 1.000000 p95 1.000086 max 1.009916 <=1.01 1.0000 <=1.05 1.0000
+  separate/fp32    path    min 1.000000 med 1.000000 p95 1.014543 max 1.657322 <=1.01 0.9429 <=1.05 0.9837
+  separate/fp32    pooled  min 1.000000 med 1.000000 p95 1.013130 max 1.705403 <=1.01 0.9429 <=1.05 0.9837

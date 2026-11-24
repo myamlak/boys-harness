@@ -1,0 +1,2500 @@
+{
+ "field": "Q(sqrt2, sqrt3)",
+ "design": "D84",
+ "counts": {
+  "cells": 84,
+  "permitted": 84,
+  "complement": 60,
+  "targets": 75
+ },
+ "exact_inverse_exists": true,
+ "exact_alias_matrix": true,
+ "exact_B_vs_float_max_deviation": 1.3322676295501878e-15,
+ "rows": [
+  {
+   "beta": 55,
+   "support": [
+    "scheme",
+    "partition",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    0,
+    1,
+    1,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "24",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 56,
+   "support": [
+    "scheme",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "3/2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.5,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 10,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 57,
+   "support": [
+    "scheme",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "3/2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.5,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 67,
+   "support": [
+    "scheme",
+    "partition",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    0,
+    1,
+    2,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 19,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "32",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 68,
+   "support": [
+    "scheme",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    1,
+    2,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 22,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "48",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 69,
+   "support": [
+    "scheme",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    1,
+    2,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 19,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "48",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 91,
+   "support": [
+    "route",
+    "partition",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "24",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 92,
+   "support": [
+    "route",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "3/2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.5,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 10,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 93,
+   "support": [
+    "route",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "3/2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.5,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 103,
+   "support": [
+    "route",
+    "partition",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    1,
+    0,
+    2,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 19,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "32",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 104,
+   "support": [
+    "route",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    0,
+    2,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 22,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "48",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 105,
+   "support": [
+    "route",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    0,
+    2,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 19,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "48",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 115,
+   "support": [
+    "route",
+    "scheme",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    1,
+    1,
+    0,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "1",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.0,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "16",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 116,
+   "support": [
+    "route",
+    "scheme",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 10,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "24",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 117,
+   "support": [
+    "route",
+    "scheme",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "24",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 127,
+   "support": [
+    "route",
+    "scheme",
+    "partition",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "24",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 128,
+   "support": [
+    "route",
+    "scheme",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "3/2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.5,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 10,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 129,
+   "support": [
+    "route",
+    "scheme",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "3/2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.5,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 139,
+   "support": [
+    "route",
+    "scheme",
+    "partition",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    1,
+    1,
+    2,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 19,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "32",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 140,
+   "support": [
+    "route",
+    "scheme",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    1,
+    2,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 22,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "48",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 141,
+   "support": [
+    "route",
+    "scheme",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    1,
+    2,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 4.0,
+   "argmax_cell": 19,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 4,
+   "ratio_squared_exact": [
+    "48",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 19,
+   "support": [
+    "partition",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27/2",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 20,
+   "support": [
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "3/2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.5,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 10,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "81/4",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 21,
+   "support": [
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "3/2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.5,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "81/4",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 31,
+   "support": [
+    "partition",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    0,
+    0,
+    2,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 19,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "18",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 32,
+   "support": [
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    0,
+    2,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 22,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 33,
+   "support": [
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    0,
+    2,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 19,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 43,
+   "support": [
+    "scheme",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "1",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.0,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "9",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 44,
+   "support": [
+    "scheme",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    1,
+    0,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 10,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27/2",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 45,
+   "support": [
+    "scheme",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27/2",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 58,
+   "support": [
+    "scheme",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    1,
+    1,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 59,
+   "support": [
+    "scheme",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    1,
+    1,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 70,
+   "support": [
+    "scheme",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    1,
+    2,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 2.0,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 20,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 71,
+   "support": [
+    "scheme",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    1,
+    2,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 2.0,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 20,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 79,
+   "support": [
+    "route",
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "1",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.0,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "9",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 80,
+   "support": [
+    "route",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 10,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27/2",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 81,
+   "support": [
+    "route",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 7,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27/2",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 94,
+   "support": [
+    "route",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    0,
+    1,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 95,
+   "support": [
+    "route",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    0,
+    1,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 106,
+   "support": [
+    "route",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    0,
+    2,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 2.0,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 20,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 107,
+   "support": [
+    "route",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    0,
+    2,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 2.0,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 20,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 118,
+   "support": [
+    "route",
+    "scheme",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    1,
+    0,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "18",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 119,
+   "support": [
+    "route",
+    "scheme",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    1,
+    0,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "18",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 130,
+   "support": [
+    "route",
+    "scheme",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 131,
+   "support": [
+    "route",
+    "scheme",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "27",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 142,
+   "support": [
+    "route",
+    "scheme",
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    1,
+    2,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 2.0,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 20,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 143,
+   "support": [
+    "route",
+    "scheme",
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    1,
+    2,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 2.0,
+   "sup_ratio_float": 3.0,
+   "argmax_cell": 20,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 3,
+   "ratio_squared_exact": [
+    "36",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 22,
+   "support": [
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 2.5,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": "5/2",
+   "ratio_squared_exact": [
+    "75/4",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 23,
+   "support": [
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   "G_float": 1.7320508075688772,
+   "sup_ratio_float": 2.5,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": "5/2",
+   "ratio_squared_exact": [
+    "75/4",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 34,
+   "support": [
+    "partition",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    0,
+    2,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 2.0,
+   "sup_ratio_float": 2.5,
+   "argmax_cell": 20,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": "5/2",
+   "ratio_squared_exact": [
+    "25",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 35,
+   "support": [
+    "partition",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    0,
+    2,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "2",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 2.0,
+   "sup_ratio_float": 2.5,
+   "argmax_cell": 20,
+   "argmax_levels": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": "5/2",
+   "ratio_squared_exact": [
+    "25",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 46,
+   "support": [
+    "scheme",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    1,
+    0,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 2.5,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": "5/2",
+   "ratio_squared_exact": [
+    "25/2",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 47,
+   "support": [
+    "scheme",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    1,
+    0,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 2.5,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": "5/2",
+   "ratio_squared_exact": [
+    "25/2",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 82,
+   "support": [
+    "route",
+    "pack",
+    "form"
+   ],
+   "choices": [
+    1,
+    0,
+    0,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 2.5,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": "5/2",
+   "ratio_squared_exact": [
+    "25/2",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 83,
+   "support": [
+    "route",
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    1,
+    0,
+    0,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 2.5,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": "5/2",
+   "ratio_squared_exact": [
+    "25/2",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 9,
+   "support": [
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 2.0,
+   "argmax_cell": 6,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "exact_kappa": 2,
+   "ratio_squared_exact": [
+    "6",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 11,
+   "support": [
+    "pack",
+    "form",
+    "exp"
+   ],
+   "choices": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    1
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 2.0,
+   "argmax_cell": 8,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "exact_kappa": 2,
+   "ratio_squared_exact": [
+    "8",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 7,
+   "support": [
+    "pack",
+    "exp"
+   ],
+   "choices": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "G_exact": [
+    "1",
+    "0",
+    "0",
+    "0"
+   ],
+   "G_float": 1.0,
+   "sup_ratio_float": 1.0,
+   "argmax_cell": 0,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "exact_kappa": 1,
+   "ratio_squared_exact": [
+    "1",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 8,
+   "support": [
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "0",
+    "0",
+    "1/2"
+   ],
+   "G_float": 1.224744871391589,
+   "sup_ratio_float": 1.0,
+   "argmax_cell": 0,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "exact_kappa": 1,
+   "ratio_squared_exact": [
+    "3/2",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "beta": 10,
+   "support": [
+    "pack",
+    "form"
+   ],
+   "choices": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    0
+   ],
+   "G_exact": [
+    "0",
+    "1",
+    "0",
+    "0"
+   ],
+   "G_float": 1.4142135623730951,
+   "sup_ratio_float": 1.0,
+   "argmax_cell": 2,
+   "argmax_levels": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "exact_kappa": 1,
+   "ratio_squared_exact": [
+    "2",
+    "0",
+    "0",
+    "0"
+   ]
+  }
+ ],
+ "exact_kappa_joint_values": [
+  1.0,
+  2.0,
+  2.5,
+  3.0,
+  4.0
+ ],
+ "exact_kappa_joint": "4",
+ "all_betas_exact": true,
+ "planted_channel": {
+  "component": 8,
+  "support": [
+   "pack",
+   "form"
+  ],
+  "target_aliases_exactly_zero": 75,
+  "target_count": 75,
+  "max_abs_target_alias_float": 0.0,
+  "nonzero_targets": []
+ },
+ "runtime_seconds": 131.04350190004334
+}

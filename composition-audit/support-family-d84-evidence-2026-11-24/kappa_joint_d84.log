@@ -1,0 +1,33 @@
+components 144, permitted 75, targets 66, Q 69, main effects 8
+cells 84, permitted 84, complement 60, targets 75
+building the exact 144-cell basis
+  exact vs float Phi max deviation: 4.441e-16 (6.0 s)
+  exact G vs float G max deviation: 4.441e-16
+forming the exact Gram matrix
+inverting the 84 x 84 permitted block exactly
+  exact inverse and alias matrix done (92.2 s)
+  exact B vs float B max deviation: 1.332e-15
+computing 60 x 144 exact residuals
+
+exact kappa_joint per beta (largest 10 shown):
+  beta  55 support ['scheme', 'partition', 'pack', 'exp'] G=1.224745 sup=4.000000000000 exact=4 at cell 7
+  beta  56 support ['scheme', 'partition', 'pack', 'form'] G=1.500000 sup=4.000000000000 exact=4 at cell 10
+  beta  57 support ['scheme', 'partition', 'pack', 'form', 'exp'] G=1.500000 sup=4.000000000000 exact=4 at cell 7
+  beta  67 support ['scheme', 'partition', 'pack', 'exp'] G=1.414214 sup=4.000000000000 exact=4 at cell 19
+  beta  68 support ['scheme', 'partition', 'pack', 'form'] G=1.732051 sup=4.000000000000 exact=4 at cell 22
+  beta  69 support ['scheme', 'partition', 'pack', 'form', 'exp'] G=1.732051 sup=4.000000000000 exact=4 at cell 19
+  beta  91 support ['route', 'partition', 'pack', 'exp'] G=1.224745 sup=4.000000000000 exact=4 at cell 7
+  beta  92 support ['route', 'partition', 'pack', 'form'] G=1.500000 sup=4.000000000000 exact=4 at cell 10
+  beta  93 support ['route', 'partition', 'pack', 'form', 'exp'] G=1.500000 sup=4.000000000000 exact=4 at cell 7
+  beta 103 support ['route', 'partition', 'pack', 'exp'] G=1.414214 sup=4.000000000000 exact=4 at cell 19
+
+60/60 betas have an exact rational supremum
+exact kappa_joint values: [1.0, 2.0, 2.5, 3.0, 4.0]
+
+planted channel 8 support ['pack', 'form']:
+  exact zero target aliases: 75/75
+  max |target alias| (float): 0.000e+00
+  nonzero targets: []
+
+runtime 131.0 s
+kappa_joint = 4 exactly
