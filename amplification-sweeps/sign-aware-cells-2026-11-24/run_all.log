@@ -1,0 +1,12 @@
+=== python -I cell_data.py ===
+exit 0
+=== python -I exact_arith.py ===
+exit 0
+=== python -I certify_cells.py ===
+exit 0
+=== python -I eft_compose.py ===
+exit 0
+=== python -I fixed_point_cert.py ===
+exit 0
+=== python -I check_reference.py ===
+exit 0

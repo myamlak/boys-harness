@@ -1,0 +1,65 @@
+==================================================================================
+A1 absolute order 2: chosen=product at x=8.254041852680183e-06, other=ship at x=1.1679101370108986
+  delivered chosen 450357307538443/2251799813685248 = 0x1.9998fb567c0b0p-3
+  delivered other  6465965444879737/72057594037927936 = 0x1.6f8c2e578d579p-4
+  expx = 0x1.3e7b0ad01ef63p-3; exact eh enclosed in [0.155508121944758563, 0.155508121944758563], width 1.98e-65
+  route chosen R = 0.199998820854948846 (D=0)
+  route other  R = 0.393895620349789028 + (-1.95592564638608072) * eh
+  F_2 chosen in [0.19999882085494885, 0.19999882085494885] (width 7.20e-72)
+  F_2 other  in [0.089733296416701672, 0.089733296416701672] (width 1.65e-65)
+  truncation t:
+    chosen [-4.22990356004481647e-18, -4.22990356004481647e-18]
+    other  [-6.49174543003082836e-19, -6.49174543003082836e-19]
+  rounding r = d - R:
+    chosen [-4.60011936603192362e-17, -4.60011936603192362e-17] (width 0.00e+00)
+    other  [-7.73984236912748163e-17, -7.73984236912748163e-17] (width 3.88e-65)
+  delivered error e = d - F:
+    chosen [-5.02310972203640527e-17, -5.02310972203640527e-17] sign -
+    other  [-7.80475982342778991e-17, -7.80475982342778991e-17] sign -
+  certified roundings bounds:
+    r_c - r_o in [3.139723003095558e-17, 3.139723003095558e-17] sign +, width 3.88e-65
+    r_c + r_o in [-1.23399617351594052e-16, -1.23399617351594052e-16]
+  truncation-centre separation t_c - t_o in [-3.58072901704173363e-18, -3.58072901704173363e-18]
+  truncation-centre magnitude sum t_c + t_o in [-4.87907810304789931e-18, -4.87907810304789931e-18]
+  certified e_c - e_o in [2.78165010139138464e-17, 2.78165010139138464e-17] sign +
+  certified e_c + e_o in [-1.28278695454641952e-16, -1.28278695454641952e-16] sign -
+  CERTIFIED signed above: True; signed below: False; same-sign: True; magnitude |e_c|<|e_o|: True
+  signed margin 2.781650e-17; magnitude margin 2.781650e-17; correction over gap 2.781650e-17
+  record sign-blind h_sum 6.452827e-16; truncation gap 3.580729e-18; factor 180.21
+  certified interval width 1.651e-65; record width / certified width 3.907e+49
+  truncation centre: chosen magnitudes larger (t_c < t_o); overturned: True
+  measured check: e_c=-5.02310972204e-17 e_o=-7.80475982343e-17 (in certified intervals: True, True)
+==================================================================================
+A2 absolute order 23: chosen=product at x=6.3134226241640246, other=ship at x=10.865022762913437
+  delivered chosen 1907429338988065/36893488147419103232 = 0x1.b1b3000bcf884p-15
+  delivered other  6755942400351429/9444732965739290427392 = 0x1.8007e6ae55cc5p-21
+  expx = 0x1.40b37c002fc69p-17; exact eh enclosed in [9.5576378956725407e-6, 9.5576378956725407e-6], width 2.93e-64
+  route chosen R = 0.0000517009758298362477 (D=0)
+  route other  R = 0.00120647683878594858 + (-126.156853683118768) * eh
+  F_23 chosen in [0.0000517009758298361594, 0.0000517009758298361594] (width 1.25e-64)
+  F_23 other  in [7.15313225356799191e-7, 7.15313225356799191e-7] (width 2.24e-64)
+  truncation t:
+    chosen [8.83235679883764225e-20, 8.83235679883764225e-20]
+    other  [-8.82638780252846884e-20, -8.82638780252846884e-20]
+  rounding r = d - R:
+    chosen [-3.78192493196807883e-21, -3.78192493196807883e-21] (width 0.00e+00)
+    other  [-4.65529033356517115e-19, -4.65529033356517115e-19] (width 3.70e-62)
+  delivered error e = d - F:
+    chosen [8.45416430564083437e-20, 8.45416430564083437e-20] sign +
+    other  [-5.53792911381801804e-19, -5.53792911381801804e-19] sign -
+  certified roundings bounds:
+    r_c - r_o in [4.61747108424549037e-19, 4.61747108424549037e-19] sign +, width 3.70e-62
+    r_c + r_o in [-4.69310958288485194e-19, -4.69310958288485194e-19]
+  truncation-centre separation t_c - t_o in [1.76587446013661111e-19, 1.76587446013661111e-19]
+  truncation-centre magnitude sum t_c + t_o in [5.96899630917340636e-23, 5.96899630917340636e-23]
+  certified e_c - e_o in [6.38334554438210148e-19, 6.38334554438210148e-19] sign +
+  certified e_c + e_o in [-4.6925126832539346e-19, -4.6925126832539346e-19] sign -
+  CERTIFIED signed above: True; signed below: False; same-sign: False; magnitude |e_c|<|e_o|: True
+  signed margin 6.383346e-19; magnitude margin 4.692513e-19; correction over gap 2.851597e-19
+  record sign-blind h_sum 7.416298e-18; truncation gap 1.765874e-19; factor 41.9979
+  certified interval width 3.492e-64; record width / certified width 2.124e+46
+  truncation centre: chosen magnitude larger (t_c + t_o > 0); overturned: True
+  measured check: e_c=8.45416430564e-20 e_o=-5.53792911382e-19 (in certified intervals: True, True)
+==================================================================================
+checks: 24/24 pass
+wrote cell_certificate.csv, cell_certificate.json

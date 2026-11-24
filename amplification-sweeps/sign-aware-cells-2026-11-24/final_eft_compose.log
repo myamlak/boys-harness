@@ -1,0 +1,44 @@
+==================================================================================
+A1 absolute order 2
+  chosen-product at x=8.254041852680183e-06
+    nodes 85 {'sub': 22, 'scale2': 2, 'div': 1, 'fma': 19, 'mul': 21, 'add': 20}
+    sum |local residual| = 1.050567e-15; net r_fixed = -4.600119e-17; cancellation = 22.8
+    sum half-ulp (one-sided, sign-known) = 3.843952e-15
+    refined divisions 0; S18.4 sign identity all: True; min |delta_div| = nan
+    DD route: |r_dd - r_exact| = 2.318e-34; conservative DD bound 5.285e-29; margin 228061.6x
+    exp correction D*(expx-eh) = 0.000000e+00
+  other-ship at x=1.1679101370108986
+    nodes 62 {'sub': 29, 'scale2': 2, 'div': 1, 'mul': 3, 'fma': 25, 'refined_div': 2}
+    sum |local residual| = 1.079575e-15; net r_fixed = -5.196770e-17; cancellation = 20.8
+    sum half-ulp (one-sided, sign-known) = 1.500264e-15
+    refined divisions 2; S18.4 sign identity all: True; min |delta_div| = 2.110e-17
+    DD route: |r_dd - r_exact| = 5.757e-33; conservative DD bound 4.575e-29; margin 7947.4x
+    exp correction D*(expx-eh) = -2.543073e-17
+  ordering test: signed separation (both errors negative)
+  truncation threshold 3.580729e-18; exact rounding correction 3.139723e-17; correction/threshold = 8.76839
+  net margin 2.781650e-17
+  record sign-blind C_c+C_o = 6.452827e-16 (23.2x margin); half of it (sign-known, magnitude-blind) = 3.226413e-16 (11.6x)
+  EFT one-sided per-node band (sum half-ulps) = 5.344216e-15 (192x)
+==================================================================================
+A2 absolute order 23
+  chosen-product at x=6.3134226241640246
+    nodes 77 {'sub': 20, 'scale2': 2, 'div': 1, 'fma': 17, 'mul': 19, 'add': 18}
+    sum |local residual| = 6.899415e-16; net r_fixed = -3.781925e-21; cancellation = 1.82e+05
+    sum half-ulp (one-sided, sign-known) = 2.789450e-15
+    refined divisions 0; S18.4 sign identity all: True; min |delta_div| = nan
+    DD route: |r_dd - r_exact| = 1.982e-37; conservative DD bound 4.812e-29; margin 242754195.7x
+    exp correction D*(expx-eh) = 0.000000e+00
+  other-ship at x=10.865022762913437
+    nodes 125 {'sub': 50, 'scale2': 2, 'div': 1, 'mul': 24, 'fma': 25, 'refined_div': 23}
+    sum |local residual| = 1.933052e-15; net r_fixed = -3.880603e-19; cancellation = 4.98e+03
+    sum half-ulp (one-sided, sign-known) = 4.050066e-15
+    refined divisions 23; S18.4 sign identity all: True; min |delta_div| = 3.780e-18
+    DD route: |r_dd - r_exact| = 9.252e-36; conservative DD bound 9.545e-29; margin 10316929.0x
+    exp correction D*(expx-eh) = -7.746870e-20
+  ordering test: magnitude sum (mixed sign)
+  truncation threshold 5.968996e-23; exact rounding correction 4.693110e-19; correction/threshold = 7862.48
+  net margin 4.692513e-19
+  record sign-blind C_c+C_o = 7.416298e-18 (15.8x margin); half of it (sign-known, magnitude-blind) = 3.708149e-18 (7.9x)
+  EFT one-sided per-node band (sum half-ulps) = 6.839516e-15 (1.46e+04x)
+==================================================================================
+wrote eft_compose.json
