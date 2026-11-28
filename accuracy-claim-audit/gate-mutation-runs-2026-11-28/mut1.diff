@@ -1,0 +1,16 @@
+--- /dev/fd/63	2026-11-28 14:45:40.000000000 +0100
++++ boys-v5.3.4/src/boys_simd.cpp	2026-11-28 14:45:37.414550500 +0100
+@@ -435,11 +435,11 @@
+                 // Divide by x rather than multiply by the rounded 1/x: the upward recurrence amplifies a relative
+                 // perturbation by ((l + 1/2)/x) per step, so past l = x the 6e-8 reciprocal rounding compounds to
+                 // tens of per cent at the highest orders. The certified scalar lane divides.
+-                f = _mm256_div_ps(
++                f = _mm256_mul_ps(
+                     _mm256_fmadd_ps(_mm256_set1_ps(static_cast<float>(l) + 0.5f),
+                                     f,
+                                     _mm256_mul_ps(_mm256_set1_ps(-0.5f), expx)),
+-                    xv);
++                    _mm256_div_ps(_mm256_set1_ps(1.0f), xv));
+                 Lane::Store(out + (l + 1) * count + i, f);
+             }
+         }

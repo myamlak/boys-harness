@@ -1,0 +1,25 @@
+probe: n=32 x=11.944741727643702
+  reference F_n(x)         1.5397945191798202e-07  
+  BoysSingle                   1.5397945191798448e-07   err=2.46169e-21 
+  BoysAllOrders[n]             1.5397945191798448e-07   err=2.46169e-21 
+  BoysFixedN[n]                1.5397945191798448e-07   err=2.46169e-21 
+  BoysAllN[n]                  1.5397945191798448e-07   err=2.46169e-21 
+  BoysSingleF32                1.5397938568639802e-07   err=3.68238e-15 
+  BoysAllOrdersF32[n]          1.5397938568639802e-07   err=3.68238e-15 
+  BoysSingleF32 exact division [inf] 0                        err=1.53895e-07 
+  BoysSingleF32 plain reciprocal [inf] 0                        err=1.53895e-07 
+  BoysSingleF32 refined reciprocal [inf] 0                        err=1.53895e-07 
+  BoysSingleF16                1.7881393432617188e-07   err=2.49184e-08 
+  BoysAllOrdersF16[n]          1.7881393432617188e-07   err=2.49184e-08 
+  BoysSingleBf16               1.5459954738616943e-07   err=4.4924e-10  
+  BoysAllOrdersBf16[n]         1.5459954738616943e-07   err=4.4924e-10  
+  RegionASimd[count=1]         1.5397945191798448e-07   err=2.46169e-21 
+  RegionASimd[count=4]         1.5397959757013047e-07   err=1.45652e-13 
+  RegionBSimd[count=1]         1.5397945191798448e-07   err=2.46169e-21 
+  RegionBSimd[count=4]         1.5397959757013047e-07   err=1.45652e-13 
+  RegionCSimd[count=1]         1.5397945191798448e-07   err=2.46169e-21 
+  RegionCSimd[count=4]         1.5397959757013047e-07   err=1.45652e-13 
+  RegionSimdF16[count=1]       1.7881393432617188e-07   err=2.49184e-08 
+  RegionSimdF16[count=8]       0                        err=1.53895e-07 
+  RegionSimdBf16[count=1]      1.5459954738616943e-07   err=4.4924e-10  
+  RegionSimdBf16[count=8]      1.9557774066925049e-07   err=4.0529e-08  
