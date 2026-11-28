@@ -1,0 +1,4 @@
+eeb7af4a967bfbd5d593601fc8f5329550d0a3a29e18be2436f6c2a536529370 *src/boys_simd.cpp
+35db563c1aeb28ecf55fee3c5a17209dd9a8a5497de10d5885f2166710393f89 *include/boys/boys_coefficients_d_uniform_mono.hpp
+5f04723a3a394a54e85d2d0e121df45221fe2ec704e99f3f7294ad9be9823d5a *tests/boys_accuracy_gate.cpp
+a2a667ce4d8bfdba12bd902d76e1e1bc1ee607965ca74d7da6a49aaf2ddcd678 */c/Users/myaml/dev/_b-gate-experiment-2026-11-28/boys-v5.3.4/tests/data/boys_accuracy_gate_reference.csv

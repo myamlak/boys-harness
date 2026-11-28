@@ -1,0 +1,9 @@
+Test project C:/Users/myaml/dev/_b-gate-experiment-2026-11-28/boys-v5.3.4/build-gate
+    Start  2: boys-tests
+1/2 Test  #2: boys-tests .......................   Passed   77.09 sec
+    Start 12: boys-no-vector-fallback
+2/2 Test #12: boys-no-vector-fallback ..........   Passed    0.16 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =  77.30 sec

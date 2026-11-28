@@ -1,0 +1,7 @@
+Test project C:/Users/myaml/dev/_b-gate-experiment-2026-11-28/boys-v5.3.4/build-gate
+    Start 10: boys-accuracy-gate
+1/1 Test #10: boys-accuracy-gate ...............   Passed   15.19 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =  15.24 sec

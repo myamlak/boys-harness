@@ -1,0 +1,384 @@
+Paper B accuracy-gate experiment: half-precision zero-return defect
+Date: 2026-11-28
+Host: Windows 11 Pro 10.0.26200, x64; MSVC 19.51.36260.0 (Visual Studio 18 2026,
+toolset 14.51.36231); CMake 4.4.2; Python 3.14.7.
+Experiment root: C:\Users\myaml\dev\_b-gate-experiment-2026-11-28
+Kernel copy: C:\Users\myaml\dev\_b-gate-experiment-2026-11-28\boys-v5.3.4
+The original kernel repository was read only. Nothing was pushed.
+
+1. SOURCES AND THE AUDITED TAG
+
+Paper B supplement:
+C:\Users\myaml\dev\_rewrite-2026-11-27\_fresh\B\paper\supplement\main.tex
+The supplement defines \libtag as v5.3.4 (line 14). S6 Record 1 (lines
+1029-1046) states the half-precision zero-return defect and the internal row.
+S1 (lines 193-197) says the fp16 pair's defect point is historical but not a
+row of the committed run archive. The main text
+(C:\Users\myaml\dev\_rewrite-2026-11-27\_fresh\B\paper\main.tex, lines
+1036-1049) calls the point an "order-0 point"; the supplement's Record 1 and
+the gate's reference grid place it at n = 32 (see below). This report follows
+the supplement and the grid.
+
+Harness mutation records:
+C:\Users\myaml\dev\papers-harness-repo\accuracy-claim-audit\gate-mutation-runs-2026-11-22
+README.md and commands.txt name the kernel at v5.3.3 (annotated tag object
+4119217c8ab23d9f370b301a9bd6338e2c804f7e, commit
+01bba7b0ed7e0dd387f2af087e992445222e5546), MSVC 19.51, x64, Release,
+"Visual Studio 18 2026", BUILD_CUDA=OFF, and give the configure/build/run
+commands. Supplement S9 (line 141) says its mutation transcripts use v5.3.1.
+
+The paper's audited release is v5.3.4, so this experiment copies v5.3.4:
+annotated tag object e0b6240af077381b0e3f574004f4a47dba1de277, commit
+bd8fadbcb5b6f33bf7df76834da0cdd2af464266 ("Correct the double-lane contract
+sentence (#31)").
+
+The original defect and its fix were located in the tree's history:
+- v1.1.4 src/boys_simd.cpp, RegionBSimdHalf, formed invx = 1/x once and then
+  advanced the upward recurrence with f = f * invx (a rounded reciprocal).
+- v2.0.0, commit d01d7dd00b208db817617053757447037c76c539, replaced that with
+  f = f / x. Its comment records the measurement at n = 32, x = 11.9453:
+  2.5e-8 by multiplication, 8.4e-8 by division, against 1.539e-7 exact.
+- 2.5e-8 is below half of the fp16 subnormal quantum (2.98e-8), so the
+  multiply form stored fp16 zero. The defect report put the scalar lane's
+  return at one quantum, 5.96046e-8; at v5.3.4 this build's scalar entry
+  returns 1.7881393432617188e-7 (measured in section 5.3; the difference does
+  not change the zero return or the threshold comparison below).
+
+Defect point (supplement S6 Record 1 and the gate grid):
+n = 32, x = 11.944741727643702, stored fp16 argument 11.9453125.
+Grid row (extracted from tests/data/boys_accuracy_gate_reference.csv):
+32,11.944741727643702,1.5397945191798201e-7,...,11.9453125,1.5389548475210639e-7,...
+The fp16 reference at the stored half is 1.538954847521e-7. The gate's
+internal threshold there is 1e-7 + 0.5*2^-24 = 1.298023223877e-7; a zero
+return exceeds it by 18.56 per cent. The defect report's scalar return
+5.9604644775e-8 meets it (0.7264 of it); the scalar return measured at v5.3.4,
+1.7881393432617188e-7, also meets it (0.1921 of it).
+
+The gate rows that cover the point:
+- code.half_simd_cells: the individual published-bound row over the 8-wide
+  half-I/O region kernels. It measures n = 32 (packedN = nmax) at every grid
+  argument; the defect argument is in region B (x0 = 11.899848152108484,
+  x1 = 28.98933773882074) and is therefore a cell at n = 32.
+- code.half_simd_budget: the pair-sum consistency row (body against the
+  certified scalar half entry, 19,466 cells).
+The gate source registers these at tests/boys_accuracy_gate.cpp lines
+8688-8715 and measures them around lines 4791-5140.
+
+2. FRESH COPY
+
+Commands (run in the experiment root):
+  git -C C:\Users\myaml\dev\_boys-library archive --format=tar v5.3.4 > boys-v5.3.4.tar
+  mkdir boys-v5.3.4
+  tar -xf boys-v5.3.4.tar -C boys-v5.3.4
+
+Elapsed: 2 s. Archive SHA-256:
+3aa2e6e22c6cc17c7eac2cdc34cb89f41f61ca7369038ceb4e0be9dc4c78617a
+Clean source hashes:
+  src/boys_simd.cpp
+    eeb7af4a967bfbd5d593601fc8f5329550d0a3a29e18be2436f6c2a536529370
+  include/boys/boys_coefficients_d_uniform_mono.hpp
+    35db563c1aeb28ecf55fee3c5a17209dd9a8a5497de10d5885f2166710393f89
+  tests/boys_accuracy_gate.cpp
+    5f04723a3a394a54e85d2d0e121df45221fe2ec704e99f3f7294ad9be9823d5a
+  tests/data/boys_accuracy_gate_reference.csv
+    a2a667ce4d8bfdba12bd902d76e1e1bc1ee607965ca74d7da6a49aaf2ddcd678
+
+3. CONFIGURE AND BUILD (MSVC, Release, BUILD_CUDA=OFF)
+
+Configure:
+  cmake -S boys-v5.3.4 -B boys-v5.3.4/build-gate -G "Visual Studio 18 2026" -A x64 -DBUILD_CUDA=OFF
+  exit 0; 110 s.
+  Log: configure-gate.log
+  The configure reports MSVC 19.51.36260.0, AVX2 x86-64 target, fused scalar
+  multiply-add, committed build defaults, and Python 3.14.7.
+
+Build:
+  cmake --build boys-v5.3.4/build-gate --target boys-accuracy-gate --config Release
+  exit 0; 302 s.
+  Log: build-gate-clean.log
+  Gate binary SHA-256:
+  6b023a2e7924c61054b7f687f256dec72250f46285f5a1be9e52c85a6d04bfd1
+  boys.lib SHA-256:
+  69f16ce899fb2ba7889ac6739e15c6325951bb34038aeffd8d09301c247651f2
+
+4. CLEAN GATE
+
+  boys-v5.3.4/build-gate/Release/boys-accuracy-gate.exe --strict
+  exit 0; 13 s.
+  Output: clean-gate.txt
+  Final line:
+  PASS: every claim this gate judges is met at this revision: the claim
+  book's 38 judged rows of 39, beside the 1 row(s) it does not carry and the
+  0 this build's books record without judging (named above with their reason,
+  and neither met nor failed here). The registration table binds 38
+  documented claims, 1 of which are bound to rows that measure them without
+  restating their sentences. Whether the documents' 156-claim enumeration is
+  covered by a gate row is audited separately and is not a property of this
+  gate
+  The one not-carried row is code.no_vector_fallback (the gate build carries
+  the vector tier; the separate boys-no-vector-fallback executable measures
+  the fallback branch).
+
+Gate CTest registration, clean tree:
+  ctest --test-dir boys-v5.3.4/build-gate -C Release -R "^boys-accuracy-gate$" --output-on-failure
+  exit 0; 15.19 s test time.
+  Log: ctest-gate-clean.txt
+
+5. MUTATION 1: REINTRODUCE THE HISTORICAL RECIPROCAL-FORM DEFECT
+
+5.1 What was changed
+The v1.1.4 form was reintroduced in src/boys_simd.cpp, RegionBSimdHalf: the
+recurrence advance is multiplied by a rounded reciprocal instead of divided.
+The code change is line-count neutral (785 lines before and after) so that the
+gate's anchored source quotes keep their line spans. Only the expression
+changed; the original comment text is untouched:
+
+-                f = _mm256_div_ps(
++                f = _mm256_mul_ps(
+                     _mm256_fmadd_ps(_mm256_set1_ps(static_cast<float>(l) + 0.5f),
+                                     f,
+                                     _mm256_mul_ps(_mm256_set1_ps(-0.5f), expx)),
+-                    xv);
++                    _mm256_div_ps(_mm256_set1_ps(1.0f), xv));
+
+Full diff: mut1.diff. Mutated source SHA-256:
+ea2d971bc8a642c3c6e7c8c83149b21dc8c7f21294dec2c6da9b8904ac6cb0c1
+Incremental rebuild:
+  cmake --build boys-v5.3.4/build-gate --target boys-accuracy-gate boys-tests --config Release
+  exit 0; 16 s (recompiles boys_simd.cpp, relinks boys.lib, gate and tests).
+  Log: build-mut1.log
+
+5.2 Anchor fragility observed on the way (separate observation)
+A first mutation also rewrote the three-line comment above the recurrence to
+document the defect. That inserted one line before the no-vector fallback
+comment, which the registration table anchors at lines 634-637. The gate then
+exited 2 on a syntactic anchor failure, not on the numerical defect, although
+it had already printed the numerical EXCEEDED line. The preserved transcript is
+mut1-gate-comment-anchor.txt:
+  EXCEEDED  fp16 simd-half / B  n=32 x=11.944741727643702  err=1.53895e-07
+            bound=1.29802e-07  ratio=1.186  ref=1.53895e-07 (1e-7)
+  claim P10: the quote spans lines 635-638 of src/boys_simd.cpp, outside its
+            anchor's 634-637
+  gate: the registration check failed, so no verdict table is reported
+  exit 2.
+The line-count-neutral mutation above removes the confound: it produces the
+same arithmetic and the registration check passes.
+
+5.3 Gate result on the line-neutral mutation
+  boys-v5.3.4/build-gate/Release/boys-accuracy-gate.exe --strict
+  exit 1; 13 s.
+  Output: mut1-gate.txt
+  Registration line (line 195): "registration: 38 documented claims in 39
+  entries; ... every quote is in the file it names, and every quote lies inside
+  the line range its anchor states".
+  The numerical failure, at the exact defect point (line 112):
+  EXCEEDED  fp16 simd-half / B  n=32 x=11.944741727643702
+            err=1.53895e-07  bound=1.29802e-07  ratio=1.186
+            ref=1.53895e-07 (1e-7)
+  err equals the whole reference value, so the vector return is exactly zero.
+
+  Failing row: code.half_simd_cells, printed as (line 311)
+  [EXCEEDED        ] the 8-wide half-I/O region kernels hold the published
+  half-lane budget (1.5e-7 plus one half-ULP) on the region each documents as
+  its precondition
+      worst 1.19 of budget at (n=32, x=11.9447): delivered 1.539e-07 against
+      1.298e-07
+
+  A second row also fails: code.half_domain_stop (the fp16/bf16 budget's
+  domain statement), line 319:
+  the ten half lane x region cells over the whole sweep: 108227 points in the
+  binding domain, 1 of them returned the format's zero (largest |F_n(x)| so
+  discarded 1.539e-07) and 1 landed outside the bound.
+
+  The pair-sum row code.half_simd_budget stays [verified at this revision], but
+  its own evidence now reports the forbidden zero (line 308):
+  "1 cells where exactly one of the two is outside the bound, and 1 where a
+  path returned zero above its own bound (largest |F_n(x)| so lost 1.539e-07;
+  the contract cannot forgive those). 2 / 1 cells have one path at zero and
+  the other not - body / scalar ... 1 have the body outside and the scalar
+  inside (... B fp16 1 ...), the furthest over 1.186 of its own bound, in
+  region 1 on fp16 ... the largest argument ... x=11.9447 (n=32) ... No
+  measured cell is over the allowance. The verdict is Verified exactly when no
+  cell is over it; the one-side and zero counters above are printed as
+  diagnostics and do not decide it."
+  The zero is therefore visible in this row's diagnostics but does not decide
+  its verdict; the individual row above does.
+
+  Claim-book result (line 396):
+  RESULT (the claim book): 36 of 39 claims met at this revision (27 verified
+  outright, 9 met over a stated domain, 2 exceeded, 0 vacuous only, 0 evidence
+  absent, 1 not carried by this build, 0 recorded and not judged; none of the
+  last five counted as met)
+  Final line: FAIL (exit status 1; every book above was measured and printed).
+
+  Per-cell dump (same command plus --half-drift-dump, output
+  mut1-gate-dump.txt, exit 1). The dump contains exactly one one-side-out cell,
+  the defect point (line 113):
+  drift-one-side-out fp16 region 1 n=32 x=11.944741727643702 got=0
+  scalar=1.78813934e-07 ref=1.53895485e-07 |got-ref|=1.53895e-07
+  bound(got)=1.29802e-07 |scalar-ref|=2.49184e-08 bound(scalar)=1.29802e-07
+  BODY-OUT
+
+  Independent probe of the same point (probe output in probe-point-mut1.txt):
+  RegionSimdF16[count=8]       0                        err=1.53895e-07
+  RegionSimdBf16[count=8]      1.9557774066925049e-07   err=4.0529e-08
+  BoysSingleF16                1.7881393432617188e-07   err=2.49184e-08
+  Note on the paper's scalar figure: supplement S6 Record 1 says the scalar
+  path returned 5.96046e-8. In this v5.3.4 build the scalar entry at the same
+  stored-half argument returns 1.7881393432617188e-7 (three fp16 quanta), and
+  it still meets the internal threshold (error 2.49184e-8). The zero return is
+  unchanged; only the scalar comparison figure differs at this tag.
+
+5.4 Gate CTest registration on the mutated tree
+  ctest --test-dir boys-v5.3.4/build-gate -C Release -R "^boys-accuracy-gate$" --output-on-failure
+  exit 8; 11.80 s.
+  Log: ctest-gate-mut1.txt
+  "The following tests FAILED: 10 - boys-accuracy-gate (Failed)"
+
+5.5 Gate self-test on the mutated tree
+  boys-accuracy-gate.exe --self-test
+  exit 0.
+  Log: gate-selftest-mut1.txt
+
+6. ORDINARY SUITE
+
+6.1 Build and clean baseline
+Build:
+  cmake --build boys-v5.3.4/build-gate --target boys-tests boys-no-vector-fallback --config Release
+  exit 0; 488 s.
+  Log: build-tests-clean.log
+Clean-tree run:
+  ctest --test-dir boys-v5.3.4/build-gate -C Release -R "^(boys-tests|boys-no-vector-fallback)$" --output-on-failure
+  exit 0; 76 s.
+  Log: ctest-ordinary-clean.txt
+  1/2 Test #2: boys-tests ....................... Passed 75.43 sec
+  2/2 Test #12: boys-no-vector-fallback ......... Passed 0.23 sec
+  100% tests passed out of 2
+
+6.2 Same ordinary suite on the mutated tree
+  ctest ... -R "^(boys-tests|boys-no-vector-fallback)$"
+  exit 0; 77 s.
+  Log: ctest-ordinary-mut1.txt
+  1/2 Test #2: boys-tests ....................... Passed 77.09 sec
+  2/2 Test #12: boys-no-vector-fallback ......... Passed 0.16 sec
+  100% tests passed out of 2
+The ordinary suite does not catch the defect.
+
+The two non-gate tests that call these kernels are the relevant direct checks:
+  boys-tests.exe --gtest_filter=BoysTest.SimdMatchesScalarF16:BoysTest.SimdMatchesScalarBf16
+  exit 0; 2 tests, 3 ms; [ PASSED ] 2 tests.
+  Log: gtest-simd-mut1.txt
+Their sampling explains the miss: RunSimdLaneChecks fixes n = 8 and draws
+region-B arguments from uniform_real_distribution<float>(11.95f, 28.95f).
+The defect is at n = 32 and the stored half argument is 11.9453125, one step
+below 11.95. The fallback test compiles src/boys_simd.cpp with BOYS_SIMD_X86=0,
+so it measures the scalar fallback branch, not the AVX2 body.
+
+7. MUTATION 2: kFlatMonoCoeffs (harness record)
+
+Mutation 1 was first restored to the pristine v5.3.4 source (src/boys_simd.cpp
+SHA-256 eeb7af4a967bfbd5d593601fc8f5329550d0a3a29e18be2436f6c2a536529370,
+matching the clean copy). The harness record's second mutation was then applied:
+include/boys/boys_coefficients_d_uniform_mono.hpp line 14, first character
+9 -> 8 in detail::kFlatMonoCoeffs:
+
+-    9.89680267367013866e-01,  -1.02235164453333850e-02, 9.55026895991172383e-05,
++    8.89680267367013866e-01,  -1.02235164453333850e-02, 9.55026895991172383e-05,
+
+Full diff: mut2.diff. Mutated header SHA-256:
+800dde9708edf4d30535816c5815d55fdfdb58a464c7a87a8bf4e1e3061f69d7
+Rebuild (gate and ordinary suite; the header is included through boys_all.hpp,
+so the rebuild is broad):
+  cmake --build boys-v5.3.4/build-gate --target boys-accuracy-gate boys-tests --config Release -- -m:4
+  A first attempt passed "/m:4"; MSYS converted it to "m:4" and MSBuild
+  rejected it (MSB1008, exit 1, 0 s). The "-m:4" spelling builds.
+BUILD RESULT: exit 0; 702 s (11 m 42 s). Log: build-mut2.log.
+
+7.1 Gate result
+  boys-v5.3.4/build-gate/Release/boys-accuracy-gate.exe --strict
+  exit 1; 16 s.
+  Output: mut2-gate.txt
+  Registration check passes (line 232: every quote is in the file it names and
+  inside the line range its anchor states).
+  Three rows are exceeded:
+  [EXCEEDED] double single: ... the accuracy contract's figure ... (README
+  accuracy contract)
+      worst 1.02e+12 of budget at (n=0, x=0.0582832): delivered 0.1019
+      against 1e-13
+  [EXCEEDED] double batch: ... in every region, all entries ... (README
+  accuracy contract)
+      worst 1.02e+12 of budget at (n=0, x=0.0582832): delivered 0.1019
+      against 1e-13
+  [EXCEEDED] double single: ... the region-A and extended-band cells the
+  header's table keeps apart ... (include/boys/boys.hpp preamble table)
+      worst 1.02e+12 of budget at (n=0, x=0.0582832): delivered 0.1019
+      against 1e-13
+  Per-lane table (line 134): double single / A, 0.102 / 1e-13, ratio 1.02e+12
+  at (n=0, x=0.0582832).
+  Claim-book result (line 433):
+  RESULT (the claim book): 35 of 39 claims met at this revision (26 verified
+  outright, 9 met over a stated domain, 3 exceeded, 0 vacuous only, 0 evidence
+  absent, 1 not carried by this build, 0 recorded and not judged; none of the
+  last five counted as met)
+  Combination coverage (line 1155):
+  COMBINATIONS: 95 of 192 member(s) of the option space are certified and
+  published
+  Final line: FAIL (exit status 1; every book above was measured and printed).
+These figures reproduce the harness record's default-path mutation (README.md
+section 2 and default-path-gate.txt), including the 3 exceeded rows, the
+0.1019 delivered at n=0 x=0.0582832 and the 95 of 192 combinations.
+
+7.2 Ordinary suite result: NOT RUN
+The rebuilt boys-tests executable was produced (build exit 0, 702 s), and the
+ordinary ctest invocation was started:
+  ctest --test-dir boys-v5.3.4/build-gate -C Release -R "^(boys-tests|boys-no-vector-fallback)$" --output-on-failure
+It printed only "Start 2: boys-tests" and was still running 56 s later; it was
+stopped on the coordinator's direction so that the report could be finalised.
+No pass/fail result is recorded for the mutation-2 ordinary suite. The
+mutation-1 ordinary-suite result (section 6) is complete.
+
+SUMMARY
+
+The gate's internal individual-bound row catches the reintroduced defect; the
+ordinary non-gate suite does not. The historical v1.1.4 arithmetic was
+reintroduced in the v5.3.4 copy as a line-count-neutral, one-expression change
+to RegionBSimdHalf (f = f * (1/x) instead of f = f / x; src/boys_simd.cpp
+SHA-256 ea2d971bc8a642c3c6e7c8c83149b21dc8c7f21294dec2c6da9b8904ac6cb0c1;
+the clean gate binary at v5.3.4 is
+6b023a2e7924c61054b7f687f256dec72250f46285f5a1be9e52c85a6d04bfd1).
+After the incremental rebuild
+(cmake --build boys-v5.3.4/build-gate --target boys-accuracy-gate boys-tests --config Release,
+exit 0, 16 s), boys-accuracy-gate --strict exited 1 in
+13 s. It reported EXCEEDED for lane fp16 simd-half, region B, at n = 32,
+x = 11.944741727643702: err = 1.53895e-07, bound = 1.29802e-07, ratio = 1.186,
+ref = 1.53895e-07; the error equals the whole reference, so the vector return
+is zero. The failing rows are code.half_simd_cells ("worst 1.19 of budget at
+(n=32, x=11.9447): delivered 1.539e-07 against 1.298e-07") and
+code.half_domain_stop (1 point returned the format's zero, largest value so
+discarded 1.539e-07); the claim book falls to 36 of 39 met with 2 exceeded.
+The pair-sum row code.half_simd_budget stays Verified, but its own evidence
+prints the forbidden zero as a diagnostic (1 cell where a path returned zero
+above its own bound; 1 body-out cell at 1.186 of its bound) and states that
+those counters do not decide its verdict. The same tree's ordinary suite,
+ctest -R "^(boys-tests|boys-no-vector-fallback)$", exited 0 in 77 s (both
+tests passed), and the direct vector-vs-scalar tests,
+boys-tests.exe --gtest_filter=BoysTest.SimdMatchesScalarF16:BoysTest.SimdMatchesScalarBf16,
+passed (2 tests, 3 ms): they sample n = 8 and region-B arguments from
+[11.95, 28.95), so the n = 32, x = 11.9453125 point is outside their sample.
+The gate's CTest entry failed on the same mutation (exit 8, 11.80 s). A
+separate observation: changing the comment's line count instead of only the
+expression shifted the P10 anchor (quote lines 635-638 against anchor
+634-637) and made the gate exit 2 on registration before reporting verdicts;
+the line-count-neutral mutation avoids that confound. Mutation 2
+(kFlatMonoCoeffs first coefficient 9 -> 8) reproduced the harness record's gate
+result exactly: exit 1, three exceeded rows (README.double.single,
+README.double.batch, header.double.region_A_and_band), delivered 0.1019
+against 1e-13 at n = 0, x = 0.0582832 (ratio 1.02e+12), 95 of 192 combinations
+certified, claim book 35 of 39. Its ordinary-suite run was started and stopped
+after 56 s without a pass/fail result, so only the gate outcome is reported for
+mutation 2. Two factual notes about the audited revision:
+the paper's main text calls the defect point "order-0" whereas supplement S6
+Record 1, the gate grid and the probe place it at n = 32; and supplement S6
+Record 1's scalar return of 5.96046e-8 differs from the v5.3.4 scalar entry's
+1.7881393432617188e-7 at the same stored-half argument, while the vector zero
+and the threshold arithmetic are unchanged.
